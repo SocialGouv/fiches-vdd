@@ -28,5 +28,5 @@ Pour mettre à jour les fiches :
 
 ```
 yarn
-yarn run fetch
+yarn fetch
 ```
