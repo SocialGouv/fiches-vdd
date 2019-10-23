@@ -48,7 +48,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Pour obtenir un prix hors taxes (HT) à partir d'un prix toutes taxes comprises (TTC), on applique la formule de calcul suivante : Prix HT = prix TTC/(1 + taux de TVA)"
+              "text": "Pour obtenir un prix hors taxes (HT) à partir d'un prix toutes taxes comprises (TTC), on applique la formule de calcul suivante : Prix HT = Prix TTC *"
             }
           ]
         },
@@ -78,7 +78,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2018-12-04"
+              "text": "modified 2019-10-22"
             }
           ]
         },
@@ -579,40 +579,28 @@
         },
         {
           "type": "element",
-          "name": "Introduction",
+          "name": "Texte",
           "children": [
             {
               "type": "element",
-              "name": "Texte",
+              "name": "Paragraphe",
               "children": [
                 {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Pour obtenir un prix hors taxes (HT) à partir d'un prix toutes taxes comprises (TTC), on applique la formule de calcul suivante :"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Prix HT = prix TTC/(1 + taux de TVA)"
-                    }
-                  ]
+                  "type": "text",
+                  "text": "Pour obtenir un prix hors taxes (HT) à partir d'un prix toutes taxes comprises (TTC), on applique la formule de calcul suivante :"
                 }
               ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Texte",
-          "children": [
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Prix HT = Prix TTC *100/(100+Taux)"
+                }
+              ]
+            },
             {
               "type": "element",
               "name": "ServiceEnLigne",
@@ -673,15 +661,7 @@
                   "type": "element",
                   "name": "Colonne",
                   "attributes": {
-                    "largeur": "21",
-                    "type": "normal"
-                  }
-                },
-                {
-                  "type": "element",
-                  "name": "Colonne",
-                  "attributes": {
-                    "largeur": "13",
+                    "largeur": "18",
                     "type": "normal"
                   }
                 },
@@ -726,33 +706,17 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Dénominateur"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
+                              "text": "Calcul pour un prix TTC de "
+                            },
                             {
-                              "type": "text",
-                              "text": "1+TVA"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Cellule",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Calcul pour un prix TTC de 100 €"
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "50 €"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -815,23 +779,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "1,2"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Cellule",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "100/1,2"
+                              "text": "50*100/(100+20)"
                             }
                           ]
                         }
@@ -851,7 +799,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "83,33 €"
+                                  "text": "41,66 €"
                                 }
                               ]
                             }
@@ -900,23 +848,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "1,1"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Cellule",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "100/1,1"
+                              "text": "50*100/(100+10)"
                             }
                           ]
                         }
@@ -936,7 +868,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "90,91 €"
+                                  "text": "45,45 €"
                                 }
                               ]
                             }
@@ -985,23 +917,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "1,055"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Cellule",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "100/1,055"
+                              "text": "50*100/(100+5,5)"
                             }
                           ]
                         }
@@ -1021,7 +937,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "94,79 €"
+                                  "text": "47,39 €"
                                 }
                               ]
                             }
@@ -1070,23 +986,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "1,021"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Cellule",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "100/1,021"
+                              "text": "50*100/(100+2,10)"
                             }
                           ]
                         }
@@ -1106,7 +1006,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "97,94 €"
+                                  "text": "48,97 €"
                                 }
                               ]
                             }
@@ -1155,23 +1055,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "1,085"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Cellule",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "100/1,085"
+                              "text": "50*100/(100 +8,5)"
                             }
                           ]
                         }
@@ -1191,39 +1075,13 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "92,17 €"
+                                  "text": "46,08 €"
                                 }
                               ]
                             }
                           ]
                         }
                       ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "ANoter",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "À noter"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "l'opération permettant de déterminer le prix TTC suppose une multiplication. Exemple pour un prix HT de 100 au taux normal de 20 % : 100 x 1,2 = 120 TTC."
                     }
                   ]
                 }
