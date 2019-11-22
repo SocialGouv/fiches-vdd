@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F19666",
-        "type": "Fiche d'information",
+        "type": "Fiche Question-réponse",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
       },
       "children": [
@@ -18,7 +18,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Retraite dans le privé : décote"
+              "text": "Retraite dans le privé : qu'est ce que la décote ?"
             }
           ]
         },
@@ -48,7 +48,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Si vous ne remplissez pas les conditions pour bénéficier une pension de retraite à taux plein, le taux de votre pension de retraite subit une décote."
+              "text": "La décote est le taux de minoration appliqué à votre pension si vous ne remplissez pas les conditions pour bénéficier d'une retraite à taux plein."
             }
           ]
         },
@@ -78,7 +78,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2018-05-04"
+              "text": "modified 2019-11-21"
             }
           ]
         },
@@ -88,7 +88,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Fiche pratique"
+              "text": "Question-réponse"
             }
           ]
         },
@@ -168,7 +168,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Fiche pratique"
+              "text": "Question-réponse"
             }
           ]
         },
@@ -240,12 +240,12 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F19666",
-                "type": "Fiche d'information"
+                "type": "Fiche Question-réponse"
               },
               "children": [
                 {
                   "type": "text",
-                  "text": "Retraite dans le privé : décote"
+                  "text": "Retraite dans le privé : qu'est ce que la décote ?"
                 }
               ]
             }
@@ -497,19 +497,6 @@
                       "text": "Majoration pour enfant handicapé"
                     }
                   ]
-                },
-                {
-                  "type": "element",
-                  "name": "Fiche",
-                  "attributes": {
-                    "ID": "F19666"
-                  },
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Décote"
-                    }
-                  ]
                 }
               ]
             },
@@ -627,75 +614,57 @@
         },
         {
           "type": "element",
-          "name": "SousDossierPere",
-          "children": [
-            {
-              "type": "text",
-              "text": "Trimestres de retraite"
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Introduction",
-          "children": [
-            {
-              "type": "element",
-              "name": "Texte",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Si vous ne remplissez pas les conditions permettant de bénéficier d'une pension de retraite à taux plein (fixé à "
-                    },
-                    {
-                      "type": "element",
-                      "name": "Valeur",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "50 %"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": "), ce taux est réduit par un coefficient de minoration. Ce coefficient, également appelé "
-                    },
-                    {
-                      "type": "element",
-                      "name": "Expression",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "décote"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": ", est déterminé en fonction du nombre de trimestres manquants pour bénéficier du taux plein."
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
           "name": "Texte",
           "children": [
             {
               "type": "element",
-              "name": "Chapitre",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "La décote est le coefficient de minoration  appliqué lors du calcul de votre pension  si vous partez en retraite sans remplir les conditions pour bénéficier d'une "
+                },
+                {
+                  "type": "element",
+                  "name": "LienInterne",
+                  "attributes": {
+                    "LienPublication": "F14044",
+                    "type": "Fiche d'information",
+                    "audience": "Particuliers"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "pension de retraite à taux plein"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Ces conditions sont :"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Liste",
+              "attributes": {
+                "type": "puce"
+              },
               "children": [
                 {
                   "type": "element",
-                  "name": "Titre",
+                  "name": "Item",
                   "children": [
                     {
                       "type": "element",
@@ -703,9 +672,1414 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "De quoi s'agit-il ?"
+                          "text": "soit un nombre de trimestres d'assurance vieillesse, tous régimes de base obligatoires confondus,"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Item",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "soit une condition d'âge."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Elles varient selon votre année de naissance."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Si vous partez en retraite en remplissant  au moins l'une de ces conditions,  votre pension est calculée sur la base d'un taux fixé  à "
+                },
+                {
+                  "type": "element",
+                  "name": "Valeur",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "50 %"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " de votre salaire annuel moyen."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "En revanche, si  vous partez en retraite sans remplir au moins l'une de ces conditions, ce taux de "
+                },
+                {
+                  "type": "element",
+                  "name": "Valeur",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "50 %"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " est réduit par un coefficient de minoration (appelé "
+                },
+                {
+                  "type": "element",
+                  "name": "Expression",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "décote"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "). Ce coefficient de minoration varie en fonction du nombre de trimestres  manquant pour bénéficier d'une pension à taux plein."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Le coefficient de minoration appliqué au taux plein ("
+                },
+                {
+                  "type": "element",
+                  "name": "Valeur",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "50 %"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ") par trimestre manquant est de "
+                },
+                {
+                  "type": "element",
+                  "name": "Valeur",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "1,25 %"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "La diminution du taux par trimestre manquant est de 0,625."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Tableau",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Taux de la retraite selon le nombre de trimestres manquant"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Colonne",
+                  "attributes": {
+                    "largeur": "24",
+                    "type": "normal"
+                  }
+                },
+                {
+                  "type": "element",
+                  "name": "Colonne",
+                  "attributes": {
+                    "largeur": "20",
+                    "type": "normal"
+                  }
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "header"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Trimestres manquants"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Taux de la retraite"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "1"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "49,375 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "2"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "48,750 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "3"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "48,125 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "4"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "47,500 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "5"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "46,875 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "6"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "46,250 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "7"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "45,625 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "8"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "45,000 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "9"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "44,375 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "10"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "43,750 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "11"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "43,125 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "12"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "42,500 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "13"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "41,875 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "14"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "41,250 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "15"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "40,625 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "16"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "40,000 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "17"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "39,375 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "18"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "38,750 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "19"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "38,125 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "20 et plus"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "37,500 %"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Pour déterminer le nombre de trimestres manquants, votre caisse de retraite compare :"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Liste",
+              "attributes": {
+                "type": "puce"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Item",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "le nombre de trimestres manquants entre la date de votre départ en retraite et la date à laquelle vous atteignez "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F14044",
+                            "type": "Fiche d'information",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "l'âge permettant de bénéficier automatiquement du taux plein"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ","
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Item",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "et le nombre de trimestres manquant entre la date de votre départ en retraite et la durée d'assurance retraite ouvrant droit au taux plein."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Le nombre de trimestres est arrondi au chiffre supérieur. Le nombre de trimestres manquants retenu  est le plus avantageux pour vous."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Par exemple, pour bénéficier d'une retraite à taux plein, un salarié né le 15 décembre 1955, doit :"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Liste",
+              "attributes": {
+                "type": "puce"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Item",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "soit justifier de 166 trimestres d'assurance vieillesse (41 ans et 6 mois),"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Item",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "soit attendre d'avoir 67 ans  (au 15 décembre 2022)."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "S'il décide de partir en retraite dès le 15 décembre 2020, à 65 ans, en ayant seulement  159 trimestres, \nil lui manque :"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Liste",
+              "attributes": {
+                "type": "puce"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Item",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "soit 7 trimestres pour remplir la condition de durée d'assurance vieillesse permettant de bénéficier du taux plein (166 - 159),"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Item",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "soit  8 trimestres pour remplir la condition d'âge permettant d'obtenir le taux plein automatique (67 ans - 65 ans)."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Le plus avantageux des 2 nombres est retenu pour le calcul, soit 7 trimestres."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Ce nombre est ensuite multiplié par le coefficient de minoration applicable."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Ainsi, pour ce salarié, le taux de minoration applicable pour le calcul de la pension est le suivant : "
+                },
+                {
+                  "type": "element",
+                  "name": "Valeur",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "50 %"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " - (0,625 x 7) = "
+                },
+                {
+                  "type": "element",
+                  "name": "Valeur",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "45,625 %"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Rappel",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Rappel"
                     }
                   ]
                 },
@@ -715,1016 +2089,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Vous pouvez partir en retraite dès que vous avez atteint "
-                    },
-                    {
-                      "type": "element",
-                      "name": "LienInterne",
-                      "attributes": {
-                        "LienPublication": "F14043",
-                        "type": "Fiche Question-réponse",
-                        "audience": "Particuliers"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "l'âge minimum de départ à la retraite"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": ". Cependant, si vous ne remplissez pas la condition de durée d'assurance vieillesse exigée pour  bénéficier d'une "
-                    },
-                    {
-                      "type": "element",
-                      "name": "LienInterne",
-                      "attributes": {
-                        "LienPublication": "F14044",
-                        "type": "Fiche d'information",
-                        "audience": "Particuliers"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "pension de retraite à taux plein"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": ", la sécurité sociale calcule votre pension en appliquant un taux minoré (appelé "
-                    },
-                    {
-                      "type": "element",
-                      "name": "Expression",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "décote"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": "). Ce taux varie en fonction :"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Liste",
-                  "attributes": {
-                    "type": "puce"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "du nombre de trimestres qui vous manque pour bénéficier d'une pension à taux plein,"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "et de votre année de naissance."
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Attention",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Attention"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "un coefficient de minoration est également appliqué lors du calcul de votre pension de retraite complémentaire."
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Chapitre",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Vous êtes né(e) en 1952"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "SousChapitre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Formule de calcul"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Votre décote est déterminée en appliquant au taux plein un coefficient de minoration multiplié par le nombre de trimestres manquants pour avoir droit au taux plein."
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "SousChapitre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Coefficient de minoration"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Le coefficient de minoration appliqué au taux plein ("
-                        },
-                        {
-                          "type": "element",
-                          "name": "Valeur",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "50 %"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": ") par trimestre manquant est de "
-                        },
-                        {
-                          "type": "element",
-                          "name": "Valeur",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "1,375 %"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": "."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "La diminution du taux par trimestre manquant est de 0,6875."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Le taux de la pension ne peut pas être inférieur à "
-                        },
-                        {
-                          "type": "element",
-                          "name": "Valeur",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "36,25 %"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " (correspondant à 20 trimestres et plus  manquant)."
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "SousChapitre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Déterminer le nombre de trimestres manquants"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Votre caisse de retraite compare :"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Liste",
-                      "attributes": {
-                        "type": "puce"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "le nombre de trimestres manquants entre la date de votre départ à la retraite et la date à laquelle vous atteignez "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F14044",
-                                    "type": "Fiche d'information",
-                                    "audience": "Particuliers"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "l'âge permettant de bénéficier automatiquement du taux plein"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ","
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "et le nombre de trimestres manquants entre la date de votre départ à la retraite et la durée d'assurance retraite ouvrant droit au taux plein."
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Le nombre de trimestres est arrondi au chiffre supérieur. Le nombre de trimestres manquants retenu  est le plus avantageux pour vous."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Par exemple, pour bénéficier d'une retraite à taux plein, un salarié né le 1"
-                        },
-                        {
-                          "type": "element",
-                          "name": "Exposant",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "er"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " décembre 1952 doit :"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Liste",
-                      "attributes": {
-                        "type": "puce"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "soit justifier de 164 trimestres d'assurance vieillesse (41 ans),"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "soit attendre d'avoir 65 ans et 9 mois (au 31 août 2018)."
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "S'il décide de partir en retraite dès le 1"
-                        },
-                        {
-                          "type": "element",
-                          "name": "Exposant",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "er"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " janvier 2018 en ayant seulement  158 trimestres, \nil lui manque :"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Liste",
-                      "attributes": {
-                        "type": "puce"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "soit 6 trimestres pour remplir la condition de durée d'assurance vieillesse permettant de bénéficier du taux plein (164 - 158),"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "soit 2 trimestres et 2 mois arrondis à 3 trimestres pour remplir la condition d'âge permettant d’obtenir le taux plein automatique (65 ans et 9 mois - 65 ans et 1 mois)."
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Le plus avantageux des 2 nombres est retenu pour le calcul, soit 3 trimestres."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Ce nombre est ensuite multiplié par le coefficient de minoration applicable."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Ainsi, pour ce salarié, le taux de minoration applicable pour le calcul de la pension est le suivant : "
-                        },
-                        {
-                          "type": "element",
-                          "name": "Valeur",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "50 %"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " - (0,6875 x 3) = "
-                        },
-                        {
-                          "type": "element",
-                          "name": "Valeur",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "47,9375 %"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": "."
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Chapitre",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Vous êtes né(e) en 1953 ou après"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "SousChapitre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Formule de calcul"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Votre décote est déterminée en appliquant au taux plein un coefficient de minoration multiplié par le nombre de trimestres manquants pour avoir droit au taux plein."
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "SousChapitre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Coefficient de minoration"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Le coefficient de minoration appliqué au taux plein ("
-                        },
-                        {
-                          "type": "element",
-                          "name": "Valeur",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "50 %"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": ") par trimestre manquant est de "
-                        },
-                        {
-                          "type": "element",
-                          "name": "Valeur",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "1,25 %"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": "."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "La diminution du taux par trimestre manquant est de 0,625."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Le taux de la pension ne peut pas être inférieur à "
-                        },
-                        {
-                          "type": "element",
-                          "name": "Valeur",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "37,5 %"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " (correspondant à 20 trimestres et plus manquant)."
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "SousChapitre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Déterminer le nombre de trimestres manquants"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Votre caisse de retraite compare :"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Liste",
-                      "attributes": {
-                        "type": "puce"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "le nombre de trimestres manquants entre la date de votre départ à la retraite et la date à laquelle vous atteignez "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F14044",
-                                    "type": "Fiche d'information",
-                                    "audience": "Particuliers"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "l'âge permettant de bénéficier automatiquement du taux plein"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ","
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "et le nombre de trimestres manquants entre la date de votre départ à la retraite et la durée d'assurance retraite ouvrant droit au taux plein."
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Le nombre de trimestres est arrondi au chiffre supérieur. Le nombre de trimestres manquants retenu  est le plus avantageux pour vous."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Par exemple, pour bénéficier d'une retraite à taux plein, un salarié né le 1"
-                        },
-                        {
-                          "type": "element",
-                          "name": "Exposant",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "er"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " septembre 1953, doit :"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Liste",
-                      "attributes": {
-                        "type": "puce"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "soit justifier de 165 trimestres d'assurance vieillesse (41 ans et 3 mois),"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "soit attendre d'avoir 66 ans et 2 mois (au 1"
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Exposant",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "er"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " novembre 2019)."
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "S'il décide de partir en retraite dès le 1"
-                        },
-                        {
-                          "type": "element",
-                          "name": "Exposant",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "er"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " septembre 2018 (à 65 ans) en ayant seulement  158 trimestres, \nil lui manque :"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Liste",
-                      "attributes": {
-                        "type": "puce"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "soit 7 trimestres pour remplir la condition de durée d'assurance vieillesse permettant de bénéficier du taux plein (165 - 158),"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "soit  4 trimestres et 2 mois arrondis à 5 trimestres pour remplir la condition d'âge permettant d'obtenir le taux plein automatique (66 ans et 2 mois - 65 ans)."
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Le plus avantageux des 2 nombres est retenu pour le calcul, soit 5 trimestres."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Ce nombre est ensuite multiplié par le coefficient de minoration applicable."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Ainsi, pour ce salarié, le taux de minoration applicable pour le calcul de la pension est le suivant : "
-                        },
-                        {
-                          "type": "element",
-                          "name": "Valeur",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "50 %"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " - (0,625 x 5) = "
-                        },
-                        {
-                          "type": "element",
-                          "name": "Valeur",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "46,875 %"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": "."
-                        }
-                      ]
+                      "text": "si vous avez le nombre nécessaire de trimestres mais  dans plusieurs  régimes de base, votre pension du régime général est proratisée en fonction du nombre de trimestres retenus dans ce régime. Vos autres pensions le sont aussi, mais il n'y a pas de décote."
                     }
                   ]
                 }
