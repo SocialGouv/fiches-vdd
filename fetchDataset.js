@@ -8,14 +8,14 @@ const fetchDataset = async (name, url, entryCallback) => {
   ).start();
 
   const dataStream = await fetch(url, { responsename: "stream" }).then(
-    r => r.body
+    (r) => r.body
   );
 
   let count = 0;
 
   return dataStream
     .pipe(unzip.Parse())
-    .on("entry", function(entry) {
+    .on("entry", function (entry) {
       if (entry.path.match(/^[FRN]\d+\.xml/)) {
         entryCallback(entry, downloadSpinner);
         count += 1;
@@ -26,7 +26,7 @@ const fetchDataset = async (name, url, entryCallback) => {
     .on("finish", () => {
       downloadSpinner.succeed(`Download of ${count} files "${name}" succeeded`);
     })
-    .on("error", e => {
+    .on("error", (e) => {
       downloadSpinner.warn(`Download of "${name}" files failed`);
       console.log("e", e);
       throw e;

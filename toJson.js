@@ -1,6 +1,6 @@
 const xmlStringToJsObject = require("xml-js").xml2js;
 
-const toJson = xml =>
+const toJson = (xml) =>
   xmlStringToJsObject(xml, {
     alwaysArray: true,
     ignoreDeclaration: true,
@@ -8,7 +8,7 @@ const toJson = xml =>
     ignoreInstruction: true,
     elementsKey: "children",
     attributesKey: "attributes",
-    textKey: "text"
+    textKey: "text",
   });
 
 module.exports = toJson;
