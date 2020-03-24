@@ -11,13 +11,13 @@ const getDatasetJson = async (type, url) => {
   await fetchDataset(type, url, async (entry, downloadSpinner) => {
     let str = "";
     entry
-      .on("data", buf => (str += buf.toString()))
+      .on("data", (buf) => (str += buf.toString()))
       .on("end", () => {
         try {
           const json = toJson(str);
           fiches.push({
             id: entry.path.replace(/\.xml$/, ""),
-            ...json
+            ...json,
           });
         } catch (err) {
           downloadSpinner.warn(
@@ -34,7 +34,7 @@ const fetchAll = async () => {
     fs.mkdirSync(`./data/${type}`, { recursive: true });
     const fiches = await getDatasetJson(type, url);
     const writeSpinner = ora(`Writing "${type}" fiches`).start();
-    fiches.forEach(fiche => {
+    fiches.forEach((fiche) => {
       const fileName = `./data/${type}/${fiche.id}.json`;
       try {
         fs.writeFileSync(fileName, JSON.stringify(fiche, null, 2));
@@ -43,7 +43,7 @@ const fetchAll = async () => {
       }
     });
     const indexName = `./data/${type}/index.json`;
-    const fichesIdArray = fiches.map(fiche => fiche.id);
+    const fichesIdArray = fiches.map((fiche) => fiche.id);
     try {
       fs.writeFileSync(indexName, JSON.stringify(fichesIdArray, null, 2));
     } catch (err) {

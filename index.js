@@ -8,10 +8,10 @@ module.exports = exports = {
   ...Object.keys(datasets).reduce(
     (datasets, type) => ({
       ...datasets,
-      [type]: require(`./data/${type}/index.json`)
+      [type]: require(`./data/${type}/index.json`),
     }),
     {}
-  )
+  ),
 };
 
 if (require.main === module) {
