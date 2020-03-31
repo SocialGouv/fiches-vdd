@@ -1,0 +1,56 @@
+const datasets = require("./datasets.json");
+
+// dump fiches summary for data/index.json
+
+const getFiche = (type, id) => require(`./data/${type}/${id}.json`);
+
+const getFicheMeta = (fiche, name) =>
+  fiche &&
+  fiche.children &&
+  fiche.children.length &&
+  fiche.children[0].children.find((c) => c.name === name);
+
+const getFicheMetaText = (fiche, name) => {
+  const node = getFicheMeta(fiche, name);
+  return (
+    (node &&
+      node.children &&
+      node.children.length &&
+      node.children[0] &&
+      node.children[0].text) ||
+    null
+  );
+};
+
+const getFicheAriane = (data) => {
+  const fil = getFicheMeta(data, "FilDAriane");
+  return (
+    (fil &&
+      fil.children &&
+      fil.children.length &&
+      fil.children.map((c) => c.children[0].text).join(" > ")) ||
+    null
+  );
+};
+
+const makeIndex = () =>
+  Object.keys(datasets).flatMap((key) => {
+    const fiches = require(`./data/${key}/index.json`);
+    return fiches.map((id) => {
+      const data = getFiche(key, id);
+      return {
+        id: data.id,
+        type: key,
+        title: getFicheMetaText(data, "dc:title"),
+        subject: getFicheMetaText(data, "dc:subject"),
+        theme: getFicheAriane(data),
+        date: getFicheMetaText(data, "dc:date"),
+      };
+    });
+  });
+
+module.exports = makeIndex;
+
+if (require.main === module) {
+  console.log(JSON.stringify(makeIndex(), null, 2));
+}

@@ -1,4 +1,4 @@
-const datasets = require("./datasets");
+const datasets = require("./datasets.json");
 
 const getFiche = (type, id) => require(`./data/${type}/${id}.json`);
 

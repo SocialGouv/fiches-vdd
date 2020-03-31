@@ -20,6 +20,9 @@ console.log(fiches.associations);
 
 // récupérer une fiche en particulier
 fiches.getFiche("associations", "F3180");
+
+// index de toutes les fiches
+const index = require("@socialgouv/fiches-vdd/data/index.json");
 ```
 
 ## Dev
