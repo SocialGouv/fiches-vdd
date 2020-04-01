@@ -3,6 +3,7 @@ const ora = require("ora");
 
 const fetchDataset = require("./fetchDataset");
 const toJson = require("./toJson");
+const makeIndex = require("./makeIndex");
 const datasets = require("./datasets.json");
 
 // convert XML files in given dataset to an array of JSON structures
@@ -55,6 +56,10 @@ const fetchAll = async () => {
 
 if (require.main === module) {
   fetchAll()
-    //.then(console.log)
+    .then(() => {
+      const index = makeIndex();
+      fs.writeFileSync("./data/index.json", JSON.stringify(index, null, 2));
+      console.log(`Summary dumped to data/index.json`);
+    })
     .catch(console.log);
 }
