@@ -1,6 +1,6 @@
 # @socialgouv/fiches-vdd [![](https://img.shields.io/npm/v/@socialgouv/fiches-vdd.svg)](https://www.npmjs.com/package/@socialgouv/fiches-vdd)
 
-Fiches vos droits et démarches au format JSON
+Fiches vos droits et démarches au format JSON, mises à jour quotidiennement
 
 | Dataset        | Url                                                                          |
 | -------------- | ---------------------------------------------------------------------------- |
