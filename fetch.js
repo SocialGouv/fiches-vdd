@@ -10,10 +10,15 @@ const datasets = require("./datasets.json");
 const getDatasetJson = async (type, url) => {
   const fiches = [];
   await fetchDataset(type, url, async (entry, downloadSpinner) => {
-    let str = "";
+    const chunks = [];
     entry
-      .on("data", (buf) => (str += buf.toString()))
+      .on("data", (buf) => chunks.push(buf))
       .on("end", () => {
+        const str = Buffer.concat(chunks).toString("utf8");
+        if (/��/.test(str)) {
+          console.error(entry.path, "💀 💩 ☠️ ");
+          process.exit(1);
+        }
         try {
           const json = toJson(str);
           fiches.push({
