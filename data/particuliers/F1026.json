@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1026",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1026"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F1026",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -498,7 +499,7 @@
                       "name": "LienInterne",
                       "attributes": {
                         "LienPublication": "F1618",
-                        "type": "Fiche d'information",
+                        "type": "Fiche d'information conditionnée",
                         "audience": "Particuliers"
                       },
                       "children": [
@@ -801,6 +802,58 @@
                     },
                     {
                       "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "ou",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "ou",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11257"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estIndefini",
+                                  "attributes": {
+                                    "var": "T11257"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ou",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10951"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estIndefini",
+                                  "attributes": {
+                                    "var": "T10951"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "Paragraphe",
                       "children": [
                         {
@@ -820,6 +873,19 @@
                           "type": "element",
                           "name": "Item",
                           "children": [
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11257"
+                                  }
+                                }
+                              ]
+                            },
                             {
                               "type": "element",
                               "name": "Paragraphe",
@@ -853,6 +919,19 @@
                           "children": [
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10951"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
@@ -882,6 +961,19 @@
                           "type": "element",
                           "name": "Item",
                           "children": [
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11257"
+                                  }
+                                }
+                              ]
+                            },
                             {
                               "type": "element",
                               "name": "Paragraphe",
@@ -941,6 +1033,67 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "ou",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10313"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10583"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10844"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10843"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10323"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T11369"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T11370"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "BlocCas",
                   "attributes": {
                     "affichage": "onglet"
@@ -955,14 +1108,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Dans le secteur privé"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Dans le secteur privé"
                             }
                           ]
                         },
@@ -1155,14 +1302,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Dans l'administration"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Dans l'administration"
                             }
                           ]
                         },
@@ -1198,7 +1339,7 @@
                               "name": "LienInterne",
                               "attributes": {
                                 "LienPublication": "F544",
-                                "type": "Fiche d'information",
+                                "type": "Fiche d'information conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
@@ -1361,6 +1502,19 @@
                           "text": "Droit au séjour du partenaire étranger"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10632"
+                      }
                     }
                   ]
                 },
@@ -1743,14 +1897,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Location"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Location"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10280"
+                              }
                             }
                           ]
                         },
@@ -1794,14 +1955,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Accès à la propriété"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Accès à la propriété"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10281"
+                              }
                             }
                           ]
                         },
@@ -2053,14 +2221,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Enfants communs"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Enfants communs"
                             }
                           ]
                         },
@@ -2088,7 +2250,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F10505",
-                                        "type": "Fiche d'information",
+                                        "type": "Fiche d'information conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -2217,14 +2379,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Enfant issu d'une autre union"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Enfant issu d'une autre union"
                             }
                           ]
                         },
@@ -2330,14 +2486,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Défunt salarié dans le privé"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Défunt salarié dans le privé"
                             }
                           ]
                         },
@@ -2383,7 +2533,7 @@
                               "name": "LienInterne",
                               "attributes": {
                                 "LienPublication": "F14868",
-                                "type": "Fiche d'information",
+                                "type": "Fiche d'information conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
@@ -2429,14 +2579,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Défunt fonctionnaire"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Défunt fonctionnaire"
                             }
                           ]
                         },
@@ -2575,6 +2719,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R20684",
+            "sve": "non",
             "type": "Centre de contact"
           },
           "children": [

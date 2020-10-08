@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F116",
-        "type": "Fiche Question-réponse",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche Question-réponse conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F116"
       },
       "children": [
         {
@@ -230,7 +231,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F116",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -640,11 +641,30 @@
           "children": [
             {
               "type": "element",
-              "name": "Paragraphe",
+              "name": "FragmentConditionne",
               "children": [
                 {
-                  "type": "text",
-                  "text": "Si la carte grise est barrée, vous ne pouvez en général pas conduire le véhicule à l'étranger. Toutefois, si vous avez acheté un véhicule en France dans le but de l'exporter et que vous allez l'immatriculer dans un autre pays, vérifiez auprès de l'ambassade ou du consulat si ce pays vous permet de circuler avec la carte grise barrée."
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10439"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Si la carte grise est barrée, vous ne pouvez en général pas conduire le véhicule à l'étranger. Toutefois, si vous avez acheté un véhicule en France dans le but de l'exporter et que vous allez l'immatriculer dans un autre pays, vérifiez auprès de l'ambassade ou du consulat si ce pays vous permet de circuler avec la carte grise barrée."
+                    }
+                  ]
                 }
               ]
             },
@@ -653,6 +673,7 @@
               "name": "OuSAdresser",
               "attributes": {
                 "ID": "R2884",
+                "sve": "non",
                 "type": "Local personnalisable"
               },
               "children": [
@@ -700,109 +721,147 @@
             },
             {
               "type": "element",
-              "name": "Paragraphe",
+              "name": "FragmentConditionne",
               "children": [
                 {
                   "type": "element",
-                  "name": "MiseEnEvidence",
+                  "name": "Condition",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Si vous avez un "
-                    },
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10013"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
                     {
                       "type": "element",
-                      "name": "LienInterne",
-                      "attributes": {
-                        "LienPublication": "F16542",
-                        "type": "Fiche Question-réponse",
-                        "audience": "Particuliers"
-                      },
+                      "name": "MiseEnEvidence",
                       "children": [
                         {
                           "type": "text",
-                          "text": "certificat provisoire d'immatriculation (CPI)"
+                          "text": "Si vous avez un "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F16542",
+                            "type": "Fiche Question-réponse",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "certificat provisoire d'immatriculation (CPI)"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ","
                         }
                       ]
                     },
                     {
                       "type": "text",
-                      "text": ","
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " il permet de circuler "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
+                      "text": " il permet de circuler "
+                    },
+                    {
+                      "type": "element",
+                      "name": "MiseEnEvidence",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "en France uniquement"
+                        }
+                      ]
+                    },
                     {
                       "type": "text",
-                      "text": "en France uniquement"
+                      "text": ", et cela pendant 1 mois dans l'attente de la réception de la carte grise définitive."
                     }
                   ]
-                },
-                {
-                  "type": "text",
-                  "text": ", et cela pendant 1 mois dans l'attente de la réception de la carte grise définitive."
                 }
               ]
             },
             {
               "type": "element",
-              "name": "Paragraphe",
+              "name": "FragmentConditionne",
               "children": [
                 {
                   "type": "element",
-                  "name": "MiseEnEvidence",
+                  "name": "Condition",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Si vous avez un "
-                    },
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10915"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
                     {
                       "type": "element",
-                      "name": "LienIntra",
-                      "attributes": {
-                        "LienID": "R55427",
-                        "type": "Définition de glossaire"
-                      },
+                      "name": "MiseEnEvidence",
                       "children": [
                         {
                           "type": "text",
-                          "text": "CPI WW"
+                          "text": "Si vous avez un "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R55427",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "CPI WW"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ","
                         }
                       ]
                     },
                     {
                       "type": "text",
-                      "text": ","
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " sachez que celui-ci "
-                },
-                {
-                  "type": "element",
-                  "name": "LienExterne",
-                  "attributes": {
-                    "URL": "https://immatriculation.ants.gouv.fr/Actualites/Circulation-a-l-etranger-des-vehicules-en-immatriculation-provisoire-WW"
-                  },
-                  "children": [
+                      "text": " sachez que celui-ci "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienExterne",
+                      "attributes": {
+                        "URL": "https://immatriculation.ants.gouv.fr/Actualites/Circulation-a-l-etranger-des-vehicules-en-immatriculation-provisoire-WW"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "permet de circuler à l'étranger"
+                        }
+                      ]
+                    },
                     {
                       "type": "text",
-                      "text": "permet de circuler à l'étranger"
+                      "text": "\n\n. Toutefois, la validité internationale d'un CPI WW français reste soumise à l'accord de l'État dans lequel vous allez circuler."
                     }
                   ]
-                },
-                {
-                  "type": "text",
-                  "text": "\n\n. Toutefois, la validité internationale d'un CPI WW français reste soumise à l'accord de l'État dans lequel vous allez circuler."
                 }
               ]
             }

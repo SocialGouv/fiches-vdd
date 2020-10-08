@@ -8,8 +8,10 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F583",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "dateDerniereModificationImportante": "2019-08-20T00:00:00",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F583"
       },
       "children": [
         {
@@ -240,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F583",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -691,6 +693,58 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "ou",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "ou",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11224"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "estIndefini",
+                              "attributes": {
+                                "var": "T11224"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ou",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11225"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "estIndefini",
+                              "attributes": {
+                                "var": "T11225"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
@@ -831,14 +885,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Cas général"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Cas général"
                                         }
                                       ]
                                     },
@@ -857,7 +905,6 @@
                                       "name": "ServiceEnLigne",
                                       "attributes": {
                                         "ID": "R32176",
-                                        "URL": "",
                                         "type": "Modèle de document"
                                       },
                                       "children": [
@@ -897,14 +944,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Hospitalisation de l'enfant"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Hospitalisation de l'enfant"
                                         }
                                       ]
                                     },
@@ -933,7 +974,6 @@
                                       "name": "ServiceEnLigne",
                                       "attributes": {
                                         "ID": "R32176",
-                                        "URL": "",
                                         "type": "Modèle de document"
                                       },
                                       "children": [
@@ -973,14 +1013,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Décès de la mère lors de l'accouchement"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Décès de la mère lors de l'accouchement"
                                         }
                                       ]
                                     },
@@ -1060,7 +1094,6 @@
                                       "name": "ServiceEnLigne",
                                       "attributes": {
                                         "ID": "R32176",
-                                        "URL": "",
                                         "type": "Modèle de document"
                                       },
                                       "children": [
@@ -1131,14 +1164,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Vous êtes le père de l'enfant"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Vous êtes le père de l'enfant"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T10285"
+                                          }
                                         }
                                       ]
                                     },
@@ -1246,14 +1286,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Vous vivez en couple avec la mère de l'enfant"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Vous vivez en couple avec la mère de l'enfant"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11198"
+                                          }
                                         }
                                       ]
                                     },
@@ -1378,14 +1425,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Naissance d'un enfant"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Naissance d'un enfant"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11231"
+                                      }
                                     }
                                   ]
                                 },
@@ -1428,14 +1482,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Naissance multiple"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Naissance multiple"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11232"
+                                      }
                                     }
                                   ]
                                 },
@@ -1589,7 +1650,7 @@
                               "name": "LienInterne",
                               "attributes": {
                                 "LienPublication": "F32513",
-                                "type": "Fiche d'information",
+                                "type": "Fiche d'information conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
@@ -1626,116 +1687,173 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Dans la fonction publique d'État, les "
-                            },
-                            {
                               "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F465",
-                                "type": "Fiche d'information",
-                                "audience": "Particuliers"
-                              },
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "primes et indemnités"
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11233"
+                                  }
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": " sont versées en totalité. Si le montant des primes et indemnités dépend en partie des résultats et de la manière de servir, il appartient au chef de service d'établir si le congé a eu un impact sur l'activité de la fonctionnaire."
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Dans la fonction publique d'État, les "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F465",
+                                    "type": "Fiche d'information",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "primes et indemnités"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " sont versées en totalité. Si le montant des primes et indemnités dépend en partie des résultats et de la manière de servir, il appartient au chef de service d'établir si le congé a eu un impact sur l'activité de la fonctionnaire."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Les primes et indemnités qui rémunèrent des "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R1098",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "sujétions"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " particulières sont suspendues si la fonctionnaire en congé est remplacée."
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Les primes et indemnités qui rémunèrent des "
-                            },
-                            {
                               "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R1098",
-                                "type": "Définition de glossaire"
-                              },
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "sujétions"
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11234"
+                                  }
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": " particulières sont suspendues si la fonctionnaire en congé est remplacée."
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Dans la fonction publique territoriale, les "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F465",
+                                    "type": "Fiche d'information",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "primes et indemnités"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " sont versées en totalité. Si le montant des primes et indemnités dépend en partie des résultats et de la manière de servir, il appartient au chef de service d'établir si le congé a eu un impact sur l'activité de la fonctionnaire."
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Dans la fonction publique territoriale, les "
-                            },
-                            {
                               "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F465",
-                                "type": "Fiche d'information",
-                                "audience": "Particuliers"
-                              },
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "primes et indemnités"
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11235"
+                                  }
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": " sont versées en totalité. Si le montant des primes et indemnités dépend en partie des résultats et de la manière de servir, il appartient au chef de service d'établir si le congé a eu un impact sur l'activité de la fonctionnaire."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Dans la fonction publique hospitalière, aucune disposition ne fixe les règles de maintien ou de suspension des "
-                            },
-                            {
                               "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F465",
-                                "type": "Fiche d'information",
-                                "audience": "Particuliers"
-                              },
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "primes et indemnités"
+                                  "text": "Dans la fonction publique hospitalière, aucune disposition ne fixe les règles de maintien ou de suspension des "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F465",
+                                    "type": "Fiche d'information",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "primes et indemnités"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
                                 }
                               ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "."
                             }
                           ]
                         }
@@ -1777,14 +1895,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Fonctionnaire titulaire"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Fonctionnaire titulaire"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11224"
+                                      }
                                     }
                                   ]
                                 },
@@ -1877,14 +2002,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Fonctionnaire stagiaire"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Fonctionnaire stagiaire"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11225"
+                                      }
                                     }
                                   ]
                                 },
@@ -2016,6 +2148,19 @@
                     {
                       "type": "text",
                       "text": "Contractuel"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10844"
+                      }
                     }
                   ]
                 },
@@ -2187,14 +2332,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Naissance d'un enfant"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Naissance d'un enfant"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11231"
+                                      }
                                     }
                                   ]
                                 },
@@ -2237,14 +2389,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Naissance multiple"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Naissance multiple"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11232"
+                                      }
                                     }
                                   ]
                                 },
@@ -2287,14 +2446,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Hospitalisation immédiate après la naissance"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Hospitalisation immédiate après la naissance"
                                     }
                                   ]
                                 },
@@ -2429,14 +2582,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Cas général"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Cas général"
                                         }
                                       ]
                                     },
@@ -2465,7 +2612,6 @@
                                       "name": "ServiceEnLigne",
                                       "attributes": {
                                         "ID": "R32176",
-                                        "URL": "",
                                         "type": "Modèle de document"
                                       },
                                       "children": [
@@ -2505,14 +2651,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Hospitalisation de l'enfant"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Hospitalisation de l'enfant"
                                         }
                                       ]
                                     },
@@ -2541,7 +2681,6 @@
                                       "name": "ServiceEnLigne",
                                       "attributes": {
                                         "ID": "R32176",
-                                        "URL": "",
                                         "type": "Modèle de document"
                                       },
                                       "children": [
@@ -2581,14 +2720,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Décès de la mère à l'accouchement"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Décès de la mère à l'accouchement"
                                         }
                                       ]
                                     },
@@ -2668,7 +2801,6 @@
                                       "name": "ServiceEnLigne",
                                       "attributes": {
                                         "ID": "R32176",
-                                        "URL": "",
                                         "type": "Modèle de document"
                                       },
                                       "children": [
@@ -2739,14 +2871,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Vous êtes le père de l'enfant"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Vous êtes le père de l'enfant"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T10285"
+                                          }
                                         }
                                       ]
                                     },
@@ -2870,14 +3009,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Vous vivez en couple avec la mère de l'enfant"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Vous vivez en couple avec la mère de l'enfant"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11198"
+                                          }
                                         }
                                       ]
                                     },
@@ -3018,14 +3164,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "L'agent a au moins 6 mois de services"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "L'agent a au moins 6 mois de services"
                                     }
                                   ]
                                 },
@@ -3161,7 +3301,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F32513",
-                                        "type": "Fiche d'information",
+                                        "type": "Fiche d'information conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -3179,116 +3319,173 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "FragmentConditionne",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Dans la fonction publique d'État, les "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F465",
-                                        "type": "Fiche d'information",
-                                        "audience": "Particuliers"
-                                      },
+                                      "name": "Condition",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "primes et indemnités"
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11233"
+                                          }
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "text",
-                                      "text": " sont aussi versées en totalité. Si le montant des primes et indemnités dépend en partie des résultats et de la manière de servir, il appartient au chef de service d'établir si le congé a eu un impact sur l'activité de la fonctionnaire."
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Dans la fonction publique d'État, les "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F465",
+                                            "type": "Fiche d'information",
+                                            "audience": "Particuliers"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "primes et indemnités"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " sont aussi versées en totalité. Si le montant des primes et indemnités dépend en partie des résultats et de la manière de servir, il appartient au chef de service d'établir si le congé a eu un impact sur l'activité de la fonctionnaire."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Les primes et indemnités qui rémunèrent des "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienIntra",
+                                          "attributes": {
+                                            "LienID": "R1098",
+                                            "type": "Définition de glossaire"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "sujétions"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " particulières sont suspendues si la fonctionnaire en congé est remplacée."
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "FragmentConditionne",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Les primes et indemnités qui rémunèrent des "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R1098",
-                                        "type": "Définition de glossaire"
-                                      },
+                                      "name": "Condition",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "sujétions"
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11234"
+                                          }
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "text",
-                                      "text": " particulières sont suspendues si la fonctionnaire en congé est remplacée."
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Dans la fonction publique territoriale, les "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F465",
+                                            "type": "Fiche d'information",
+                                            "audience": "Particuliers"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "primes et indemnités"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " sont versées en totalité. Si le montant des primes et indemnités dépend en partie des résultats et de la manière de servir, il appartient au chef de service d'établir si le congé a eu un impact sur l'activité de la fonctionnaire."
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "FragmentConditionne",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Dans la fonction publique territoriale, les "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F465",
-                                        "type": "Fiche d'information",
-                                        "audience": "Particuliers"
-                                      },
+                                      "name": "Condition",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "primes et indemnités"
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11235"
+                                          }
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "text",
-                                      "text": " sont versées en totalité. Si le montant des primes et indemnités dépend en partie des résultats et de la manière de servir, il appartient au chef de service d'établir si le congé a eu un impact sur l'activité de la fonctionnaire."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Dans la fonction publique hospitalière, aucune disposition ne fixe les règles de maintien ou de suspension des "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F465",
-                                        "type": "Fiche d'information",
-                                        "audience": "Particuliers"
-                                      },
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "primes et indemnité"
+                                          "text": "Dans la fonction publique hospitalière, aucune disposition ne fixe les règles de maintien ou de suspension des "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F465",
+                                            "type": "Fiche d'information",
+                                            "audience": "Particuliers"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "primes et indemnité"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": "s."
                                         }
                                       ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "s."
                                     }
                                   ]
                                 }
@@ -3303,14 +3500,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "L'agent a moins de 6 mois de services"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "L'agent a moins de 6 mois de services"
                                     }
                                   ]
                                 },

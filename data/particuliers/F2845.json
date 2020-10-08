@@ -9,7 +9,9 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F2845",
         "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "dateDerniereModificationImportante": "2020-06-01T00:00:00",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F2845"
       },
       "children": [
         {
@@ -1257,43 +1259,69 @@
                               "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous êtes français"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Vous êtes français"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Si vous avez moins de 25 ans, vous devez être en règle avec les "
-                                },
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10330"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "FragmentConditionne",
+                              "children": [
                                 {
                                   "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "N24",
-                                    "type": "Dossier",
-                                    "audience": "Particuliers"
-                                  },
+                                  "name": "Condition",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "obligations de recensement"
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11770"
+                                      }
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": "."
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Si vous avez moins de 25 ans, vous devez être en règle avec les "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "N24",
+                                        "type": "Dossier",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "obligations de recensement"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -1308,14 +1336,21 @@
                               "name": "Titre",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Vous êtes européen"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous êtes européen"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10632"
+                                  }
                                 }
                               ]
                             },
@@ -1358,14 +1393,21 @@
                               "name": "Titre",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Vous êtes étranger"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous êtes étranger"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10632"
+                                  }
                                 }
                               ]
                             },
@@ -1449,14 +1491,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Par le biais d'une auto école"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Par le biais d'une auto école"
                             }
                           ]
                         },
@@ -1836,14 +1872,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Par vous-même"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Par vous-même"
                             }
                           ]
                         },
@@ -3229,14 +3259,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Titre de conduite sécurisé au format \"carte de crédit\""
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Titre de conduite sécurisé au format \"carte de crédit\""
                             }
                           ]
                         },
@@ -3625,6 +3649,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R33823",
+                            "sve": "non",
                             "type": "Centre de contact"
                           },
                           "children": [
@@ -3814,14 +3839,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Titre de conduite au format \"rose 3 volets\""
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Titre de conduite au format \"rose 3 volets\""
                             }
                           ]
                         },

@@ -8,8 +8,10 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F2710",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "dateDerniereModificationImportante": "2020-01-22T00:00:00",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F2710"
       },
       "children": [
         {
@@ -240,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F2710",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -1051,6 +1053,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10576"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
@@ -1188,7 +1203,7 @@
                               "name": "LienInterne",
                               "attributes": {
                                 "LienPublication": "F2208",
-                                "type": "Fiche d'information",
+                                "type": "Fiche d'information conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
@@ -1260,7 +1275,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F2208",
-                                        "type": "Fiche d'information",
+                                        "type": "Fiche d'information conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -1389,43 +1404,62 @@
                         },
                         {
                           "type": "element",
-                          "name": "ANoter",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Titre",
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "À noter"
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10010"
+                                  }
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "ANoter",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "si vous êtes "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "LienIntra",
-                                  "attributes": {
-                                    "LienID": "R46210",
-                                    "type": "Définition de glossaire"
-                                  },
+                                  "name": "Titre",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "européen"
+                                      "text": "À noter"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": ", vous n'êtes pas obligé de détenir une carte de séjour et n'êtes pas concerné."
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "si vous êtes "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R46210",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "européen"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ", vous n'êtes pas obligé de détenir une carte de séjour et n'êtes pas concerné."
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -1479,14 +1513,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Cas général"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Cas général"
                                     }
                                   ]
                                 },
@@ -1495,6 +1523,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R2",
+                                    "sve": "non",
                                     "type": "Local personnalisé sur SP"
                                   },
                                   "children": [
@@ -1545,6 +1574,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R14145",
+                                    "sve": "non",
                                     "type": "Local personnalisé sur SP"
                                   },
                                   "children": [
@@ -1627,14 +1657,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "À Paris"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "À Paris"
                                     }
                                   ]
                                 },
@@ -1643,6 +1667,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R42203",
+                                    "sve": "non",
                                     "type": "Local personnalisable"
                                   },
                                   "children": [
@@ -1749,14 +1774,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Pour la carte retraité"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Pour la carte retraité"
                                     }
                                   ]
                                 },
@@ -1918,14 +1937,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Pour la carte conjoint de retraité"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Pour la carte conjoint de retraité"
                                     }
                                   ]
                                 },
@@ -2223,14 +2236,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Votre demande est acceptée"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Votre demande est acceptée"
                                     }
                                   ]
                                 },
@@ -2255,14 +2262,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Votre demande est refusée"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Votre demande est refusée"
                                     }
                                   ]
                                 },
@@ -2282,14 +2283,8 @@
                                           "name": "Titre",
                                           "children": [
                                             {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Si le préfet vous a notifié le refus"
-                                                }
-                                              ]
+                                              "type": "text",
+                                              "text": "Si le préfet vous a notifié le refus"
                                             }
                                           ]
                                         },
@@ -2380,14 +2375,8 @@
                                           "name": "Titre",
                                           "children": [
                                             {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Absence de réponse du préfet sur votre demande"
-                                                }
-                                              ]
+                                              "type": "text",
+                                              "text": "Absence de réponse du préfet sur votre demande"
                                             }
                                           ]
                                         },
@@ -2718,14 +2707,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Cas général"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Cas général"
                                     }
                                   ]
                                 },
@@ -2734,6 +2717,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R2",
+                                    "sve": "non",
                                     "type": "Local personnalisé sur SP"
                                   },
                                   "children": [
@@ -2784,6 +2768,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R14145",
+                                    "sve": "non",
                                     "type": "Local personnalisé sur SP"
                                   },
                                   "children": [
@@ -2866,14 +2851,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "À Paris"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "À Paris"
                                     }
                                   ]
                                 },
@@ -2882,6 +2861,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R42203",
+                                    "sve": "non",
                                     "type": "Local personnalisable"
                                   },
                                   "children": [
@@ -3188,14 +3168,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Votre demande est acceptée"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Votre demande est acceptée"
                                     }
                                   ]
                                 },
@@ -3220,14 +3194,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Votre demande est refusée"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Votre demande est refusée"
                                     }
                                   ]
                                 },
@@ -3247,14 +3215,8 @@
                                           "name": "Titre",
                                           "children": [
                                             {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Si le préfet vous a notifié le refus"
-                                                }
-                                              ]
+                                              "type": "text",
+                                              "text": "Si le préfet vous a notifié le refus"
                                             }
                                           ]
                                         },
@@ -3345,14 +3307,8 @@
                                           "name": "Titre",
                                           "children": [
                                             {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Absence de réponse du préfet sur votre demande"
-                                                }
-                                              ]
+                                              "type": "text",
+                                              "text": "Absence de réponse du préfet sur votre demande"
                                             }
                                           ]
                                         },
@@ -3545,6 +3501,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10010"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
@@ -3660,7 +3629,7 @@
                                   "name": "LienInterne",
                                   "attributes": {
                                     "LienPublication": "F2208",
-                                    "type": "Fiche d'information",
+                                    "type": "Fiche d'information conditionnée",
                                     "audience": "Particuliers"
                                   },
                                   "children": [
@@ -3750,7 +3719,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F2208",
-                                        "type": "Fiche d'information",
+                                        "type": "Fiche d'information conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -3958,6 +3927,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R34350",
+                            "sve": "non",
                             "type": "National"
                           },
                           "children": [
@@ -4041,14 +4011,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Votre demande est acceptée"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Votre demande est acceptée"
                                     }
                                   ]
                                 },
@@ -4073,14 +4037,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Votre demande est refusée"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Votre demande est refusée"
                                     }
                                   ]
                                 },
@@ -4100,14 +4058,8 @@
                                           "name": "Titre",
                                           "children": [
                                             {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Si le préfet vous a notifié le refus"
-                                                }
-                                              ]
+                                              "type": "text",
+                                              "text": "Si le préfet vous a notifié le refus"
                                             }
                                           ]
                                         },
@@ -4198,14 +4150,8 @@
                                           "name": "Titre",
                                           "children": [
                                             {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Absence de réponse du préfet sur votre demande"
-                                                }
-                                              ]
+                                              "type": "text",
+                                              "text": "Absence de réponse du préfet sur votre demande"
                                             }
                                           ]
                                         },
@@ -4407,14 +4353,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Pour la carte \"retraité\""
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Pour la carte \"retraité\""
                                     }
                                   ]
                                 },
@@ -4576,14 +4516,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Pour la carte \"conjoint de retraité\""
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Pour la carte \"conjoint de retraité\""
                                     }
                                   ]
                                 },
@@ -4939,14 +4873,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si vous êtes en France"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Si vous êtes en France"
                                     }
                                   ]
                                 },
@@ -4993,6 +4921,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R2",
+                                    "sve": "non",
                                     "type": "Local personnalisé sur SP"
                                   },
                                   "children": [
@@ -5043,6 +4972,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R14145",
+                                    "sve": "non",
                                     "type": "Local personnalisé sur SP"
                                   },
                                   "children": [
@@ -5093,6 +5023,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R14146",
+                                    "sve": "non",
                                     "type": "Local personnalisé sur SP"
                                   },
                                   "children": [
@@ -5199,14 +5130,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si vous êtes à l'étranger"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Si vous êtes à l'étranger"
                                     }
                                   ]
                                 },
@@ -5239,6 +5164,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R2750",
+                                    "sve": "non",
                                     "type": "Local personnalisable"
                                   },
                                   "children": [
@@ -5473,6 +5399,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R34350",
+                            "sve": "non",
                             "type": "National"
                           },
                           "children": [

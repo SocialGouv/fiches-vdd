@@ -8,8 +8,10 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F21089",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "dateDerniereModificationImportante": "2019-01-03T00:00:00",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F21089"
       },
       "children": [
         {
@@ -240,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F21089",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -456,6 +458,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F34908",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "**CNI - Renouvellement majeur"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "ListeSituations",
           "attributes": {
             "affichage": "onglet"
@@ -477,12 +505,38 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10576"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "FragmentConditionne",
                       "children": [
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10010"
+                              }
+                            }
+                          ]
+                        },
                         {
                           "type": "element",
                           "name": "Paragraphe",
@@ -517,6 +571,58 @@
                         },
                         {
                           "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "ou",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "ou",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10685"
+                                      }
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "estIndefini",
+                                      "attributes": {
+                                        "var": "T10685"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ou",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10694"
+                                      }
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "estIndefini",
+                                      "attributes": {
+                                        "var": "T10694"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "BlocCas",
                           "attributes": {
                             "affichage": "onglet"
@@ -531,14 +637,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous étiez majeur lors de la délivrance de l'ancienne carte"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Vous étiez majeur lors de la délivrance de l'ancienne carte"
                                     }
                                   ]
                                 },
@@ -646,14 +746,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous étiez mineur"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Vous étiez mineur"
                                     }
                                   ]
                                 },
@@ -718,6 +812,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R45972",
+                            "sve": "non",
                             "type": "Local"
                           },
                           "children": [
@@ -902,11 +997,30 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Les pièces à fournir dépendent de la date d'expiration de la carte"
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10010"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Les pièces à fournir dépendent de la date d'expiration de la carte"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -950,14 +1064,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Votre carte d'identité est valide"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Votre carte d'identité est valide"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10685"
+                                      }
                                     }
                                   ]
                                 },
@@ -1080,7 +1201,7 @@
                                               "name": "LienInterne",
                                               "attributes": {
                                                 "LienPublication": "F14807",
-                                                "type": "Fiche Question-réponse",
+                                                "type": "Fiche Question-réponse conditionnée",
                                                 "audience": "Particuliers"
                                               },
                                               "children": [
@@ -1139,7 +1260,7 @@
                                               "name": "LienInterne",
                                               "attributes": {
                                                 "LienPublication": "F33640",
-                                                "type": "Fiche Question-réponse",
+                                                "type": "Fiche Question-réponse conditionnée",
                                                 "audience": "Particuliers"
                                               },
                                               "children": [
@@ -1170,14 +1291,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Carte périmée depuis moins de 5 ans"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Carte périmée depuis moins de 5 ans"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10694"
+                                      }
                                     }
                                   ]
                                 },
@@ -1257,7 +1385,7 @@
                                               "name": "LienInterne",
                                               "attributes": {
                                                 "LienPublication": "F14807",
-                                                "type": "Fiche Question-réponse",
+                                                "type": "Fiche Question-réponse conditionnée",
                                                 "audience": "Particuliers"
                                               },
                                               "children": [
@@ -1316,7 +1444,7 @@
                                               "name": "LienInterne",
                                               "attributes": {
                                                 "LienPublication": "F33640",
-                                                "type": "Fiche Question-réponse",
+                                                "type": "Fiche Question-réponse conditionnée",
                                                 "audience": "Particuliers"
                                               },
                                               "children": [
@@ -1347,14 +1475,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Carte périmée depuis + de 5 ans"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Carte périmée depuis + de 5 ans"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10686"
+                                      }
                                     }
                                   ]
                                 },
@@ -1374,14 +1509,21 @@
                                           "name": "Titre",
                                           "children": [
                                             {
+                                              "type": "text",
+                                              "text": "Vous avez un passeport valide"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Condition",
+                                          "children": [
+                                            {
                                               "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Vous avez un passeport valide"
-                                                }
-                                              ]
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10706"
+                                              }
                                             }
                                           ]
                                         },
@@ -1486,7 +1628,7 @@
                                                       "name": "LienInterne",
                                                       "attributes": {
                                                         "LienPublication": "F14807",
-                                                        "type": "Fiche Question-réponse",
+                                                        "type": "Fiche Question-réponse conditionnée",
                                                         "audience": "Particuliers"
                                                       },
                                                       "children": [
@@ -1545,7 +1687,7 @@
                                                       "name": "LienInterne",
                                                       "attributes": {
                                                         "LienPublication": "F33640",
-                                                        "type": "Fiche Question-réponse",
+                                                        "type": "Fiche Question-réponse conditionnée",
                                                         "audience": "Particuliers"
                                                       },
                                                       "children": [
@@ -1576,14 +1718,21 @@
                                           "name": "Titre",
                                           "children": [
                                             {
+                                              "type": "text",
+                                              "text": "Vous avez un passeport périmé"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Condition",
+                                          "children": [
+                                            {
                                               "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Vous avez un passeport périmé"
-                                                }
-                                              ]
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10707"
+                                              }
                                             }
                                           ]
                                         },
@@ -1603,14 +1752,21 @@
                                                   "name": "Titre",
                                                   "children": [
                                                     {
+                                                      "type": "text",
+                                                      "text": "Date d'expiration : moins de 2 ans"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "Condition",
+                                                  "children": [
+                                                    {
                                                       "type": "element",
-                                                      "name": "Paragraphe",
-                                                      "children": [
-                                                        {
-                                                          "type": "text",
-                                                          "text": "Date d'expiration : moins de 2 ans"
-                                                        }
-                                                      ]
+                                                      "name": "estVrai",
+                                                      "attributes": {
+                                                        "var": "T10743"
+                                                      }
                                                     }
                                                   ]
                                                 },
@@ -1715,7 +1871,7 @@
                                                               "name": "LienInterne",
                                                               "attributes": {
                                                                 "LienPublication": "F14807",
-                                                                "type": "Fiche Question-réponse",
+                                                                "type": "Fiche Question-réponse conditionnée",
                                                                 "audience": "Particuliers"
                                                               },
                                                               "children": [
@@ -1774,7 +1930,7 @@
                                                               "name": "LienInterne",
                                                               "attributes": {
                                                                 "LienPublication": "F33640",
-                                                                "type": "Fiche Question-réponse",
+                                                                "type": "Fiche Question-réponse conditionnée",
                                                                 "audience": "Particuliers"
                                                               },
                                                               "children": [
@@ -1805,14 +1961,21 @@
                                                   "name": "Titre",
                                                   "children": [
                                                     {
+                                                      "type": "text",
+                                                      "text": "Date d'expiration : entre 2 et 5 ans"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "Condition",
+                                                  "children": [
+                                                    {
                                                       "type": "element",
-                                                      "name": "Paragraphe",
-                                                      "children": [
-                                                        {
-                                                          "type": "text",
-                                                          "text": "Date d'expiration : entre 2 et 5 ans"
-                                                        }
-                                                      ]
+                                                      "name": "estVrai",
+                                                      "attributes": {
+                                                        "var": "T10824"
+                                                      }
                                                     }
                                                   ]
                                                 },
@@ -1965,7 +2128,7 @@
                                                                           "name": "LienInterne",
                                                                           "attributes": {
                                                                             "LienPublication": "F14807",
-                                                                            "type": "Fiche Question-réponse",
+                                                                            "type": "Fiche Question-réponse conditionnée",
                                                                             "audience": "Particuliers"
                                                                           },
                                                                           "children": [
@@ -2070,7 +2233,7 @@
                                                                           "name": "LienInterne",
                                                                           "attributes": {
                                                                             "LienPublication": "F14807",
-                                                                            "type": "Fiche Question-réponse",
+                                                                            "type": "Fiche Question-réponse conditionnée",
                                                                             "audience": "Particuliers"
                                                                           },
                                                                           "children": [
@@ -2243,14 +2406,21 @@
                                                   "name": "Titre",
                                                   "children": [
                                                     {
+                                                      "type": "text",
+                                                      "text": "Date d'expiration : + de 5 ans"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "Condition",
+                                                  "children": [
+                                                    {
                                                       "type": "element",
-                                                      "name": "Paragraphe",
-                                                      "children": [
-                                                        {
-                                                          "type": "text",
-                                                          "text": "Date d'expiration : + de 5 ans"
-                                                        }
-                                                      ]
+                                                      "name": "estVrai",
+                                                      "attributes": {
+                                                        "var": "T10744"
+                                                      }
                                                     }
                                                   ]
                                                 },
@@ -2330,7 +2500,7 @@
                                                               "name": "LienInterne",
                                                               "attributes": {
                                                                 "LienPublication": "F14807",
-                                                                "type": "Fiche Question-réponse",
+                                                                "type": "Fiche Question-réponse conditionnée",
                                                                 "audience": "Particuliers"
                                                               },
                                                               "children": [
@@ -2495,7 +2665,7 @@
                                                               "name": "LienInterne",
                                                               "attributes": {
                                                                 "LienPublication": "F33640",
-                                                                "type": "Fiche Question-réponse",
+                                                                "type": "Fiche Question-réponse conditionnée",
                                                                 "audience": "Particuliers"
                                                               },
                                                               "children": [
@@ -2530,14 +2700,21 @@
                                           "name": "Titre",
                                           "children": [
                                             {
+                                              "type": "text",
+                                              "text": "Vous n'avez pas de passeport"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Condition",
+                                          "children": [
+                                            {
                                               "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Vous n'avez pas de passeport"
-                                                }
-                                              ]
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10705"
+                                              }
                                             }
                                           ]
                                         },
@@ -2617,7 +2794,7 @@
                                                       "name": "LienInterne",
                                                       "attributes": {
                                                         "LienPublication": "F14807",
-                                                        "type": "Fiche Question-réponse",
+                                                        "type": "Fiche Question-réponse conditionnée",
                                                         "audience": "Particuliers"
                                                       },
                                                       "children": [
@@ -2782,7 +2959,7 @@
                                                       "name": "LienInterne",
                                                       "attributes": {
                                                         "LienPublication": "F33640",
-                                                        "type": "Fiche Question-réponse",
+                                                        "type": "Fiche Question-réponse conditionnée",
                                                         "audience": "Particuliers"
                                                       },
                                                       "children": [
@@ -2837,7 +3014,7 @@
                                   "name": "LienInterne",
                                   "attributes": {
                                     "LienPublication": "F33250",
-                                    "type": "Fiche Question-réponse",
+                                    "type": "Fiche Question-réponse conditionnée",
                                     "audience": "Particuliers"
                                   },
                                   "children": [
@@ -2856,7 +3033,7 @@
                                   "name": "LienInterne",
                                   "attributes": {
                                     "LienPublication": "F1343",
-                                    "type": "Fiche d'information",
+                                    "type": "Fiche d'information conditionnée",
                                     "audience": "Particuliers"
                                   },
                                   "children": [
@@ -2979,6 +3156,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R54720",
+                            "sve": "non",
                             "type": "National"
                           },
                           "children": [
@@ -3309,12 +3487,38 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10580"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "FragmentConditionne",
                       "children": [
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10010"
+                              }
+                            }
+                          ]
+                        },
                         {
                           "type": "element",
                           "name": "Paragraphe",
@@ -3342,6 +3546,58 @@
                                 {
                                   "type": "text",
                                   "text": "Qui est concerné ?"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "ou",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "ou",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10685"
+                                      }
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "estIndefini",
+                                      "attributes": {
+                                        "var": "T10685"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ou",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10694"
+                                      }
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "estIndefini",
+                                      "attributes": {
+                                        "var": "T10694"
+                                      }
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -3477,6 +3733,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R2750",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -3627,14 +3884,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Votre carte d'identité est valide"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Votre carte d'identité est valide"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10685"
+                                      }
                                     }
                                   ]
                                 },
@@ -3757,7 +4021,7 @@
                                               "name": "LienInterne",
                                               "attributes": {
                                                 "LienPublication": "F14807",
-                                                "type": "Fiche Question-réponse",
+                                                "type": "Fiche Question-réponse conditionnée",
                                                 "audience": "Particuliers"
                                               },
                                               "children": [
@@ -3784,14 +4048,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Carte d'identité périmée depuis moins de 5 ans"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Carte d'identité périmée depuis moins de 5 ans"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10694"
+                                      }
                                     }
                                   ]
                                 },
@@ -3871,7 +4142,7 @@
                                               "name": "LienInterne",
                                               "attributes": {
                                                 "LienPublication": "F14807",
-                                                "type": "Fiche Question-réponse",
+                                                "type": "Fiche Question-réponse conditionnée",
                                                 "audience": "Particuliers"
                                               },
                                               "children": [
@@ -3898,14 +4169,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Carte d'identité périmée depuis + de 5 ans"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Carte d'identité périmée depuis + de 5 ans"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10686"
+                                      }
                                     }
                                   ]
                                 },
@@ -3925,14 +4203,21 @@
                                           "name": "Titre",
                                           "children": [
                                             {
+                                              "type": "text",
+                                              "text": "Vous avez un passeport valide"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Condition",
+                                          "children": [
+                                            {
                                               "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Vous avez un passeport valide"
-                                                }
-                                              ]
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10706"
+                                              }
                                             }
                                           ]
                                         },
@@ -4037,7 +4322,7 @@
                                                       "name": "LienInterne",
                                                       "attributes": {
                                                         "LienPublication": "F14807",
-                                                        "type": "Fiche Question-réponse",
+                                                        "type": "Fiche Question-réponse conditionnée",
                                                         "audience": "Particuliers"
                                                       },
                                                       "children": [
@@ -4064,14 +4349,21 @@
                                           "name": "Titre",
                                           "children": [
                                             {
+                                              "type": "text",
+                                              "text": "Vous avez un passeport périmé"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Condition",
+                                          "children": [
+                                            {
                                               "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Vous avez un passeport périmé"
-                                                }
-                                              ]
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10707"
+                                              }
                                             }
                                           ]
                                         },
@@ -4091,14 +4383,21 @@
                                                   "name": "Titre",
                                                   "children": [
                                                     {
+                                                      "type": "text",
+                                                      "text": "Date d'expiration : moins de 2 ans"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "Condition",
+                                                  "children": [
+                                                    {
                                                       "type": "element",
-                                                      "name": "Paragraphe",
-                                                      "children": [
-                                                        {
-                                                          "type": "text",
-                                                          "text": "Date d'expiration : moins de 2 ans"
-                                                        }
-                                                      ]
+                                                      "name": "estVrai",
+                                                      "attributes": {
+                                                        "var": "T10743"
+                                                      }
                                                     }
                                                   ]
                                                 },
@@ -4203,7 +4502,7 @@
                                                               "name": "LienInterne",
                                                               "attributes": {
                                                                 "LienPublication": "F14807",
-                                                                "type": "Fiche Question-réponse",
+                                                                "type": "Fiche Question-réponse conditionnée",
                                                                 "audience": "Particuliers"
                                                               },
                                                               "children": [
@@ -4230,14 +4529,21 @@
                                                   "name": "Titre",
                                                   "children": [
                                                     {
+                                                      "type": "text",
+                                                      "text": "Date d'expiration : entre 2 et 5 ans"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "Condition",
+                                                  "children": [
+                                                    {
                                                       "type": "element",
-                                                      "name": "Paragraphe",
-                                                      "children": [
-                                                        {
-                                                          "type": "text",
-                                                          "text": "Date d'expiration : entre 2 et 5 ans"
-                                                        }
-                                                      ]
+                                                      "name": "estVrai",
+                                                      "attributes": {
+                                                        "var": "T10824"
+                                                      }
                                                     }
                                                   ]
                                                 },
@@ -4390,7 +4696,7 @@
                                                                           "name": "LienInterne",
                                                                           "attributes": {
                                                                             "LienPublication": "F14807",
-                                                                            "type": "Fiche Question-réponse",
+                                                                            "type": "Fiche Question-réponse conditionnée",
                                                                             "audience": "Particuliers"
                                                                           },
                                                                           "children": [
@@ -4495,7 +4801,7 @@
                                                                           "name": "LienInterne",
                                                                           "attributes": {
                                                                             "LienPublication": "F14807",
-                                                                            "type": "Fiche Question-réponse",
+                                                                            "type": "Fiche Question-réponse conditionnée",
                                                                             "audience": "Particuliers"
                                                                           },
                                                                           "children": [
@@ -4674,14 +4980,21 @@
                                                   "name": "Titre",
                                                   "children": [
                                                     {
+                                                      "type": "text",
+                                                      "text": "Date d'expiration : + de 5 ans"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "Condition",
+                                                  "children": [
+                                                    {
                                                       "type": "element",
-                                                      "name": "Paragraphe",
-                                                      "children": [
-                                                        {
-                                                          "type": "text",
-                                                          "text": "Date d'expiration : + de 5 ans"
-                                                        }
-                                                      ]
+                                                      "name": "estVrai",
+                                                      "attributes": {
+                                                        "var": "T10744"
+                                                      }
                                                     }
                                                   ]
                                                 },
@@ -4761,7 +5074,7 @@
                                                               "name": "LienInterne",
                                                               "attributes": {
                                                                 "LienPublication": "F14807",
-                                                                "type": "Fiche Question-réponse",
+                                                                "type": "Fiche Question-réponse conditionnée",
                                                                 "audience": "Particuliers"
                                                               },
                                                               "children": [
@@ -4898,14 +5211,21 @@
                                           "name": "Titre",
                                           "children": [
                                             {
+                                              "type": "text",
+                                              "text": "Vous n'avez pas de passeport"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Condition",
+                                          "children": [
+                                            {
                                               "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Vous n'avez pas de passeport"
-                                                }
-                                              ]
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10705"
+                                              }
                                             }
                                           ]
                                         },
@@ -4985,7 +5305,7 @@
                                                       "name": "LienInterne",
                                                       "attributes": {
                                                         "LienPublication": "F14807",
-                                                        "type": "Fiche Question-réponse",
+                                                        "type": "Fiche Question-réponse conditionnée",
                                                         "audience": "Particuliers"
                                                       },
                                                       "children": [
@@ -5142,7 +5462,7 @@
                                   "name": "LienInterne",
                                   "attributes": {
                                     "LienPublication": "F33250",
-                                    "type": "Fiche Question-réponse",
+                                    "type": "Fiche Question-réponse conditionnée",
                                     "audience": "Particuliers"
                                   },
                                   "children": [
@@ -5161,7 +5481,7 @@
                                   "name": "LienInterne",
                                   "attributes": {
                                     "LienPublication": "F1343",
-                                    "type": "Fiche d'information",
+                                    "type": "Fiche d'information conditionnée",
                                     "audience": "Particuliers"
                                   },
                                   "children": [
@@ -5700,6 +6020,19 @@
           "children": [
             {
               "type": "element",
+              "name": "Condition",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "estVrai",
+                  "attributes": {
+                    "var": "T10576"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "element",
               "name": "Titre",
               "children": [
                 {
@@ -5835,6 +6168,19 @@
             "audience": "Particuliers"
           },
           "children": [
+            {
+              "type": "element",
+              "name": "Condition",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "estVrai",
+                  "attributes": {
+                    "var": "T10580"
+                  }
+                }
+              ]
+            },
             {
               "type": "element",
               "name": "Titre",

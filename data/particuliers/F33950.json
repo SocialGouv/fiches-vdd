@@ -8,8 +8,10 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F33950",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "dateDerniereModificationImportante": "2020-04-28T00:00:00",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F33950"
       },
       "children": [
         {
@@ -240,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F33950",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -683,6 +685,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11760"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
@@ -800,12 +815,58 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "À partir de 18 ans"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "ou",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "À partir de 18 ans"
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T11763"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "estIndefini",
+                                              "attributes": {
+                                                "var": "T11763"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T11764"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "estIndefini",
+                                              "attributes": {
+                                                "var": "T11764"
+                                              }
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -925,12 +986,46 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Avant 18 ans"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "ou",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Avant 18 ans"
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T10929"
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T10930"
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11055"
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11484"
+                                          }
                                         }
                                       ]
                                     }
@@ -1127,12 +1222,78 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "À partir de 16 ans"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
+                                          "name": "ou",
                                           "children": [
                                             {
-                                              "type": "text",
-                                              "text": "À partir de 16 ans"
+                                              "type": "element",
+                                              "name": "ou",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "estVrai",
+                                                  "attributes": {
+                                                    "var": "T11055"
+                                                  }
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "estIndefini",
+                                                  "attributes": {
+                                                    "var": "T11055"
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "ou",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "estVrai",
+                                                  "attributes": {
+                                                    "var": "T11763"
+                                                  }
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "estIndefini",
+                                                  "attributes": {
+                                                    "var": "T11763"
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "ou",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "estVrai",
+                                                  "attributes": {
+                                                    "var": "T11764"
+                                                  }
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "estIndefini",
+                                                  "attributes": {
+                                                    "var": "T11764"
+                                                  }
+                                                }
+                                              ]
                                             }
                                           ]
                                         }
@@ -1169,14 +1330,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Avant 16 ans"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Avant 16 ans"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11484"
+                                          }
                                         }
                                       ]
                                     },
@@ -1258,14 +1426,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "À partir de 43 ans"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "À partir de 43 ans"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11764"
+                                          }
                                         }
                                       ]
                                     },
@@ -1310,12 +1485,58 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Entre 16 et 42 ans"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
+                                          "name": "ou",
                                           "children": [
                                             {
-                                              "type": "text",
-                                              "text": "Entre 16 et 42 ans"
+                                              "type": "element",
+                                              "name": "ou",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "estVrai",
+                                                  "attributes": {
+                                                    "var": "T11055"
+                                                  }
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "estIndefini",
+                                                  "attributes": {
+                                                    "var": "T11055"
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "ou",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "estVrai",
+                                                  "attributes": {
+                                                    "var": "T11763"
+                                                  }
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "estIndefini",
+                                                  "attributes": {
+                                                    "var": "T11763"
+                                                  }
+                                                }
+                                              ]
                                             }
                                           ]
                                         }
@@ -1362,14 +1583,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Avant 16 ans"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Avant 16 ans"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11484"
+                                          }
                                         }
                                       ]
                                     },
@@ -1572,6 +1800,19 @@
                     {
                       "type": "text",
                       "text": "Lentilles de contact"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11761"
+                      }
                     }
                   ]
                 },
@@ -1812,12 +2053,78 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "À partir de 16 ans"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "ou",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "À partir de 16 ans"
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T11055"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "estIndefini",
+                                              "attributes": {
+                                                "var": "T11055"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T11763"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "estIndefini",
+                                              "attributes": {
+                                                "var": "T11763"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T11764"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "estIndefini",
+                                              "attributes": {
+                                                "var": "T11764"
+                                              }
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -1864,14 +2171,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Avant 16 ans"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Avant 16 ans"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11484"
+                                      }
                                     }
                                   ]
                                 },

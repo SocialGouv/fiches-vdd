@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F2825",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F2825"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F2825",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -955,6 +956,19 @@
                     },
                     {
                       "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10032"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "Paragraphe",
                       "children": [
                         {
@@ -990,6 +1004,58 @@
                             {
                               "type": "text",
                               "text": "Avoir l'ASSR ou l'ASR"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "ou",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "ou",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10032"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estIndefini",
+                                  "attributes": {
+                                    "var": "T10032"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ou",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11769"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estIndefini",
+                                  "attributes": {
+                                    "var": "T11769"
+                                  }
+                                }
+                              ]
                             }
                           ]
                         }
@@ -1124,43 +1190,69 @@
                               "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous êtes français"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Vous êtes français"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Si vous avez moins de 25 ans, vous devez être en règle avec les "
-                                },
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10330"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "FragmentConditionne",
+                              "children": [
                                 {
                                   "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "N24",
-                                    "type": "Dossier",
-                                    "audience": "Particuliers"
-                                  },
+                                  "name": "Condition",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "obligations de recensement"
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11770"
+                                      }
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": "."
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Si vous avez moins de 25 ans, vous devez être en règle avec les "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "N24",
+                                        "type": "Dossier",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "obligations de recensement"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -1175,14 +1267,21 @@
                               "name": "Titre",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Vous êtes européen"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous êtes européen"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10632"
+                                  }
                                 }
                               ]
                             },
@@ -1225,14 +1324,21 @@
                               "name": "Titre",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Vous êtes étranger"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous êtes étranger"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10632"
+                                  }
                                 }
                               ]
                             },
@@ -1624,65 +1730,84 @@
                 },
                 {
                   "type": "element",
-                  "name": "Liste",
-                  "attributes": {
-                    "type": "puce"
-                  },
+                  "name": "FragmentConditionne",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Item",
+                      "name": "Condition",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Si vous êtes français et âgé de moins de 25 ans, copie du certificat individuel de participation à la journée défense et citoyenneté (JDC) ou attestation provisoire en instance de convocation à la JDC ou attestation individuelle d'exemption"
-                            }
-                          ]
-                        },
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T11770"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Item",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Si vous déposez votre demande de permis de conduire "
-                            },
-                            {
                               "type": "element",
-                              "name": "MiseEnEvidence",
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "entre le 12 mars 2020 et le 31 décembre 2020"
+                                  "text": "Si vous êtes français et âgé de moins de 25 ans, copie du certificat individuel de participation à la journée défense et citoyenneté (JDC) ou attestation provisoire en instance de convocation à la JDC ou attestation individuelle d'exemption"
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": ", les pièces suivantes sont aussi acceptées : attestation provisoire de situation vis à vis du service national délivrée par les autorités militaires ou toute attestation à finalité similaire, "
-                            },
-                            {
                               "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "R56609",
-                                "type": "Modèle de document",
-                                "audience": "Particuliers"
-                              },
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "déclaration sur l'honneur"
+                                  "text": "Si vous déposez votre demande de permis de conduire "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "entre le 12 mars 2020 et le 31 décembre 2020"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ", les pièces suivantes sont aussi acceptées : attestation provisoire de situation vis à vis du service national délivrée par les autorités militaires ou toute attestation à finalité similaire, "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "R56609",
+                                    "type": "Modèle de document",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "déclaration sur l'honneur"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " à compléter par vous-même."
                                 }
                               ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " à compléter par vous-même."
                             }
                           ]
                         }
@@ -1692,22 +1817,41 @@
                 },
                 {
                   "type": "element",
-                  "name": "Liste",
-                  "attributes": {
-                    "type": "puce"
-                  },
+                  "name": "FragmentConditionne",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Item",
+                      "name": "Condition",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10632"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Si vous êtes étranger, justificatif de régularité du séjour ou, si vous êtes dispensé d'un titre de séjour, preuve de votre présence en France depuis au moins 6 mois (feuille de paie, quittance de loyer, etc.)"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si vous êtes étranger, justificatif de régularité du séjour ou, si vous êtes dispensé d'un titre de séjour, preuve de votre présence en France depuis au moins 6 mois (feuille de paie, quittance de loyer, etc.)"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -2277,14 +2421,8 @@
                               "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Cas général"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Cas général"
                                 }
                               ]
                             },
@@ -2313,6 +2451,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R2",
+                                "sve": "non",
                                 "type": "Local personnalisé sur SP"
                               },
                               "children": [
@@ -2363,6 +2502,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R16",
+                                "sve": "non",
                                 "type": "Local personnalisé sur SP"
                               },
                               "children": [
@@ -2406,14 +2546,8 @@
                               "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "En Île-de-France"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "En Île-de-France"
                                 }
                               ]
                             },
@@ -2472,14 +2606,8 @@
                               "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Dans le Rhône (69)"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Dans le Rhône (69)"
                                 }
                               ]
                             },
@@ -2538,14 +2666,8 @@
                               "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "En Isère (38)"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "En Isère (38)"
                                 }
                               ]
                             },
@@ -3146,14 +3268,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "1er permis"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "1er permis"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10952"
+                              }
                             }
                           ]
                         },
@@ -3514,65 +3643,84 @@
                         },
                         {
                           "type": "element",
-                          "name": "Liste",
-                          "attributes": {
-                            "type": "puce"
-                          },
+                          "name": "FragmentConditionne",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Si vous êtes français et âgé de moins de 25 ans, copie du certificat individuel de participation à la journée défense et citoyenneté (JDC) ou attestation provisoire en instance de convocation à la JDC ou attestation individuelle d'exemption"
-                                    }
-                                  ]
-                                },
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11770"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Si vous déposez votre demande de permis de conduire "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "MiseEnEvidence",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "entre le 12 mars 2020 et le 31 décembre 2020"
+                                          "text": "Si vous êtes français et âgé de moins de 25 ans, copie du certificat individuel de participation à la journée défense et citoyenneté (JDC) ou attestation provisoire en instance de convocation à la JDC ou attestation individuelle d'exemption"
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "text",
-                                      "text": ", les pièces suivantes sont aussi acceptées : attestation provisoire de situation vis à vis du service national délivrée par les autorités militaires ou toute attestation à finalité similaire, "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "R56609",
-                                        "type": "Modèle de document",
-                                        "audience": "Particuliers"
-                                      },
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "déclaration sur l'honneur"
+                                          "text": "Si vous déposez votre demande de permis de conduire "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "entre le 12 mars 2020 et le 31 décembre 2020"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": ", les pièces suivantes sont aussi acceptées : attestation provisoire de situation vis à vis du service national délivrée par les autorités militaires ou toute attestation à finalité similaire, "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "R56609",
+                                            "type": "Modèle de document",
+                                            "audience": "Particuliers"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "déclaration sur l'honneur"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " à compléter par vous-même."
                                         }
                                       ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " à compléter par vous-même."
                                     }
                                   ]
                                 }
@@ -3582,22 +3730,41 @@
                         },
                         {
                           "type": "element",
-                          "name": "Liste",
-                          "attributes": {
-                            "type": "puce"
-                          },
+                          "name": "FragmentConditionne",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10632"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Si vous êtes étranger, justificatif de régularité du séjour ou, si vous êtes dispensé d'un titre de séjour, preuve de votre présence en France depuis au moins 6 mois (feuille de paie, quittance de loyer, etc.)"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Si vous êtes étranger, justificatif de régularité du séjour ou, si vous êtes dispensé d'un titre de séjour, preuve de votre présence en France depuis au moins 6 mois (feuille de paie, quittance de loyer, etc.)"
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -3783,6 +3950,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R33823",
+                            "sve": "non",
                             "type": "Centre de contact"
                           },
                           "children": [
@@ -4002,7 +4170,7 @@
                                   "name": "LienInterne",
                                   "attributes": {
                                     "LienPublication": "F2390",
-                                    "type": "Fiche Question-réponse",
+                                    "type": "Fiche Question-réponse conditionnée",
                                     "audience": "Particuliers"
                                   },
                                   "children": [
@@ -4031,14 +4199,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Ajout de la catégorie B à votre permis"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Ajout de la catégorie B à votre permis"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10953"
+                              }
                             }
                           ]
                         },
@@ -4678,6 +4853,7 @@
               "attributes": {
                 "ID": "R1449",
                 "URL": "https://www.formulaires.service-public.fr/gf/getNotice.do?cerfaNotice=51676&cerfaFormulaire=14880",
+                "type": "Notice",
                 "numerocerfa": "51676*03",
                 "format": "application/pdf",
                 "poids": "51.1 KB"

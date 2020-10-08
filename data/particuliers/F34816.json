@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F34816",
-        "type": "Fiche Question-réponse",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche Question-réponse conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F34816"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F34816",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -424,139 +425,146 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11204"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
                       "children": [
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Vous êtes concerné si vous avez obtenu le permis de conduire dans un État "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R55492",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "européen"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "."
-                            }
-                          ]
+                          "type": "text",
+                          "text": "Vous êtes concerné si vous avez obtenu le permis de conduire dans un État "
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Vous pouvez conduire en France avec votre permis "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R55492",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "européen"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " tant qu'il est en cours de validité."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F1758",
-                                "type": "Fiche d'information",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "L'échange de votre permis de conduire européen contre un permis français"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " n'est pas nécessaire pour conduire en France."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Cette démarche est obligatoire uniquement dans les 2 cas suivants :"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Liste",
+                          "name": "LienIntra",
                           "attributes": {
-                            "type": "puce"
+                            "LienID": "R55492",
+                            "type": "Définition de glossaire"
                           },
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous demandez une nouvelle catégorie du permis (extension)"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
+                              "type": "text",
+                              "text": "européen"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous pouvez conduire en France avec votre permis "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R55492",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "européen"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " tant qu'il est en cours de validité."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F1758",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "L'échange de votre permis de conduire européen contre un permis français"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " n'est pas nécessaire pour conduire en France."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Cette démarche est obligatoire uniquement dans les 2 cas suivants :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Paragraphe",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous commettez en France une infraction au code de la route, entraînant une perte de points, une  restriction, une suspension, ou une annulation de votre permis"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Vous demandez une nouvelle catégorie du permis (extension)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous commettez en France une infraction au code de la route, entraînant une perte de points, une  restriction, une suspension, ou une annulation de votre permis"
                                 }
                               ]
                             }
@@ -584,173 +592,180 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11209"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
                       "children": [
                         {
+                          "type": "text",
+                          "text": "Vous pouvez"
+                        },
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F1459",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
                           "children": [
                             {
                               "type": "text",
-                              "text": "Vous pouvez"
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F1459",
-                                "type": "Fiche d'information",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": " conduire en France avec votre permis délivré par un État non européen"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "  pour un "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R44251",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "court séjour"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " ou durant vos études sous conditions. Votre permis est reconnu en France pendant 1 an à partir de l'acquisition de votre "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R2308",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "résidence normale"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " sous conditions."
+                              "text": " conduire en France avec votre permis délivré par un État non européen"
                             }
                           ]
                         },
                         {
+                          "type": "text",
+                          "text": "  pour un "
+                        },
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R44251",
+                            "type": "Définition de glossaire"
+                          },
                           "children": [
                             {
                               "type": "text",
-                              "text": "Pour continuer à conduire en France à l'issue de ce délai, "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F1460",
-                                "type": "Fiche d'information",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "l'échange de votre permis contre un permis français est obligatoire"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "."
+                              "text": "court séjour"
                             }
                           ]
                         },
                         {
+                          "type": "text",
+                          "text": " ou durant vos études sous conditions. Votre permis est reconnu en France pendant 1 an à partir de l'acquisition de votre "
+                        },
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R2308",
+                            "type": "Définition de glossaire"
+                          },
                           "children": [
                             {
                               "type": "text",
-                              "text": "Toutefois, le pays de délivrance de votre permis doit pratiquer "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienExterne",
-                              "attributes": {
-                                "URL": "https://www.diplomatie.gouv.fr/IMG/pdf/liste_permis_de_conduire_valables_a_l_echange_20200331_cle89bfda.pdf",
-                                "format": "application/pdf",
-                                "poids": "147.2 KB"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "l'échange réciproque des permis de conduire avec la France"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "\n\n."
+                              "text": "résidence normale"
                             }
                           ]
                         },
                         {
+                          "type": "text",
+                          "text": " sous conditions."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Pour continuer à conduire en France à l'issue de ce délai, "
+                        },
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F1460",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si  votre permis n'est pas échangeable, vous ne pouvez plus  conduire en France avec votre permis étranger."
+                              "text": "l'échange de votre permis contre un permis français est obligatoire"
                             }
                           ]
                         },
                         {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Toutefois, le pays de délivrance de votre permis doit pratiquer "
+                        },
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "LienExterne",
+                          "attributes": {
+                            "URL": "https://www.diplomatie.gouv.fr/IMG/pdf/liste_permis_de_conduire_valables_a_l_echange_20200331_cle89bfda.pdf",
+                            "format": "application/pdf",
+                            "poids": "147.2 KB"
+                          },
                           "children": [
                             {
                               "type": "text",
-                              "text": "Vous devez passer  "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F2828",
-                                "type": "Fiche d'information",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "l'examen du permis de conduire français"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " (épreuve théorique et épreuve pratique)."
+                              "text": "l'échange réciproque des permis de conduire avec la France"
                             }
                           ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "\n\n."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Si  votre permis n'est pas échangeable, vous ne pouvez plus  conduire en France avec votre permis étranger."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous devez passer  "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F2828",
+                            "type": "Fiche d'information",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "l'examen du permis de conduire français"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " (épreuve théorique et épreuve pratique)."
                         }
                       ]
                     }

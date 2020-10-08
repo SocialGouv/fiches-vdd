@@ -8,8 +8,10 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1461",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "dateDerniereModificationImportante": "2020-03-04T00:00:00",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1461"
       },
       "children": [
         {
@@ -240,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F1461",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -643,6 +645,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35300",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Composition pénale"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "ListeSituations",
           "attributes": {
             "affichage": "onglet"
@@ -664,36 +692,61 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10043"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "La composition pénale permet au "
-                        },
-                        {
                           "type": "element",
-                          "name": "LienIntra",
-                          "attributes": {
-                            "LienID": "R1123",
-                            "type": "Définition de glossaire"
-                          },
+                          "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "procureur de la République"
+                              "text": "La composition pénale permet au "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienIntra",
+                              "attributes": {
+                                "LienID": "R1123",
+                                "type": "Définition de glossaire"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "procureur de la République"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " de proposer une sanction à l'auteur des faits pour éviter un procès. Elle peut être utilisée s'il reconnaît sa culpabilité. S'il accepte la sanction, l'accord peut être validé par le président du tribunal. Si l'auteur des faits ou le président du tribunal refuse, le procureur peut engager des poursuites."
                             }
                           ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " de proposer une sanction à l'auteur des faits pour éviter un procès. Elle peut être utilisée s'il reconnaît sa culpabilité. S'il accepte la sanction, l'accord peut être validé par le président du tribunal. Si l'auteur des faits ou le président du tribunal refuse, le procureur peut engager des poursuites."
                         }
                       ]
-                    },
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
                       "name": "Chapitre",
@@ -1482,47 +1535,66 @@
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "FragmentConditionne",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Les sanctions pouvant être proposées par le procureur dépendent de l'infraction commise ("
-                                },
-                                {
                                   "type": "element",
-                                  "name": "LienIntra",
-                                  "attributes": {
-                                    "LienID": "R49229",
-                                    "type": "Définition de glossaire"
-                                  },
+                                  "name": "Condition",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "délit"
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10010"
+                                      }
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": ", "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "LienIntra",
-                                  "attributes": {
-                                    "LienID": "R49230",
-                                    "type": "Définition de glossaire"
-                                  },
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "contravention"
+                                      "text": "Les sanctions pouvant être proposées par le procureur dépendent de l'infraction commise ("
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R49229",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "délit"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R49230",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "contravention"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ")."
                                     }
                                   ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ")."
                                 }
                               ]
                             },
@@ -1542,14 +1614,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Pour un délit"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Pour un délit"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T12429"
+                                          }
                                         }
                                       ]
                                     },
@@ -1765,14 +1844,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Pour une contravention"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Pour une contravention"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T12430"
+                                          }
                                         }
                                       ]
                                     },
@@ -1792,14 +1878,8 @@
                                               "name": "Titre",
                                               "children": [
                                                 {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Contravention de la 1re à la 4ème classe"
-                                                    }
-                                                  ]
+                                                  "type": "text",
+                                                  "text": "Contravention de la 1re à la 4ème classe"
                                                 }
                                               ]
                                             },
@@ -1842,14 +1922,8 @@
                                               "name": "Titre",
                                               "children": [
                                                 {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Contravention de 5ème classe"
-                                                    }
-                                                  ]
+                                                  "type": "text",
+                                                  "text": "Contravention de 5ème classe"
                                                 }
                                               ]
                                             },
@@ -2016,7 +2090,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F18074",
-                                        "type": "Fiche d'information",
+                                        "type": "Fiche d'information conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -2050,48 +2124,48 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Proposition acceptée"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Introduction",
+                                      "children": [
+                                        {
                                           "type": "element",
                                           "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Proposition acceptée"
+                                              "text": "Si la composition pénale est acceptée, elle n'est pas soumise à la validation du juge. Elle est validée automatiquement dans les cas où la peine encourue est inférieure à "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "3000 €"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": "  ou lorsqu'il y a l'obligation de restituer une chose volée dont la valeur n'excède pas  ce même montant."
                                             }
                                           ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si la composition pénale est acceptée, elle n'est pas soumise à la validation du juge. Elle est validée automatiquement dans les cas où la peine encourue est inférieure à "
                                         },
                                         {
                                           "type": "element",
-                                          "name": "Valeur",
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "3000 €"
+                                              "text": "Si elle porte uniquement sur la réparation d'un dommage causé, la validation par le juge reste nécessaire."
                                             }
                                           ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "  ou lorsqu'il y a l'obligation de restituer une chose volée dont la valeur n'excède pas  ce même montant."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si elle porte uniquement sur la réparation d'un dommage causé, la validation par le juge reste nécessaire."
                                         }
                                       ]
                                     },
@@ -2111,14 +2185,8 @@
                                               "name": "Titre",
                                               "children": [
                                                 {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Peine de prison inférieure ou égale à 3 ans"
-                                                    }
-                                                  ]
+                                                  "type": "text",
+                                                  "text": "Peine de prison inférieure ou égale à 3 ans"
                                                 }
                                               ]
                                             },
@@ -2138,14 +2206,8 @@
                                                       "name": "Titre",
                                                       "children": [
                                                         {
-                                                          "type": "element",
-                                                          "name": "Paragraphe",
-                                                          "children": [
-                                                            {
-                                                              "type": "text",
-                                                              "text": "Amende inférieure ou égale à 3 000 €"
-                                                            }
-                                                          ]
+                                                          "type": "text",
+                                                          "text": "Amende inférieure ou égale à 3 000 €"
                                                         }
                                                       ]
                                                     },
@@ -2215,14 +2277,8 @@
                                                       "name": "Titre",
                                                       "children": [
                                                         {
-                                                          "type": "element",
-                                                          "name": "Paragraphe",
-                                                          "children": [
-                                                            {
-                                                              "type": "text",
-                                                              "text": "Obligation de restituer une chose volée d'une < ou = à 3 000 €"
-                                                            }
-                                                          ]
+                                                          "type": "text",
+                                                          "text": "Obligation de restituer une chose volée d'une < ou = à 3 000 €"
                                                         }
                                                       ]
                                                     },
@@ -2296,14 +2352,8 @@
                                               "name": "Titre",
                                               "children": [
                                                 {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Peine de prison encourue supérieure à 3 ans"
-                                                    }
-                                                  ]
+                                                  "type": "text",
+                                                  "text": "Peine de prison encourue supérieure à 3 ans"
                                                 }
                                               ]
                                             },
@@ -2490,14 +2540,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Proposition refusée"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Proposition refusée"
                                         }
                                       ]
                                     },
@@ -2517,14 +2561,8 @@
                                               "name": "Titre",
                                               "children": [
                                                 {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Le tribunal refuse la proposition de composition pénale"
-                                                    }
-                                                  ]
+                                                  "type": "text",
+                                                  "text": "Le tribunal refuse la proposition de composition pénale"
                                                 }
                                               ]
                                             },
@@ -2597,14 +2635,8 @@
                                               "name": "Titre",
                                               "children": [
                                                 {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "L'auteur des faits refuse la proposition de composition pénale"
-                                                    }
-                                                  ]
+                                                  "type": "text",
+                                                  "text": "L'auteur des faits refuse la proposition de composition pénale"
                                                 }
                                               ]
                                             },
@@ -2650,6 +2682,19 @@
                             },
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12408"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
@@ -2674,14 +2719,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Proposition d'indemnisation de la victime"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Proposition d'indemnisation de la victime"
                                         }
                                       ]
                                     },
@@ -2745,14 +2784,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Absence d'indemnisation de la victime"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Absence d'indemnisation de la victime"
                                         }
                                       ]
                                     },
@@ -2838,6 +2871,7 @@
                                       "name": "OuSAdresser",
                                       "attributes": {
                                         "ID": "R30",
+                                        "sve": "non",
                                         "type": "Local"
                                       },
                                       "children": [
@@ -2904,7 +2938,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F18074",
-                                        "type": "Fiche d'information",
+                                        "type": "Fiche d'information conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -2946,54 +2980,79 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10032"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "La composition pénale permet au "
-                        },
-                        {
                           "type": "element",
-                          "name": "LienIntra",
-                          "attributes": {
-                            "LienID": "R1123",
-                            "type": "Définition de glossaire"
-                          },
+                          "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "procureur de la République"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " de proposer une sanction au mineur pour éviter un procès. Elle peut être utilisée s'il reconnaît sa culpabilité. Si le mineur et ses "
-                        },
-                        {
-                          "type": "element",
-                          "name": "LienIntra",
-                          "attributes": {
-                            "LienID": "R52001",
-                            "type": "Définition de glossaire"
-                          },
-                          "children": [
+                              "text": "La composition pénale permet au "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienIntra",
+                              "attributes": {
+                                "LienID": "R1123",
+                                "type": "Définition de glossaire"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "procureur de la République"
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
-                              "text": "responsables légaux"
+                              "text": " de proposer une sanction au mineur pour éviter un procès. Elle peut être utilisée s'il reconnaît sa culpabilité. Si le mineur et ses "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienIntra",
+                              "attributes": {
+                                "LienID": "R52001",
+                                "type": "Définition de glossaire"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "responsables légaux"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " acceptent la sanction, l'accord peut être validé par le président du tribunal. S'ils n'acceptent pas ou si le président du tribunal refuse, le procureur peut engager des poursuites."
                             }
                           ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " acceptent la sanction, l'accord peut être validé par le président du tribunal. S'ils n'acceptent pas ou si le président du tribunal refuse, le procureur peut engager des poursuites."
                         }
                       ]
-                    },
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
                       "name": "Chapitre",
@@ -4213,7 +4272,7 @@
                                   "name": "LienInterne",
                                   "attributes": {
                                     "LienPublication": "F18074",
-                                    "type": "Fiche d'information",
+                                    "type": "Fiche d'information conditionnée",
                                     "audience": "Particuliers"
                                   },
                                   "children": [
@@ -4245,48 +4304,48 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Proposition acceptée"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Introduction",
+                                      "children": [
+                                        {
                                           "type": "element",
                                           "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Proposition acceptée"
+                                              "text": "Si la composition pénale est acceptée, elle n'est pas soumise à la validation du juge. Elle est validée automatiquement dans les cas où la peine encourue est inférieure à3 ans pour une amende inférieure à "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "3 000 €"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " ou lorsqu'il y a l'obligation de restituer une chose volée dont la valeur n'excède pas ce même montant."
                                             }
                                           ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si la composition pénale est acceptée, elle n'est pas soumise à la validation du juge. Elle est validée automatiquement dans les cas où la peine encourue est inférieure à3 ans pour une amende inférieure à "
                                         },
                                         {
                                           "type": "element",
-                                          "name": "Valeur",
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "3 000 €"
+                                              "text": "Si elle porte uniquement sur la réparation d'un dommage causé, la validation par le juge reste nécessaire."
                                             }
                                           ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " ou lorsqu'il y a l'obligation de restituer une chose volée dont la valeur n'excède pas ce même montant."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si elle porte uniquement sur la réparation d'un dommage causé, la validation par le juge reste nécessaire."
                                         }
                                       ]
                                     },
@@ -4306,14 +4365,8 @@
                                               "name": "Titre",
                                               "children": [
                                                 {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Peine de prison inférieure ou égale à 3 ans"
-                                                    }
-                                                  ]
+                                                  "type": "text",
+                                                  "text": "Peine de prison inférieure ou égale à 3 ans"
                                                 }
                                               ]
                                             },
@@ -4333,14 +4386,8 @@
                                                       "name": "Titre",
                                                       "children": [
                                                         {
-                                                          "type": "element",
-                                                          "name": "Paragraphe",
-                                                          "children": [
-                                                            {
-                                                              "type": "text",
-                                                              "text": "Amende < ou = à 3000 €"
-                                                            }
-                                                          ]
+                                                          "type": "text",
+                                                          "text": "Amende < ou = à 3000 €"
                                                         }
                                                       ]
                                                     },
@@ -4410,14 +4457,8 @@
                                                       "name": "Titre",
                                                       "children": [
                                                         {
-                                                          "type": "element",
-                                                          "name": "Paragraphe",
-                                                          "children": [
-                                                            {
-                                                              "type": "text",
-                                                              "text": "Obligation de restituer une chose volée d'une valeur < ou =à 3000 €"
-                                                            }
-                                                          ]
+                                                          "type": "text",
+                                                          "text": "Obligation de restituer une chose volée d'une valeur < ou =à 3000 €"
                                                         }
                                                       ]
                                                     },
@@ -4491,14 +4532,8 @@
                                               "name": "Titre",
                                               "children": [
                                                 {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Peine de prison de plus de 3 ans"
-                                                    }
-                                                  ]
+                                                  "type": "text",
+                                                  "text": "Peine de prison de plus de 3 ans"
                                                 }
                                               ]
                                             },
@@ -4685,14 +4720,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Proposition refusée"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Proposition refusée"
                                         }
                                       ]
                                     },
@@ -4712,14 +4741,8 @@
                                               "name": "Titre",
                                               "children": [
                                                 {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Le juge refuse de valider la proposition de composition pénale"
-                                                    }
-                                                  ]
+                                                  "type": "text",
+                                                  "text": "Le juge refuse de valider la proposition de composition pénale"
                                                 }
                                               ]
                                             },
@@ -4780,14 +4803,8 @@
                                               "name": "Titre",
                                               "children": [
                                                 {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Le mineur et ses représentants légaux refusent la proposition de composition pénale"
-                                                    }
-                                                  ]
+                                                  "type": "text",
+                                                  "text": "Le mineur et ses représentants légaux refusent la proposition de composition pénale"
                                                 }
                                               ]
                                             },
@@ -4857,14 +4874,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Proposition d'indemnisation de la victime"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Proposition d'indemnisation de la victime"
                                         }
                                       ]
                                     },
@@ -4928,14 +4939,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Absence de proposition d'indemnisation de la victime"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Absence de proposition d'indemnisation de la victime"
                                         }
                                       ]
                                     },
@@ -5021,6 +5026,7 @@
                                       "name": "OuSAdresser",
                                       "attributes": {
                                         "ID": "R14695",
+                                        "sve": "non",
                                         "type": "Local personnalisé sur SP"
                                       },
                                       "children": [
@@ -5084,7 +5090,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F18074",
-                                        "type": "Fiche d'information",
+                                        "type": "Fiche d'information conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -5126,40 +5132,61 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T12231"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "La composition pénale permet au "
-                        },
-                        {
                           "type": "element",
-                          "name": "LienIntra",
-                          "attributes": {
-                            "LienID": "R1123",
-                            "type": "Définition de glossaire"
-                          },
+                          "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "procureur de la République"
+                              "text": "La composition pénale permet au "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienIntra",
+                              "attributes": {
+                                "LienID": "R1123",
+                                "type": "Définition de glossaire"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "procureur de la République"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " de proposer une sanction à une personne morale (entreprise, association...) pour éviter un procès. Elle peut être utilisée si elle reconnaît sa culpabilité. Si elle accepte la sanction, l'accord peut être validé par le président du tribunal. Si la personne morale ou le président du tribunal refuse, le procureur peut engager des poursuites."
                             }
                           ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " de proposer une sanction à une personne morale (entreprise, association...) pour éviter un procès. Elle peut être utilisée si elle reconnaît sa culpabilité. Si elle accepte la sanction, l'accord peut être validé par le président du tribunal. Si la personne morale ou le président du tribunal refuse, le procureur peut engager des poursuites."
                         }
                       ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Chapitre"
-                    },
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
                       "name": "Chapitre",
@@ -5855,48 +5882,48 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Proposition acceptée"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Introduction",
+                                      "children": [
+                                        {
                                           "type": "element",
                                           "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Proposition acceptée"
+                                              "text": "Si la composition pénale est acceptée, elle n'est pas soumise à la validation du juge. Elle est validée automatiquement dans les cas où la peine encourue est inférieure à "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "3000 €"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": "  ou lorsqu'il y a l'obligation de restituer une chose volée dont la valeur n'excède pas  ce même montant."
                                             }
                                           ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si la composition pénale est acceptée, elle n'est pas soumise à la validation du juge. Elle est validée automatiquement dans les cas où la peine encourue est inférieure à "
                                         },
                                         {
                                           "type": "element",
-                                          "name": "Valeur",
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "3000 €"
+                                              "text": "Si elle porte uniquement sur la réparation d'un dommage causé, la validation par le juge reste nécessaire."
                                             }
                                           ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "  ou lorsqu'il y a l'obligation de restituer une chose volée dont la valeur n'excède pas  ce même montant."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si elle porte uniquement sur la réparation d'un dommage causé, la validation par le juge reste nécessaire."
                                         }
                                       ]
                                     },
@@ -5916,14 +5943,8 @@
                                               "name": "Titre",
                                               "children": [
                                                 {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Peine de prison inférieure ou égale à 3 ans"
-                                                    }
-                                                  ]
+                                                  "type": "text",
+                                                  "text": "Peine de prison inférieure ou égale à 3 ans"
                                                 }
                                               ]
                                             },
@@ -5943,14 +5964,8 @@
                                                       "name": "Titre",
                                                       "children": [
                                                         {
-                                                          "type": "element",
-                                                          "name": "Paragraphe",
-                                                          "children": [
-                                                            {
-                                                              "type": "text",
-                                                              "text": "Amende inférieure ou égale à 3000 euros"
-                                                            }
-                                                          ]
+                                                          "type": "text",
+                                                          "text": "Amende inférieure ou égale à 3000 euros"
                                                         }
                                                       ]
                                                     },
@@ -6001,14 +6016,8 @@
                                                       "name": "Titre",
                                                       "children": [
                                                         {
-                                                          "type": "element",
-                                                          "name": "Paragraphe",
-                                                          "children": [
-                                                            {
-                                                              "type": "text",
-                                                              "text": "Obligation de restituer une chose volée d'une valeur inférieure ou égale à 3000 euros"
-                                                            }
-                                                          ]
+                                                          "type": "text",
+                                                          "text": "Obligation de restituer une chose volée d'une valeur inférieure ou égale à 3000 euros"
                                                         }
                                                       ]
                                                     },
@@ -6063,14 +6072,8 @@
                                               "name": "Titre",
                                               "children": [
                                                 {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Peine de prison encourue supérieure à 3 ans"
-                                                    }
-                                                  ]
+                                                  "type": "text",
+                                                  "text": "Peine de prison encourue supérieure à 3 ans"
                                                 }
                                               ]
                                             },
@@ -6238,14 +6241,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Proposition refusée"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Proposition refusée"
                                         }
                                       ]
                                     },
@@ -6265,14 +6262,8 @@
                                               "name": "Titre",
                                               "children": [
                                                 {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Le tribunal refuse la proposition de composition pénale"
-                                                    }
-                                                  ]
+                                                  "type": "text",
+                                                  "text": "Le tribunal refuse la proposition de composition pénale"
                                                 }
                                               ]
                                             },
@@ -6345,14 +6336,8 @@
                                               "name": "Titre",
                                               "children": [
                                                 {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "La personne morale refuse la proposition de composition pénale"
-                                                    }
-                                                  ]
+                                                  "type": "text",
+                                                  "text": "La personne morale refuse la proposition de composition pénale"
                                                 }
                                               ]
                                             },
@@ -6422,14 +6407,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Proposition d'indemnisation de la victime"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Proposition d'indemnisation de la victime"
                                         }
                                       ]
                                     },
@@ -6493,14 +6472,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Absence de proposition d'indemnisation de la victime"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Absence de proposition d'indemnisation de la victime"
                                         }
                                       ]
                                     },
@@ -6607,6 +6580,7 @@
                                       "name": "OuSAdresser",
                                       "attributes": {
                                         "ID": "R30",
+                                        "sve": "non",
                                         "type": "Local"
                                       },
                                       "children": [
@@ -6673,7 +6647,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F18074",
-                                        "type": "Fiche d'information",
+                                        "type": "Fiche d'information conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -6754,6 +6728,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R11621",
+            "sve": "non",
             "type": "Local personnalisé sur SP"
           },
           "children": [
@@ -6814,6 +6789,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R14218",
+            "sve": "non",
             "type": "Local personnalisable"
           },
           "children": [

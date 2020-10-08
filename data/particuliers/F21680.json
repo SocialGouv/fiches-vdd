@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F21680",
-        "type": "Fiche Question-réponse",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche Question-réponse conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F21680"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F21680",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -438,77 +439,84 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10010"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
                       "children": [
                         {
+                          "type": "text",
+                          "text": "Vous pouvez bénéficier d'une "
+                        },
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "N99",
+                            "type": "Dossier",
+                            "audience": "Particuliers"
+                          },
                           "children": [
                             {
                               "type": "text",
-                              "text": "Vous pouvez bénéficier d'une "
-                            },
+                              "text": "procédure de surendettement"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
                             {
                               "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "N99",
-                                "type": "Dossier",
-                                "audience": "Particuliers"
-                              },
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "procédure de surendettement"
+                                  "text": "si vous êtes Français(e),"
                                 }
                               ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " :"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Liste",
-                          "attributes": {
-                            "type": "puce"
-                          },
+                          "name": "Item",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Paragraphe",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "si vous êtes Français(e),"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "ou si vous êtes étranger et que vous avez votre domicile en  France."
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "ou si vous êtes étranger et que vous avez votre domicile en  France."
                                 }
                               ]
                             }
@@ -540,151 +548,145 @@
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
                       "children": [
                         {
+                          "type": "text",
+                          "text": "Vous devez recourir à une "
+                        },
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F22352",
+                            "type": "Fiche d'information",
+                            "audience": "Professionnels"
+                          },
                           "children": [
                             {
                               "type": "text",
-                              "text": "Vous devez recourir à une "
-                            },
+                              "text": "procédure de cessation de paiement"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " que vos dettes soient liées ou non à votre activité professionnelles, si vous êtes :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
                             {
                               "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F22352",
-                                "type": "Fiche d'information",
-                                "audience": "Professionnels"
-                              },
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "procédure de cessation de paiement"
+                                  "text": "Agriculteur"
                                 }
                               ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " que vos dettes soient liées ou non à votre activité professionnelles, si vous êtes :"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Liste",
-                          "attributes": {
-                            "type": "puce"
-                          },
+                          "name": "Item",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Paragraphe",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Agriculteur"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Artisan,"
                                 }
                               ]
-                            },
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Paragraphe",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Artisan,"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Commerçant"
                                 }
                               ]
-                            },
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Paragraphe",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Commerçant"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Travailleur indépendant,"
                                 }
                               ]
-                            },
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Paragraphe",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Travailleur indépendant,"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Profession libérale,"
                                 }
                               ]
-                            },
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Paragraphe",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Micro-entrepreneur ("
+                                },
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Expression",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Profession libérale,"
+                                      "text": "auto-entrepreneur"
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
+                                },
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Micro-entrepreneur ("
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Expression",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "auto-entrepreneur"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": ")."
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": ")."
                                 }
                               ]
                             }
@@ -790,6 +792,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R20363",
+            "sve": "non",
             "type": "Local personnalisable"
           },
           "children": [
@@ -850,6 +853,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R53723",
+            "sve": "non",
             "type": "National"
           },
           "children": [
@@ -948,6 +952,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R53722",
+            "sve": "non",
             "type": "National"
           },
           "children": [
@@ -1033,6 +1038,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R47152",
+            "sve": "non",
             "type": "Local"
           },
           "children": [
@@ -1083,6 +1089,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R38283",
+            "sve": "non",
             "type": "National"
           },
           "children": [

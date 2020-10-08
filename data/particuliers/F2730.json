@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F2730",
-        "type": "Fiche Question-réponse",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche Question-réponse conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F2730"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F2730",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -386,11 +387,30 @@
           "children": [
             {
               "type": "element",
-              "name": "Paragraphe",
+              "name": "FragmentConditionne",
               "children": [
                 {
-                  "type": "text",
-                  "text": "Oui. On peut revenir sur le partage des biens résultant d'un divorce, suivant le divorce prononcé, si l'un des ex-époux a été lésé de plus d'un quart de la valeur des biens dans le partage ou si un bien a été oublié."
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10010"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Oui. On peut revenir sur le partage des biens résultant d'un divorce, suivant le divorce prononcé, si l'un des ex-époux a été lésé de plus d'un quart de la valeur des biens dans le partage ou si un bien a été oublié."
+                    }
+                  ]
                 }
               ]
             }
@@ -419,22 +439,60 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11742"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Le seul cas où l'on peut revenir sur le partage des biens après un divorce par consentement mutuel est si un bien a été oublié dans le partage."
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "FragmentConditionne",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Le seul cas où l'on peut revenir sur le partage des biens après un divorce par consentement mutuel est si un bien a été oublié dans le partage."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Chapitre",
-                      "children": [
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11744"
+                              }
+                            }
+                          ]
+                        },
                         {
                           "type": "element",
                           "name": "Paragraphe",
@@ -508,6 +566,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R30",
+                            "sve": "non",
                             "type": "Local"
                           },
                           "children": [
@@ -548,6 +607,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R14218",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -615,252 +675,229 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11743"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "On peut revenir sur le partage des biens résultant d'un divorce si l'un des ex-époux a été lésé de plus d'un quart de la valeur des biens dans le partage ou si un bien a été oublié."
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "On peut revenir sur le partage des biens résultant d'un divorce si l'un des ex-époux a été lésé de plus d'un quart de la valeur des biens dans le partage ou si un bien a été oublié."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Chapitre",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "radio"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "BlocCas",
-                          "attributes": {
-                            "affichage": "radio"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si un des époux a été lésé de plus d'1/4 de la valeur des biens"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11745"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si l’un des ex-époux a été lésé de plus d’un quart de la valeur des biens, le partage peut être remis en cause."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Pour apprécier s'il y a eu préjudice ou non, il faut considérer la valeur des biens à l'époque du partage et non pas au jour où  la procédure est engagée."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Il peut s'agir par exemple de biens qui ont été attribués à l'un des ex-époux et qui ont été sous évalués."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L’ex-époux qui s’estime lésé peut réclamer le complément de sa part à l’autre et si nécessaire exercer une action en justice,  appelée "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "action en complément de part"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Cette"
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": " action en complément de part"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " doit être introduite, avec l'aide d'un avocat, devant le juge aux affaires familiales  par "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R12538",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "assignation"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Elle doit être exercée dans un délai maximum de 2 ans à partir du jour du partage."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La charge de la preuve revient à l'ex-époux qui s'estime lésé et le juge peut éventuellement ordonner une expertise pour vérifier la réalité et le montant du préjudice."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "OuSAdresser",
+                              "attributes": {
+                                "ID": "R30",
+                                "sve": "non",
+                                "type": "Local"
+                              },
                               "children": [
                                 {
                                   "type": "element",
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si un des époux a été lésé de plus d'1/4 de la valeur des biens"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Tribunal judiciaire ou de proximité"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Si l’un des ex-époux a été lésé de plus d’un quart de la valeur des biens, le partage peut être remis en cause."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Pour apprécier s'il y a eu préjudice ou non, il faut considérer la valeur des biens à l'époque du partage et non pas au jour où  la procédure est engagée."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Il peut s'agir par exemple de biens qui ont été attribués à l'un des ex-époux et qui ont été sous évalués."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "L’ex-époux qui s’estime lésé peut réclamer le complément de sa part à l’autre et si nécessaire exercer une action en justice,  appelée "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Expression",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "action en complément de part"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Cette"
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Expression",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": " action en complément de part"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " doit être introduite, avec l'aide d'un avocat, devant le juge aux affaires familiales  par "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R12538",
-                                        "type": "Définition de glossaire"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "assignation"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Elle doit être exercée dans un délai maximum de 2 ans à partir du jour du partage."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "La charge de la preuve revient à l'ex-époux qui s'estime lésé et le juge peut éventuellement ordonner une expertise pour vérifier la réalité et le montant du préjudice."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "OuSAdresser",
+                                  "name": "RessourceWeb",
                                   "attributes": {
-                                    "ID": "R30",
-                                    "type": "Local"
+                                    "URL": "https://www.justice.fr/recherche/annuaires"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30663"
                                   },
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Tribunal judiciaire ou de proximité"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "RessourceWeb",
-                                      "attributes": {
-                                        "URL": "https://www.justice.fr/recherche/annuaires"
-                                      }
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30663"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Ministère chargé de la justice"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "OuSAdresser",
-                                  "attributes": {
-                                    "ID": "R14218",
-                                    "type": "Local personnalisable"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Avocat"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "PivotLocal",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "avocat_conseil_national"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "RessourceWeb",
-                                      "attributes": {
-                                        "URL": "http://cnb.avocat.fr/Trouver-un-avocat-en-France_a341.html"
-                                      }
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30762"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Conseil national des barreaux"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Ministère chargé de la justice"
                                     }
                                   ]
                                 }
@@ -868,179 +905,239 @@
                             },
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "OuSAdresser",
+                              "attributes": {
+                                "ID": "R14218",
+                                "sve": "non",
+                                "type": "Local personnalisable"
+                              },
                               "children": [
                                 {
                                   "type": "element",
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si un bien a été oublié dans le partage"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Avocat"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "PivotLocal",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Il peut arriver  que les époux aient oublié de faire figurer dans l’acte de partage un bien leur appartenant en commun."
+                                      "text": "avocat_conseil_national"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "L’omission de ce bien peut donner lieu à un partage complémentaire portant seulement sur ce bien."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Un partage complémentaire est possible à tout moment et quel que soit le type de divorce, y compris les divorces par consentement mutuel."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Le partage peut être fait d'un commun accord entre les ex-époux."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "En cas de désaccord,  le juge aux affaires familiales  doit être saisi par  "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R12538",
-                                        "type": "Définition de glossaire"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "assignation"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": ". Cette saisine nécessite l'aide d'un avocat."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "OuSAdresser",
+                                  "name": "RessourceWeb",
                                   "attributes": {
-                                    "ID": "R30",
-                                    "type": "Local"
+                                    "URL": "http://cnb.avocat.fr/Trouver-un-avocat-en-France_a341.html"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30762"
                                   },
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Tribunal judiciaire ou de proximité"
-                                        }
-                                      ]
-                                    },
+                                      "type": "text",
+                                      "text": "Conseil national des barreaux"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si un bien a été oublié dans le partage"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11744"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Il peut arriver  que les époux aient oublié de faire figurer dans l’acte de partage un bien leur appartenant en commun."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L’omission de ce bien peut donner lieu à un partage complémentaire portant seulement sur ce bien."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Un partage complémentaire est possible à tout moment et quel que soit le type de divorce, y compris les divorces par consentement mutuel."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le partage peut être fait d'un commun accord entre les ex-époux."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "En cas de désaccord,  le juge aux affaires familiales  doit être saisi par  "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R12538",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
                                     {
-                                      "type": "element",
-                                      "name": "RessourceWeb",
-                                      "attributes": {
-                                        "URL": "https://www.justice.fr/recherche/annuaires"
-                                      }
-                                    },
+                                      "type": "text",
+                                      "text": "assignation"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ". Cette saisine nécessite l'aide d'un avocat."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "OuSAdresser",
+                              "attributes": {
+                                "ID": "R30",
+                                "sve": "non",
+                                "type": "Local"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30663"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Ministère chargé de la justice"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Tribunal judiciaire ou de proximité"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "OuSAdresser",
+                                  "name": "RessourceWeb",
                                   "attributes": {
-                                    "ID": "R14218",
-                                    "type": "Local personnalisable"
+                                    "URL": "https://www.justice.fr/recherche/annuaires"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30663"
                                   },
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Avocat"
-                                        }
-                                      ]
-                                    },
+                                      "type": "text",
+                                      "text": "Ministère chargé de la justice"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "OuSAdresser",
+                              "attributes": {
+                                "ID": "R14218",
+                                "sve": "non",
+                                "type": "Local personnalisable"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
                                     {
-                                      "type": "element",
-                                      "name": "PivotLocal",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "avocat_conseil_national"
-                                        }
-                                      ]
-                                    },
+                                      "type": "text",
+                                      "text": "Avocat"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "PivotLocal",
+                                  "children": [
                                     {
-                                      "type": "element",
-                                      "name": "RessourceWeb",
-                                      "attributes": {
-                                        "URL": "http://cnb.avocat.fr/Trouver-un-avocat-en-France_a341.html"
-                                      }
-                                    },
+                                      "type": "text",
+                                      "text": "avocat_conseil_national"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "RessourceWeb",
+                                  "attributes": {
+                                    "URL": "http://cnb.avocat.fr/Trouver-un-avocat-en-France_a341.html"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30762"
+                                  },
+                                  "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30762"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Conseil national des barreaux"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Conseil national des barreaux"
                                     }
                                   ]
                                 }

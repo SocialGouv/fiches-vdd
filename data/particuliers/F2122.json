@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F2122",
-        "type": "Fiche Question-réponse",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche Question-réponse conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F2122"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F2122",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -373,44 +374,18 @@
           "children": [
             {
               "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Oui, sous certaines conditions, le salaire fait partie des "
-                },
-                {
-                  "type": "element",
-                  "name": "LienInterne",
-                  "attributes": {
-                    "LienPublication": "F947",
-                    "type": "Fiche d'information",
-                    "audience": "Particuliers"
-                  },
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "charges locatives (ou charges récupérables)"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": "."
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "ANoter",
+              "name": "FragmentConditionne",
               "children": [
                 {
                   "type": "element",
-                  "name": "Titre",
+                  "name": "Condition",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "À noter"
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10010"
+                      }
                     }
                   ]
                 },
@@ -420,7 +395,71 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "l'employé de l'immeuble ne bénéficie pas d'un logement de fonction au sein de la copropriété contrairement au concierge ou au gardien."
+                      "text": "Oui, sous certaines conditions, le salaire fait partie des "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienInterne",
+                      "attributes": {
+                        "LienPublication": "F947",
+                        "type": "Fiche d'information",
+                        "audience": "Particuliers"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "charges locatives (ou charges récupérables)"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": "."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "FragmentConditionne",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10010"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ANoter",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "À noter"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "l'employé de l'immeuble ne bénéficie pas d'un logement de fonction au sein de la copropriété contrairement au concierge ou au gardien."
+                        }
+                      ]
                     }
                   ]
                 }
@@ -451,126 +490,76 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11657"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "onglet"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "BlocCas",
-                          "attributes": {
-                            "affichage": "onglet"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Entretien des parties communes + sortie des poubelles"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Les  charges liées au salaire (la rémunération ainsi que les charges sociales et fiscales) sont payées à hauteur de 75 % par le locataire. Les 25 % restants sont à la charge du propriétaire du logement."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ASavoir",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "À savoir"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "un couple de gardiens ou concierges qui assure ensemble l'entretien des parties communes de l'immeuble et la sortie des poubelles est assimilé à un personnel unique. Un seul salaire est donc versé pour les 2."
-                                        }
-                                      ]
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Entretien des parties communes + sortie des poubelles"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Entretien des parties communes uniquement (nettoyage, arrosage, changement d'ampoules...)"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Les charges liées au salaire (la rémunération ainsi que les charges sociales et fiscales) sont payées par le locataire à hauteur de 40 %. Les 60 % restants sont à la charge du propriétaire du logement."
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11659"
+                                  }
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Les  charges liées au salaire (la rémunération ainsi que les charges sociales et fiscales) sont payées à hauteur de 75 % par le locataire. Les 25 % restants sont à la charge du propriétaire du logement."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ASavoir",
                               "children": [
                                 {
                                   "type": "element",
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Sorties des poubelles uniquement"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "À savoir"
                                     }
                                   ]
                                 },
@@ -580,9 +569,87 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Les charges liées au salaire (la rémunération ainsi que les charges sociales et fiscales) sont payées par le locataire à hauteur de 40 %. Les 60 % restants sont à la charge du propriétaire du logement."
+                                      "text": "un couple de gardiens ou concierges qui assure ensemble l'entretien des parties communes de l'immeuble et la sortie des poubelles est assimilé à un personnel unique. Un seul salaire est donc versé pour les 2."
                                     }
                                   ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Entretien des parties communes uniquement (nettoyage, arrosage, changement d'ampoules...)"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11660"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Les charges liées au salaire (la rémunération ainsi que les charges sociales et fiscales) sont payées par le locataire à hauteur de 40 %. Les 60 % restants sont à la charge du propriétaire du logement."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Sorties des poubelles uniquement"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11737"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Les charges liées au salaire (la rémunération ainsi que les charges sociales et fiscales) sont payées par le locataire à hauteur de 40 %. Les 60 % restants sont à la charge du propriétaire du logement."
                                 }
                               ]
                             }
@@ -610,112 +677,140 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11658"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "onglet"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "BlocCas",
-                          "attributes": {
-                            "affichage": "onglet"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Entretien des parties communes + sortie des poubelles"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Les charges liées au salaire (la rémunération ainsi que les charges sociales et fiscales) doivent être payées en totalité par le locataire."
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Entretien des parties communes + sortie des poubelles"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Entretien des parties communes uniquement (nettoyage, arrosage, changement d'ampoules...)"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Les charges liées au salaire (la rémunération ainsi que les charges sociales et fiscales) doivent être payées en totalité par le locataire."
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11659"
+                                  }
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Les charges liées au salaire (la rémunération ainsi que les charges sociales et fiscales) doivent être payées en totalité par le locataire."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Entretien des parties communes uniquement (nettoyage, arrosage, changement d'ampoules...)"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Sorties des poubelles uniquement"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11660"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Les charges liées au salaire (la rémunération ainsi que les charges sociales et fiscales) doivent être payées en totalité par le locataire."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Sorties des poubelles uniquement"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Les charges liées au salaire (la rémunération ainsi que les charges sociales et fiscales) doivent être payées en totalité par le locataire."
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11737"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Les charges liées au salaire (la rémunération ainsi que les charges sociales et fiscales) doivent être payées en totalité par le locataire."
                                 }
                               ]
                             }
@@ -851,7 +946,8 @@
           "type": "element",
           "name": "CommentFaireSi",
           "attributes": {
-            "ID": "F15913"
+            "ID": "F15913",
+            "audience": "Particuliers"
           },
           "children": [
             {

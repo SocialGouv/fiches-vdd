@@ -8,8 +8,10 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F2661",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "dateDerniereModificationImportante": "2020-04-01T00:00:00",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F2661"
       },
       "children": [
         {
@@ -240,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F2661",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -775,6 +777,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35227",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Impôt sur le revenu : déclarer un enfant handicapé à charge"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "ListeSituations",
           "attributes": {
             "affichage": "onglet"
@@ -796,47 +824,94 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10032"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "L'enfant mineur est considéré à votre charge et  donne droit à une "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exposant",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "/"
+                        },
+                        {
+                          "type": "element",
+                          "name": "Indice",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "2"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " part."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "À partir du 3"
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exposant",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "e"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " enfant, chaque enfant donne droit à une part entière."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ANoter",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Titre",
                           "children": [
                             {
                               "type": "text",
-                              "text": "L'enfant mineur est considéré à votre charge et  donne droit à une "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Exposant",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "1"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "/"
-                            },
-                            {
-                              "type": "element",
-                              "name": "Indice",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "2"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " part."
+                              "text": "À noter"
                             }
                           ]
                         },
@@ -846,215 +921,175 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "À partir du 3"
-                            },
-                            {
-                              "type": "element",
-                              "name": "Exposant",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "e"
-                                }
-                              ]
-                            },
+                              "text": "quand la charge d'un enfant est partagée de façon équivalente entre les 2 parents, chacun peut  bénéficier de la moitié du quotient."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Dans certains cas, des règles spécifiques s'appliquent : par exemple, si l'enfant atteint sa majorité en cours d'année ou si vous vous séparez de l'autre parent."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Si  votre enfant handicapé est titulaire de la "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F34049",
+                            "type": "Fiche d'information",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
                             {
                               "type": "text",
-                              "text": " enfant, chaque enfant donne droit à une part entière."
+                              "text": "carte mobilité inclusion portant la mention \"invalidité\""
                             }
                           ]
                         },
                         {
+                          "type": "text",
+                          "text": ", une "
+                        },
+                        {
                           "type": "element",
-                          "name": "ANoter",
+                          "name": "Exposant",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "À noter"
-                                }
-                              ]
-                            },
+                              "type": "text",
+                              "text": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "/"
+                        },
+                        {
+                          "type": "element",
+                          "name": "Indice",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "2"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " part supplémentaire de "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R1124",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "quotient familial"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " vous sera octroyée."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "La période de déclaration 2020 des revenus est terminée. La déclaration 2021 des revenus de l'année 2020 aura lieu en avril 2021."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Si votre situation familiale a changé en 2019, vous devez compléter ou modifier la déclaration de revenus pré-remplie."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Selon ce qui est le plus avantageux pour vous, la situation de famille à retenir est :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
                             {
                               "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "quand la charge d'un enfant est partagée de façon équivalente entre les 2 parents, chacun peut  bénéficier de la moitié du quotient."
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Dans certains cas, des règles spécifiques s'appliquent : par exemple, si l'enfant atteint sa majorité en cours d'année ou si vous vous séparez de l'autre parent."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Si  votre enfant handicapé est titulaire de la "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F34049",
-                                "type": "Fiche d'information",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "carte mobilité inclusion portant la mention \"invalidité\""
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": ", une "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Exposant",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "1"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "/"
-                            },
-                            {
-                              "type": "element",
-                              "name": "Indice",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "2"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " part supplémentaire de "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R1124",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "quotient familial"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " vous sera octroyée."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "La période de déclaration 2020 des revenus est terminée. La déclaration 2021 des revenus de l'année 2020 aura lieu en avril 2021."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Si votre situation familiale a changé en 2019, vous devez compléter ou modifier la déclaration de revenus pré-remplie."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Selon ce qui est le plus avantageux pour vous, la situation de famille à retenir est :"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Liste",
-                          "attributes": {
-                            "type": "puce"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
+                                  "text": "soit celle au 1"
+                                },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Exposant",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "soit celle au 1"
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Exposant",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "er"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " janvier,"
+                                      "text": "er"
                                     }
                                   ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " janvier,"
                                 }
                               ]
-                            },
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Paragraphe",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "soit celle au 31 décembre de l'année d'imposition."
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "soit celle au 31 décembre de l'année d'imposition."
                                 }
                               ]
                             }
@@ -1082,26 +1117,75 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10043"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "onglet"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "BlocCas",
-                          "attributes": {
-                            "affichage": "onglet"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Célibataire"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Titre",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11156"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le  jeune   est automatiquement considéré comme  à la charge de ses parents et il n'est pas nécessaire de demander son rattachement."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
                                   "children": [
                                     {
                                       "type": "element",
@@ -1109,119 +1193,54 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Célibataire"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Le  jeune   est automatiquement considéré comme  à la charge de ses parents et il n'est pas nécessaire de demander son rattachement."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
+                                          "text": "Si votre enfant n'est pas titulaire de la  "
+                                        },
                                         {
                                           "type": "element",
-                                          "name": "Paragraphe",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F34049",
+                                            "type": "Fiche d'information",
+                                            "audience": "Particuliers"
+                                          },
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Si votre enfant n'est pas titulaire de la  "
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "LienInterne",
-                                              "attributes": {
-                                                "LienPublication": "F34049",
-                                                "type": "Fiche d'information",
-                                                "audience": "Particuliers"
-                                              },
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "carte mobilité inclusion portant la mention \"invalidité\""
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": " (invalidité d’au moins "
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Valeur",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "80 %"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": " reconnue), vous bénéficiez d'une  demi-part supplémentaire (1 part à partir de la 3"
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Exposant",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "e"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": " personne à charge)."
+                                              "text": "carte mobilité inclusion portant la mention \"invalidité\""
                                             }
                                           ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " (invalidité d’au moins "
+                                        },
                                         {
                                           "type": "element",
-                                          "name": "Paragraphe",
+                                          "name": "Valeur",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Si votre enfant est titulaire de la carte mobilité inclusion portant la mention \"invalidité\", vous bénéficiez d'1 part (1 part et demie à partir de la 3"
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Exposant",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "e"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": " personne à charge)."
+                                              "text": "80 %"
                                             }
                                           ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " reconnue), vous bénéficiez d'une  demi-part supplémentaire (1 part à partir de la 3"
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Exposant",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "e"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " personne à charge)."
                                         }
                                       ]
                                     }
@@ -1229,40 +1248,89 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Toutefois, le jeune  peut choisir de déposer sa propre déclaration de revenus. Dans ce cas, vous perdez la part supplémentaire, mais vous pourrez bénéficier de la "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F2",
-                                        "type": "Fiche d'information",
-                                        "audience": "Particuliers"
-                                      },
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "déduction d'une pension alimentaire"
+                                          "text": "Si votre enfant est titulaire de la carte mobilité inclusion portant la mention \"invalidité\", vous bénéficiez d'1 part (1 part et demie à partir de la 3"
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Exposant",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "e"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " personne à charge)."
                                         }
                                       ]
-                                    },
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Toutefois, le jeune  peut choisir de déposer sa propre déclaration de revenus. Dans ce cas, vous perdez la part supplémentaire, mais vous pourrez bénéficier de la "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F2",
+                                    "type": "Fiche d'information conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
                                     {
                                       "type": "text",
-                                      "text": "."
+                                      "text": "déduction d'une pension alimentaire"
                                     }
                                   ]
                                 },
                                 {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La période de déclaration 2020 des revenus est terminée. La déclaration 2021 des revenus de l'année 2020 aura lieu en avril 2021."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "FragmentConditionne",
+                              "children": [
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Condition",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "La période de déclaration 2020 des revenus est terminée. La déclaration 2021 des revenus de l'année 2020 aura lieu en avril 2021."
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11156"
+                                      }
                                     }
                                   ]
                                 },
@@ -1393,14 +1461,186 @@
                                   ]
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Marié, pacsé ou chargé de famille"
+                                }
+                              ]
                             },
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Titre",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10284"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le jeune handicapé marié, pacsé ou chargé de famille peut demander son  "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F3085",
+                                    "type": "Fiche d'information",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "rattachement à votre foyer fiscal"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous ne bénéficierez pas d'une augmentation du nombre de parts, mas d'un avantage spécifique sous forme d'un "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R3018",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "abattement"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " sur le revenu imposable."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Il  est de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "5 947 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " par personne rattachée au foyer."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si votre enfant  choisit de déposer sa propre déclaration de revenus, vous perdez l'abattement sur le revenu, mais vous pourrez  "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F2",
+                                    "type": "Fiche d'information conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "déduire une pension alimentaire"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La période de déclaration 2020 des revenus est terminée. La déclaration 2021 des revenus de l'année 2020 aura lieu en avril 2021."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si votre situation familiale a changé en 2019, vous devez compléter ou modifier la déclaration de revenus pré-remplie."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Selon ce qui est le plus avantageux pour vous, la situation de famille à retenir est :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
                                   "children": [
                                     {
                                       "type": "element",
@@ -1408,202 +1648,21 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Marié, pacsé ou chargé de famille"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Le jeune handicapé marié, pacsé ou chargé de famille peut demander son  "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F3085",
-                                        "type": "Fiche d'information",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "rattachement à votre foyer fiscal"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous ne bénéficierez pas d'une augmentation du nombre de parts, mas d'un avantage spécifique sous forme d'un "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R3018",
-                                        "type": "Définition de glossaire"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "abattement"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " sur le revenu imposable."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Il  est de "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Valeur",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "5 947 €"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " par personne rattachée au foyer."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Si votre enfant  choisit de déposer sa propre déclaration de revenus, vous perdez l'abattement sur le revenu, mais vous pourrez  "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F2",
-                                        "type": "Fiche d'information",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "déduire une pension alimentaire"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "La période de déclaration 2020 des revenus est terminée. La déclaration 2021 des revenus de l'année 2020 aura lieu en avril 2021."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Si votre situation familiale a changé en 2019, vous devez compléter ou modifier la déclaration de revenus pré-remplie."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Selon ce qui est le plus avantageux pour vous, la situation de famille à retenir est :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
+                                          "text": "soit celle au 1"
+                                        },
                                         {
                                           "type": "element",
-                                          "name": "Paragraphe",
+                                          "name": "Exposant",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "soit celle au 1"
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Exposant",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "er"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": " janvier,"
+                                              "text": "er"
                                             }
                                           ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
+                                        },
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "soit celle au 31 décembre de l'année d'imposition."
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": " janvier,"
                                         }
                                       ]
                                     }
@@ -1611,50 +1670,66 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Dans le cadre d'un rattachement, vous devez :"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "soit celle au 31 décembre de l'année d'imposition."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Dans le cadre d'un rattachement, vous devez :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "si nécessaire, ajouter à vos revenus ceux perçus par votre enfant,"
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
+                                  "name": "Item",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Item",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "si nécessaire, ajouter à vos revenus ceux perçus par votre enfant,"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "conserver la demande de rattachement de votre enfant marié, pacsé ou chargé de famille, pour pourvoir la présenter en cas de demande de l'administration."
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "conserver la demande de rattachement de votre enfant marié, pacsé ou chargé de famille, pour pourvoir la présenter en cas de demande de l'administration."
                                         }
                                       ]
                                     }
@@ -1959,6 +2034,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R20684",
+            "sve": "non",
             "type": "Centre de contact"
           },
           "children": [
@@ -2144,6 +2220,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R15019",
+            "sve": "non",
             "type": "Local personnalisable"
           },
           "children": [

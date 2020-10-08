@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F110",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F110"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F110",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -603,11 +604,30 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "FragmentConditionne",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Vous pouvez faire une réclamation de 3 manières : "
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10010"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous pouvez faire une réclamation de 3 manières : "
+                        }
+                      ]
                     }
                   ]
                 },
@@ -627,14 +647,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "En ligne"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "En ligne"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11563"
+                              }
                             }
                           ]
                         },
@@ -693,14 +720,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Par courrier"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Par courrier"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11564"
+                              }
                             }
                           ]
                         },
@@ -719,6 +753,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R15019",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -884,14 +919,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Au guichet"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Au guichet"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11683"
+                              }
                             }
                           ]
                         },
@@ -910,6 +952,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R15019",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -978,6 +1021,19 @@
                           "text": "Demander un sursis de paiement"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T12195"
+                      }
                     }
                   ]
                 },
@@ -1093,11 +1149,30 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "FragmentConditionne",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Le délai de réclamation varie selon le type d'impôt."
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10010"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Le délai de réclamation varie selon le type d'impôt."
+                        }
+                      ]
                     }
                   ]
                 },
@@ -1117,14 +1192,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Impôt sur le revenu"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Impôt sur le revenu"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12556"
+                              }
                             }
                           ]
                         },
@@ -1173,14 +1255,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Impôts locaux"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Impôts locaux"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12557"
+                              }
                             }
                           ]
                         },
@@ -1215,14 +1304,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Impôt sur la fortune immobilière"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Impôt sur la fortune immobilière"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12558"
+                              }
                             }
                           ]
                         },
@@ -1266,11 +1362,30 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "FragmentConditionne",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Des délais spécifiques s'appliquent dans certains cas particuliers :"
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10010"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Des délais spécifiques s'appliquent dans certains cas particuliers :"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -1290,14 +1405,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Nouvel avis d'imposition"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Nouvel avis d'imposition"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12562"
+                              }
                             }
                           ]
                         },
@@ -1322,14 +1444,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Impôt établi à tort"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Impôt établi à tort"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12560"
+                              }
                             }
                           ]
                         },
@@ -1354,14 +1483,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Procédure de reprise ou de rectification"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Procédure de reprise ou de rectification"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12561"
+                              }
                             }
                           ]
                         },
@@ -1410,14 +1546,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Retenues à la source et prélèvements"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Retenues à la source et prélèvements"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12563"
+                              }
                             }
                           ]
                         },
@@ -1493,14 +1636,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Votre réclamation est acceptée"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Votre réclamation est acceptée"
                             }
                           ]
                         },
@@ -1525,14 +1662,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Votre réclamation est refusée"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Votre réclamation est refusée"
                             }
                           ]
                         },
@@ -1639,14 +1770,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Impôt sur le revenu"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Impôt sur le revenu"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12556"
+                              }
                             }
                           ]
                         },
@@ -1665,6 +1803,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R27",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -1721,14 +1860,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Impôts locaux"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Impôts locaux"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12557"
+                              }
                             }
                           ]
                         },
@@ -1747,6 +1893,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R27",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -1803,14 +1950,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Taxe de publicité foncière, droit de timbre, droits d'enregistrement"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Taxe de publicité foncière, droit de timbre, droits d'enregistrement"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12559"
+                              }
                             }
                           ]
                         },
@@ -1829,6 +1983,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R30",
+                            "sve": "non",
                             "type": "Local"
                           },
                           "children": [
@@ -1875,14 +2030,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Impôt sur la fortune immobilière (IFI)"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Impôt sur la fortune immobilière (IFI)"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12558"
+                              }
                             }
                           ]
                         },
@@ -1901,6 +2063,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R30",
+                            "sve": "non",
                             "type": "Local"
                           },
                           "children": [
@@ -1997,6 +2160,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R20684",
+            "sve": "non",
             "type": "Centre de contact"
           },
           "children": [

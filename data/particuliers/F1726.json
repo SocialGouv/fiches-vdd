@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1726",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1726"
       },
       "children": [
         {
@@ -250,7 +251,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F1726",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -687,32 +688,57 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10121"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Vous pouvez obtenir un duplicata de votre carte grise (dorénavant appelée "
-                        },
-                        {
                           "type": "element",
-                          "name": "Expression",
+                          "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "certificat d'immatriculation"
+                              "text": "Vous pouvez obtenir un duplicata de votre carte grise (dorénavant appelée "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Expression",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "certificat d'immatriculation"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ") si votre carte originale a été perdue."
                             }
                           ]
-                        },
-                        {
-                          "type": "text",
-                          "text": ") si votre carte originale a été perdue."
                         }
                       ]
-                    },
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
                       "name": "Chapitre",
@@ -735,40 +761,78 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "La  demande de duplicata ne peut être réalisée que par le titulaire ou le cotitulaire de la carte grise perdue (propriétaire du véhicule, copropriétaire, ou titulaire d'un mandat signé)."
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10147"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La  demande de duplicata ne peut être réalisée que par le titulaire ou le cotitulaire de la carte grise perdue (propriétaire du véhicule, copropriétaire, ou titulaire d'un mandat signé)."
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Si votre véhicule a été acheté en leasing et que la carte grise est au nom de l'organisme propriétaire (société de financement ou société de location), vous devez lui signaler cette perte, car c'est lui qui doit faire les démarches pour la demande de duplicata. Le représentant de la société peut néanmoins vous transmettre un mandat pour vous permettre de réaliser vous-même la démarche en ligne. Vous pourrez également demander à un "
-                            },
-                            {
                               "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F20324",
-                                "type": "Fiche Question-réponse",
-                                "audience": "Particuliers"
-                              },
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "professionnel habilité"
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10117"
+                                  }
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": " de le faire."
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si votre véhicule a été acheté en leasing et que la carte grise est au nom de l'organisme propriétaire (société de financement ou société de location), vous devez lui signaler cette perte, car c'est lui qui doit faire les démarches pour la demande de duplicata. Le représentant de la société peut néanmoins vous transmettre un mandat pour vous permettre de réaliser vous-même la démarche en ligne. Vous pourrez également demander à un "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F20324",
+                                    "type": "Fiche Question-réponse",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "professionnel habilité"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " de le faire."
+                                }
+                              ]
                             }
                           ]
                         },
@@ -834,6 +898,35 @@
                                   "text": "Demande de duplicata"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Demande de duplicata"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10147"
+                              }
                             }
                           ]
                         },
@@ -913,6 +1006,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R55753",
+                            "sve": "non",
                             "type": "National"
                           },
                           "children": [
@@ -1000,6 +1094,19 @@
                               "type": "element",
                               "name": "Item",
                               "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10044"
+                                      }
+                                    }
+                                  ]
+                                },
                                 {
                                   "type": "element",
                                   "name": "Paragraphe",
@@ -1353,7 +1460,7 @@
                               "name": "LienInterne",
                               "attributes": {
                                 "LienPublication": "F11475",
-                                "type": "Fiche Question-réponse",
+                                "type": "Fiche Question-réponse conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
@@ -1427,53 +1534,72 @@
                         },
                         {
                           "type": "element",
-                          "name": "Attention",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Titre",
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Attention"
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10023"
+                                  }
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Attention",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "si votre immatriculation est de la forme "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "Expression",
+                                  "name": "Titre",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "123-AB-01"
+                                      "text": "Attention"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": ", vous obtiendrez une nouvelle immatriculation de la forme "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "Expression",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "AB-123-CD"
+                                      "text": "si votre immatriculation est de la forme "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "123-AB-01"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ", vous obtiendrez une nouvelle immatriculation de la forme "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "AB-123-CD"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ". Vous devrez ensuite changer vos plaques avec la nouvelle immatriculation."
                                     }
                                   ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ". Vous devrez ensuite changer vos plaques avec la nouvelle immatriculation."
                                 }
                               ]
                             }
@@ -1498,6 +1624,35 @@
                                   "text": "Coût de la démarche"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Coût de la démarche"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10147"
+                              }
                             }
                           ]
                         },
@@ -1574,6 +1729,35 @@
                                   "text": "Durée de validité du duplicata"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Durée de validité du duplicata"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10147"
+                              }
                             }
                           ]
                         },
@@ -1679,32 +1863,57 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10145"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Vous pouvez obtenir un duplicata de votre carte grise (désormais appelée "
-                        },
-                        {
                           "type": "element",
-                          "name": "Expression",
+                          "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "certificat d'immatriculation"
+                              "text": "Vous pouvez obtenir un duplicata de votre carte grise (désormais appelée "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Expression",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "certificat d'immatriculation"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ") si votre carte originale a été volée. Vous devez préalablement faire une déclaration de vol au commissariat ou à la gendarmerie."
                             }
                           ]
-                        },
-                        {
-                          "type": "text",
-                          "text": ") si votre carte originale a été volée. Vous devez préalablement faire une déclaration de vol au commissariat ou à la gendarmerie."
                         }
                       ]
-                    },
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
                       "name": "Chapitre",
@@ -1750,6 +1959,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R13",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -1858,11 +2068,30 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Si le vol de la carte grise s'est produit  à l'étranger, vous devez le déclarer aux autorités locales de police. Vous devrez également le déclarer dès votre retour en France auprès d'un service de police ou de gendarmerie, avant de faire votre demande de duplicata."
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10149"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si le vol de la carte grise s'est produit  à l'étranger, vous devez le déclarer aux autorités locales de police. Vous devrez également le déclarer dès votre retour en France auprès d'un service de police ou de gendarmerie, avant de faire votre demande de duplicata."
+                                }
+                              ]
                             }
                           ]
                         },
@@ -1871,6 +2100,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R13",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -1927,40 +2157,78 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "La demande de duplicata ne peut être réalisée que par le titulaire ou le cotitulaire de la carte grise volée (propriétaire du véhicule, copropriétaire ou titulaire d'un mandat signé)."
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10147"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La demande de duplicata ne peut être réalisée que par le titulaire ou le cotitulaire de la carte grise volée (propriétaire du véhicule, copropriétaire ou titulaire d'un mandat signé)."
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Si votre véhicule a été acheté en leasing et que la carte grise est au nom de l'organisme propriétaire (société de financement ou société de location), vous devez lui signaler cette perte, car c'est lui qui doit faire les démarches pour la demande de duplicata. Le représentant de la société peut néanmoins vous transmettre un mandat pour vous permettre de réaliser vous-même la démarche en ligne. Vous pourrez également demander à un "
-                            },
-                            {
                               "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F20324",
-                                "type": "Fiche Question-réponse",
-                                "audience": "Particuliers"
-                              },
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "professionnel habilité"
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10307"
+                                  }
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": " de le faire."
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si votre véhicule a été acheté en leasing et que la carte grise est au nom de l'organisme propriétaire (société de financement ou société de location), vous devez lui signaler cette perte, car c'est lui qui doit faire les démarches pour la demande de duplicata. Le représentant de la société peut néanmoins vous transmettre un mandat pour vous permettre de réaliser vous-même la démarche en ligne. Vous pourrez également demander à un "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F20324",
+                                    "type": "Fiche Question-réponse",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "professionnel habilité"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " de le faire."
+                                }
+                              ]
                             }
                           ]
                         },
@@ -2007,6 +2275,35 @@
                                   "text": "Demander votre duplicata"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Demander votre duplicata"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10147"
+                              }
                             }
                           ]
                         },
@@ -2086,6 +2383,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R55753",
+                            "sve": "non",
                             "type": "National"
                           },
                           "children": [
@@ -2173,6 +2471,19 @@
                               "type": "element",
                               "name": "Item",
                               "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10044"
+                                      }
+                                    }
+                                  ]
+                                },
                                 {
                                   "type": "element",
                                   "name": "Paragraphe",
@@ -2542,7 +2853,7 @@
                               "name": "LienInterne",
                               "attributes": {
                                 "LienPublication": "F11475",
-                                "type": "Fiche Question-réponse",
+                                "type": "Fiche Question-réponse conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
@@ -2616,53 +2927,72 @@
                         },
                         {
                           "type": "element",
-                          "name": "Attention",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Titre",
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Attention"
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10023"
+                                  }
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Attention",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "si votre immatriculation est de la forme "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "Expression",
+                                  "name": "Titre",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "1234 AB 56"
+                                      "text": "Attention"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": ", vous obtiendrez un nouveau numéro d'immatriculation de la forme "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "Expression",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "AB-123-CD"
+                                      "text": "si votre immatriculation est de la forme "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "1234 AB 56"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ", vous obtiendrez un nouveau numéro d'immatriculation de la forme "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "AB-123-CD"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ". Vous devrez ensuite changer vos plaques avec la nouvelle immatriculation."
                                     }
                                   ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ". Vous devrez ensuite changer vos plaques avec la nouvelle immatriculation."
                                 }
                               ]
                             }
@@ -2687,6 +3017,35 @@
                                   "text": "Coût de la démarche"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Coût de la démarche"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10147"
+                              }
                             }
                           ]
                         },
@@ -2768,6 +3127,35 @@
                         },
                         {
                           "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Durée de validité du duplicata"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10147"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
@@ -2822,32 +3210,57 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10146"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Vous pouvez obtenir un duplicata de votre carte grise (désormais appelée "
-                        },
-                        {
                           "type": "element",
-                          "name": "Expression",
+                          "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "certificat d'immatriculation"
+                              "text": "Vous pouvez obtenir un duplicata de votre carte grise (désormais appelée "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Expression",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "certificat d'immatriculation"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ") si votre carte originale a été détériorée."
                             }
                           ]
-                        },
-                        {
-                          "type": "text",
-                          "text": ") si votre carte originale a été détériorée."
                         }
                       ]
-                    },
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
                       "name": "Chapitre",
@@ -2870,40 +3283,78 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "La  demande de duplicata ne peut être réalisée que par le titulaire ou le cotitulaire de la carte grise détériorée (propriétaire du véhicule, copropriétaire ou titulaire d'un mandat signé)."
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10147"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La  demande de duplicata ne peut être réalisée que par le titulaire ou le cotitulaire de la carte grise détériorée (propriétaire du véhicule, copropriétaire ou titulaire d'un mandat signé)."
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Si votre véhicule a été acheté en leasing et que la carte grise est au nom de l'organisme propriétaire (société de financement ou société de location), vous devez lui signaler cette perte, car c'est lui qui doit faire les démarches pour la demande de duplicata. Le représentant de la société peut néanmoins vous transmettre un mandat pour vous permettre de réaliser vous-même la démarche en ligne. Vous pourrez également demander à un "
-                            },
-                            {
                               "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F20324",
-                                "type": "Fiche Question-réponse",
-                                "audience": "Particuliers"
-                              },
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "professionnel habilité"
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10117"
+                                  }
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": " de le faire."
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si votre véhicule a été acheté en leasing et que la carte grise est au nom de l'organisme propriétaire (société de financement ou société de location), vous devez lui signaler cette perte, car c'est lui qui doit faire les démarches pour la demande de duplicata. Le représentant de la société peut néanmoins vous transmettre un mandat pour vous permettre de réaliser vous-même la démarche en ligne. Vous pourrez également demander à un "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F20324",
+                                    "type": "Fiche Question-réponse",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "professionnel habilité"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " de le faire."
+                                }
+                              ]
                             }
                           ]
                         },
@@ -2950,6 +3401,35 @@
                                   "text": "Demande de duplicata"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Demande de duplicata"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10147"
+                              }
                             }
                           ]
                         },
@@ -3029,6 +3509,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R55753",
+                            "sve": "non",
                             "type": "National"
                           },
                           "children": [
@@ -3116,6 +3597,19 @@
                               "type": "element",
                               "name": "Item",
                               "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10044"
+                                      }
+                                    }
+                                  ]
+                                },
                                 {
                                   "type": "element",
                                   "name": "Paragraphe",
@@ -3370,53 +3864,72 @@
                         },
                         {
                           "type": "element",
-                          "name": "Attention",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Titre",
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Attention"
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10023"
+                                  }
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Attention",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "si votre immatriculation est de la forme "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "Expression",
+                                  "name": "Titre",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "1234 AB 56"
+                                      "text": "Attention"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": ", vous obtiendrez une nouvelle immatriculation de la forme "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "Expression",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "AB-123-CD"
+                                      "text": "si votre immatriculation est de la forme "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "1234 AB 56"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ", vous obtiendrez une nouvelle immatriculation de la forme "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "AB-123-CD"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ". Vous devrez ensuite changer vos plaques avec la nouvelle immatriculation."
                                     }
                                   ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ". Vous devrez ensuite changer vos plaques avec la nouvelle immatriculation."
                                 }
                               ]
                             }
@@ -3441,6 +3954,35 @@
                                   "text": "Coût de la démarche"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Coût de la démarche"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10147"
+                              }
                             }
                           ]
                         },
@@ -3517,6 +4059,35 @@
                                   "text": "Durée de validité du duplicata"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Durée de validité du duplicata"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10147"
+                              }
                             }
                           ]
                         },

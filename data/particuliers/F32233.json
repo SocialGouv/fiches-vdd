@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F32233",
-        "type": "Fiche Question-réponse",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche Question-réponse conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F32233"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F32233",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -761,6 +762,7 @@
               "name": "OuSAdresser",
               "attributes": {
                 "ID": "R55753",
+                "sve": "non",
                 "type": "National"
               },
               "children": [
@@ -856,14 +858,8 @@
                       "name": "Titre",
                       "children": [
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "En ligne"
-                            }
-                          ]
+                          "type": "text",
+                          "text": "En ligne"
                         }
                       ]
                     },
@@ -914,7 +910,8 @@
                           "name": "NoticeLiee",
                           "attributes": {
                             "ID": "R53158",
-                            "URL": "https://immatriculation.ants.gouv.fr/Actualites/Immatriculation-5-tutoriels-video-pour-vous-aider"
+                            "URL": "https://immatriculation.ants.gouv.fr/Actualites/Immatriculation-5-tutoriels-video-pour-vous-aider",
+                            "type": "Notice"
                           },
                           "children": [
                             {
@@ -1077,6 +1074,19 @@
                           "type": "element",
                           "name": "Item",
                           "children": [
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10044"
+                                  }
+                                }
+                              ]
+                            },
                             {
                               "type": "element",
                               "name": "Paragraphe",
@@ -1356,7 +1366,7 @@
                           "name": "LienInterne",
                           "attributes": {
                             "LienPublication": "F11475",
-                            "type": "Fiche Question-réponse",
+                            "type": "Fiche Question-réponse conditionnée",
                             "audience": "Particuliers"
                           },
                           "children": [
@@ -1439,14 +1449,8 @@
                       "name": "Titre",
                       "children": [
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Auprès d'un professionnel habilité"
-                            }
-                          ]
+                          "type": "text",
+                          "text": "Auprès d'un professionnel habilité"
                         }
                       ]
                     },
@@ -1462,50 +1466,69 @@
                     },
                     {
                       "type": "element",
-                      "name": "Liste",
-                      "attributes": {
-                        "type": "puce"
-                      },
+                      "name": "FragmentConditionne",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Item",
+                          "name": "Condition",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10045"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "de la carte grise  du véhicule, barrée avec la mention "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "Citation",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Vendu le (jour/mois/année) "
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " ou "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Citation",
-                                  "children": [
+                                      "text": "de la carte grise  du véhicule, barrée avec la mention "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Citation",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vendu le (jour/mois/année) "
+                                        }
+                                      ]
+                                    },
                                     {
                                       "type": "text",
-                                      "text": "Cédé le (jour/mois/année)"
+                                      "text": " ou "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Citation",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Cédé le (jour/mois/année)"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ",  avec  la signature du prêteur,"
                                     }
                                   ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ",  avec  la signature du prêteur,"
                                 }
                               ]
                             }
@@ -1608,7 +1631,7 @@
                                   "name": "LienInterne",
                                   "attributes": {
                                     "LienPublication": "F1028",
-                                    "type": "Fiche Question-réponse",
+                                    "type": "Fiche Question-réponse conditionnée",
                                     "audience": "Particuliers"
                                   },
                                   "children": [
@@ -1661,74 +1684,93 @@
                     },
                     {
                       "type": "element",
-                      "name": "Liste",
-                      "attributes": {
-                        "type": "puce"
-                      },
+                      "name": "FragmentConditionne",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Item",
+                          "name": "Condition",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10044"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F2878",
-                                    "type": "Fiche d'information",
-                                    "audience": "Particuliers"
-                                  },
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Preuve du contrôle technique"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", si le véhicule a plus de 4 ans et "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F2880",
-                                    "type": "Fiche Question-réponse",
-                                    "audience": "Particuliers"
-                                  },
-                                  "children": [
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F2878",
+                                        "type": "Fiche d'information",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Preuve du contrôle technique"
+                                        }
+                                      ]
+                                    },
                                     {
                                       "type": "text",
-                                      "text": "n'en est pas dispensé"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ". Le contrôle doit avoir moins de 6 mois (2 mois si une "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienIntra",
-                                  "attributes": {
-                                    "LienID": "R12140",
-                                    "type": "Définition de glossaire"
-                                  },
-                                  "children": [
+                                      "text": ", si le véhicule a plus de 4 ans et "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F2880",
+                                        "type": "Fiche Question-réponse",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "n'en est pas dispensé"
+                                        }
+                                      ]
+                                    },
                                     {
                                       "type": "text",
-                                      "text": "contre-visite"
+                                      "text": ". Le contrôle doit avoir moins de 6 mois (2 mois si une "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R12140",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "contre-visite"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " a été prescrite) et doit avoir été réalisé en France. Il doit dater de moins de 6 mois le jour de la demande de carte grise : si le délai est dépassé, il faudra réaliser un nouveau contrôle à vos frais."
                                     }
                                   ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " a été prescrite) et doit avoir été réalisé en France. Il doit dater de moins de 6 mois le jour de la demande de carte grise : si le délai est dépassé, il faudra réaliser un nouveau contrôle à vos frais."
                                 }
                               ]
                             }
@@ -1825,6 +1867,7 @@
                       "name": "OuSAdresser",
                       "attributes": {
                         "ID": "R10115",
+                        "sve": "non",
                         "type": "Local personnalisable"
                       },
                       "children": [
@@ -1872,31 +1915,50 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "FragmentConditionne",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Si vous avez perdu la carte grise avant d'entamer vos démarches, vous devez contacter le prêteur pour l'en avertir."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10048"
+                              }
+                            }
+                          ]
+                        },
                         {
-                          "type": "text",
-                          "text": "Si on vous l'a volé, vous devez faire un dépôt de plainte pour vol à la gendarmerie ou au commissariat de police de votre domicile ou du lieu du vol, qui  apposera un cachet sur votre formulaire."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si vous avez perdu la carte grise avant d'entamer vos démarches, vous devez contacter le prêteur pour l'en avertir."
+                            }
+                          ]
+                        },
                         {
-                          "type": "text",
-                          "text": "Dans les 2 cas, contactez ensuite le prêteur pour qu'il fasse une demande de duplicata de la carte grise."
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si on vous l'a volé, vous devez faire un dépôt de plainte pour vol à la gendarmerie ou au commissariat de police de votre domicile ou du lieu du vol, qui  apposera un cachet sur votre formulaire."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Dans les 2 cas, contactez ensuite le prêteur pour qu'il fasse une demande de duplicata de la carte grise."
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1915,6 +1977,7 @@
                       "name": "OuSAdresser",
                       "attributes": {
                         "ID": "R13",
+                        "sve": "non",
                         "type": "Local personnalisable"
                       },
                       "children": [
@@ -2081,7 +2144,7 @@
                           "name": "LienInterne",
                           "attributes": {
                             "LienPublication": "F11475",
-                            "type": "Fiche Question-réponse",
+                            "type": "Fiche Question-réponse conditionnée",
                             "audience": "Particuliers"
                           },
                           "children": [
@@ -2137,6 +2200,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R49205",
+            "sve": "non",
             "type": "Centre de contact"
           },
           "children": [
@@ -2405,7 +2469,8 @@
               "name": "NoticeLiee",
               "attributes": {
                 "ID": "R53158",
-                "URL": "https://immatriculation.ants.gouv.fr/Actualites/Immatriculation-5-tutoriels-video-pour-vous-aider"
+                "URL": "https://immatriculation.ants.gouv.fr/Actualites/Immatriculation-5-tutoriels-video-pour-vous-aider",
+                "type": "Notice"
               },
               "children": [
                 {

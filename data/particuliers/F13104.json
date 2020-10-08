@@ -8,8 +8,10 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F13104",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "dateDerniereModificationImportante": "2020-01-01T00:00:00",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F13104"
       },
       "children": [
         {
@@ -240,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F13104",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -596,14 +598,21 @@
                               "name": "Titre",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Cas général"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Cas général"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11319"
+                                  }
                                 }
                               ]
                             },
@@ -628,14 +637,21 @@
                               "name": "Titre",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Époux(se) ou ex-époux(se) décédé(e) avant 2009"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Époux(se) ou ex-époux(se) décédé(e) avant 2009"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11320"
+                                  }
                                 }
                               ]
                             },
@@ -701,14 +717,21 @@
                               "name": "Titre",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Activité salariée"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Activité salariée"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10313"
+                                  }
                                 }
                               ]
                             },
@@ -800,12 +823,78 @@
                               "name": "Titre",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Activité non salariée"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "ou",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Activité non salariée"
+                                      "type": "element",
+                                      "name": "ou",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T10843"
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "estIndefini",
+                                          "attributes": {
+                                            "var": "T10843"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "ou",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11418"
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "estIndefini",
+                                          "attributes": {
+                                            "var": "T11418"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "ou",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T12191"
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "estIndefini",
+                                          "attributes": {
+                                            "var": "T12191"
+                                          }
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -827,14 +916,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Exercice d'une activité en tant qu'indépendant"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Exercice d'une activité en tant qu'indépendant"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T10843"
+                                          }
                                         }
                                       ]
                                     },
@@ -900,14 +996,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Exercice d'une activité libérale"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Exercice d'une activité libérale"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T12191"
+                                          }
                                         }
                                       ]
                                     },
@@ -973,14 +1076,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Exercice d'une activité agricole"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Exercice d'une activité agricole"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11418"
+                                          }
                                         }
                                       ]
                                     },
@@ -1267,14 +1377,8 @@
                               "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "En ligne"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "En ligne"
                                 }
                               ]
                             },
@@ -1333,14 +1437,8 @@
                               "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Par écrit"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Par écrit"
                                 }
                               ]
                             },
@@ -1662,12 +1760,78 @@
                               "name": "Titre",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Cas général"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "ou",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Cas général"
+                                      "type": "element",
+                                      "name": "ou",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T10313"
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "estIndefini",
+                                          "attributes": {
+                                            "var": "T10313"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "ou",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T10843"
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "estIndefini",
+                                          "attributes": {
+                                            "var": "T10843"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "ou",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T12191"
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "estIndefini",
+                                          "attributes": {
+                                            "var": "T12191"
+                                          }
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -1708,14 +1872,21 @@
                               "name": "Titre",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Le défunt exerçait une activité agricole"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Le défunt exerçait une activité agricole"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11418"
+                                  }
                                 }
                               ]
                             },
@@ -2715,14 +2886,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Âge du taux plein atteint"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Âge du taux plein atteint"
                             }
                           ]
                         },
@@ -2874,14 +3039,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Âge du taux plein non atteint"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Âge du taux plein non atteint"
                             }
                           ]
                         },
@@ -2966,6 +3125,19 @@
                           "text": "Partage entre époux(se) et ex-époux(se)"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10950"
+                      }
                     }
                   ]
                 },
@@ -3525,6 +3697,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R198",
+            "sve": "non",
             "type": "Centre de contact"
           },
           "children": [
@@ -3680,6 +3853,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R41",
+            "sve": "non",
             "type": "Local personnalisé sur SP"
           },
           "children": [

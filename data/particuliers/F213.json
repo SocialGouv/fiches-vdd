@@ -8,8 +8,10 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F213",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "dateDerniereModificationImportante": "2019-08-28T00:00:00",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F213"
       },
       "children": [
         {
@@ -240,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F213",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -377,36 +379,61 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11206"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "La CEAM vous permet de bénéficier des soins de santé publics dont vous auriez besoin lors d'un séjour temporaire (week-end, vacances, séjour culturel ou linguistique, études, stage, recherche d'emploi ou déplacement professionnel) dans l'un des  "
-                        },
-                        {
                           "type": "element",
-                          "name": "LienIntra",
-                          "attributes": {
-                            "LienID": "R42218",
-                            "type": "Définition de glossaire"
-                          },
+                          "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "pays de l'Espace économique européen (EEE)"
+                              "text": "La CEAM vous permet de bénéficier des soins de santé publics dont vous auriez besoin lors d'un séjour temporaire (week-end, vacances, séjour culturel ou linguistique, études, stage, recherche d'emploi ou déplacement professionnel) dans l'un des  "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienIntra",
+                              "attributes": {
+                                "LienID": "R42218",
+                                "type": "Définition de glossaire"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "pays de l'Espace économique européen (EEE)"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " ou en Suisse."
                             }
                           ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " ou en Suisse."
                         }
                       ]
-                    },
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
                       "name": "Chapitre",
@@ -475,14 +502,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Régime général"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Régime général"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11332"
+                                      }
                                     }
                                   ]
                                 },
@@ -567,6 +601,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R19040",
+                                    "sve": "non",
                                     "type": "Centre de contact"
                                   },
                                   "children": [
@@ -758,6 +793,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R40",
+                                    "sve": "non",
                                     "type": "Local personnalisé sur SP"
                                   },
                                   "children": [
@@ -814,14 +850,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Régime agricole"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Régime agricole"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11333"
+                                      }
                                     }
                                   ]
                                 },
@@ -906,6 +949,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R39",
+                                    "sve": "non",
                                     "type": "Local personnalisé sur SP"
                                   },
                                   "children": [
@@ -962,14 +1006,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Autre régime"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Autre régime"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10843"
+                                      }
                                     }
                                   ]
                                 },
@@ -978,6 +1029,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R14093",
+                                    "sve": "non",
                                     "type": "Local personnalisable"
                                   },
                                   "children": [
@@ -1219,14 +1271,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Régime général"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Régime général"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11332"
+                                          }
                                         }
                                       ]
                                     },
@@ -1311,6 +1370,7 @@
                                       "name": "OuSAdresser",
                                       "attributes": {
                                         "ID": "R19040",
+                                        "sve": "non",
                                         "type": "Centre de contact"
                                       },
                                       "children": [
@@ -1502,6 +1562,7 @@
                                       "name": "OuSAdresser",
                                       "attributes": {
                                         "ID": "R40",
+                                        "sve": "non",
                                         "type": "Local personnalisé sur SP"
                                       },
                                       "children": [
@@ -1558,14 +1619,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Régime agricole"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Régime agricole"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11333"
+                                          }
                                         }
                                       ]
                                     },
@@ -1650,6 +1718,7 @@
                                       "name": "OuSAdresser",
                                       "attributes": {
                                         "ID": "R39",
+                                        "sve": "non",
                                         "type": "Local personnalisé sur SP"
                                       },
                                       "children": [
@@ -1706,14 +1775,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Sécurité sociale étudiante"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Sécurité sociale étudiante"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11334"
+                                          }
                                         }
                                       ]
                                     },
@@ -1722,6 +1798,7 @@
                                       "name": "OuSAdresser",
                                       "attributes": {
                                         "ID": "R14093",
+                                        "sve": "non",
                                         "type": "Local personnalisable"
                                       },
                                       "children": [
@@ -1759,6 +1836,7 @@
                                       "name": "OuSAdresser",
                                       "attributes": {
                                         "ID": "R11979",
+                                        "sve": "non",
                                         "type": "Local personnalisable"
                                       },
                                       "children": [
@@ -1796,6 +1874,7 @@
                                       "name": "OuSAdresser",
                                       "attributes": {
                                         "ID": "R44928",
+                                        "sve": "non",
                                         "type": "Local"
                                       },
                                       "children": [
@@ -1823,6 +1902,7 @@
                                       "name": "OuSAdresser",
                                       "attributes": {
                                         "ID": "R19794",
+                                        "sve": "non",
                                         "type": "Local personnalisable"
                                       },
                                       "children": [
@@ -1866,14 +1946,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Indépendant"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Indépendant"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T10843"
+                                          }
                                         }
                                       ]
                                     },
@@ -1882,6 +1969,7 @@
                                       "name": "OuSAdresser",
                                       "attributes": {
                                         "ID": "R14093",
+                                        "sve": "non",
                                         "type": "Local personnalisable"
                                       },
                                       "children": [
@@ -2328,46 +2416,98 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11207"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Avant de partir en vacances à l'étranger, prenez certaines précautions pour être assuré si vous tombez malade. Avant votre départ vous devez vous renseigner sur l'état sanitaire du pays et sur les frais médicaux qui resteront éventuellement à votre charge. Dans certains pays, les soins, notamment hospitaliers, coûtent très chers. Il est donc prudent d'être couvert par un contrat d'assurance ou d'assistance."
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Avant de partir en vacances à l'étranger, prenez certaines précautions pour être assuré si vous tombez malade. Avant votre départ vous devez vous renseigner sur l'état sanitaire du pays et sur les frais médicaux qui resteront éventuellement à votre charge. Dans certains pays, les soins, notamment hospitaliers, coûtent très chers. Il est donc prudent d'être couvert par un contrat d'assurance ou d'assistance."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Chapitre",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "onglet"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "BlocCas",
-                          "attributes": {
-                            "affichage": "onglet"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Cas général"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10047"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si vous recevez des soins à l'étranger vous devez régler les frais médicaux sur place. Peu importe qu'il s'agisse de soins hospitaliers ou non, dans le secteur public ou privé."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ANoter",
                               "children": [
                                 {
                                   "type": "element",
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Cas général"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "À noter"
                                     }
                                   ]
                                 },
@@ -2377,171 +2517,41 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Si vous recevez des soins à l'étranger vous devez régler les frais médicaux sur place. Peu importe qu'il s'agisse de soins hospitaliers ou non, dans le secteur public ou privé."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ANoter",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "À noter"
-                                        }
-                                      ]
+                                      "text": "il existe une exception pour 2 pays : "
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "il existe une exception pour 2 pays : "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienExterne",
-                                          "attributes": {
-                                            "URL": "http://www.cleiss.fr/particuliers/je_pars_en_vacances_andorre.html"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Andorre"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "\n\n et le "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienExterne",
-                                          "attributes": {
-                                            "URL": "http://www.cleiss.fr/particuliers/je_pars_en_vacances_gabon.html"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Gabon"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "\n\n. Les soins  peuvent être pris en charge par la caisse étrangère, sous certaines conditions."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous devez conserver les justificatifs des dépenses de santé et les présenter à votre retour à la caisse d'assurance maladie, accompagné du          formulaire cerfa n°12267*04 \"soins reçus à l'étranger\"."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ServiceEnLigne",
-                                  "attributes": {
-                                    "ID": "R17466",
-                                    "URL": "https://www.ameli.fr/sites/default/files/formualires/221/s3125.pdf",
-                                    "format": "application/pdf",
-                                    "poids": "1.7 MB",
-                                    "numerocerfa": "12267*04",
-                                    "autrenumero": "S3125c",
-                                    "type": "Formulaire"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Soins reçus à l'étranger - Déclaration à compléter par l'assuré"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
+                                      "name": "LienExterne",
                                       "attributes": {
-                                        "ID": "R30675"
+                                        "URL": "http://www.cleiss.fr/particuliers/je_pars_en_vacances_andorre.html"
                                       },
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Caisse nationale d'assurance maladie (Cnam)"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Seuls les soins urgents imprévus et imprévisibles peuvent être éventuellement pris en charge par la sécurité sociale française."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Le remboursement des soins sera ou non accordé à l'assuré, après vérification de sa situation et dans la limite des tarifs forfaitaires appliqués en France."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Attention",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Attention"
+                                          "text": "Andorre"
                                         }
                                       ]
                                     },
                                     {
+                                      "type": "text",
+                                      "text": "\n\n et le "
+                                    },
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "LienExterne",
+                                      "attributes": {
+                                        "URL": "http://www.cleiss.fr/particuliers/je_pars_en_vacances_gabon.html"
+                                      },
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": " il s'agit d'une possibilité pour la caisse concernée et non d'une obligation."
+                                          "text": "Gabon"
                                         }
                                       ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
+                                    },
                                     {
                                       "type": "text",
-                                      "text": "En cas de refus de remboursement, aucune contestation n'est possible."
+                                      "text": "\n\n. Les soins  peuvent être pris en charge par la caisse étrangère, sous certaines conditions."
                                     }
                                   ]
                                 }
@@ -2549,118 +2559,83 @@
                             },
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez conserver les justificatifs des dépenses de santé et les présenter à votre retour à la caisse d'assurance maladie, accompagné du          formulaire cerfa n°12267*04 \"soins reçus à l'étranger\"."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ServiceEnLigne",
+                              "attributes": {
+                                "ID": "R17466",
+                                "URL": "https://www.ameli.fr/sites/default/files/formualires/221/s3125.pdf",
+                                "format": "application/pdf",
+                                "poids": "1.7 MB",
+                                "numerocerfa": "12267*04",
+                                "autrenumero": "S3125c",
+                                "type": "Formulaire"
+                              },
                               "children": [
                                 {
                                   "type": "element",
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si vous partez dans votre pays d'origine"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Soins reçus à l'étranger - Déclaration à compléter par l'assuré"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Avant de partir, vous devez demander   à votre "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F648",
-                                        "type": "Fiche Question-réponse",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "caisse d'assurance maladie"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
+                                  "name": "Source",
                                   "attributes": {
-                                    "type": "puce"
+                                    "ID": "R30675"
                                   },
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "s'il existe un "
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "LienExterne",
-                                              "attributes": {
-                                                "URL": "http://www.cleiss.fr/particuliers/je_pars_en_vacances.html"
-                                              },
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "accord de sécurité sociale entre la France et votre pays d'origine"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": "\n\n et s'il vous est applicable,"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "(un certain nombre d'accords ne concernent que les travailleurs salariés et les membres de leur famille. De plus, la majorité d'entre eux ne s'appliquent pas aux étrangers qui ont la double nationalité, franco-algérienne ou franco-malienne par exemple),"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
+                                      "type": "text",
+                                      "text": "Caisse nationale d'assurance maladie (Cnam)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Seuls les soins urgents imprévus et imprévisibles peuvent être éventuellement pris en charge par la sécurité sociale française."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le remboursement des soins sera ou non accordé à l'assuré, après vérification de sa situation et dans la limite des tarifs forfaitaires appliqués en France."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Attention",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "si vous avez des formalités à accomplir (dans certains cas, vous devez présenter  à l'organisme d'assurance maladie de votre pays d'origine des formulaires spécifiques remis par votre caisse française)."
-                                            }
-                                          ]
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Attention"
                                     }
                                   ]
                                 },
@@ -2670,126 +2645,19 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Si vous entrez dans le champ d'application de l'accord de sécurité sociale, vous pourrez bénéficier de la prise en charge de vos soins de santé sur place, selon les tarifs en vigueur dans votre pays d'origine."
+                                      "text": " il s'agit d'une possibilité pour la caisse concernée et non d'une obligation."
                                     }
                                   ]
-                                },
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "En cas d'arrêt de travail, vous pourrez aussi éventuellement percevoir des indemnités journalières, dans les conditions prévues par l'accord."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Si vous n'entrez pas  dans le champ d'application de l'accord  de sécurité sociale signé entre votre pays d'origine et la France ou si votre pays  n'a pas signé d'accord avec la France, vous devez régler sur place vos frais médicaux si vous tombez malade."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous devez conserver les factures et vos justificatifs de paiement et les présenter, à votre retour en France, à votre caisse d'assurance maladie, accompagné du \n          formulaire cerfa n°12267*03 \"soins reçus à l'étranger\"."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ServiceEnLigne",
-                                  "attributes": {
-                                    "ID": "R17466",
-                                    "URL": "https://www.ameli.fr/sites/default/files/formualires/221/s3125.pdf",
-                                    "format": "application/pdf",
-                                    "poids": "1.7 MB",
-                                    "numerocerfa": "12267*04",
-                                    "autrenumero": "S3125c",
-                                    "type": "Formulaire"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Soins reçus à l'étranger - Déclaration à compléter par l'assuré"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30675"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Caisse nationale d'assurance maladie (Cnam)"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Après vérification de votre situation, votre caisse vous remboursera éventuellement vos frais dans la limite des tarifs appliqués en France.\n\t\tIl s'agit d'une possibilité pour votre caisse et non d'une obligation."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "En cas de refus de remboursement,  aucune contestation n'est possible."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Il est donc prudent d'être titulaire d'un "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F2169",
-                                        "type": "Fiche Question-réponse",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "contrat d'assurance ou d’assistance"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " lorsque vous voyagez à l'étranger. Les soins, notamment hospitaliers, peuvent coûter très chers dans certains pays."
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "En cas de refus de remboursement, aucune contestation n'est possible."
                                 }
                               ]
                             }
@@ -2797,23 +2665,276 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Cas",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "L'ambassade ou le consulat français du pays visité peut vous mettre  en relation avec un médecin agréé par ses services."
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si vous partez dans votre pays d'origine"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10019"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Avant de partir, vous devez demander   à votre "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F648",
+                                    "type": "Fiche Question-réponse",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "caisse d'assurance maladie"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "s'il existe un "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienExterne",
+                                          "attributes": {
+                                            "URL": "http://www.cleiss.fr/particuliers/je_pars_en_vacances.html"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "accord de sécurité sociale entre la France et votre pays d'origine"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": "\n\n et s'il vous est applicable,"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "(un certain nombre d'accords ne concernent que les travailleurs salariés et les membres de leur famille. De plus, la majorité d'entre eux ne s'appliquent pas aux étrangers qui ont la double nationalité, franco-algérienne ou franco-malienne par exemple),"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "si vous avez des formalités à accomplir (dans certains cas, vous devez présenter  à l'organisme d'assurance maladie de votre pays d'origine des formulaires spécifiques remis par votre caisse française)."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si vous entrez dans le champ d'application de l'accord de sécurité sociale, vous pourrez bénéficier de la prise en charge de vos soins de santé sur place, selon les tarifs en vigueur dans votre pays d'origine."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "En cas d'arrêt de travail, vous pourrez aussi éventuellement percevoir des indemnités journalières, dans les conditions prévues par l'accord."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si vous n'entrez pas  dans le champ d'application de l'accord  de sécurité sociale signé entre votre pays d'origine et la France ou si votre pays  n'a pas signé d'accord avec la France, vous devez régler sur place vos frais médicaux si vous tombez malade."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez conserver les factures et vos justificatifs de paiement et les présenter, à votre retour en France, à votre caisse d'assurance maladie, accompagné du \n          formulaire cerfa n°12267*03 \"soins reçus à l'étranger\"."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ServiceEnLigne",
+                              "attributes": {
+                                "ID": "R17466",
+                                "URL": "https://www.ameli.fr/sites/default/files/formualires/221/s3125.pdf",
+                                "format": "application/pdf",
+                                "poids": "1.7 MB",
+                                "numerocerfa": "12267*04",
+                                "autrenumero": "S3125c",
+                                "type": "Formulaire"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Soins reçus à l'étranger - Déclaration à compléter par l'assuré"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30675"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Caisse nationale d'assurance maladie (Cnam)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Après vérification de votre situation, votre caisse vous remboursera éventuellement vos frais dans la limite des tarifs appliqués en France.\n\t\tIl s'agit d'une possibilité pour votre caisse et non d'une obligation."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "En cas de refus de remboursement,  aucune contestation n'est possible."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Il est donc prudent d'être titulaire d'un "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F2169",
+                                    "type": "Fiche Question-réponse",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "contrat d'assurance ou d’assistance"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " lorsque vous voyagez à l'étranger. Les soins, notamment hospitaliers, peuvent coûter très chers dans certains pays."
+                                }
+                              ]
                             }
                           ]
-                        },
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Les autorités consulaires peuvent  aussi vous fournir une liste de médecins parlant français ou spécialisés."
-                            }
-                          ]
+                          "type": "text",
+                          "text": "L'ambassade ou le consulat français du pays visité peut vous mettre  en relation avec un médecin agréé par ses services."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Les autorités consulaires peuvent  aussi vous fournir une liste de médecins parlant français ou spécialisés."
                         }
                       ]
                     }
@@ -2828,6 +2949,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R2750",
+            "sve": "non",
             "type": "Local personnalisable"
           },
           "children": [

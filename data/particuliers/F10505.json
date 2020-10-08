@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F10505",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F10505"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F10505",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -464,14 +465,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Cas général"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Cas général"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10330"
+                              }
                             }
                           ]
                         },
@@ -644,14 +652,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "L'un des parents est étranger"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "L'un des parents est étranger"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10632"
+                              }
                             }
                           ]
                         },
@@ -789,6 +804,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R2884",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -961,6 +977,7 @@
                   "name": "OuSAdresser",
                   "attributes": {
                     "ID": "R1",
+                    "sve": "non",
                     "type": "Local personnalisé sur SP"
                   },
                   "children": [
@@ -1031,14 +1048,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Les parents sont mariés ensemble"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Les parents sont mariés ensemble"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10282"
+                              }
                             }
                           ]
                         },
@@ -1118,14 +1142,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Les parents ne sont pas mariés ensemble"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Les parents ne sont pas mariés ensemble"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10284"
+                              }
                             }
                           ]
                         },

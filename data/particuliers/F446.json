@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F446",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F446"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F446",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -672,6 +673,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35229",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Comment déclarer les sommes versées à son ex-mari ou son ex-femme ?"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "Texte",
           "children": [
             {
@@ -696,6 +723,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T12309"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "SousChapitre",
                   "children": [
                     {
@@ -711,6 +751,19 @@
                               "text": "Conditions à remplir"
                             }
                           ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12309"
+                          }
                         }
                       ]
                     },
@@ -821,6 +874,19 @@
                     },
                     {
                       "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12309"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "Paragraphe",
                       "children": [
                         {
@@ -867,6 +933,19 @@
                               "text": "Sommes non déductibles"
                             }
                           ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12309"
+                          }
                         }
                       ]
                     },
@@ -945,6 +1024,19 @@
                     },
                     {
                       "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12309"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "Paragraphe",
                       "children": [
                         {
@@ -984,6 +1076,19 @@
                           "text": "Prestation compensatoire"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T12310"
+                      }
                     }
                   ]
                 },
@@ -1032,14 +1137,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Sous forme de rente"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Sous forme de rente"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12312"
+                              }
                             }
                           ]
                         },
@@ -1064,14 +1176,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Sous forme de capital"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Sous forme de capital"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12313"
+                              }
                             }
                           ]
                         },
@@ -1091,62 +1210,75 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Versée en 1 fois"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "FragmentConditionne",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T12314"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "element",
                                       "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Versée en 1 fois"
+                                          "text": "Vous pouvez bénéficier d'une réduction d'impôt si vous versez la prestation  en une seule fois dans les 12 mois qui suivent le jugement de divorce définitif."
                                         }
                                       ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous pouvez bénéficier d'une réduction d'impôt si vous versez la prestation  en une seule fois dans les 12 mois qui suivent le jugement de divorce définitif."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "La réduction d'impôt est de "
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Valeur",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "25  %"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "avec un maximum de   "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Valeur",
-                                      "children": [
+                                          "text": "La réduction d'impôt est de "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "25  %"
+                                            }
+                                          ]
+                                        },
                                         {
                                           "type": "text",
-                                          "text": "7 625 €"
+                                          "text": "avec un maximum de   "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "7 625 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": "."
                                         }
                                       ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
                                     }
                                   ]
                                 }
@@ -1161,62 +1293,75 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Étalée sur moins de 12 mois"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "FragmentConditionne",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T12315"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "element",
                                       "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Étalée sur moins de 12 mois"
+                                          "text": "Vous pouvez bénéficier d'une réduction d'impôt si vous versez la prestation étalée sur les 12 mois qui suivent le jugement de divorce devenu définitif."
                                         }
                                       ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous pouvez bénéficier d'une réduction d'impôt si vous versez la prestation étalée sur les 12 mois qui suivent le jugement de divorce devenu définitif."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "La réduction d'impôt est de "
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Valeur",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "25 %"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " avec un maximum de   "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Valeur",
-                                      "children": [
+                                          "text": "La réduction d'impôt est de "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "25 %"
+                                            }
+                                          ]
+                                        },
                                         {
                                           "type": "text",
-                                          "text": "7 625 €"
+                                          "text": " avec un maximum de   "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "7 625 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": "."
                                         }
                                       ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
                                     }
                                   ]
                                 }
@@ -1231,34 +1376,47 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Étalée sur plus de 12 mois"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "FragmentConditionne",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T12316"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "element",
                                       "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Étalée sur plus de 12 mois"
+                                          "text": "Vous pouvez déduire de vos revenus les prestations compensatoires versées  si vous versez la prestation étalée sur plus de 12 mois (à partir du jugement de divorce devenu définitif)."
                                         }
                                       ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
+                                    },
                                     {
-                                      "type": "text",
-                                      "text": "Vous pouvez déduire de vos revenus les prestations compensatoires versées  si vous versez la prestation étalée sur plus de 12 mois (à partir du jugement de divorce devenu définitif)."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Cependant,  si le jugement prévoyait un délai plus court, les sommes ne seront pas déductibles."
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Cependant,  si le jugement prévoyait un délai plus court, les sommes ne seront pas déductibles."
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -1272,11 +1430,30 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "FragmentConditionne",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Vous devez indiquer le montant des sommes versées sur votre déclaration de revenus."
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12310"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous devez indiquer le montant des sommes versées sur votre déclaration de revenus."
+                        }
+                      ]
                     }
                   ]
                 },
@@ -1309,6 +1486,19 @@
                           "text": "Contribution aux charges du mariage"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T12311"
+                      }
                     }
                   ]
                 },
@@ -1615,6 +1805,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R20684",
+            "sve": "non",
             "type": "Centre de contact"
           },
           "children": [
@@ -1800,6 +1991,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R15019",
+            "sve": "non",
             "type": "Local personnalisable"
           },
           "children": [
