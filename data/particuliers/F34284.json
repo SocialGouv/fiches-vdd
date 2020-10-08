@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F34284",
-        "type": "Fiche Question-réponse",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche Question-réponse conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F34284"
       },
       "children": [
         {
@@ -230,7 +231,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F34284",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -402,11 +403,30 @@
           "children": [
             {
               "type": "element",
-              "name": "Paragraphe",
+              "name": "FragmentConditionne",
               "children": [
                 {
-                  "type": "text",
-                  "text": "La Direction générale de la concurrence, de la consommation et de la répression des fraudes (DGCCRF) est un service du ministère de l'économie chargé des litiges liés à la consommation (banque, achat ou location sur internet...)."
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10010"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "La Direction générale de la concurrence, de la consommation et de la répression des fraudes (DGCCRF) est un service du ministère de l'économie chargé des litiges liés à la consommation (banque, achat ou location sur internet...)."
+                    }
+                  ]
                 }
               ]
             },
@@ -425,6 +445,7 @@
               "name": "OuSAdresser",
               "attributes": {
                 "ID": "R18",
+                "sve": "non",
                 "type": "Local personnalisable"
               },
               "children": [
@@ -480,7 +501,7 @@
                   "name": "LienInterne",
                   "attributes": {
                     "LienPublication": "F1435",
-                    "type": "Fiche d'information",
+                    "type": "Fiche d'information conditionnée",
                     "audience": "Particuliers"
                   },
                   "children": [

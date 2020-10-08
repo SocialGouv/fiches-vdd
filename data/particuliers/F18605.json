@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F18605",
-        "type": "Fiche Question-réponse",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche Question-réponse conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F18605"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F18605",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -450,11 +451,30 @@
           "children": [
             {
               "type": "element",
-              "name": "Paragraphe",
+              "name": "FragmentConditionne",
               "children": [
                 {
-                  "type": "text",
-                  "text": "Toute demande de carte nationale d'identité ou de passeport pour un mineur, doit être déposée par une personne investie de l'autorité parentale. "
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10010"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Toute demande de carte nationale d'identité ou de passeport pour un mineur, doit être déposée par une personne investie de l'autorité parentale. "
+                    }
+                  ]
                 }
               ]
             }
@@ -483,126 +503,303 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10285"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Chaque parent est présumé exercer l'autorité parentale quelle que soit sa situation familiale."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "onglet"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Chaque parent est présumé exercer l'autorité parentale quelle que soit sa situation familiale."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "BlocCas",
-                          "attributes": {
-                            "affichage": "onglet"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si les parents vivent ensemble"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Titre",
+                                  "name": "ou",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "ou",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Si les parents vivent ensemble"
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T10282"
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "estIndefini",
+                                          "attributes": {
+                                            "var": "T10282"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "ou",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T10283"
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "estIndefini",
+                                          "attributes": {
+                                            "var": "T10283"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "ou",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T10284"
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "estIndefini",
+                                          "attributes": {
+                                            "var": "T10284"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "ou",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10284"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "estIndefini",
+                                              "attributes": {
+                                                "var": "T10284"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10283"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "estIndefini",
+                                              "attributes": {
+                                                "var": "T10283"
+                                              }
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
                                   ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L'acte de naissance de l'enfant (sur lequel figure le nom de chaque parent) est suffisant pour justifier de sa qualité."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vérifiez si   "
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "LienExterne",
+                                  "attributes": {
+                                    "URL": "https://ants.gouv.fr/Les-solutions/COMEDEC/Villes-adherentes-a-la-dematerialisation"
+                                  },
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "L'acte de naissance de l'enfant (sur lequel figure le nom de chaque parent) est suffisant pour justifier de sa qualité."
+                                      "text": "l'état civil du lieu de naissance est dématérialisé"
                                     }
                                   ]
                                 },
                                 {
+                                  "type": "text",
+                                  "text": "\n\n."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si ce n'est pas le cas, il faut fournir un "
+                                },
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "R1406",
+                                    "type": "Téléservice",
+                                    "audience": "Particuliers"
+                                  },
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Vérifiez si   "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienExterne",
-                                      "attributes": {
-                                        "URL": "https://ants.gouv.fr/Les-solutions/COMEDEC/Villes-adherentes-a-la-dematerialisation"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "l'état civil du lieu de naissance est dématérialisé"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "\n\n."
+                                      "text": "acte de naissance (copie intégrale ou extrait avec filiation)"
                                     }
                                   ]
                                 },
                                 {
+                                  "type": "text",
+                                  "text": " de "
+                                },
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "MiseEnEvidence",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Si ce n'est pas le cas, il faut fournir un "
-                                    },
+                                      "text": "moins de 3 mois"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "FragmentConditionne",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
                                     {
                                       "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "R1406",
-                                        "type": "Téléservice",
-                                        "audience": "Particuliers"
-                                      },
+                                      "name": "ou",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "acte de naissance (copie intégrale ou extrait avec filiation)"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " de "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10284"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "estIndefini",
+                                              "attributes": {
+                                                "var": "T10284"
+                                              }
+                                            }
+                                          ]
+                                        },
                                         {
-                                          "type": "text",
-                                          "text": "moins de 3 mois"
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10283"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "estIndefini",
+                                              "attributes": {
+                                                "var": "T10283"
+                                              }
+                                            }
+                                          ]
                                         }
                                       ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
                                     }
                                   ]
                                 },
@@ -615,52 +812,20 @@
                                       "text": "S'il n'est pas marié avec la mère, le père doit avoir reconnu l'enfant avant l'âge d'1 an pour avoir l'autorité parentale."
                                     }
                                   ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ASavoir",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "À savoir"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Il n'y a pas lieu de fournir le livret de famille ni d'autorisation de l'autre parent."
-                                        }
-                                      ]
-                                    }
-                                  ]
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "ASavoir",
                               "children": [
                                 {
                                   "type": "element",
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si les parents sont séparés"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "À savoir"
                                     }
                                   ]
                                 },
@@ -670,7 +835,171 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "L'acte de naissance de l'enfant (sur lequel figure le nom de chaque parent) est suffisant pour justifier de sa qualité."
+                                      "text": "Il n'y a pas lieu de fournir le livret de famille ni d'autorisation de l'autre parent."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si les parents sont séparés"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10950"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L'acte de naissance de l'enfant (sur lequel figure le nom de chaque parent) est suffisant pour justifier de sa qualité."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vérifiez si   "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienExterne",
+                                  "attributes": {
+                                    "URL": "https://ants.gouv.fr/Les-solutions/COMEDEC/Villes-adherentes-a-la-dematerialisation"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "l'état civil du lieu de naissance est dématérialisé"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "\n\n."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si ce n'est pas le cas, il faut fournir un "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "R1406",
+                                    "type": "Téléservice",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "acte de naissance (copie intégrale ou extrait avec filiation)"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "moins de 3 mois"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "S'il n’était pas marié avec la mère, le père doit avoir reconnu l'enfant avant l'âge d'1 an pour avoir l'autorité parentale."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le  jugement de divorce ou de séparation peut être réclamé uniquement pour "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F32675",
+                                    "type": "Fiche Question-réponse conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "inscrire les 2 adresses dans le cas d'une résidence alternée"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ASavoir",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "À savoir"
                                     }
                                   ]
                                 },
@@ -680,132 +1009,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Vérifiez si   "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienExterne",
-                                      "attributes": {
-                                        "URL": "https://ants.gouv.fr/Les-solutions/COMEDEC/Villes-adherentes-a-la-dematerialisation"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "l'état civil du lieu de naissance est dématérialisé"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "\n\n."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Si ce n'est pas le cas, il faut fournir un "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "R1406",
-                                        "type": "Téléservice",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "acte de naissance (copie intégrale ou extrait avec filiation)"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " de "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "moins de 3 mois"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "S'il n’était pas marié avec la mère, le père doit avoir reconnu l'enfant avant l'âge d'1 an pour avoir l'autorité parentale."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Le  jugement de divorce ou de séparation peut être réclamé uniquement pour "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F32675",
-                                        "type": "Fiche Question-réponse",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "inscrire les 2 adresses dans le cas d'une résidence alternée"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ASavoir",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "À savoir"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Il n'y a pas lieu de fournir le livret de famille ni d'autorisation de l'autre parent."
-                                        }
-                                      ]
+                                      "text": "Il n'y a pas lieu de fournir le livret de famille ni d'autorisation de l'autre parent."
                                     }
                                   ]
                                 }
@@ -835,67 +1039,74 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11627"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
                       "children": [
                         {
+                          "type": "text",
+                          "text": "Si l'autorité parentale est assurée par un tiers, il faut présenter la copie de la décision de justice prononçant la déchéance ou autorisant la délégation de l'autorité parentale."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Si le mineur est sous tutelle, il faut présenter la copie de la décision du "
+                        },
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R12897",
+                            "type": "Définition de glossaire"
+                          },
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si l'autorité parentale est assurée par un tiers, il faut présenter la copie de la décision de justice prononçant la déchéance ou autorisant la délégation de l'autorité parentale."
+                              "text": "conseil de famille"
                             }
                           ]
                         },
                         {
+                          "type": "text",
+                          "text": " ou la copie de la décision de justice désignant le "
+                        },
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R38682",
+                            "type": "Définition de glossaire"
+                          },
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si le mineur est sous tutelle, il faut présenter la copie de la décision du "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R12897",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "conseil de famille"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " ou la copie de la décision de justice désignant le "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R38682",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "tuteur"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "."
+                              "text": "tuteur"
                             }
                           ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
                         }
                       ]
                     }

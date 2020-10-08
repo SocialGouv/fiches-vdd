@@ -8,8 +8,10 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F14807",
-        "type": "Fiche Question-réponse",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche Question-réponse conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "dateDerniereModificationImportante": "2019-02-22T00:00:00",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F14807"
       },
       "children": [
         {
@@ -240,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F14807",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -446,6 +448,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35435",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Justif domicile"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "Texte",
           "children": [
             {
@@ -488,14 +516,21 @@
                       "name": "Titre",
                       "children": [
                         {
+                          "type": "text",
+                          "text": "Vous avez un justificatif de domicile à votre nom"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Vous avez un justificatif de domicile à votre nom"
-                            }
-                          ]
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10281"
+                          }
                         }
                       ]
                     },
@@ -812,12 +847,98 @@
                       "name": "Titre",
                       "children": [
                         {
+                          "type": "text",
+                          "text": "Autre situation"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "et",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Autre situation"
+                              "type": "element",
+                              "name": "ou",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10647"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estIndefini",
+                                  "attributes": {
+                                    "var": "T10647"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ou",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10641"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estIndefini",
+                                  "attributes": {
+                                    "var": "T10641"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ou",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10642"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estIndefini",
+                                  "attributes": {
+                                    "var": "T10642"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ou",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10649"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estIndefini",
+                                  "attributes": {
+                                    "var": "T10649"
+                                  }
+                                }
+                              ]
                             }
                           ]
                         }
@@ -839,14 +960,21 @@
                               "name": "Titre",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Vous habitez chez un proche (parent, ami...)"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous habitez chez un proche (parent, ami...)"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10647"
+                                  }
                                 }
                               ]
                             },
@@ -943,14 +1071,21 @@
                               "name": "Titre",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Vous êtes sans domicile stable ou fixe (SDF)"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous êtes sans domicile stable ou fixe (SDF)"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10641"
+                                  }
                                 }
                               ]
                             },
@@ -1045,14 +1180,21 @@
                               "name": "Titre",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Vous vivez à l'hôtel"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous vivez à l'hôtel"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10642"
+                                  }
                                 }
                               ]
                             },
@@ -1118,14 +1260,21 @@
                               "name": "Titre",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Vous vivez dans une caravane"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous vivez dans une caravane"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10649"
+                                  }
                                 }
                               ]
                             },

@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F11475",
-        "type": "Fiche Question-réponse",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche Question-réponse conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F11475"
       },
       "children": [
         {
@@ -230,7 +231,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F11475",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -657,68 +658,157 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10007"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous recevrez votre carte grise sous "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R23562",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "pli sécurisé"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "  en général dans les  7 "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R17509",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "jours ouvrés"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ". Toutefois, le délai peut être plus long"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Item",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Vous recevrez votre carte grise sous "
-                            },
-                            {
                               "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R23562",
-                                "type": "Définition de glossaire"
-                              },
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "pli sécurisé"
+                                  "text": "si votre demande est incomplète ou doit être analysée par le service instructeur (la fabrication de la carte grise ne pourra être lancée qu'à l'issue de cette étape)"
                                 }
                               ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "  en général dans les  7 "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R17509",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "jours ouvrés"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": ". Toutefois, le délai peut être plus long"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Liste",
-                          "attributes": {
-                            "type": "puce"
-                          },
+                          "name": "Item",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "ou en fonction du nombre de demandes en cours de traitement."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous pouvez suivre l'état d'avancement de votre dossier sur le site de l'Agence nationale des titres sécurisés (ANTS) : "
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ServiceEnLigne",
+                      "attributes": {
+                        "ID": "R20907",
+                        "URL": "https://immatriculation.ants.gouv.fr/Services-associes/Ou-en-est-ma-carte-grise",
+                        "type": "Téléservice"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Suivez votre demande de carte grise"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Source",
+                          "attributes": {
+                            "ID": "R30628"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Agence nationale des titres sécurisés (ANTS)"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Introduction",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Texte",
                               "children": [
                                 {
                                   "type": "element",
@@ -726,105 +816,23 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "si votre demande est incomplète ou doit être analysée par le service instructeur (la fabrication de la carte grise ne pourra être lancée qu'à l'issue de cette étape)"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "ou en fonction du nombre de demandes en cours de traitement."
+                                      "text": "Munissez-vous du certificat provisoire d'immatriculation (CPI)."
                                     }
                                   ]
                                 }
                               ]
                             }
                           ]
-                        },
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Vous pouvez suivre l'état d'avancement de votre dossier sur le site de l'Agence nationale des titres sécurisés (ANTS) : "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "ServiceEnLigne",
-                          "attributes": {
-                            "ID": "R20907",
-                            "URL": "https://immatriculation.ants.gouv.fr/Services-associes/Ou-en-est-ma-carte-grise",
-                            "type": "Téléservice"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Suivez votre demande de carte grise"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Source",
-                              "attributes": {
-                                "ID": "R30628"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Agence nationale des titres sécurisés (ANTS)"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Introduction",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Texte",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Munissez-vous du certificat provisoire d'immatriculation (CPI)."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Si vous êtes absent lors du passage du facteur, un avis de passage vous sera déposé. Vous avez ensuite 15 jours pour récupérer votre document à La Poste (ou donner procuration à un tiers pour le faire à votre place). Passé ce délai, le titre est retourné à l'expéditeur. Vous devrez contacter l'ANTS pour qu'il vous soit renvoyé."
-                            }
-                          ]
+                          "type": "text",
+                          "text": "Si vous êtes absent lors du passage du facteur, un avis de passage vous sera déposé. Vous avez ensuite 15 jours pour récupérer votre document à La Poste (ou donner procuration à un tiers pour le faire à votre place). Passé ce délai, le titre est retourné à l'expéditeur. Vous devrez contacter l'ANTS pour qu'il vous soit renvoyé."
                         }
                       ]
                     }
@@ -848,81 +856,78 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10008"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "L'étiquette est envoyée sous "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R23562",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "pli sécurisé"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "  dans les  7 "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R17509",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "jours ouvrés"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Attention",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Titre",
                           "children": [
                             {
                               "type": "text",
-                              "text": "L'étiquette est envoyée sous "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R23562",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "pli sécurisé"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "  dans les  7 "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R17509",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "jours ouvrés"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Attention",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Attention"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "étant donné la crise sanitaire en cours, les délais d'instruction sont plus longs qu'habituellement."
-                                }
-                              ]
+                              "text": "Attention"
                             }
                           ]
                         },
@@ -932,29 +937,39 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Habituellement, le facteur remet la carte grise à l'usager contre signature. Étant donné la crise sanitaire en cours, consigne a été donnée aux facteurs de ne plus demander leur signature aux usagers."
+                              "text": "étant donné la crise sanitaire en cours, les délais d'instruction sont plus longs qu'habituellement."
                             }
                           ]
-                        },
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Le facteur sonne au domicile de l'usager et s'assure oralement de sa présence. Il flashe le courrier, prend une photo, vérifie et valide. Enfin, à la place de la signature, le facteur inscrit « C19- Nom-Prénom » et dépose le courrier dans la boite aux lettres."
-                            }
-                          ]
-                        },
+                          "type": "text",
+                          "text": "Habituellement, le facteur remet la carte grise à l'usager contre signature. Étant donné la crise sanitaire en cours, consigne a été donnée aux facteurs de ne plus demander leur signature aux usagers."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "En cas d'absence, le facteur dépose un avis de passage pour retrait au bureau de Poste. Dans ce cas, le titre sera stocké dans le bureau de Poste pendant 15 jours (si le bureau de Poste est ouvert) ou pendant les 15 jours suivant la fin du confinement (si le bureau de Poste est fermé)."
-                            }
-                          ]
+                          "type": "text",
+                          "text": "Le facteur sonne au domicile de l'usager et s'assure oralement de sa présence. Il flashe le courrier, prend une photo, vérifie et valide. Enfin, à la place de la signature, le facteur inscrit « C19- Nom-Prénom » et dépose le courrier dans la boite aux lettres."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "En cas d'absence, le facteur dépose un avis de passage pour retrait au bureau de Poste. Dans ce cas, le titre sera stocké dans le bureau de Poste pendant 15 jours (si le bureau de Poste est ouvert) ou pendant les 15 jours suivant la fin du confinement (si le bureau de Poste est fermé)."
                         }
                       ]
                     }
@@ -969,6 +984,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R23383",
+            "sve": "non",
             "type": "Centre de contact"
           },
           "children": [

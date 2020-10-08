@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1450",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1450"
       },
       "children": [
         {
@@ -250,7 +251,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F1450",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -797,18 +798,43 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10636"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Si vous vous faites voler votre permis de conduire en France, il faut faire une déclaration de vol avant de faire une demande de renouvellement."
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si vous vous faites voler votre permis de conduire en France, il faut faire une déclaration de vol avant de faire une demande de renouvellement."
+                            }
+                          ]
                         }
                       ]
-                    },
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
                       "name": "Chapitre",
@@ -920,6 +946,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R13",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -1520,6 +1547,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R33823",
+                            "sve": "non",
                             "type": "Centre de contact"
                           },
                           "children": [
@@ -1720,36 +1748,48 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Introduction",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "En cas de vol de  votre permis de conduire dans un pays "
-                        },
-                        {
                           "type": "element",
-                          "name": "LienIntra",
-                          "attributes": {
-                            "LienID": "R55492",
-                            "type": "Définition de glossaire"
-                          },
+                          "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "européen"
+                              "text": "En cas de vol de  votre permis de conduire dans un pays "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienIntra",
+                              "attributes": {
+                                "LienID": "R55492",
+                                "type": "Définition de glossaire"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "européen"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ", la démarche varie si vous vivez dans ce pays, si vous faites du tourisme ou si vous faites des études."
                             }
                           ]
-                        },
-                        {
-                          "type": "text",
-                          "text": ", la démarche varie si vous vivez dans ce pays, si vous faites du tourisme ou si vous faites des études."
                         }
                       ]
-                    },
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
                       "name": "Chapitre",
@@ -1767,6 +1807,35 @@
                                   "text": "Vous vivez dans ce pays"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous vivez dans ce pays"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10638"
+                              }
                             }
                           ]
                         },
@@ -1845,6 +1914,35 @@
                                   "text": "Vous faites du tourisme dans ce pays"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous faites du tourisme dans ce pays"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10639"
+                              }
                             }
                           ]
                         },
@@ -1939,6 +2037,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R2750",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -2451,6 +2550,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R33823",
+                            "sve": "non",
                             "type": "Centre de contact"
                           },
                           "children": [
@@ -2653,6 +2753,35 @@
                         },
                         {
                           "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous effectuez des études, une mission, une formation... dans ce pays"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10640"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
@@ -2711,18 +2840,43 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10637"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Les démarches dépendent du pays dans lequel vous vous êtes fait voler votre permis et de la nature de votre séjour."
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Les démarches dépendent du pays dans lequel vous vous êtes fait voler votre permis et de la nature de votre séjour."
+                            }
+                          ]
                         }
                       ]
-                    },
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
                       "name": "Chapitre",
@@ -2745,6 +2899,35 @@
                         },
                         {
                           "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous vivez dans ce pays"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10638"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "BlocCas",
                           "attributes": {
                             "affichage": "radio"
@@ -2759,14 +2942,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Vous y vivez depuis 18 mois maximum (1 an et demi)"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous y vivez depuis 18 mois maximum (1 an et demi)"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10644"
+                                      }
                                     }
                                   ]
                                 },
@@ -3225,6 +3415,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R2750",
+                                    "sve": "non",
                                     "type": "Local personnalisable"
                                   },
                                   "children": [
@@ -3262,6 +3453,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R48771",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -3366,14 +3558,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Vous y vivez depuis plus de 18 mois"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous y vivez depuis plus de 18 mois"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10645"
+                                      }
                                     }
                                   ]
                                 },
@@ -3443,6 +3642,35 @@
                         },
                         {
                           "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous faites du tourisme dans ce pays"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10639"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
@@ -3484,6 +3712,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R2750",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -3535,6 +3764,35 @@
                                   "text": "Vous faites des études, une mission, une formation... dans ce pays"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous effectuez des études, une mission, une formation... dans ce pays"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10640"
+                              }
                             }
                           ]
                         },
@@ -4016,6 +4274,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R2750",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -4053,6 +4312,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R48771",
+                            "sve": "non",
                             "type": "National"
                           },
                           "children": [
@@ -4642,6 +4902,7 @@
               "attributes": {
                 "ID": "R34002",
                 "URL": "https://www.formulaires.service-public.fr/gf/getNotice.do?cerfaNotice=51725%2302&cerfaFormulaire=14948",
+                "type": "Notice",
                 "numerocerfa": "51725*02",
                 "format": "application/pdf",
                 "poids": "123.2 KB"

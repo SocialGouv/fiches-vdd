@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F10404",
-        "type": "Fiche Question-réponse",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche Question-réponse conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F10404"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F10404",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -666,6 +667,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35173",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Un huissier recouvre un impayé (pension alimentaire, ...) : qui doit le payer ?"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "ListeSituations",
           "attributes": {
             "affichage": "onglet"
@@ -687,67 +714,93 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T12182"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Un créancier peut charger un huissier de récupérer à sa place les sommes que lui doit un débiteur."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Pour cela, le créancier donne un "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Expression",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "mandat"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " ou un "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Expression",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "pouvoir"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " à l'huissier."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "L'huissier facture un  droit de recouvrement en contrepartie de son intervention."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "FragmentConditionne",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Condition",
                           "children": [
-                            {
-                              "type": "text",
-                              "text": "Un créancier peut charger un huissier de récupérer à sa place les sommes que lui doit un débiteur."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Pour cela, le créancier donne un "
-                            },
                             {
                               "type": "element",
-                              "name": "Expression",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "mandat"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " ou un "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Expression",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "pouvoir"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " à l'huissier."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "L'huissier facture un  droit de recouvrement en contrepartie de son intervention."
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10010"
+                              }
                             }
                           ]
                         },
@@ -780,6 +833,19 @@
                                   "text": "Pension alimentaire impayée"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12089"
+                              }
                             }
                           ]
                         },
@@ -879,14 +945,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si le montant récupéré est inférieur ou égal à 44 €"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Si le montant récupéré est inférieur ou égal à 44 €"
                                     }
                                   ]
                                 },
@@ -939,14 +999,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si le montant récupéré est supérieur à 44 €"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Si le montant récupéré est supérieur à 44 €"
                                     }
                                   ]
                                 },
@@ -1614,6 +1668,19 @@
                         },
                         {
                           "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12239"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
@@ -1761,14 +1828,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si le montant récupéré est inférieur ou égal à 44 €"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Si le montant récupéré est inférieur ou égal à 44 €"
                                     }
                                   ]
                                 },
@@ -1821,14 +1882,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si le montant récupéré est supérieur à 44 €"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Si le montant récupéré est supérieur à 44 €"
                                     }
                                   ]
                                 },
@@ -2494,104 +2549,130 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T12195"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Un créancier peut charger un "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F2158",
+                            "type": "Fiche d'information",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "huissier"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " de récupérer à sa place les sommes que lui doit un débiteur."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Pour cela, le créancier donne un "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Expression",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "mandat"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " ou un "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Expression",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "pouvoir"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " à l'huissier."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "L'huissier facture un  "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R50743",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "droit de recouvrement"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " en contrepartie de son intervention."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "FragmentConditionne",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Condition",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Un créancier peut charger un "
-                            },
-                            {
                               "type": "element",
-                              "name": "LienInterne",
+                              "name": "estVrai",
                               "attributes": {
-                                "LienPublication": "F2158",
-                                "type": "Fiche d'information",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "huissier"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " de récupérer à sa place les sommes que lui doit un débiteur."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Pour cela, le créancier donne un "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Expression",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "mandat"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " ou un "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Expression",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "pouvoir"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " à l'huissier."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "L'huissier facture un  "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R50743",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "droit de recouvrement"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " en contrepartie de son intervention."
+                                "var": "T10010"
+                              }
                             }
                           ]
                         },
@@ -2618,61 +2699,45 @@
                               "text": ", c'est-à-dire sans décision  préalable du juge (par exemple, en cas procédure simplifiée de recouvrement des petites créances) :"
                             }
                           ]
-                        },
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
                         {
                           "type": "element",
-                          "name": "Liste",
-                          "attributes": {
-                            "type": "puce"
-                          },
+                          "name": "Item",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Paragraphe",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Le "
+                                },
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R50743",
+                                    "type": "Définition de glossaire"
+                                  },
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Le "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R50743",
-                                        "type": "Définition de glossaire"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "droit de recouvrement"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " facturé par  l'huissier doit être payé par le  créancier"
+                                      "text": "droit de recouvrement"
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
+                                },
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Le montant dû à l'huissier dépend de la somme qu'il a récupéré auprès du débiteur"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": " facturé par  l'huissier doit être payé par le  créancier"
                                 }
                               ]
                             }
@@ -2680,7 +2745,58 @@
                         },
                         {
                           "type": "element",
-                          "name": "ASavoir",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le montant dû à l'huissier dépend de la somme qu'il a récupéré auprès du débiteur"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ASavoir",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "À savoir"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "si le débiteur paie sa dette par acomptes successifs, le montant dû à l'huissier est calculé sur la totalité des sommes obtenues et non sur chaque acompte."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "radio"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
@@ -2688,7 +2804,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "À savoir"
+                                  "text": "Montant récupéré inférieur ou égal à 188 €"
                                 }
                               ]
                             },
@@ -2698,7 +2814,35 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "si le débiteur paie sa dette par acomptes successifs, le montant dû à l'huissier est calculé sur la totalité des sommes obtenues et non sur chaque acompte."
+                                  "text": "Si le montant récupéré par l'huissier est inférieur ou égal à  "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "188,00 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ", le droit de recouvrement est de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "25,74 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " (TTC)"
                                 }
                               ]
                             }
@@ -2706,26 +2850,122 @@
                         },
                         {
                           "type": "element",
-                          "name": "BlocCas",
-                          "attributes": {
-                            "affichage": "radio"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Montant récupéré supérieur à 188 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Lorsque le montant récupéré par l'huissier est supérieur à "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "188,00 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ",  le "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "droit de recouvrement"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " est calculé, par tranche, de la manière suivante :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Tableau",
                               "children": [
                                 {
                                   "type": "element",
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Taux dû à l'huissier selon le montant récupéré"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Colonne",
+                                  "attributes": {
+                                    "largeur": "91",
+                                    "type": "normal"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Colonne",
+                                  "attributes": {
+                                    "largeur": "9",
+                                    "type": "normal"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "header"
+                                  },
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Cellule",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Montant récupéré inférieur ou égal à 188 €"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Tranche"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Taux"
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -2733,39 +2973,328 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Si le montant récupéré par l'huissier est inférieur ou égal à  "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "Valeur",
+                                      "name": "Cellule",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "188,00 €"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "De 0 et jusqu'à  "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "125 €"
+                                                }
+                                              ]
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "text",
-                                      "text": ", le droit de recouvrement est de "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "Valeur",
+                                      "name": "Cellule",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "25,74 €"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "11,70 %"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Au-delà de  "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "125 €"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " et jusqu'à "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "610 €"
+                                                }
+                                              ]
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "text",
-                                      "text": " (TTC)"
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "10,73 %"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Au-delà de "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "610 €"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " et jusqu'à "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "1 525 €"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "10,24 %"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Au-delà de "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "1 525 €"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " et jusqu'à "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "52 400 €"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "3,90 %"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Plus de "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "52 400 €"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "3 %"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -2773,21 +3302,240 @@
                             },
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L'huissier ne peut pas facturer de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "droit de recouvrement"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " supérieur à "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "5 540 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Par exemple, pour   "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "4 000 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "  récupérés, le "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "droit de recouvrement"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " est de :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "1"
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Exposant",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "re"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " tranche : 125 x 11,70 % = 14,63"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "2"
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Exposant",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "e"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " tranche : (610 - 125) x 10,73 % = 52,04"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "3"
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Exposant",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "e"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " tranche : (1 525 - 610) x 10,24 % = 93,70"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "4"
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Exposant",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "e"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " tranche : (4 000 - 1 525) x 3,90 %  = 96,53"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Ce qui donne un total de : 14,63 + 52,04 + 93,70 + 96,53 = "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "256,90 €"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ANoter",
                               "children": [
                                 {
                                   "type": "element",
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Montant récupéré supérieur à 188 €"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "À noter"
                                     }
                                   ]
                                 },
@@ -2797,7 +3545,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Lorsque le montant récupéré par l'huissier est supérieur à "
+                                      "text": "il faut ajouter un taux de TVA de "
                                     },
                                     {
                                       "type": "element",
@@ -2805,692 +3553,13 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "188,00 €"
+                                          "text": "20 %"
                                         }
                                       ]
                                     },
                                     {
                                       "type": "text",
-                                      "text": ",  le "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Expression",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "droit de recouvrement"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " est calculé, par tranche, de la manière suivante :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Tableau",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Taux dû à l'huissier selon le montant récupéré"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Colonne",
-                                      "attributes": {
-                                        "largeur": "91",
-                                        "type": "normal"
-                                      }
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Colonne",
-                                      "attributes": {
-                                        "largeur": "9",
-                                        "type": "normal"
-                                      }
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Rangée",
-                                      "attributes": {
-                                        "type": "header"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Cellule",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Tranche"
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Cellule",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Taux"
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Rangée",
-                                      "attributes": {
-                                        "type": "normal"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Cellule",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "De 0 et jusqu'à  "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "Valeur",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "125 €"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Cellule",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Valeur",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "11,70 %"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Rangée",
-                                      "attributes": {
-                                        "type": "normal"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Cellule",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Au-delà de  "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "Valeur",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "125 €"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": " et jusqu'à "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "Valeur",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "610 €"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Cellule",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Valeur",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "10,73 %"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Rangée",
-                                      "attributes": {
-                                        "type": "normal"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Cellule",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Au-delà de "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "Valeur",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "610 €"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": " et jusqu'à "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "Valeur",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "1 525 €"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Cellule",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Valeur",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "10,24 %"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Rangée",
-                                      "attributes": {
-                                        "type": "normal"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Cellule",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Au-delà de "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "Valeur",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "1 525 €"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": " et jusqu'à "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "Valeur",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "52 400 €"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Cellule",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Valeur",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "3,90 %"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Rangée",
-                                      "attributes": {
-                                        "type": "normal"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Cellule",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Plus de "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "Valeur",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "52 400 €"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Cellule",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Valeur",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "3 %"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "L'huissier ne peut pas facturer de "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Expression",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "droit de recouvrement"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " supérieur à "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Valeur",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "5 540 €"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Par exemple, pour   "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Valeur",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "4 000 €"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "  récupérés, le "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Expression",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "droit de recouvrement"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " est de :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1"
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Exposant",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "re"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": " tranche : 125 x 11,70 % = 14,63"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2"
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Exposant",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "e"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": " tranche : (610 - 125) x 10,73 % = 52,04"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "3"
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Exposant",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "e"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": " tranche : (1 525 - 610) x 10,24 % = 93,70"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "4"
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Exposant",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "e"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": " tranche : (4 000 - 1 525) x 3,90 %  = 96,53"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Ce qui donne un total de : 14,63 + 52,04 + 93,70 + 96,53 = "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Valeur",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "256,90 €"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ANoter",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "À noter"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "il faut ajouter un taux de TVA de "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Valeur",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "20 %"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " pour connaître le montant réellement dû à l'huissier."
-                                        }
-                                      ]
+                                      "text": " pour connaître le montant réellement dû à l'huissier."
                                     }
                                   ]
                                 }
@@ -3637,6 +3706,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R11621",
+            "sve": "non",
             "type": "Local personnalisé sur SP"
           },
           "children": [

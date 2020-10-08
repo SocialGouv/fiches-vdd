@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F31404",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F31404"
       },
       "children": [
         {
@@ -250,7 +251,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F31404",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -546,6 +547,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35108",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Piscine"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "ListeSituations",
           "attributes": {
             "affichage": "onglet"
@@ -591,40 +618,92 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Condition",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "En fonction des dimensions du bassin de votre piscine, une autorisation peut être nécessaire."
+                              "type": "element",
+                              "name": "ou",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10933"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12070"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12071"
+                                  }
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "L'ajout d'une piscine "
-                            },
-                            {
                               "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F2799",
-                                "type": "Fiche Question-réponse",
-                                "audience": "Particuliers"
-                              },
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": " peut entraîner  une hausse des impôts locaux"
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10010"
+                                  }
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": "."
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "En fonction des dimensions du bassin de votre piscine, une autorisation peut être nécessaire."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L'ajout d'une piscine "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F2799",
+                                    "type": "Fiche Question-réponse",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": " peut entraîner  une hausse des impôts locaux"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
                             }
                           ]
                         },
@@ -645,6 +724,19 @@
                                       "text": "Bassin jusqu'à 10 m²"
                                     }
                                   ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10933"
+                                  }
                                 }
                               ]
                             },
@@ -744,6 +836,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R1",
+                                "sve": "non",
                                 "type": "Local personnalisé sur SP"
                               },
                               "children": [
@@ -858,6 +951,19 @@
                             },
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12070"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
@@ -916,6 +1022,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R1",
+                                "sve": "non",
                                 "type": "Local personnalisé sur SP"
                               },
                               "children": [
@@ -1030,6 +1137,19 @@
                             },
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12071"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
@@ -1088,6 +1208,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R1",
+                                "sve": "non",
                                 "type": "Local personnalisé sur SP"
                               },
                               "children": [
@@ -1204,40 +1325,99 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Condition",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "En fonction des dimensions de votre piscine, une autorisation peut être nécessaire."
+                              "type": "element",
+                              "name": "ou",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12072"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12073"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12075"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12074"
+                                  }
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "L'ajout d'une piscine "
-                            },
-                            {
                               "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F2799",
-                                "type": "Fiche Question-réponse",
-                                "audience": "Particuliers"
-                              },
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": " peut entraîner  une hausse des impôts locaux"
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10010"
+                                  }
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": "."
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "En fonction des dimensions de votre piscine, une autorisation peut être nécessaire."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L'ajout d'une piscine "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F2799",
+                                    "type": "Fiche Question-réponse",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": " peut entraîner  une hausse des impôts locaux"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
                             }
                           ]
                         },
@@ -1258,6 +1438,19 @@
                                       "text": "Bassin jusqu'à 10 m²"
                                     }
                                   ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12072"
+                                  }
                                 }
                               ]
                             },
@@ -1357,6 +1550,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R1",
+                                "sve": "non",
                                 "type": "Local personnalisé sur SP"
                               },
                               "children": [
@@ -1471,11 +1665,30 @@
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "FragmentConditionne",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "En fonction de la hauteur de l'abri, une autorisation peut être nécessaire. "
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10010"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "En fonction de la hauteur de l'abri, une autorisation peut être nécessaire. "
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -1495,14 +1708,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Abri jusqu'à 1,80 m de haut"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Abri jusqu'à 1,80 m de haut"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T12073"
+                                          }
                                         }
                                       ]
                                     },
@@ -1566,6 +1786,7 @@
                                       "name": "OuSAdresser",
                                       "attributes": {
                                         "ID": "R1",
+                                        "sve": "non",
                                         "type": "Local personnalisé sur SP"
                                       },
                                       "children": [
@@ -1667,14 +1888,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Abri de plus de 1,80 m de haut"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Abri de plus de 1,80 m de haut"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T12075"
+                                          }
                                         }
                                       ]
                                     },
@@ -1738,6 +1966,7 @@
                                       "name": "OuSAdresser",
                                       "attributes": {
                                         "ID": "R1",
+                                        "sve": "non",
                                         "type": "Local personnalisé sur SP"
                                       },
                                       "children": [
@@ -1856,6 +2085,19 @@
                             },
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12074"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
@@ -1914,6 +2156,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R1",
+                                "sve": "non",
                                 "type": "Local personnalisé sur SP"
                               },
                               "children": [
@@ -2030,40 +2273,85 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Condition",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "En fonction de la hauteur de l'abri que vous souhaitez construire, une autorisation peut être nécessaire."
+                              "type": "element",
+                              "name": "ou",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12068"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12069"
+                                  }
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "L'ajout d'un abri "
-                            },
-                            {
                               "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F2799",
-                                "type": "Fiche Question-réponse",
-                                "audience": "Particuliers"
-                              },
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": " peut entraîner  une hausse des impôts locaux"
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10010"
+                                  }
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": "."
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "En fonction de la hauteur de l'abri que vous souhaitez construire, une autorisation peut être nécessaire."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L'ajout d'un abri "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F2799",
+                                    "type": "Fiche Question-réponse",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": " peut entraîner  une hausse des impôts locaux"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
                             }
                           ]
                         },
@@ -2084,6 +2372,19 @@
                                       "text": "Abri jusqu'à 1,80 m de haut"
                                     }
                                   ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12068"
+                                  }
                                 }
                               ]
                             },
@@ -2183,6 +2484,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R1",
+                                "sve": "non",
                                 "type": "Local personnalisé sur SP"
                               },
                               "children": [
@@ -2297,6 +2599,19 @@
                             },
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12069"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
@@ -2355,6 +2670,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R1",
+                                "sve": "non",
                                 "type": "Local personnalisé sur SP"
                               },
                               "children": [
@@ -2469,12 +2785,51 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "ou",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12064"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12098"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "FragmentConditionne",
                       "children": [
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10010"
+                              }
+                            }
+                          ]
+                        },
                         {
                           "type": "element",
                           "name": "Paragraphe",
@@ -2504,6 +2859,19 @@
                                   "text": "Installée 3 mois maximum par an (15 jours en zone protégée)"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12064"
+                              }
                             }
                           ]
                         },
@@ -2587,6 +2955,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R1",
+                            "sve": "non",
                             "type": "Local personnalisé sur SP"
                           },
                           "children": [
@@ -2643,6 +3012,19 @@
                         },
                         {
                           "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12098"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "SousChapitre",
                           "children": [
                             {
@@ -2658,6 +3040,19 @@
                                       "text": "Bassin jusqu'à 10 m²"
                                     }
                                   ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12065"
+                                  }
                                 }
                               ]
                             },
@@ -2741,6 +3136,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R1",
+                                "sve": "non",
                                 "type": "Local personnalisé sur SP"
                               },
                               "children": [
@@ -2797,6 +3193,19 @@
                             },
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12066"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
@@ -2839,6 +3248,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R1",
+                                "sve": "non",
                                 "type": "Local personnalisé sur SP"
                               },
                               "children": [
@@ -2895,6 +3305,19 @@
                             },
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12067"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
@@ -2937,6 +3360,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R1",
+                                "sve": "non",
                                 "type": "Local personnalisé sur SP"
                               },
                               "children": [
@@ -3032,6 +3456,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R17594",
+            "sve": "non",
             "type": "Local personnalisable"
           },
           "children": [
@@ -3239,6 +3664,7 @@
               "attributes": {
                 "ID": "R48172",
                 "URL": "https://www.formulaires.service-public.fr/gf/getNotice.do?cerfaNotice=51434&cerfaFormulaire=13703",
+                "type": "Notice",
                 "numerocerfa": "51434#08",
                 "format": "application/pdf",
                 "poids": "807.9 KB"
@@ -3256,6 +3682,7 @@
               "attributes": {
                 "ID": "R48163",
                 "URL": "https://www.formulaires.service-public.fr/gf/getAnnexe.do?cerfaAnnexe=13409-1&cerfaFormulaire=13703",
+                "type": "Notice",
                 "format": "application/pdf",
                 "poids": "115.1 KB"
               },
@@ -3353,6 +3780,7 @@
               "attributes": {
                 "ID": "R48172",
                 "URL": "https://www.formulaires.service-public.fr/gf/getNotice.do?cerfaNotice=51434&cerfaFormulaire=13703",
+                "type": "Notice",
                 "numerocerfa": "51434#08",
                 "format": "application/pdf",
                 "poids": "807.9 KB"
@@ -3370,6 +3798,7 @@
               "attributes": {
                 "ID": "R48163",
                 "URL": "https://www.formulaires.service-public.fr/gf/getAnnexe.do?cerfaAnnexe=13409-1&cerfaFormulaire=13703",
+                "type": "Notice",
                 "format": "application/pdf",
                 "poids": "115.1 KB"
               },

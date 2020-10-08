@@ -8,8 +8,10 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F2213",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "dateDerniereModificationImportante": "2020-01-14T00:00:00",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F2213"
       },
       "children": [
         {
@@ -240,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F2213",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -555,6 +557,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F34708",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Nationalité Française"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "ListeSituations",
           "attributes": {
             "affichage": "onglet"
@@ -611,7 +639,7 @@
                               "name": "LienInterne",
                               "attributes": {
                                 "LienPublication": "F34717",
-                                "type": "Fiche Question-réponse",
+                                "type": "Fiche Question-réponse conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
@@ -793,221 +821,240 @@
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "FragmentConditionne",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Condition",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Aucune  durée minimale"
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10010"
+                                      }
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": " de résidence en France est exigée si vous êtes dans l'une des situations suivantes :"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Liste",
-                              "attributes": {
-                                "type": "puce"
-                              },
-                              "children": [
-                                {
                                   "type": "element",
-                                  "name": "Item",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "MiseEnEvidence",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Vous avez le statut de réfugié"
+                                          "text": "Aucune  durée minimale"
                                         }
                                       ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " de résidence en France est exigée si vous êtes dans l'une des situations suivantes :"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Item",
+                                  "name": "Liste",
+                                  "attributes": {
+                                    "type": "puce"
+                                  },
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Item",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Vous venez d'un "
-                                        },
-                                        {
                                           "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R52259",
-                                            "type": "Définition de glossaire"
-                                          },
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "pays francophone"
+                                              "text": "Vous avez le statut de réfugié"
                                             }
                                           ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " et vous parlez le français car c'est votre langue maternelle"
                                         }
                                       ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
+                                    },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Item",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Vous venez d'un pays francophone et avez été scolarisé 5 ans ou plus dans un établissement enseignant en langue française"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous venez d'un "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R52259",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "pays francophone"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " et vous parlez le français car c'est votre langue maternelle"
+                                            }
+                                          ]
                                         }
                                       ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
+                                    },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Item",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Vous avez fait votre service militaire dans l'armée française"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous venez d'un pays francophone et avez été scolarisé 5 ans ou plus dans un établissement enseignant en langue française"
+                                            }
+                                          ]
                                         }
                                       ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
+                                    },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Item",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Vous vous êtes engagé dans l'armée française ou une armée alliée en temps de guerre"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous avez fait votre service militaire dans l'armée française"
+                                            }
+                                          ]
                                         }
                                       ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
+                                    },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Item",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Vous avez rendu des services exceptionnels à la France"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous vous êtes engagé dans l'armée française ou une armée alliée en temps de guerre"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous avez rendu des services exceptionnels à la France"
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Une durée minimale de "
                                 },
                                 {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "2 ans de résidence en France"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " est exigée si vous êtes dans l'une des situations suivantes :"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Liste",
-                              "attributes": {
-                                "type": "puce"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
+                                      "text": "Une durée minimale de "
+                                    },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "MiseEnEvidence",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Vous avez obtenu un diplôme d'un établissement d'enseignement supérieur français après 2 ans d'études"
+                                          "text": "2 ans de résidence en France"
                                         }
                                       ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " est exigée si vous êtes dans l'une des situations suivantes :"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Item",
+                                  "name": "Liste",
+                                  "attributes": {
+                                    "type": "puce"
+                                  },
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Item",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Vous pouvez rendre (ou avez rendu) des services importants à la France compte tenu de vos capacités et talents"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous avez obtenu un diplôme d'un établissement d'enseignement supérieur français après 2 ans d'études"
+                                            }
+                                          ]
                                         }
                                       ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
+                                    },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Item",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Vous avez accompli un parcours exceptionnel d'intégration (activités ou actions accomplies dans les domaines civique, scientifique, économique, culturel ou sportif...)"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous pouvez rendre (ou avez rendu) des services importants à la France compte tenu de vos capacités et talents"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous avez accompli un parcours exceptionnel d'intégration (activités ou actions accomplies dans les domaines civique, scientifique, économique, culturel ou sportif...)"
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -1519,6 +1566,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R54117",
+                            "sve": "non",
                             "type": "National"
                           },
                           "children": [
@@ -1900,6 +1948,124 @@
                               "children": [
                                 {
                                   "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "ou",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10282"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "estIndefini",
+                                              "attributes": {
+                                                "var": "T10282"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10283"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "estIndefini",
+                                              "attributes": {
+                                                "var": "T10283"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10284"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "estIndefini",
+                                              "attributes": {
+                                                "var": "T10284"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "ou",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "estVrai",
+                                                  "attributes": {
+                                                    "var": "T10284"
+                                                  }
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "estIndefini",
+                                                  "attributes": {
+                                                    "var": "T10284"
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "ou",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "estVrai",
+                                                  "attributes": {
+                                                    "var": "T10283"
+                                                  }
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "estIndefini",
+                                                  "attributes": {
+                                                    "var": "T10283"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
                                   "name": "Paragraphe",
                                   "children": [
                                     {
@@ -1934,7 +2100,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F34777",
-                                        "type": "Fiche Question-réponse",
+                                        "type": "Fiche Question-réponse conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -2225,6 +2391,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R2884",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -2275,6 +2442,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R89",
+                            "sve": "non",
                             "type": "Centre de contact"
                           },
                           "children": [
@@ -2483,6 +2651,7 @@
                               "attributes": {
                                 "ID": "R16997",
                                 "URL": "https://www.formulaires.service-public.fr/gf/getNotice.do?cerfaNotice=51148%2302&cerfaFormulaire=12753*02",
+                                "type": "Notice",
                                 "numerocerfa": "51148#02",
                                 "format": "application/pdf",
                                 "poids": "805.9 KB"
@@ -2592,14 +2761,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Cas général"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Cas général"
                                     }
                                   ]
                                 },
@@ -2667,14 +2830,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "En Guyane"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "En Guyane"
                                     }
                                   ]
                                 },
@@ -2958,14 +3115,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Décision favorable"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Décision favorable"
                                     }
                                   ]
                                 },
@@ -3061,6 +3212,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R43059",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -3179,6 +3331,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R192",
+                                    "sve": "non",
                                     "type": "Centre de contact"
                                   },
                                   "children": [
@@ -3523,14 +3676,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Décision défavorable en irrecevabilité"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Décision défavorable en irrecevabilité"
                                     }
                                   ]
                                 },
@@ -3652,6 +3799,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R43059",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -3786,14 +3934,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Décision défavorable en opportunité"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Décision défavorable en opportunité"
                                     }
                                   ]
                                 },
@@ -3869,6 +4011,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R43059",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -4053,7 +4196,7 @@
                               "name": "LienInterne",
                               "attributes": {
                                 "LienPublication": "F34717",
-                                "type": "Fiche Question-réponse",
+                                "type": "Fiche Question-réponse conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
@@ -4710,6 +4853,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R2750",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -5072,6 +5216,124 @@
                               "children": [
                                 {
                                   "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "ou",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10282"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "estIndefini",
+                                              "attributes": {
+                                                "var": "T10282"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10283"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "estIndefini",
+                                              "attributes": {
+                                                "var": "T10283"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10284"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "estIndefini",
+                                              "attributes": {
+                                                "var": "T10284"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "ou",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "ou",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "estVrai",
+                                                  "attributes": {
+                                                    "var": "T10284"
+                                                  }
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "estIndefini",
+                                                  "attributes": {
+                                                    "var": "T10284"
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "ou",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "estVrai",
+                                                  "attributes": {
+                                                    "var": "T10283"
+                                                  }
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "estIndefini",
+                                                  "attributes": {
+                                                    "var": "T10283"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
                                   "name": "Paragraphe",
                                   "children": [
                                     {
@@ -5106,7 +5368,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F34777",
-                                        "type": "Fiche Question-réponse",
+                                        "type": "Fiche Question-réponse conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -5349,6 +5611,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R2884",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -5399,6 +5662,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R89",
+                            "sve": "non",
                             "type": "Centre de contact"
                           },
                           "children": [
@@ -5607,6 +5871,7 @@
                               "attributes": {
                                 "ID": "R16997",
                                 "URL": "https://www.formulaires.service-public.fr/gf/getNotice.do?cerfaNotice=51148%2302&cerfaFormulaire=12753*02",
+                                "type": "Notice",
                                 "numerocerfa": "51148#02",
                                 "format": "application/pdf",
                                 "poids": "805.9 KB"
@@ -5791,6 +6056,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R2750",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -6046,14 +6312,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Décision favorable"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Décision favorable"
                                     }
                                   ]
                                 },
@@ -6149,6 +6409,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R43059",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -6267,6 +6528,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R192",
+                                    "sve": "non",
                                     "type": "Centre de contact"
                                   },
                                   "children": [
@@ -6611,14 +6873,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Décision défavorable en irrecevabilité"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Décision défavorable en irrecevabilité"
                                     }
                                   ]
                                 },
@@ -6740,6 +6996,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R43059",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -6874,14 +7131,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Décision défavorable en opportunité"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Décision défavorable en opportunité"
                                     }
                                   ]
                                 },
@@ -6957,6 +7208,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R43059",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -7667,6 +7919,7 @@
               "attributes": {
                 "ID": "R16997",
                 "URL": "https://www.formulaires.service-public.fr/gf/getNotice.do?cerfaNotice=51148%2302&cerfaFormulaire=12753*02",
+                "type": "Notice",
                 "numerocerfa": "51148#02",
                 "format": "application/pdf",
                 "poids": "805.9 KB"

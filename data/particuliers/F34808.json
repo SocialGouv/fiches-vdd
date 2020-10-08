@@ -8,8 +8,10 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F34808",
-        "type": "Fiche Question-réponse",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche Question-réponse conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "dateDerniereModificationImportante": "2019-01-15T00:00:00",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F34808"
       },
       "children": [
         {
@@ -240,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F34808",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -455,36 +457,61 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11206"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Les États concernés sont le Royaume-Uni et ceux de   "
-                        },
-                        {
                           "type": "element",
-                          "name": "LienIntra",
-                          "attributes": {
-                            "LienID": "R42218",
-                            "type": "Définition de glossaire"
-                          },
+                          "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "l'Espace économique européen (EEE)"
+                              "text": "Les États concernés sont le Royaume-Uni et ceux de   "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienIntra",
+                              "attributes": {
+                                "LienID": "R42218",
+                                "type": "Définition de glossaire"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "l'Espace économique européen (EEE)"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
                             }
                           ]
-                        },
-                        {
-                          "type": "text",
-                          "text": "."
                         }
                       ]
-                    },
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
                       "name": "Chapitre",
@@ -507,6 +534,19 @@
                         },
                         {
                           "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11197"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
@@ -518,7 +558,7 @@
                               "name": "LienInterne",
                               "attributes": {
                                 "LienPublication": "F420",
-                                "type": "Fiche d'information",
+                                "type": "Fiche d'information conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
@@ -568,6 +608,19 @@
                         },
                         {
                           "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11210"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "BlocCas",
                           "attributes": {
                             "affichage": "radio"
@@ -582,14 +635,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous habitez en métropole ou dans un Dom"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Vous habitez en métropole ou dans un Dom"
                                     }
                                   ]
                                 },
@@ -633,7 +680,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F32134",
-                                        "type": "Fiche Question-réponse",
+                                        "type": "Fiche Question-réponse conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -660,14 +707,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous habitez dans une Com ou en Nouvelle Calédonie"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Vous habitez dans une Com ou en Nouvelle Calédonie"
                                     }
                                   ]
                                 },
@@ -731,6 +772,19 @@
                                   "text": "Permis obtenu dans un État européen ayant ratifié la Convention de Vienne"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11204"
+                              }
                             }
                           ]
                         },
@@ -840,6 +894,19 @@
                         },
                         {
                           "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11325"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
@@ -885,6 +952,19 @@
                                   "text": "Permis obtenu dans un autre pays"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11209"
+                              }
                             }
                           ]
                         },
@@ -945,7 +1025,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F1460",
-                                        "type": "Fiche d'information",
+                                        "type": "Fiche d'information conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -1014,6 +1094,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11207"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
@@ -1033,6 +1126,19 @@
                                   "text": "Permis obtenu en France (métropole + Dom)"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11197"
+                              }
                             }
                           ]
                         },
@@ -1076,7 +1182,7 @@
                               "name": "LienInterne",
                               "attributes": {
                                 "LienPublication": "F11534",
-                                "type": "Fiche d'information",
+                                "type": "Fiche d'information conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
@@ -1116,6 +1222,19 @@
                         },
                         {
                           "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11210"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "BlocCas",
                           "attributes": {
                             "affichage": "radio"
@@ -1130,14 +1249,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous habitez en métropole ou dans un Dom"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Vous habitez en métropole ou dans un Dom"
                                     }
                                   ]
                                 },
@@ -1181,7 +1294,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F32134",
-                                        "type": "Fiche Question-réponse",
+                                        "type": "Fiche Question-réponse conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -1208,14 +1321,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous habitez dans une Com ou en Nouvelle Calédonie"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Vous habitez dans une Com ou en Nouvelle Calédonie"
                                     }
                                   ]
                                 },
@@ -1279,6 +1386,19 @@
                                   "text": "Permis obtenu dans un État européen ayant ratifié la Convention de Vienne"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11204"
+                              }
                             }
                           ]
                         },
@@ -1350,7 +1470,7 @@
                               "name": "LienInterne",
                               "attributes": {
                                 "LienPublication": "F11534",
-                                "type": "Fiche d'information",
+                                "type": "Fiche d'information conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
@@ -1385,6 +1505,19 @@
                                   "text": "Permis obtenu dans un autre État d'Europe"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11325"
+                              }
                             }
                           ]
                         },
@@ -1455,7 +1588,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F1460",
-                                        "type": "Fiche d'information",
+                                        "type": "Fiche d'information conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -1526,6 +1659,19 @@
                         },
                         {
                           "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11209"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
@@ -1581,7 +1727,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F1460",
-                                        "type": "Fiche d'information",
+                                        "type": "Fiche d'information conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [

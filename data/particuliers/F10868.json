@@ -9,7 +9,8 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F10868",
         "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F10868"
       },
       "children": [
         {
@@ -639,6 +640,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R43148",
+                            "sve": "non",
                             "type": "National"
                           },
                           "children": [
@@ -780,6 +782,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R20797",
+                            "sve": "non",
                             "type": "Centre de contact"
                           },
                           "children": [
@@ -1082,7 +1085,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F1435",
-                                        "type": "Fiche d'information",
+                                        "type": "Fiche d'information conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -1128,22 +1131,55 @@
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "radio"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "BlocCas",
-                          "attributes": {
-                            "affichage": "radio"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Professionnel exerçant son activité dans le pays où réside le consommateur ou dirigeant son activité vers ce pays (par exemple : site en langue française, nom de domaine en .com ou .eu, coordonnées téléphoniques avec préfixe international)"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La loi applicable est celle du pays du consommateur."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le juge compétent peut être celui :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Titre",
+                                  "name": "Item",
                                   "children": [
                                     {
                                       "type": "element",
@@ -1151,7 +1187,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Professionnel exerçant son activité dans le pays où réside le consommateur ou dirigeant son activité vers ce pays (par exemple : site en langue française, nom de domaine en .com ou .eu, coordonnées téléphoniques avec préfixe international)"
+                                          "text": "du lieu du siège social de l'entreprise,"
                                         }
                                       ]
                                     }
@@ -1159,92 +1195,128 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "La loi applicable est celle du pays du consommateur."
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "ou du lieu où vous demeuriez au moment de la conclusion du contrat,"
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Le juge compétent peut être celui :"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "ou du lieu de livraison ou d'exécution de la prestation de service,"
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
+                                  "name": "Item",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Item",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "du lieu du siège social de l'entreprise,"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "ou bien du lieu de la survenance du fait dommageable."
                                         }
                                       ]
-                                    },
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Professionnel situé dans l'Union Européenne ou en Norvège ou Islande ou Liechtenstein"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous avez la possibilité de recourir :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
                                     {
                                       "type": "element",
-                                      "name": "Item",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "si le montant de votre litige n'excède pas "
+                                        },
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
+                                          "name": "Valeur",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "ou du lieu où vous demeuriez au moment de la conclusion du contrat,"
+                                              "text": "2000 €"
                                             }
                                           ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": ", à la plateforme européenne de résolution des litiges en ligne,"
                                         }
                                       ]
-                                    },
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
                                     {
                                       "type": "element",
-                                      "name": "Item",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "ou du lieu de livraison ou d'exécution de la prestation de service,"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "ou bien du lieu de la survenance du fait dommageable."
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "ou, dans tous les cas, aux services du Centre Européen des Consommateurs France."
                                         }
                                       ]
                                     }
@@ -1254,11 +1326,60 @@
                             },
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "ServiceEnLigne",
+                              "attributes": {
+                                "ID": "R48100",
+                                "URL": "https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.show&lng=FR",
+                                "type": "Téléservice"
+                              },
                               "children": [
                                 {
                                   "type": "element",
                                   "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Règlement en ligne des litiges - Consommateurs et commerçants de l'UE"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30669"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Commission européenne"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "OuSAdresser",
+                              "attributes": {
+                                "ID": "R15954",
+                                "sve": "non",
+                                "type": "Centre de contact"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Centre européen des consommateurs France"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Texte",
                                   "children": [
                                     {
                                       "type": "element",
@@ -1266,40 +1387,63 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Professionnel situé dans l'Union Européenne ou en Norvège ou Islande ou Liechtenstein"
+                                          "text": "Informations sur les achats transfrontaliers, les différentes réglementations européennes en matière de consommation, le règlement des litiges transfrontaliers"
                                         }
                                       ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous avez la possibilité de recourir :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
+                                    },
                                     {
                                       "type": "element",
-                                      "name": "Item",
+                                      "name": "Chapitre",
                                       "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Titre",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Par téléphone"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "MiseEnEvidence",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "0820 20 09 99"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
                                         {
                                           "type": "element",
                                           "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "si le montant de votre litige n'excède pas "
+                                              "text": "\n\t\t\tOuvert du mardi au jeudi de 9h à 12h et de 13h à 17h"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Numéro violet ou majoré : coût du service "
                                             },
                                             {
                                               "type": "element",
@@ -1307,13 +1451,13 @@
                                               "children": [
                                                 {
                                                   "type": "text",
-                                                  "text": "2000 €"
+                                                  "text": "0,12 €"
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "text",
-                                              "text": ", à la plateforme européenne de résolution des litiges en ligne,"
+                                              "text": " /min + prix d'un appel"
                                             }
                                           ]
                                         }
@@ -1321,155 +1465,91 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Item",
+                                      "name": "Chapitre",
                                       "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Titre",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Sur place"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
                                         {
                                           "type": "element",
                                           "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "ou, dans tous les cas, aux services du Centre Européen des Consommateurs France."
+                                              "text": "Centre Européen des Consommateurs France"
                                             }
                                           ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ServiceEnLigne",
-                                  "attributes": {
-                                    "ID": "R48100",
-                                    "URL": "https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.show&lng=FR",
-                                    "type": "Téléservice"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Règlement en ligne des litiges - Consommateurs et commerçants de l'UE"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30669"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Commission européenne"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "OuSAdresser",
-                                  "attributes": {
-                                    "ID": "R15954",
-                                    "type": "Centre de contact"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Centre européen des consommateurs France"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Texte",
-                                      "children": [
+                                        },
                                         {
                                           "type": "element",
                                           "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Informations sur les achats transfrontaliers, les différentes réglementations européennes en matière de consommation, le règlement des litiges transfrontaliers"
+                                              "text": "Bahnhofsplatz 3"
                                             }
                                           ]
                                         },
                                         {
                                           "type": "element",
-                                          "name": "Chapitre",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "77694 Kehl"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Allemagne"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Ouverture des bureaux au public du mardi au jeudi, de 9h à 12h et de 13h à 17h"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Chapitre",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Titre",
                                           "children": [
                                             {
                                               "type": "element",
-                                              "name": "Titre",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Par téléphone"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "MiseEnEvidence",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "0820 20 09 99"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
                                               "name": "Paragraphe",
                                               "children": [
                                                 {
                                                   "type": "text",
-                                                  "text": "\n\t\t\tOuvert du mardi au jeudi de 9h à 12h et de 13h à 17h"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Numéro violet ou majoré : coût du service "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "Valeur",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "0,12 €"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": " /min + prix d'un appel"
+                                                  "text": "En ligne"
                                                 }
                                               ]
                                             }
@@ -1477,116 +1557,22 @@
                                         },
                                         {
                                           "type": "element",
-                                          "name": "Chapitre",
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
-                                              "type": "element",
-                                              "name": "Titre",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Sur place"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
+                                              "type": "text",
+                                              "text": "\n\t\t\t\n      Accès au "
                                             },
                                             {
                                               "type": "element",
-                                              "name": "Paragraphe",
+                                              "name": "LienExterne",
+                                              "attributes": {
+                                                "URL": "http://www.europe-consommateurs.eu/fr/nous-connaitre/nous-contacter/coordonnees/"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
-                                                  "text": "Centre Européen des Consommateurs France"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Bahnhofsplatz 3"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "77694 Kehl"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Allemagne"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Ouverture des bureaux au public du mardi au jeudi, de 9h à 12h et de 13h à 17h"
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Chapitre",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Titre",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "En ligne"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "\n\t\t\t\n      Accès au "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "LienExterne",
-                                                  "attributes": {
-                                                    "URL": "http://www.europe-consommateurs.eu/fr/nous-connaitre/nous-contacter/coordonnees/"
-                                                  },
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "formulaire de contact"
-                                                    }
-                                                  ]
+                                                  "text": "formulaire de contact"
                                                 }
                                               ]
                                             }
@@ -1597,134 +1583,122 @@
                                   ]
                                 }
                               ]
-                            },
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Professionnel situé dans un autre pays"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous devez saisir en ligne le Réseau international de contrôle et de protection des consommateurs (RICPC), qui traite les réclamations contre des sociétés implantées dans les 28 pays membres du réseau (États-Unis inclus)."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ServiceEnLigne",
-                                  "attributes": {
-                                    "ID": "R18741",
-                                    "URL": "https://www.econsumer.gov/fr/GettingStarted/1?NextQID=1&SubID=1#crnt",
-                                    "type": "Téléservice"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Déposer une plainte concernant un achat effectué sur un site internet étranger"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30843"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Réseau international de contrôle et de protection des consommateurs (RICPC)"
-                                        }
-                                      ]
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Professionnel situé dans un autre pays"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez saisir en ligne le Réseau international de contrôle et de protection des consommateurs (RICPC), qui traite les réclamations contre des sociétés implantées dans les 28 pays membres du réseau (États-Unis inclus)."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ServiceEnLigne",
+                              "attributes": {
+                                "ID": "R18741",
+                                "URL": "https://www.econsumer.gov/fr/GettingStarted/1?NextQID=1&SubID=1#crnt",
+                                "type": "Téléservice"
+                              },
                               "children": [
                                 {
                                   "type": "element",
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Professionnel non identifiable"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
                                       "type": "text",
-                                      "text": "Si l'information précisant le pays dans lequel le professionnel exerce son activité n'est pas précisée ou si le professionnel n'est pas identifiable, vous avez la possibilité d'effectuer votre signalement sur une plateforme dédiée à cet effet."
+                                      "text": "Déposer une plainte concernant un achat effectué sur un site internet étranger"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "ServiceEnLigne",
+                                  "name": "Source",
                                   "attributes": {
-                                    "ID": "R17674",
-                                    "URL": "https://www.internet-signalement.gouv.fr/PortailWeb/planets/SignalerEtapeInformer!load.action",
-                                    "type": "Téléservice"
+                                    "ID": "R30843"
                                   },
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Signaler un contenu internet illégal (internet-signalement : Pharos)"
-                                        }
-                                      ]
-                                    },
+                                      "type": "text",
+                                      "text": "Réseau international de contrôle et de protection des consommateurs (RICPC)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Professionnel non identifiable"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si l'information précisant le pays dans lequel le professionnel exerce son activité n'est pas précisée ou si le professionnel n'est pas identifiable, vous avez la possibilité d'effectuer votre signalement sur une plateforme dédiée à cet effet."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ServiceEnLigne",
+                              "attributes": {
+                                "ID": "R17674",
+                                "URL": "https://www.internet-signalement.gouv.fr/PortailWeb/planets/SignalerEtapeInformer!load.action",
+                                "type": "Téléservice"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30603"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Ministère chargé de l'intérieur"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Signaler un contenu internet illégal (internet-signalement : Pharos)"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30603"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Ministère chargé de l'intérieur"
                                     }
                                   ]
                                 }

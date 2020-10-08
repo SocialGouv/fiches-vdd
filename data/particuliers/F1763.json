@@ -9,7 +9,8 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1763",
         "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1763"
       },
       "children": [
         {
@@ -734,6 +735,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R30",
+                            "sve": "non",
                             "type": "Local"
                           },
                           "children": [
@@ -889,6 +891,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R30",
+                            "sve": "non",
                             "type": "Local"
                           },
                           "children": [
@@ -988,43 +991,108 @@
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
                       "children": [
                         {
+                          "type": "text",
+                          "text": "Si le "
+                        },
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R15912",
+                            "type": "Définition de glossaire"
+                          },
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si le "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R15912",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "créancier"
-                                }
-                              ]
-                            },
+                              "text": "créancier"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " dispose d'un titre exécutoire, il peut s'adresser directement à un  huissier de justice."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "OuSAdresser",
+                      "attributes": {
+                        "ID": "R10916",
+                        "sve": "non",
+                        "type": "Local personnalisable"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
                             {
                               "type": "text",
-                              "text": " dispose d'un titre exécutoire, il peut s'adresser directement à un  huissier de justice."
+                              "text": "Huissier de justice"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "OuSAdresser",
+                          "name": "PivotLocal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "huissier_justice"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "RessourceWeb",
                           "attributes": {
-                            "ID": "R10916",
-                            "type": "Local personnalisable"
+                            "URL": "https://cnhj.huissier-justice.fr/Annuaire.aspx"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Deux cas de figure sont alors possibles : soit le "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R12468",
+                            "type": "Définition de glossaire"
                           },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "débiteur"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " est en possession du bien, soit le bien  est détenu par une autre personne (un tiers)."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "radio"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
@@ -1032,71 +1100,151 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Huissier de justice"
+                                  "text": "En cas de saisie auprès du débiteur"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "PivotLocal",
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "huissier_justice"
+                                  "text": "L'huissier adresse au débiteur un commandement de restituer ou de délivrer. Le document contient les éléments suivants :"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "RessourceWeb",
+                              "name": "Liste",
                               "attributes": {
-                                "URL": "https://cnhj.huissier-justice.fr/Annuaire.aspx"
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Deux cas de figure sont alors possibles : soit le "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R12468",
-                                "type": "Définition de glossaire"
+                                "type": "puce"
                               },
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "débiteur"
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Mention du titre exécutoire"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Obligation faite au débiteur de restituer ou livrer le bien sous 8 jours, sous peine de saisie-appréhension à ses frais"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Informations sur les voies de recours de débiteur (possibilité de saisir le juge  pour contester le commandement)."
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": " est en possession du bien, soit le bien  est détenu par une autre personne (un tiers)."
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le bien peut  aussi être appréhendé immédiatement  si   le débiteur est présent  et qu'il refuse de transporter à ses frais le bien dans le  lieu indiqué par le titre exécutoire. En effet, dans ce cas de figure, l'huissier n'a pas besoin de présenter de commandement préalable."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Un acte de la remise volontaire ou de l'appréhension du bien est remis au débiteur."
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "BlocCas",
-                          "attributes": {
-                            "affichage": "radio"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "En cas de saisie auprès d'un tiers"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si le bien est détenu par un tiers, l'huissier  doit lui "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R10915",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "signifier"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " une sommation de remettre ce bien. Elle est également adressée au débiteur par lettre recommandée avec accusé de réception (LRAR). Elle contient les éléments suivants :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Titre",
+                                  "name": "Item",
                                   "children": [
                                     {
                                       "type": "element",
@@ -1104,7 +1252,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "En cas de saisie auprès du débiteur"
+                                          "text": "Copie du titre exécutoire"
                                         }
                                       ]
                                     }
@@ -1112,66 +1260,15 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "L'huissier adresse au débiteur un commandement de restituer ou de délivrer. Le document contient les éléments suivants :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
+                                  "name": "Item",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Item",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Mention du titre exécutoire"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Obligation faite au débiteur de restituer ou livrer le bien sous 8 jours, sous peine de saisie-appréhension à ses frais"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Informations sur les voies de recours de débiteur (possibilité de saisir le juge  pour contester le commandement)."
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Injonction de remettre le bien dans un délai de 8 jours ou de transmettre les raisons de son refus"
                                         }
                                       ]
                                     }
@@ -1179,21 +1276,17 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Le bien peut  aussi être appréhendé immédiatement  si   le débiteur est présent  et qu'il refuse de transporter à ses frais le bien dans le  lieu indiqué par le titre exécutoire. En effet, dans ce cas de figure, l'huissier n'a pas besoin de présenter de commandement préalable."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Un acte de la remise volontaire ou de l'appréhension du bien est remis au débiteur."
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Information sur les voies de recours."
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -1201,196 +1294,90 @@
                             },
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "À l'issue du délai de 8 jours, en l'absence de remise volontaire du bien, le "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R15912",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "créancier"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " peut demander au juge du tribunal d'ordonner la remise de ce bien. Le juge doit être saisi dans le mois qui suit la sommation."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "OuSAdresser",
+                              "attributes": {
+                                "ID": "R30",
+                                "sve": "non",
+                                "type": "Local"
+                              },
                               "children": [
                                 {
                                   "type": "element",
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "En cas de saisie auprès d'un tiers"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Tribunal judiciaire ou de proximité"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Si le bien est détenu par un tiers, l'huissier  doit lui "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R10915",
-                                        "type": "Définition de glossaire"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "signifier"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " une sommation de remettre ce bien. Elle est également adressée au débiteur par lettre recommandée avec accusé de réception (LRAR). Elle contient les éléments suivants :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
+                                  "name": "RessourceWeb",
                                   "attributes": {
-                                    "type": "puce"
+                                    "URL": "https://www.justice.fr/recherche/annuaires"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30663"
                                   },
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Copie du titre exécutoire"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Injonction de remettre le bien dans un délai de 8 jours ou de transmettre les raisons de son refus"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Information sur les voies de recours."
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
                                       "type": "text",
-                                      "text": "À l'issue du délai de 8 jours, en l'absence de remise volontaire du bien, le "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R15912",
-                                        "type": "Définition de glossaire"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "créancier"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " peut demander au juge du tribunal d'ordonner la remise de ce bien. Le juge doit être saisi dans le mois qui suit la sommation."
+                                      "text": "Ministère chargé de la justice"
                                     }
                                   ]
-                                },
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
                                 {
-                                  "type": "element",
-                                  "name": "OuSAdresser",
-                                  "attributes": {
-                                    "ID": "R30",
-                                    "type": "Local"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Tribunal judiciaire ou de proximité"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "RessourceWeb",
-                                      "attributes": {
-                                        "URL": "https://www.justice.fr/recherche/annuaires"
-                                      }
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30663"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Ministère chargé de la justice"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
+                                  "type": "text",
+                                  "text": "Si le juge l'ordonne, le bien pourra être saisi."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Si le juge l'ordonne, le bien pourra être saisi."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Un acte de saisie est adressé au tiers et au débiteur."
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Un acte de saisie est adressé au tiers et au débiteur."
                                 }
                               ]
                             }
@@ -1409,6 +1396,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R11621",
+            "sve": "non",
             "type": "Local personnalisé sur SP"
           },
           "children": [

@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1643",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1643"
       },
       "children": [
         {
@@ -250,7 +251,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F1643",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -424,6 +425,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35309",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Période d'essai"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "ListeSituations",
           "attributes": {
             "affichage": "onglet"
@@ -440,6 +467,19 @@
                     {
                       "type": "text",
                       "text": "CDI"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11218"
+                      }
                     }
                   ]
                 },
@@ -585,14 +625,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Employé ou ouvrier"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Employé ou ouvrier"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11221"
+                                      }
                                     }
                                   ]
                                 },
@@ -806,14 +853,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Agent de maîtrise ou technicien"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Agent de maîtrise ou technicien"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11222"
+                                      }
                                     }
                                   ]
                                 },
@@ -1027,14 +1081,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Cadre"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Cadre"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11223"
+                                      }
                                     }
                                   ]
                                 },
@@ -1356,14 +1417,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Rupture par l'employeur"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Rupture par l'employeur"
                                     }
                                   ]
                                 },
@@ -1891,14 +1946,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Rupture par le salarié"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Rupture par le salarié"
                                     }
                                   ]
                                 },
@@ -2146,7 +2195,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F89",
-                                        "type": "Fiche Question-réponse",
+                                        "type": "Fiche Question-réponse conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -2215,6 +2264,19 @@
                     {
                       "type": "text",
                       "text": "CDD"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11219"
+                      }
                     }
                   ]
                 },
@@ -2360,14 +2422,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "CDD de 6 mois maximum"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "CDD de 6 mois maximum"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12549"
+                                      }
                                     }
                                   ]
                                 },
@@ -2502,14 +2571,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "CDD supérieur à 6 mois"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "CDD supérieur à 6 mois"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12550"
+                                      }
                                     }
                                   ]
                                 },
@@ -2648,14 +2724,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "CDD sans terme précis"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "CDD sans terme précis"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12551"
+                                      }
                                     }
                                   ]
                                 },
@@ -2907,14 +2990,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Rupture par l'employeur"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Rupture par l'employeur"
                                     }
                                   ]
                                 },
@@ -3442,14 +3519,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Rupture par le salarié"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Rupture par le salarié"
                                     }
                                   ]
                                 },
@@ -3697,7 +3768,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F89",
-                                        "type": "Fiche Question-réponse",
+                                        "type": "Fiche Question-réponse conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -3766,6 +3837,19 @@
                     {
                       "type": "text",
                       "text": "Intérim"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11220"
+                      }
                     }
                   ]
                 },
@@ -3911,14 +3995,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Contrat de 1 mois maximum"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Contrat de 1 mois maximum"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12552"
+                                      }
                                     }
                                   ]
                                 },
@@ -4065,14 +4156,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Entre 1 mois et 2 mois"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Entre 1 mois et 2 mois"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12553"
+                                      }
                                     }
                                   ]
                                 },
@@ -4219,14 +4317,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Supérieur à 2 mois"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Supérieur à 2 mois"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12554"
+                                      }
                                     }
                                   ]
                                 },
@@ -4481,14 +4586,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Rupture par l'employeur"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Rupture par l'employeur"
                                     }
                                   ]
                                 },
@@ -5016,14 +5115,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Rupture par le salarié"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Rupture par le salarié"
                                     }
                                   ]
                                 },
@@ -5271,7 +5364,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F89",
-                                        "type": "Fiche Question-réponse",
+                                        "type": "Fiche Question-réponse conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [

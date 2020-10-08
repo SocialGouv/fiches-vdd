@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F11534",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F11534"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F11534",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -463,6 +464,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F34805",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Conduire à l'étranger "
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "Texte",
           "children": [
             {
@@ -482,6 +509,19 @@
                           "text": "Comment savoir quel permis est nécessaire ?"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10010"
+                      }
                     }
                   ]
                 },
@@ -592,6 +632,7 @@
                   "name": "OuSAdresser",
                   "attributes": {
                     "ID": "R2884",
+                    "sve": "non",
                     "type": "Local personnalisable"
                   },
                   "children": [
@@ -750,6 +791,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10010"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Paragraphe",
                   "children": [
                     {
@@ -824,14 +878,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Vous habitez en France"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous habitez en France"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10576"
+                              }
                             }
                           ]
                         },
@@ -851,14 +912,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Vous êtes Français"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous êtes Français"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10330"
+                                      }
                                     }
                                   ]
                                 },
@@ -1252,14 +1320,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Vous êtes Européen (Union européenne, Suisse, Monaco, Royaume-Uni)"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous êtes Européen (Union européenne, Suisse, Monaco, Royaume-Uni)"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10266"
+                                      }
                                     }
                                   ]
                                 },
@@ -1679,14 +1754,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Vous avez une autre nationalité"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous avez une autre nationalité"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10267"
+                                      }
                                     }
                                   ]
                                 },
@@ -2115,12 +2197,53 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Vous habitez à l'étranger"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "ou",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Vous habitez à l'étranger"
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11206"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11207"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11203"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11205"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11211"
+                                  }
                                 }
                               ]
                             }
@@ -2142,14 +2265,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Vous résidez à l'étranger depuis moins de 6 mois (185 jours)"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous résidez à l'étranger depuis moins de 6 mois (185 jours)"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11203"
+                                      }
                                     }
                                   ]
                                 },
@@ -2451,6 +2581,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R53072",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -2597,6 +2728,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R48771",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -2701,14 +2833,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Vous résidez à l'étranger depuis 6 mois (185 jours) ou +"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous résidez à l'étranger depuis 6 mois (185 jours) ou +"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11205"
+                                      }
                                     }
                                   ]
                                 },
@@ -2761,14 +2900,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Vous êtes à l'étranger pour des études, un stage, une formation, une mission à durée déterminée"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous êtes à l'étranger pour des études, un stage, une formation, une mission à durée déterminée"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11211"
+                                      }
                                     }
                                   ]
                                 },
@@ -3070,6 +3216,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R53072",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -3216,6 +3363,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R48771",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -3387,14 +3535,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Votre demande est traitée par le Crepic"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Votre demande est traitée par le Crepic"
                             }
                           ]
                         },
@@ -3485,14 +3627,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Votre demande est traitée par le CERT de Cherbourg"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Votre demande est traitée par le CERT de Cherbourg"
                             }
                           ]
                         },
@@ -3539,6 +3675,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R49205",
+                            "sve": "non",
                             "type": "Centre de contact"
                           },
                           "children": [

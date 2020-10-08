@@ -8,8 +8,10 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F3070",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "dateDerniereModificationImportante": "2020-01-13T00:00:00",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F3070"
       },
       "children": [
         {
@@ -240,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F3070",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -554,18 +556,43 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11052"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "L'adoption simple ne permet pas à l'enfant adopté d'acquérir automatiquement la nationalité française. L'enfant ayant fait l'objet d'une adoption simple par un Français doit la demander en faisant une déclaration."
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "L'adoption simple ne permet pas à l'enfant adopté d'acquérir automatiquement la nationalité française. L'enfant ayant fait l'objet d'une adoption simple par un Français doit la demander en faisant une déclaration."
+                            }
+                          ]
                         }
                       ]
-                    },
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
                       "name": "Chapitre",
@@ -704,7 +731,7 @@
                                   "name": "LienInterne",
                                   "attributes": {
                                     "LienPublication": "F295",
-                                    "type": "Fiche d'information",
+                                    "type": "Fiche d'information conditionnée",
                                     "audience": "Particuliers"
                                   },
                                   "children": [
@@ -723,7 +750,7 @@
                                   "name": "LienInterne",
                                   "attributes": {
                                     "LienPublication": "F2213",
-                                    "type": "Fiche d'information",
+                                    "type": "Fiche d'information conditionnée",
                                     "audience": "Particuliers"
                                   },
                                   "children": [
@@ -779,14 +806,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Cas général"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Cas général"
                                     }
                                   ]
                                 },
@@ -823,6 +844,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R197",
+                                    "sve": "non",
                                     "type": "Local personnalisable"
                                   },
                                   "children": [
@@ -917,14 +939,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "À Paris"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "À Paris"
                                     }
                                   ]
                                 },
@@ -943,6 +959,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R43640",
+                                    "sve": "non",
                                     "type": "Centre de contact"
                                   },
                                   "children": [
@@ -1137,14 +1154,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "À l'étranger"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "À l'étranger"
                                     }
                                   ]
                                 },
@@ -1201,6 +1212,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R2750",
+                                    "sve": "non",
                                     "type": "Local personnalisable"
                                   },
                                   "children": [
@@ -1706,6 +1718,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R2884",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -1886,6 +1899,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R30",
+                            "sve": "non",
                             "type": "Local"
                           },
                           "children": [
@@ -1943,40 +1957,47 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11053"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
                       "children": [
                         {
+                          "type": "text",
+                          "text": "Un enfant adopté sous la forme plénière par un Français est "
+                        },
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F3068",
+                            "type": "Fiche Question-réponse",
+                            "audience": "Particuliers"
+                          },
                           "children": [
                             {
                               "type": "text",
-                              "text": "Un enfant adopté sous la forme plénière par un Français est "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F3068",
-                                "type": "Fiche Question-réponse",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "français par filiation"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": ". Il est considéré comme français dès sa naissance et n'a pas à réclamer cette qualité."
+                              "text": "français par filiation"
                             }
                           ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ". Il est considéré comme français dès sa naissance et n'a pas à réclamer cette qualité."
                         }
                       ]
                     }
@@ -2231,6 +2252,19 @@
             "ID": "R42805"
           },
           "children": [
+            {
+              "type": "element",
+              "name": "Condition",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "estVrai",
+                  "attributes": {
+                    "var": "T11052"
+                  }
+                }
+              ]
+            },
             {
               "type": "element",
               "name": "Titre",

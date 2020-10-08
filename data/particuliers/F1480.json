@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1480",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1480"
       },
       "children": [
         {
@@ -250,7 +251,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F1480",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -687,18 +688,43 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10041"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Si vous héritez d'un véhicule à la suite du décès d'un proche et que vous ne voulez pas le conserver, vous pouvez le vendre, le donner ou décider de le faire détruire."
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si vous héritez d'un véhicule à la suite du décès d'un proche et que vous ne voulez pas le conserver, vous pouvez le vendre, le donner ou décider de le faire détruire."
+                            }
+                          ]
                         }
                       ]
-                    },
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
                       "name": "Chapitre",
@@ -721,6 +747,35 @@
                         },
                         {
                           "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous le vendez ou vous le donnez"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10066"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "BlocCas",
                           "attributes": {
                             "affichage": "radio"
@@ -735,14 +790,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Le titulaire est décédé depuis moins de 3 mois"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Le titulaire est décédé depuis moins de 3 mois"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10042"
+                                      }
                                     }
                                   ]
                                 },
@@ -939,6 +1001,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R55753",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -1483,6 +1546,19 @@
                                       "children": [
                                         {
                                           "type": "element",
+                                          "name": "Condition",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10044"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
                                           "name": "Paragraphe",
                                           "children": [
                                             {
@@ -1550,25 +1626,44 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "ASavoir",
+                                  "name": "FragmentConditionne",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Titre",
+                                      "name": "Condition",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "À savoir"
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T10048"
+                                          }
                                         }
                                       ]
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "ASavoir",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "si la carte grise a été perdue, vous devez d'abord la faire refaire, comme si vous conserviez le véhicule, avant de le vendre."
+                                          "type": "element",
+                                          "name": "Titre",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "À savoir"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "si la carte grise a été perdue, vous devez d'abord la faire refaire, comme si vous conserviez le véhicule, avant de le vendre."
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -1717,14 +1812,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Le véhicule n'a pas circulé depuis le décès du titulaire"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Le véhicule n'a pas circulé depuis le décès du titulaire"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10064"
+                                      }
                                     }
                                   ]
                                 },
@@ -1921,6 +2023,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R55753",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -2509,6 +2612,19 @@
                                       "children": [
                                         {
                                           "type": "element",
+                                          "name": "Condition",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10044"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
                                           "name": "Paragraphe",
                                           "children": [
                                             {
@@ -2576,25 +2692,44 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "ASavoir",
+                                  "name": "FragmentConditionne",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Titre",
+                                      "name": "Condition",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "À savoir"
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T10048"
+                                          }
                                         }
                                       ]
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "ASavoir",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "si la carte grise a été perdue, vous devez d'abord la faire refaire, comme si vous conserviez le véhicule, avant de le vendre."
+                                          "type": "element",
+                                          "name": "Titre",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "À savoir"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "si la carte grise a été perdue, vous devez d'abord la faire refaire, comme si vous conserviez le véhicule, avant de le vendre."
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -2743,14 +2878,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Autre situation"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Autre situation"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10518"
+                                      }
                                     }
                                   ]
                                 },
@@ -2957,6 +3099,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R55753",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -3394,6 +3537,19 @@
                                       "children": [
                                         {
                                           "type": "element",
+                                          "name": "Condition",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "estVrai",
+                                              "attributes": {
+                                                "var": "T10044"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
                                           "name": "Paragraphe",
                                           "children": [
                                             {
@@ -3461,25 +3617,44 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "ASavoir",
+                                  "name": "FragmentConditionne",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Titre",
+                                      "name": "Condition",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "À savoir"
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T10048"
+                                          }
                                         }
                                       ]
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "ASavoir",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "si la carte grise a été perdue, vous devez d'abord la faire refaire, comme si vous conserviez le véhicule, avant de le vendre."
+                                          "type": "element",
+                                          "name": "Titre",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "À savoir"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "si la carte grise a été perdue, vous devez d'abord la faire refaire, comme si vous conserviez le véhicule, avant de le vendre."
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -3645,6 +3820,35 @@
                         },
                         {
                           "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous le mettez à la casse"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10057"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
@@ -3682,6 +3886,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R23022",
+                            "sve": "non",
                             "type": "Local"
                           },
                           "children": [
@@ -3807,6 +4012,19 @@
                               "type": "element",
                               "name": "Item",
                               "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10045"
+                                      }
+                                    }
+                                  ]
+                                },
                                 {
                                   "type": "element",
                                   "name": "Paragraphe",
@@ -3944,25 +4162,44 @@
                         },
                         {
                           "type": "element",
-                          "name": "Attention",
+                          "name": "FragmentConditionne",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Titre",
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Attention"
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10048"
+                                  }
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Attention",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "si la carte grise a été perdue, vous devez fournir la déclaration de perte ou de vol."
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Attention"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "si la carte grise a été perdue, vous devez fournir la déclaration de perte ou de vol."
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -3983,6 +4220,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R23022",
+                            "sve": "non",
                             "type": "Local"
                           },
                           "children": [
@@ -4125,6 +4363,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R55753",
+                            "sve": "non",
                             "type": "National"
                           },
                           "children": [
@@ -4198,18 +4437,43 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10049"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Les démarches seront différentes selon la personne qui sera titulaire de la nouvelle carte grise."
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Les démarches seront différentes selon la personne qui sera titulaire de la nouvelle carte grise."
+                            }
+                          ]
                         }
                       ]
-                    },
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
                       "name": "Chapitre",
@@ -4232,6 +4496,35 @@
                         },
                         {
                           "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La carte grise sera au nom de l'époux survivant"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10050"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "BlocCas",
                           "attributes": {
                             "affichage": "radio"
@@ -4246,14 +4539,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Vous étiez marié(e) sous le régime de la communauté"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous étiez marié(e) sous le régime de la communauté"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10051"
+                                      }
                                     }
                                   ]
                                 },
@@ -4377,6 +4677,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R55753",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -4486,7 +4787,7 @@
                                               "name": "LienInterne",
                                               "attributes": {
                                                 "LienPublication": "F1028",
-                                                "type": "Fiche Question-réponse",
+                                                "type": "Fiche Question-réponse conditionnée",
                                                 "audience": "Particuliers"
                                               },
                                               "children": [
@@ -5042,14 +5343,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Vous étiez marié(e) en séparation de bien"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous étiez marié(e) en séparation de bien"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10052"
+                                      }
                                     }
                                   ]
                                 },
@@ -5173,6 +5481,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R55753",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -5282,7 +5591,7 @@
                                               "name": "LienInterne",
                                               "attributes": {
                                                 "LienPublication": "F1028",
-                                                "type": "Fiche Question-réponse",
+                                                "type": "Fiche Question-réponse conditionnée",
                                                 "audience": "Particuliers"
                                               },
                                               "children": [
@@ -5855,6 +6164,35 @@
                         },
                         {
                           "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La carte grise sera établie au nom d'un seul héritier (autre que l'époux survivant)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10053"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
@@ -5879,14 +6217,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Le futur titulaire est l'unique héritier du véhicule"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Le futur titulaire est l'unique héritier du véhicule"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10054"
+                                      }
                                     }
                                   ]
                                 },
@@ -6000,6 +6345,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R55753",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -6109,7 +6455,7 @@
                                               "name": "LienInterne",
                                               "attributes": {
                                                 "LienPublication": "F1028",
-                                                "type": "Fiche Question-réponse",
+                                                "type": "Fiche Question-réponse conditionnée",
                                                 "audience": "Particuliers"
                                               },
                                               "children": [
@@ -6649,14 +6995,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Les héritiers se désistent au profit d'un seul"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Les héritiers se désistent au profit d'un seul"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10055"
+                                      }
                                     }
                                   ]
                                 },
@@ -6770,6 +7123,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R55753",
+                                    "sve": "non",
                                     "type": "National"
                                   },
                                   "children": [
@@ -6879,7 +7233,7 @@
                                               "name": "LienInterne",
                                               "attributes": {
                                                 "LienPublication": "F1028",
-                                                "type": "Fiche Question-réponse",
+                                                "type": "Fiche Question-réponse conditionnée",
                                                 "audience": "Particuliers"
                                               },
                                               "children": [
@@ -7452,6 +7806,35 @@
                         },
                         {
                           "type": "element",
+                          "name": "TitreAlternatif",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Les héritiers seront cotitulaires de la carte grise"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10056"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
@@ -7560,6 +7943,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R55753",
+                            "sve": "non",
                             "type": "National"
                           },
                           "children": [
@@ -7669,7 +8053,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F1028",
-                                        "type": "Fiche Question-réponse",
+                                        "type": "Fiche Question-réponse conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -8259,6 +8643,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R49205",
+            "sve": "non",
             "type": "Centre de contact"
           },
           "children": [
@@ -8563,6 +8948,7 @@
               "attributes": {
                 "ID": "R51106",
                 "URL": "https://www.formulaires.service-public.fr/gf/getNotice.do?cerfaNotice=51291&cerfaFormulaire=15776",
+                "type": "Notice",
                 "numerocerfa": "51291#03",
                 "format": "application/pdf",
                 "poids": "495.2 KB"
@@ -8617,6 +9003,7 @@
               "attributes": {
                 "ID": "R51106",
                 "URL": "https://www.formulaires.service-public.fr/gf/getNotice.do?cerfaNotice=51291&cerfaFormulaire=15776",
+                "type": "Notice",
                 "numerocerfa": "51291#03",
                 "format": "application/pdf",
                 "poids": "495.2 KB"

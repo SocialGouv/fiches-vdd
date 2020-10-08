@@ -8,8 +8,10 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F245",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "dateDerniereModificationImportante": "2019-01-01T00:00:00",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F245"
       },
       "children": [
         {
@@ -240,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F245",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -558,7 +560,7 @@
                           "name": "LienInterne",
                           "attributes": {
                             "LienPublication": "F10009",
-                            "type": "Fiche d'information",
+                            "type": "Fiche d'information conditionnée",
                             "audience": "Particuliers"
                           },
                           "children": [
@@ -671,7 +673,7 @@
                               "name": "LienInterne",
                               "attributes": {
                                 "LienPublication": "F10009",
-                                "type": "Fiche d'information",
+                                "type": "Fiche d'information conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
@@ -713,49 +715,87 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "FragmentConditionne",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Si vous vivez seul, vous avez droit à l'aide à domicile proposée   par votre département si vos ressources mensuelles (hors aides au logement) sont  inférieures à "
-                        },
-                        {
                           "type": "element",
-                          "name": "Valeur",
+                          "name": "Condition",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "903,20 €"
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12085"
+                              }
                             }
                           ]
                         },
                         {
-                          "type": "text",
-                          "text": " par mois."
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si vous vivez seul, vous avez droit à l'aide à domicile proposée   par votre département si vos ressources mensuelles (hors aides au logement) sont  inférieures à "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "903,20 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " par mois."
+                            }
+                          ]
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "FragmentConditionne",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Si  vous vivez en couple, vous avez droit à l'aide à domicile proposée par votre département si les ressources mensuelles (hors aides au logement) de votre couple sont inférieures à "
-                        },
-                        {
                           "type": "element",
-                          "name": "Valeur",
+                          "name": "Condition",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "1 402,22 €"
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11198"
+                              }
                             }
                           ]
                         },
                         {
-                          "type": "text",
-                          "text": " par mois."
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si  vous vivez en couple, vous avez droit à l'aide à domicile proposée par votre département si les ressources mensuelles (hors aides au logement) de votre couple sont inférieures à "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "1 402,22 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " par mois."
+                            }
+                          ]
                         }
                       ]
                     }
@@ -807,14 +847,8 @@
                               "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Cas général"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Cas général"
                                 }
                               ]
                             },
@@ -839,14 +873,8 @@
                               "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous êtes reconnu inapte au travail"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Vous êtes reconnu inapte au travail"
                                 }
                               ]
                             },
@@ -921,6 +949,7 @@
                       "name": "OuSAdresser",
                       "attributes": {
                         "ID": "R41",
+                        "sve": "non",
                         "type": "Local personnalisé sur SP"
                       },
                       "children": [
@@ -971,6 +1000,7 @@
                       "name": "OuSAdresser",
                       "attributes": {
                         "ID": "R14093",
+                        "sve": "non",
                         "type": "Local personnalisable"
                       },
                       "children": [
@@ -1008,6 +1038,7 @@
                       "name": "OuSAdresser",
                       "attributes": {
                         "ID": "R39",
+                        "sve": "non",
                         "type": "Local personnalisé sur SP"
                       },
                       "children": [
@@ -1121,14 +1152,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Cas général"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Cas général"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11663"
+                              }
                             }
                           ]
                         },
@@ -1137,6 +1175,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R1",
+                            "sve": "non",
                             "type": "Local personnalisé sur SP"
                           },
                           "children": [
@@ -1180,14 +1219,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "À Paris"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "À Paris"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11853"
+                              }
                             }
                           ]
                         },
@@ -1196,6 +1242,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R34275",
+                            "sve": "non",
                             "type": "Local personnalisable"
                           },
                           "children": [
@@ -1396,6 +1443,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R40963",
+            "sve": "non",
             "type": "Local"
           },
           "children": [

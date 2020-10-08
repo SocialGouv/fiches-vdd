@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1379",
-        "type": "Fiche Question-réponse",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche Question-réponse conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1379"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F1379",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -558,6 +559,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35110",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Copie de jugement"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "ListeSituations",
           "attributes": {
             "affichage": "onglet"
@@ -579,12 +606,38 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T12101"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "FragmentConditionne",
                       "children": [
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10010"
+                              }
+                            }
+                          ]
+                        },
                         {
                           "type": "element",
                           "name": "Paragraphe",
@@ -614,6 +667,19 @@
                                   "text": "Copie exécutoire"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12104"
+                              }
                             }
                           ]
                         },
@@ -803,6 +869,7 @@
                                   "attributes": {
                                     "ID": "R1239",
                                     "URL": "https://www.formulaires.service-public.fr/gf/getNotice.do?cerfaNotice=50825%2302&cerfaFormulaire=11808",
+                                    "type": "Notice",
                                     "numerocerfa": "50825#06",
                                     "format": "application/pdf",
                                     "poids": "73.5 KB"
@@ -841,6 +908,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R42420",
+                                "sve": "non",
                                 "type": "Local"
                               },
                               "children": [
@@ -905,6 +973,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R38679",
+                                    "sve": "non",
                                     "type": "Local personnalisable"
                                   },
                                   "children": [
@@ -1021,6 +1090,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R30",
+                                "sve": "non",
                                 "type": "Local"
                               },
                               "children": [
@@ -1077,6 +1147,19 @@
                                   "text": "Copie simple"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12103"
+                              }
                             }
                           ]
                         },
@@ -1158,14 +1241,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Jugement non public"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Jugement non public"
                                         }
                                       ]
                                     },
@@ -1413,14 +1490,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Jugement public"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Jugement public"
                                         }
                                       ]
                                     },
@@ -1509,6 +1580,7 @@
                                   "attributes": {
                                     "ID": "R1239",
                                     "URL": "https://www.formulaires.service-public.fr/gf/getNotice.do?cerfaNotice=50825%2302&cerfaFormulaire=11808",
+                                    "type": "Notice",
                                     "numerocerfa": "50825#06",
                                     "format": "application/pdf",
                                     "poids": "73.5 KB"
@@ -1547,6 +1619,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R42420",
+                                "sve": "non",
                                 "type": "Local"
                               },
                               "children": [
@@ -1611,6 +1684,7 @@
                                   "name": "OuSAdresser",
                                   "attributes": {
                                     "ID": "R38679",
+                                    "sve": "non",
                                     "type": "Local personnalisable"
                                   },
                                   "children": [
@@ -1727,6 +1801,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R30",
+                                "sve": "non",
                                 "type": "Local"
                               },
                               "children": [
@@ -1786,12 +1861,38 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T12102"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "FragmentConditionne",
                       "children": [
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10010"
+                              }
+                            }
+                          ]
+                        },
                         {
                           "type": "element",
                           "name": "Paragraphe",
@@ -1821,6 +1922,19 @@
                                   "text": "Copie exécutoire"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12104"
+                              }
                             }
                           ]
                         },
@@ -2018,6 +2132,7 @@
                                   "attributes": {
                                     "ID": "R1234",
                                     "URL": "https://www.formulaires.service-public.fr/gf/getNotice.do?cerfaNotice=51151&cerfaFormulaire=12823",
+                                    "type": "Notice",
                                     "numerocerfa": "51151#02",
                                     "format": "application/pdf",
                                     "poids": "55.8 KB"
@@ -2056,6 +2171,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R42420",
+                                "sve": "non",
                                 "type": "Local"
                               },
                               "children": [
@@ -2160,6 +2276,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R30",
+                                "sve": "non",
                                 "type": "Local"
                               },
                               "children": [
@@ -2216,6 +2333,19 @@
                                   "text": "Copie simple"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12103"
+                              }
                             }
                           ]
                         },
@@ -2297,14 +2427,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Le jugement a été prononcé publiquement"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Le jugement a été prononcé publiquement"
                                         }
                                       ]
                                     },
@@ -2355,14 +2479,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Le jugement n'a pas été prononcé publiquement"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Le jugement n'a pas été prononcé publiquement"
                                         }
                                       ]
                                     },
@@ -2489,6 +2607,7 @@
                                   "attributes": {
                                     "ID": "R1234",
                                     "URL": "https://www.formulaires.service-public.fr/gf/getNotice.do?cerfaNotice=51151&cerfaFormulaire=12823",
+                                    "type": "Notice",
                                     "numerocerfa": "51151#02",
                                     "format": "application/pdf",
                                     "poids": "55.8 KB"
@@ -2527,6 +2646,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R42420",
+                                "sve": "non",
                                 "type": "Local"
                               },
                               "children": [
@@ -2657,6 +2777,7 @@
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R30",
+                                "sve": "non",
                                 "type": "Local"
                               },
                               "children": [
@@ -2927,6 +3048,7 @@
               "attributes": {
                 "ID": "R1239",
                 "URL": "https://www.formulaires.service-public.fr/gf/getNotice.do?cerfaNotice=50825%2302&cerfaFormulaire=11808",
+                "type": "Notice",
                 "numerocerfa": "50825#06",
                 "format": "application/pdf",
                 "poids": "73.5 KB"
@@ -2981,6 +3103,7 @@
               "attributes": {
                 "ID": "R1234",
                 "URL": "https://www.formulaires.service-public.fr/gf/getNotice.do?cerfaNotice=51151&cerfaFormulaire=12823",
+                "type": "Notice",
                 "numerocerfa": "51151#02",
                 "format": "application/pdf",
                 "poids": "55.8 KB"

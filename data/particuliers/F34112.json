@@ -8,8 +8,10 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F34112",
-        "type": "Fiche Question-réponse",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche Question-réponse conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "dateDerniereModificationImportante": "2019-12-26T00:00:00",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F34112"
       },
       "children": [
         {
@@ -230,7 +232,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F34112",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -452,6 +454,53 @@
                             {
                               "type": "text",
                               "text": "S'inscrire sur Ariane"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "ou",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11206"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11207"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11203"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11205"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11211"
+                              }
                             }
                           ]
                         }
@@ -683,14 +732,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Voyage en France"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Voyage en France"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10576"
+                              }
                             }
                           ]
                         },
@@ -772,14 +828,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Voyage dans l'Union européenne (UE)"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Voyage dans l'Union européenne (UE)"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11206"
+                              }
                             }
                           ]
                         },
@@ -879,14 +942,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Voyage hors Union européenne (UE)"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Voyage hors Union européenne (UE)"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11207"
+                              }
                             }
                           ]
                         },
@@ -1041,6 +1111,58 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "ou",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "ou",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10032"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "estIndefini",
+                              "attributes": {
+                                "var": "T10032"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ou",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11470"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "estIndefini",
+                              "attributes": {
+                                "var": "T11470"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "BlocCas",
                   "attributes": {
                     "affichage": "onglet"
@@ -1055,14 +1177,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Voyage avec l'un de ses parents"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Voyage avec l'un de ses parents"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10032"
+                              }
                             }
                           ]
                         },
@@ -1123,14 +1252,21 @@
                           "name": "Titre",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Voyage seul"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Voyage seul"
-                                }
-                              ]
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11470"
+                              }
                             }
                           ]
                         },
@@ -1150,14 +1286,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "En France"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "En France"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10576"
+                                      }
                                     }
                                   ]
                                 },
@@ -1222,12 +1365,53 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "À l'étranger"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "ou",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "À l'étranger"
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11206"
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11207"
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11203"
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11205"
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11211"
+                                          }
                                         }
                                       ]
                                     }
@@ -1246,7 +1430,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F1359",
-                                        "type": "Fiche d'information",
+                                        "type": "Fiche d'information conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -1319,6 +1503,19 @@
                           "text": "Femme enceinte"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11469"
+                      }
                     }
                   ]
                 },
@@ -1416,6 +1613,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11252"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Paragraphe",
                   "children": [
                     {
@@ -1453,6 +1663,19 @@
                           "text": "Animal de compagnie"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10790"
+                      }
                     }
                   ]
                 },
@@ -1512,14 +1735,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Chien"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Chien"
                             }
                           ]
                         },
@@ -1623,14 +1840,8 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Chat, rongeur"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Chat, rongeur"
                             }
                           ]
                         },
@@ -1911,6 +2122,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R18",
+            "sve": "non",
             "type": "Local personnalisable"
           },
           "children": [

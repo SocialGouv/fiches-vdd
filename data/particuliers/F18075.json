@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F18075",
-        "type": "Fiche Question-réponse",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche Question-réponse conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F18075"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F18075",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -597,6 +598,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35034",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Règles de licenciement dans une entreprise en difficulté "
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "ListeSituations",
           "attributes": {
             "affichage": "onglet"
@@ -618,50 +645,57 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11938"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
                       "children": [
                         {
+                          "type": "text",
+                          "text": "Durant la procédure de "
+                        },
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F22311",
+                            "type": "Fiche d'information",
+                            "audience": "Professionnels"
+                          },
                           "children": [
                             {
                               "type": "text",
-                              "text": "Durant la procédure de "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F22311",
-                                "type": "Fiche d'information",
-                                "audience": "Professionnels"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "sauvegarde"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": ", l'employeur et l'administrateur judiciaire proposent un plan de sauvegarde."
+                              "text": "sauvegarde"
                             }
                           ]
                         },
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Le plan  peut prévoir le licenciement pour motif économique d'un ou plusieurs salariés de l'entreprise. Les conditions de validité de chaque licenciement varient selon que le plan de sauvegarde prévoit une cessation de l'activité professionnelle ou non."
-                            }
-                          ]
+                          "type": "text",
+                          "text": ", l'employeur et l'administrateur judiciaire proposent un plan de sauvegarde."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Le plan  peut prévoir le licenciement pour motif économique d'un ou plusieurs salariés de l'entreprise. Les conditions de validité de chaque licenciement varient selon que le plan de sauvegarde prévoit une cessation de l'activité professionnelle ou non."
                         }
                       ]
                     },
@@ -733,6 +767,19 @@
                                   "text": "En cas de cessation d'activité"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11942"
+                              }
                             }
                           ]
                         },
@@ -886,7 +933,7 @@
                                   "name": "LienInterne",
                                   "attributes": {
                                     "LienPublication": "F13782",
-                                    "type": "Fiche d'information",
+                                    "type": "Fiche d'information conditionnée",
                                     "audience": "Particuliers"
                                   },
                                   "children": [
@@ -998,14 +1045,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Cas général"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Cas général"
                                         }
                                       ]
                                     },
@@ -1077,14 +1118,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Salarié protégé"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Salarié protégé"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11937"
+                                          }
                                         }
                                       ]
                                     },
@@ -1210,50 +1258,57 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11939"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
                       "children": [
                         {
+                          "type": "text",
+                          "text": "Le "
+                        },
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F22314",
+                            "type": "Fiche d'information",
+                            "audience": "Professionnels"
+                          },
                           "children": [
                             {
                               "type": "text",
-                              "text": "Le "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F22314",
-                                "type": "Fiche d'information",
-                                "audience": "Professionnels"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "redressement judiciaire"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " prévoit, dans un premier temps, une période d'observation. À l'issue de cette période d'observation, un plan de redressement est établi par le tribunal de commerce. Des licenciements économiques peuvent être prononcés durant ces 2 étapes."
+                              "text": "redressement judiciaire"
                             }
                           ]
                         },
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Les  conditions de licenciement varient selon que l'entreprise est en  période d'observation ou qu'un plan de redressement est établi par le tribunal."
-                            }
-                          ]
+                          "type": "text",
+                          "text": " prévoit, dans un premier temps, une période d'observation. À l'issue de cette période d'observation, un plan de redressement est établi par le tribunal de commerce. Des licenciements économiques peuvent être prononcés durant ces 2 étapes."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Les  conditions de licenciement varient selon que l'entreprise est en  période d'observation ou qu'un plan de redressement est établi par le tribunal."
                         }
                       ]
                     },
@@ -1504,14 +1559,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Cas général"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Cas général"
                                         }
                                       ]
                                     },
@@ -1583,14 +1632,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Salarié protégé"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Salarié protégé"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11937"
+                                          }
                                         }
                                       ]
                                     },
@@ -1911,14 +1967,8 @@
                                       "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Cas général"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Cas général"
                                         }
                                       ]
                                     },
@@ -1990,14 +2040,21 @@
                                       "name": "Titre",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Salarié protégé"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Salarié protégé"
-                                            }
-                                          ]
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T11937"
+                                          }
                                         }
                                       ]
                                     },
@@ -2123,40 +2180,47 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11940"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
                       "children": [
                         {
+                          "type": "text",
+                          "text": "La  "
+                        },
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F22330",
+                            "type": "Fiche d'information",
+                            "audience": "Professionnels"
+                          },
                           "children": [
                             {
                               "type": "text",
-                              "text": "La  "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F22330",
-                                "type": "Fiche d'information",
-                                "audience": "Professionnels"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "liquidation judiciaire"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " met fin à l'activité de l'entreprise. Par conséquent, le liquidateur nommé est autorisé à procéder aux licenciements des salariés."
+                              "text": "liquidation judiciaire"
                             }
                           ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " met fin à l'activité de l'entreprise. Par conséquent, le liquidateur nommé est autorisé à procéder aux licenciements des salariés."
                         }
                       ]
                     },
@@ -2355,14 +2419,8 @@
                                   "name": "Titre",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Cas général"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Cas général"
                                     }
                                   ]
                                 },
@@ -2434,14 +2492,21 @@
                                   "name": "Titre",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Salarié protégé"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Salarié protégé"
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11937"
+                                      }
                                     }
                                   ]
                                 },

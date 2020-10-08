@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1636",
-        "type": "Fiche d'information",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche d'information conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1636"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F1636",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -378,6 +379,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35433",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Chômage : inscription à Pôle emploi"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "ListeSituations",
           "attributes": {
             "affichage": "onglet"
@@ -399,19 +426,52 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T12623"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Si vous êtes sans emploi, vous pouvez vous inscrire à tout moment."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Si vous avez perdu votre emploi, vous pouvez vous inscrire dès le lendemain de votre dernier jour de travail."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Attention",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Titre",
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si vous êtes sans emploi, vous pouvez vous inscrire à tout moment."
+                              "text": "Attention"
                             }
                           ]
                         },
@@ -421,13 +481,84 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si vous avez perdu votre emploi, vous pouvez vous inscrire dès le lendemain de votre dernier jour de travail."
+                              "text": "pour vous inscrire, vous devez  être "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "F35445",
+                                "type": "Fiche Question-réponse",
+                                "audience": "Particuliers"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "disponible"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Pour percevoir des "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F14860",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "allocations chômage"
                             }
                           ]
                         },
                         {
+                          "type": "text",
+                          "text": ", vous devez avoir travaillé une période minimale de travail dite "
+                        },
+                        {
                           "type": "element",
-                          "name": "Attention",
+                          "name": "Expression",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "durée d'affiliation"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ". Il faut aussi s'inscrire   au plus tard dans les 12 mois qui suivent la fin de votre contrat."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "onglet"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
@@ -435,7 +566,20 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Attention"
+                                  "text": "En ligne"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12624"
+                                  }
                                 }
                               ]
                             },
@@ -445,26 +589,372 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "pour vous inscrire, vous devez  être "
+                                  "text": "Pour créer votre espace personnel, il faut fournir les documents suivants :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F24465",
+                                            "type": "Fiche Question-réponse",
+                                            "audience": "Particuliers"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Pièce d'identité"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Numéro de sécurité sociale"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Ensuite, il faudra compléter avec les documents suivants :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Informations concernant votre parcours professionnel ("
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F87",
+                                            "type": "Fiche d'information",
+                                            "audience": "Particuliers"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "certificat de travail"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": ","
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F559",
+                                            "type": "Fiche d'information",
+                                            "audience": "Particuliers"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": " fiches de paie"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": ", "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F2867",
+                                            "type": "Fiche d'information",
+                                            "audience": "Particuliers"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "attestation Pôle emploi"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": ")."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F33336",
+                                            "type": "Fiche d'information",
+                                            "audience": "Particuliers"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "CV"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " si vous en avez un"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "LienIntra",
+                                          "attributes": {
+                                            "LienID": "R11497",
+                                            "type": "Définition de glossaire"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Relevé d'identité bancaire (Rib)"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " pour  recevoir l'allocation chômage si vous y avez droit"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ServiceEnLigne",
+                              "attributes": {
+                                "ID": "R49998",
+                                "URL": "https://candidat.pole-emploi.fr/inscription/preambule",
+                                "type": "Téléservice"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "S'inscrire à Pôle emploi"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30668"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Pôle emploi"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La date d'effet de votre inscription débute le jour de votre enregistrement par internet."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Une fois l'inscription enregistrée, votre espace personnel est créé automatiquement sur le site de Pôle emploi. Votre espace personnel Pôle emploi contient les documents suivants :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Attestation d'inscription (carte de demandeur d'emploi)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Avis de changement de situation"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Notice d'information sur vos droits et obligations"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Dans les 30 jours au plus tard suivant votre inscription, vous devez vous rendre à un entretien professionnel avec votre conseiller Pôle emploi."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez prendre un rendez-vous avec le conseiller de votre agence dans votre espace personnel. Vous choisissez en ligne la date et l'heure de votre entretien."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Votre  "
                                 },
                                 {
                                   "type": "element",
                                   "name": "LienInterne",
                                   "attributes": {
-                                    "LienPublication": "F35445",
-                                    "type": "Fiche Question-réponse",
+                                    "LienPublication": "F14926",
+                                    "type": "Fiche d'information",
                                     "audience": "Particuliers"
                                   },
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "disponible"
+                                      "text": "projet personnalisé d'accès à l'emploi (PPAE)"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "text",
-                                  "text": "."
+                                  "text": " est préparé à partir de cet entretien."
                                 }
                               ]
                             }
@@ -472,61 +962,122 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Cas",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Pour percevoir des "
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Sur place"
+                                }
+                              ]
                             },
                             {
                               "type": "element",
-                              "name": "LienInterne",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12625"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si vous ne pouvez pas vous inscrire en ligne, vous pouvez vous rendre dans une agence Pôle emploi pour le faire."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "OuSAdresser",
                               "attributes": {
-                                "LienPublication": "F14860",
-                                "type": "Fiche d'information",
-                                "audience": "Particuliers"
+                                "ID": "R194",
+                                "sve": "non",
+                                "type": "Local personnalisé sur SP"
                               },
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "allocations chômage"
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Pôle emploi"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "PivotLocal",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "pole_emploi"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "RessourceWeb",
+                                  "attributes": {
+                                    "URL": "https://www.pole-emploi.fr/annuaire/"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30668"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Pôle emploi"
+                                    }
+                                  ]
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": ", vous devez avoir travaillé une période minimale de travail dite "
-                            },
-                            {
                               "type": "element",
-                              "name": "Expression",
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "durée d'affiliation"
+                                  "text": "La date d'effet de votre inscription débute le jour de l'enregistrement  par le téléconseiller Pôle emploi."
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": ". Il faut aussi s'inscrire   au plus tard dans les 12 mois qui suivent la fin de votre contrat."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "BlocCas",
-                          "attributes": {
-                            "affichage": "onglet"
-                          },
-                          "children": [
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Une fois l'inscription enregistrée, votre espace personnel est créé automatiquement sur le site de Pôle emploi. Votre espace personnel Pôle emploi contient les documents suivants :"
+                                }
+                              ]
+                            },
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Titre",
+                                  "name": "Item",
                                   "children": [
                                     {
                                       "type": "element",
@@ -534,7 +1085,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "En ligne"
+                                          "text": "Attestation d'inscription (carte de demandeur d'emploi)"
                                         }
                                       ]
                                     }
@@ -542,388 +1093,7 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Pour créer votre espace personnel, il faut fournir les documents suivants :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "LienInterne",
-                                              "attributes": {
-                                                "LienPublication": "F24465",
-                                                "type": "Fiche Question-réponse",
-                                                "audience": "Particuliers"
-                                              },
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Pièce d'identité"
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Numéro de sécurité sociale"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Ensuite, il faudra compléter avec les documents suivants :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Informations concernant votre parcours professionnel ("
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "LienInterne",
-                                              "attributes": {
-                                                "LienPublication": "F87",
-                                                "type": "Fiche d'information",
-                                                "audience": "Particuliers"
-                                              },
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "certificat de travail"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": ","
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "LienInterne",
-                                              "attributes": {
-                                                "LienPublication": "F559",
-                                                "type": "Fiche d'information",
-                                                "audience": "Particuliers"
-                                              },
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": " fiches de paie"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": ", "
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "LienInterne",
-                                              "attributes": {
-                                                "LienPublication": "F2867",
-                                                "type": "Fiche d'information",
-                                                "audience": "Particuliers"
-                                              },
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "attestation Pôle emploi"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": ")."
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "LienInterne",
-                                              "attributes": {
-                                                "LienPublication": "F33336",
-                                                "type": "Fiche d'information",
-                                                "audience": "Particuliers"
-                                              },
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "CV"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": " si vous en avez un"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "LienIntra",
-                                              "attributes": {
-                                                "LienID": "R11497",
-                                                "type": "Définition de glossaire"
-                                              },
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Relevé d'identité bancaire (Rib)"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": " pour  recevoir l'allocation chômage si vous y avez droit"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ServiceEnLigne",
-                                  "attributes": {
-                                    "ID": "R49998",
-                                    "URL": "https://candidat.pole-emploi.fr/inscription/preambule",
-                                    "type": "Téléservice"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "S'inscrire à Pôle emploi"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30668"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Pôle emploi"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "La date d'effet de votre inscription débute le jour de votre enregistrement par internet."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Une fois l'inscription enregistrée, votre espace personnel est créé automatiquement sur le site de Pôle emploi. Votre espace personnel Pôle emploi contient les documents suivants :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Attestation d'inscription (carte de demandeur d'emploi)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Avis de changement de situation"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Notice d'information sur vos droits et obligations"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Dans les 30 jours au plus tard suivant votre inscription, vous devez vous rendre à un entretien professionnel avec votre conseiller Pôle emploi."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous devez prendre un rendez-vous avec le conseiller de votre agence dans votre espace personnel. Vous choisissez en ligne la date et l'heure de votre entretien."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Votre  "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F14926",
-                                        "type": "Fiche d'information",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "projet personnalisé d'accès à l'emploi (PPAE)"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " est préparé à partir de cet entretien."
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cas",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
+                                  "name": "Item",
                                   "children": [
                                     {
                                       "type": "element",
@@ -931,7 +1101,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Sur place"
+                                          "text": "Avis de changement de situation"
                                         }
                                       ]
                                     }
@@ -939,189 +1109,68 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Si vous ne pouvez pas vous inscrire en ligne, vous pouvez vous rendre dans une agence Pôle emploi pour le faire."
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Notice d'information sur vos droits et obligations"
+                                        }
+                                      ]
                                     }
                                   ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Dans les 30 jours au plus tard suivant votre inscription, vous devez vous rendre à un entretien professionnel avec votre conseiller Pôle emploi."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez prendre un rendez-vous avec le conseiller de votre agence. Vous choisissez avec votre conseiller la date et l'heure de votre entretien."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Votre  "
                                 },
                                 {
                                   "type": "element",
-                                  "name": "OuSAdresser",
+                                  "name": "LienInterne",
                                   "attributes": {
-                                    "ID": "R194",
-                                    "type": "Local personnalisé sur SP"
+                                    "LienPublication": "F14926",
+                                    "type": "Fiche d'information",
+                                    "audience": "Particuliers"
                                   },
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Pôle emploi"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "PivotLocal",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "pole_emploi"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "RessourceWeb",
-                                      "attributes": {
-                                        "URL": "https://www.pole-emploi.fr/annuaire/"
-                                      }
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30668"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Pôle emploi"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "projet personnalisé d'accès à l'emploi (PPAE)"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "La date d'effet de votre inscription débute le jour de l'enregistrement  par le téléconseiller Pôle emploi."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Une fois l'inscription enregistrée, votre espace personnel est créé automatiquement sur le site de Pôle emploi. Votre espace personnel Pôle emploi contient les documents suivants :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Attestation d'inscription (carte de demandeur d'emploi)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Avis de changement de situation"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Notice d'information sur vos droits et obligations"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Dans les 30 jours au plus tard suivant votre inscription, vous devez vous rendre à un entretien professionnel avec votre conseiller Pôle emploi."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous devez prendre un rendez-vous avec le conseiller de votre agence. Vous choisissez avec votre conseiller la date et l'heure de votre entretien."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Votre  "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F14926",
-                                        "type": "Fiche d'information",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "projet personnalisé d'accès à l'emploi (PPAE)"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " est préparé à partir de cet entretien."
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": " est préparé à partir de cet entretien."
                                 }
                               ]
                             }
@@ -1149,6 +1198,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T12626"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
@@ -1168,6 +1230,19 @@
                                   "text": "Inscription datant de moins de 6 mois"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12627"
+                              }
                             }
                           ]
                         },
@@ -1252,6 +1327,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R194",
+                            "sve": "non",
                             "type": "Local personnalisé sur SP"
                           },
                           "children": [
@@ -1390,7 +1466,7 @@
                               "name": "LienInterne",
                               "attributes": {
                                 "LienPublication": "F14860",
-                                "type": "Fiche d'information",
+                                "type": "Fiche d'information conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
@@ -1425,6 +1501,19 @@
                                   "text": "Inscription datant de plus de 6 mois"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12628"
+                              }
                             }
                           ]
                         },
@@ -1554,6 +1643,7 @@
                           "name": "OuSAdresser",
                           "attributes": {
                             "ID": "R194",
+                            "sve": "non",
                             "type": "Local personnalisé sur SP"
                           },
                           "children": [
@@ -1651,7 +1741,7 @@
                               "name": "LienInterne",
                               "attributes": {
                                 "LienPublication": "F14860",
-                                "type": "Fiche d'information",
+                                "type": "Fiche d'information conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
@@ -1728,6 +1818,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R194",
+            "sve": "non",
             "type": "Local personnalisé sur SP"
           },
           "children": [
@@ -1778,6 +1869,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R20839",
+            "sve": "non",
             "type": "Centre de contact"
           },
           "children": [
@@ -2236,6 +2328,19 @@
           "children": [
             {
               "type": "element",
+              "name": "Condition",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "estVrai",
+                  "attributes": {
+                    "var": "T12623"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "element",
               "name": "Titre",
               "children": [
                 {
@@ -2268,6 +2373,19 @@
             "type": "Téléservice"
           },
           "children": [
+            {
+              "type": "element",
+              "name": "Condition",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "estVrai",
+                  "attributes": {
+                    "var": "T12626"
+                  }
+                }
+              ]
+            },
             {
               "type": "element",
               "name": "Titre",

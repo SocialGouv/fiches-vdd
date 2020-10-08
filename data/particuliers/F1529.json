@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1529",
-        "type": "Fiche Question-réponse",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.0/Publication.xsd"
+        "type": "Fiche Question-réponse conditionnée",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1529"
       },
       "children": [
         {
@@ -240,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F1529",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -404,6 +405,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35175",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "A t-on droit au PTZ quand on est déjà propriétaire d'un logement ?"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "ListeSituations",
           "attributes": {
             "affichage": "onglet"
@@ -420,6 +447,19 @@
                     {
                       "type": "text",
                       "text": "Il s'agit de votre résidence principale"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10281"
+                      }
                     }
                   ]
                 },
@@ -444,6 +484,19 @@
                                   "text": "Nu-propriétaire ou usufruitier"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12242"
+                              }
                             }
                           ]
                         },
@@ -506,7 +559,7 @@
                               "name": "LienInterne",
                               "attributes": {
                                 "LienPublication": "F10871",
-                                "type": "Fiche d'information",
+                                "type": "Fiche d'information conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
@@ -585,6 +638,19 @@
                                   "text": "Handicap ou invalidité"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11252"
+                              }
                             }
                           ]
                         },
@@ -750,7 +816,7 @@
                               "name": "LienInterne",
                               "attributes": {
                                 "LienPublication": "F10871",
-                                "type": "Fiche d'information",
+                                "type": "Fiche d'information conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
@@ -834,6 +900,19 @@
                         },
                         {
                           "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12241"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
@@ -906,7 +985,7 @@
                                       "name": "LienInterne",
                                       "attributes": {
                                         "LienPublication": "F10871",
-                                        "type": "Fiche d'information",
+                                        "type": "Fiche d'information conditionnée",
                                         "audience": "Particuliers"
                                       },
                                       "children": [
@@ -994,6 +1073,19 @@
                         },
                         {
                           "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12243"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
@@ -1043,177 +1135,184 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10280"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Chapitre",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Si vous êtes propriétaire d'un logement qui n'est pas votre résidence principale, vous pouvez prétendre au PTZ."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "C'est notamment le cas si vous :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Item",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Si vous êtes propriétaire d'un logement qui n'est pas votre résidence principale, vous pouvez prétendre au PTZ."
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "êtes propriétaire d'une résidence secondaire,"
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Item",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "C'est notamment le cas si vous :"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "détenez des parts dans une "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "R38211",
+                                    "type": "Sigle"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "SCI"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ","
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Liste",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "ou êtes propriétaire d'un logement mis  en location."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Pour obtenir le PTZ, vous devez toutefois respecter les autres "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
                           "attributes": {
-                            "type": "puce"
+                            "LienPublication": "F10871",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
                           },
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "êtes propriétaire d'une résidence secondaire,"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "détenez des parts dans une "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "R38211",
-                                        "type": "Sigle"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "SCI"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": ","
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "ou êtes propriétaire d'un logement mis  en location."
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "text",
+                              "text": "critères d'attribution "
                             }
                           ]
                         },
                         {
+                          "type": "text",
+                          "text": ", notamment le plafond de ressources."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Pour savoir si vos revenus ne dépassent pas ce plafond, vous pouvez utiliser, à titre indicatif, ce simulateur :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ServiceEnLigne",
+                      "attributes": {
+                        "ID": "R2974",
+                        "URL": "https://www.anil.org/outils/outils-de-calcul/votre-pret-a-taux-zero/",
+                        "type": "Simulateur"
+                      },
+                      "children": [
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Titre",
                           "children": [
                             {
                               "type": "text",
-                              "text": "Pour obtenir le PTZ, vous devez toutefois respecter les autres "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F10871",
-                                "type": "Fiche d'information",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "critères d'attribution "
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": ", notamment le plafond de ressources."
+                              "text": "Simulateur - Prêt à taux zéro (PTZ)"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Pour savoir si vos revenus ne dépassent pas ce plafond, vous pouvez utiliser, à titre indicatif, ce simulateur :"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "ServiceEnLigne",
+                          "name": "Source",
                           "attributes": {
-                            "ID": "R2974",
-                            "URL": "https://www.anil.org/outils/outils-de-calcul/votre-pret-a-taux-zero/",
-                            "type": "Simulateur"
+                            "ID": "R30676"
                           },
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Simulateur - Prêt à taux zéro (PTZ)"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Source",
-                              "attributes": {
-                                "ID": "R30676"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Agence nationale pour l'information sur le logement (Anil)"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Agence nationale pour l'information sur le logement (Anil)"
                             }
                           ]
                         }
@@ -1278,6 +1377,7 @@
           "name": "OuSAdresser",
           "attributes": {
             "ID": "R5",
+            "sve": "non",
             "type": "Local personnalisé sur SP"
           },
           "children": [
