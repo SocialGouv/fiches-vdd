@@ -4,9 +4,9 @@ Fiches vos droits et démarches au format JSON, mises à jour quotidiennement
 
 | Dataset        | Url                                                                          |
 | -------------- | ---------------------------------------------------------------------------- |
-| particuliers   | https://lecomarquage.service-public.fr/vdd/3.0/part/zip/vosdroits-latest.zip |
-| professionnels | https://lecomarquage.service-public.fr/vdd/3.0/pro/zip/vosdroits-latest.zip  |
-| associations   | https://lecomarquage.service-public.fr/vdd/3.0/asso/zip/vosdroits-latest.zip |
+| particuliers   | https://lecomarquage.service-public.fr/vdd/3.3/part/zip/vosdroits-latest.zip |
+| professionnels | https://lecomarquage.service-public.fr/vdd/3.3/pro/zip/vosdroits-latest.zip  |
+| associations   | https://lecomarquage.service-public.fr/vdd/3.3/asso/zip/vosdroits-latest.zip |
 
 :warning: Le package contient toutes les fiches soit ~500Mo de JSON.
 
