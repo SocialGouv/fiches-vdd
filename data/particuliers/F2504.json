@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F2504",
-        "type": "Fiche Question-réponse",
+        "type": "Fiche Question-réponse conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F2504"
       },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2019-04-19"
+              "text": "modified 2020-10-23"
             }
           ]
         },
@@ -231,7 +231,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F2504",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -696,7 +696,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Salariés"
+                          "text": "Salarié"
                         }
                       ]
                     }
@@ -716,7 +716,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Salariés agricoles"
+                              "text": "Salarié de l'industrie, du commerce et des services"
                             }
                           ]
                         }
@@ -724,42 +724,87 @@
                     },
                     {
                       "type": "element",
-                      "name": "Tableau",
+                      "name": "FragmentConditionne",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "50",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "50",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "header"
-                          },
+                          "name": "Condition",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10313"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Tableau",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Retraites de base et complémentaire du  salarié du privé"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Colonne",
+                              "attributes": {
+                                "largeur": "65",
+                                "type": "normal"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "Colonne",
+                              "attributes": {
+                                "largeur": "57",
+                                "type": "normal"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "header"
+                              },
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Cellule",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Retraite de base"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Retraite de base"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Retraite complémentaire"
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -767,226 +812,78 @@
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Retraite complémentaire"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Mutualité sociale agricole - "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "MSA"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " (www.msa.fr)"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Cellule",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "MiseEnEvidence",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "LienExterne",
+                                              "attributes": {
+                                                "URL": "https://www.lassuranceretraite.fr/portail-info/accueil"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "L'Assurance retraite"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
                                           "type": "text",
-                                          "text": "Agirc-Arrco"
+                                          "text": " - régime général de la sécurité sociale"
                                         }
                                       ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " - Retraite complémentaire des salariés (www.agirc-arrco.fr)"
                                     }
                                   ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "SousChapitre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Salariés de l'industrie, du commerce et des services"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Tableau",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "50",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "50",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "header"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
+                                },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Retraite de base"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Retraite complémentaire"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Cellule",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "MiseEnEvidence",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "L'Assurance retraite"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " - régime général de la sécurité sociale (www.lassuranceretraite.fr)"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "LienExterne",
+                                              "attributes": {
+                                                "URL": "http://www.agirc-arrco.fr/"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Agirc-Arrco"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
                                         {
                                           "type": "text",
-                                          "text": "Agirc-Arrco"
+                                          "text": " - Retraite complémentaire des salariés"
                                         }
                                       ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " - Retraite complémentaire des salariés (www.agirc-arrco.fr)"
                                     }
                                   ]
                                 }
@@ -1012,9 +909,22 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Agents non titulaires de la fonction publique"
+                              "text": "Salarié agricole"
                             }
                           ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12701"
+                          }
                         }
                       ]
                     },
@@ -1024,9 +934,19 @@
                       "children": [
                         {
                           "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Retraites de base et complémentaire du salarié  agricole"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Colonne",
                           "attributes": {
-                            "largeur": "50",
+                            "largeur": "39",
                             "type": "normal"
                           }
                         },
@@ -1034,7 +954,7 @@
                           "type": "element",
                           "name": "Colonne",
                           "attributes": {
-                            "largeur": "50",
+                            "largeur": "57",
                             "type": "normal"
                           }
                         },
@@ -1099,14 +1019,23 @@
                                       "name": "MiseEnEvidence",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "L'Assurance retraite"
+                                          "type": "element",
+                                          "name": "LienExterne",
+                                          "attributes": {
+                                            "URL": "http://www.msa.fr"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "MSA"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
                                       "type": "text",
-                                      "text": " - régime général de la sécurité sociale (www.lassuranceretraite.fr)"
+                                      "text": " - Mutualité sociale agricole"
                                     }
                                   ]
                                 }
@@ -1125,14 +1054,23 @@
                                       "name": "MiseEnEvidence",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Ircantec"
+                                          "type": "element",
+                                          "name": "LienExterne",
+                                          "attributes": {
+                                            "URL": "http://www.agirc-arrco.fr/"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Agirc-Arrco"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
                                       "type": "text",
-                                      "text": " (www.ircantec.fr)"
+                                      "text": " - Retraite complémentaire des salariés"
                                     }
                                   ]
                                 }
@@ -1166,13 +1104,36 @@
                     },
                     {
                       "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12745"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "Tableau",
                       "children": [
                         {
                           "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Retraites de base et complémentaire des personnels naviguant de l'aéronautique civile"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Colonne",
                           "attributes": {
-                            "largeur": "50",
+                            "largeur": "65",
                             "type": "normal"
                           }
                         },
@@ -1180,7 +1141,7 @@
                           "type": "element",
                           "name": "Colonne",
                           "attributes": {
-                            "largeur": "50",
+                            "largeur": "27",
                             "type": "normal"
                           }
                         },
@@ -1245,14 +1206,23 @@
                                       "name": "MiseEnEvidence",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "L'Assurance retraite"
+                                          "type": "element",
+                                          "name": "LienExterne",
+                                          "attributes": {
+                                            "URL": "https://www.lassuranceretraite.fr/portail-info/accueil"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "L'Assurance retraite"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
                                       "type": "text",
-                                      "text": " - régime général de la sécurité sociale (www.lassuranceretraite.fr)"
+                                      "text": " - régime général de la sécurité sociale"
                                     }
                                   ]
                                 }
@@ -1304,7 +1274,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Salariés relevant d'entreprises ou de professions à statut particulier"
+                              "text": "Salarié relevant d'entreprises ou de professions à statut particulier"
                             }
                           ]
                         }
@@ -1312,58 +1282,125 @@
                     },
                     {
                       "type": "element",
-                      "name": "Tableau",
+                      "name": "Condition",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Colonne",
+                          "name": "estVrai",
                           "attributes": {
-                            "largeur": "50",
-                            "type": "normal"
+                            "var": "T12747"
                           }
-                        },
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
                         {
                           "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "50",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "header"
-                          },
+                          "name": "Item",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "MiseEnEvidence",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Retraite de base"
+                                      "text": "Banque de France"
                                     }
                                   ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " (www.bdfretraite.fr)"
                                 }
                               ]
-                            },
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "MiseEnEvidence",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Retraite complémentaire"
+                                      "text": "Retraite des mines"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " (www.retraitedesmines.fr) : concerne les agents des caisses régionales de sécurité sociale des mines ayant conservé leur affiliation au régime minier, les salariés des ex-Charbonnages de France, les salariés des employeurs miniers (mine de sel de Varangéville, mine de bauxite de Villeveyrac), les agents en congé charbonnier de fin de carrière ou en cessation anticipée d'activité et les anciens mineurs convertis ayant opté pour un maintien d'affiliation au régime minier"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse Nationale de retraite des Industries Electriques et Gazières - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "CNIEG"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "  (www.cnieg.fr)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse de retraites du personnel de la Comédie-Française - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "CRPCF"
                                     }
                                   ]
                                 }
@@ -1373,213 +1410,171 @@
                         },
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Item",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
-                              "attributes": {
-                                "fusionHorizontale": "2"
-                              },
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse de retraite et de prévoyance des clercs et employés de notaires - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "CRPCEN"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "  (www.crpcen.fr)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Régime social des marins "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Enim"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " (www.enim.eu)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse de retraites des personnels de l'Opéra national de Paris - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Cropera"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "  (www.cropera.fr)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "MiseEnEvidence",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Banque de France"
-                                        }
-                                      ]
-                                    },
+                                      "type": "text",
+                                      "text": "Port autonome de Strasbourg"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse de Retraites du Personnel RATP - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
                                     {
                                       "type": "text",
-                                      "text": " (www.bdfretraite.fr)"
+                                      "text": "CRP RATP"
                                     }
                                   ]
                                 },
                                 {
+                                  "type": "text",
+                                  "text": " (www.crpratp.fr)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse de prévoyance et de retraite du personnel de la SNCF - "
+                                },
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "MiseEnEvidence",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Retraite des mines"
-                                        }
-                                      ]
-                                    },
-                                    {
                                       "type": "text",
-                                      "text": " (www.retraitedesmines.fr)"
+                                      "text": "CPRPSNCF"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "CNIEG"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " Gaz - Élec (www.cnieg.fr)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "CRPCF"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " (Comédie française)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "CRPCEN"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " Clercs et employés de notaires (www.crpcen.fr)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Enim"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " Marins (www.enim.eu)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Cropera"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " Caisse de retraite des personnels de l'Opéra national de Paris (www.cropera.fr)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Port autonome de Strasbourg"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "CRP RATP"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " (www.crpratp.fr)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "CPRPSNCF"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " (www.cprpsncf.fr)"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": " (www.cprpsncf.fr)"
                                 }
                               ]
                             }
@@ -1605,7 +1600,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Fonctionnaires"
+                          "text": "Agent de la fonction publique"
                         }
                       ]
                     }
@@ -1625,7 +1620,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Fonctionnaires de l'État, magistrats, militaires"
+                              "text": "Fonctionnaire d'État, magistrat, militaire"
                             }
                           ]
                         }
@@ -1633,8 +1628,31 @@
                     },
                     {
                       "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T11233"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "Tableau",
                       "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Retraites de base et complémentaire des fonctionnaires de l’État, des magistrats et des militaires"
+                            }
+                          ]
+                        },
                         {
                           "type": "element",
                           "name": "Colonne",
@@ -1712,14 +1730,19 @@
                                       "name": "MiseEnEvidence",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Service des retraites de l’État"
+                                          "type": "element",
+                                          "name": "LienExterne",
+                                          "attributes": {
+                                            "URL": "https://retraitesdeletat.gouv.fr/"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Service des retraites de l’État - SRE"
+                                            }
+                                          ]
                                         }
                                       ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " (https://retraitesdeletat.gouv.fr)"
                                     }
                                   ]
                                 }
@@ -1738,14 +1761,23 @@
                                       "name": "MiseEnEvidence",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "RAFP"
+                                          "type": "element",
+                                          "name": "LienExterne",
+                                          "attributes": {
+                                            "URL": "http://www.rafp.fr"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "RAFP"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
                                       "type": "text",
-                                      "text": " - Retraite additionnelle (www.rafp.fr)"
+                                      "text": " - Retraite additionnelle"
                                     }
                                   ]
                                 }
@@ -1771,9 +1803,22 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Fonctionnaires en territoriale et hospitalière"
+                              "text": "Fonctionnaire territorial ou hospitalier"
                             }
                           ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T11234"
+                          }
                         }
                       ]
                     },
@@ -1783,9 +1828,19 @@
                       "children": [
                         {
                           "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Retraites de base et complémentaire des fonctionnaires territoriaux et hospitaliers"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Colonne",
                           "attributes": {
-                            "largeur": "50",
+                            "largeur": "77",
                             "type": "normal"
                           }
                         },
@@ -1793,7 +1848,7 @@
                           "type": "element",
                           "name": "Colonne",
                           "attributes": {
-                            "largeur": "50",
+                            "largeur": "35",
                             "type": "normal"
                           }
                         },
@@ -1858,14 +1913,23 @@
                                       "name": "MiseEnEvidence",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "CNRACL"
+                                          "type": "element",
+                                          "name": "LienExterne",
+                                          "attributes": {
+                                            "URL": "http://www.cnracl.fr"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "CNRACL"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
                                       "type": "text",
-                                      "text": " - Caisse de retraite des agents des collectivités locales (www.cnracl.fr)"
+                                      "text": " - Caisse nationale de retraite des agents des collectivités locales"
                                     }
                                   ]
                                 }
@@ -1884,14 +1948,23 @@
                                       "name": "MiseEnEvidence",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "RAFP"
+                                          "type": "element",
+                                          "name": "LienExterne",
+                                          "attributes": {
+                                            "URL": "http://www.rafp.fr"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "RAFP"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
                                       "type": "text",
-                                      "text": " - Retraite additionnelle (www.rafp.fr)"
+                                      "text": " - Retraite additionnelle"
                                     }
                                   ]
                                 }
@@ -1917,9 +1990,22 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Ouvriers de l'État"
+                              "text": "Agent contractuel"
                             }
                           ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10844"
+                          }
                         }
                       ]
                     },
@@ -1929,9 +2015,19 @@
                       "children": [
                         {
                           "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Retraites de base et complémentaire de l'agent contractuel de la fonction publique"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Colonne",
                           "attributes": {
-                            "largeur": "50",
+                            "largeur": "65",
                             "type": "normal"
                           }
                         },
@@ -1939,7 +2035,7 @@
                           "type": "element",
                           "name": "Colonne",
                           "attributes": {
-                            "largeur": "50",
+                            "largeur": "115",
                             "type": "normal"
                           }
                         },
@@ -1994,9 +2090,6 @@
                             {
                               "type": "element",
                               "name": "Cellule",
-                              "attributes": {
-                                "fusionHorizontale": "2"
-                              },
                               "children": [
                                 {
                                   "type": "element",
@@ -2007,20 +2100,123 @@
                                       "name": "MiseEnEvidence",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "FSPOEIE"
+                                          "type": "element",
+                                          "name": "LienExterne",
+                                          "attributes": {
+                                            "URL": "https://www.lassuranceretraite.fr/portail-info/accueil"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "L'Assurance retraite"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
                                       "type": "text",
-                                      "text": " - Fonds spécial des pensions des ouvriers des établissements industriels de l’État (www.fspoeie.fr)"
+                                      "text": " - régime général de la sécurité sociale"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cellule",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "LienExterne",
+                                          "attributes": {
+                                            "URL": "https://www.ircantec.retraites.fr/"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Ircantec"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " - Institution de retraite complémentaire des agents non titulaires de l'État et des collectivités publiques"
                                     }
                                   ]
                                 }
                               ]
                             }
                           ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "SousChapitre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Ouvrier de l'État"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12744"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Fonds spécial des pensions des ouvriers des établissements industriels de l'État - "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "FSPOEIE"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " (www.fspoeie.fr)"
                         }
                       ]
                     }
@@ -2042,7 +2238,99 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Non salariés"
+                          "text": "Non salarié"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "ou",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "ou",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12230"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "estIndefini",
+                              "attributes": {
+                                "var": "T12230"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ou",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12519"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "estIndefini",
+                              "attributes": {
+                                "var": "T12519"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ou",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12191"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "estIndefini",
+                              "attributes": {
+                                "var": "T12191"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ou",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12019"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "estIndefini",
+                              "attributes": {
+                                "var": "T12019"
+                              }
+                            }
+                          ]
                         }
                       ]
                     }
@@ -2062,7 +2350,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Exploitants agricoles"
+                              "text": "Exploitant agricole"
                             }
                           ]
                         }
@@ -2070,102 +2358,39 @@
                     },
                     {
                       "type": "element",
-                      "name": "Tableau",
+                      "name": "Condition",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Colonne",
+                          "name": "estVrai",
                           "attributes": {
-                            "largeur": "50",
-                            "type": "normal"
+                            "var": "T12230"
                           }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Mutualité sociale agricole - "
                         },
                         {
                           "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "50",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "header"
-                          },
+                          "name": "MiseEnEvidence",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Retraite de base"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Retraite complémentaire"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
+                              "name": "LienExterne",
                               "attributes": {
-                                "fusionHorizontale": "2"
+                                "URL": "http://www.msa.fr"
                               },
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Mutualité sociale agricole - "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "MSA"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " (www.msa.fr)"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "MSA"
                                 }
                               ]
                             }
@@ -2189,9 +2414,480 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Artisans, commerçants, industriels"
+                              "text": "Artisan, commerçant, industriel"
                             }
                           ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12519"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "LienExterne",
+                          "attributes": {
+                            "URL": "https://www.secu-independants.fr/"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Sécurité sociale pour les indépendants - SSI"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "SousChapitre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Profession libérale"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12191"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse nationale d'assurance vieillesse des professions libérales - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "CNAVPL"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "   (www.cnavpl.fr)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse de Prévoyance et de Retraite des Notaires  - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "CPRN"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "  (www.crn.fr)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse d'Assurance Vieillesse des Officiers Ministériels, des Officiers Publics et des Compagnies Judiciaires - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Cavom"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "  (www.cavom.org)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse Autonome de Retraite des Médecins de France - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "CARMF"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "(www.carmf.fr)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse Autonome de Retraite des Chirurgiens Dentiste et des Sages Femmes - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "CARCDSF"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "  (www.carcdsf.fr)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse d'assurance vieillesse des pharmaciens - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "CAVP"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "  (www.cavp.fr)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse autonome de retraite et de prévoyance des infirmiers, masseurs-kinesithérapeutes, pédicures-podologues, orthophonistes et orthoptistes - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Carpimko"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "  (www.carpimko)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse autonome de retraite et de prévoyance des vétérinaires - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "CARPV"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "  (www.carpv.fr)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse d'Allocation Vieillesse des Agents Généraux et des Mandataires non-salariés d'Assurance et de Capitalisation - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Cavamac"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " (www.cavamac.fr)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse d'assurance vieillesse des experts comptables et des commissaires aux comptes - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Cavec"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " (www.cavec.fr)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse interprofessionnelle de prévoyance et d'assurance vieillesse des professions libérales - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Cipav"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "  (www.cipav-retraite.fr)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Caisse Nationale des Barreaux Français - "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "CNBF"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "  (www.cnbf.fr)"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "SousChapitre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Artiste, auteur d'œuvres originales"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12019"
+                          }
                         }
                       ]
                     },
@@ -2201,9 +2897,19 @@
                       "children": [
                         {
                           "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Retraites de base et complémentaire des artiste et auteur"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Colonne",
                           "attributes": {
-                            "largeur": "50",
+                            "largeur": "65",
                             "type": "normal"
                           }
                         },
@@ -2211,7 +2917,7 @@
                           "type": "element",
                           "name": "Colonne",
                           "attributes": {
-                            "largeur": "50",
+                            "largeur": "27",
                             "type": "normal"
                           }
                         },
@@ -2266,9 +2972,6 @@
                             {
                               "type": "element",
                               "name": "Cellule",
-                              "attributes": {
-                                "fusionHorizontale": "2"
-                              },
                               "children": [
                                 {
                                   "type": "element",
@@ -2279,477 +2982,23 @@
                                       "name": "MiseEnEvidence",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Sécurité sociale pour les indépendants"
+                                          "type": "element",
+                                          "name": "LienExterne",
+                                          "attributes": {
+                                            "URL": "https://www.lassuranceretraite.fr/portail-info/accueil"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "L'Assurance retraite"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
                                       "type": "text",
-                                      "text": " (www.secu-independants.fr)"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "SousChapitre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Professions libérales"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Tableau",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "50",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "50",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "header"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Retraite de base"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Retraite complémentaire"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "attributes": {
-                                "fusionHorizontale": "2"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "CNAVPL"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " - Caisse nationale d'assurance vieillesse des professions libérales (www.cnavpl.fr)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "CPRN"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " - Notaires (www.crn.fr)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Cavom"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " - Officiers ministériels (www.cavom.org)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "CARMF"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " - Médecins (www.carmf.fr)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "CARCDSF"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " - Dentistes et sages-femmes (www.carcdsf.fr)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "CAVP"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " - Pharmaciens (www.cavp.fr)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Carpimko"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " - Auxiliaires médicaux (www.carpimko)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "CARPV"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " - Vétérinaires (www.carpv.fr)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Cavamac"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " - Agents d'assurance (www.cavamac.fr)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Cavec"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " - Experts-comptables (www.cavec.fr)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Cipav"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " - Professions libérales diverses (www.cipav-retraite.fr)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "CNBF"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " - Avocats - Caisse nationale des barreaux français (www.cnbf.fr)"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "SousChapitre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Artistes, auteurs d'œuvres originales"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Tableau",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "50",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "50",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "header"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Retraite de base"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Retraite complémentaire"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "L'Assurance retraite"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " - régime général de la sécurité sociale (www.lassuranceretraite.fr)"
+                                      "text": " - régime général de la sécurité sociale"
                                     }
                                   ]
                                 }
@@ -2801,9 +3050,22 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Patrons pêcheurs embarqués"
+                              "text": "Membre du culte"
                             }
                           ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12746"
+                          }
                         }
                       ]
                     },
@@ -2813,132 +3075,19 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "50",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "50",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "header"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Retraite de base"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Retraite complémentaire"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "attributes": {
-                                "fusionHorizontale": "2"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Enim"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "  (www.enim.eu)"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "SousChapitre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Titre",
                           "children": [
                             {
                               "type": "text",
-                              "text": "Membres du cultes"
+                              "text": "Retraites de base et complémentaire du  ministre du culte"
                             }
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Tableau",
-                      "children": [
+                        },
                         {
                           "type": "element",
                           "name": "Colonne",
                           "attributes": {
-                            "largeur": "50",
+                            "largeur": "90",
                             "type": "normal"
                           }
                         },
@@ -2946,7 +3095,7 @@
                           "type": "element",
                           "name": "Colonne",
                           "attributes": {
-                            "largeur": "50",
+                            "largeur": "57",
                             "type": "normal"
                           }
                         },
@@ -3037,14 +3186,23 @@
                                       "name": "MiseEnEvidence",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Agirc-Arrco"
+                                          "type": "element",
+                                          "name": "LienExterne",
+                                          "attributes": {
+                                            "URL": "http://www.agirc-arrco.fr/"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Agirc-Arrco"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
                                       "type": "text",
-                                      "text": " - Retraite complémentaire des salariés (www.agirc-arrco.fr)"
+                                      "text": " - Retraite complémentaire des salariés"
                                     }
                                   ]
                                 }
@@ -3203,8 +3361,8 @@
           "name": "PourEnSavoirPlus",
           "attributes": {
             "type": "Information pratique",
-            "ID": "R41808",
-            "URL": "http://www.agirc-arrco.fr/",
+            "ID": "R41374",
+            "URL": "http://www.msa.fr",
             "audience": "Particuliers"
           },
           "children": [
@@ -3214,7 +3372,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Site de l'Agirc-Arrco"
+                  "text": "Site de la Mutualité sociale agricole (MSA)"
                 }
               ]
             },
@@ -3222,12 +3380,47 @@
               "type": "element",
               "name": "Source",
               "attributes": {
-                "ID": "R30725"
+                "ID": "R30660"
               },
               "children": [
                 {
                   "type": "text",
-                  "text": "Agirc-Arrco"
+                  "text": "Caisse centrale de la mutualité sociale agricole (MSA)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "PourEnSavoirPlus",
+          "attributes": {
+            "type": "Information pratique",
+            "ID": "R41628",
+            "URL": "https://www.secu-independants.fr/",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Site de la Sécurité sociale des indépendants"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R30625"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "URSSAF"
                 }
               ]
             }
@@ -3298,6 +3491,41 @@
                 {
                   "type": "text",
                   "text": "Caisse nationale de retraite des agents des collectivités locales (CNRACL)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "PourEnSavoirPlus",
+          "attributes": {
+            "type": "Information pratique",
+            "ID": "R41808",
+            "URL": "http://www.agirc-arrco.fr/",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Site de l'Agirc-Arrco"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R30725"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Agirc-Arrco"
                 }
               ]
             }
