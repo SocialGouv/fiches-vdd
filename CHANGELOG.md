@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/SocialGouv/fiches-vdd/compare/v2.0.0...v2.0.1) (2020-11-06)
+
+
+### Bug Fixes
+
+* trigger patch release ([c0e8699](https://github.com/SocialGouv/fiches-vdd/commit/c0e8699e675587b9dcdaa3374277f4e93bfa8821))
+
 # [2.0.0](https://github.com/SocialGouv/fiches-vdd/compare/v1.199.0...v2.0.0) (2020-11-06)
 
 
