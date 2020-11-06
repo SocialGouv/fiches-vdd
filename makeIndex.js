@@ -33,6 +33,20 @@ const getFicheAriane = (data) => {
   );
 };
 
+const getFicheBreacrumbs = (data) => {
+  const fil = getFicheMeta(data, "FilDAriane");
+  return (
+    (fil &&
+      fil.children &&
+      fil.children.length &&
+      fil.children.map((c) => ({
+        id: c.attributes.ID,
+        text: c.children[0].text,
+      }))) ||
+    []
+  );
+};
+
 const makeIndex = () =>
   Object.keys(datasets).flatMap((key) => {
     const fiches = require(`./data/${key}/index.json`);
@@ -44,6 +58,7 @@ const makeIndex = () =>
         title: getFicheMetaText(data, "dc:title"),
         subject: getFicheMetaText(data, "dc:subject"),
         theme: getFicheAriane(data),
+        breadcrumbs: getFicheBreacrumbs(data),
         date: getFicheMetaText(data, "dc:date"),
       };
     });
