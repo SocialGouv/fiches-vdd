@@ -1,3 +1,11 @@
+# [2.4.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.3.0...v2.4.0) (2020-11-10)
+
+
+### Features
+
+* **data:** 20201110_0429 update ([3847e99](https://github.com/SocialGouv/fiches-vdd/commit/3847e997c6c471b8454a68e266647c49d9fbc2ed))
+* add index typings ([#146](https://github.com/SocialGouv/fiches-vdd/issues/146)) ([49bf810](https://github.com/SocialGouv/fiches-vdd/commit/49bf8109e5cee9aa5c0570896a60acc6463960bd))
+
 # [2.3.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.2.0...v2.3.0) (2020-11-09)
 
 
