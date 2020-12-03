@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1051",
-        "type": "Fiche d'information",
+        "type": "Fiche d'information conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1051"
       },
@@ -119,7 +119,7 @@
           "children": [
             {
               "type": "text",
-              "text": "https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000006149966&cidTexte=LEGITEXT000006070721, http://www.legifrance.gouv.fr/affichCode.do?idArticle=LEGIARTI000006420768&idSectionTA=LEGISCTA000006149969&cidTexte=LEGITEXT000006070721, https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000039059366&cidTexte=LEGITEXT000006071164, https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000036142130&cidTexte=LEGITEXT000006071164, http://circulaires.legifrance.gouv.fr/pdf/2018/06/cir_43683.pdf"
+              "text": "https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000006149966&cidTexte=LEGITEXT000006070721, http://www.legifrance.gouv.fr/affichCode.do?idArticle=LEGIARTI000006420768&idSectionTA=LEGISCTA000006149969&cidTexte=LEGITEXT000006070721, https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000039059366&cidTexte=LEGITEXT000006071164, https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000036142130&cidTexte=LEGITEXT000006071164, https://www.legifrance.gouv.fr/circulaire/id/43687, http://circulaires.legifrance.gouv.fr/pdf/2018/06/cir_43683.pdf"
             }
           ]
         },
@@ -241,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F1051",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -498,7 +498,7 @@
                     },
                     {
                       "type": "text",
-                      "text": " demande de titre d'identité sécurisé (carte d'identité ou passeport) ou pour postuler à un poste dans la fonction publique."
+                      "text": " demande de titre d'identité sécurisé (carte d'identité ou passeport) ou pour postuler à un emploi dans la fonction publique."
                     }
                   ]
                 },
@@ -571,45 +571,96 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Vous devez présenter la demande personnellement."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Si vous avez moins de 16 ans, vous devez être représenté par un parent."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "ASavoir",
+                  "name": "BlocCas",
+                  "attributes": {
+                    "affichage": "onglet"
+                  },
                   "children": [
                     {
                       "type": "element",
-                      "name": "Titre",
+                      "name": "Cas",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "À savoir"
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Pour un majeur"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous devez présenter la demande personnellement."
+                            }
+                          ]
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Cas",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "une personne sous tutelle doit être représentée par son tuteur mais une personne sous curatelle peut présenter sa demande elle-même."
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Pour un mineur"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous devez être représenté par un parent si vous avez moins de 16 ans."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cas",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Pour une personne sous tutelle ou curatelle"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Une personne sous tutelle doit être représentée par son tuteur."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Une personne sous curatelle peut présenter sa demande elle-même."
+                            }
+                          ]
                         }
                       ]
                     }
@@ -660,50 +711,69 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "La demande est à adresser par courrier ou à présenter en main propre au tribunal judiciaire ou de proximité."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "OuSAdresser",
-                          "attributes": {
-                            "ID": "R30",
-                            "sve": "non",
-                            "type": "Local"
-                          },
+                          "name": "FragmentConditionne",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Titre",
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Tribunal judiciaire ou de proximité"
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10576"
+                                  }
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "RessourceWeb",
-                              "attributes": {
-                                "URL": "https://www.justice.fr/recherche/annuaires"
-                              }
-                            },
-                            {
-                              "type": "element",
-                              "name": "Source",
-                              "attributes": {
-                                "ID": "R30663"
-                              },
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Ministère chargé de la justice"
+                                  "text": "La demande est à adresser par courrier ou à présenter en main propre au tribunal judiciaire ou de proximité."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "OuSAdresser",
+                              "attributes": {
+                                "ID": "R30",
+                                "sve": "non",
+                                "type": "Local"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Tribunal judiciaire ou de proximité"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "RessourceWeb",
+                                  "attributes": {
+                                    "URL": "https://www.justice.fr/recherche/annuaires"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30663"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Ministère chargé de la justice"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -722,6 +792,19 @@
                             {
                               "type": "text",
                               "text": "Vous vivez à l'étranger"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10580"
+                              }
                             }
                           ]
                         },
@@ -898,7 +981,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Vos parents sont étrangers"
+                              "text": "L'un de vos parents est français"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10330"
+                              }
                             }
                           ]
                         },
@@ -919,7 +1015,30 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Vous êtes devenu français(e) par naturalisation"
+                                      "text": "Parent devenu français avant votre majorité"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12868"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Si vous êtes devenu français(e) avant 18 ans, car un de vos parents est devenu français, vous devez présenter les documents suivants :"
                                     }
                                   ]
                                 },
@@ -988,7 +1107,7 @@
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "1 copie intégrale de votre acte de naissance. L'acte  doit être récent car un acte ancien ne permet pas de vérifier un éventuel changement de nationalité (jugement d'extranéité, renonciation à la nationalité française, etc.)."
+                                              "text": "1 copie intégrale de votre acte de naissance avec indication de votre filiation. L'acte doit être récent car un acte ancien ne permet pas de vérifier un éventuel changement de nationalité (jugement d'extranéité, renonciation à la nationalité française, etc.)."
                                             }
                                           ]
                                         }
@@ -1004,25 +1123,1099 @@
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Preuve de votre naturalisation :  "
-                                            },
+                                              "text": "1 copie intégrale de l'acte de naissance du parent qui vous a permis de devenir Français"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 copie intégrale de l'acte de mariage de vos parents ou, s'ils ne sont pas mariés, 1 copie intégrale de l'acte de reconnaissance prouvant votre filiation"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Preuve de l'acquisition de la nationalité française par le parent concerné :"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Liste",
+                                          "attributes": {
+                                            "type": "puce"
+                                          },
+                                          "children": [
                                             {
                                               "type": "element",
-                                              "name": "LienIntra",
-                                              "attributes": {
-                                                "LienID": "R1079",
-                                                "type": "Définition de glossaire"
-                                              },
+                                              "name": "Item",
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "text": "ampliation"
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "LienIntra",
+                                                      "attributes": {
+                                                        "LienID": "R1079",
+                                                        "type": "Définition de glossaire"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "ampliation"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "text",
+                                                      "text": " du décret ou exemplaire du Journal officiel où le décret de naturalisation a été publié ou attestation délivrée par le ministère chargé des naturalisations"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
+                                              "type": "element",
+                                              "name": "Item",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "ou copie de la "
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "LienInterne",
+                                                      "attributes": {
+                                                        "LienPublication": "F2726",
+                                                        "type": "Fiche d'information conditionnée",
+                                                        "audience": "Particuliers"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "déclaration de nationalité"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "text",
+                                                      "text": " portant mention de son enregistrement par le ministre compétent"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Cette liste est indicative."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " Des pièces supplémentaires peuvent être demandées pour prouver la nationalité (notamment des "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F18713",
+                                        "type": "Fiche Question-réponse",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "documents prouvant la possession d'état"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "). Renseignez-vous auprès du tribunal."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Les documents doivent être fournis en "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "original"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ". Les actes d'état civil établis à l'étranger doivent être "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F12956",
+                                        "type": "Fiche Question-réponse",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "traduits"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " et si nécessaire "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F1402",
+                                        "type": "Fiche d'information",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "légalisés"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Naissance à l'étranger d'1 ou 2 parent(s) français"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12869"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Liste",
+                                  "attributes": {
+                                    "type": "puce"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
                                               "type": "text",
-                                              "text": " du décret ou exemplaire du Journal officiel où le décret de naturalisation a été publié ou attestation délivrée par le ministère chargé des naturalisations (sauf mention du décret sur l'acte de naissance)"
+                                              "text": "1 photo d'identité"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 justificatif d'identité (carte nationale d'identité, passeport, permis de conduire, etc.)"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 justificatif de domicile (facture récente d'électricité, contrat de location, avis d'imposition, etc.)"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 copie intégrale de votre acte de naissance avec indication de votre filiation. L'acte doit être récent car un acte ancien ne permet pas de vérifier un éventuel changement de nationalité (jugement d'extranéité, renonciation à la nationalité française, etc.)."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 copie intégrale de l'acte de naissance de votre parent français."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 copie intégrale de l'acte de mariage de vos parents ou, s'ils ne sont pas mariés, 1 copie intégrale de l'acte de reconnaissance prouvant votre filiation"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Cette liste est indicative."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " Des pièces supplémentaires peuvent être demandées pour prouver la nationalité (notamment des "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F18713",
+                                        "type": "Fiche Question-réponse",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "documents prouvant la possession d'état"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "). Renseignez-vous auprès du tribunal."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Les documents doivent être fournis en "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "original"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ". Les actes d'état civil établis à l'étranger doivent être "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F12956",
+                                        "type": "Fiche Question-réponse",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "traduits"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " et si nécessaire "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F1402",
+                                        "type": "Fiche d'information",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "légalisés"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Naissance en France d'1 ou 2 parent(s) français et né(s) à l'étranger"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12870"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Liste",
+                                  "attributes": {
+                                    "type": "puce"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 photo d'identité"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 justificatif d'identité (carte nationale d'identité, passeport, permis de conduire, etc.)"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 justificatif de domicile (facture récente d'électricité, contrat de location, avis d'imposition, etc.)"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 copie intégrale de votre acte de naissance avec indication de votre filiation. L'acte doit être récent car un acte ancien ne permet pas de vérifier un éventuel changement de nationalité (jugement d'extranéité, renonciation à la nationalité française, etc.)."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 copie intégrale de l'acte de naissance de chacun de vos parents français"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 copie intégrale de l'acte de mariage de vos parents ou, s'ils ne sont pas mariés, 1 copie intégrale de l'acte de reconnaissance prouvant votre filiation"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Cette liste est indicative."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " Des pièces supplémentaires peuvent être demandées pour prouver la nationalité (notamment des "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F18713",
+                                        "type": "Fiche Question-réponse",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "documents prouvant la possession d'état"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "). Renseignez-vous auprès du tribunal."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Les documents doivent être fournis en "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "original"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ". Les actes d'état civil établis à l'étranger doivent être "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F12956",
+                                        "type": "Fiche Question-réponse",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "traduits"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " et si nécessaire "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F1402",
+                                        "type": "Fiche d'information",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "légalisés"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Naissance en France d'1 ou de 2 parent(s) né(s) en France"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12871"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Liste",
+                                  "attributes": {
+                                    "type": "puce"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 photo d'identité"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 justificatif d'identité (carte nationale d'identité, passeport, permis de conduire, etc.)"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 justificatif de domicile (facture récente d'électricité, contrat de location, avis d'imposition, etc.)"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 copie intégrale de votre acte de naissance avec indication de votre filiation. L'acte doit être récent car un acte ancien ne permet pas de vérifier un éventuel changement de nationalité (jugement d'extranéité, renonciation à la nationalité française, etc.)."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 copie intégrale de l'acte de naissance de chacun de vos parents français"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 copie intégrale de l'acte de mariage de vos parents ou, s'ils ne sont pas mariés, 1 copie intégrale de l'acte de reconnaissance prouvant votre filiation."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Cette liste est indicative."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " Des pièces supplémentaires peuvent être demandées pour prouver la nationalité (notamment des "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F18713",
+                                        "type": "Fiche Question-réponse",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "documents prouvant la possession d'état"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "). Renseignez-vous auprès du tribunal."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Les documents doivent être fournis en "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "original"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ". Les actes d'état civil établis à l'étranger doivent être "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F12956",
+                                        "type": "Fiche Question-réponse",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "traduits"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " et si nécessaire "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F1402",
+                                        "type": "Fiche d'information",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "légalisés"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cas",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vos parents sont étrangers"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10632"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "BlocCas",
+                          "attributes": {
+                            "affichage": "radio"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous êtes devenu français(e) par naturalisation"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "FragmentConditionne",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T12872"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Liste",
+                                      "attributes": {
+                                        "type": "puce"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Item",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "1 photo d'identité"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Item",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "1 justificatif d'identité (carte nationale d'identité, passeport, permis de conduire, etc.)"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Item",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "1 justificatif de domicile (facture récente d'électricité, contrat de location, avis d'imposition, etc.)"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Item",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "1 copie intégrale de votre acte de naissance. L'acte  doit être récent car un acte ancien ne permet pas de vérifier un éventuel changement de nationalité (jugement d'extranéité, renonciation à la nationalité française, etc.)."
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Item",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Preuve de votre naturalisation :  "
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "LienIntra",
+                                                  "attributes": {
+                                                    "LienID": "R1079",
+                                                    "type": "Définition de glossaire"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "ampliation"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "text": " du décret ou exemplaire du Journal officiel où le décret de naturalisation a été publié ou attestation délivrée par le ministère chargé des naturalisations (sauf mention du décret sur l'acte de naissance)"
+                                                }
+                                              ]
                                             }
                                           ]
                                         }
@@ -1144,6 +2337,19 @@
                                     {
                                       "type": "text",
                                       "text": "Vous êtes devenu français(e) par mariage"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12874"
+                                      }
                                     }
                                   ]
                                 },
@@ -1370,6 +2576,19 @@
                                 },
                                 {
                                   "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12875"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
                                   "name": "Paragraphe",
                                   "children": [
                                     {
@@ -1581,6 +2800,19 @@
                                     {
                                       "type": "text",
                                       "text": "Naissance en France d'1 ou de 2 parent(s) né(s) en France"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12876"
+                                      }
                                     }
                                   ]
                                 },
@@ -2016,1019 +3248,6 @@
                           ]
                         }
                       ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Cas",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "L'un de vos parents est français"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "BlocCas",
-                          "attributes": {
-                            "affichage": "radio"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cas",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Parent devenu français avant votre majorité"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous êtes devenu français(e) avant 18 ans car un de vos parents est devenu français :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 photo d'identité"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 justificatif d'identité (carte nationale d'identité, passeport, permis de conduire, etc.)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 justificatif de domicile (facture récente d'électricité, contrat de location, avis d'imposition, etc.)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 copie intégrale de votre acte de naissance avec indication de votre filiation. L'acte doit être récent car un acte ancien ne permet pas de vérifier un éventuel changement de nationalité (jugement d'extranéité, renonciation à la nationalité française, etc.)."
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 copie intégrale de l'acte de naissance du parent qui vous a permis de devenir Français"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 copie intégrale de l'acte de mariage de vos parents ou, s'ils ne sont pas mariés, 1 copie intégrale de l'acte de reconnaissance prouvant votre filiation"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Preuve de l'acquisition de la nationalité française par le parent concerné :"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Liste",
-                                          "attributes": {
-                                            "type": "puce"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Item",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "element",
-                                                      "name": "LienIntra",
-                                                      "attributes": {
-                                                        "LienID": "R1079",
-                                                        "type": "Définition de glossaire"
-                                                      },
-                                                      "children": [
-                                                        {
-                                                          "type": "text",
-                                                          "text": "ampliation"
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "type": "text",
-                                                      "text": " du décret ou exemplaire du Journal officiel où le décret de naturalisation a été publié ou attestation délivrée par le ministère chargé des naturalisations"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Item",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "ou copie de la "
-                                                    },
-                                                    {
-                                                      "type": "element",
-                                                      "name": "LienInterne",
-                                                      "attributes": {
-                                                        "LienPublication": "F2726",
-                                                        "type": "Fiche d'information conditionnée",
-                                                        "audience": "Particuliers"
-                                                      },
-                                                      "children": [
-                                                        {
-                                                          "type": "text",
-                                                          "text": "déclaration de nationalité"
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "type": "text",
-                                                      "text": " portant mention de son enregistrement par le ministre compétent"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Cette liste est indicative."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " Des pièces supplémentaires peuvent être demandées pour prouver la nationalité (notamment des "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F18713",
-                                        "type": "Fiche Question-réponse",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "documents prouvant la possession d'état"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "). Renseignez-vous auprès du tribunal."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Les documents doivent être fournis en "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "original"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": ". Les actes d'état civil établis à l'étranger doivent être "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F12956",
-                                        "type": "Fiche Question-réponse",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "traduits"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " et si nécessaire "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F1402",
-                                        "type": "Fiche d'information",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "légalisés"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cas",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Naissance à l'étranger d'1 ou 2 parent(s) français"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 photo d'identité"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 justificatif d'identité (carte nationale d'identité, passeport, permis de conduire, etc.)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 justificatif de domicile (facture récente d'électricité, contrat de location, avis d'imposition, etc.)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 copie intégrale de votre acte de naissance avec indication de votre filiation. L'acte doit être récent car un acte ancien ne permet pas de vérifier un éventuel changement de nationalité (jugement d'extranéité, renonciation à la nationalité française, etc.)."
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 copie intégrale de l'acte de naissance de votre parent français."
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 copie intégrale de l'acte de mariage de vos parents ou, s'ils ne sont pas mariés, 1 copie intégrale de l'acte de reconnaissance prouvant votre filiation"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Cette liste est indicative."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " Des pièces supplémentaires peuvent être demandées pour prouver la nationalité (notamment des "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F18713",
-                                        "type": "Fiche Question-réponse",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "documents prouvant la possession d'état"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "). Renseignez-vous auprès du tribunal."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Les documents doivent être fournis en "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "original"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": ". Les actes d'état civil établis à l'étranger doivent être "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F12956",
-                                        "type": "Fiche Question-réponse",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "traduits"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " et si nécessaire "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F1402",
-                                        "type": "Fiche d'information",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "légalisés"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cas",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Naissance en France d'1 ou 2 parent(s) français et né(s) à l'étranger"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 photo d'identité"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 justificatif d'identité (carte nationale d'identité, passeport, permis de conduire, etc.)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 justificatif de domicile (facture récente d'électricité, contrat de location, avis d'imposition, etc.)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 copie intégrale de votre acte de naissance avec indication de votre filiation. L'acte doit être récent car un acte ancien ne permet pas de vérifier un éventuel changement de nationalité (jugement d'extranéité, renonciation à la nationalité française, etc.)."
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 copie intégrale de l'acte de naissance de chacun de vos parents français"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 copie intégrale de l'acte de mariage de vos parents ou, s'ils ne sont pas mariés, 1 copie intégrale de l'acte de reconnaissance prouvant votre filiation"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Cette liste est indicative."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " Des pièces supplémentaires peuvent être demandées pour prouver la nationalité (notamment des "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F18713",
-                                        "type": "Fiche Question-réponse",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "documents prouvant la possession d'état"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "). Renseignez-vous auprès du tribunal."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Les documents doivent être fournis en "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "original"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": ". Les actes d'état civil établis à l'étranger doivent être "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F12956",
-                                        "type": "Fiche Question-réponse",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "traduits"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " et si nécessaire "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F1402",
-                                        "type": "Fiche d'information",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "légalisés"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cas",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Naissance en France d'1 ou de 2 parent(s) né(s) en France"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 photo d'identité"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 justificatif d'identité (carte nationale d'identité, passeport, permis de conduire, etc.)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 justificatif de domicile (facture récente d'électricité, contrat de location, avis d'imposition, etc.)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 copie intégrale de votre acte de naissance avec indication de votre filiation. L'acte doit être récent car un acte ancien ne permet pas de vérifier un éventuel changement de nationalité (jugement d'extranéité, renonciation à la nationalité française, etc.)."
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 copie intégrale de l'acte de naissance de chacun de vos parents français"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 copie intégrale de l'acte de mariage de vos parents ou, s'ils ne sont pas mariés, 1 copie intégrale de l'acte de reconnaissance prouvant votre filiation."
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Cette liste est indicative."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " Des pièces supplémentaires peuvent être demandées pour prouver la nationalité (notamment des "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F18713",
-                                        "type": "Fiche Question-réponse",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "documents prouvant la possession d'état"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "). Renseignez-vous auprès du tribunal."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Les documents doivent être fournis en "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "original"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": ". Les actes d'état civil établis à l'étranger doivent être "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F12956",
-                                        "type": "Fiche Question-réponse",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "traduits"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " et si nécessaire "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F1402",
-                                        "type": "Fiche d'information",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "légalisés"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
                     }
                   ]
                 }
@@ -3298,7 +3517,7 @@
                     },
                     {
                       "type": "text",
-                      "text": " devant le ministère de la justice et/ou un recours contentieux devant le tribunal. Ces 2 recours ne sont soumis à aucun délai."
+                      "text": " devant le ministère de la justice et/ou un recours contentieux devant le tribunal. Il n'y a pas de délai pour faire ces 2 recours."
                     }
                   ]
                 },
@@ -3394,251 +3613,70 @@
                     },
                     {
                       "type": "element",
-                      "name": "BlocCas",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous pouvez faire un recours devant le tribunal judiciaire ou de proximité."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous devez obligatoirement être représenté par un avocat."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "OuSAdresser",
                       "attributes": {
-                        "affichage": "onglet"
+                        "ID": "R14218",
+                        "sve": "non",
+                        "type": "Local personnalisable"
                       },
                       "children": [
                         {
                           "type": "element",
-                          "name": "Cas",
+                          "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous habitez en France"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous pouvez faire un recours devant le tribunal judiciaire ou de proximité."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devez obligatoirement être représenté par un avocat."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "OuSAdresser",
-                              "attributes": {
-                                "ID": "R30",
-                                "sve": "non",
-                                "type": "Local"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Tribunal judiciaire ou de proximité"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "RessourceWeb",
-                                  "attributes": {
-                                    "URL": "https://www.justice.fr/recherche/annuaires"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Source",
-                                  "attributes": {
-                                    "ID": "R30663"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Ministère chargé de la justice"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "OuSAdresser",
-                              "attributes": {
-                                "ID": "R14218",
-                                "sve": "non",
-                                "type": "Local personnalisable"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Avocat"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "PivotLocal",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "avocat_conseil_national"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "RessourceWeb",
-                                  "attributes": {
-                                    "URL": "http://cnb.avocat.fr/Trouver-un-avocat-en-France_a341.html"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Source",
-                                  "attributes": {
-                                    "ID": "R30762"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Conseil national des barreaux"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Avocat"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Cas",
+                          "name": "PivotLocal",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous habitez à l'étranger"
-                                }
-                              ]
-                            },
+                              "type": "text",
+                              "text": "avocat_conseil_national"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "RessourceWeb",
+                          "attributes": {
+                            "URL": "http://cnb.avocat.fr/Trouver-un-avocat-en-France_a341.html"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "Source",
+                          "attributes": {
+                            "ID": "R30762"
+                          },
+                          "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous pouvez faire un recours devant le tribunal  de Paris."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devez être obligatoirement représenté par un avocat."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "OuSAdresser",
-                              "attributes": {
-                                "ID": "R43337",
-                                "sve": "non",
-                                "type": "Local"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Tribunal judiciaire de Paris"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "RessourceWeb",
-                                  "attributes": {
-                                    "URL": "https://lannuaire.service-public.fr/ile-de-france/paris/tgi-75117-01"
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "OuSAdresser",
-                              "attributes": {
-                                "ID": "R14218",
-                                "sve": "non",
-                                "type": "Local personnalisable"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Avocat"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "PivotLocal",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "avocat_conseil_national"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "RessourceWeb",
-                                  "attributes": {
-                                    "URL": "http://cnb.avocat.fr/Trouver-un-avocat-en-France_a341.html"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Source",
-                                  "attributes": {
-                                    "ID": "R30762"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Conseil national des barreaux"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Conseil national des barreaux"
                             }
                           ]
                         }
@@ -3904,6 +3942,27 @@
                 {
                   "type": "text",
                   "text": "Tribunaux compétents"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Reference",
+          "attributes": {
+            "type": "Texte de référence",
+            "URL": "https://www.legifrance.gouv.fr/circulaire/id/43687",
+            "ID": "R57640"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Circulaire du 24 décembre 1998 relative à l'amélioration des conditions de délivrance des certificats de nationalité française"
                 }
               ]
             }
