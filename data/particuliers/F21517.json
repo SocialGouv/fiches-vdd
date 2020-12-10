@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F21517",
-        "type": "Fiche Question-réponse",
+        "type": "Fiche Question-réponse conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F21517"
       },
@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "En principe, vous ne pouvez pas avoir plusieurs passeports français. Toutefois, un second passeport peut exceptionnellement être délivré dans 2 situations : si votre passeport est immobilisé pendant une période de voyage ou si le passeport risque de faire apparaître des destinations incompatibles."
+              "text": "En principe, vous ne pouvez pas avoir plusieurs passeports français. Toutefois, un second passeport peut exceptionnellement être délivré dans 2"
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2019-06-20"
+              "text": "modified 2020-12-09"
             }
           ]
         },
@@ -231,7 +231,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F21517",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -463,12 +463,25 @@
         },
         {
           "type": "element",
-          "name": "Introduction",
+          "name": "Texte",
           "children": [
             {
               "type": "element",
-              "name": "Texte",
+              "name": "FragmentConditionne",
               "children": [
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10010"
+                      }
+                    }
+                  ]
+                },
                 {
                   "type": "element",
                   "name": "Paragraphe",
@@ -501,6 +514,19 @@
                     {
                       "type": "text",
                       "text": "Voyages professionnels rapprochés"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10652"
+                      }
                     }
                   ]
                 },
@@ -601,6 +627,19 @@
                                 {
                                   "type": "text",
                                   "text": "En France"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10576"
+                                  }
                                 }
                               ]
                             },
@@ -795,6 +834,19 @@
                             },
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10580"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "OuSAdresser",
                               "attributes": {
                                 "ID": "R2750",
@@ -850,6 +902,19 @@
                     {
                       "type": "text",
                       "text": "Destinations incompatibles"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10653"
+                      }
                     }
                   ]
                 },
@@ -950,6 +1015,19 @@
                                 {
                                   "type": "text",
                                   "text": "En France"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10576"
+                                  }
                                 }
                               ]
                             },
