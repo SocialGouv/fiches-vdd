@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F32794",
-        "type": "Fiche Question-réponse",
+        "type": "Fiche Question-réponse conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "dateDerniereModificationImportante": "2020-11-13T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F32794"
@@ -80,7 +80,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2020-11-18"
+              "text": "modified 2020-12-17"
             }
           ]
         },
@@ -242,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F32794",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -397,53 +397,98 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35540",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "utilisation Apa ou PCH"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "Texte",
           "children": [
             {
               "type": "element",
-              "name": "Paragraphe",
+              "name": "FragmentConditionne",
               "children": [
                 {
-                  "type": "text",
-                  "text": "Si vous percevez "
-                },
-                {
                   "type": "element",
-                  "name": "LienInterne",
-                  "attributes": {
-                    "LienPublication": "F10009",
-                    "type": "Fiche d'information conditionnée",
-                    "audience": "Particuliers"
-                  },
+                  "name": "Condition",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "l'allocation personnalisée d'autonomie (Apa)"
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10010"
+                      }
                     }
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": " ou la "
-                },
-                {
                   "type": "element",
-                  "name": "LienInterne",
-                  "attributes": {
-                    "LienPublication": "F14202",
-                    "type": "Fiche d'information conditionnée",
-                    "audience": "Particuliers"
-                  },
+                  "name": "Paragraphe",
                   "children": [
                     {
                       "type": "text",
-                      "text": "prestation de compensation du handicap (PCH)"
+                      "text": "Si vous percevez "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienInterne",
+                      "attributes": {
+                        "LienPublication": "F10009",
+                        "type": "Fiche d'information conditionnée",
+                        "audience": "Particuliers"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "l'allocation personnalisée d'autonomie (Apa)"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " ou la "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienInterne",
+                      "attributes": {
+                        "LienPublication": "F14202",
+                        "type": "Fiche d'information conditionnée",
+                        "audience": "Particuliers"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "prestation de compensation du handicap (PCH)"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ", vous pouvez les utiliser, sous conditions, pour rémunérer une aide à domicile (en emploi direct ou par le biais d'un prestataire de services) ou pour dédommager un  aidant familial."
                     }
                   ]
-                },
-                {
-                  "type": "text",
-                  "text": ", vous pouvez les utiliser, sous conditions, pour rémunérer une aide à domicile (en emploi direct ou par le biais d'un prestataire de services) ou pour dédommager un  aidant familial."
                 }
               ]
             }
@@ -467,6 +512,19 @@
                     {
                       "type": "text",
                       "text": "Vous touchez l'Apa"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T12921"
+                      }
                     }
                   ]
                 },
@@ -626,12 +684,38 @@
                 },
                 {
                   "type": "element",
-                  "name": "Introduction",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Texte",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T12922"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "FragmentConditionne",
                       "children": [
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10010"
+                              }
+                            }
+                          ]
+                        },
                         {
                           "type": "element",
                           "name": "Paragraphe",
@@ -643,13 +727,7 @@
                           ]
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Texte",
-                  "children": [
+                    },
                     {
                       "type": "element",
                       "name": "BlocCas",
@@ -668,6 +746,19 @@
                                 {
                                   "type": "text",
                                   "text": "Rémunérer une aide à domicile"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12923"
+                                  }
                                 }
                               ]
                             },
@@ -911,6 +1002,19 @@
                             },
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12924"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
@@ -966,6 +1070,19 @@
                                 {
                                   "type": "text",
                                   "text": "Dédommager un aidant familial"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11416"
+                                  }
                                 }
                               ]
                             },
