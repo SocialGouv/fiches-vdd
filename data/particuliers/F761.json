@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F761",
-        "type": "Fiche d'information",
+        "type": "Fiche d'information conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F761"
       },
@@ -241,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F761",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -442,7 +442,7 @@
                     },
                     {
                       "type": "text",
-                      "text": "."
+                      "text": " : c'est l'hospitalisation d'office (HO) ou l'hospitalisation à la demande d'un tiers (HDT)"
                     }
                   ]
                 }
@@ -467,7 +467,20 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Sans consentement du malade"
+                      "text": "Hospitalisation sous contrainte"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T13046"
+                      }
                     }
                   ]
                 },
@@ -956,6 +969,19 @@
                         },
                         {
                           "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T13049"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "SousChapitre",
                           "children": [
                             {
@@ -1201,9 +1227,22 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Hospitalisation à la demande du préfet"
+                                  "text": "Grave atteinte à l'ordre public"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T13047"
+                              }
                             }
                           ]
                         },
@@ -1593,7 +1632,20 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Avec consentement du malade"
+                      "text": "Hospitalisation avec consentement du malade"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T13045"
+                      }
                     }
                   ]
                 },
