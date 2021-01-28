@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1228",
-        "type": "Fiche d'information",
+        "type": "Fiche d'information conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "dateDerniereModificationImportante": "2021-01-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1228"
@@ -242,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F1228",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -860,6 +860,58 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "et",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "ou",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": ""
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "estIndefini",
+                              "attributes": {
+                                "var": ""
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ou",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10313"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "estIndefini",
+                              "attributes": {
+                                "var": "T10313"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "BlocCas",
                   "attributes": {
                     "affichage": "onglet"
@@ -876,6 +928,19 @@
                             {
                               "type": "text",
                               "text": "Avant 26 ans"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T13114"
+                              }
                             }
                           ]
                         },
@@ -1012,6 +1077,19 @@
                         },
                         {
                           "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T13125"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
@@ -1114,9 +1192,22 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Revenus d'une activité non salariée"
+                          "text": "Revenus d'une activité indépendante"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10843"
+                      }
                     }
                   ]
                 },
@@ -1179,6 +1270,19 @@
                           "text": "Bourses et allocations"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T13127"
+                      }
                     }
                   ]
                 },
@@ -1475,6 +1579,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11211"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Paragraphe",
                   "children": [
                     {
@@ -1516,6 +1633,19 @@
                           "text": "Sommes liées au service national, au service civique et au volontariat"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11786"
+                      }
                     }
                   ]
                 },
