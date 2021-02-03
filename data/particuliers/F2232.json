@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F2232",
-        "type": "Fiche d'information",
+        "type": "Fiche d'information conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "dateDerniereModificationImportante": "2020-05-12T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F2232"
@@ -242,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F2232",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -490,6 +490,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35534",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Demande d'asile"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "ListeSituations",
           "attributes": {
             "affichage": "onglet"
@@ -506,6 +532,19 @@
                     {
                       "type": "text",
                       "text": "Depuis la frontière"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10010"
+                      }
                     }
                   ]
                 },
@@ -5845,6 +5884,19 @@
                     {
                       "type": "text",
                       "text": "En France"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10576"
+                      }
                     }
                   ]
                 },

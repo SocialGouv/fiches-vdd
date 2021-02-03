@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F33952",
-        "type": "Fiche d'information",
+        "type": "Fiche d'information conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "dateDerniereModificationImportante": "2021-01-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F33952"
@@ -242,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F33952",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -813,139 +813,6 @@
         },
         {
           "type": "element",
-          "name": "Avertissement",
-          "attributes": {
-            "ID": "R55782",
-            "date": "2020-09-24"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Coronavirus / Covid-19 : prolongation de la validité des titres de séjour"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Texte",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "En raison de la pandémie de  Covid-19, la durée de validité des documents de séjour arrivés  à échéance entre  le 16 mars et le 15 juin 2020 a été  prolongée de "
-                    },
-                    {
-                      "type": "element",
-                      "name": "MiseEnEvidence",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "6 mois"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": ". Cette mesure concerne :"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Liste",
-                  "attributes": {
-                    "type": "puce"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Visas de long séjour"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Tous titres de séjour (sauf titres spéciaux délivrés au personnel diplomatique et consulaire étranger)"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Autorisations provisoires de séjour"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Récépissés de demandes de titres de séjour"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Cette prolongation est automatique. Elle prolonge également les droits sociaux et le droit au travail."
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
           "name": "Introduction",
           "children": [
             {
@@ -987,6 +854,32 @@
                     {
                       "type": "text",
                       "text": " suffit."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35600",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Étranger en France : carte de séjour pluriannuelle - salarié détaché ICT"
                     }
                   ]
                 }
@@ -1131,6 +1024,19 @@
                       "type": "element",
                       "name": "Item",
                       "children": [
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10010"
+                              }
+                            }
+                          ]
+                        },
                         {
                           "type": "element",
                           "name": "Paragraphe",
@@ -1328,44 +1234,63 @@
                 },
                 {
                   "type": "element",
-                  "name": "Attention",
+                  "name": "FragmentConditionne",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Titre",
+                      "name": "Condition",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Attention"
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10010"
+                          }
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Attention",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "d'autres règles s'appliquent si vous êtes "
-                        },
-                        {
                           "type": "element",
-                          "name": "LienInterne",
-                          "attributes": {
-                            "LienPublication": "F2215",
-                            "type": "Fiche d'information",
-                            "audience": "Particuliers"
-                          },
+                          "name": "Titre",
                           "children": [
                             {
                               "type": "text",
-                              "text": "algérien"
+                              "text": "Attention"
                             }
                           ]
                         },
                         {
-                          "type": "text",
-                          "text": ". Si vous êtes européen, vous n'avez pas besoin de titre de séjour."
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "d'autres règles s'appliquent si vous êtes "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "F2215",
+                                "type": "Fiche d'information conditionnée",
+                                "audience": "Particuliers"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Algérien"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ". Si vous êtes Européen, vous n'avez pas besoin de titre de séjour."
+                            }
+                          ]
                         }
                       ]
                     }
@@ -1411,6 +1336,19 @@
                             {
                               "type": "text",
                               "text": "Vous habitez à l'étranger"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10580"
+                              }
                             }
                           ]
                         },
@@ -1508,6 +1446,19 @@
                             {
                               "type": "text",
                               "text": "Vous habitez en France"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10576"
+                              }
                             }
                           ]
                         },
@@ -1915,7 +1866,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "cerfa n°15619*01"
+                                  "text": "cerfa n°15619"
                                 }
                               ]
                             },
@@ -1999,7 +1950,23 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Diplômes correspondant aux fonctions de cadre ou d'expert"
+                              "text": "Justificatif de votre ancienneté  depuis minimum 3 mois consécutifs dans le groupe qui vous détache"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Justificatifs que vous possédez les qualifications professionnelles et l'expérience nécessaires pour occuper les fonctions de cadre ou d'expert"
                             }
                           ]
                         }
