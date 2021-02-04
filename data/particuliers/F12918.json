@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F12918",
-        "type": "Fiche d'information",
+        "type": "Fiche d'information conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "dateDerniereModificationImportante": "2021-02-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F12918"
@@ -242,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F12918",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -834,6 +834,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35616",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Fourrières : quelles règles dans votre département ?"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "ListeSituations",
           "attributes": {
             "affichage": "onglet"
@@ -855,65 +881,97 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11902"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Les règles présentées ici s'appliquent aux "
-                        },
-                        {
-                          "type": "element",
-                          "name": "MiseEnEvidence",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "véhicules entrés en fourrière :"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
+                      "name": "FragmentConditionne",
                       "children": [
                         {
                           "type": "element",
-                          "name": "MiseEnEvidence",
+                          "name": "Condition",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "- Depuis le 17 novembre 2020"
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10010"
+                              }
                             }
                           ]
                         },
                         {
-                          "type": "text",
-                          "text": " dans les départements du Finistère (29), d'Indre-et-Loire (37), du Nord (59), du Pas-de-Calais (62), de Seine-et-Marne (77), de la Vienne (86), de la Haute-Vienne (87), de la Seine-Saint-Denis (93), du Val-de-Marne (94) et du Val-d'Oise (95)."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
                           "type": "element",
-                          "name": "MiseEnEvidence",
+                          "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "- Depuis le  1er février 2021"
+                              "text": "Les règles présentées ici s'appliquent aux "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "véhicules entrés en fourrière :"
+                                }
+                              ]
                             }
                           ]
                         },
                         {
-                          "type": "text",
-                          "text": " dans les départements de l'Aisne (02), de Bouches-du-Rhône (13), de la Charente (16), de la Charente-Maritime (17), des Côtes-d'Armor (22), de l'Eure (27), de l'Eure-et-Loir (28), de la Gironde (33), des Landes (40), de l'Oise (60), de la Seine-Maritime (76), des Yvelines (78), de la Somme (80), du Var (83), de l'Yonne (89), de l'Essonne (91) et des Hauts-de-Seine (92)."
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "- Depuis le 17 novembre 2020"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " dans les départements du Finistère (29), d'Indre-et-Loire (37), du Nord (59), du Pas-de-Calais (62), de Seine-et-Marne (77), de la Vienne (86), de la Haute-Vienne (87), de la Seine-Saint-Denis (93), du Val-de-Marne (94) et du Val-d'Oise (95)."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "- Depuis le  1er février 2021"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " dans les départements de l'Aisne (02), de Bouches-du-Rhône (13), de la Charente (16), de la Charente-Maritime (17), des Côtes-d'Armor (22), de l'Eure (27), de l'Eure-et-Loir (28), de la Gironde (33), des Landes (40), de l'Oise (60), de la Seine-Maritime (76), des Yvelines (78), de la Somme (80), du Var (83), de l'Yonne (89), de l'Essonne (91) et des Hauts-de-Seine (92)."
+                            }
+                          ]
                         }
                       ]
                     },
@@ -4602,7 +4660,20 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Autres départements"
+                      "text": "Autre département"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11903"
+                      }
                     }
                   ]
                 },
