@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "La compagnie aérienne doit respecter les horaires de ses vols. Ainsi, si votre vol est annulé, la compagnie doit vous indemniser."
+              "text": "La compagnie aérienne doit respecter les horaires de ses vols. Si votre vol est annulé, la compagnie doit vous indemniser."
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2019-08-12"
+              "text": "modified 2021-02-05"
             }
           ]
         },
@@ -369,7 +369,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "La compagnie aérienne doit respecter les horaires de ses vols. Ainsi, si votre vol est  annulé, la compagnie doit vous indemniser."
+                      "text": "La compagnie aérienne doit respecter les horaires de ses vols. Si votre vol est  annulé, la compagnie doit vous indemniser."
                     }
                   ]
                 }
@@ -379,56 +379,393 @@
         },
         {
           "type": "element",
-          "name": "Texte",
+          "name": "ListeSituations",
+          "attributes": {
+            "affichage": "onglet"
+          },
           "children": [
             {
               "type": "element",
-              "name": "Chapitre",
+              "name": "Situation",
               "children": [
                 {
                   "type": "element",
                   "name": "Titre",
                   "children": [
                     {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Conditions à respecter"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
                       "type": "text",
-                      "text": "Le vol doit respecter certaines conditions."
+                      "text": "Cas général"
                     }
                   ]
                 },
                 {
                   "type": "element",
-                  "name": "BlocCas",
-                  "attributes": {
-                    "affichage": "radio"
-                  },
+                  "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Cas",
+                      "name": "Chapitre",
                       "children": [
                         {
                           "type": "element",
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Départ de France"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Conditions à respecter"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "SousChapitre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Conditions liés au vol"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le vol doit respecter certaines conditions."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "BlocCas",
+                              "attributes": {
+                                "affichage": "radio"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Cas",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Départ de France"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Le vol est concerné, quelle que soit la compagnie. L'indemnisation s'applique même en cas d'escale ou de correspondance."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cas",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Arrivée en France"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "BlocCas",
+                                      "attributes": {
+                                        "affichage": "radio"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Cas",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Titre",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Départ d'un pays de l'Union européenne, de la Norvège, l'Islande ou la Suisse"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Si vous venez d'un pays européen ("
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "LienIntra",
+                                                  "attributes": {
+                                                    "LienID": "R41270",
+                                                    "type": "Définition de glossaire"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Union européenne"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "text": ", Norvège, Islande ou Suisse), le vol est concerné, quelle que soit la compagnie. L'indemnisation s'applique même en cas d'escale ou de correspondance."
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Cas",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Titre",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Départ d'un autre pays"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Le vol est concerné "
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "MiseEnEvidence",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "seulement si"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "text": " vous voyagez avec une compagnie de "
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "LienIntra",
+                                                  "attributes": {
+                                                    "LienID": "R41270",
+                                                    "type": "Définition de glossaire"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "l'Union européenne"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "text": ". L'indemnisation s'applique alors, même en cas d'escale ou de correspondance dans un autre pays."
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "SousChapitre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Conditions liés aux délais"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous ne pouvez pas obtenir d'indemnisation dans les situations suivantes :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous êtes prévenu de l'annulation 2 semaines au moins avant le départ"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous êtes prévenu entre 7 jours et 2 semaines avant le départ et on vous   propose un vol de remplacement partant moins de 1 heure plus tôt et arrivant moins de 4 heures avant l'heure d'arrivée prévue"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous êtes prévenu moins de 7 jours avant le départ et on vous propose un vol de remplacement partant moins de 1 heure plus tôt et arrivant moins de 2 heures avant l'heure d'arrivée prévue."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "SousChapitre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Autres conditions"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La compagnie peut invoquer un cas de force majeure pour vous refuser de vous indemniser. Il s'agit alors d'un incident imprévisible et ne pouvant pas être évité (une tempête de neige par exemple)."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L'indemnisation peut également être refusée en cas de grève de personnels hors de la compagnie (contrôleurs aériens, par exemple)."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Chapitre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Proposition de nouveau vol"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -438,23 +775,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Le vol est concerné, quelle que soit la compagnie. La protection s'applique même en cas d'escale ou de correspondance."
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Cas",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Arrivée en France"
+                              "text": "La compagnie doit vous proposer dès que possible un nouveau vol vers la destination finale, dans des conditions comparables (même classe...) et sans paiement supplémentaire."
                             }
                           ]
                         },
@@ -475,7 +796,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Départ d'un pays de l'Union européenne, de la Norvège, l'Islande ou la Suisse"
+                                      "text": "Vous souhaitez attendre le prochain vol"
                                     }
                                   ]
                                 },
@@ -485,25 +806,80 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Si vous venez d'un pays européen ("
-                                    },
+                                      "text": "La compagnie doit alors prendre en charge gratuitement en attendant le prochain vol les éléments suivants :"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Liste",
+                                  "attributes": {
+                                    "type": "puce"
+                                  },
+                                  "children": [
                                     {
                                       "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R41270",
-                                        "type": "Définition de glossaire"
-                                      },
+                                      "name": "Item",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Union européenne"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Rafraîchissements"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "text",
-                                      "text": ", Norvège, Islande ou Suisse), le vol est concerné, quelle que soit la compagnie. La protection s'applique même en cas d'escale ou de correspondance."
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Restauration"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "2 communications (appels téléphoniques, SMS, mails)"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Si le départ ne peut avoir lieu avant le lendemain, frais d'hôtel et de transfert entre l'hôtel et l'aéroport"
+                                            }
+                                          ]
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -519,7 +895,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Départ d'un autre pays"
+                                      "text": "Autre cas"
                                     }
                                   ]
                                 },
@@ -529,39 +905,25 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Le vol est concerné "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "seulement si"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " vous voyagez avec une compagnie de "
+                                      "text": "La compagnie doit vous rembourser votre billet dans les 7 "
                                     },
                                     {
                                       "type": "element",
                                       "name": "LienIntra",
                                       "attributes": {
-                                        "LienID": "R41270",
+                                        "LienID": "R1008",
                                         "type": "Définition de glossaire"
                                       },
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "l'Union européenne"
+                                          "text": "jours francs"
                                         }
                                       ]
                                     },
                                     {
                                       "type": "text",
-                                      "text": ". La protection s'appliquera alors, même en cas d'escale ou de correspondance dans un autre pays."
+                                      "text": " si vous ne souhaitez pas ou ne pouvez pas attendre le prochain vol. Votre compagnie  doit vous proposer ce remboursement et vous n'avez pas  de démarches supplémentaires à faire."
                                     }
                                   ]
                                 }
@@ -570,146 +932,24 @@
                           ]
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Vous ne pouvez pas obtenir d'indemnisation si vous êtes prévenu de l'annulation :"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Liste",
-                  "attributes": {
-                    "type": "puce"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "2 semaines au moins avant le départ"
-                            }
-                          ]
-                        }
-                      ]
                     },
                     {
                       "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "entre 7 jours et 2 semaines avant le départ si on vous   propose un vol de remplacement partant moins d'1h plus tôt et arrivant moins de 4h avant l'heure d'arrivée prévue"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "moins de 7 jours avant le départ si on vous propose un vol de remplacement partant moins d'1h plus tôt et arrivant moins de 2h avant l'heure d'arrivée prévue."
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "La compagnie peut invoquer un cas de force majeure pour vous refuser la protection. Il s'agit alors d'un incident imprévisible et ne pouvant pas être évité (une tempête de neige par exemple)."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "La protection peut également être refusée en cas de grève de personnels hors de la compagnie (des contrôleurs aériens par exemple)."
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Chapitre",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Proposition de nouveau vol"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "La compagnie doit vous proposer dès que possible un nouveau vol vers la destination finale, dans des conditions comparables (même classe...) et sans paiement supplémentaire."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "BlocCas",
-                  "attributes": {
-                    "affichage": "radio"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Cas",
+                      "name": "Chapitre",
                       "children": [
                         {
                           "type": "element",
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Vous souhaitez attendre le prochain vol"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Indemnisation"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -719,7 +959,197 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "La compagnie doit alors prendre en charge gratuitement en attendant le prochain vol les éléments suivants :"
+                              "text": "La compagnie aérienne doit vous donner un document indiquant comment  réclamer l'indemnisation."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Cette indemnité vous est due même si la compagnie vous a remboursé votre billet. "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "C'est une indemnité supplémentaire"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Le montant de l'indemnité dépend de la longueur du vol."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "BlocCas",
+                          "attributes": {
+                            "affichage": "radio"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Jusqu'à 1 500 km"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "250 €"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "De 1 500 à 3 500 km"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "400 €"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Plus de 3 500 km"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Trajet dans "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienExterne",
+                                      "attributes": {
+                                        "URL": "http://europa.eu/about-eu/countries/index_fr.htm"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "l'Union européenne (UE)"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "\n\n : "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "400 €"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Trajet entre l'UE et un pays hors UE : "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "600 €"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "L'indemnisation peut être réduite de moitié si la compagnie vous  propose un autre vol. L'heure d'arrivée ne doit alors pas dépasser  l'heure d'arrivée prévue du vol initialement réservé :"
                             }
                           ]
                         },
@@ -740,7 +1170,35 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Rafraîchissements"
+                                      "text": "de "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "2 heures"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ", pour un vol de "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "1 500"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " km ou moins,"
                                     }
                                   ]
                                 }
@@ -756,7 +1214,63 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Restauration"
+                                      "text": "de "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "3 heures"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ", pour un  vol de plus de "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "1 500"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " km dans l'Union européenne (UE) ou pour un vol de "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "1 500"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " à "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "3 500"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " km hors UE,"
                                     }
                                   ]
                                 }
@@ -772,43 +1286,39 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "2 communications (appels téléphoniques, SMS, mails)"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
+                                      "text": "de "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "4 heures"
+                                        }
+                                      ]
+                                    },
                                     {
                                       "type": "text",
-                                      "text": "Si le départ ne peut avoir lieu avant le lendemain, frais d'hôtel et de transfert entre l'hôtel et l'aéroport"
+                                      "text": "  pour un vol de plus de "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "3 500"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " km (hors UE)."
                                     }
                                   ]
                                 }
                               ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Cas",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Autre cas"
                             }
                           ]
                         },
@@ -818,25 +1328,85 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "La compagnie doit vous rembourser votre billet dans les 7 "
-                            },
+                              "text": "Vous devez adresser votre réclamation  (par lettre recommandée avec avis de réception) au service clientèle de la compagnie aérienne. Ses coordonnées sont indiquées sur le document qui vous a été remis."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ServiceEnLigne",
+                          "attributes": {
+                            "ID": "R24278",
+                            "URL": "https://www.inc-conso.fr/content/vous-demandez-une-indemnisation-parce-que-vous-navez-pas-pu-embarquer-dans-lavion",
+                            "type": "Modèle de document"
+                          },
+                          "children": [
                             {
                               "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R1008",
-                                "type": "Définition de glossaire"
-                              },
+                              "name": "Titre",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "jours francs"
+                                  "text": "Demander une indemnisation en cas de refus d'embarquement pour surbooking"
                                 }
                               ]
                             },
                             {
+                              "type": "element",
+                              "name": "Source",
+                              "attributes": {
+                                "ID": "R30643"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Institut national de la consommation (INC)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
                               "type": "text",
-                              "text": " si vous ne souhaitez pas ou ne pouvez pas attendre le prochain vol. Votre compagnie  doit vous proposer ce remboursement et vous n'avez pas  de démarches supplémentaires à faire."
+                              "text": "Si la compagnie refuse de vous indemniser, ou si vous trouvez que cette indemnisation n'est pas suffisante, vous pouvez faire un recours auprès de la Direction générale de l'aviation civile (DGAC)."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ServiceEnLigne",
+                          "attributes": {
+                            "ID": "R54138",
+                            "URL": "http://enqueteur.dgac.developpement-durable.gouv.fr/index.php/51924?lang=fr",
+                            "type": "Formulaire"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Indemnisation et assistance des passagers en cas de refus d'embarquement, d'annulation ou de retard important"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Source",
+                              "attributes": {
+                                "ID": "R30696"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Direction générale de l'aviation civile (DGAC)"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -848,86 +1418,39 @@
             },
             {
               "type": "element",
-              "name": "Chapitre",
+              "name": "Situation",
               "children": [
                 {
                   "type": "element",
                   "name": "Titre",
                   "children": [
                     {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Indemnisation"
-                        }
-                      ]
+                      "type": "text",
+                      "text": "Vol annulé suite au covid 19"
                     }
                   ]
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "La compagnie aérienne doit vous donner un document indiquant comment  réclamer l'indemnisation."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Cette indemnité vous est due même si la compagnie vous a remboursé votre billet. "
-                    },
-                    {
-                      "type": "element",
-                      "name": "MiseEnEvidence",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "C'est une indemnité supplémentaire"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": "."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Le montant de l'indemnité dépend de la longueur du vol."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "BlocCas",
-                  "attributes": {
-                    "affichage": "radio"
-                  },
+                  "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Cas",
+                      "name": "Chapitre",
                       "children": [
                         {
                           "type": "element",
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Jusqu'à 1 500 km"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Indemnisation"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -936,14 +1459,18 @@
                           "name": "Paragraphe",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "250 €"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "L'annulation à cause de la pandémie de Covid est un cas de force majeure. Il s'agit d'un incident imprévisible et ne pouvant pas être évité."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous n'avez donc pas droit à une indemnité forfaitaire."
                             }
                           ]
                         }
@@ -951,82 +1478,19 @@
                     },
                     {
                       "type": "element",
-                      "name": "Cas",
+                      "name": "Chapitre",
                       "children": [
                         {
                           "type": "element",
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "De 1 500 à 3 500 km"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
                               "type": "element",
-                              "name": "Valeur",
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "400 €"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Cas",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Plus de 3 500 km"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Trajet dans "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienExterne",
-                              "attributes": {
-                                "URL": "http://europa.eu/about-eu/countries/index_fr.htm"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "l'Union européenne (UE)"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "\n\n : "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "400 €"
+                                  "text": "Remboursement du billet"
                                 }
                               ]
                             }
@@ -1034,248 +1498,360 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "BlocCas",
+                          "attributes": {
+                            "affichage": "onglet"
+                          },
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Trajet entre l'UE et un pays hors UE : "
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "La compagnie annule le vol"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous avez droit au remboursement de votre billet."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Le remboursement doit être effectué dans les 7 "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R1008",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "jours francs"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Il peut se faire en espèces, par virement bancaire électronique, par virement bancaire ou par chèque, au choix de la compagnie."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Si la compagnie vous propose un bon d'achat, vous pouvez le refuser."
+                                    }
+                                  ]
+                                }
+                              ]
                             },
                             {
                               "type": "element",
-                              "name": "Valeur",
+                              "name": "Cas",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "600 €"
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous annulez votre vol"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "L'annulation de vol "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F32390",
+                                        "type": "Fiche d'information",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "se fait à vos frais"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " et vous n'êtes pas remboursé."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ANoter",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "À noter"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "relisez les conditions générales de vente du billet, elles peuvent prévoir son remboursement. Certaines compagnies peuvent aussi faire un geste commercial (par exemple, avoir ou report du vol)."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous avez droit au remboursement des taxes aéroportuaires."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous pouvez obtenir le remboursement de certaines  taxes et redevances incluses dans le prix du billet."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Il s'agit de la taxe d'aéroport (signalée par les lettres "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "QW"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " sur votre billet) et de la redevance passager (signalée par les lettres "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "QX"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " sur votre billet)."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Les autres taxes (surcharge carburant et sûreté, solidarité...) ne sont pas remboursables."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Envoyez votre demande de remboursement au vendeur du billet d'avion (compagnie aérienne ou agence de voyages)."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Cette demande est souvent réalisable en ligne. Vérifiez sur le site internet du vendeur du billet."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Aucun frais n'est dû si la demande est déposée en ligne."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous pouvez aussi envoyer votre  demande de remboursement (avec copie du billet non utilisé) par courrier recommandé avec avis de réception au vendeur."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Dans ce cas, le vendeur peut vous facturer des frais de remboursement d'un montant maximal de "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "20 %"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "  du montant de la demande."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ServiceEnLigne",
+                                  "attributes": {
+                                    "ID": "R46269",
+                                    "type": "Modèle de document"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Réclamer le remboursement de la taxe d'aéroport et de la redevance passager"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30608"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Direction de l'information légale et administrative (Dila) - Premier ministre"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Le remboursement peut se faire par virement (prévoir un relevé d'identité bancaire) ou par chèque ou en créditant votre carte bancaire."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Le remboursement doit être fait dans les 30 "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R1008",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "jours francs"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " à partir de la date de réception de la demande."
+                                    }
+                                  ]
                                 }
                               ]
                             }
                           ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "L'indemnisation peut être réduite de moitié si la compagnie vous  propose un autre vol. L'heure d'arrivée ne doit alors pas dépasser  l'heure d'arrivée prévue du vol initialement réservé :"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Liste",
-                  "attributes": {
-                    "type": "puce"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "de 2 heures, pour un vol de "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "1 500"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " km ou moins,"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "de 3 heures, pour un  vol de plus de "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "1 500"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " km dans l'Union européenne (UE) ou pour un vol de "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "1 500"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " à "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "3 500"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " km hors UE,"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "de 4 heures  pour un vol de plus de "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "3 500"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " km (hors UE)."
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Vous devez adresser votre réclamation  (par lettre recommandée avec accusé de réception) au service clientèle de la compagnie aérienne. Ses coordonnées sont indiquées sur le document qui vous a été remis."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "ServiceEnLigne",
-                  "attributes": {
-                    "ID": "R24278",
-                    "URL": "https://www.inc-conso.fr/content/vous-demandez-une-indemnisation-parce-que-vous-navez-pas-pu-embarquer-dans-lavion",
-                    "type": "Modèle de document"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Demander une indemnisation en cas de refus d'embarquement pour surbooking"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Source",
-                      "attributes": {
-                        "ID": "R30643"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Institut national de la consommation (INC)"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Si la compagnie refuse de vous indemniser, ou si vous trouvez que cette indemnisation n'est pas suffisante, vous pouvez faire un recours auprès de la Direction générale de l'aviation civile (DGAC)."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "ServiceEnLigne",
-                  "attributes": {
-                    "ID": "R54138",
-                    "URL": "http://enqueteur.dgac.developpement-durable.gouv.fr/index.php/51924?lang=fr",
-                    "type": "Formulaire"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Indemnisation et assistance des passagers en cas de refus d'embarquement, d'annulation ou de retard important"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Source",
-                      "attributes": {
-                        "ID": "R30696"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Direction générale de l'aviation civile (DGAC)"
                         }
                       ]
                     }
@@ -1496,6 +2072,34 @@
                   ]
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "OuSAdresser",
+          "attributes": {
+            "ID": "R15954",
+            "sve": "non",
+            "type": "National"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Centre européen des consommateurs France"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "RessourceWeb",
+              "attributes": {
+                "URL": "https://www.europe-consommateurs.eu/fr/nous-connaitre/nous-contacter/"
+              }
             }
           ]
         },
@@ -1796,6 +2400,20 @@
                   ]
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "QuestionReponse",
+          "attributes": {
+            "ID": "F32396",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "Peut-on se faire rembourser son billet d'avion si on rate ou annule son vol ?"
             }
           ]
         }
