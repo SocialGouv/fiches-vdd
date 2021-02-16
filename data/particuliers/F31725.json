@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F31725",
-        "type": "Fiche Question-réponse",
+        "type": "Fiche Question-réponse conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "dateDerniereModificationImportante": "2021-01-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F31725"
@@ -20,7 +20,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Impôt sur le revenu : faut-il déclarer une activité extra-professionnelle ?"
+              "text": "Impôt sur le revenu : faut-il déclarer les revenus d'une activité accessoire ?"
             }
           ]
         },
@@ -242,12 +242,12 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F31725",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
                   "type": "text",
-                  "text": "Impôt sur le revenu : faut-il déclarer une activité extra-professionnelle ?"
+                  "text": "Impôt sur le revenu : faut-il déclarer les revenus d'une activité accessoire ?"
                 }
               ]
             }
@@ -812,7 +812,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Oui, tout revenu est imposable, quel que soit son montant. Toutefois, vous êtes exonéré si vos revenus annuels ne dépassent pas certains seuils et dans certaines situations."
+                  "text": "Oui, un revenu accessoire est imposable, quel que soit son montant. Toutefois, vous êtes exonéré si vos revenus annuels ne dépassent pas certains seuils et dans certaines situations."
                 }
               ]
             },
@@ -830,7 +830,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vente de fruits et de légumes"
+                          "text": "Vous vendez des biens"
                         }
                       ]
                     }
@@ -853,41 +853,30 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Votre potager est accolé à votre propriété bâtie"
+                              "text": "Vous vendez des biens que vous possédez"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Condition",
                           "children": [
-                            {
-                              "type": "text",
-                              "text": "Vous n'êtes pas imposable si votre potager est accolé à votre maison."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Le potager ne doit dépasser  500 m"
-                            },
                             {
                               "type": "element",
-                              "name": "Exposant",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "2"
-                                }
-                              ]
-                            },
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10281"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
                             {
                               "type": "text",
-                              "text": "."
+                              "text": "Les revenus de la vente de biens dont vous voulez vous débarrasser (par exemple, lors d'un vide-grenier) ne sont pas imposables."
                             }
                           ]
                         }
@@ -903,95 +892,394 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Autre situation"
+                              "text": "Vous vendez des fruits et légumes de votre jardin"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Condition",
                           "children": [
-                            {
-                              "type": "text",
-                              "text": "Les revenus de la vente des récoltes issues de votre jardin sont imposables en tant que revenus agricoles."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Le régime "
-                            },
                             {
                               "type": "element",
-                              "name": "Expression",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "micro-BA"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " vous-est appliqué si la moyenne de vos recettes, calculées sur 3 années consécutives ne dépasse pas "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "85 800 €"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " hors taxes."
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11418"
+                              }
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Vous devez remplir les déclarations suivantes :"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Liste",
+                          "name": "BlocCas",
                           "attributes": {
-                            "type": "puce"
+                            "affichage": "radio"
                           },
                           "children": [
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Cas",
                               "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Votre potager est accolé à votre propriété bâtie"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11902"
+                                      }
+                                    }
+                                  ]
+                                },
                                 {
                                   "type": "element",
                                   "name": "Paragraphe",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Vous n'êtes pas imposable si votre potager est accolé à votre maison."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Le potager ne doit dépasser  500 m"
+                                    },
+                                    {
                                       "type": "element",
-                                      "name": "LienInterne",
+                                      "name": "Exposant",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "2"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Autre situation"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
                                       "attributes": {
-                                        "LienPublication": "R36751",
-                                        "type": "Formulaire",
-                                        "audience": "Particuliers"
+                                        "var": "T11903"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Les revenus de la vente des récoltes issues de votre jardin sont imposables en tant que revenus agricoles."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Le régime "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "micro-BA"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " vous est appliqué si la moyenne de vos recettes, calculées sur 3 années consécutives, ne dépasse pas "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "85 800 €"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " hors taxes."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous devez remplir les déclarations suivantes :"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Liste",
+                                  "attributes": {
+                                    "type": "puce"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "LienInterne",
+                                              "attributes": {
+                                                "LienPublication": "R36751",
+                                                "type": "Formulaire",
+                                                "audience": "Particuliers"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Formulaire n°2042 C PRO"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "LienInterne",
+                                              "attributes": {
+                                                "LienPublication": "R14114",
+                                                "type": "Formulaire",
+                                                "audience": "Professionnels"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Formulaire n°2342"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " (ce formulaire permet de  calculer le bénéfice imposable)."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cas",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous vendez des biens que vous achetez ou fabriquez"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12519"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Introduction",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si vous achetez ou fabriquez des biens pour les vendre, les revenus tirés de cette activité sont imposables. Vous devez les déclarer à l'administration fiscale dans votre déclaration de revenus."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Ces revenus sont imposables en tant que bénéfices industriels et commerciaux (BIC)."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "BlocCas",
+                          "attributes": {
+                            "affichage": "radio"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vos recettes de l'année sont inférieures à 176 200 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous pouvez opter pour le régime "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "micro-Bic"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " si votre chiffre d'affaires dégagé en 2020 ne dépasse pas "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "176 200 €"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ". Vous devez déclarer vos bénéfices annuels sur le formulaire n°2042 C PRO."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ServiceEnLigne",
+                                  "attributes": {
+                                    "ID": "R36751",
+                                    "URL": "https://www.impots.gouv.fr/portail/formulaire/2042/declaration-des-revenus",
+                                    "numerocerfa": "11222*22",
+                                    "autrenumero": "2042-C-PRO",
+                                    "type": "Formulaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Déclaration 2020 complémentaire des revenus 2019 des professions non salariées"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30612"
                                       },
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Formulaire n°2042 C PRO"
+                                          "text": "Ministère chargé des finances"
                                         }
                                       ]
                                     }
@@ -1001,30 +1289,140 @@
                             },
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Cas",
                               "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vos recettes de l'année dépassent 176 200 €"
+                                    }
+                                  ]
+                                },
                                 {
                                   "type": "element",
                                   "name": "Paragraphe",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Au-delà de "
+                                    },
+                                    {
                                       "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "R14114",
-                                        "type": "Formulaire",
-                                        "audience": "Professionnels"
-                                      },
+                                      "name": "Valeur",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Formulaire n°2342"
+                                          "text": "176 200 €"
                                         }
                                       ]
                                     },
                                     {
                                       "type": "text",
-                                      "text": " (ce formulaire permet de  calculer le bénéfice imposable)."
+                                      "text": ", vous êtes soumis à un régime réel d'imposition. Vous devez remplir le formulaire n°2031."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ServiceEnLigne",
+                                  "attributes": {
+                                    "ID": "R14120",
+                                    "URL": "https://www.impots.gouv.fr/portail/formulaire/2031-sd/impot-sur-le-revenu",
+                                    "numerocerfa": "11085*22",
+                                    "autrenumero": "2031-SD",
+                                    "type": "Formulaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Déclaration 2020 des revenus 2019 : bénéfices industriels et commerciaux (BIC)"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30612"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ministère chargé des finances"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous devez également "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F23566",
+                                        "type": "Fiche d'information",
+                                        "audience": "Professionnels"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "déclarer et payer de la TVA"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " sur l'imprimé n°3517-S-SD."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ServiceEnLigne",
+                                  "attributes": {
+                                    "ID": "R14665",
+                                    "URL": "https://www.impots.gouv.fr/portail/formulaire/3517-s-sd/tva-et-taxes-assimilees-et-regime-simplifie",
+                                    "numerocerfa": "11417",
+                                    "autrenumero": "3517-S-SD",
+                                    "type": "Formulaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Déclaration annuelle de régularisation de TVA - Régime simplifié"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30612"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ministère chargé des finances"
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -1052,7 +1450,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vente de biens"
+                          "text": "Vous louez des biens"
                         }
                       ]
                     }
@@ -1060,11 +1458,14 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "Condition",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Si vous achetez ou fabriquez des biens pour les vendre, les revenus tirés de cette activité sont imposables. Vous devez les déclarer à l'administration fiscale dans votre déclaration de revenus. "
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11789"
+                      }
                     }
                   ]
                 },
@@ -1074,7 +1475,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Ces revenus sont imposables en tant que bénéfices industriels et commerciaux (Bic)."
+                      "text": "Si vous mettez en location des biens vous appartenant (voiture, outils...), les revenus sont imposables."
                     }
                   ]
                 },
@@ -1095,7 +1496,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Recettes de l'année inférieures à 176 200 €"
+                              "text": "Vos recettes de l'année sont inférieures à 72 600 €"
                             }
                           ]
                         },
@@ -1105,21 +1506,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Vous pouvez opter pour le régime "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Expression",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "micro-Bic"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " si votre chiffre d'affaires dégagé en 2019 ne dépasse pas "
+                              "text": "Si vos recettes sont inférieures à "
                             },
                             {
                               "type": "element",
@@ -1127,13 +1514,27 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "176 200 €"
+                                  "text": "72 600 €"
                                 }
                               ]
                             },
                             {
                               "type": "text",
-                              "text": ". Vous devez déclarer vos bénéfices annuels sur le formulaire n°2042 C PRO."
+                              "text": ", vous pouvez choisir le régime "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Expression",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "micro BIC"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ". Vous devez déclarer vos recettes sur le formulaire 2042-C-PRO."
                             }
                           ]
                         },
@@ -1185,7 +1586,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Recettes de l'année supérieures à 176 200 €"
+                              "text": "Vos recettes de l'année sont supérieures à 72 600 €"
                             }
                           ]
                         },
@@ -1195,7 +1596,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Au-delà de "
+                              "text": "Si vos recettes sont supérieurs à "
                             },
                             {
                               "type": "element",
@@ -1203,13 +1604,13 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "176 200 €"
+                                  "text": "72 600 €"
                                 }
                               ]
                             },
                             {
                               "type": "text",
-                              "text": ", vous êtes soumis à un régime réel d'imposition. Vous devez remplir le formulaire n°2031."
+                              "text": ", vous êtes soumis au régime réel. Vous devez déclarer vos recettes sur le formulaire 2031-SD."
                             }
                           ]
                         },
@@ -1246,35 +1647,6 @@
                                   "text": "Ministère chargé des finances"
                                 }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Vous devez également "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F23566",
-                                "type": "Fiche d'information",
-                                "audience": "Professionnels"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "déclarer et payer de la TVA"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " sur l'imprimé n°3517-S-SD."
                             }
                           ]
                         },
@@ -1334,7 +1706,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Services rémunérés"
+                          "text": "Vous proposez des services rémunérés"
                         }
                       ]
                     }
@@ -1346,7 +1718,17 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Si vous proposez des services contre une rémunération, vous devez déclarer les revenus correspondants chaque année."
+                      "text": "Si vous proposez des services contre une rémunération, vous devez déclarer les revenus correspondants."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "L'imposition dépend du type de service proposé."
                     }
                   ]
                 },
@@ -1367,7 +1749,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Exercice d'une science ou d'un art (soutien scolaire, etc.)"
+                              "text": "Vous faites du soutien scolaire ou donnez des cours"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11420"
+                              }
                             }
                           ]
                         },
@@ -1388,7 +1783,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Recettes de l'année 2020 inférieures à 72 600 €"
+                                      "text": "Vos recettes de l'année sont inférieures à 72 600 €"
                                     }
                                   ]
                                 },
@@ -1478,7 +1873,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Recettes de l'année 2020 supérieures à 72 600 €"
+                                      "text": "Vos recettes de l'année sont supérieures à 72 600 €"
                                     }
                                   ]
                                 },
@@ -1488,7 +1883,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Si vos recettes sont supérieurs à "
+                                      "text": "Si vos recettes sont supérieures à "
                                     },
                                     {
                                       "type": "element",
@@ -1643,7 +2038,36 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Activité commerciale ou artisanale (bricolage, garde d'animaux, etc.)"
+                              "text": "Vous proposez d'autres services payants"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T12518"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Introduction",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si vous proposez du bricolage, du jardinage, de la garde d'animaux, ces services sont considérés comme des activités artisanales ou commerciales."
+                                }
+                              ]
                             }
                           ]
                         },
@@ -1664,7 +2088,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Recettes de l'année inférieures à 72 600 €"
+                                      "text": "Vos recettes de l'année sont inférieures à 72 600 €"
                                     }
                                   ]
                                 },
@@ -1754,7 +2178,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Recettes de l'année supérieures à 72 600 €"
+                                      "text": "Vos recettes de l'année de l'année supérieures sont à 72 600 €"
                                     }
                                   ]
                                 },
@@ -1764,7 +2188,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Si vos recettes sont supérieurs à "
+                                      "text": "Si vos recettes sont supérieures à "
                                     },
                                     {
                                       "type": "element",
