@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F32231",
-        "type": "Fiche Question-réponse",
+        "type": "Fiche Question-réponse conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "spUrl": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F32231"
       },
@@ -19,7 +19,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Dans quelles conditions un formateur ou un enseignant est-il exonéré de TVA ?"
+              "text": "Un formateur ou un enseignant est-il soumis à la TVA ?"
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2019-08-06"
+              "text": "modified 2021-03-05"
             }
           ]
         },
@@ -119,7 +119,7 @@
           "children": [
             {
               "type": "text",
-              "text": "http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000022334779&cidTexte=LEGITEXT000006069577, http://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000006179222&cidTexte=LEGITEXT000006069569, http://bofip.impots.gouv.fr/bofip/943-PGP.html"
+              "text": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042909959, http://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000006179222&cidTexte=LEGITEXT000006069569, http://bofip.impots.gouv.fr/bofip/943-PGP.html"
             }
           ]
         },
@@ -251,12 +251,12 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F32231",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
                   "type": "text",
-                  "text": "Dans quelles conditions un formateur ou un enseignant est-il exonéré de TVA ?"
+                  "text": "Un formateur ou un enseignant est-il soumis à la TVA ?"
                 }
               ]
             }
@@ -592,7 +592,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Professionnels concernés"
+                          "text": "Formation professionnelle continue et prestations annexes"
                         }
                       ]
                     }
@@ -600,98 +600,25 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "L'exonération est applicable, quel que soit le statut ou la forme juridique du prestataire de formation ou d'enseignement. Il peut relever d'un des statuts suivants :"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Liste",
-                  "attributes": {
-                    "type": "puce"
-                  },
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Item",
+                      "name": "ou",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Travailleur indépendant"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T13239"
+                          }
+                        },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Société"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Association"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Personne morale de droit public ou privé"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Organisme paritaire titulaire d'un agrément : fonds d'assurance-formation, fonds paritaire de sécurisation des parcours professionnels"
-                            }
-                          ]
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T13244"
+                          }
                         }
                       ]
                     }
@@ -699,412 +626,50 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Les prestations exonérées peuvent avoir lieu dans le cadre de l'enseignement primaire, secondaire, supérieur, universitaire, technique ou professionnel, de la formation professionnelle agricole ou continue, y compris à distance."
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Chapitre",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Prestations exonérées"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "L'exonération de TVA concerne uniquement les prestations :"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Liste",
-                  "attributes": {
-                    "type": "puce"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "de formation professionnelle continue proprement dite,  y compris la réalisation de bilans de compétences ;"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "de services ou de livraisons de biens étroitement liés à cette formation (logement et nourriture des stagiaires, fourniture de documents pédagogiques) ;"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "d'accompagnement visant à favoriser l'insertion professionnelle au profit des demandeurs d'emploi (par exemple, les actions de formation ou d'accès à l'emploi mises en œuvre par Pôle emploi) ;"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "les cours ou leçons relevant de l'enseignement scolaire, universitaire, professionnel, artistique ou sportif, dispensés par des personnes physiques qui sont rémunérées directement par leurs élèves."
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Chapitre",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Prestations exclues"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Les opérations ne relevant pas de l'activité de formation initiale ou continue sont imposables à la TVA dans les "
-                    },
-                    {
-                      "type": "element",
-                      "name": "LienInterne",
-                      "attributes": {
-                        "LienPublication": "F23567",
-                        "type": "Fiche d'information",
-                        "audience": "Professionnels"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "conditions habituelles"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": " :"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Liste",
-                  "attributes": {
-                    "type": "puce"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "livraison de matériels ne présentant pas un intérêt pédagogique ;"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "location de salles aménagées ;"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "prestation de conseil ou de recrutement."
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Chapitre",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Conditions pour les prestataires de formation continue"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "En ce qui concerne les organismes ou les prestataires de formation continue, l'exonération est applicable uniquement s'ils remplissent les conditions suivantes :"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Liste",
-                  "attributes": {
-                    "type": "puce"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "avoir effectué une "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F19087",
-                                "type": "Fiche d'information",
-                                "audience": "Professionnels"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "déclaration initiale d'activité"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " ;"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "être à jour de son obligation de dépôt annuel du "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F19087",
-                                "type": "Fiche d'information",
-                                "audience": "Professionnels"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "bilan pédagogique et financier"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " (sauf pour les organismes nouvellement créés) ;"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "obtenir l'attestation fiscale, au moyen du "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "R19113",
-                                "type": "Formulaire",
-                                "audience": "Professionnels"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "formulaire n°3511"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " à envoyer par lettre recommandée avec accusé de réception au Service régional de contrôle (SRC) de la formation professionnelle de la "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "R31466",
-                                "type": "Acronyme"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Direccte"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "."
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "L'attestation doit être délivrée dans un délai de 3 mois à partir de la réception de la demande. À défaut, elle est considérée comme accordée."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Attention",
+                  "name": "SousChapitre",
                   "children": [
                     {
                       "type": "element",
                       "name": "Titre",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Attention"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Prestation de formation professionnelle continue"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "TitreAlternatif",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Prestation de formation professionnelle continue"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T13239"
+                          }
                         }
                       ]
                     },
@@ -1114,7 +679,347 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "l'exonération de TVA n'est applicable qu'au jour de la réception de la demande par la Direccte. Elle n'est pas rétroactive."
+                          "text": "Vous effectuez une prestation de formation professionnelle continue ? Vous êtes  exonéré de la TVA si vous  respectez les conditions suivantes :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous avez  effectué une "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F19087",
+                                    "type": "Fiche d'information",
+                                    "audience": "Professionnels"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "déclaration initiale d'activité"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous  êtes à jour de l'obligation de dépôt annuel du "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F19087",
+                                    "type": "Fiche d'information",
+                                    "audience": "Professionnels"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "bilan pédagogique et financier"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " (sauf si c'est un organisme nouvellement créé)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous avez  obtenu l'attestation fiscale, au moyen du "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "R19113",
+                                    "type": "Formulaire",
+                                    "audience": "Professionnels"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "formulaire n°3511"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " à envoyer par lettre recommandée avec accusé de réception au Service régional de contrôle (SRC) de la formation professionnelle de la "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "R31466",
+                                    "type": "Acronyme"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Dreets"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "L'attestation doit être délivrée dans un délai de 3 mois à partir de la réception de la demande. À défaut, elle est considérée comme accordée."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ANoter",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "À noter"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "la réalisation de bilan de compétence est concerné comme une formation professionnelle continue."
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "SousChapitre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Prestation de services ou de livraisons de biens"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "TitreAlternatif",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Prestation de service ou de livraison de bien"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T13244"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Ces prestations doivent être liées étroitement à la formation professionnelle continue."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Il peut s'agir de la mise à disposition de logement et nourriture des stagiaires ou encore de la fourniture de documents pédagogiques."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Ces prestations sont exonérées de TVA."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "SousChapitre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Facturation"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Dès réception de l'attestation d'exonération de TVA, le prestataire de formation ne doit plus facturer la TVA sur ses activités exonérées à ses clients, quel que soit leur régime fiscal (assujettis ou non à la TVA)."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Les factures doivent être libellées "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "sans mention de taxe"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Par conséquent, l'organisme de formation ne bénéficie pas du droit à déduction. Cela implique que la TVA ne peut pas être déduite (et donc non récupérée) des achats de biens et de services effectués pour les besoins de l'activité de formation. "
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "En revanche, les opérations exclues du champ de l'exonération sont facturées avec la TVA dans les conditions habituelles et ouvrent droit pour le client à la "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F23569",
+                            "type": "Fiche d'information",
+                            "audience": "Professionnels"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "déduction sur les achats professionnels"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
                         }
                       ]
                     }
@@ -1136,9 +1041,321 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Facturation"
+                          "text": "Accompagnement visant à favoriser l'insertion professionnelle"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T13243"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Cet accompagnement est fait au profit des demandeurs d'emploi. Il peut s'agir par exemple d'actions de formation ou d'accès à l'emploi mis en œuvre par Pôle emploi."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Cet accompagnement est exonéré de TVA."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "MiseEnEvidence",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Facturation :"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Dès réception de l'attestation d'exonération de TVA, le prestataire de formation ne doit plus facturer la TVA sur ses activités exonérées à ses clients, quel que soit leur régime fiscal (assujettis ou non à la TVA)."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Les factures doivent être libellées "
+                    },
+                    {
+                      "type": "element",
+                      "name": "MiseEnEvidence",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "sans mention de taxe"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": "."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Par conséquent, l'organisme de formation ne bénéficie pas du droit à déduction. Cela implique que la TVA ne peut pas être déduite (et donc non récupérée) des achats de biens et de services effectués pour les besoins de l'activité de formation."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "En revanche, les opérations exclues du champ de l'exonération sont facturées avec la TVA dans les conditions habituelles et ouvrent droit pour le client à la "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienInterne",
+                      "attributes": {
+                        "LienPublication": "F23569",
+                        "type": "Fiche d'information",
+                        "audience": "Professionnels"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "déduction sur les achats professionnels"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": "."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Chapitre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Cours ou leçons relevant d'enseignements divers"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "TitreAlternatif",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Cours ou leçons particulières"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T13242"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Ces cours et leçons sont exonérés de TVA."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Quels sont les enseignements concernées ?"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Les enseignement concernés sont les suivants :"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Liste",
+                  "attributes": {
+                    "type": "puce"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Enseignement scolaire"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Enseignement universitaire"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Enseignement professionnel"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Enseignement artistique"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Enseignement sportif"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Ils doivent être dispensés par des personnes physiques qui sont rémunérées directement par leurs élèves."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Facturation"
                     }
                   ]
                 },
@@ -1235,28 +1452,201 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "en raison de l'exonération de TVA, les organismes de formation, s'ils emploient des salariés, deviennent passibles de la "
-                        },
-                        {
-                          "type": "element",
-                          "name": "LienInterne",
-                          "attributes": {
-                            "LienPublication": "F22576",
-                            "type": "Fiche d'information",
-                            "audience": "Professionnels"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "taxe sur les salaires"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": "."
+                          "text": "les cours et leçons dispensés par des entreprises ne sont pas exonérés de TVA."
                         }
                       ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Chapitre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Prestation de livraison de matériels ne présentant pas un intérêt pédagogique"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T13115"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Cette opération ne relève pas de l'activité de formation initiale ou continue. Elles sont imposables à la TVA dans les "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienInterne",
+                      "attributes": {
+                        "LienPublication": "F23567",
+                        "type": "Fiche d'information",
+                        "audience": "Professionnels"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "conditions habituelles"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": "."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Chapitre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Prestation de location de salles aménagées"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T13316"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Cette opération ne relève pas de l'activité de formation initiale ou continue. Elles sont imposables à la TVA dans les "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienInterne",
+                      "attributes": {
+                        "LienPublication": "F23567",
+                        "type": "Fiche d'information",
+                        "audience": "Professionnels"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "conditions habituelles"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": "."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Chapitre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Prestation de conseil ou de recrutement"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T13365"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Cette opération ne relève pas de l'activité de formation initiale ou continue. Elles sont imposables à la TVA dans les "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienInterne",
+                      "attributes": {
+                        "LienPublication": "F23567",
+                        "type": "Fiche d'information",
+                        "audience": "Professionnels"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "conditions habituelles"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": "."
                     }
                   ]
                 }
@@ -1368,7 +1758,7 @@
           "name": "Reference",
           "attributes": {
             "type": "Texte de référence",
-            "URL": "http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000022334779&cidTexte=LEGITEXT000006069577",
+            "URL": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042909959",
             "ID": "R15929"
           },
           "children": [
@@ -1496,7 +1886,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Direccte"
+                  "text": "Dreets"
                 }
               ]
             },
@@ -1510,7 +1900,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Direction régionale des entreprises, de la concurrence, de la consommation, du travail et de l'emploi"
+                      "text": "Direction régionale de l'économie, de l'emploi, du travail et des solidarités (ex-Direccte)"
                     }
                   ]
                 }

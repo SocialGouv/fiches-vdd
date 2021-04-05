@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F18713",
-        "type": "Fiche Question-réponse",
+        "type": "Fiche Question-réponse conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F18713"
       },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2019-09-04"
+              "text": "modified 2021-03-02"
             }
           ]
         },
@@ -241,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F18713",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -469,6 +469,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35695",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Preuve Nat F"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "Texte",
           "children": [
             {
@@ -485,9 +511,22 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Carte d'identité ou passeport récent"
+                          "text": "1. Prouver sa nationalité grâce à une carte d'identité ou passeport récent"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10685"
+                      }
                     }
                   ]
                 },
@@ -577,7 +616,33 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Acte de naissance"
+                          "text": "2. Vérifier votre acte de naissance"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "ou",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10576"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10580"
+                          }
                         }
                       ]
                     }
@@ -606,94 +671,167 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Si vous n'avez  pas de titre d'identité récent ou sécurisé,  il est nécessaire de fournir un acte de naissance (copie intégrale ou extrait avec filiation)  de moins de 3 mois."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Cet acte d'état civil peut permettre d'établir votre nationalité française :"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Liste",
-                          "attributes": {
-                            "type": "puce"
-                          },
+                          "name": "Condition",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "si vous êtes né en France et au moins l'un de vos parents est né en France,"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "ou si votre nationalité française est indiquée en mention marginale."
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "ServiceEnLigne",
-                          "attributes": {
-                            "ID": "R1406",
-                            "URL": "https://psl.service-public.fr/mademarche/EtatCivil/demarche?action=NAISSANCE",
-                            "type": "Téléservice"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Demande d'acte de naissance : copie intégrale ou extrait (naissance en France) - Service gratuit"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Source",
+                              "name": "estVrai",
                               "attributes": {
-                                "ID": "R30608"
-                              },
+                                "var": "T10576"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "BlocCas",
+                          "attributes": {
+                            "affichage": "radio"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Cas",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Direction de l'information légale et administrative (Dila) - Premier ministre"
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Au moins l'un de vous parent est né en France"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12876"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous êtes né en France ainsi qu'au moins l'un de vos parents ? Vous pouvez fournir un acte de naissance de moins de 3 mois pour prouver votre nationalité française."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ServiceEnLigne",
+                                  "attributes": {
+                                    "ID": "R1406",
+                                    "URL": "https://psl.service-public.fr/mademarche/EtatCivil/demarche?action=NAISSANCE",
+                                    "type": "Téléservice"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Demande d'acte de naissance : copie intégrale ou extrait (naissance en France) - Service gratuit"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30608"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Direction de l'information légale et administrative (Dila) - Premier ministre"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Votre nationalité française est sur votre acte de naissance (en mention marginale)"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12872"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Votre nationalité française est inscrite en mention marginale de votre acte de naissance ? Vous pouvez fournir un acte de naissance d moins de 3 mois pour prouver votre nationalité française ."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ServiceEnLigne",
+                                  "attributes": {
+                                    "ID": "R1406",
+                                    "URL": "https://psl.service-public.fr/mademarche/EtatCivil/demarche?action=NAISSANCE",
+                                    "type": "Téléservice"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Demande d'acte de naissance : copie intégrale ou extrait (naissance en France) - Service gratuit"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30608"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Direction de l'information légale et administrative (Dila) - Premier ministre"
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -717,11 +855,24 @@
                         },
                         {
                           "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10580"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si vous n'avez  pas de titre d'identité récent ou sécurisé,  il est nécessaire de fournir un acte de naissance (copie intégrale ou extrait avec filiation)  de moins de 3 mois."
+                              "text": "Si vous n'avez  pas de titre d'identité récent, la preuve de la nationalité française peut être apportée en présentant un acte de naissance (copie intégrale ou extrait avec filiation)  de moins de 3 mois."
                             }
                           ]
                         },
@@ -781,7 +932,7 @@
                           "name": "ServiceEnLigne",
                           "attributes": {
                             "ID": "R1405",
-                            "URL": "https://pastel.diplomatie.gouv.fr/dali/index2.html",
+                            "URL": "https://psl.service-public.fr/mademarche/delivrance_demat/demarche?action=NAISSANCE",
                             "type": "Téléservice"
                           },
                           "children": [
@@ -830,7 +981,49 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Document relatif à la nationalité"
+                          "text": "3. Rechercher vos documents liés à la nationalité"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11723"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "FragmentConditionne",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10010"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Ni votre titre d'identité, ni votre acte de naissance ne permet d'établir votre nationalité ?"
                         }
                       ]
                     }
@@ -842,7 +1035,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Si votre nationalité française ne ressort ni de votre titre d'identité, ni de votre acte de naissance,  vous pouvez produire l'un des documents suivants : "
+                      "text": "Vous pouvez produire l'un des documents suivants : "
                     }
                   ]
                 },
@@ -944,7 +1137,49 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Documents prouvant la possession d'état"
+                          "text": "4. Faire établir la possession d'état"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11723"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "FragmentConditionne",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T10010"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Si vous ne pouvez produire aucun de ces documents ?"
                         }
                       ]
                     }
@@ -956,7 +1191,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Si vous ne pouvez produire aucun de ces documents, vous pouvez demander à bénéficier de la possession d'état de Français."
+                      "text": "Vous pouvez demander à bénéficier de la possession d'état de Français."
                     }
                   ]
                 },
@@ -976,7 +1211,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Pour l'établir, il convient de fournir au moins 2 documents figurant dans la liste suivante :"
+                      "text": "Pour l'établir, il faut  fournir au moins 2 documents figurant dans la liste suivante :"
                     }
                   ]
                 },
@@ -1085,9 +1320,22 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "En l'absence de l'un de ces documents"
+                          "text": "5. Demander un certificat de nationalité française"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11723"
+                      }
                     }
                   ]
                 },
@@ -1097,7 +1345,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Si vous ne possédez aucun des documents mentionnés précédemment, il convient de demander  un "
+                      "text": "Si vous ne possédez aucun des documents mentionnés précédemment, il faudra demander  un "
                     },
                     {
                       "type": "element",

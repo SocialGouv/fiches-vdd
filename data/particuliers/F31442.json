@@ -1039,7 +1039,26 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Cependant, vous ne pourrez pas déduire de charges de vos revenus."
+                              "text": "Cependant, vous ne pourrez pas déduire de charges de vos revenus. Les "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "F823",
+                                "type": "Fiche Question-réponse",
+                                "audience": "Particuliers"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "réductions et crédits d'impôt"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " sont réservés aux personnes fiscalement domiciliées en France, sauf cas particuliers."
                             }
                           ]
                         },
@@ -1261,16 +1280,12 @@
                           "type": "element",
                           "name": "BlocCas",
                           "attributes": {
-                            "type": "modalite",
                             "affichage": "onglet"
                           },
                           "children": [
                             {
                               "type": "element",
                               "name": "Cas",
-                              "attributes": {
-                                "type": "enLigne"
-                              },
                               "children": [
                                 {
                                   "type": "element",
@@ -1284,52 +1299,46 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "FragmentConditionne",
+                                  "name": "Condition",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Condition",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11563"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ServiceEnLigne",
+                                  "attributes": {
+                                    "ID": "R1280",
+                                    "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+                                    "type": "Téléservice"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "estVrai",
-                                          "attributes": {
-                                            "var": "T11563"
-                                          }
+                                          "type": "text",
+                                          "text": "Déclaration 2020 en ligne des revenus de 2019"
                                         }
                                       ]
                                     },
                                     {
                                       "type": "element",
-                                      "name": "ServiceEnLigne",
+                                      "name": "Source",
                                       "attributes": {
-                                        "ID": "R1280",
-                                        "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
-                                        "type": "Téléservice"
+                                        "ID": "R30612"
                                       },
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Titre",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Déclaration 2020 en ligne des revenus de 2019"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Source",
-                                          "attributes": {
-                                            "ID": "R30612"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Ministère chargé des finances"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Ministère chargé des finances"
                                         }
                                       ]
                                     }
@@ -1340,9 +1349,6 @@
                             {
                               "type": "element",
                               "name": "Cas",
-                              "attributes": {
-                                "type": "parCorres"
-                              },
                               "children": [
                                 {
                                   "type": "element",
@@ -1356,28 +1362,58 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "FragmentConditionne",
+                                  "name": "Condition",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Condition",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11564"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous devez adresser votre déclaration de revenus (ou imprimé n°2042) et, si besoin, les imprimés complémentaires en fonction de votre situation au service des impôts des particuliers non-résidents."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ServiceEnLigne",
+                                  "attributes": {
+                                    "ID": "R1281",
+                                    "URL": "https://www.impots.gouv.fr/portail/formulaire/2042/declaration-des-revenus",
+                                    "numerocerfa": "10330*24",
+                                    "autrenumero": "2042",
+                                    "type": "Formulaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "estVrai",
-                                          "attributes": {
-                                            "var": "T11564"
-                                          }
+                                          "type": "text",
+                                          "text": "Déclaration 2020 des revenus de 2019 (papier)"
                                         }
                                       ]
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30612"
+                                      },
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Vous devez adresser votre déclaration de revenus (ou imprimé n°2042) et, si besoin, les imprimés complémentaires en fonction de votre situation au service des impôts des particuliers non-résidents."
+                                          "text": "Ministère chargé des finances"
                                         }
                                       ]
                                     }
@@ -1385,119 +1421,45 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "FragmentConditionne",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Condition",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "estVrai",
-                                          "attributes": {
-                                            "var": "T11564"
-                                          }
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "ServiceEnLigne",
-                                      "attributes": {
-                                        "ID": "R1281",
-                                        "URL": "https://www.impots.gouv.fr/portail/formulaire/2042/declaration-des-revenus",
-                                        "numerocerfa": "10330*24",
-                                        "autrenumero": "2042",
-                                        "type": "Formulaire"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Titre",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Déclaration 2020 des revenus de 2019 (papier)"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Source",
-                                          "attributes": {
-                                            "ID": "R30612"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Ministère chargé des finances"
-                                            }
-                                          ]
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Vous devez également joindre la déclaration de retenue à la source :"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "FragmentConditionne",
+                                  "name": "ServiceEnLigne",
+                                  "attributes": {
+                                    "ID": "R55288",
+                                    "URL": "https://www.impots.gouv.fr/portail/formulaire/2041-e/declaration-de-retenue-la-source",
+                                    "numerocerfa": "50318#23",
+                                    "autrenumero": "2041-E",
+                                    "type": "Formulaire"
+                                  },
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Condition",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "estVrai",
-                                          "attributes": {
-                                            "var": "T11564"
-                                          }
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Titre",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Vous devez également joindre la déclaration de retenue à la source :"
+                                          "text": "Déclaration 2020 des revenus 2019 - Déclaration de retenue à la source des non-résidents"
                                         }
                                       ]
                                     },
                                     {
                                       "type": "element",
-                                      "name": "ServiceEnLigne",
+                                      "name": "Source",
                                       "attributes": {
-                                        "ID": "R55288",
-                                        "URL": "https://www.impots.gouv.fr/portail/formulaire/2041-e/declaration-de-retenue-la-source",
-                                        "numerocerfa": "50318#23",
-                                        "autrenumero": "2041-E",
-                                        "type": "Formulaire"
+                                        "ID": "R30612"
                                       },
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Titre",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Déclaration 2020 des revenus 2019 - Déclaration de retenue à la source des non-résidents"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Source",
-                                          "attributes": {
-                                            "ID": "R30612"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Ministère chargé des finances"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Ministère chargé des finances"
                                         }
                                       ]
                                     }

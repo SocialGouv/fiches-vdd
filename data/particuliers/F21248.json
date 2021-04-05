@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F21248",
-        "type": "Fiche Question-réponse",
+        "type": "Fiche Question-réponse conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F21248"
       },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2019-10-17"
+              "text": "modified 2021-02-18"
             }
           ]
         },
@@ -241,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F21248",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -629,52 +629,49 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Concernant les prestations familiales, la résidence alternée concerne les enfants résidant alternativement au domicile de chacun des parents dans une des situations suivantes :"
+                  "text": "Les  allocations familiales sont versées différemment selon que les parents sont ou non d'accord sur le ou les bénéficiaires."
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "ListeSituations",
+          "attributes": {
+            "affichage": "onglet"
+          },
+          "children": [
             {
               "type": "element",
-              "name": "Liste",
-              "attributes": {
-                "type": "puce"
-              },
+              "name": "Situation",
               "children": [
                 {
                   "type": "element",
-                  "name": "Item",
+                  "name": "Titre",
                   "children": [
                     {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Lorsque le juge aux affaires familiales a fixé la résidence de l'enfant en alternance au domicile de chacun des parents et que cette résidence alternée est mise en œuvre et respectée"
-                        }
-                      ]
+                      "type": "text",
+                      "text": "Les parents sont d'accord"
                     }
                   ]
                 },
                 {
                   "type": "element",
-                  "name": "Item",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "En cas de déclaration de résidence alternée effectuée ensemble  par les parents"
-                        }
-                      ]
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11902"
+                      }
                     }
                   ]
                 },
                 {
                   "type": "element",
-                  "name": "Item",
+                  "name": "Texte",
                   "children": [
                     {
                       "type": "element",
@@ -682,42 +679,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "En cas de déclaration de résidence alternée effectuée par un  parent et non contestée par l'autre"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Les  allocations sont versées différemment selon que les parents se sont mis d'accord sur le ou les bénéficiaires."
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "BlocCas",
-              "attributes": {
-                "affichage": "radio"
-              },
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Cas",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Si les parents sont d'accord"
+                          "text": "En cas de résidence alternée de vos enfants, vous avez le choix."
                         }
                       ]
                     },
@@ -727,93 +689,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "En cas de résidence alternée de vos enfants, vous pouvez d'un commun accord avec l'autre parent :"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Liste",
-                      "attributes": {
-                        "type": "puce"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "soit désigner le parent qui sera le bénéficiaire de l'ensemble des prestations familiales,"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "soit choisir le partage des "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F13213",
-                                    "type": "Fiche d'information conditionnée",
-                                    "audience": "Particuliers"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "allocations familiales"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " et désigner 1 bénéficiaire unique (vous ou l'autre parent) pour les autres prestations familiales. "
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Attention",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Attention"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "vous ne pouvez remettre en cause votre choix qu'au bout d'1 an (sauf en cas de changement des conditions de résidence de vos enfants)."
-                            }
-                          ]
+                          "text": "Vous pouvez désigner le parent qui sera le bénéficiaire de l'ensemble des prestations familiales."
                         }
                       ]
                     },
@@ -823,180 +699,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Dans tous les cas (accord ou non entre vous et l'autre parent), vous devez remplir le formulaire cerfa n°14000*01. Il inclut la déclaration de situation."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "ServiceEnLigne",
-                      "attributes": {
-                        "ID": "R36342",
-                        "URL": "https://wwwd.caf.fr/wps/portal/caffr/aidesetservices/lesservicesenligne/faireunedemandedeprestation/residencealterneedeclarationetchoixdesparents#/enfants?codePrestation=DRA#prestation-DRA-cnaf",
-                        "numerocerfa": "14000*01",
-                        "type": "Formulaire"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Enfant(s) en résidence alternée - déclaration et choix des parents"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Source",
-                          "attributes": {
-                            "ID": "R30610"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Caisse nationale des allocations familiales (Cnaf)"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Vous devez ensuite l'adresser à votre Caf (ou à la MSA si vous relevez du régime agricole)."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "OuSAdresser",
-                      "attributes": {
-                        "ID": "R38",
-                        "sve": "non",
-                        "type": "Local personnalisé sur SP"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Caisse d'allocations familiales (Caf)"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "PivotLocal",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "caf"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "RessourceWeb",
-                          "attributes": {
-                            "URL": "http://www.caf.fr/allocataires/ma-caf-recherche/"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Source",
-                          "attributes": {
-                            "ID": "R30610"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Caisse nationale des allocations familiales (Cnaf)"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "OuSAdresser",
-                      "attributes": {
-                        "ID": "R39",
-                        "sve": "non",
-                        "type": "Local personnalisé sur SP"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Mutualité sociale agricole (MSA)"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "PivotLocal",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "msa"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "RessourceWeb",
-                          "attributes": {
-                            "URL": "https://www.msa.fr/lfy/web/msa/contact/coordonnees-msa"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Source",
-                          "attributes": {
-                            "ID": "R30660"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Caisse centrale de la mutualité sociale agricole (MSA)"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Cas",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "En cas de désaccord"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Une part des "
+                          "text": "Vous pouvez aussi choisir de partager les "
                         },
                         {
                           "type": "element",
@@ -1015,7 +718,17 @@
                         },
                         {
                           "type": "text",
-                          "text": " vous est automatiquement versée, ainsi qu'à l'autre parent,"
+                          "text": " et désigner 1 bénéficiaire unique (vous ou l'autre parent) pour les autres prestations familiales."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vos enfant sont en résidence alternée s'ils résident effectivement en alternance au domicile de chacun des parents dans une des situations suivantes :"
                         }
                       ]
                     },
@@ -1036,7 +749,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "par votre caisse d'allocations familiales (Caf)"
+                                  "text": "Sur décision du juge aux affaires familiales"
                                 }
                               ]
                             }
@@ -1052,11 +765,406 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "ou si vous relevez du régime agricole, par votre caisse de la Mutualité sociale agricole (MSA)."
+                                  "text": "En cas de déclaration  par les 2 parents"
                                 }
                               ]
                             }
                           ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "En cas de déclaration par un  parent non contestée par l'autre"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "onglet"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Cas général (Caf)"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11332"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez remplir le formulaire cerfa n°14000. Il inclut la déclaration de situation et le choix du versement des prestations."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ServiceEnLigne",
+                              "attributes": {
+                                "ID": "R36342",
+                                "URL": "https://wwwd.caf.fr/wps/portal/caffr/aidesetservices/lesservicesenligne/faireunedemandedeprestation/residencealterneedeclarationetchoixdesparents#/enfants?codePrestation=DRA#prestation-DRA-cnaf",
+                                "numerocerfa": "14000*01",
+                                "type": "Formulaire"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Enfant(s) en résidence alternée - déclaration et choix des parents"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30610"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Caisse nationale des allocations familiales (Cnaf)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez ensuite l'adresser à votre Caf."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "OuSAdresser",
+                              "attributes": {
+                                "ID": "R38",
+                                "sve": "non",
+                                "type": "Local personnalisé sur SP"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Caisse d'allocations familiales (Caf)"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "PivotLocal",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "caf"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "RessourceWeb",
+                                  "attributes": {
+                                    "URL": "http://www.caf.fr/allocataires/ma-caf-recherche/"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30610"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Caisse nationale des allocations familiales (Cnaf)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Régime agricole (MSA)"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11333"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez remplir le formulaire cerfa n°14000. Il inclut la déclaration de situation et le choix du versement des prestations."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ServiceEnLigne",
+                              "attributes": {
+                                "ID": "R36342",
+                                "URL": "https://wwwd.caf.fr/wps/portal/caffr/aidesetservices/lesservicesenligne/faireunedemandedeprestation/residencealterneedeclarationetchoixdesparents#/enfants?codePrestation=DRA#prestation-DRA-cnaf",
+                                "numerocerfa": "14000*01",
+                                "type": "Formulaire"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Enfant(s) en résidence alternée - déclaration et choix des parents"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30610"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Caisse nationale des allocations familiales (Cnaf)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez ensuite l'adresser à votre agence MSA."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "OuSAdresser",
+                              "attributes": {
+                                "ID": "R39",
+                                "sve": "non",
+                                "type": "Local personnalisé sur SP"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Mutualité sociale agricole (MSA)"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "PivotLocal",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "msa"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "RessourceWeb",
+                                  "attributes": {
+                                    "URL": "https://www.msa.fr/lfy/web/msa/contact/coordonnees-msa"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30660"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Caisse centrale de la mutualité sociale agricole (MSA)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Attention",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Attention"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "vous ne pouvez modifier votre choix qu'au bout d'un an (sauf changement des conditions de résidence de vos enfants)."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Situation",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Les parents sont en désaccord"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11903"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous touchez automatiquement une part des "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F13213",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "allocations familiales"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ", de même pour l'autre parent."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Cette part dépend de la composition de votre famille."
                         }
                       ]
                     },
@@ -1072,156 +1180,278 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Dans tous les cas (accord ou non entre vous et l'autre parent), vous devez remplir le formulaire cerfa n°14000*01. Il inclut la déclaration de situation."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "ServiceEnLigne",
+                      "name": "BlocCas",
                       "attributes": {
-                        "ID": "R36342",
-                        "URL": "https://wwwd.caf.fr/wps/portal/caffr/aidesetservices/lesservicesenligne/faireunedemandedeprestation/residencealterneedeclarationetchoixdesparents#/enfants?codePrestation=DRA#prestation-DRA-cnaf",
-                        "numerocerfa": "14000*01",
-                        "type": "Formulaire"
+                        "affichage": "onglet"
                       },
                       "children": [
                         {
                           "type": "element",
-                          "name": "Titre",
+                          "name": "Cas",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Enfant(s) en résidence alternée - déclaration et choix des parents"
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Cas général (Caf)"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11332"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez remplir le formulaire cerfa n°14000. Il inclut la déclaration de situation et le choix du versement des prestations."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ServiceEnLigne",
+                              "attributes": {
+                                "ID": "R36342",
+                                "URL": "https://wwwd.caf.fr/wps/portal/caffr/aidesetservices/lesservicesenligne/faireunedemandedeprestation/residencealterneedeclarationetchoixdesparents#/enfants?codePrestation=DRA#prestation-DRA-cnaf",
+                                "numerocerfa": "14000*01",
+                                "type": "Formulaire"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Enfant(s) en résidence alternée - déclaration et choix des parents"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30610"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Caisse nationale des allocations familiales (Cnaf)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez ensuite l'adresser à votre Caf."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "OuSAdresser",
+                              "attributes": {
+                                "ID": "R38",
+                                "sve": "non",
+                                "type": "Local personnalisé sur SP"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Caisse d'allocations familiales (Caf)"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "PivotLocal",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "caf"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "RessourceWeb",
+                                  "attributes": {
+                                    "URL": "http://www.caf.fr/allocataires/ma-caf-recherche/"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30610"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Caisse nationale des allocations familiales (Cnaf)"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Source",
-                          "attributes": {
-                            "ID": "R30610"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Caisse nationale des allocations familiales (Cnaf)"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Vous devez ensuite l'adresser à votre Caf (ou à la MSA si vous relevez du régime agricole)."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "OuSAdresser",
-                      "attributes": {
-                        "ID": "R38",
-                        "sve": "non",
-                        "type": "Local personnalisé sur SP"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Régime agricole (MSA)"
+                                }
+                              ]
+                            },
                             {
-                              "type": "text",
-                              "text": "Caisse d'allocations familiales (Caf)"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "PivotLocal",
-                          "children": [
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11333"
+                                  }
+                                }
+                              ]
+                            },
                             {
-                              "type": "text",
-                              "text": "caf"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "RessourceWeb",
-                          "attributes": {
-                            "URL": "http://www.caf.fr/allocataires/ma-caf-recherche/"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Source",
-                          "attributes": {
-                            "ID": "R30610"
-                          },
-                          "children": [
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez remplir le formulaire cerfa n°14000. Il inclut la déclaration de situation et le choix du versement des prestations."
+                                }
+                              ]
+                            },
                             {
-                              "type": "text",
-                              "text": "Caisse nationale des allocations familiales (Cnaf)"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "OuSAdresser",
-                      "attributes": {
-                        "ID": "R39",
-                        "sve": "non",
-                        "type": "Local personnalisé sur SP"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
+                              "type": "element",
+                              "name": "ServiceEnLigne",
+                              "attributes": {
+                                "ID": "R36342",
+                                "URL": "https://wwwd.caf.fr/wps/portal/caffr/aidesetservices/lesservicesenligne/faireunedemandedeprestation/residencealterneedeclarationetchoixdesparents#/enfants?codePrestation=DRA#prestation-DRA-cnaf",
+                                "numerocerfa": "14000*01",
+                                "type": "Formulaire"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Enfant(s) en résidence alternée - déclaration et choix des parents"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30610"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Caisse nationale des allocations familiales (Cnaf)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
-                              "type": "text",
-                              "text": "Mutualité sociale agricole (MSA)"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "PivotLocal",
-                          "children": [
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez ensuite l'adresser à votre agence MSA."
+                                }
+                              ]
+                            },
                             {
-                              "type": "text",
-                              "text": "msa"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "RessourceWeb",
-                          "attributes": {
-                            "URL": "https://www.msa.fr/lfy/web/msa/contact/coordonnees-msa"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Source",
-                          "attributes": {
-                            "ID": "R30660"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Caisse centrale de la mutualité sociale agricole (MSA)"
+                              "type": "element",
+                              "name": "OuSAdresser",
+                              "attributes": {
+                                "ID": "R39",
+                                "sve": "non",
+                                "type": "Local personnalisé sur SP"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Mutualité sociale agricole (MSA)"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "PivotLocal",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "msa"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "RessourceWeb",
+                                  "attributes": {
+                                    "URL": "https://www.msa.fr/lfy/web/msa/contact/coordonnees-msa"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30660"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Caisse centrale de la mutualité sociale agricole (MSA)"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         }
