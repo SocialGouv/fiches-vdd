@@ -1,3 +1,17 @@
+# [2.85.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.84.0...v2.85.0) (2021-04-05)
+
+
+### Bug Fixes
+
+* delete old fiches on fetch ([#111](https://github.com/SocialGouv/fiches-vdd/issues/111)) ([4173cd6](https://github.com/SocialGouv/fiches-vdd/commit/4173cd697040a23bcac1c5e7d468c438e84e4321))
+* **ci:** add jest for eslint... ([#154](https://github.com/SocialGouv/fiches-vdd/issues/154)) ([5454a55](https://github.com/SocialGouv/fiches-vdd/commit/5454a55b83923e66e8d23e0fbe8ad97d02b6974a))
+* **renovate:** remove automergeAll ([#139](https://github.com/SocialGouv/fiches-vdd/issues/139)) ([f935f19](https://github.com/SocialGouv/fiches-vdd/commit/f935f191b7c6b2ec7cb1a51d99ba2ca982cfebc0))
+
+
+### Features
+
+* **data:** 20210405_1314 update ([e8e997a](https://github.com/SocialGouv/fiches-vdd/commit/e8e997ae1b0e3baf1617b7bd2f3fca3577f88a24))
+
 # [2.84.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.83.0...v2.84.0) (2021-02-20)
 
 
