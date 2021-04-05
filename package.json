@@ -2,6 +2,13 @@
   "name": "@socialgouv/fiches-vdd",
   "description": "Fiches vos droits et démarches au format JSON",
   "version": "2.84.0",
+  "repository": "https://github.com/SocialGouv/fiches-vdd.git",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "fetch": "find ./data/* -iname '*.json' -delete && node --max-old-space-size=4096 fetch",
+    "lint": "eslint *.js"
+  },
   "dependencies": {
     "node-fetch": "^2.6.1",
     "ora": "^5.3.0",
@@ -19,15 +26,8 @@
   "engines": {
     "node": ">= v10.23.3"
   },
-  "license": "MIT",
-  "main": "index.js",
   "publishConfig": {
     "access": "public"
-  },
-  "repository": "https://github.com/SocialGouv/fiches-vdd.git",
-  "scripts": {
-    "fetch": "node --max-old-space-size=4096 fetch",
-    "lint": "eslint *.js"
   },
   "types": "index.d.ts"
 }
