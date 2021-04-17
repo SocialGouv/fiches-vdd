@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1688",
-        "type": "Fiche d'information",
+        "type": "Fiche d'information conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1688"
       },
@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Le travail de nuit est interdit aux mineurs, qu'ils soient salariés ou stagiaires en milieu professionnel. Toutefois, des dérogations sont possibles dans certains secteurs d'activité ou dans des situations d'urgence. Les règles sont différentes selon l'age du jeune travailleur."
+              "text": "Le travail de nuit est interdit aux mineurs, qu'ils soient salariés ou stagiaires en milieu professionnel. Toutefois, des dérogations sont possibles dans certains secteurs d'activité ou dans des situations d'urgence. Les règles sont différentes selon l'âge du jeune travailleur."
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2019-10-18"
+              "text": "modified 2021-04-16"
             }
           ]
         },
@@ -241,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F1688",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -579,7 +579,33 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Le travail de nuit est interdit aux mineurs, qu'ils soient salariés ou stagiaires en milieu professionnel. Toutefois, des dérogations sont possibles dans certains secteurs d'activité ou dans des situations d'urgence. Les règles sont différentes selon l'age du jeune travailleur."
+                      "text": "Le travail de nuit est interdit aux mineurs, qu'ils soient salariés ou stagiaires en milieu professionnel. Toutefois, des dérogations sont possibles dans certains secteurs d'activité ou dans des situations d'urgence. Les règles sont différentes selon l'âge du jeune travailleur."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35729",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Travail de nuit d'un jeune de moins de 18 ans"
                     }
                   ]
                 }
@@ -610,106 +636,72 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11055"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Le travail de nuit doit rester exceptionnel et être nécessaire pour la continuité de l'activité économique de l'entreprise ou avoir une utilité sociale."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Il est interdit de faire travailler un jeune âgé de 16 à 18 ans "
-                        },
-                        {
-                          "type": "element",
-                          "name": "MiseEnEvidence",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "entre 22h00 et 6h"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "MiseEnEvidence",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "00"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": ". Cependant, des dérogations existent pour certains secteurs d'activité ou dans des situations d'urgence."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "MiseEnEvidence",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Dérogations par secteur"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Des dérogations peuvent être accordées par l'inspecteur du travail, pour une période d'un an maximum renouvelable. Sans réponse de l'inspecteur  dans le délai d'un mois suivant le dépôt de la demande, l'autorisation est considérée comme accordée."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Les dérogations ne sont possibles que dans des secteurs précis, déterminés par la réglementation :"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Liste",
+                      "name": "BlocCas",
                       "attributes": {
-                        "type": "puce"
+                        "affichage": "radio"
                       },
                       "children": [
                         {
                           "type": "element",
-                          "name": "Item",
+                          "name": "Cas",
                           "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Hôtellerie et restauration"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13534"
+                                  }
+                                }
+                              ]
+                            },
                             {
                               "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Hôtellerie et restauration : le travail de nuit peut être autorisé de 22h00 à 23h30"
+                                  "text": "Dans ce secteur d'activité, des dérogations peuvent être accordées par l'inspecteur du travail, pour une période d'un an maximum renouvelable. Sans réponse de l'inspecteur dans le délai d'un mois suivant le dépôt de la demande, l'autorisation est considérée comme accordée."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le travail de nuit peut être autorisé de 22h00 à 23h30."
                                 }
                               ]
                             }
@@ -717,15 +709,58 @@
                         },
                         {
                           "type": "element",
-                          "name": "Item",
+                          "name": "Cas",
                           "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Boulangerie et pâtisserie"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13535"
+                                  }
+                                }
+                              ]
+                            },
                             {
                               "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Boulangerie et pâtisserie : le travail de nuit peut être autorisé au plus tôt à partir de 4h00 pour permettre aux jeunes travailleurs de participer à un cycle complet de fabrication du pain ou de la pâtisserie. Seuls les établissements où toutes les phases de la fabrication de pain ou de pâtisseries ne sont pas assurées entre 6h00 et 22h00 peuvent bénéficier de cette dérogation."
+                                  "text": "Dans ce secteur d'activité, des dérogations peuvent être accordées par l'inspecteur du travail, pour une période d'un an maximum renouvelable. Sans réponse de l'inspecteur dans le délai d'un mois suivant le dépôt de la demande, l'autorisation est considérée comme accordée."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le travail de nuit peut être autorisé au plus tôt à partir de 4h00 pour permettre aux jeunes travailleurs de participer à un cycle complet de fabrication du pain ou de la pâtisserie."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Seuls les établissements où toutes les phases de la fabrication de pain ou de pâtisseries ne sont pas assurées entre 6h00 et 22h00 peuvent bénéficier de cette dérogation."
                                 }
                               ]
                             }
@@ -733,15 +768,48 @@
                         },
                         {
                           "type": "element",
-                          "name": "Item",
+                          "name": "Cas",
                           "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Spectacles"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12477"
+                                  }
+                                }
+                              ]
+                            },
                             {
                               "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Spectacles : le travail de nuit peut être autorisé jusqu'à minuit"
+                                  "text": "Dans ce secteur d'activité, des dérogations peuvent être accordées par l'inspecteur du travail, pour une période d'un an maximum renouvelable. Sans réponse de l'inspecteur dans le délai d'un mois suivant le dépôt de la demande, l'autorisation est considérée comme accordée."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le travail de nuit peut être autorisé jusqu'à minuit."
                                 }
                               ]
                             }
@@ -749,66 +817,48 @@
                         },
                         {
                           "type": "element",
-                          "name": "Item",
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Titre",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Courses hippiques : le travail de nuit peut être autorisé jusqu'à minuit et uniquement pour les activités liées à la monte du cheval et à la mène d'attelage en course. Cette dérogation ne peut être utilisée que 2 fois par semaine et 30 nuits par an au maximum."
+                                  "text": "Courses hippiques"
                                 }
                               ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "MiseEnEvidence",
-                          "children": [
+                            },
                             {
-                              "type": "text",
-                              "text": "Dérogations exceptionnelles en cas d'urgence"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Un jeune de moins de 18 ans ne peut pas travailler entre minuit et 4h00 du matin, quel que soit le secteur. Toutefois, en cas d'extrême urgence, le jeune peut travailler entre minuit et 4h00 du matin si les 2 conditions suivantes sont réunies :"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Liste",
-                      "attributes": {
-                        "type": "puce"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13536"
+                                  }
+                                }
+                              ]
+                            },
                             {
                               "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "aucun travailleur adulte n'est disponible,"
+                                  "text": "Dans ce secteur d'activité, des dérogations peuvent être accordées par l'inspecteur du travail, pour une période d'un an maximum renouvelable. Sans réponse de l'inspecteur dans le délai d'un mois suivant le dépôt de la demande, l'autorisation est considérée comme accordée."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le travail de nuit peut être autorisé jusqu'à minuit et uniquement pour les activités liées à la monte du cheval et à la mène d'attelage en course. Cette dérogation ne peut être utilisée que 2 fois par semaine et 30 nuits par an au maximum."
                                 }
                               ]
                             }
@@ -816,47 +866,174 @@
                         },
                         {
                           "type": "element",
-                          "name": "Item",
+                          "name": "Cas",
                           "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "En cas d'urgence"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13305"
+                                  }
+                                }
+                              ]
+                            },
                             {
                               "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "la dérogation concerne des travaux passagers destinés à prévenir des accidents imminents ou à réparer les conséquences des accidents survenus."
+                                  "text": "Un jeune de moins de 18 ans ne peut pas travailler entre minuit et 4h00 du matin, quel que soit le secteur. Toutefois, en cas d'extrême urgence, le jeune peut travailler entre minuit et 4h00 du matin si les 2 conditions suivantes sont réunies :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "aucun travailleur adulte n'est disponible,"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "la dérogation concerne des travaux passagers destinés à prévenir des accidents imminents ou à réparer les conséquences des accidents survenus."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Une période équivalente de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R54690",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "repos compensateur"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " doit être accordée au jeune travailleur dans un délai de 3 semaines."
                                 }
                               ]
                             }
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Une période équivalente de "
                         },
                         {
                           "type": "element",
-                          "name": "LienIntra",
-                          "attributes": {
-                            "LienID": "R54690",
-                            "type": "Définition de glossaire"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "repos compensateur"
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Autre situation"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11723"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le travail de nuit doit rester exceptionnel et être nécessaire pour la continuité de l'activité économique de l'entreprise ou avoir une utilité sociale."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Il est interdit de faire travailler un jeune âgé de 16 à 18 ans "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "entre 22h00 et 6h00"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
                             }
                           ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " doit être accordée au jeune travailleur dans un délai de 3 semaines."
                         }
                       ]
                     },
@@ -906,6 +1083,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11484"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
@@ -922,13 +1112,23 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "entre 20 h et 6h00"
+                              "text": "entre 20h00 et 6h00"
                             }
                           ]
                         },
                         {
                           "type": "text",
-                          "text": ". À titre exceptionnel, une dérogation peut être accordée par l'inspecteur du travail pour le salarié de moins de 16 ans dans les secteurs suivants :"
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "À titre exceptionnel, une dérogation peut être accordée par l'inspecteur du travail pour le salarié de moins de 16 ans s'il travaille dans l'un des secteurs suivants :"
                         }
                       ]
                     },
@@ -949,7 +1149,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Dans une entreprise de spectacles, sédentaire ou itinérante"
+                                  "text": "Spectacles sédentaire ou itinérant"
                                 }
                               ]
                             }
@@ -965,7 +1165,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Dans une entreprise de cinéma, de radiophonie, de télévision ou d'enregistrements sonores"
+                                  "text": "Cinéma, radiophonie, de télévision ou enregistrements sonores"
                                 }
                               ]
                             }
@@ -981,7 +1181,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "En vue d'exercer une activité de mannequin"
+                                  "text": "Mannequinat"
                                 }
                               ]
                             }
@@ -997,7 +1197,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Dans une entreprise ou association ayant pour objet la participation de compétitions de jeux vidéo (sans prise de paris)"
+                                  "text": "Compétitions de jeux vidéo (sans prise de pari)"
                                 }
                               ]
                             }
@@ -1059,6 +1259,84 @@
                     {
                       "type": "text",
                       "text": "Travail de nuit du salarié du secteur privé"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Theme",
+                  "attributes": {
+                    "ID": "N19806"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Travail"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Fiche",
+              "attributes": {
+                "ID": "F2216",
+                "audience": "Particuliers"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Durée du travail d'un jeune de moins de 18 ans"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Theme",
+                  "attributes": {
+                    "ID": "N19806"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Travail"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Fiche",
+              "attributes": {
+                "ID": "F2344",
+                "audience": "Particuliers"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Jeune de 15 à 18 ans en entreprise : travaux interdits et travaux réglementés"
                     }
                   ]
                 },
@@ -1272,6 +1550,20 @@
                   ]
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "QuestionReponse",
+          "attributes": {
+            "ID": "F1649",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "À partir de quel âge peut-on travailler ?"
             }
           ]
         }
