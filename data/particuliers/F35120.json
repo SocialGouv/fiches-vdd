@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F35120",
-        "type": "Fiche d'information",
+        "type": "Fiche d'information conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "dateDerniereModificationImportante": "2021-01-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F35120"
@@ -242,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F35120",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -789,6 +789,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10329"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
@@ -1047,6 +1060,165 @@
                       "children": [
                         {
                           "type": "text",
+                          "text": "L'avantage fiscal est limité à "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Valeur",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "3 704 €"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " pour la part entière accordée pour votre 1"
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exposant",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "er"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " enfant à charge."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Pour savoir si vous êtes concerné par le plafonnement, le service des impôts compare les résultats des 2 calculs suivants :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "numero"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Impôt calculé sur 1 part, diminué du montant du plafond correspondant aux majorations de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R1124",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "quotient familial"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Impôt calculé  sur votre nombre de parts réel (en fonction de votre situation et de vos charges de famille)"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Si le 2"
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exposant",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "nd"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exposant"
+                        },
+                        {
+                          "type": "text",
+                          "text": " résultat est inférieur au 1"
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exposant",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "er"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ", le plafonnement est applicable. Le montant de l'impôt dû correspond au 1"
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exposant",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "er"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " résultat."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
                           "text": "Vous pouvez également bénéficier d'une majoration du nombre de parts dans certaines situations."
                         }
                       ]
@@ -1055,7 +1227,7 @@
                       "type": "element",
                       "name": "BlocCas",
                       "attributes": {
-                        "affichage": "onglet"
+                        "affichage": "radio"
                       },
                       "children": [
                         {
@@ -1068,182 +1240,20 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Cas général"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "L'avantage fiscal est limité à "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Valeur",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "3 704 €"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " pour la part entière accordée pour votre 1"
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Exposant",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "er"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " enfant à charge."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Pour savoir si vous êtes concerné par le plafonnement, le service des impôts compare les résultats des 2 calculs suivants :"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Liste",
-                              "attributes": {
-                                "type": "numero"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Impôt calculé sur 1 part, diminué du montant du plafond correspondant aux majorations de "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R1124",
-                                            "type": "Définition de glossaire"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "quotient familial"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Impôt calculé  sur votre nombre de parts réel (en fonction de votre situation et de vos charges de famille)"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Si le 2"
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Exposant",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "nd"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Exposant"
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " résultat est inférieur au 1"
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Exposant",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "er"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", le plafonnement est applicable. Le montant de l'impôt dû correspond au 1"
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Exposant",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "er"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " résultat."
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Cas",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
                                   "text": "Vous avez élevé seul(e) un enfant pendant 5 ans"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11257"
+                                  }
                                 }
                               ]
                             },
@@ -1427,6 +1437,19 @@
                             },
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11797"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
@@ -1566,6 +1589,19 @@
                             },
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11905"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
@@ -1696,6 +1732,19 @@
                     {
                       "type": "text",
                       "text": "Enfant en garde partagée"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10646"
+                      }
                     }
                   ]
                 },
@@ -1939,6 +1988,169 @@
                     },
                     {
                       "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "La réduction d'impôt liée au "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R1124",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "quotient familial"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "  est limitée  à "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Valeur",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "785 €"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " pour chaque quart de part supplémentaire."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Pour savoir si vous êtes concerné par le plafonnement, le service des impôts compare les résultats des 2 calculs suivants :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "numero"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Impôt calculé sur 1 part, diminué du montant du plafond correspondant aux majorations de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R1124",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "quotient familial"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Impôt calculé  sur votre nombre de parts réel (en fonction de votre situation et de vos charges de famille)"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Si le 2"
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exposant",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "nd"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exposant"
+                        },
+                        {
+                          "type": "text",
+                          "text": " résultat est inférieur au 1"
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exposant",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "er"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ", le plafonnement est applicable. Le montant de l'impôt dû correspond au 1"
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exposant",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "er"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " résultat."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "ASavoir",
                       "children": [
                         {
@@ -1969,16 +2181,6 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Plafonnement et demi-parts supplémentaires"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
                           "text": "Vous avez droit à une majoration d'une demi-part pour chaque personne à charge qui a la carte mobilité inclusion portant la mention \"invalidité\", qu'il s'agisse de votre enfant ou de toute autre personne, dans certaines conditions."
                         }
                       ]
@@ -1997,7 +2199,7 @@
                       "type": "element",
                       "name": "BlocCas",
                       "attributes": {
-                        "affichage": "onglet"
+                        "affichage": "radio"
                       },
                       "children": [
                         {
@@ -2010,186 +2212,20 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Cas général"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "La réduction d'impôt liée au "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienIntra",
-                                  "attributes": {
-                                    "LienID": "R1124",
-                                    "type": "Définition de glossaire"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "quotient familial"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": "  est limitée  à "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Valeur",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "785 €"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " pour chaque quart de part supplémentaire."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Pour savoir si vous êtes concerné par le plafonnement, le service des impôts compare les résultats des 2 calculs suivants :"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Liste",
-                              "attributes": {
-                                "type": "numero"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Impôt calculé sur 1 part, diminué du montant du plafond correspondant aux majorations de "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R1124",
-                                            "type": "Définition de glossaire"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "quotient familial"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Impôt calculé  sur votre nombre de parts réel (en fonction de votre situation et de vos charges de famille)"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Si le 2"
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Exposant",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "nd"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Exposant"
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " résultat est inférieur au 1"
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Exposant",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "er"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", le plafonnement est applicable. Le montant de l'impôt dû correspond au 1"
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Exposant",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "er"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " résultat."
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Cas",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
                                   "text": "Vous avez élevé seul(e) un enfant pendant 5 ans"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11257"
+                                  }
                                 }
                               ]
                             },
@@ -2373,6 +2409,19 @@
                             },
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11797"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
@@ -2507,6 +2556,19 @@
                                 {
                                   "type": "text",
                                   "text": "Vous êtes ancien combattant"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11905"
+                                  }
                                 }
                               ]
                             },
