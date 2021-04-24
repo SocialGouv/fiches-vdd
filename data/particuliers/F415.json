@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F415",
-        "type": "Fiche d'information",
+        "type": "Fiche d'information conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "dateDerniereModificationImportante": "2021-01-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F415"
@@ -252,7 +252,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F415",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -816,7 +816,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Pensions (base et complémentaires)"
+                          "text": "Retraites de base et complémentaire"
                         }
                       ]
                     }
@@ -1657,6 +1657,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T13150"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Paragraphe",
                   "children": [
                     {
@@ -2418,9 +2431,22 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Minimum vieillesse, Aspa, Asi et retraites exonérées"
+                          "text": "Minimum vieillesse, Aspa, Asi"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10648"
+                      }
                     }
                   ]
                 },
@@ -2530,53 +2556,69 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "ANoter",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Les pensions de vieillesse versées par la Sécurité sociale dont le montant ne dépasse pas "
-                    },
-                    {
                       "type": "element",
-                      "name": "Valeur",
+                      "name": "Titre",
                       "children": [
                         {
                           "type": "text",
-                          "text": "3 527,63 €"
+                          "text": "À noter"
                         }
                       ]
                     },
                     {
-                      "type": "text",
-                      "text": " par an ne sont pas à déclarer, si les ressources du bénéficiaire ne dépassent pas "
-                    },
-                    {
                       "type": "element",
-                      "name": "Valeur",
+                      "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "10 881,75 €"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": " par an pour une personne seule, "
-                    },
-                    {
-                      "type": "element",
-                      "name": "Valeur",
-                      "children": [
+                          "text": "Les pensions de vieillesse versées par la Sécurité sociale dont le montant ne dépasse pas "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Valeur",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "3 527,63 €"
+                            }
+                          ]
+                        },
                         {
                           "type": "text",
-                          "text": "16 893,94 €"
+                          "text": " par an ne sont pas à déclarer, si les ressources du bénéficiaire ne dépassent pas "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Valeur",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "10 881,75 €"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " par an pour une personne seule, "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Valeur",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "16 893,94 €"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " par an pour un couple"
                         }
                       ]
-                    },
-                    {
-                      "type": "text",
-                      "text": " par an pour un couple"
                     }
                   ]
                 }
@@ -2596,9 +2638,22 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Retraites versées en capital"
+                          "text": "Retraite versée en capital"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T12313"
+                      }
                     }
                   ]
                 },
@@ -2667,6 +2722,19 @@
                           "text": "Allocation veuvage"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10951"
+                      }
                     }
                   ]
                 },
@@ -3334,9 +3402,22 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Allocations versées aux anciens combattants"
+                          "text": "Allocation versée aux anciens combattants"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11338"
+                      }
                     }
                   ]
                 },
@@ -4038,6 +4119,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T13127"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Paragraphe",
                   "children": [
                     {
@@ -4065,6 +4159,19 @@
                           "text": "Allocation de vétérance des sapeurs-pompiers volontaires"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11336"
+                      }
                     }
                   ]
                 },
