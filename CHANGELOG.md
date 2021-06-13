@@ -1,3 +1,15 @@
+# [2.142.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.141.0...v2.142.0) (2021-06-13)
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([#165](https://github.com/SocialGouv/fiches-vdd/issues/165)) ([e7fca94](https://github.com/SocialGouv/fiches-vdd/commit/e7fca942f295753ba20a03900ee2d0b74066aaa7))
+
+
+### Features
+
+* **data:** 20210613_2353 update ([75d7bab](https://github.com/SocialGouv/fiches-vdd/commit/75d7babb1f8b0a5431e38e1fc7098f70db598cec))
+
 # [2.141.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.140.0...v2.141.0) (2021-06-13)
 
 
