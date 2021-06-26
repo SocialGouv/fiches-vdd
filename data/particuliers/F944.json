@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F944",
-        "type": "Fiche Question-réponse",
+        "type": "Fiche Question-réponse conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F944"
       },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2020-01-28"
+              "text": "modified 2021-06-16"
             }
           ]
         },
@@ -241,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F944",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -403,7 +403,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Les organisateurs d'activités de scoutisme sont soumis aux obligations générales valant pour toute structure d'animation accueillant des mineurs. Cependant, ils bénéficient de conditions dérogatoires par rapport aux structures d'animation classiques, en fonction de l'hébergement."
+                  "text": "Les organisateurs d'activités de scoutisme  bénéficient de conditions particulières par rapport aux structures d'animation classiques, en fonction de l'hébergement."
                 }
               ]
             }
@@ -432,32 +432,21 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Le directeur du camp doit être âgé au  minimum de "
-                        },
-                        {
-                          "type": "element",
-                          "name": "MiseEnEvidence",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "19"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " ans."
-                        }
-                      ]
-                    },
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11902"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
                       "name": "BlocCas",
@@ -481,6 +470,19 @@
                             },
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12852"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
@@ -499,7 +501,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": " peuvent être organisées, pour des mineurs constitués en groupe et âgés de plus de 11 ans, dans les conditions suivantes :"
+                                  "text": " peuvent être organisées pour des mineurs  en groupe et âgés de plus de 11 ans, dans les conditions suivantes :"
                                 }
                               ]
                             },
@@ -520,7 +522,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Les caractéristiques de l'activité sont précisées dans le projet pédagogique (prévision des activités, de l'organisation des conditions de vie et de la répartition des tâches (sécurité, intendance...)"
+                                          "text": "Caractéristiques de l'activité précisées dans le projet pédagogique (organisation des conditions de vie, répartition des tâches...)"
                                         }
                                       ]
                                     }
@@ -536,7 +538,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Les parents ont signé une attestation au moment de l'inscription précisant qu'ils ont pris connaissance des conditions d'exercice des activités en autonomie est obligatoire"
+                                          "text": "Information et accord des parents (attestation signée au moment de l'inscription)"
                                         }
                                       ]
                                     }
@@ -552,7 +554,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "La préparation inclut la mise à disposition pour le groupe de moyens adaptés et le repérage des lieux (moyens de transport envisagés et conditions d'hébergement)"
+                                          "text": "Préparation avec mise à disposition de moyens adaptés pour le groupe et repérage des lieux (moyens de transport, conditions d'hébergement)"
                                         }
                                       ]
                                     }
@@ -568,7 +570,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Les responsables du groupe reconnus par les instances nationales du mouvement valident le projet en tenant compte des capacités d'autonomie des mineurs"
+                                          "text": "Validation du projet par les responsables du groupe (reconnus par les instances nationales du mouvement) en tenant compte des capacités d'autonomie des mineurs"
                                         }
                                       ]
                                     }
@@ -584,7 +586,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Lors du déroulement de l'activité, l'équipe de responsables reste joignable à tout moment."
+                                          "text": "Responsable joignable à tout moment pendant l'activité"
                                         }
                                       ]
                                     }
@@ -809,11 +811,48 @@
                             },
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12853"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Le directeur du camp peut être inclus dans l'effectif d'animation :"
+                                  "text": "Le directeur du camp doit être âgé au  minimum de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "19"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " ans."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le directeur du camp peut être inclus dans l'effectif d'animation dans les cas suivants :"
                                 }
                               ]
                             },
@@ -834,7 +873,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "lorsque l'accueil est organisé pour 4 nuitées consécutives maximum, comprenant au maximum 80 mineurs,"
+                                          "text": "Accueil de 4 nuitées consécutives maximum pour 80 mineurs au maximum"
                                         }
                                       ]
                                     }
@@ -850,7 +889,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "lorsque l'accueil compte 4 nuitées minimum, comprenant au maximum 50 mineurs d'au moins 14 ans."
+                                          "text": "Accueil de 4 nuitées ou plus pour au maximum 50 mineurs âgés d'au moins 14 ans"
                                         }
                                       ]
                                     }
@@ -1081,6 +1120,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11903"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
@@ -1137,7 +1189,7 @@
                         },
                         {
                           "type": "text",
-                          "text": " peuvent être organisées, pour des mineurs constitués en groupe et âgés de plus de 11 ans, dans les conditions suivantes :"
+                          "text": " peuvent être organisées pour des mineurs  en groupe et âgés de plus de 11 ans, dans les conditions suivantes :"
                         }
                       ]
                     },
@@ -1158,7 +1210,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Les caractéristiques de l'activité sont précisées dans le projet pédagogique (prévision des activités, de l'organisation des conditions de vie et de la répartition des tâches (sécurité, intendance...)"
+                                  "text": "Caractéristiques de l'activité précisées dans le projet pédagogique (organisation des conditions de vie, répartition des tâches...)"
                                 }
                               ]
                             }
@@ -1174,7 +1226,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Les parents ont signé une attestation au moment de l'inscription précisant qu'ils ont pris connaissance des conditions d'exercice des activités en autonomie est obligatoire"
+                                  "text": "Information et accord des parents (attestation signée au moment de l'inscription)"
                                 }
                               ]
                             }
@@ -1190,7 +1242,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "La préparation inclut la mise à disposition pour le groupe de moyens adaptés et le repérage des lieux (moyens de transport envisagés)"
+                                  "text": "Préparation avec mise à disposition de moyens adaptés pour le groupe et repérage des lieux (moyens de transport, conditions d'hébergement)"
                                 }
                               ]
                             }
@@ -1206,7 +1258,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Les responsables du groupe reconnus par les instances nationales du mouvement valident le projet en tenant compte des capacités d'autonomie des mineurs"
+                                  "text": "Validation du projet par les responsables du groupe (reconnus par les instances nationales du mouvement) en tenant compte des capacités d'autonomie des mineurs"
                                 }
                               ]
                             }
@@ -1222,7 +1274,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Lors du déroulement de l'activité, l'équipe de responsables reste joignable à tout moment."
+                                  "text": "Responsable joignable à tout moment pendant l'activité"
                                 }
                               ]
                             }

@@ -50,7 +50,7 @@
           "children": [
             {
               "type": "text",
-              "text": "En tant qu'Algérien, vous devez demander un certificat de résidence pour séjourner en France plus de 3 mois si vous êtes majeur (ou si vous avez plus de 16 ans et souhaitez travailler). Selon votre situation, le préfet vous délivre un certificat de résidence d'1 an vie privée et familiale ou un certificat d'1 an portant une autre mention (salarié, étudiant, etc.). Dans tous les cas, vous devez remplir des conditions."
+              "text": "En tant qu'Algérien, vous devez demander un certificat de résidence pour séjourner en France plus de 3 mois si vous êtes majeur. Vous devez aussi en demander un si vous avez plus de 16 ans et souhaitez travailler. Selon votre situation, le préfet vous délivre un certificat de résidence d'1 an vie privée et familiale ou un certificat d'1 an portant une autre mention (salarié, étudiant, etc.). Dans tous les cas, vous devez remplir des conditions."
             }
           ]
         },
@@ -80,7 +80,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2021-04-02"
+              "text": "modified 2021-06-24"
             }
           ]
         },
@@ -838,7 +838,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "En tant qu'Algérien, vous devez demander un certificat de résidence  pour séjourner en France plus de 3 mois si vous êtes majeur (ou si vous avez plus de 16 ans et souhaitez travailler). Selon votre situation, le préfet vous délivre  un certificat de résidence d'1 an "
+                      "text": "En tant qu'Algérien, vous devez demander un certificat de résidence  pour séjourner en France plus de 3 mois si vous êtes majeur. Vous devez aussi en demander  un si vous avez plus de 16 ans et souhaitez travailler. Selon votre situation, le préfet vous délivre  un certificat de résidence d'1 an "
                     },
                     {
                       "type": "element",
@@ -949,7 +949,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Qui est concerné ?"
+                              "text": "Conditions à remplir"
                             }
                           ]
                         }
@@ -957,70 +957,45 @@
                     },
                     {
                       "type": "element",
-                      "name": "Tableau",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "radio"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Bénéficiaires du certificat de résidence vie privée et familiale et conditions requises"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "50",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "50",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "header"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Bénéficiaires"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Vous êtes époux(se) ou enfant majeur d'un Algérien titulaire d'un certificat d'1 an et êtes entré par regroupement familial"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Conditions supplémentaires requises"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13785"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez détenir un visa de long séjour."
                                 }
                               ]
                             }
@@ -1028,186 +1003,134 @@
                         },
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous êtes marié(e) avec un(e) Français(e)"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13784"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez remplir l'ensemble des conditions suivantes :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Vous êtes époux ou enfant majeur d'un Algérien titulaire d'un certificat d'un an et êtes entrés par "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "N11165",
-                                        "type": "Dossier",
-                                        "audience": "Particuliers"
-                                      },
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "regroupement familial"
+                                          "text": "Vous devez être entré(e) régulièrement en France (un visa de court séjour suffit),"
                                         }
                                       ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous devez détenir un visa de long séjour"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous êtes marié avec un Français"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "- Vous devez  être entré régulièrement en France (un "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F16146",
-                                        "type": "Fiche d'information",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "visa de court séjour"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " suffit)"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "- Votre époux doit avoir conservé la nationalité française"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Votre époux(se) doit avoir conservé la nationalité française,"
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "- Si votre mariage a été célébré à l'étranger, il doit avoir été transcrit préalablement sur les registres de l'état civil français"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous êtes marié avec un étranger titulaire d'une carte mention "
-                                    },
                                     {
                                       "type": "element",
-                                      "name": "Expression",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "scientifique"
+                                          "text": "Si votre mariage a été célébré à l'étranger, il doit avoir été transcrit préalablement sur les registres de l'état civil français."
                                         }
                                       ]
                                     }
                                   ]
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous êtes marié(e) avec un(e) étranger(ère) titulaire d'une carte mention \"scientifique\""
+                                }
+                              ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous devez être entré régulièrement en France"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12612"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez être entré(e) régulièrement en France (un visa de court séjour suffit)."
                                 }
                               ]
                             }
@@ -1215,50 +1138,62 @@
                         },
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous avez un enfant français mineur résidant en France"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Vous avez un enfant français mineur résidant en France"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13787"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez exercer, même partiellement, l'autorité parentale ou subvenir effectivement aux besoins de votre enfant"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si vous avez reconnu votre enfant "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "- Vous devez exercer, même partiellement, l'autorité parentale ou subvenir effectivement aux besoins de votre enfant"
+                                      "text": "après sa naissance,"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "- Lorsque vous avez reconnu votre enfant après sa naissance, le certificat ne vous est délivré que si vous subvenez aux besoins de votre enfant depuis sa naissance ou depuis au moins 1 an à la date de votre demande de certificat"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": " vous devez subvenir aux besoins de l'enfant depuis sa naissance ou depuis au moins 1 an à la date de votre demande du certificat."
                                 }
                               ]
                             }
@@ -1266,79 +1201,38 @@
                         },
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous êtes né en France, que vous y avez résidé pendant au moins 8 ans de façon continue, et suivi, après l'âge de 10 ans, une scolarité d'au moins 5 ans dans une école française"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Vous êtes né en France, vous y avez résidé pendant au moins 8 ans de façon continue, et suivi, après l'âge de 10 ans, une scolarité d'au moins 5 ans dans une école française"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Votre état de santé nécessite une prise en charge médicale dont le défaut pourrait entraîner pour vous des conséquences exceptionnellement graves"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13906"
+                                  }
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Paragraphe",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "- Vous devez résider habituellement en France (depuis 1 an minimum)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "- Vous ne devez pas pouvoir bénéficier effectivement d'un traitement approprié en Algérie"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Vous devez demander votre certificat entre l'âge de 16 et 21 ans."
                                 }
                               ]
                             }
@@ -1346,212 +1240,176 @@
                         },
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Votre état de santé nécessite une prise en charge médicale dont le défaut pourrait entraîner pour vous des conséquences exceptionnellement graves"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13802"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez remplir les conditions suivantes :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
                                   "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous avez obtenu le bénéfice de la "
-                                    },
                                     {
                                       "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F299",
-                                        "type": "Fiche Question-réponse",
-                                        "audience": "Particuliers"
-                                      },
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "protection subsidiaire"
+                                          "text": "Vous devez résider habituellement en France depuis 1 an minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous ne devez pas pouvoir bénéficier effectivement d'un traitement approprié en Algérie"
                                         }
                                       ]
                                     }
                                   ]
                                 }
                               ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous êtes l'époux ou l'enfant de moins de 19 ans du bénéficiaire de la protection subsidiaire"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Vous résidez habituellement en France depuis plus de 10 ans (ou plus de 15 ans si, au cours de cette période,vous avez séjourné comme étudiant)"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13907"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez prouver votre résidence effective et continue par tous moyens."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vos liens personnels et familiaux en France sont importants"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vos attaches en France doivent être telles que le refus d'autoriser votre séjour porterait "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "- Votre mariage doit être antérieur à l'octroi de la protection ou, à défaut, avoir été célébré depuis au moins 1 an"
+                                      "text": "une atteinte disproportionnée"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "- Votre "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R52145",
-                                        "type": "Définition de glossaire"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "communauté de vie"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " avec votre époux doit être effective"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
+                                  "type": "text",
+                                  "text": " à votre droit au respect de votre vie privée et familiale (par exemple : partenaire de "
+                                },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "R45368",
+                                    "type": "Sigle"
+                                  },
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Vous résidez habituellement en France depuis plus de 10 ans (ou plus de 15 ans si, au cours de cette période,vous avez séjourné comme étudiant)"
+                                      "text": "Pacs"
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
+                                },
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Votre résidence habituelle en France peut être prouvée par tout moyen"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vos liens personnels et familiaux en France sont importants"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vos attaches en France doivent être telles que le refus d'autoriser votre séjour porterait une atteinte disproportionnée à votre droit au respect de votre vie privée et familiale (par exemple : partenaire de "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "R45368",
-                                        "type": "Sigle"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Pacs"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " d'une personne résidant légalement en France)"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": " d'une personne résidant légalement en France)."
                                 }
                               ]
                             }
@@ -1579,7 +1437,45 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "si vous "
+                              "text": "d'autres dispositions s'appliquent si vous êtes bénéficiaire d'une protection internationale ("
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "F15401",
+                                "type": "Fiche d'information conditionnée",
+                                "audience": "Particuliers"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "réfugié"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ", "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "F2689",
+                                "type": "Fiche d'information conditionnée",
+                                "audience": "Particuliers"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "protection subsidiaire"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ") ou si  vous "
                             },
                             {
                               "type": "element",
@@ -1593,20 +1489,6 @@
                                 {
                                   "type": "text",
                                   "text": "déposez plainte ou témoignez dans une affaire de proxénétisme ou de traite des êtres humains"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": ", vous pouvez aussi bénéficier à titre exceptionnel d'un certificat "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Expression",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "vie privée et familiale"
                                 }
                               ]
                             },
@@ -1660,7 +1542,7 @@
                         },
                         {
                           "type": "text",
-                          "text": " certificat de résidence, vous devez passer (sauf exceptions), une visite médicale en France. Cet examen médical est effectué par un médecin de l'"
+                          "text": " certificat de résidence, vous devez passer (sauf exceptions) une visite médicale en France. Cet examen médical est effectué par un médecin de l'"
                         },
                         {
                           "type": "element",
@@ -2594,75 +2476,6 @@
                               ]
                             }
                           ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Cas",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Protection subsidiaire (Ofpra)"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devez payer un droit de timbre de "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Valeur",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "25 €"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " par "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F33071",
-                                    "type": "Fiche Question-réponse",
-                                    "audience": "Particuliers"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "timbres fiscaux"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": "."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Le justificatif d'acquittement du droit de timbre est demandé lors de la remise de la carte."
-                                }
-                              ]
-                            }
-                          ]
                         }
                       ]
                     }
@@ -2708,7 +2521,7 @@
                         },
                         {
                           "type": "text",
-                          "text": " est valable 1 an et renouvelable. "
+                          "text": " est valable 1 an. Il est renouvelable."
                         }
                       ]
                     }
@@ -2736,11 +2549,38 @@
                     },
                     {
                       "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T13930"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vous devez déposer la demande de renouvellement de votre certificat de résidence à la préfecture ou la sous-préfecture de votre domicile, dans les 2 mois précédant sa date d'expiration. Renseignez-vous plusieurs mois à l'avance sur le site internet de votre préfecture pour la prise de rendez-vous."
+                          "text": "Vous devez déposer la demande de renouvellement de votre certificat de résidence à la préfecture ou la sous-préfecture de votre domicile, "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "dans les 2 mois"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " précédant sa date d'expiration. Renseignez-vous plusieurs mois à l'avance sur le site internet de votre préfecture pour la prise de rendez-vous."
                         }
                       ]
                     },
@@ -3128,84 +2968,65 @@
                       "type": "element",
                       "name": "estVrai",
                       "attributes": {
-                        "var": "T11908"
+                        "var": "T10010"
                       }
                     }
                   ]
                 },
                 {
                   "type": "element",
-                  "name": "FragmentConditionne",
+                  "name": "Paragraphe",
                   "children": [
                     {
+                      "type": "text",
+                      "text": "Vous devez posséder, sauf exception, un "
+                    },
+                    {
                       "type": "element",
-                      "name": "Condition",
+                      "name": "LienInterne",
+                      "attributes": {
+                        "LienPublication": "F16162",
+                        "type": "Fiche d'information conditionnée",
+                        "audience": "Particuliers"
+                      },
                       "children": [
                         {
-                          "type": "element",
-                          "name": "estVrai",
-                          "attributes": {
-                            "var": "T13347"
-                          }
+                          "type": "text",
+                          "text": "visa de long séjour"
                         }
                       ]
                     },
                     {
+                      "type": "text",
+                      "text": " correspondant à la mention du certificat que vous demandez (par exemple "
+                    },
+                    {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Expression",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vous devez posséder, sauf exception, un "
-                        },
-                        {
-                          "type": "element",
-                          "name": "LienInterne",
-                          "attributes": {
-                            "LienPublication": "F16162",
-                            "type": "Fiche d'information conditionnée",
-                            "audience": "Particuliers"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "visa de long séjour"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " correspondant à la mention du certificat que vous demandez (par exemple "
-                        },
-                        {
-                          "type": "element",
-                          "name": "Expression",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "scientifique"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " ou "
-                        },
-                        {
-                          "type": "element",
-                          "name": "Expression",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "salarié"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": "). Votre certificat de résidence portera cette mention."
+                          "text": "scientifique"
                         }
                       ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " ou "
+                    },
+                    {
+                      "type": "element",
+                      "name": "Expression",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "salarié"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": "). Votre certificat de résidence portera cette mention."
                     }
                   ]
                 },
@@ -3223,7 +3044,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Qui est concerné ?"
+                              "text": "Conditions à remplir"
                             }
                           ]
                         }
@@ -3231,94 +3052,88 @@
                     },
                     {
                       "type": "element",
-                      "name": "Tableau",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "radio"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Bénéficiaires d'un certificat de résidence d'un an portant différentes mentions"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "46",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "46",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "45",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "header"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Votre situation"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Vous voulez travailler comme salarié en France"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Conditions"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13347"
+                                  }
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Paragraphe",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "La "
+                                },
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F2728",
+                                    "type": "Fiche d'information conditionnée",
+                                    "audience": "Particuliers"
+                                  },
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Mention du certificat"
+                                      "text": "demande d'autorisation de travail"
                                     }
                                   ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " est à la charge de votre futur employeur."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le certificat de résidence portera la mention "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "salarié"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
                                 }
                               ]
                             }
@@ -3326,81 +3141,49 @@
                         },
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous voulez travailler comme salarié en France"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Vous voulez exercer une activité non-salariée (commerçant, artisan, industriel, une profession libérale) en France"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Paragraphe",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "La "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F2728",
-                                        "type": "Fiche d'information conditionnée",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "demande d'autorisation de travail"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " est à la charge de votre futur employeur"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Vous devez être inscrit, selon le cas, au registre du commerce et des sociétés ou au répertoire des métiers ou à un ordre professionnel."
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Paragraphe",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Le certificat de résidence portera la mention "
+                                },
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Expression",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Expression",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Salarié"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "profession non-salariée exercée"
                                     }
                                   ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
                                 }
                               ]
                             }
@@ -3408,62 +3191,77 @@
                         },
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous voulez exercer une activité non-salariée (commerçant, artisan, industriel, une profession libérale) en France"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Vous voulez exercer temporairement en France une activité salariée chez un employeur déterminé"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous devez être inscrit, selon le cas, au registre du commerce et des sociétés ou au répertoire des métiers ou à un ordre professionnel"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13909"
+                                  }
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F2728",
+                                    "type": "Fiche d'information conditionnée",
+                                    "audience": "Particuliers"
+                                  },
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Expression",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Profession non-salariée exercée"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "La demande d'autorisation provisoire de travail"
                                     }
                                   ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " est à la charge de votre futur employeur."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le certificat de résidence portera la mention "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "travailleur temporaire"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
                                 }
                               ]
                             }
@@ -3471,75 +3269,56 @@
                         },
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous voulez exercer temporairement en France une activité salariée chez un employeur déterminé"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Vous venez pour mener des travaux de recherches ou dispenser un enseignement de niveau universitaire en France"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F2728",
-                                        "type": "Fiche d'information conditionnée",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "La demande d'autorisation provisoire de travail"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " est à la charge de votre futur employeur"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13910"
+                                  }
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Paragraphe",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Vous devez présenter une convention d'accueil signée avec un organisme (public ou privé) de recherches ou d'enseignement supérieur agréé."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le certificat de résidence portera la mention "
+                                },
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Expression",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Expression",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Travailleur temporaire"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "scientifique."
                                     }
                                   ]
                                 }
@@ -3549,125 +3328,62 @@
                         },
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous venez  pour mener des travaux de recherches ou  dispenser un enseignement de niveau universitaire en France"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Vous venez comme artiste interprète ou auteur d'œuvre littéraire ou artistique en France"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous devez présenter une convention d'accueil signée avec un organisme (public ou privé) de recherches ou d'enseignement supérieur agréé"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13421"
+                                  }
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Paragraphe",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Expression",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Scientifique"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous venez comme artiste interprète ou auteur d'œuvre littéraire ou artistique en France"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Vous devez avoir un contrat de plus de 3 mois conclu avec une entreprise ou un établissement dont l'activité principale comporte la création ou l'exploitation d'une œuvre de l'esprit."
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Paragraphe",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Le certificat de résidence portera la mention "
+                                },
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Expression",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Vous devez être titulaire d'un contrat de plus de 3 mois conclu avec une entreprise ou un établissement dont l'activité principale comporte la création ou l'exploitation d'une œuvre de l'esprit"
+                                      "text": "profession artistique et culturelle"
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
+                                },
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Expression",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Profession artistique et culturelle"
-                                        }
-                                      ]
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "."
                                 }
                               ]
                             }
@@ -4530,7 +4246,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Votre certificat est valable au maximum 1 an et renouvelable."
+                          "text": "Votre certificat est valable au maximum 1 an. Elle est renouvelable."
                         }
                       ]
                     }
@@ -4558,11 +4274,38 @@
                     },
                     {
                       "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T13929"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vous devez déposer la demande de renouvellement de votre certificat de résidence à la préfecture ou la sous-préfecture de votre domicile, dans les 2 mois précédant sa date d'expiration. Renseignez-vous plusieurs mois à l'avance sur le site internet de votre préfecture pour la prise de rendez-vous."
+                          "text": "Vous devez déposer la demande de renouvellement de votre certificat de résidence à la préfecture ou la sous-préfecture de votre domicile, "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "dans les 2 mois"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " précédant sa date d'expiration. Renseignez-vous plusieurs mois à l'avance sur le site internet de votre préfecture pour la prise de rendez-vous."
                         }
                       ]
                     },
@@ -4950,7 +4693,7 @@
                       "type": "element",
                       "name": "estVrai",
                       "attributes": {
-                        "var": "T10010"
+                        "var": "T11211"
                       }
                     }
                   ]
@@ -4998,22 +4741,9 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Qui est concerné ?"
+                              "text": "Conditions à remplir"
                             }
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Condition",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "estVrai",
-                          "attributes": {
-                            "var": "T10010"
-                          }
                         }
                       ]
                     },
@@ -5023,7 +4753,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vous êtes concerné si vous suivez des études, un stage ou une formation en France."
+                          "text": "Vous devez suivre des études, un stage ou une formation en France."
                         }
                       ]
                     },
@@ -5047,7 +4777,7 @@
                         },
                         {
                           "type": "text",
-                          "text": " par mois). "
+                          "text": " par mois)."
                         }
                       ]
                     }
@@ -5750,7 +5480,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Le certificat de résidence est valable 1 an et renouvelable."
+                          "text": "Le certificat de résidence est valable 1 an. Il est renouvelable."
                         }
                       ]
                     }
@@ -5778,11 +5508,38 @@
                     },
                     {
                       "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T13927"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vous devez déposer la demande de renouvellement de votre certificat de résidence à la préfecture ou la sous-préfecture de votre domicile, dans les 2 mois précédant sa date d'expiration. Renseignez-vous plusieurs mois à l'avance sur le site internet de votre préfecture pour la prise de rendez-vous."
+                          "text": "Vous devez déposer la demande de renouvellement de votre certificat de résidence à la préfecture ou la sous-préfecture de votre domicile, "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "dans les 2 mois"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " précédant sa date d'expiration. Renseignez-vous plusieurs mois à l'avance sur le site internet de votre préfecture pour la prise de rendez-vous."
                         }
                       ]
                     },
@@ -6136,49 +5893,30 @@
                 },
                 {
                   "type": "element",
-                  "name": "FragmentConditionne",
+                  "name": "Paragraphe",
                   "children": [
                     {
+                      "type": "text",
+                      "text": "Vous devez posséder un "
+                    },
+                    {
                       "type": "element",
-                      "name": "Condition",
+                      "name": "LienInterne",
+                      "attributes": {
+                        "LienPublication": "F16162",
+                        "type": "Fiche d'information conditionnée",
+                        "audience": "Particuliers"
+                      },
                       "children": [
                         {
-                          "type": "element",
-                          "name": "estVrai",
-                          "attributes": {
-                            "var": "T10010"
-                          }
+                          "type": "text",
+                          "text": "visa de long séjour"
                         }
                       ]
                     },
                     {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Vous devez posséder un "
-                        },
-                        {
-                          "type": "element",
-                          "name": "LienInterne",
-                          "attributes": {
-                            "LienPublication": "F16162",
-                            "type": "Fiche d'information conditionnée",
-                            "audience": "Particuliers"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "visa de long séjour"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": "."
-                        }
-                      ]
+                      "type": "text",
+                      "text": "."
                     }
                   ]
                 },
@@ -6196,7 +5934,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Qui est concerné ?"
+                              "text": "Conditions à remplir"
                             }
                           ]
                         }
@@ -6208,67 +5946,36 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vous êtes concerné si :"
+                          "text": "Vous devez justifier de moyens d'existence suffisants pour subvenir à vos besoins pendant la durée de votre séjour."
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Liste",
-                      "attributes": {
-                        "type": "puce"
-                      },
+                      "name": "Paragraphe",
                       "children": [
                         {
+                          "type": "text",
+                          "text": "Vous  devez vous engagez à n'exercer en France aucune activité professionnelle soumise à "
+                        },
+                        {
                           "type": "element",
-                          "name": "Item",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F2728",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "vous justifiez de moyens d'existence suffisants pour subvenir à vos besoins pendant la durée de votre séjour,"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "autorisation"
                             }
                           ]
                         },
                         {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "et vous  vous engagez à n'exercer en France aucune activité professionnelle soumise à "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F2728",
-                                    "type": "Fiche d'information conditionnée",
-                                    "audience": "Particuliers"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "autorisation"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": "."
-                                }
-                              ]
-                            }
-                          ]
+                          "type": "text",
+                          "text": "."
                         }
                       ]
                     },
@@ -6848,7 +6555,21 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Justificatifs de moyens d'existence suffisants atteignant un montant annuel égal à 12 fois le montant du Smic mensuel net (attestations bancaires, cautions de personnes solvables, titre de pension pour les retraités...). Ces documents doivent être traduits en français."
+                                  "text": "Justificatifs de moyens d'existence suffisants atteignant un montant annuel égal à "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "14 767 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " (attestations bancaires, cautions de personnes solvables, titre de pension pour les retraités...). Ces documents doivent être traduits en français."
                                 }
                               ]
                             }
@@ -7080,7 +6801,7 @@
                         },
                         {
                           "type": "text",
-                          "text": " est valable 1 an et renouvelable. "
+                          "text": " est valable 1 an. Il est renouvelable."
                         }
                       ]
                     }
@@ -7108,11 +6829,38 @@
                     },
                     {
                       "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T13928"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vous devez déposer la demande de renouvellement de votre certificat de résidence à la préfecture ou la sous-préfecture de votre domicile, dans les 2 mois précédant sa date d'expiration. Renseignez-vous plusieurs mois à l'avance sur le site internet de votre préfecture pour la prise de rendez-vous."
+                          "text": "Vous devez déposer la demande de renouvellement de votre certificat de résidence à la préfecture ou la sous-préfecture de votre domicile, "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "dans les 2 mois"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " précédant sa date d'expiration. Renseignez-vous plusieurs mois à l'avance sur le site internet de votre préfecture pour la prise de rendez-vous."
                         }
                       ]
                     },
@@ -7617,62 +7365,6 @@
                 {
                   "type": "text",
                   "text": "Ministère chargé de l'intérieur"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Definition",
-          "attributes": {
-            "ID": "R52145"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Communauté de vie"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Texte",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Vivre ensemble, matériellement et sentimentalement (chacun peut avoir son domicile)"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Reference",
-              "attributes": {
-                "type": "Texte de référence",
-                "URL": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006136137",
-                "ID": "R11304"
-              },
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Code civil : articles 212 à 226"
-                    }
-                  ]
                 }
               ]
             }
