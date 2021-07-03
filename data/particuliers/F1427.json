@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1427",
-        "type": "Fiche d'information",
+        "type": "Fiche d'information conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "dateDerniereModificationImportante": "2021-02-25T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1427"
@@ -50,7 +50,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Un acte de naissance peut donner lieu à la délivrance de 3 documents différents : la copie intégrale, l'extrait avec filiation et l'extrait sans filiation. Les conditions de délivrance dépendent de la nature du document que vous demandez. La démarche pour l'obtenir varie en fonction du lieu de naissance de la personne concernée par l'acte. La démarche est gratuite."
+              "text": "Si vous avez besoin d'un acte de naissance, 3 documents différents peuvent vous être délivrés : une copie intégrale (c'est-à-dire la reproduction de l'ensemble de votre acte de naissance), un extrait avec filiation ou un extrait sans filiation. La démarche varie en fonction de votre lieu de naissance."
             }
           ]
         },
@@ -80,7 +80,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2021-03-11"
+              "text": "modified 2021-06-30"
             }
           ]
         },
@@ -242,7 +242,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F1427",
-                "type": "Fiche d'information"
+                "type": "Fiche d'information conditionnée"
               },
               "children": [
                 {
@@ -357,7 +357,47 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Un acte de naissance peut donner lieu à la délivrance de 3 documents différents : la copie intégrale, l'extrait avec filiation et l'extrait sans filiation. Les conditions de délivrance dépendent de la nature du document que vous demandez. La démarche pour l'obtenir varie en fonction du lieu de naissance de la personne concernée par l'acte. La démarche est  gratuite."
+                      "text": "Si vous avez besoin d'un acte de naissance, 3 documents différents peuvent vous être délivrés : une copie intégrale (c'est-à-dire la reproduction de l'ensemble de votre acte de naissance), un extrait avec "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienIntra",
+                      "attributes": {
+                        "LienID": "R38490",
+                        "type": "Définition de glossaire"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "filiation"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " ou un extrait sans filiation. La démarche  varie en fonction de votre lieu de naissance."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Texte",
+          "children": [
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "MiseEnEvidence",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "La demande d'un acte de naissance est gratuite."
                     }
                   ]
                 }
@@ -388,6 +428,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10019"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
@@ -404,7 +457,625 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "De quoi s'agit-il ?"
+                                  "text": "Comment faire votre demande ?"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "FragmentConditionne",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13793"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous pouvez faire la demande directement en ligne :"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "FragmentConditionne",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13793"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ServiceEnLigne",
+                              "attributes": {
+                                "ID": "R1406",
+                                "URL": "https://psl.service-public.fr/mademarche/EtatCivil/demarche?action=NAISSANCE",
+                                "type": "Téléservice"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Demande d'acte de naissance : copie intégrale ou extrait (naissance en France) - Service gratuit"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30608"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Direction de l'information légale et administrative (Dila) - Premier ministre"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous recevrez le document chez vous par courrier en "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "quelques jours"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le délai peut varier en fonction du traitement de votre demande par les services de la mairie et du délai d'acheminement du courrier."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si vous ne faites pas la demande en ligne, vous pouvez "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "la faire par courrier ou en vous rendant sur place"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "BlocCas",
+                          "attributes": {
+                            "affichage": "onglet"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Par courrier"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous pouvez adresser votre demande par courrier sur papier libre auprès de la "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "mairie où vous êtes né(e)"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "La demande doit indiquer votre nom, prénoms, date de naissance, adresse (+ noms et prénoms de vos parents pour une copie intégrale ou un extrait avec filiation)."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "OuSAdresser",
+                                  "attributes": {
+                                    "ID": "R1",
+                                    "sve": "non",
+                                    "type": "Local personnalisé sur SP"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Mairie"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "PivotLocal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "mairie"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "RessourceWeb",
+                                      "attributes": {
+                                        "URL": "https://lannuaire.service-public.fr/"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous recevrez le document directement chez vous, par courrier, en "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "quelques jours"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Le délai peut varier en fonction du traitement de votre demande, par les services de la mairie, et du délai d'acheminement du courrier."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Sur place"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T13954"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous devez faire votre demande auprès de la "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "mairie où vous êtes né(e). "
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "OuSAdresser",
+                                  "attributes": {
+                                    "ID": "R1",
+                                    "sve": "non",
+                                    "type": "Local personnalisé sur SP"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Mairie"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "PivotLocal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "mairie"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "RessourceWeb",
+                                      "attributes": {
+                                        "URL": "https://lannuaire.service-public.fr/"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Le document vous sera délivré "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "immédiatement"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Liste",
+                                  "attributes": {
+                                    "type": "puce"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Si vous demandez un extrait sans filiation, vous devez indiquer vos nom, prénoms et date de naissance."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Liste",
+                                  "attributes": {
+                                    "type": "puce"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Si vous faites une demande d'extrait sans filiation pour une autre personne, vous devez  indiquer  les nom, prénoms et la date de naissance de la personne concernée."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Liste",
+                                  "attributes": {
+                                    "type": "puce"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Si vous demandez une copie intégrale ou un extrait avec filiation, vous devez indiquer vos nom, prénoms, date et lieu de naissance, votre adresse + les nom, prénoms de vos parents"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Liste",
+                                  "attributes": {
+                                    "type": "puce"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Si vous faites une demande, de copie intégrale ou d'un extrait avec filiation, pour une autre personne, vous devrez indiquer   les nom, prénoms, date et lieu de naissance de la personne à laquelle l'acte se rapporte + les nom et prénom usuels de ses parents."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Si vous ne connaissez pas ces informations, vous pouvez présenter votre carte d'identité."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Si vous n'êtes pas la personne concernée par l'acte, il faudra également fournir un autre document prouvant la filiation (livret de famille ou un autre acte d'état civil)."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ASavoir",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "À savoir"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "en cas de doute sur l'identité ou le statut de la personne qui fait la demande, l'officier de l'état civil peut vous demander toutes pièces justificatives."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Chapitre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La demande est-elle gratuite ?"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "La démarche est "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "gratuite."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Attention",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Attention"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "il n'y a pas lieu de faire votre demande sur des sites internet qui vous demandent une contrepartie financière."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Chapitre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Quelles sont les différences entre les actes ?"
                                 }
                               ]
                             }
@@ -1121,439 +1792,6 @@
                                   ]
                                 }
                               ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Chapitre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Faire la demande (en ligne, sur place, par courrier)"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "BlocCas",
-                          "attributes": {
-                            "type": "modalite",
-                            "affichage": "onglet",
-                            "personnalisable": "personnalisé sur SP"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cas",
-                              "attributes": {
-                                "type": "enLigne"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "En ligne"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ServiceEnLigne",
-                                  "attributes": {
-                                    "ID": "R1406",
-                                    "URL": "https://psl.service-public.fr/mademarche/EtatCivil/demarche?action=NAISSANCE",
-                                    "type": "Téléservice"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Demande d'acte de naissance : copie intégrale ou extrait (naissance en France) - Service gratuit"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30608"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Direction de l'information légale et administrative (Dila) - Premier ministre"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cas",
-                              "attributes": {
-                                "type": "surPlace"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Sur place"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous pouvez faire la demande auprès de la "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "mairie du lieu de naissance"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " de la personne concernée par l'acte."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "OuSAdresser",
-                                  "attributes": {
-                                    "ID": "R1",
-                                    "sve": "non",
-                                    "type": "Local personnalisé sur SP"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Mairie"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "PivotLocal",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "mairie"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "RessourceWeb",
-                                      "attributes": {
-                                        "URL": "https://lannuaire.service-public.fr/"
-                                      }
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Pour une demande d'extrait sans filiation, vous devez indiquer la date de naissance et les nom et prénoms de la personne concernée."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Pour une demande de copie intégrale ou un extrait avec filiation, vous devez indiquer  les nom, prénoms, date et lieu de naissance de la personne à laquelle l'acte se rapporte. Vous devez également indiquer les nom et prénom usuel de ses parents."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Si vous ne connaissez pas ces informations, vous pouvez présenter votre carte d'identité. Si vous n'êtes pas la personne concernée par l'acte, il faut aussi fournir un autre document prouvant la filiation (livret de famille ou un autre acte d'état civil)."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ASavoir",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "À savoir"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "en cas de doute sur l'identité ou le statut du demandeur, l'officier de l'état civil est fondé à solliciter toutes pièces justificatives."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cas",
-                              "attributes": {
-                                "type": "parCorres"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Par courrier"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "La demande peut être adressée par courrier sur papier libre en indiquant les informations suivantes :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Nom, prénoms et date de naissance de la personne concernée par l'acte (+ noms et prénoms des parents pour une copie intégrale ou un extrait avec filiation)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Adresse du demandeur"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "OuSAdresser",
-                                  "attributes": {
-                                    "ID": "R1",
-                                    "sve": "non",
-                                    "type": "Local personnalisé sur SP"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Mairie"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "PivotLocal",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "mairie"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "RessourceWeb",
-                                      "attributes": {
-                                        "URL": "https://lannuaire.service-public.fr/"
-                                      }
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Chapitre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Coût"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Gratuit"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Chapitre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Délai d'obtention"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Si l'acte est demandé "
-                            },
-                            {
-                              "type": "element",
-                              "name": "MiseEnEvidence",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "par internet ou par courrier"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": ",  il est envoyé au domicile du demandeur et parvient en général en quelques jours. Le délai d'obtention peut varier en fonction du traitement de votre demande, par les services de la mairie, et du délai d'acheminement du courrier."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Si l'acte est demandé "
-                            },
-                            {
-                              "type": "element",
-                              "name": "MiseEnEvidence",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "sur place"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": ", il est délivré immédiatement."
                             }
                           ]
                         }
@@ -1579,6 +1817,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11207"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
@@ -1595,7 +1846,632 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "De quoi s'agit-il ?"
+                                  "text": "Comment faire votre demande ?"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "FragmentConditionne",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T13793"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous pouvez "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "faire votre demande en ligne"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ". Vous devez créer un compte Service-Public.fr ou vous connecter avec "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R48788",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "FranceConnect"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ServiceEnLigne",
+                              "attributes": {
+                                "ID": "R1405",
+                                "URL": "https://psl.service-public.fr/mademarche/delivrance_demat/demarche?action=NAISSANCE",
+                                "type": "Téléservice"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Demande d'acte de naissance : copie intégrale ou extrait (naissance à l'étranger) - Service gratuit"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30604"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Ministère chargé de l'Europe et des affaires étrangères"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le délai de délivrance de votre acte de naissance est d'environ "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R1092",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "10 jours calendaires"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Pour l'obtenir, vous devez vous connecter à votre compte Service-Public.fr."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous pouvez télécharger le document PDF sur votre espace personnel."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous pourrez aussi demander à le recevoir par courrier."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L'acte comporte la signature électronique d'un officier d'état civil."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous pouvez également "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "faire votre demande par courrier"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ", sur papier libre, auprès du Service central d'état civil de Nantes (ministère des affaires étrangères)."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "OuSAdresser",
+                          "attributes": {
+                            "ID": "R192",
+                            "sve": "non",
+                            "type": "National"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Service central d'état civil (Scec) - Ministère des affaires étrangères"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Texte",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Chapitre",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "État civil (naissance, un mariage ou un décès) d'un Français à l'étranger"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Uniquement par courrier"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " à l'adresse suivante :"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Service central d'état civil - Ministère chargé des  affaires étrangères"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "\n\t\t\t11, rue de la Maison Blanche\n\t\t"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "\n\t\t\t44941 Nantes Cedex 09\n\t\t"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Le service n'accueille pas de public"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": "."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous pouvez aussi utiliser le       "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienExterne",
+                                          "attributes": {
+                                            "URL": "http://pastel.diplomatie.gouv.fr/dali/index2.html"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "téléservice"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Chapitre",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Pour toute information complémentaire, vous pouvez :"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Liste",
+                                      "attributes": {
+                                        "type": "puce"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Item",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Consulter le site "
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "LienExterne",
+                                                  "attributes": {
+                                                    "URL": "https://www.diplomatie.gouv.fr/fr/services-aux-citoyens/etat-civil-et-nationalite-francaise/"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "diplomatie.gouv.fr"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Item",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Téléphoner au"
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "MiseEnEvidence",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "+33 1 41 86 42 47"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "text": " du lundi au vendredi de 9h à 12h et de 13h à 16h"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Accès gratuit à un service  de visio-interprétation ou de transcription instantanée de la parole pour sourds ou malentendants"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Item",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Envoyer un mail à  courrier.scec@diplomatie.gouv.fr"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si vous demandez une copie intégrale ou un extrait avec filiation, vous devez indiquer vos nom, prénoms, date et lieu de naissance, votre adresse + les nom, prénoms de vos parents."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si vous faites une demande, de copie intégrale ou d'un extrait avec filiation, pour une autre personne, vous devrez indiquer les nom, prénoms, date et lieu de naissance de la personne à laquelle l'acte se rapporte + les nom et prénom usuels de ses parents."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ASavoir",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "À savoir"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "pour obtenir une copie (ou un extrait) d'acte de naissance d'une personne étrangère née à l'étranger, vous devez vous adresser à l'autorité qui a dressé l'acte dans le pays de naissance."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Le délai de délivrance d'un acte de naissance est d'environ "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R1092",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "10 jours calendaires"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ", augmenté du temps d'acheminement par la poste."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Chapitre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La demande est-elle gratuite ?"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "La demande est "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "gratuite"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Attention",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Attention"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "il n'y a pas lieu de faire votre demande sur des sites internet qui vous demandent une contrepartie financière."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Chapitre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Quelles sont les différences entre les actes ?"
                                 }
                               ]
                             }
@@ -2308,707 +3184,6 @@
                                     {
                                       "type": "text",
                                       "text": "Vous pouvez obtenir un extrait ou une copie d'un acte de naissance sans filiation, sans avoir à justifier sa demande."
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Chapitre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Faire la demande (en ligne, par courrier)"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "BlocCas",
-                          "attributes": {
-                            "affichage": "onglet"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cas",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "En ligne"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Pour faire une demande en ligne, vous devez "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "créer un compte Service-Public.fr"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " ou "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "vous connecter avec "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R48788",
-                                            "type": "Définition de glossaire"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "FranceConnect"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Quand l'acte est disponible, vous devrez de nouveau vous connecter : vous pourrez le télécharger au format PDF sur votre espace personnel. Vous pourrez aussi demander à le recevoir par courrier."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "L'acte comporte la signature électronique d'un officier d'état civil."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ServiceEnLigne",
-                                  "attributes": {
-                                    "ID": "R1405",
-                                    "URL": "https://psl.service-public.fr/mademarche/delivrance_demat/demarche?action=NAISSANCE",
-                                    "type": "Téléservice"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Demande d'acte de naissance : copie intégrale ou extrait (naissance à l'étranger) - Service gratuit"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30604"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Ministère chargé de l'Europe et des affaires étrangères"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cas",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Par courrier"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous devez faire la demande auprès du Service central d'état civil de Nantes (ministère des affaires étrangères)."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "La demande peut être adressée par courrier sur papier libre en indiquant les informations suivantes :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Nom, prénoms et date de naissance de la personne concernée par l'acte (+ noms et prénoms des parents pour une copie intégrale ou un extrait avec filiation)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Adresse du demandeur"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "OuSAdresser",
-                                  "attributes": {
-                                    "ID": "R192",
-                                    "sve": "non",
-                                    "type": "National"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Service central d'état civil (Scec) - Ministère des affaires étrangères"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Texte",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Chapitre",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Titre",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "État civil (naissance, un mariage ou un décès) d'un Français à l'étranger"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "MiseEnEvidence",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Uniquement par courrier"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": " à l'adresse suivante :"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Service central d'état civil - Ministère chargé des  affaires étrangères"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "\n\t\t\t11, rue de la Maison Blanche\n\t\t"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "\n\t\t\t44941 Nantes Cedex 09\n\t\t"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "MiseEnEvidence",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Le service n'accueille pas de public"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": "."
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Vous pouvez aussi utiliser le       "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "LienExterne",
-                                                  "attributes": {
-                                                    "URL": "http://pastel.diplomatie.gouv.fr/dali/index2.html"
-                                                  },
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "téléservice"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Chapitre",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Titre",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Pour toute information complémentaire, vous pouvez :"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Liste",
-                                              "attributes": {
-                                                "type": "puce"
-                                              },
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Item",
-                                                  "children": [
-                                                    {
-                                                      "type": "element",
-                                                      "name": "Paragraphe",
-                                                      "children": [
-                                                        {
-                                                          "type": "text",
-                                                          "text": "Consulter le site "
-                                                        },
-                                                        {
-                                                          "type": "element",
-                                                          "name": "LienExterne",
-                                                          "attributes": {
-                                                            "URL": "https://www.diplomatie.gouv.fr/fr/services-aux-citoyens/etat-civil-et-nationalite-francaise/"
-                                                          },
-                                                          "children": [
-                                                            {
-                                                              "type": "text",
-                                                              "text": "diplomatie.gouv.fr"
-                                                            }
-                                                          ]
-                                                        }
-                                                      ]
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "Item",
-                                                  "children": [
-                                                    {
-                                                      "type": "element",
-                                                      "name": "Paragraphe",
-                                                      "children": [
-                                                        {
-                                                          "type": "text",
-                                                          "text": "Téléphoner au"
-                                                        },
-                                                        {
-                                                          "type": "element",
-                                                          "name": "MiseEnEvidence",
-                                                          "children": [
-                                                            {
-                                                              "type": "text",
-                                                              "text": "+33 1 41 86 42 47"
-                                                            }
-                                                          ]
-                                                        },
-                                                        {
-                                                          "type": "text",
-                                                          "text": " du lundi au vendredi de 9h à 12h et de 13h à 16h"
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "type": "element",
-                                                      "name": "Paragraphe",
-                                                      "children": [
-                                                        {
-                                                          "type": "text",
-                                                          "text": "Accès gratuit à un service  de visio-interprétation ou de transcription instantanée de la parole pour sourds ou malentendants"
-                                                        }
-                                                      ]
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "Item",
-                                                  "children": [
-                                                    {
-                                                      "type": "element",
-                                                      "name": "Paragraphe",
-                                                      "children": [
-                                                        {
-                                                          "type": "text",
-                                                          "text": "Envoyer un mail à  courrier.scec@diplomatie.gouv.fr"
-                                                        }
-                                                      ]
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "ASavoir",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "À savoir"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "pour obtenir une copie (ou un extrait) d'acte de naissance d'une personne étrangère née à l'étranger, il faut s'adresser à l'autorité qui a dressé l'acte dans le pays de naissance."
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Chapitre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Coût"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Gratuit"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Chapitre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Délai d'obtention"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "BlocCas",
-                          "attributes": {
-                            "affichage": "onglet"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cas",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "En ligne"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Le délai de délivrance d'un acte est d'environ "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R1092",
-                                            "type": "Définition de glossaire"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "10 jours calendaires"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Pour l'obtenir, vous devez "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "vous connecter à votre compte Service-Public.fr"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": ". Vous pouvez télécharger le document PDF dans votre espace personnel en ligne."
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cas",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Par courrier"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Le délai de délivrance d'un acte est d'environ "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R1092",
-                                            "type": "Définition de glossaire"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "10 jours calendaires"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": ", augmenté du temps d'acheminement par la voie postale."
                                     }
                                   ]
                                 }
@@ -3632,6 +3807,41 @@
                     {
                       "type": "text",
                       "text": "Personne désignée par la loi pour représenter et défendre les intérêts d'une autre personne, qu'elle soit physique (par exemple, un enfant mineur représenté par son  père ou par sa mère) ou morale (par exemple, une société représentée par son  dirigeant)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Definition",
+          "attributes": {
+            "ID": "R38490"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Filiation"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Lien juridique entre un enfant et son père et/ou sa mère"
                     }
                   ]
                 }
