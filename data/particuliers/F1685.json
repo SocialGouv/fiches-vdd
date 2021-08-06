@@ -515,12 +515,25 @@
                   "type": "element",
                   "name": "Fiche",
                   "attributes": {
+                    "ID": "F31551"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Barème des points retirés par infraction"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Fiche",
+                  "attributes": {
                     "ID": "F1685"
                   },
                   "children": [
                     {
                       "type": "text",
-                      "text": "Perte et récupération de points"
+                      "text": "Récupération des points"
                     }
                   ]
                 },
@@ -533,7 +546,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Stage de récupération des points du permis de conduire"
+                      "text": "Stage de récupération des points"
                     }
                   ]
                 },
@@ -546,7 +559,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Rétention"
+                      "text": "Rétention du permis"
                     }
                   ]
                 },
@@ -559,7 +572,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Invalidation"
+                      "text": "Invalidation (solde à zéro)"
                     }
                   ]
                 },
@@ -4011,7 +4024,21 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Les points sont retirés de votre permis de conduire lorsque l'infraction est établie."
+                              "text": "Les points sont retirés  "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "lorsque l'infraction est établie"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
                             }
                           ]
                         },
@@ -4021,75 +4048,21 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "L'infraction est établie par le paiement d'une amende forfaitaire ou l'émission du "
+                              "text": "Le délai pour récupérer les points court "
                             },
                             {
                               "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R1056",
-                                "type": "Définition de glossaire"
-                              },
+                              "name": "MiseEnEvidence",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "titre exécutoire"
+                                  "text": "à partir de la date à laquelle l'infraction est établie"
                                 }
                               ]
                             },
                             {
                               "type": "text",
-                              "text": " d'une "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R18531",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "amende forfaitaire"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R56401",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "majorée"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": ", l'exécution d'une "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R19992",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "composition pénale"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " ou par une condamnation définitive."
+                              "text": "."
                             }
                           ]
                         },
@@ -4098,8 +4071,177 @@
                           "name": "Paragraphe",
                           "children": [
                             {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L'infraction est établie"
+                                }
+                              ]
+                            },
+                            {
                               "type": "text",
-                              "text": "Le délai pour récupérer les points court à partir de la date à laquelle l'infraction est établie."
+                              "text": " par :"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "le paiement de la dernière   "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R18531",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "amende forfaitaire"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ","
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "ou l'émission du "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R1056",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "titre exécutoire"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " d'une "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R18531",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "amende forfaitaire"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R56401",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "majorée"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ","
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "ou l'exécution d'une "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R19992",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "composition pénale"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ","
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "ou par une condamnation définitive."
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         }
@@ -9043,7 +9185,21 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Les points sont retirés de votre permis de conduire lorsque l'infraction est établie."
+                              "text": "Les points sont retirés  "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "lorsque l'infraction est établie"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
                             }
                           ]
                         },
@@ -9053,75 +9209,21 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "L'infraction est établie par le paiement d'une amende forfaitaire ou l'émission du "
+                              "text": "Le délai pour récupérer les points court "
                             },
                             {
                               "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R1056",
-                                "type": "Définition de glossaire"
-                              },
+                              "name": "MiseEnEvidence",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "titre exécutoire"
+                                  "text": "à partir de la date à laquelle l'infraction est établie"
                                 }
                               ]
                             },
                             {
                               "type": "text",
-                              "text": " d'une "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R18531",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "amende forfaitaire"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R56401",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "majorée"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": ", l'exécution d'une "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R19992",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "composition pénale"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " ou par une condamnation définitive."
+                              "text": "."
                             }
                           ]
                         },
@@ -9130,8 +9232,177 @@
                           "name": "Paragraphe",
                           "children": [
                             {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L'infraction est établie"
+                                }
+                              ]
+                            },
+                            {
                               "type": "text",
-                              "text": "Le délai pour récupérer les points court à partir de la date à laquelle l'infraction est établie."
+                              "text": " par :"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "le paiement de la dernière   "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R18531",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "amende forfaitaire"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ","
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "ou l'émission du "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R1056",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "titre exécutoire"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " d'une "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R18531",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "amende forfaitaire"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R56401",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "majorée"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ","
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "ou l'exécution d'une "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R19992",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "composition pénale"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ","
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "ou par une condamnation définitive."
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         }
