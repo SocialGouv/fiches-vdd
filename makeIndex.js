@@ -53,13 +53,13 @@ const makeIndex = () =>
     return fiches.map((id) => {
       const data = getFiche(key, id);
       return {
-        id: data.id,
-        type: key,
-        title: getFicheMetaText(data, "dc:title"),
-        subject: getFicheMetaText(data, "dc:subject"),
-        theme: getFicheAriane(data),
         breadcrumbs: getFicheBreacrumbs(data),
         date: getFicheMetaText(data, "dc:date"),
+        id: data.id,
+        subject: getFicheMetaText(data, "dc:subject"),
+        theme: getFicheAriane(data),
+        title: getFicheMetaText(data, "dc:title"),
+        type: key,
       };
     });
   });
