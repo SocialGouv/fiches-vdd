@@ -1,0 +1,47 @@
+name: Fetch
+
+on:
+  push:
+    branches: ["*"]
+  pull_request:
+    branches: ["*"]
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+          cache: yarn
+
+      - name: Installing
+        run: yarn --frozen-lockfile --perfer-offline --link-duplicates
+
+      - name: Fetch data
+        run: |
+          yarn fetch
+
+      - name: Get metadata
+        id: metadata
+        shell: bash
+        run: |
+          echo "::set-output name=data_status::$(git status -s ./data)"
+          echo "::set-output name=now::$(date +"%Y%m%d_%H%M")"
+
+      - name: Print metadata
+        run: |
+          echo "Data status ${{ steps.metadata.outputs.now }}"
+          echo "${{ steps.metadata.outputs.data_status }}"
+
+      - name: Check JSON
+        run: |
+          for filename in ./data/*\.json; do
+            node "$filename" > /dev/null || {
+              echo "Invalid JSON in $filename"
+              exit 1
+            }
+          done
