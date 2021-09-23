@@ -1,3 +1,17 @@
+# [2.198.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.197.0...v2.198.0) (2021-09-23)
+
+
+### Bug Fixes
+
+* Revert "fix(deps): update dependency node-fetch to v3 ([#175](https://github.com/SocialGouv/fiches-vdd/issues/175))" ([#182](https://github.com/SocialGouv/fiches-vdd/issues/182)) ([7d6628d](https://github.com/SocialGouv/fiches-vdd/commit/7d6628d09c46be689a9f03444fc06d046a2c6d87))
+* **deps:** update dependency node-fetch to v3 ([#175](https://github.com/SocialGouv/fiches-vdd/issues/175)) ([2a6a51b](https://github.com/SocialGouv/fiches-vdd/commit/2a6a51b2916babbdd032a6099c1788bdd3a6488b))
+
+
+### Features
+
+* **data:** 20210923_0801 update ([283bb92](https://github.com/SocialGouv/fiches-vdd/commit/283bb92c8c8dd76233ef8f824ab8edab866a38c0))
+* use github-actions ([#183](https://github.com/SocialGouv/fiches-vdd/issues/183)) ([3ca8fce](https://github.com/SocialGouv/fiches-vdd/commit/3ca8fce70d41eeca55a63490b4ca43ee1eb771b0))
+
 # [2.197.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.196.0...v2.197.0) (2021-08-19)
 
 
