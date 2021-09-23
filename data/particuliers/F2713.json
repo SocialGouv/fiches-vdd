@@ -336,39 +336,18 @@
           "children": [
             {
               "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Oui, si vous êtes  titulaire d'un titre de séjour "
-                },
-                {
-                  "type": "element",
-                  "name": "Expression",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "étudiant"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": ", vous pouvez exercer une activité salariée à titre accessoire durant vos études en France.  Votre employeur doit déclarer votre embauche à la préfecture."
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Attention",
+              "name": "FragmentConditionne",
               "children": [
                 {
                   "type": "element",
-                  "name": "Titre",
+                  "name": "Condition",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Attention"
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10010"
+                      }
                     }
                   ]
                 },
@@ -378,26 +357,85 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "d'autres règles s'appliquent si vous êtes "
+                      "text": "Oui, si vous avez un titre de séjour "
                     },
                     {
                       "type": "element",
-                      "name": "LienInterne",
-                      "attributes": {
-                        "LienPublication": "F13519",
-                        "type": "Fiche Question-réponse",
-                        "audience": "Particuliers"
-                      },
+                      "name": "Expression",
                       "children": [
                         {
                           "type": "text",
-                          "text": "européen"
+                          "text": "étudiant"
                         }
                       ]
                     },
                     {
                       "type": "text",
-                      "text": "."
+                      "text": ", vous pouvez exercer une activité salariée à titre accessoire durant vos études en France.  Votre employeur doit déclarer votre embauche à la préfecture."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "FragmentConditionne",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10010"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Attention",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Attention"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "d'autres règles s'appliquent si vous êtes "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F13519",
+                            "type": "Fiche Question-réponse",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "européen"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
                     }
                   ]
                 }
@@ -763,72 +801,233 @@
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Tableau",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Titre",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Durée de travail autorisée"
+                                      "text": "Conditions pour exercer"
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous pouvez travailler au-delà de 964 heures/an dans le cadre de vos études."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Formalités"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Pour travailler plus de 964 heures, vous devez demander une "
                                 },
                                 {
                                   "type": "element",
-                                  "name": "LienInterne",
+                                  "name": "Colonne",
                                   "attributes": {
-                                    "LienPublication": "F34840",
-                                    "type": "Fiche Question-réponse",
-                                    "audience": "Particuliers"
+                                    "largeur": "33",
+                                    "type": "normal"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Colonne",
+                                  "attributes": {
+                                    "largeur": "33",
+                                    "type": "normal"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Colonne",
+                                  "attributes": {
+                                    "largeur": "33",
+                                    "type": "normal"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "header"
                                   },
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "autorisation provisoire de travail (APT)"
+                                      "type": "element",
+                                      "name": "Cellule"
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Durée de travail autorisée"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Formalités"
+                                            }
+                                          ]
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": "  avant de débuter votre activité."
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Contrat d'apprentissage"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous pouvez travailler au-delà de 964 heures/an dans le cadre de vos études"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Le contrat doit avoir été validé par "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R54075",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "l'opérateur de compétences (OPCO)"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Contrat de professionnalisation"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous pouvez travailler au-delà de 964 heures/an dans le cadre de vos études"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Pour travailler plus de 964 heures, vous devez demander une "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienInterne",
+                                              "attributes": {
+                                                "LienPublication": "F34840",
+                                                "type": "Fiche Question-réponse",
+                                                "audience": "Particuliers"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "autorisation provisoire de travail (APT)"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": "  avant de débuter votre activité"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -1967,6 +2166,41 @@
                 {
                   "type": "text",
                   "text": "Circulaire du 22 août 2007 relative aux autorisations de travail des étrangers"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Definition",
+          "attributes": {
+            "ID": "R54075"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Opérateur de compétences (OPCO)"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Finance l'apprentissage, apporte son aide pour élaborer les certifications professionnelles et pour définir les  besoins en formation des entreprises"
+                    }
+                  ]
                 }
               ]
             }
