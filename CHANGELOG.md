@@ -1,3 +1,10 @@
+## [2.201.1](https://github.com/SocialGouv/fiches-vdd/compare/v2.201.0...v2.201.1) (2021-09-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency node-fetch to ^2.6.5 ([#185](https://github.com/SocialGouv/fiches-vdd/issues/185)) ([b7f5d63](https://github.com/SocialGouv/fiches-vdd/commit/b7f5d63e4f5c0901c9e87761bcb1883c503bba4f))
+
 # [2.201.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.200.0...v2.201.0) (2021-09-26)
 
 
