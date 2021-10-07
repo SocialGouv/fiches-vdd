@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F31559",
-        "type": "Fiche Question-réponse",
+        "type": "Fiche Question-réponse conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F31559"
       },
@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Le locataire souhaitant quitter son logement avant l'échéance du bail doit adresser un préavis (donner congé) au bailleur 1 à 3 mois avant son départ. Toutefois, en cas de manquements graves du propriétaire à ses obligations (logement en péril ou insalubre), il peut quitter son logement sans préavis. Toutefois, il doit au préalable avoir averti son propriétaire des désordres constatés et avoir engagé les démarches pour le contraindre à réaliser les travaux relevant de sa responsabilité."
+              "text": "En cas de manquements graves du propriétaire à ses obligations (le logement est en péril ou insalubre), il peut parfois quitter le logement sans préavis."
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2019-12-29"
+              "text": "modified 2021-09-28"
             }
           ]
         },
@@ -241,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F31559",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -344,44 +344,74 @@
         },
         {
           "type": "element",
-          "name": "Introduction",
+          "name": "Texte",
           "children": [
             {
               "type": "element",
-              "name": "Texte",
+              "name": "Paragraphe",
               "children": [
                 {
+                  "type": "text",
+                  "text": "Le locataire qui veut quitter son logement avant "
+                },
+                {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "LienIntra",
+                  "attributes": {
+                    "LienID": "R59748",
+                    "type": "Définition de glossaire"
+                  },
                   "children": [
                     {
                       "type": "text",
-                      "text": "Le locataire souhaitant  quitter son logement  avant l'échéance du bail doit adresser un préavis ("
-                    },
-                    {
-                      "type": "element",
-                      "name": "Expression",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "donner congé"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": ") au bailleur  1 à 3 mois avant son départ. Toutefois, en cas de manquements graves du propriétaire à ses obligations (logement en péril ou insalubre), il peut  quitter son logement sans préavis. Toutefois, il doit au préalable avoir averti son propriétaire des désordres constatés et  avoir engagé les démarches pour le contraindre à réaliser les travaux relevant de  sa responsabilité."
+                      "text": "l'échéance du bail"
                     }
                   ]
+                },
+                {
+                  "type": "text",
+                  "text": " doit donner congé au propriétaire. En général, il doit ensuite respecter un délai de préavis de 1 ou 3 mois. Mais, en cas de manquements graves du propriétaire à ses obligations (le logement est en "
+                },
+                {
+                  "type": "element",
+                  "name": "LienInterne",
+                  "attributes": {
+                    "LienPublication": "F16104",
+                    "type": "Fiche d'information conditionnée",
+                    "audience": "Particuliers"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "péril"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ou "
+                },
+                {
+                  "type": "element",
+                  "name": "LienInterne",
+                  "attributes": {
+                    "LienPublication": "F16158",
+                    "type": "Fiche d'information conditionnée",
+                    "audience": "Particuliers"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "insalubre"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "), le locataire peut quitter le logement sans préavis. Attention, il doit au préalable avoir averti le propriétaire des désordres constatés et avoir fait les démarches pour le contraindre à faire les travaux."
                 }
               ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Texte",
-          "children": [
+            },
             {
               "type": "element",
               "name": "Chapitre",
@@ -408,26 +438,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Le bailleur doit notamment fournir à son locataire un "
-                    },
-                    {
-                      "type": "element",
-                      "name": "LienInterne",
-                      "attributes": {
-                        "LienPublication": "F16158",
-                        "type": "Fiche d'information",
-                        "audience": "Particuliers"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "logement salubre"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": ". Plusieurs manquements graves du bailleur peuvent justifier le départ du locataire sans préavis, notamment :"
+                      "text": "Plusieurs manquements graves du propriétaire peuvent justifier le départ du locataire sans délai de préavis. Notamment l'un des manquements suivants :"
                     }
                   ]
                 },
@@ -448,7 +459,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "une installation électrique présentant un danger pour les occupants,"
+                              "text": "Installation électrique présentant un danger pour les occupants du logement"
                             }
                           ]
                         }
@@ -464,7 +475,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "des infiltrations occasionnant une très forte humidité occasionnant des problèmes de santé,"
+                              "text": "Infiltrations occasionnant une très forte humidité et des problèmes de santé pour les occupants du logement"
                             }
                           ]
                         }
@@ -480,7 +491,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "une coupure de l'alimentation en eau pendant plusieurs mois."
+                              "text": "Coupure de l'alimentation en eau pendant plusieurs mois"
                             }
                           ]
                         }
@@ -508,7 +519,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "sauf cas exceptionnel (logement ayant fait l'objet d'un arrêté préfectoral d'insalubrité et de péril), le locataire ne doit pas, de lui-même, cesser de payer tout ou partie de son loyer sous prétexte que le propriétaire ne respecte pas ses obligations."
+                          "text": "seul le locataire d'un logement faisant l'objet d'un arrêté préfectoral d'insalubrité et de péril, peut, de lui-même, cesser de payer tout ou partie de son loyer si le propriétaire ne respecte pas ses obligations."
                         }
                       ]
                     }
@@ -542,33 +553,52 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Avant de pouvoir partir sans préavis, le locataire doit avertir son propriétaire des désordres et lui demander d'effectuer les réparations pour mettre le logement en conformité avec les critères  de "
+                      "text": "Avant de pouvoir partir sans délai de préavis, le locataire "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienInterne",
+                      "attributes": {
+                        "LienPublication": "F16104",
+                        "type": "Fiche d'information conditionnée",
+                        "audience": "Particuliers"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "d'un habitat en péril"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " ou "
                     },
                     {
                       "type": "element",
                       "name": "LienInterne",
                       "attributes": {
                         "LienPublication": "F16158",
-                        "type": "Fiche d'information",
+                        "type": "Fiche d'information conditionnée",
                         "audience": "Particuliers"
                       },
                       "children": [
                         {
                           "type": "text",
-                          "text": "salubrité"
+                          "text": "insalubre"
                         }
                       ]
                     },
                     {
                       "type": "text",
-                      "text": " et qui relèvent de sa "
+                      "text": " doit avertir le propriétaire des désordres qui relèvent de sa "
                     },
                     {
                       "type": "element",
                       "name": "LienInterne",
                       "attributes": {
                         "LienPublication": "F31699",
-                        "type": "Fiche d'information",
+                        "type": "Fiche d'information conditionnée",
                         "audience": "Particuliers"
                       },
                       "children": [
@@ -580,7 +610,7 @@
                     },
                     {
                       "type": "text",
-                      "text": "."
+                      "text": " et lui demander de faire les réparations pour mettre le logement en conformité."
                     }
                   ]
                 },
@@ -590,7 +620,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Face au refus ou au silence du propriétaire, il doit lui adresser une mise en demeure,  par lettre recommandée avec accusé de réception."
+                      "text": "En cas de refus ou face au silence du propriétaire, le locataire doit lui adresser une mise en demeure, par lettre recommandée avec accusé de réception."
                     }
                   ]
                 },
@@ -600,124 +630,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Si cette démarche reste sans effet, le locataire doit  engager une procédure :"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Liste",
-                  "attributes": {
-                    "type": "puce"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "auprès de la "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F1216",
-                                "type": "Fiche Question-réponse",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "commission départementale de conciliation"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " ou du juge des contentieux de la protection du tribunal en cas de "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F2042",
-                                "type": "Fiche d'information",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "logement non-décent"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": ","
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "auprès du maire de la commune où se situe le logement, en cas "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F16104",
-                                "type": "Fiche d'information",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "d'habitat en péril"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " ou "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F16158",
-                                "type": "Fiche d'information",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "insalubre"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "."
-                            }
-                          ]
-                        }
-                      ]
+                      "text": "Si cette démarche reste sans effet, le locataire doit engager une procédure auprès du maire de la commune où se situe le logement."
                     }
                   ]
                 },
@@ -725,9 +638,9 @@
                   "type": "element",
                   "name": "OuSAdresser",
                   "attributes": {
-                    "ID": "R30",
+                    "ID": "R1",
                     "sve": "non",
-                    "type": "Local"
+                    "type": "Local personnalisé sur SP"
                   },
                   "children": [
                     {
@@ -736,7 +649,17 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Tribunal judiciaire ou de proximité"
+                          "text": "Mairie"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "PivotLocal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "mairie"
                         }
                       ]
                     },
@@ -744,21 +667,8 @@
                       "type": "element",
                       "name": "RessourceWeb",
                       "attributes": {
-                        "URL": "https://www.justice.fr/recherche/annuaires"
+                        "URL": "https://lannuaire.service-public.fr/"
                       }
-                    },
-                    {
-                      "type": "element",
-                      "name": "Source",
-                      "attributes": {
-                        "ID": "R30663"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Ministère chargé de la justice"
-                        }
-                      ]
                     }
                   ]
                 }
@@ -778,7 +688,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Lettre de congé et départ du locataire"
+                          "text": "Congé et départ du locataire"
                         }
                       ]
                     }
@@ -790,45 +700,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Si le propriétaire ne réalise pas les travaux dans les délais ordonnés par  le maire (en cas "
-                    },
-                    {
-                      "type": "element",
-                      "name": "LienInterne",
-                      "attributes": {
-                        "LienPublication": "F16104",
-                        "type": "Fiche d'information",
-                        "audience": "Particuliers"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "d'habitat en péril"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": " ou "
-                    },
-                    {
-                      "type": "element",
-                      "name": "LienInterne",
-                      "attributes": {
-                        "LienPublication": "F16158",
-                        "type": "Fiche d'information",
-                        "audience": "Particuliers"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "insalubre"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": "),  le locataire peut quitter son logement sans préavis."
+                      "text": "Si le propriétaire ne fait pas les travaux dans les délais ordonnés par le maire, le locataire peut quitter son logement sans délai de préavis."
                     }
                   ]
                 },
@@ -838,7 +710,17 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Il doit adresser au propriétaire une lettre de congé par lettre recommandée avec accusé de réception. Le locataire doit fournir des preuves des manquements du bailleur avec son courrier."
+                      "text": "Il doit donner congé au propriétaire par lettre recommandée avec accusé de réception. Le locataire doit joindre au courrier les preuves des manquements du propriétaire."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Le locataire peut utiliser ce modèle de document :"
                     }
                   ]
                 },
@@ -891,7 +773,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Effets d'un départ sans préavis"
+                          "text": "Paiement du loyer"
                         }
                       ]
                     }
@@ -903,54 +785,60 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Le locataire qui quitte son logement sans préavis paie son loyer uniquement pour son temps d'occupation, à la condition de ne pas  avoir conservé les clés après son départ."
+                      "text": "Le locataire qui quitte son logement sans délai de préavis paie son loyer uniquement pour son temps d'occupation, à la condition de ne pas avoir conservé les clés après son départ."
                     }
                   ]
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Exemples :"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Liste",
-                  "attributes": {
-                    "type": "puce"
-                  },
+                  "name": "ANoter",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Item",
+                      "name": "Titre",
                       "children": [
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "si le locataire part le 15 juin sans avoir conservé les clés, il doit payer : (montant du loyer x 15)/30,"
-                            }
-                          ]
+                          "type": "text",
+                          "text": "Exemple"
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Item",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Item",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "si le locataire part le 15 août sans avoir conservé les clés, il doit payer : (montant du loyer x 15)/31."
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si le locataire part le 15 juin sans avoir conservé les clés, il doit payer : (montant du loyer x 15)/30,"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si le locataire part le 15 août sans avoir conservé les clés, il doit payer : (montant du loyer x 15)/31."
+                                }
+                              ]
                             }
                           ]
                         }
@@ -971,7 +859,7 @@
                       "name": "LienInterne",
                       "attributes": {
                         "LienPublication": "F31269",
-                        "type": "Fiche d'information",
+                        "type": "Fiche d'information conditionnée",
                         "audience": "Particuliers"
                       },
                       "children": [
@@ -1149,6 +1037,41 @@
                 {
                   "type": "text",
                   "text": "Direction de l'information légale et administrative (Dila) - Premier ministre"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Definition",
+          "attributes": {
+            "ID": "R59748"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Échéance du bail"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Date à laquelle expire le bail, compte tenu de la durée pour laquelle il a été signé"
+                    }
+                  ]
                 }
               ]
             }
