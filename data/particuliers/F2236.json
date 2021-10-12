@@ -8,7 +8,7 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F2236",
-        "type": "Fiche Question-réponse",
+        "type": "Fiche Question-réponse conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F2236"
       },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2020-06-15"
+              "text": "modified 2021-09-30"
             }
           ]
         },
@@ -241,7 +241,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F2236",
-                "type": "Fiche Question-réponse"
+                "type": "Fiche Question-réponse conditionnée"
               },
               "children": [
                 {
@@ -451,77 +451,138 @@
           "children": [
             {
               "type": "element",
-              "name": "Paragraphe",
+              "name": "Liste",
+              "attributes": {
+                "type": "puce"
+              },
               "children": [
                 {
-                  "type": "text",
-                  "text": "Une "
-                },
-                {
                   "type": "element",
-                  "name": "LienInterne",
-                  "attributes": {
-                    "LienPublication": "F1728",
-                    "type": "Fiche Question-réponse",
-                    "audience": "Particuliers"
-                  },
+                  "name": "Item",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "pension alimentaire"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Une "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F1728",
+                            "type": "Fiche Question-réponse conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "pension alimentaire"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " est une aide financière versée à une personne envers laquelle il existe une obligation d'aliment (c'est-à-dire le devoir de subvenir à ses besoins) : enfant, parent, voire époux(se)..."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "La pension alimentaire est versée tous les mois."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Son montant est révisable chaque année."
+                        }
+                      ]
                     }
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": " est une aide financière versée à une personne envers laquelle on est tenu à une obligation de secours (enfants, parents, voire époux(se)...). Elle est versée tous les mois et son montant est révisable chaque année."
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "La "
-                },
-                {
                   "type": "element",
-                  "name": "LienInterne",
-                  "attributes": {
-                    "LienPublication": "F1760",
-                    "type": "Fiche d'information",
-                    "audience": "Particuliers"
-                  },
+                  "name": "Item",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "prestation compensatoire"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " a pour objet de compenser la baisse de niveau de vie consécutive à un divorce. Elle est donc seulement destinée à l'ex-époux ou ex-épouse. La prestation compensatoire est généralement réglée sous forme d'un capital ou d'une "
-                },
-                {
-                  "type": "element",
-                  "name": "LienIntra",
-                  "attributes": {
-                    "LienID": "R52069",
-                    "type": "Définition de glossaire"
-                  },
-                  "children": [
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "La "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F1760",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "prestation compensatoire"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " a pour objet de compenser la baisse de niveau de vie consécutive à un divorce."
+                        }
+                      ]
+                    },
                     {
-                      "type": "text",
-                      "text": "rente"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Elle est uniquement destinée à l'ex-époux(se)."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "La prestation compensatoire est généralement réglée sous forme d'un capital ou d'une "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R52069",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "rente"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
                     }
                   ]
-                },
-                {
-                  "type": "text",
-                  "text": "."
                 }
               ]
             }
