@@ -828,7 +828,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Versements par le salarié"
+                              "text": "Versements du salarié"
                             }
                           ]
                         }
@@ -840,7 +840,21 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Les versements sont facultatifs."
+                          "text": "Les versements du salarié sur le Perco sont facultatifs, sauf si le règlement de l'entreprise prévoit un versement minimum annuel. Dans ce cas, le versement minimum annuel ne doit pas dépasser la somme de "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Valeur",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "160 €"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
                         }
                       ]
                     },
@@ -850,7 +864,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vous pouvez alimenter votre Perco avec les sommes suivantes :"
+                          "text": "Pour alimenter votre Perco, vous pouvez utiliser les sommes ou droits suivants :"
                         }
                       ]
                     },
@@ -1011,7 +1025,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Versements volontaires"
+                                  "text": "Versements volontaires d'espèces"
                                 }
                               ]
                             }
@@ -1025,21 +1039,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Les versements volontaires sont plafonnés. Vous pouvez verser chaque année au maximum 25 % de votre rémunération annuelle brute. Le règlement du Perco peut prévoir un versement minimum annuel de "
-                        },
-                        {
-                          "type": "element",
-                          "name": "Valeur",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "160 €"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " au plus."
+                          "text": "Les versements volontaires sont plafonnés à maximum 25 % de la rémunération annuelle brute."
                         }
                       ]
                     },
@@ -1804,7 +1804,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Intéressement du salarié affecté au Perco"
+                              "text": "Versements volontaires du salarié"
                             }
                           ]
                         }
@@ -1816,25 +1816,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "L'intéressement du salarié affecté au "
-                        },
-                        {
-                          "type": "element",
-                          "name": "LienInterne",
-                          "attributes": {
-                            "LienPublication": "R42167",
-                            "type": "Acronyme"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Perco"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " est exonéré d'impôt sur le revenu dans la limite de "
+                          "text": "Les versements volontaires du salarié sont exonérés d'impôt sur le revenu dans la limite de "
                         },
                         {
                           "type": "element",
@@ -1845,6 +1827,10 @@
                               "text": "30 852 €"
                             }
                           ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
                         }
                       ]
                     }
@@ -1951,73 +1937,198 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Si la délivrance des sommes s'effectue sous forme de "
-                        },
-                        {
-                          "type": "element",
-                          "name": "LienIntra",
-                          "attributes": {
-                            "LienID": "R2218",
-                            "type": "Définition de glossaire"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "rente viagère acquise à titre onéreux"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": ", la part de la rente viagère correspondant aux gains est soumise à l'impôt sur le revenu et aux prélèvements sociaux au taux de "
-                        },
-                        {
-                          "type": "element",
-                          "name": "Valeur",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "17,20 %"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": "."
+                          "text": "La fiscalité des sommes retirées du Perco dépend du mode de sortie."
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "radio"
+                      },
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Si la délivrance se fait sous forme d'un capital, celui-ci est exonéré d'impôt sur le revenu et de prélèvements sociaux pour sa part correspondant aux versements. La part correspondant aux gains est soumise aux prélèvements sociaux au taux de "
-                        },
-                        {
                           "type": "element",
-                          "name": "Valeur",
+                          "name": "Cas",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "17,20 %"
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Sortie en rente viagère"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La rente viagère perçue du Perco est soumise à l'impôt sur le revenu, dans la catégorie des "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R2218",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "rentes viagères acquises à titre onéreux"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Ce régime permet l'exonération d'une partie de la rente. La partie exonérée de la rente varie entre "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "30"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " et "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "70 %"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " en fonction de l'âge du titulaire."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La partie imposable de la rente est soumise aux prélèvements sociaux au taux de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "17,20 %"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
                             }
                           ]
                         },
                         {
-                          "type": "text",
-                          "text": "."
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Sortie en capital"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La part du capital correspondant aux versements volontaires du salarié est exonérée d'impôt sur le revenu et de prélèvements sociaux."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La part du capital correspondant aux gains réalisés pendant la durée du plan est exonérée d'impôt sur le revenu mais soumise aux prélèvements sociaux, au taux de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "17,20 %"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "ASavoir",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "En cas de transfert des sommées épargnées sur un Perco vers un plan d'épargne d'entreprise collectif, les taux des prélèvements sociaux en vigueur au moment des dépôts sont conservés."
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "À savoir"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "en cas de transfert de l'épargne du Perco vers un Per collectif, les prélèvements sociaux seront calculés sur la base des taux en vigueur au moment des versements."
+                            }
+                          ]
                         }
                       ]
                     }
