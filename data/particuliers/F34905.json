@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Un logement proposé à la location doit avoir une surface minimum. La surface minimale diffère selon qu'il s'agit d'un logement en location ou en colocation. Si la taille du logement est inférieure, le logement n'est pas décent et le propriétaire a interdiction de le louer."
+              "text": "Un logement proposé à la location doit avoir une surface minimum. La surface minimum diffère selon qu'il s'agit d'un logement en location ou en colocation. Si la taille du logement est inférieure à cette norme, le logement n'est pas décent et le propriétaire a interdiction de le louer."
             }
           ]
         },
@@ -369,7 +369,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Un logement proposé à la location doit avoir une surface minimum. La surface minimale diffère selon qu'il s'agit d'un logement en location ou en "
+                      "text": "Un logement proposé à la location doit avoir une surface minimum. La surface minimum diffère selon qu'il s'agit d'un logement en location ou en "
                     },
                     {
                       "type": "element",
@@ -387,7 +387,33 @@
                     },
                     {
                       "type": "text",
-                      "text": ". Si la taille du logement est inférieure, le logement n'est pas décent et le propriétaire a interdiction de le louer."
+                      "text": ". Si la taille du logement est inférieure à cette norme, le logement n'est pas décent et le propriétaire a interdiction de le louer."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F35977",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Surface minimum d'un logement à louer"
                     }
                   ]
                 }
@@ -413,6 +439,19 @@
                     {
                       "type": "text",
                       "text": "En location"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T14280"
+                      }
                     }
                   ]
                 },
@@ -582,25 +621,76 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T14281"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "FragmentConditionne",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Une colocation est la location par plusieurs locataires d'un même logement constituant leur résidence principale. Elle peut prendre la forme de plusieurs contrats de location signés entre chaque colocataire et le propriétaire, ou d'un bail unique signé par tous les colocataires et le propriétaire."
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10010"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Une colocation est la location par plusieurs locataires d'un même logement constituant leur résidence principale. Elle peut prendre la forme de plusieurs contrats de location signés entre chaque colocataire et le propriétaire, ou d'un bail unique signé par tous les colocataires et le propriétaire."
+                            }
+                          ]
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "FragmentConditionne",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "La location d'un logement à un couple pacsé au moment de la signature du contrat de bail ou à un couple marié n'est pas une colocation."
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10010"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "La location d'un logement à un couple pacsé au moment de la signature du contrat de bail ou à un couple marié n'est pas une colocation."
+                            }
+                          ]
                         }
                       ]
                     },
@@ -618,9 +708,22 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "S'il y a un bail par colocataire"
+                                  "text": "Il y a un bail par colocataire"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T14282"
+                              }
                             }
                           ]
                         },
@@ -743,9 +846,22 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "S'il y a un bail pour tous les colocataires"
+                                  "text": "Il y a un bail commun à tous les colocataires"
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T14283"
+                              }
                             }
                           ]
                         },
