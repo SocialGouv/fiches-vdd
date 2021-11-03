@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Il existe plusieurs catégories d'hébergement pour les personnes âgées. Ces hébergements peuvent être plus ou moins médicalisés selon qu'ils ont vocation à accueillir des personnes âgées autonomes, dépendantes ou très dépendantes. Lorsque les ressources de la personne âgée sont insuffisantes, les frais d'hébergement peuvent être pris en charge par le département."
+              "text": "Il existe plusieurs types d'établissement pour personnes âgées. Ces établissements sont plus ou moins médicalisés, selon qu'ils sont destinés à héberger des personnes âgées autonomes ou dépendantes ou très dépendantes. Lorsque les ressources de la personne âgée sont insuffisantes, certains frais peuvent être pris en charge par le département."
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2019-06-24"
+              "text": "modified 2021-11-02"
             }
           ]
         },
@@ -359,7 +359,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Il existe plusieurs catégories d'hébergement pour les personnes âgées. Ces hébergements peuvent être plus ou moins médicalisés selon qu'ils ont vocation à accueillir des personnes âgées "
+                      "text": "Il existe plusieurs types d'établissement pour personnes âgées. Ces établissements sont plus ou moins médicalisés, selon qu'ils sont destinés à héberger des personnes âgées "
                     },
                     {
                       "type": "element",
@@ -377,7 +377,7 @@
                     },
                     {
                       "type": "text",
-                      "text": ", "
+                      "text": " ou "
                     },
                     {
                       "type": "element",
@@ -413,7 +413,7 @@
                     },
                     {
                       "type": "text",
-                      "text": ". Lorsque les ressources de la personne âgée sont insuffisantes, les frais d'hébergement peuvent être pris en charge par le département."
+                      "text": ". Lorsque les ressources de la personne âgée sont insuffisantes, certains frais peuvent être pris en charge par le département."
                     }
                   ]
                 }
@@ -423,91 +423,84 @@
         },
         {
           "type": "element",
-          "name": "Texte",
+          "name": "ListeSituations",
+          "attributes": {
+            "affichage": "onglet"
+          },
           "children": [
             {
               "type": "element",
-              "name": "BlocCas",
-              "attributes": {
-                "affichage": "radio"
-              },
+              "name": "Situation",
               "children": [
                 {
                   "type": "element",
-                  "name": "Cas",
+                  "name": "Titre",
                   "children": [
                     {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Personne âgée autonome"
-                        }
-                      ]
-                    },
+                      "type": "text",
+                      "text": "Personne âgée autonome"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
                       "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Elle peut être accueillie :"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Liste",
-                      "attributes": {
-                        "type": "puce"
-                      },
-                      "children": [
+                          "text": "Elle peut être accueillie en "
+                        },
                         {
                           "type": "element",
-                          "name": "Item",
+                          "name": "LienExterne",
+                          "attributes": {
+                            "URL": "https://www.pour-les-personnes-agees.gouv.fr/choisir-un-hebergement/vivre-dans-un-logement-independant-et-beneficier-de-services/les-residences"
+                          },
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "en résidence autonomie (appelé auparavant "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Expression",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "logement-foyer"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": "),"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "résidence services"
                             }
                           ]
                         },
                         {
+                          "type": "text",
+                          "text": "\n\n seniors (RSS) dans un ensemble hôtelier ou en "
+                        },
+                        {
                           "type": "element",
-                          "name": "Item",
+                          "name": "LienExterne",
+                          "attributes": {
+                            "URL": "https://www.pour-les-personnes-agees.gouv.fr/changer-de-logement/vivre-dans-une-residence-avec-services-pour-seniors/les-residences-autonomie-pour-qui"
+                          },
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "en résidence services seniors (RSS) dans un ensemble hôtelier."
-                                }
-                              ]
+                              "type": "text",
+                              "text": "résidence autonomie"
                             }
                           ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "\n\n (appelé auparavant "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Expression",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "logement-foyer"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ")."
                         }
                       ]
                     },
@@ -517,7 +510,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Il s'agit de structures non médicalisées proposant la location de chambres ou d'appartements et bénéficiant d'équipements et de prestations collectives (blanchisserie, restauration, services ménagers...)."
+                          "text": "Il s'agit de résidences non médicalisées."
                         }
                       ]
                     },
@@ -527,7 +520,27 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Les coordonnées des résidences autonomie, ainsi que les prestations et prix, sont consultables en ligne."
+                          "text": "La personne âgée y loue une chambre ou un appartement."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Elle y bénéficie d'équipements et de prestations collectives (blanchisserie, restauration, services ménagers...)."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous pouvez prendre connaissance des coordonnées, prestations et prix des résidences autonomie :"
                         }
                       ]
                     },
@@ -537,7 +550,7 @@
                       "attributes": {
                         "ID": "R52958",
                         "URL": "https://www.pour-les-personnes-agees.gouv.fr/resultats-annuaire?service=hebergement",
-                        "type": "Téléservice"
+                        "type": "Outil de recherche"
                       },
                       "children": [
                         {
@@ -611,21 +624,27 @@
                       ]
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Situation",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Personne âgée dépendante"
+                    }
+                  ]
                 },
                 {
                   "type": "element",
-                  "name": "Cas",
+                  "name": "Texte",
                   "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Personne âgée dépendante"
-                        }
-                      ]
-                    },
                     {
                       "type": "element",
                       "name": "Paragraphe",
@@ -645,7 +664,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "établissement d'hébergement pour personnes âgées dépendantes (Ehpad)"
+                              "text": "établissement d'hébergement pour personnes âgées dépendantes (Éhpad)"
                             }
                           ]
                         },
@@ -661,7 +680,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Il s'agit d'une structure médicalisée qui propose un hébergement en chambre individuelle ou collective et des soins médicaux. L'établissement permet de bénéficier d'équipements et de prestations collectives (par exemple, blanchisserie, restauration, animation)."
+                          "text": "Il s'agit d'un établissement médicalisé."
                         }
                       ]
                     },
@@ -671,7 +690,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Les Ehpad s'adressent aux personnes âgées de plus de 60 ans. Toutefois, certains départements accordent des dérogations pour l'admission en Ephad des personnes de moins de 60 ans."
+                          "text": "La personne âgée est logée en chambre individuelle ou collective."
                         }
                       ]
                     },
@@ -681,7 +700,90 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Les coordonnées des Ehpad ainsi qu'un comparateur des prestations et prix sont consultables en ligne."
+                          "text": "Elle y reçoit des soins médicaux."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Elle a accès à des équipements et des prestations collectives (par exemple, blanchisserie, restauration, animation)."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ASavoir",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "À savoir"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "en cas de ressources insuffisantes, certains frais (frais d'hébergement) peuvent être "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "F763",
+                                "type": "Fiche d'information conditionnée",
+                                "audience": "Particuliers"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "pris en charge par le département"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Pour être admise en "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "R46913",
+                            "type": "Acronyme"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Éhpad"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ", la personne doit avoir 60 ans ou plus, mais certains départements accordent des dérogations pour les moins de 60 ans."
                         }
                       ]
                     },
@@ -691,7 +793,7 @@
                       "attributes": {
                         "ID": "R52958",
                         "URL": "https://www.pour-les-personnes-agees.gouv.fr/resultats-annuaire?service=hebergement",
-                        "type": "Téléservice"
+                        "type": "Outil de recherche"
                       },
                       "children": [
                         {
@@ -721,16 +823,6 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Les caisses de retraite complémentaire peuvent disposer de places réservées à ses retraités dans des Ehpad. Pour le savoir, il convient de se renseigner auprès de sa caisse de retraite."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
                       "name": "ASavoir",
                       "children": [
                         {
@@ -749,44 +841,58 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "les frais d'hébergement peuvent être "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F763",
-                                "type": "Fiche d'information conditionnée",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "pris en charge par le département"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " en cas de ressources insuffisantes."
+                              "text": "votre caisse de retraite complémentaire dispose peut-être de places réservées à ses retraités dans des Éhpad. Contactez votre caisse de retraite pour savoir si tel est le cas."
                             }
                           ]
                         }
                       ]
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Situation",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Personne âgée très dépendante"
+                    }
+                  ]
                 },
                 {
                   "type": "element",
-                  "name": "Cas",
+                  "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Titre",
+                      "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Personne âgée très dépendante"
+                          "text": "Elle peut être accueillie en établissement de soins de longue durée (appelé auparavant "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienExterne",
+                          "attributes": {
+                            "URL": "https://www.pour-les-personnes-agees.gouv.fr/vivre-dans-un-ehpad/les-differents-etablissements-medicalises/les-usld-unites-de-soins-de-longue-duree"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "USLD"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "\n\n)."
                         }
                       ]
                     },
@@ -796,7 +902,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Elle peut être accueillie en établissement de soins de longue durée (appelé auparavant USLD)."
+                          "text": "Ces établissements sont généralement adossés à un hôpital."
                         }
                       ]
                     },
@@ -806,7 +912,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Cette structure s'adresse aux personnes âgées de plus de 60 ans."
+                          "text": "Ils accueillent en majorité des personnes âgées de plus de 60 ans, en général à la suite d'une hospitalisation."
                         }
                       ]
                     },
@@ -816,7 +922,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Elle propose l'hébergement en chambre individuelle avec des soins médicaux et une surveillance constante."
+                          "text": "Les personnes sont hébergées en chambre individuelle avec des soins médicaux et une surveillance constante."
                         }
                       ]
                     },
@@ -839,77 +945,13 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "établissements d'hébergement pour personnes âgées dépendantes (Ehpad)"
+                              "text": "établissements d'hébergement pour personnes âgées dépendantes (Éhpad)"
                             }
                           ]
                         },
                         {
                           "type": "text",
                           "text": "."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Les établissements de soins de longue durée sont adossés aux établissements hospitaliers."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "L'admission a lieu en général à la suite d'une hospitalisation."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Les coordonnées des établissements sont consultables en ligne."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "ServiceEnLigne",
-                      "attributes": {
-                        "ID": "R52958",
-                        "URL": "https://www.pour-les-personnes-agees.gouv.fr/resultats-annuaire?service=hebergement",
-                        "type": "Téléservice"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Rechercher un hébergement pour personnes âgées (Éhpad, résidence autonomie, établissement de soins de longue durée) et comparer pour certains types d'hébergement les prestations et prix pratiqués"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Source",
-                          "attributes": {
-                            "ID": "R40060"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Caisse nationale de solidarité pour l'autonomie (CNSA)"
-                            }
-                          ]
                         }
                       ]
                     },
@@ -933,13 +975,13 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "les frais d'hébergement peuvent être "
+                              "text": "en cas de ressources insuffisantes, certains frais (frais d'hébergement) peuvent être "
                             },
                             {
                               "type": "element",
                               "name": "LienInterne",
                               "attributes": {
-                                "LienPublication": "F2444",
+                                "LienPublication": "F763",
                                 "type": "Fiche d'information conditionnée",
                                 "audience": "Particuliers"
                               },
@@ -952,7 +994,41 @@
                             },
                             {
                               "type": "text",
-                              "text": " en cas de ressources insuffisantes."
+                              "text": "."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ServiceEnLigne",
+                      "attributes": {
+                        "ID": "R52958",
+                        "URL": "https://www.pour-les-personnes-agees.gouv.fr/resultats-annuaire?service=hebergement",
+                        "type": "Outil de recherche"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Rechercher un hébergement pour personnes âgées (Éhpad, résidence autonomie, établissement de soins de longue durée) et comparer pour certains types d'hébergement les prestations et prix pratiqués"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Source",
+                          "attributes": {
+                            "ID": "R40060"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Caisse nationale de solidarité pour l'autonomie (CNSA)"
                             }
                           ]
                         }
@@ -1135,7 +1211,7 @@
           "type": "element",
           "name": "OuSAdresser",
           "attributes": {
-            "ID": "R1544",
+            "ID": "R40963",
             "sve": "non",
             "type": "Local"
           },
@@ -1146,7 +1222,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Établissements d'hébergement pour personnes âgées (Éhpad...)"
+                  "text": "Point d'information local dédié aux personnes âgées"
                 }
               ]
             },
@@ -1154,7 +1230,7 @@
               "type": "element",
               "name": "RessourceWeb",
               "attributes": {
-                "URL": "http://www.pour-les-personnes-agees.gouv.fr/resultats-annuaire?service=hebergement"
+                "URL": "https://www.pour-les-personnes-agees.gouv.fr/annuaire-points-dinformation-et-plateformes-de-repit"
               }
             },
             {
@@ -1207,6 +1283,40 @@
               "attributes": {
                 "URL": "https://lannuaire.service-public.fr/navigation/cg"
               }
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "ServiceEnLigne",
+          "attributes": {
+            "ID": "R52958",
+            "URL": "https://www.pour-les-personnes-agees.gouv.fr/resultats-annuaire?service=hebergement",
+            "type": "Outil de recherche"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Rechercher un hébergement pour personnes âgées (Éhpad, résidence autonomie, établissement de soins de longue durée) et comparer pour certains types d'hébergement les prestations et prix pratiqués"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R40060"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Caisse nationale de solidarité pour l'autonomie (CNSA)"
+                }
+              ]
             }
           ]
         },
@@ -1297,6 +1407,41 @@
                 {
                   "type": "text",
                   "text": "Choisir une maison de retraite ou une résidence pour personnes âgées"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R40060"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Caisse nationale de solidarité pour l'autonomie (CNSA)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "PourEnSavoirPlus",
+          "attributes": {
+            "type": "Information pratique",
+            "ID": "R60568",
+            "URL": "https://www.pour-les-personnes-agees.gouv.fr/vivre-dans-un-ehpad/les-differents-etablissements-medicalises/les-usld-unites-de-soins-de-longue-duree",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Les USLD (unités de soins de longue durée)"
                 }
               ]
             },
@@ -1553,6 +1698,42 @@
                     {
                       "type": "text",
                       "text": "Personne qui est dans l'incapacité d'effectuer elle-même les actes de la vie courante (se lever, s'habiller...) et dont l'état de santé nécessite une surveillance médicale constante"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Abreviation",
+          "attributes": {
+            "ID": "R46913",
+            "type": "Acronyme"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Éhpad"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Établissement d'hébergement pour personnes âgées dépendantes"
                     }
                   ]
                 }
