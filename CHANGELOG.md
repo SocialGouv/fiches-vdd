@@ -1,3 +1,10 @@
+# [2.255.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.254.0...v2.255.0) (2021-11-27)
+
+
+### Features
+
+* **data:** 20211127_0416 update ([eaf5e6b](https://github.com/SocialGouv/fiches-vdd/commit/eaf5e6b8cbc5e1fed9545cf2cc73264a982c1384))
+
 # [2.254.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.253.0...v2.254.0) (2021-11-26)
 
 
