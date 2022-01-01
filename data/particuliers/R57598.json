@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Vous pouvez saisir une administration ou lui transmettre des documents par voie électronique (SVE). Choisissez une thématique et laissez-vous guider. S'il existe déjà un service en ligne pour votre démarche, connectez -vous directement sur le site https://www.service-public.fr/particuliers/vosdroits/services-en-ligne-et-formulaires votre démarche figure dans la liste des exceptions, liste consultable sur le site https://www.service-public.fr/particuliers/vosdroits/F33312 A noter : vous ne pouvez pas contacter l'administration par voie électronique pour toutes les démarches. Il y a des exceptions."
+              "text": "Vous pouvez contacter une administration par voie électronique (SVE). Choisissez une thématique et laissez-vous guider. Votre démarche ne figure pas parmi celles proposées ? - Soit un service en ligne existe déjà pour cette procédure. Consultez la liste des services en ligne sur le site service-public.fr. - Soit votre démarche figure dans la liste des exceptions."
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2021-02-09"
+              "text": "modified 2021-12-31"
             }
           ]
         },
@@ -259,7 +259,21 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Vous pouvez saisir une administration ou lui transmettre des documents par voie électronique (SVE)."
+                  "text": "Vous pouvez contacter une administration "
+                },
+                {
+                  "type": "element",
+                  "name": "MiseEnEvidence",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "par voie électronique (SVE)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "."
                 }
               ]
             },
@@ -279,60 +293,82 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "S'il existe déjà un service en ligne pour votre démarche, connectez -vous directement sur le site https://www.service-public.fr/particuliers/vosdroits/services-en-ligne-et-formulaires"
+                  "text": "Votre démarche ne figure pas parmi celles proposées ?"
                 }
               ]
             },
             {
               "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "votre démarche figure dans la liste des exceptions, liste consultable sur le site https://www.service-public.fr/particuliers/vosdroits/F33312"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "ANoter",
+              "name": "Liste",
+              "attributes": {
+                "type": "puce"
+              },
               "children": [
                 {
                   "type": "element",
-                  "name": "Titre",
+                  "name": "Item",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "À noter"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Soit un service en ligne existe déjà pour cette procédure. Consultez la "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienExterne",
+                          "attributes": {
+                            "URL": "https://www.service-public.fr/particuliers/vosdroits/services-en-ligne-et-formulaires"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "liste des services en ligne"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "\n\n sur le site service-public.fr."
+                        }
+                      ]
                     }
                   ]
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "Item",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "vous ne pouvez pas contacter l'administration par voie électronique pour toutes les démarches. Il y a des "
-                    },
-                    {
                       "type": "element",
-                      "name": "LienInterne",
-                      "attributes": {
-                        "LienPublication": "F33312",
-                        "type": "Fiche d'information conditionnée",
-                        "audience": "Particuliers"
-                      },
+                      "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "exceptions"
+                          "text": "Soit votre démarche figure dans la liste des "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F33312",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "exceptions"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
                         }
                       ]
-                    },
-                    {
-                      "type": "text",
-                      "text": "."
                     }
                   ]
                 }
