@@ -10,7 +10,7 @@
         "ID": "F31442",
         "type": "Fiche d'information conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
-        "dateDerniereModificationImportante": "2021-01-01T00:00:00",
+        "dateDerniereModificationImportante": "2022-01-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F31442"
       },
       "children": [
@@ -50,7 +50,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Si vous êtes expatrié, l'imposition dépend de votre domicile fiscal. Ainsi, si votre domicile fiscal se situe hors de France, vous êtes imposable sur vos revenus de source française, sauf exception. En revanche, si votre domicile fiscal reste en France, vous payez l'impôt sur l'ensemble de vos revenus."
+              "text": "Si vous êtes expatrié, l'imposition dépend de votre domicile fiscal. Si votre domicile fiscal se situe hors de France, vous êtes imposable sur vos revenus de source française, sauf exception. En revanche, si votre domicile fiscal reste en France, vous payez l'impôt sur l'ensemble de vos revenus."
             }
           ]
         },
@@ -80,7 +80,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2021-01-01"
+              "text": "modified 2022-01-01"
             }
           ]
         },
@@ -344,7 +344,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Si vous êtes expatrié, l'imposition dépend de votre domicile fiscal. Ainsi, si votre domicile fiscal se situe hors de France, vous êtes imposable sur vos revenus de source française, sauf exception. En revanche, si votre domicile fiscal reste en France, vous payez l'impôt sur l'ensemble de vos revenus."
+                      "text": "Si vous êtes expatrié, l'imposition dépend de votre domicile fiscal. Si votre domicile fiscal se situe hors de France, vous êtes imposable sur vos revenus de source française, sauf exception. En revanche, si votre domicile fiscal reste en France, vous payez l'impôt sur l'ensemble de vos revenus."
                     }
                   ]
                 }
@@ -458,7 +458,7 @@
                             },
                             {
                               "type": "text",
-                              "text": " est situé hors de France, vous aurez des démarches à réaliser différentes l'année de votre départ et les années suivantes."
+                              "text": " est situé hors de France, vous aurez des démarches différentes à réaliser l'année de votre départ et les années suivantes."
                             }
                           ]
                         }
@@ -491,6 +491,32 @@
                             {
                               "type": "text",
                               "text": "L'année de votre départ, vous déclarez vos revenus de l'année précédente, période pendant laquelle vous étiez domicilié en France. Les démarches de déclaration ne changent pas."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Attention",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Attention"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "pensez à informer votre centre des impôts des particuliers de votre nouvelle adresse à l'étranger pour recevoir votre nouvelle déclaration."
+                                }
+                              ]
                             }
                           ]
                         },
@@ -573,16 +599,12 @@
                           "type": "element",
                           "name": "BlocCas",
                           "attributes": {
-                            "type": "modalite",
                             "affichage": "onglet"
                           },
                           "children": [
                             {
                               "type": "element",
                               "name": "Cas",
-                              "attributes": {
-                                "type": "enLigne"
-                              },
                               "children": [
                                 {
                                   "type": "element",
@@ -596,52 +618,70 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "FragmentConditionne",
+                                  "name": "Condition",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Condition",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11563"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous devez déclarer vos revenus en vous connectant sur votre espace du site "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "estVrai",
-                                          "attributes": {
-                                            "var": "T11563"
-                                          }
+                                          "type": "text",
+                                          "text": "impots.gouv.fr"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ServiceEnLigne",
+                                  "attributes": {
+                                    "ID": "R1280",
+                                    "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+                                    "type": "Téléservice"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Déclaration 2021 en ligne des revenus de 2020"
                                         }
                                       ]
                                     },
                                     {
                                       "type": "element",
-                                      "name": "ServiceEnLigne",
+                                      "name": "Source",
                                       "attributes": {
-                                        "ID": "R1280",
-                                        "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
-                                        "type": "Téléservice"
+                                        "ID": "R30612"
                                       },
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Titre",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Déclaration 2021 en ligne des revenus de 2020"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Source",
-                                          "attributes": {
-                                            "ID": "R30612"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Ministère chargé des finances"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Ministère chargé des finances"
                                         }
                                       ]
                                     }
@@ -652,9 +692,6 @@
                             {
                               "type": "element",
                               "name": "Cas",
-                              "attributes": {
-                                "type": "parCorres"
-                              },
                               "children": [
                                 {
                                   "type": "element",
@@ -668,119 +705,105 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "FragmentConditionne",
+                                  "name": "Condition",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Condition",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "estVrai",
-                                          "attributes": {
-                                            "var": "T11564"
-                                          }
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous devez remplir les 2 déclarations suivantes :"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Liste",
+                                      "name": "estVrai",
                                       "attributes": {
-                                        "type": "puce"
-                                      },
+                                        "var": "T11564"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous devez remplir les 2 déclarations suivantes :"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Liste",
+                                  "attributes": {
+                                    "type": "numero"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
                                       "children": [
                                         {
                                           "type": "element",
-                                          "name": "Item",
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "element",
-                                              "name": "Paragraphe",
+                                              "name": "LienInterne",
+                                              "attributes": {
+                                                "LienPublication": "R1281",
+                                                "type": "Formulaire",
+                                                "audience": "Particuliers"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "element",
-                                                  "name": "LienInterne",
-                                                  "attributes": {
-                                                    "LienPublication": "R1281",
-                                                    "type": "Formulaire",
-                                                    "audience": "Particuliers"
-                                                  },
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Déclaration des revenus"
-                                                    }
-                                                  ]
-                                                },
-                                                {
                                                   "type": "text",
-                                                  "text": " papier (ou formulaire n°2042) comprenant tous vos revenus perçus du 1"
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "Exposant",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "er"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": " janvier à la date de votre départ."
+                                                  "text": "Déclaration des revenus"
                                                 }
                                               ]
                                             },
                                             {
+                                              "type": "text",
+                                              "text": " papier (ou formulaire n°2042) comprenant tous vos revenus perçus du 1"
+                                            },
+                                            {
                                               "type": "element",
-                                              "name": "Paragraphe",
+                                              "name": "Exposant",
                                               "children": [
                                                 {
                                                   "type": "text",
-                                                  "text": "N'oubliez pas de préciser votre nouvelle adresse dans le cadre prévu à cet effet, même si l'adresse d'envoi est correcte. Mentionnez également la date de votre départ, même si vous en avez déjà informé votre service des impôts."
+                                                  "text": "er"
                                                 }
                                               ]
                                             },
                                             {
+                                              "type": "text",
+                                              "text": " janvier à la date de votre départ"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
                                               "type": "element",
-                                              "name": "Paragraphe",
+                                              "name": "LienInterne",
+                                              "attributes": {
+                                                "LienPublication": "R10245",
+                                                "type": "Formulaire",
+                                                "audience": "Particuliers"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
-                                                  "text": "Si au cours de cette période, vous avez perçu des revenus étrangers, vous devez les déclarer sur l'imprimé "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "LienInterne",
-                                                  "attributes": {
-                                                    "LienPublication": "R10243",
-                                                    "type": "Formulaire",
-                                                    "audience": "Particuliers"
-                                                  },
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "n°2047"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": " et les reporter sur l'imprimé n°2042."
+                                                  "text": "Déclaration des revenus - Départ à l'étranger ou retour en France"
                                                 }
                                               ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " (ou formulaire n°2042-NR) comprenant uniquement vos revenus de source française imposables en France depuis votre départ jusqu'au 31 décembre de l'année de votre expatriation"
                                             }
                                           ]
                                         }
@@ -790,117 +813,80 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "FragmentConditionne",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Condition",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "estVrai",
-                                          "attributes": {
-                                            "var": "T11564"
-                                          }
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Liste",
-                                      "attributes": {
-                                        "type": "puce"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Item",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "LienInterne",
-                                                  "attributes": {
-                                                    "LienPublication": "R10245",
-                                                    "type": "Formulaire",
-                                                    "audience": "Particuliers"
-                                                  },
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Déclaration des revenus - Départ à l'étranger ou retour en France"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": " (ou formulaire n°2042-NR) comprenant uniquement vos revenus de source française imposables en France depuis votre départ jusqu'au 31 décembre de l'année de votre expatriation."
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Ces 2 déclarations sont à adresser au service des impôts qui gérait votre dossier avant votre départ."
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "FragmentConditionne",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Dans la déclaration de tous vos revenus du 1"
+                                    },
+                                    {
                                       "type": "element",
-                                      "name": "Condition",
+                                      "name": "Exposant",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "estVrai",
-                                          "attributes": {
-                                            "var": "T11564"
-                                          }
+                                          "type": "text",
+                                          "text": "er"
                                         }
                                       ]
                                     },
                                     {
+                                      "type": "text",
+                                      "text": " janvier à la date de votre départ, précisez votre nouvelle adresse dans le cadre prévu à cet effet (même si l'adresse d'envoi est correcte). Mentionnez aussi la date de votre départ (même si vous en avez déjà informé votre service des impôts)."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Si vous avez perçu des revenus étrangers du 1"
+                                    },
+                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Exposant",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Ces déclarations sont à adresser au service des impôts qui gérait votre dossier avant votre départ."
+                                          "text": "er"
                                         }
                                       ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " janvier à la date de votre départ, vous devez les déclarer sur l'imprimé "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "R10243",
+                                        "type": "Formulaire",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "n° 2047"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " et les reporter sur l'imprimé n° 2042."
                                     }
                                   ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Attention",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Attention"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "n'oubliez pas d'informer votre centre des impôts des particuliers de votre nouvelle adresse à l'étranger pour recevoir votre nouvelle déclaration."
                                 }
                               ]
                             }
@@ -944,7 +930,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Vous serez alors imposé seulement sur ces revenus."
+                              "text": "Vous serez imposé seulement sur ces revenus."
                             }
                           ]
                         },
@@ -1102,7 +1088,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "25 710 €"
+                                          "text": "26 070 €"
                                         }
                                       ]
                                     }
@@ -1138,7 +1124,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "25 710 €"
+                                          "text": "26 070 €"
                                         }
                                       ]
                                     }
@@ -1508,7 +1494,48 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Vous devez adresser votre déclaration de revenus (ou imprimé n°2042) et, si besoin, les imprimés complémentaires en fonction de votre situation au service des impôts des particuliers non-résidents."
+                                      "text": "Vous devez adresser au service des impôts des particuliers non-résidents les documents suivants :"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Liste",
+                                  "attributes": {
+                                    "type": "puce"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Votre déclaration de revenus (ou imprimé n°2042)"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Imprimés complémentaires, si besoin en fonction de votre situation"
+                                            }
+                                          ]
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
@@ -1589,6 +1616,193 @@
                                         {
                                           "type": "text",
                                           "text": "Ministère chargé des finances"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "OuSAdresser",
+                                  "attributes": {
+                                    "ID": "R122",
+                                    "sve": "non",
+                                    "type": "Centre de contact"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Service des impôts des particuliers non résidents"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30612"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ministère chargé des finances"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Texte",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Chapitre",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Titre",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Par téléphone"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "MiseEnEvidence",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "+33 (0) 1 72 95 20 42"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Du lundi au vendredi de 9h à 16h"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Chapitre",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Titre",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Par messagerie"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Via votre "
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "LienInterne",
+                                                  "attributes": {
+                                                    "LienPublication": "R3120",
+                                                    "type": "Téléservice",
+                                                    "audience": "Particuliers"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "messagerie sécurisée sur votre compte personnel"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Chapitre",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Titre",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Par courrier"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "10 rue du Centre"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "TSA 10010"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "93465 Noisy-Le-Grand Cedex"
+                                                }
+                                              ]
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -1832,7 +2046,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Avoir exercé une activité pendant plus de 183 jours au cours d'une période de 12 mois consécutifs. Cette activité concernait un chantier de construction ou de montage, l'installation d'ensembles industriels, leur mise en route, leur exploitation et l'ingénierie y afférente, la recherche ou l'extraction de ressources naturelles ou la navigation à bord de navires immatriculés au registre international français"
+                                          "text": "Avoir exercé une activité pendant plus de 183 jours au cours d'une période de 12 mois consécutifs. Cette activité concernait un chantier de construction ou de montage, l'installation d'ensembles industriels, leur mise en route, leur exploitation et l'ingénierie y afférente, la recherche ou l'extraction de ressources naturelles ou la navigation à bord de navires immatriculés au registre international français."
                                         }
                                       ]
                                     }
@@ -1996,7 +2210,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Ainsi, si vous habitez en Allemagne et travaillez comme frontalier en France, vous êtes normalement imposé en Allemagne sur les revenus de votre activité."
+                                  "text": "Par exemple, si vous habitez en Allemagne et travaillez comme frontalier en France, vous êtes normalement imposé en Allemagne sur les revenus de votre activité."
                                 }
                               ]
                             },

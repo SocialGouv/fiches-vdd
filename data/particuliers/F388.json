@@ -10,7 +10,7 @@
         "ID": "F388",
         "type": "Fiche d'information conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
-        "dateDerniereModificationImportante": "2021-04-08T00:00:00",
+        "dateDerniereModificationImportante": "2022-01-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F388"
       },
       "children": [
@@ -50,7 +50,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Un changement de situation familiale (mariage, conclusion d'un Pacs, séparation ou divorce, décès) modifie la manière dont vous devez effectuer votre déclaration de revenus. Ce changement peut également avoir des répercussions sur votre taux de prélèvement à la source, si vous en bénéficiez."
+              "text": "Un changement de situation familiale (mariage, conclusion d'un Pacs, séparation ou divorce, décès) modifie la manière dont vous devez effectuer votre déclaration de revenus. Ce changement peut également avoir des conséquences sur votre taux de prélèvement à la source."
             }
           ]
         },
@@ -80,7 +80,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2021-04-08"
+              "text": "modified 2022-01-01"
             }
           ]
         },
@@ -806,7 +806,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Un changement de situation familiale (mariage, conclusion d'un Pacs, séparation ou divorce, décès) modifie la manière dont vous devez effectuer votre déclaration de revenus. Ce changement peut également avoir des répercussions sur votre taux de prélèvement à la source, si vous en bénéficiez."
+                      "text": "Un changement de situation familiale (mariage, conclusion d'un Pacs, séparation ou divorce, décès) modifie la manière dont vous devez effectuer votre déclaration de revenus. Ce changement peut également avoir des conséquences sur votre taux de prélèvement à la source."
                     }
                   ]
                 }
@@ -840,19 +840,47 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10282"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Vous devez le signaler à votre service des impôts."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "La démarche se fait sur internet. Si vous n'y avez pas accès, la démarche se fait par courrier."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "BlocCas",
                   "attributes": {
-                    "type": "modalite",
-                    "affichage": "onglet",
-                    "personnalisable": "personnalisable"
+                    "affichage": "onglet"
                   },
                   "children": [
                     {
                       "type": "element",
                       "name": "Cas",
-                      "attributes": {
-                        "type": "enLigne"
-                      },
                       "children": [
                         {
                           "type": "element",
@@ -860,7 +888,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "En ligne"
+                              "text": "Sur internet"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T13793"
+                              }
                             }
                           ]
                         },
@@ -878,7 +919,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "impots.gouv"
+                                  "text": "impots.gouv.fr"
                                 }
                               ]
                             },
@@ -1044,9 +1085,6 @@
                     {
                       "type": "element",
                       "name": "Cas",
-                      "attributes": {
-                        "type": "surPlace"
-                      },
                       "children": [
                         {
                           "type": "element",
@@ -1054,68 +1092,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Sur place"
+                              "text": "Par courrier"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Si vous n'avez pas d'accès à internet, vous devez le signaler au service des impôts dont vous dépendez."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "OuSAdresser",
-                          "attributes": {
-                            "ID": "R15019",
-                            "sve": "non",
-                            "type": "Local personnalisable"
-                          },
+                          "name": "Condition",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Service en charge des impôts (trésorerie, service des impôts...)"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "PivotLocal",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "centre_impots"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "RessourceWeb",
+                              "name": "estVrai",
                               "attributes": {
-                                "URL": "https://www.impots.gouv.fr/portail/contacts"
+                                "var": "T13794"
                               }
-                            },
-                            {
-                              "type": "element",
-                              "name": "Source",
-                              "attributes": {
-                                "ID": "R30612"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Ministère chargé des finances"
-                                }
-                              ]
                             }
                           ]
                         },
@@ -1204,6 +1194,57 @@
                         },
                         {
                           "type": "element",
+                          "name": "OuSAdresser",
+                          "attributes": {
+                            "ID": "R15019",
+                            "sve": "non",
+                            "type": "Local personnalisable"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Service en charge des impôts (trésorerie, service des impôts...)"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "PivotLocal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "centre_impots"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "RessourceWeb",
+                              "attributes": {
+                                "URL": "https://www.impots.gouv.fr/portail/contacts"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "Source",
+                              "attributes": {
+                                "ID": "R30612"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Ministère chargé des finances"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
@@ -1250,19 +1291,47 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10950"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Vous devez le signaler à votre service des impôts."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "La démarche se fait sur internet. Si vous n'y avez pas accès, la démarche se fait par courrier."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "BlocCas",
                   "attributes": {
-                    "type": "modalite",
-                    "affichage": "onglet",
-                    "personnalisable": "personnalisable"
+                    "affichage": "onglet"
                   },
                   "children": [
                     {
                       "type": "element",
                       "name": "Cas",
-                      "attributes": {
-                        "type": "enLigne"
-                      },
                       "children": [
                         {
                           "type": "element",
@@ -1270,7 +1339,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "En ligne"
+                              "text": "Sur internet"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T13793"
+                              }
                             }
                           ]
                         },
@@ -1288,7 +1370,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "impots.gouv"
+                                  "text": "impots.gouv.fr"
                                 }
                               ]
                             },
@@ -1454,9 +1536,6 @@
                     {
                       "type": "element",
                       "name": "Cas",
-                      "attributes": {
-                        "type": "surPlace"
-                      },
                       "children": [
                         {
                           "type": "element",
@@ -1464,68 +1543,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Sur place"
+                              "text": "Par courrier"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Si vous n'avez pas d'accès à internet, vous devez le signaler au service des impôts dont vous dépendez."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "OuSAdresser",
-                          "attributes": {
-                            "ID": "R15019",
-                            "sve": "non",
-                            "type": "Local personnalisable"
-                          },
+                          "name": "Condition",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Service en charge des impôts (trésorerie, service des impôts...)"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "PivotLocal",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "centre_impots"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "RessourceWeb",
+                              "name": "estVrai",
                               "attributes": {
-                                "URL": "https://www.impots.gouv.fr/portail/contacts"
+                                "var": "T13794"
                               }
-                            },
-                            {
-                              "type": "element",
-                              "name": "Source",
-                              "attributes": {
-                                "ID": "R30612"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Ministère chargé des finances"
-                                }
-                              ]
                             }
                           ]
                         },
@@ -1614,6 +1645,57 @@
                         },
                         {
                           "type": "element",
+                          "name": "OuSAdresser",
+                          "attributes": {
+                            "ID": "R15019",
+                            "sve": "non",
+                            "type": "Local personnalisable"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Service en charge des impôts (trésorerie, service des impôts...)"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "PivotLocal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "centre_impots"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "RessourceWeb",
+                              "attributes": {
+                                "URL": "https://www.impots.gouv.fr/portail/contacts"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "Source",
+                              "attributes": {
+                                "ID": "R30612"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Ministère chargé des finances"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
@@ -1660,19 +1742,47 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10951"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Vous devez le signaler à votre service des impôts."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "La démarche se fait sur internet. Si vous n'y avez pas accès, la démarche se fait par courrier."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "BlocCas",
                   "attributes": {
-                    "type": "modalite",
-                    "affichage": "onglet",
-                    "personnalisable": "personnalisable"
+                    "affichage": "onglet"
                   },
                   "children": [
                     {
                       "type": "element",
                       "name": "Cas",
-                      "attributes": {
-                        "type": "enLigne"
-                      },
                       "children": [
                         {
                           "type": "element",
@@ -1681,6 +1791,19 @@
                             {
                               "type": "text",
                               "text": "En ligne"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T13793"
+                              }
                             }
                           ]
                         },
@@ -1698,7 +1821,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "impots.gouv"
+                                  "text": "impots.gouv.fr"
                                 }
                               ]
                             },
@@ -1884,9 +2007,6 @@
                     {
                       "type": "element",
                       "name": "Cas",
-                      "attributes": {
-                        "type": "surPlace"
-                      },
                       "children": [
                         {
                           "type": "element",
@@ -1894,68 +2014,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Sur place"
+                              "text": "Par courrier"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Si vous n'avez pas d'accès à internet, vous devez le signaler au service des impôts dont vous dépendez."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "OuSAdresser",
-                          "attributes": {
-                            "ID": "R15019",
-                            "sve": "non",
-                            "type": "Local personnalisable"
-                          },
+                          "name": "Condition",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Service en charge des impôts (trésorerie, service des impôts...)"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "PivotLocal",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "centre_impots"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "RessourceWeb",
+                              "name": "estVrai",
                               "attributes": {
-                                "URL": "https://www.impots.gouv.fr/portail/contacts"
+                                "var": "T13794"
                               }
-                            },
-                            {
-                              "type": "element",
-                              "name": "Source",
-                              "attributes": {
-                                "ID": "R30612"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Ministère chargé des finances"
-                                }
-                              ]
                             }
                           ]
                         },
@@ -2044,6 +2116,57 @@
                         },
                         {
                           "type": "element",
+                          "name": "OuSAdresser",
+                          "attributes": {
+                            "ID": "R15019",
+                            "sve": "non",
+                            "type": "Local personnalisable"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Service en charge des impôts (trésorerie, service des impôts...)"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "PivotLocal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "centre_impots"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "RessourceWeb",
+                              "attributes": {
+                                "URL": "https://www.impots.gouv.fr/portail/contacts"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "Source",
+                              "attributes": {
+                                "ID": "R30612"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Ministère chargé des finances"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
@@ -2090,19 +2213,47 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11250"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Vous devez le signaler à votre service des impôts."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "La démarche se fait sur internet. Si vous n'y avez pas accès, la démarche se fait par courrier."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "BlocCas",
                   "attributes": {
-                    "type": "modalite",
-                    "affichage": "onglet",
-                    "personnalisable": "personnalisable"
+                    "affichage": "onglet"
                   },
                   "children": [
                     {
                       "type": "element",
                       "name": "Cas",
-                      "attributes": {
-                        "type": "enLigne"
-                      },
                       "children": [
                         {
                           "type": "element",
@@ -2111,6 +2262,19 @@
                             {
                               "type": "text",
                               "text": "En ligne"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T13793"
+                              }
                             }
                           ]
                         },
@@ -2128,7 +2292,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "impots.gouv"
+                                  "text": "impots.gouv.fr"
                                 }
                               ]
                             },
@@ -2221,9 +2385,6 @@
                     {
                       "type": "element",
                       "name": "Cas",
-                      "attributes": {
-                        "type": "surPlace"
-                      },
                       "children": [
                         {
                           "type": "element",
@@ -2231,7 +2392,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Sur place"
+                              "text": "Par courrier"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T13794"
+                              }
                             }
                           ]
                         },
@@ -2241,7 +2415,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si vous n'avez pas d'accès à internet, vous devez le signaler au service des impôts dont vous dépendez."
+                              "text": "Vous devrez indiquer la modification du nombre de personnes à charge."
                             }
                           ]
                         },
@@ -2293,16 +2467,6 @@
                                   "text": "Ministère chargé des finances"
                                 }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Vous devrez indiquer la modification du nombre de personnes à charge."
                             }
                           ]
                         },
@@ -2520,7 +2684,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Impôt sur le revenu : déclaration de revenus annuelle"
+                      "text": "Impôt sur le revenu - Déclaration de revenus annuelle"
                     }
                   ]
                 },
