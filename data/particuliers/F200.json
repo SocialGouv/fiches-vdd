@@ -80,7 +80,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2019-11-01"
+              "text": "modified 2022-01-11"
             }
           ]
         },
@@ -645,7 +645,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Choix de l'établissement hospitalier"
+                          "text": "Quel établissement hospitalier choisir ?"
                         }
                       ]
                     }
@@ -657,7 +657,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Vous pouvez choisir un hôpital public, une clinique privée conventionnée ou une clinique privée non conventionnée."
+                      "text": "Vous pouvez choisir un hôpital public ou une clinique privée conventionnée ou une clinique privée non conventionnée."
                     }
                   ]
                 },
@@ -765,13 +765,15 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "sur prescription de votre médecin, vous pouvez bénéficier d'une "
+                          "text": "sur prescription de votre médecin, vous pouvez bénéficier dans certains cas d'une "
                         },
                         {
                           "type": "element",
-                          "name": "LienExterne",
+                          "name": "LienInterne",
                           "attributes": {
-                            "URL": "https://www.ameli.fr/assure/remboursements/rembourse/hospitalisation-chirurgie/hospitalisation-chirurgie#text_2477"
+                            "LienPublication": "F732",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
                           },
                           "children": [
                             {
@@ -782,7 +784,7 @@
                         },
                         {
                           "type": "text",
-                          "text": "\n\n."
+                          "text": "."
                         }
                       ]
                     }
@@ -804,7 +806,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Formalités d'admission"
+                          "text": "Quelles formalités d'admission ?"
                         }
                       ]
                     }
@@ -846,8 +848,24 @@
                           "name": "Paragraphe",
                           "children": [
                             {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Documents à présenter"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
                               "type": "text",
-                              "text": "Vous devez présenter les documents suivants :"
+                              "text": "Vous présentez les documents suivants :"
                             }
                           ]
                         },
@@ -884,7 +902,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Carte vitale ou attestation de droits, ou autre justificatif de vos droits : derniers bulletins de paie, attestation d'inscription à Pôle emploi ou à l'université,..."
+                                      "text": "Carte vitale (mise à jour) et votre attestation de droits"
                                     }
                                   ]
                                 }
@@ -900,7 +918,42 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Carte de mutuelle si vous en avez une, et éventuellement prise en charge de la mutuelle"
+                                      "text": "Carte ou attestation de "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F20314",
+                                        "type": "Fiche d'information conditionnée",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "complémentaire santé ou de mutuelle"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " su vous en avez une"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Si votre hospitalisation est liée à un accident du travail ou à une maladie professionnelle, la « feuille d'accident du travail ou de maladie professionnelle » remise par votre employeur ou par votre caisse d'Assurance maladie."
                                     }
                                   ]
                                 }
@@ -946,13 +999,217 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "complémentaire santé solidaire (C2S)"
+                                  "text": "complémentaire santé solidaire"
                                 }
                               ]
                             },
                             {
                               "type": "text",
                               "text": "."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si vous n'avez pas ces documents, vous présentez selon votre cas :  "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Votre dernier bulletin de salaire (si vous êtes salarié)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Ou votre dernière attestation de versement d'allocation chômage (si vous êtes demandeur d'emploi indemnisé par Pôle emploi)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Ou votre titre de pension de retraite ou d'invalidité ou de rente d'incapacité permanente"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Ou votre carte européenne d'assurance maladie (CEAM) ou le formulaire E112, si vous êtes ressortissant d'un pays de l'Union européenne - "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R42218",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Espace économique européen"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " (UE-EEE) ou de Suisse"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Ou la prise en charge délivrée par votre organisme de sécurité sociale, si vous êtes ressortissant d'un autre pays (hors UE-EEE-Suisse)."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ANoter",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "À noter"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "si vous ne pouvez fournir aucun de ces justificatifs, votre caisse d'Assurance Maladie peut établir, sous certaines conditions, une attestation d'admission en urgence à "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F3079",
+                                    "type": "Fiche Question-réponse conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "l'aide médicale de l'État (AME)"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ". Cette procédure se fera à votre demande ou à l'initiative de l'établissement de santé dans lequel vous êtes admis."
+                                }
+                              ]
                             }
                           ]
                         },
@@ -983,23 +1240,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Résultats d'analyses"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Radiographies"
+                                      "text": "Résultats d'examens (exemples : analyses, radios...)"
                                     }
                                   ]
                                 }
@@ -1031,7 +1272,23 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Carte de groupe sanguin, ..."
+                                      "text": "Carte de groupe sanguin et rhésus"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Courrier du médecin traitant"
                                     }
                                   ]
                                 }
@@ -1074,7 +1331,17 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Une fois votre dossier enregistré, le service des admissions vous remet un bulletin de situation ou d'hospitalisation. Il fait office d'avis d'arrêt de travail. Vous devez l'envoyer à votre caisse d'assurance maladie et, si besoin, à votre employeur (ou à Pôle emploi)."
+                              "text": "Une fois votre dossier enregistré, le service des admissions vous remet un bulletin de situation ou d'hospitalisation. Il fait office d'avis d'arrêt de travail. Vous devez l'envoyer dans les 48 heures qui suit votre hospitalisation à votre caisse d'assurance maladie et, si besoin, à votre employeur (ou à Pôle emploi)."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si votre état de santé ne vous permet pas de respecter ce délai de 48 heures, l'établissement hospitalier effectue les démarches nécessaires."
                             }
                           ]
                         },
@@ -1212,7 +1479,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Dans tous les cas, il faut prévenir (ou faire prévenir) votre employeur."
+                              "text": "Dans tous les cas, si vous travaillez, il faut prévenir (ou faire prévenir) votre employeur."
                             }
                           ]
                         },
@@ -1328,7 +1595,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Formalités de sortie"
+                          "text": "Quelles formalités de sortie ?"
                         }
                       ]
                     }
@@ -1422,6 +1689,93 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "element",
+                  "name": "ANoter",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "À noter"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "le service social de votre caisse d'Assurance Maladie peut vous rencontrer à votre domicile pour évaluer vos besoins et envisager avec vous les aides adaptées (aide ménagère, technique, financière, adaptation du logement...)."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Contactez votre caisse d'assurance retraite et de la santé au travail (Carsat)."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "OuSAdresser",
+                      "attributes": {
+                        "ID": "R41",
+                        "sve": "non",
+                        "type": "Local personnalisé sur SP"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Caisse d'assurance retraite et de la santé au travail (Carsat)"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "PivotLocal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "carsat"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "RessourceWeb",
+                          "attributes": {
+                            "URL": "https://www.lassuranceretraite.fr/portail-info/hors-menu/footer/contacts.html"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "Source",
+                          "attributes": {
+                            "ID": "R30675"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Caisse nationale d'assurance maladie (Cnam)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -1439,7 +1793,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Prise en charge"
+                          "text": "Quelle prise en charge ?"
                         }
                       ]
                     }
@@ -1530,6 +1884,46 @@
                 },
                 {
                   "type": "element",
+                  "name": "ANoter",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "À noter"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "votre mutuelle peut prendre en charge les "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Valeur",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "20 %"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " qui restent."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Paragraphe",
                   "children": [
                     {
@@ -1553,7 +1947,175 @@
                     },
                     {
                       "type": "text",
-                      "text": " (hormis le forfait journalier et les suppléments pour confort personnel)."
+                      "text": " (hormis parfois le forfait hospitalier et les suppléments pour confort personnel)."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "La prise en charge peut également être intégrale "
+                    },
+                    {
+                      "type": "element",
+                      "name": "MiseEnEvidence",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "notamment"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " si vous êtes dans l'une des situations suivantes :"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Liste",
+                  "attributes": {
+                    "type": "puce"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous êtes hospitalisé plus de 30 jours consécutifs (votre prise en charge à "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "100 %"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " débute alors le 31e jour)"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous êtes hospitalisé en raison d'une "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "F34068",
+                                "type": "Fiche d'information conditionnée",
+                                "audience": "Particuliers"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "affection longue durée"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous touchez une pension d'invalidité, d'une pension de veuf ou veuve invalide, d'une pension vieillesse qui a remplacé votre pension d'invalidité, ou d'une pension militaire"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous touchez la "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "F10027",
+                                "type": "Fiche d'information conditionnée",
+                                "audience": "Particuliers"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "complémentaire santé solidaire"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " ou "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "F3079",
+                                "type": "Fiche Question-réponse conditionnée",
+                                "audience": "Particuliers"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "l'aide médicale de l’État"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -1573,7 +2135,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Forfait hospitalier"
+                          "text": "Qu'est-ce que le forfait hospitalier ?"
                         }
                       ]
                     }
@@ -1585,7 +2147,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Le forfait hospitalier représente votre participation financière aux frais d'hébergement entraînés par votre hospitalisation."
+                      "text": "Le forfait hospitalier représente votre participation financière aux frais d'hébergement et d'entretien entraînés par votre hospitalisation."
                     }
                   ]
                 },
@@ -1595,17 +2157,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Il est dû pour tout séjour supérieur à 24 heures dans un établissement hospitalier public ou privé, y compris le jour de sortie, sauf si le séjour est à cheval sur 2 journées calendaires."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Dans ce cas-là, on compte le jour d'entrée et le jour de sortie, soit 2 jours (règle de \"présence à minuit\" même si la présence réelle est inférieure à 24 heures)."
+                      "text": "En principe, Il est dû pour chaque journée d'hospitalisation, y compris le jour de sortie."
                     }
                   ]
                 },
@@ -1686,7 +2238,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Vous êtes exonéré du forfait journalier si vous vous trouvez dans l'une des situations suivantes :"
+                      "text": "Toutefois, vous ne payez pas le forfait journalier si vous vous trouvez notamment dans l'une des situations suivantes :"
                     }
                   ]
                 },
@@ -1706,6 +2258,10 @@
                           "name": "Paragraphe",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Vous touchez la "
+                            },
+                            {
                               "type": "element",
                               "name": "LienInterne",
                               "attributes": {
@@ -1716,7 +2272,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Complémentaire santé solidaire (C2S)"
+                                  "text": "complémentaire santé solidaire"
                                 }
                               ]
                             },
@@ -1735,7 +2291,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "aide médicale de l'État (AME"
+                                  "text": "l'aide médicale de l'État (AME"
                                 }
                               ]
                             },
@@ -1766,7 +2322,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Hospitalisation pendant les 4 derniers mois de la grossesse, pour l'accouchement et les 12 jours après l'accouchement"
+                              "text": "Vous êtes hospitalisé pendant les 4 derniers mois de la grossesse, pour l'accouchement et les 12 jours après l'accouchement"
                             }
                           ]
                         }
@@ -1782,7 +2338,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Hospitalisation d'un bébé dans les 30 jours suivant sa naissance"
+                              "text": "Votre bébé est hospitalisé dans les 30 jours suivant sa naissance"
                             }
                           ]
                         }
@@ -1798,7 +2354,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Hospitalisation due à un accident du travail ou à une maladie professionnelle"
+                              "text": "Vous êtes hospitalisé suite à un accident du travail ou à une maladie professionnelle"
                             }
                           ]
                         }
@@ -1814,71 +2370,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Soins dans le cadre d'une hospitalisation à domicile"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Hébergement d'un enfant handicapé de moins de 20 ans dans un établissement d'éducation spéciale ou professionnelle"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Hospitalisation d'un enfant ou adolescent bénéficiant de "
+                              "text": "Vous êtes en "
                             },
                             {
                               "type": "element",
                               "name": "LienInterne",
                               "attributes": {
-                                "LienPublication": "F14809",
+                                "LienPublication": "F732",
                                 "type": "Fiche d'information conditionnée",
                                 "audience": "Particuliers"
                               },
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "l'allocation d'éducation de l'enfant handicapé (AEEH)"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " ou de la "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F34049",
-                                "type": "Fiche d'information conditionnée",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "carte mobilité inclusion (CMI) mention invalidité"
+                                  "text": "hospitalisation à domicile"
                                 }
                               ]
                             }
@@ -1896,7 +2401,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Titulaire d'une pension militaire"
+                              "text": "Votre enfant handicapé de moins de 20 ans est hébergé dans un établissement d'éducation spéciale ou professionnelle"
                             }
                           ]
                         }
@@ -1912,7 +2417,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Donneur d'éléments ou de produits du corps humain (donneurs d'organes par exemple)"
+                              "text": "Vous touchez une pension militaire"
                             }
                           ]
                         }
@@ -1928,9 +2433,67 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Victime d'un acte de terrorisme et bénéficiant d'une prise en charge intégrale pour les soins en rapport avec cet événement"
+                              "text": "Vous êtes donneur d'éléments ou de produits du corps humain (donneurs d'organes par exemple)"
                             }
                           ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous êtes victime d'un acte de terrorisme et bénéficiant d'une prise en charge intégrale pour les soins en rapport avec cet événement"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous dépendez du régime d'Alsace-Moselle"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ASavoir",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "À savoir"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "certains établissements ne sont pas concernés par ce forfait (par exemple, les Ehpad, unités de soins de longue durée)."
                         }
                       ]
                     }
@@ -2079,7 +2642,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Suppléments pour confort personnel"
+                          "text": "Quels suppléments pour confort personnel ?"
                         }
                       ]
                     }
@@ -2091,7 +2654,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Il peut s'agir notamment d'un supplément pour une chambre particulière, la télévision, etc."
+                      "text": "Il peut s'agir notamment d'un supplément pour une chambre particulière, le téléphone, la télévision, etc."
                     }
                   ]
                 },
@@ -3344,6 +3907,41 @@
                     {
                       "type": "text",
                       "text": "Code de la sécurité sociale : articles L160-13 à L160-16"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Definition",
+          "attributes": {
+            "ID": "R42218"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Espace économique européen (EEE)"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Allemagne, Autriche, Belgique, Bulgarie, Chypre, Croatie, Danemark, Espagne, Estonie, Finlande, France, Grèce, Hongrie, Irlande, Islande, Italie, Lettonie, Liechtenstein, Lituanie, Luxembourg, Malte, Norvège, Pays-Bas, Pologne, Portugal, République tchèque, Roumanie, Slovaquie, Slovénie, Suède"
                     }
                   ]
                 }
