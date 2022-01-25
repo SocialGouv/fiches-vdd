@@ -1,3 +1,15 @@
+# [2.305.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.304.0...v2.305.0) (2022-01-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency node-fetch to v2.6.7 [security] ([#198](https://github.com/SocialGouv/fiches-vdd/issues/198)) ([4945a3c](https://github.com/SocialGouv/fiches-vdd/commit/4945a3c367be3a6e842636202f69c1d731fad1d3))
+
+
+### Features
+
+* **data:** 20220125_0416 update ([fc8f05c](https://github.com/SocialGouv/fiches-vdd/commit/fc8f05c95dc5b7f5be128cdbee178a1d75c098e4))
+
 # [2.304.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.303.0...v2.304.0) (2022-01-24)
 
 
