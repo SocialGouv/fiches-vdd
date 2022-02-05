@@ -19,7 +19,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Un enfant peut-il changer d'école en cours d'année?"
+              "text": "Un enfant peut-il changer d'école en cours d'année ?"
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2020-04-09"
+              "text": "modified 2022-02-02"
             }
           ]
         },
@@ -246,7 +246,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Un enfant peut-il changer d'école en cours d'année?"
+                  "text": "Un enfant peut-il changer d'école en cours d'année ?"
                 }
               ]
             }
@@ -653,6 +653,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F36236",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "[Un enfant peut-il changer d'école en cours d'année]"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "Texte",
           "children": [
             {
@@ -661,21 +687,24 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Oui, vous pouvez changer votre enfant d'école en cours d'année scolaire. Pour cela, vous devez d'abord vous renseigner auprès de l'école dans laquelle vous souhaitez l'inscrire. Les formalités d'inscription seront différentes selon que l'école est publique ou privée. Dans tous les cas, l'inscription ne sera possible que si l'école dispose d'une place disponible."
+                  "text": "Oui, vous pouvez changer votre enfant d'école en cours d'année scolaire."
                 }
               ]
             },
             {
               "type": "element",
-              "name": "Attention",
+              "name": "FragmentConditionne",
               "children": [
                 {
                   "type": "element",
-                  "name": "Titre",
+                  "name": "Condition",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Attention"
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10010"
+                      }
                     }
                   ]
                 },
@@ -685,26 +714,91 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "si le changement d'école fait suite à un "
-                    },
+                      "text": "Pour cela, vous devez d'abord vous renseigner auprès de l'école dans laquelle vous souhaitez l'inscrire."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Les formalités d'inscription seront différentes selon que l'école est publique ou privée."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Dans tous les cas, l'inscription sera possible uniquement si l'école dispose d'une place disponible."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "FragmentConditionne",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
                     {
                       "type": "element",
-                      "name": "LienInterne",
+                      "name": "estVrai",
                       "attributes": {
-                        "LienPublication": "F1881",
-                        "type": "Fiche d'information conditionnée",
-                        "audience": "Particuliers"
-                      },
+                        "var": "T10010"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Attention",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
                       "children": [
                         {
                           "type": "text",
-                          "text": "déménagement"
+                          "text": "Attention"
                         }
                       ]
                     },
                     {
-                      "type": "text",
-                      "text": ", les formalités sont différentes."
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "si le changement d'école fait suite à un "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F1881",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "déménagement"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ", les formalités sont différentes."
+                        }
+                      ]
                     }
                   ]
                 }
@@ -735,6 +829,19 @@
                 },
                 {
                   "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T14736"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
                   "name": "Texte",
                   "children": [
                     {
@@ -760,11 +867,24 @@
                             },
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T14731"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si votre enfant n'est dans l'école publique de votre secteur, vous pouvez y "
+                                  "text": "Si votre enfant n'est pas dans l'école publique de votre secteur, vous pouvez y "
                                 },
                                 {
                                   "type": "element",
@@ -783,7 +903,17 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": ". L'école de votre secteur est déterminée par le conseil municipal."
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L'école de votre secteur est déterminée par le conseil municipal."
                                 }
                               ]
                             },
@@ -831,6 +961,19 @@
                             },
                             {
                               "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T14732"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "BlocCas",
                               "attributes": {
                                 "affichage": "radio"
@@ -852,11 +995,14 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Condition",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Si cette école se situe dans votre commune mais n'est pas celle de votre secteur, vous devez obtenir l'accord de votre maire. L'école de votre secteur est déterminée par le conseil municipal."
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T14733"
+                                          }
                                         }
                                       ]
                                     },
@@ -866,7 +1012,37 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "En cas de réponse favorable, la mairie vous délivre un certificat d'inscription indiquant l'école où votre enfant est affecté. Vous devrez ensuite effectuer l'inscription définitive auprès de la direction de cette école."
+                                          "text": "Vous devez obtenir l'accord du maire."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "L'école de votre secteur est déterminée par le conseil municipal."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "En cas de réponse favorable, la mairie vous délivre un certificat d'inscription indiquant l'école où votre enfant est affecté."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous devrez ensuite effectuer l'inscription définitive auprès de la direction de cette école."
                                         }
                                       ]
                                     },
@@ -908,7 +1084,20 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Hors de votre commune"
+                                          "text": "En dehors de votre commune"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Condition",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "estVrai",
+                                          "attributes": {
+                                            "var": "T14734"
+                                          }
                                         }
                                       ]
                                     },
@@ -918,7 +1107,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Si cette école est située dans une autre commune que celle où vous résidez, vous devez obtenir l'accord du maire de votre commune de résidence "
+                                          "text": "Vous devez obtenir l'accord du maire de votre commune de résidence "
                                         },
                                         {
                                           "type": "element",
@@ -942,7 +1131,17 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "En cas de réponse favorable, la mairie vous délivre un certificat d'inscription indiquant l'école où votre enfant est affecté. Vous devrez ensuite effectuer l'inscription définitive auprès de la direction de cette école."
+                                          "text": "En cas de réponse favorable, la mairie de la commune d'accueil vous délivre un certificat d'inscription indiquant l'école où votre enfant est affecté."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous devrez ensuite effectuer l'inscription définitive auprès de la direction de cette école."
                                         }
                                       ]
                                     },
@@ -1101,7 +1300,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Document attestant que l'enfant a subi les "
+                                  "text": "Document attestant que l'enfant a fait les "
                                 },
                                 {
                                   "type": "element",
@@ -1143,6 +1342,19 @@
                     {
                       "type": "text",
                       "text": "Inscription dans une école privée"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T14735"
+                      }
                     }
                   ]
                 },
@@ -1275,7 +1487,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Document attestant que l'enfant a subi les "
+                                  "text": "Document attestant que l'enfant a fait les "
                                 },
                                 {
                                   "type": "element",
@@ -1305,102 +1517,6 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "OuSAdresser",
-          "attributes": {
-            "ID": "R12125",
-            "sve": "non",
-            "type": "Local personnalisable"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Établissement scolaire"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Complement",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Pour inscrire votre enfant"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "PivotLocal",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "etablissement_scolaire"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "RessourceWeb",
-              "attributes": {
-                "URL": "https://www.education.gouv.fr/annuaire"
-              }
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "OuSAdresser",
-          "attributes": {
-            "ID": "R1",
-            "sve": "non",
-            "type": "Local personnalisé sur SP"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Mairie"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Complement",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Pour accomplir les formalités en mairie"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "PivotLocal",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "mairie"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "RessourceWeb",
-              "attributes": {
-                "URL": "https://lannuaire.service-public.fr/"
-              }
             }
           ]
         },
