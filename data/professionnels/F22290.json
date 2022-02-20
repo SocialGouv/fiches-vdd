@@ -10,7 +10,6 @@
         "ID": "F22290",
         "type": "Fiche d'information conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
-        "dateDerniereModificationImportante": "2020-02-27T00:00:00",
         "spUrl": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F22290"
       },
       "children": [
@@ -50,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Le mandat ad hoc est une procédure préventive et confidentielle de règlement amiable des difficultés. Le but est de rétablir la situation de l'entreprise avant la cessation des paiements."
+              "text": "Le mandat ad hoc est une procédure préventive de règlement des difficultés destinée aux entreprises qui ne sont pas en cessation des paiements. Elle permet à l'entreprise de réaménager ses dettes dans le secret, sans en informer les salariés et les tiers. Le recours au mandat ad hoc est payant. Un mandat ad hoc de sortie de crise dont la durée et le coût sont limités est prévu pour les entreprises de 10 salariés au plus."
             }
           ]
         },
@@ -70,7 +69,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Direction de l'information légale et administrative (Premier ministre), Ministère chargé de la justice"
+              "text": "Direction de l'information légale et administrative (Premier ministre)"
             }
           ]
         },
@@ -80,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2020-02-27"
+              "text": "modified 2021-11-25"
             }
           ]
         },
@@ -120,7 +119,7 @@
           "children": [
             {
               "type": "text",
-              "text": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000005634379/LEGISCTA000006161524, https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039280327"
+              "text": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039280327, https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000005634379/LEGISCTA000006161524"
             }
           ]
         },
@@ -380,7 +379,43 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Le mandat ad hoc est une procédure préventive et confidentielle de règlement amiable des difficultés. Le but est de rétablir la situation de l'entreprise avant la cessation des paiements."
+                      "text": "Le mandat ad hoc est une procédure préventive de règlement des difficultés destinée aux entreprises qui ne sont pas en "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienIntra",
+                      "attributes": {
+                        "LienID": "R60483",
+                        "type": "Définition de glossaire"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "cessation des paiements"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ". Elle permet à l'entreprise de réaménager ses dettes dans le secret, sans en informer les salariés et les "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienIntra",
+                      "attributes": {
+                        "LienID": "R60389",
+                        "type": "Définition de glossaire"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "tiers"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ". Le recours au mandat ad hoc est payant. Un mandat ad hoc de sortie de crise dont la durée et le coût sont limités est prévu pour les entreprises de 10 salariés au plus."
                     }
                   ]
                 }
@@ -406,7 +441,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Qui est concerné"
+                          "text": "Qui est concerné ?"
                         }
                       ]
                     }
@@ -414,41 +449,393 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "BlocCas",
+                  "attributes": {
+                    "affichage": "radio"
+                  },
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Toute entreprise commerciale, artisanale, agricole ou libérale (personne physique ou morale), mais aussi les associations, les auto-entrepreneurs, les entrepreneurs individuels à responsabilité limitée (EIRL)."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
+                      "type": "element",
+                      "name": "Cas",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Cas général"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11149"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Quelles entreprises ?"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Entreprises individuelles exerçant une activité commerciale, artisanale ou agricole (micro-entrepreneur inclus)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Sociétés"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Indépendants et professions libérales"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Pour quel type de difficultés ?"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Il peut s'agir des situations suivantes :"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Difficultés économiques (par exemple, perte d'un marché)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Difficultés financières (par exemple, retard dans le paiement des fournisseurs, non-paiement de sommes dues par le client, difficulté de remboursement d'un crédit)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Difficultés sociales (par exemple, litige entre associés)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
                     {
-                      "type": "text",
-                      "text": "L'entreprise rencontre des difficultés, mais ne doit pas être en état de cessation des paiements. L'état de cessation des paiements est la situation dans laquelle se trouve une entreprise dont l'ensemble des moyens dont elle dispose à une période donnée ne permet pas de payer l'ensemble de ses dettes."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Il peut s'agir de difficultés financières : non-respect des échéances normales de paiement des fournisseurs, multiplication des inscriptions de privilèges, par exemple."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Il peut s'agir également de situations de blocage : litiges entre associés pouvant entraîner la paralysie de l'entreprise, par exemple."
+                      "type": "element",
+                      "name": "Cas",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Entreprises de 10 salariés au plus et en difficultés financières liées à la crise sanitaire"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T11723"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Il existe un mandat ad hoc de sortie de crise pour les entreprises individuelles et sociétés qui répondent aux 2 conditions suivantes :"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Elles emploient au plus 10 salariés"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Elles rencontrent des difficultés financières en raison de la crise sanitaire"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Ce mandat ad hoc ne peut pas dépasser 3 mois."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Son coût est plafonné à "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "1 500 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "R31841",
+                                "type": "Sigle"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "HT"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " pour les entreprises de moins de 5 salariés et "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "3 000  €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "R31841",
+                                "type": "Sigle"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "HT"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " pour les entreprises de 5 à 10 salariés."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ANoter",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "À noter"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "ce mandat ad hoc de sortie de crise est applicable "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "jusqu'au 31 décembre 2022."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -468,7 +855,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Comment procéder"
+                          "text": "Comment procéder ?"
                         }
                       ]
                     }
@@ -476,61 +863,457 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Le débiteur, et lui seul, peut demander la "
-                    },
-                    {
-                      "type": "element",
-                      "name": "LienInterne",
-                      "attributes": {
-                        "LienPublication": "R22294",
-                        "type": "Modèle de document",
-                        "audience": "Professionnels"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "désignation d'un mandataire ad hoc"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": "."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Il doit adresser une demande motivée :"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Liste",
+                  "name": "BlocCas",
                   "attributes": {
-                    "type": "puce"
+                    "affichage": "radio"
                   },
                   "children": [
                     {
                       "type": "element",
-                      "name": "Item",
+                      "name": "Cas",
                       "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Activité commerciale ou artisanale"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T14220"
+                              }
+                            }
+                          ]
+                        },
                         {
                           "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "Au président du tribunal de commerce s'il est commerçant ou artisan"
+                              "text": "Pour faire une demande de désignation d'un mandataire ad hoc, vous devez remplir le document suivant et le remettre au président du tribunal de commerce du lieu du siège de l'entreprise."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ServiceEnLigne",
+                          "attributes": {
+                            "ID": "R22294",
+                            "URL": "https://www.infogreffe.fr/documents/20126/165580/Demande_de_d_signation_d_un_mandat_ad_hoc.doc/e70e672a-f0b9-94c3-e939-d0a67b644001?t=1580464031610&download=true",
+                            "type": "Modèle de document"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Demande de désignation d'un mandataire ad hoc"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Source",
+                              "attributes": {
+                                "ID": "R60811"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Infogreffe"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "OuSAdresser",
+                          "attributes": {
+                            "ID": "R29",
+                            "sve": "non",
+                            "type": "Local personnalisé sur SP"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Greffe du tribunal de commerce"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "PivotLocal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "tribunal_commerce"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "RessourceWeb",
+                              "attributes": {
+                                "URL": "https://www.infogreffe.fr/recherche-greffe-tribunal/chercher-greffe-tribunal-de-commerce.html"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "Source",
+                              "attributes": {
+                                "ID": "R30663"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Ministère chargé de la justice"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "La demande de désignation d'un mandataire ad hoc au président du tribunal est accompagnée des documents suivants :"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F21000",
+                                        "type": "Fiche Question-réponse conditionnée",
+                                        "audience": "Professionnels"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Extrait Kbis"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " ou "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F23887",
+                                        "type": "Fiche Question-réponse conditionnée",
+                                        "audience": "Professionnels"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "extrait D1"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F23887",
+                                        "type": "Fiche Question-réponse conditionnée",
+                                        "audience": "Professionnels"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "État des "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R12474",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "créances"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " et des dettes accompagné d'un échéancier et de la liste des principaux "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R15912",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "créanciers"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "État actif et "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R57061",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "passif"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " des "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R60817",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "sûretés"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " et engagements hors bilan"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Comptes annuels"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Tableau de financement, situation de l'actif réalisable et disponible (valeurs d'exploitation exclues) et du passif exigible des 3 derniers exercices (si ces documents ont été établis)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Attestation sur l'honneur certifiant l'absence d'état de cessation des paiements"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Dès réception de cette demande, le président du tribunal reçoit l'entrepreneur ou le dirigeant et recueille ses observations."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "À la fin de l'entretien, si le président du tribunal juge la demande fondée, il rend "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "une ordonnance de nomination"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " du mandataire ad hoc."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ASavoir",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "À savoir"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "la désignation du mandataire ad hoc n'est pas publiée."
+                                }
+                              ]
                             }
                           ]
                         }
@@ -538,63 +1321,416 @@
                     },
                     {
                       "type": "element",
-                      "name": "Item",
+                      "name": "Cas",
                       "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Activité libérale"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T14222"
+                              }
+                            }
+                          ]
+                        },
                         {
                           "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "Au tribunal de commerce dans les autres cas"
+                              "text": "Pour faire une demande de désignation d'un mandataire ad hoc, vous devez remplir le document suivant et le remettre au président du tribunal judiciaire du lieu du siège de l'entreprise."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ServiceEnLigne",
+                          "attributes": {
+                            "ID": "R22294",
+                            "URL": "https://www.infogreffe.fr/documents/20126/165580/Demande_de_d_signation_d_un_mandat_ad_hoc.doc/e70e672a-f0b9-94c3-e939-d0a67b644001?t=1580464031610&download=true",
+                            "type": "Modèle de document"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Demande de désignation d'un mandataire ad hoc"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Source",
+                              "attributes": {
+                                "ID": "R60811"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Infogreffe"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "OuSAdresser",
+                          "attributes": {
+                            "ID": "R30",
+                            "sve": "non",
+                            "type": "Local"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Tribunal judiciaire"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "RessourceWeb",
+                              "attributes": {
+                                "URL": "https://www.justice.fr/recherche/annuaires"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "Source",
+                              "attributes": {
+                                "ID": "R30663"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Ministère chargé de la justice"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "La demande de désignation d'un mandataire ad hoc au président du tribunal est accompagnée des documents suivants :"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F21000",
+                                        "type": "Fiche Question-réponse conditionnée",
+                                        "audience": "Professionnels"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Extrait Kbis"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "État des "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R12474",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "créances"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " et des dettes accompagné d'un échéancier et de la liste des principaux "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R15912",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "créanciers"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "État actif et "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R57061",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "passif"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " des "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R60817",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "sûretés"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " et les engagements hors bilan"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Comptes annuels"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Tableau de financement, situation de l'actif réalisable et disponible (valeurs d'exploitation exclues) et du passif exigible des 3 derniers exercices (si ces documents ont été établis)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Attestation sur l'honneur certifiant l'absence d'état de cessation des paiements."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Dès réception de cette demande, le président du tribunal reçoit l'entrepreneur ou le dirigeant et recueille ses observations. À la fin de l'entretien, si le président du tribunal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "juge la demande fondée, il rend "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "une ordonnance de nomination"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " du mandataire ad hoc."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ASavoir",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "À savoir"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "la désignation du mandataire ad hoc n'est pas publiée."
+                                }
+                              ]
                             }
                           ]
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "ServiceEnLigne",
-                  "attributes": {
-                    "ID": "R22294",
-                    "URL": "https://www.infogreffe.fr/documents/20126/165580/Demande_de_d_signation_d_un_mandat_ad_hoc.doc/e70e672a-f0b9-94c3-e939-d0a67b644001?t=1580464031610&download=true",
-                    "type": "Modèle de document"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Demande de désignation d'un mandataire ad hoc"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Source",
-                      "attributes": {
-                        "ID": "R60811"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Infogreffe"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Dès réception de cette demande, le président du tribunal de commerce reçoit le débiteur et recueille ses observations. Le débiteur peut proposer le nom d'une personne qu'il souhaite voir désigner comme mandataire ad hoc."
                     }
                   ]
                 }
@@ -626,7 +1762,108 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "S'il accepte la demande, le président du tribunal désigne librement le mandataire ad hoc (souvent un expert économique ou financier)."
+                      "text": "S'il accepte la demande, le président du tribunal désigne librement le mandataire ad hoc. Celui-ci est souvent un administrateur judiciaire. Le président du tribunal fixe les éléments suivants dans l'ordonnance de nomination :"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Liste",
+                  "attributes": {
+                    "type": "puce"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Objet de la mission"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ". Elle consiste le plus souvent à aider l'entrepreneur ou le dirigeant à négocier un accord avec ses principaux "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienIntra",
+                              "attributes": {
+                                "LienID": "R15912",
+                                "type": "Définition de glossaire"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "créanciers"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " dans l'objectif d'obtenir des rééchelonnements de dettes."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Durée"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " du mandat (généralement pour 3 mois, renouvelable plusieurs fois)"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Conditions de la rémunération du mandataire"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
@@ -636,7 +1873,27 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Il fixe l'objet de la mission, sa durée ainsi que les conditions de la rémunération du mandataire, après accord du débiteur."
+                      "text": "La décision nommant le mandataire ad hoc est communiquée par lettre recommandée avec accusé de réception à l'entrepreneur ou au dirigeant qui en a fait la demande."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "MiseEnEvidence",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Elle est également communiquée pour information"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " au commissaire aux compte."
                     }
                   ]
                 },
@@ -646,7 +1903,69 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Le président ne peut pas nommer un mandataire ad hoc dont la désignation ne lui a pas été proposée par le débiteur s'il n'a pas obtenu l'accord de celui-ci sur les conditions de la rémunération de ce mandataire."
+                      "text": "Cette décision n'est pas communiquée au comité social et économique (CSE) lorsqu'il existe."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ASavoir",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "À savoir"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "le dirigeant ou l'entrepreneur individuel peut proposer "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "le nom d'un mandataire ad hoc"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " au président du tribunal. La désignation du mandataire ad hoc n'est pas publiée."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Chapitre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Mission du mandataire ad hoc"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -656,7 +1975,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "En pratique, le mandat est établi pour quelques mois. La décision nommant le mandataire ad hoc est communiquée pour information au commissaire aux comptes."
+                      "text": "L'objectif du mandataire ad hoc est d'éviter la cessation des paiements."
                     }
                   ]
                 },
@@ -666,7 +1985,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Le débiteur n'est pas obligé d'informer le comité et économique (CSE) de la désignation d'un mandataire ad hoc."
+                      "text": "Toutefois, rien ne pourra être imposé aux créanciers ou aux partenaires de l'entreprise."
                     }
                   ]
                 },
@@ -675,28 +1994,14 @@
                   "name": "Paragraphe",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Le mandataire ad hoc a souvent pour mission d'aider le débiteur à négocier un accord avec ses principaux créanciers afin d'obtenir des rééchelonnements de dettes. Mais il peut aussi être amené à résoudre d'autres difficultés rencontrées par l'entreprise."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "L'objectif est d'éviter la cessation des paiements. Toutefois, rien ne pourra être imposé aux créanciers ou aux partenaires de l'entreprise."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Pendant la durée du mandat, le dirigeant continue à diriger et gérer seul son entreprise."
+                      "type": "element",
+                      "name": "MiseEnEvidence",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Pendant la durée du mandat, le dirigeant continue à diriger et gérer seul son entreprise."
+                        }
+                      ]
                     }
                   ]
                 }
@@ -728,17 +2033,111 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "ll est possible à tout moment de demander au président de mettre fin à la mission du mandataire."
+                      "text": "2 situations se présentent :"
                     }
                   ]
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "Liste",
+                  "attributes": {
+                    "type": "puce"
+                  },
                   "children": [
                     {
-                      "type": "text",
-                      "text": "L'ouverture d'une procédure de sauvegarde, de redressement judiciaire ou de liquidation judiciaire met fin à l'accord négocié."
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Réussite de la mission du mandataire ad hoc (avec par exemple signature d'un accord entre les "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienIntra",
+                              "attributes": {
+                                "LienID": "R15912",
+                                "type": "Définition de glossaire"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "créanciers"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " et l'entreprise)"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Item",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Échec de la négociation du mandataire ad hoc. Dans ce cas-là, l'entreprise peut s'orienter vers une procédure de "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "F22295",
+                                "type": "Fiche d'information conditionnée",
+                                "audience": "Professionnels"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "conciliation"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ASavoir",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "À savoir"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "l'entrepreneur individuel ou le dirigeant peut arrêter à tout moment la mission du mandataire ad hoc."
+                        }
+                      ]
                     }
                   ]
                 }
@@ -748,11 +2147,11 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "Reference",
           "attributes": {
-            "ID": "R29",
-            "sve": "non",
-            "type": "Local personnalisé sur SP"
+            "type": "Texte de référence",
+            "URL": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039280327",
+            "ID": "R22291"
           },
           "children": [
             {
@@ -761,78 +2160,17 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Greffe du tribunal de commerce"
+                  "text": "Code de commerce : article L611-3"
                 }
               ]
             },
             {
               "type": "element",
-              "name": "PivotLocal",
+              "name": "Complement",
               "children": [
                 {
                   "type": "text",
-                  "text": "tribunal_commerce"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "RessourceWeb",
-              "attributes": {
-                "URL": "https://www.infogreffe.fr/recherche-greffe-tribunal/chercher-greffe-tribunal-de-commerce.html"
-              }
-            },
-            {
-              "type": "element",
-              "name": "Source",
-              "attributes": {
-                "ID": "R30663"
-              },
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Ministère chargé de la justice"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "OuSAdresser",
-          "attributes": {
-            "ID": "R30",
-            "sve": "non",
-            "type": "Local"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Tribunal judiciaire"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "RessourceWeb",
-              "attributes": {
-                "URL": "https://www.justice.fr/recherche/annuaires"
-              }
-            },
-            {
-              "type": "element",
-              "name": "Source",
-              "attributes": {
-                "ID": "R30663"
-              },
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Ministère chargé de la justice"
+                  "text": "Désignation du mandataire ad hoc"
                 }
               ]
             }
@@ -856,25 +2194,14 @@
                   "text": "Code de commerce : articles R611-18 à R611-21"
                 }
               ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Reference",
-          "attributes": {
-            "type": "Texte de référence",
-            "URL": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039280327",
-            "ID": "R22291"
-          },
-          "children": [
+            },
             {
               "type": "element",
-              "name": "Titre",
+              "name": "Complement",
               "children": [
                 {
                   "type": "text",
-                  "text": "Code de commerce : article L611-3"
+                  "text": "Désignation et missions du mandataire ad hoc"
                 }
               ]
             }
@@ -909,6 +2236,252 @@
                 {
                   "type": "text",
                   "text": "Infogreffe"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Definition",
+          "attributes": {
+            "ID": "R60483"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Cessation des paiements"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Situation où la trésorerie dont l'entreprise dispose n'est plus suffisante pour régler ses dettes. Dans ce cas, l'entreprise doit effectuer une déclaration de cessation des paiements, appelée dépôt de bilan, auprès du tribunal de commerce ou du tribunal judiciaire."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Definition",
+          "attributes": {
+            "ID": "R60389"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Tiers à une société"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Personne qui ne fait pas partie de la société"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Definition",
+          "attributes": {
+            "ID": "R12474"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Créance"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Droit permettant à une personne d'exiger quelque chose d'une autre personne, en général le paiement d'une somme d'argent. Terme souvent utilisé pour désigner la somme due."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Definition",
+          "attributes": {
+            "ID": "R15912"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Créancier"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Personne à qui l'on doit de l'argent ou la fourniture d'une prestation"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Definition",
+          "attributes": {
+            "ID": "R57061"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Passif (en comptabilité)"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Dettes (déduites des ressources de l'entreprise) ou ressources financières immobilisées (capitaux)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Definition",
+          "attributes": {
+            "ID": "R60817"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Sûretés"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Servent à assurer le règlement des créances si le débiteur ne dispose pas de liquidités ou de biens d'une valeur suffisante pour rembourser les créanciers. Elles portent sur des biens meubles et sur des créances, ou sur des biens ou des droits immobiliers. On y trouve le gage, le droit de rétention, le nantissement, le warrant, les privilèges et les hypothèques."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Abreviation",
+          "attributes": {
+            "ID": "R31841",
+            "type": "Sigle"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "HT"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Hors taxes"
+                    }
+                  ]
                 }
               ]
             }
