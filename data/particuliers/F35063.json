@@ -19,7 +19,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Combien de trimestres faut-il avoir cotisé pour avoir sa retraite à taux plein ?"
+              "text": "Combien de trimestres d'assurance retraite faut-il pour avoir sa retraite à taux plein ?"
             }
           ]
         },
@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Pour avoir droit à une retraite à taux plein (c'est-à-dire sans décote), vous devez justifier d'un certain nombre de trimestres d'assurance retraite. Le nombre de trimestres requis varie selon votre année de naissance et si vous êtes fonctionnaire, selon que vous êtes de catégorie sédentaire ou active."
+              "text": "Pour avoir droit à une retraite à taux plein (c'est-à-dire sans décote), vous devez justifier d'un certain nombre de trimestres d'assurance retraite. Le nombre de trimestres requis varie selon votre année de naissance."
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2021-06-14"
+              "text": "modified 2022-04-19"
             }
           ]
         },
@@ -236,7 +236,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Combien de trimestres faut-il avoir cotisé pour avoir sa retraite à taux plein ?"
+                  "text": "Combien de trimestres d'assurance retraite faut-il pour avoir sa retraite à taux plein ?"
                 }
               ]
             }
@@ -617,43 +617,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Pour avoir droit à une retraite à taux plein (c'est-à-dire sans décote), vous devez justifier d'un certain nombre de trimestres d'assurance retraite. Le nombre de trimestres requis varie selon votre année de naissance et si vous êtes fonctionnaire, selon que vous êtes de catégorie "
-                    },
-                    {
-                      "type": "element",
-                      "name": "LienIntra",
-                      "attributes": {
-                        "LienID": "R51645",
-                        "type": "Définition de glossaire"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "sédentaire"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": " ou "
-                    },
-                    {
-                      "type": "element",
-                      "name": "LienIntra",
-                      "attributes": {
-                        "LienID": "R51644",
-                        "type": "Définition de glossaire"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "active"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": "."
+                      "text": "Pour avoir droit à une retraite à taux plein (c'est-à-dire sans décote), vous devez justifier d'un certain nombre de trimestres d'assurance retraite. Le nombre de trimestres requis varie selon votre année de naissance."
                     }
                   ]
                 }
@@ -663,14 +627,21 @@
         },
         {
           "type": "element",
-          "name": "ListeSituations",
-          "attributes": {
-            "affichage": "onglet"
-          },
+          "name": "Texte",
           "children": [
             {
               "type": "element",
-              "name": "Situation",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Tous les trimestres d'assurance retraite acquis auprès des différents régimes de retraite obligatoires (en tant que salarié du secteur privé, salarié agricole, agent de la fonction, etc.) sont pris en compte."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Tableau",
               "children": [
                 {
                   "type": "element",
@@ -678,17 +649,36 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Salarié du privé ou fonctionnaire sédentaire"
+                      "text": "Nombre de trimestres d'assurance exigé pour bénéficier d'une retraite à taux plein"
                     }
                   ]
                 },
                 {
                   "type": "element",
-                  "name": "Introduction",
+                  "name": "Colonne",
+                  "attributes": {
+                    "largeur": "33",
+                    "type": "header"
+                  }
+                },
+                {
+                  "type": "element",
+                  "name": "Colonne",
+                  "attributes": {
+                    "largeur": "30",
+                    "type": "normal"
+                  }
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "header"
+                  },
                   "children": [
                     {
                       "type": "element",
-                      "name": "Texte",
+                      "name": "Cellule",
                       "children": [
                         {
                           "type": "element",
@@ -696,7 +686,23 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Tous les trimestres d'assurance retraite acquis auprès des différents régimes de retraite obligatoires (dans la fonction publique et le secteur privé) sont pris en compte."
+                              "text": "Année de naissance"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Nombre de trimestres exigé"
                             }
                           ]
                         }
@@ -706,363 +712,284 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
                   "children": [
                     {
                       "type": "element",
-                      "name": "Tableau",
+                      "name": "Cellule",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Titre",
+                          "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "Nombre de trimestres d'assurance exigé pour bénéficier d'une retraite à taux plein, selon l'année de naissance"
+                              "text": "1955 à 1957"
                             }
                           ]
-                        },
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
                         {
                           "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "33",
-                            "type": "header"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "30",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "header"
-                          },
+                          "name": "Paragraphe",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Année de naissance"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Nombre de trimestres exigé"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "text",
+                              "text": "166 (41 ans et 6 mois)"
                             }
                           ]
-                        },
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Paragraphe",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "1955 à 1957"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "166 (41 ans et 6 mois)"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "text",
+                              "text": "1958 à 1960"
                             }
                           ]
-                        },
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Paragraphe",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "1958 à 1960"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "167 (41 ans et 9 mois)"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "text",
+                              "text": "167 (41 ans et 9 mois)"
                             }
                           ]
-                        },
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Paragraphe",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "1961 à 1963"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "168 (42 ans)"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "text",
+                              "text": "1961 à 1963"
                             }
                           ]
-                        },
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Paragraphe",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "1964 à 1966"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "169 (42 ans et 3 mois)"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "text",
+                              "text": "168 (42 ans)"
                             }
                           ]
-                        },
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Paragraphe",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "1967 à 1969"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "170 (42 ans et 6 mois)"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "text",
+                              "text": "1964 à 1966"
                             }
                           ]
-                        },
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Paragraphe",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "1970 à 1972"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "171 (42 ans et 9 mois)"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "text",
+                              "text": "169 (42 ans et 3 mois)"
                             }
                           ]
-                        },
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
                         {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Paragraphe",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "1973 et après"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
+                              "type": "text",
+                              "text": "1967 à 1969"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
                             {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "172 (43 ans)"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "text",
+                              "text": "170 (42 ans et 6 mois)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "1970 à 1972"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "171 (42 ans et 9 mois)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Rangée",
+                  "attributes": {
+                    "type": "normal"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "1973 et après"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cellule",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "172 (43 ans)"
                             }
                           ]
                         }
@@ -1074,7 +1001,7 @@
             },
             {
               "type": "element",
-              "name": "Situation",
+              "name": "Attention",
               "children": [
                 {
                   "type": "element",
@@ -1082,2622 +1009,107 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Fonctionnaire de catégorie active"
+                      "text": "Attention"
                     }
                   ]
                 },
-                {
-                  "type": "element",
-                  "name": "Introduction",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Texte",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Tous les trimestres d'assurance retraite acquis auprès des différents régimes de retraite obligatoires (dans la fonction publique et le secteur privé) sont pris en compte."
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Texte",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "BlocCas",
-                      "attributes": {
-                        "affichage": "onglet"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Cas",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Cas général"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Tableau",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Fonctionnaire actif - cas général : nombre de trimestres d'assurance exigé pour bénéficier d'une retraite à taux plein, selon l'année de naissance"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Colonne",
-                                  "attributes": {
-                                    "largeur": "33",
-                                    "type": "normal"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Colonne",
-                                  "attributes": {
-                                    "largeur": "32",
-                                    "type": "normal"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "header"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Dates de naissance"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Nombre de trimestres exigé"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1960"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "166 trimestres (41 ans + 6 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1961 à 1963"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "167 trimestres (41 ans + 9 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1964 à 1966"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "168 trimestres (42 ans)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1967 à 1969"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "169 trimestres (42 ans + 3mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1970 à 1972"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "170 trimestres (42 ans + 6 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1973 à 1975"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "171 trimestres (42 ans + 9 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1976 et après"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "172 trimestres (43 ans)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Cas",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Catégorie insalubre (égoutiers et médecins légistes)"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Tableau",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Catégorie insalubre : nombre de trimestres d'assurance exigé pour bénéficier d'une retraite à taux plein, selon l'année de naissance"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Colonne",
-                                  "attributes": {
-                                    "largeur": "29",
-                                    "type": "normal"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Colonne",
-                                  "attributes": {
-                                    "largeur": "32",
-                                    "type": "normal"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Colonne",
-                                  "attributes": {
-                                    "largeur": "43",
-                                    "type": "normal"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "header"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Dates de naissance"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Année d'ouverture des droits"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Nombre de trimestres exigé"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Entre janvier 1961 et décembre 1961"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2011"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "163 trimestres (39 ans + 9 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Entre juillet 1961 et décembre 1962"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2012"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "164 trimestres (41 ans)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1962, 1963"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2013"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "165 trimestres (41 ans + 3 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1963 à 1965"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2015 à 2017"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "166 trimestres (41 ans + 6 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1966 à 1968"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2018 à 2020"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "167 trimestres (41 ans + 9 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1969 à 1971"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2021 à 2023"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "168 trimestres (42 ans)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1972 à 1974"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2024 à 2026"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "169 trimestres (42 ans + 3mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1975 à 1977"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2027 à 2029"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "170 trimestres (42 ans + 6 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1978 à 1980"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2030 à 2032"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "171 trimestres (42 ans + 9 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1981 et après"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2033 et après"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "172 trimestres (43 ans)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Cas",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Personnel actif de la police nationale"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Tableau",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Personnels actifs de la police nationale : nombre de trimestres d'assurance exigé pour bénéficier d'une retraite à taux plein, selon l'année de naissance"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Colonne",
-                                  "attributes": {
-                                    "largeur": "21",
-                                    "type": "normal"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Colonne",
-                                  "attributes": {
-                                    "largeur": "32",
-                                    "type": "normal"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "header"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Année de naissance"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Nombre de trimestres exigé"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1965"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "166 trimestres (41 ans + 6 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1966 à 1968"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "167 trimestres (41 ans + 9 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1969 à 1971"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "168 trimestres (42 ans)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1972 à 1974"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "169 trimestres (42 ans + 3mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1975 à 1977"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "170 trimestres (42 ans + 6 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1978 à 1980"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "171 trimestres (42 ans + 9 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1981 et après"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "172 trimestres (43 ans)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Cas",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Surveillant pénitentiaire"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Tableau",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Surveillant pénitentiaire : nombre de trimestres d'assurance exigé pour bénéficier d'une retraite à taux plein, selon l'année de naissance"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Colonne",
-                                  "attributes": {
-                                    "largeur": "21",
-                                    "type": "normal"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Colonne",
-                                  "attributes": {
-                                    "largeur": "32",
-                                    "type": "normal"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "header"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Année de naissance"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Nombre de trimestres exigé"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1965"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "166 trimestres (41 ans + 6 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1966 à 1968"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "167 trimestres (41 ans + 9 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1969 à 1971"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "168 trimestres (42 ans)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1972 à 1974"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "169 trimestres (42 ans + 3mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1975 à 1977"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "170 trimestres (42 ans + 6 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1978 à 1980"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "171 trimestres (42 ans + 9 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1981 et après"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "172 trimestres (43 ans)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Cas",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Contrôleur aérien"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Tableau",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Contrôleur aérien : nombre de trimestres d'assurance exigé pour bénéficier d'une retraite à taux plein, selon l'année de naissance"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Colonne",
-                                  "attributes": {
-                                    "largeur": "21",
-                                    "type": "normal"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Colonne",
-                                  "attributes": {
-                                    "largeur": "31",
-                                    "type": "normal"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Colonne",
-                                  "attributes": {
-                                    "largeur": "32",
-                                    "type": "normal"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "header"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Année de naissance"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Année d'ouverture des droits"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Nombre de trimestres exigé"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1963"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2014"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "165 trimestres (41 ans + 3 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1963"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2015"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "166 trimestres (41 ans + 6 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1964"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2015 ou 2016"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "166 trimestres (41 ans + 6 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1965"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2017"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "166 trimestres (41 ans + 6 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1966 à 1968"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2018 à 2020"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "167 trimestres (41 ans + 9 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1969 à 1971"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2021 à 2023"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "168 trimestres (42 ans)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1972 à 1974"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2024 à 2026"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "169 trimestres (42 ans + 3mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1975 à 1977"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2027 à 2029"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "170 trimestres (42 ans + 6 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1978 à 1980"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2030 à 2032"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "171 trimestres (42 ans + 9 mois)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Rangée",
-                                  "attributes": {
-                                    "type": "normal"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1981 et après"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2033 et au-delà"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Cellule",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "172 trimestres (43 ans)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Definition",
-          "attributes": {
-            "ID": "R51645"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Emploi de catégorie sédentaire"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Texte",
-              "children": [
                 {
                   "type": "element",
                   "name": "Paragraphe",
                   "children": [
                     {
                       "type": "text",
-                      "text": "Dans la fonction publique, emploi ne présentant pas de risque particulier ou de fatigue exceptionnelle et qui n'est pas classé en catégorie active"
+                      "text": "si vous êtes fonctionnaire de catégorie active, le nombre de trimestres d'assurance retraite exigé pour avoir droit à une retraite à taux plein est différent."
                     }
                   ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Definition",
-          "attributes": {
-            "ID": "R51644"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Emploi de catégorie active"
                 }
               ]
             },
             {
               "type": "element",
-              "name": "Texte",
+              "name": "Paragraphe",
               "children": [
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "MiseEnEvidence",
                   "children": [
                     {
                       "type": "text",
-                      "text": "Dans la fonction publique, emploi présentant un risque particulier ou des fatigues exceptionnelles classé en "
-                    },
-                    {
-                      "type": "element",
-                      "name": "Citation",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "catégorie active"
-                        }
-                      ]
-                    },
+                      "text": "Qu'est-ce que la durée d'assurance retraite ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "La durée d'assurance retraite désigne les périodes de la vie professionnelle au cours desquelles vous vous constituez des droits à pension de retraite."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Elle comprend principalement les périodes au cours desquelles vous avez travaillé et cotisé."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Mais elle peut aussi inclure certaines périodes non travaillées (par exemple les périodes de congé de maladie)."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Pour connaître votre durée d'assurance retraite, vous pouvez consulter votre relevé de carrière sur le site « Info retraite » à partir de votre compte retraite. Votre relevé de carrière récapitule de manière chronologique l'ensemble de vos différentes périodes professionnelles."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "ServiceEnLigne",
+              "attributes": {
+                "ID": "R46083",
+                "URL": "https://www.info-retraite.fr/portail-services/#/",
+                "type": "Téléservice"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
                     {
                       "type": "text",
-                      "text": " par arrêté ministériel"
+                      "text": "Mon compte retraite"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Source",
+                  "attributes": {
+                    "ID": "R30827"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Groupement d'intérêt public \"Union retraite\""
                     }
                   ]
                 }
