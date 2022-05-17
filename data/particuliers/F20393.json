@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2020-07-28"
+              "text": "modified 2022-05-10"
             }
           ]
         },
@@ -856,7 +856,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Le changement d'établissement scolaire en cours d'année peut résulter d'un déménagement ou d'un choix des parents. L'inscription au collège ou au lycée n'est pas automatique et dépend notamment de la capacité d’accueil de l'établissement. La procédure dépend de l'établissement où vous souhaitez inscrire votre enfant."
+                      "text": "Vous voulez que votre enfant change d'établissement scolaire en cours d'année (déménagement, choix de votre part) ? L'inscription au collège ou au lycée n'est pas automatique. Elle dépend notamment de la capacité d’accueil de l'établissement. La procédure dépend de l'établissement où vous souhaitez inscrire votre enfant."
                     }
                   ]
                 }
@@ -881,7 +881,20 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Établissement de votre secteur"
+                      "text": "Inscription dans un établissement public"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T14736"
+                      }
                     }
                   ]
                 },
@@ -891,11 +904,47 @@
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "FragmentConditionne",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "La démarche sera différente selon que vous souhaitez inscrire votre enfant dans un établissement privé ou public."
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "estVrai",
+                              "attributes": {
+                                "var": "T10010"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "La démarche sera différente selon que vous souhaitez inscrire votre enfant dans "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienExterne",
+                              "attributes": {
+                                "URL": "http://www.education.gouv.fr/cid5509/le-fonctionnement-de-la-carte-scolaire.html"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "l'établissement de votre secteur"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "\n\n ou non."
+                            }
+                          ]
                         }
                       ]
                     },
@@ -916,7 +965,20 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Inscription dans un établissement public"
+                                  "text": "Établissement de votre secteur"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T14731"
+                                  }
                                 }
                               ]
                             },
@@ -926,7 +988,17 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si vous souhaitez inscrire, en cours d'année, votre enfant dans l'établissement de votre secteur, vous devez tout d'abord obtenir un certificat de radiation (appelé "
+                                  "text": "1- Obtention d'un certificat de radiation"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez tout d'abord obtenir un certificat de radiation (appelé "
                                 },
                                 {
                                   "type": "element",
@@ -941,6 +1013,16 @@
                                 {
                                   "type": "text",
                                   "text": "). Ce certificat est délivré par l'ancien établissement scolaire de votre enfant."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "2- Inscription auprès de l'établissement scolaire"
                                 }
                               ]
                             },
@@ -1008,7 +1090,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Ainsi, si l'établissement du secteur n'a plus de place disponible, vous devrez contacter la Direction des services départementaux de l'éducation nationale de votre lieu de résidence. Cette direction se chargera de l'affectation de votre enfant."
+                                  "text": "Si l'établissement du secteur n'a plus de place disponible, vous devrez contacter la Direction des services départementaux de l'éducation nationale de votre lieu de résidence. Cette direction se chargera de l'affectation de votre enfant."
                                 }
                               ]
                             },
@@ -1094,17 +1176,7 @@
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "E"
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Expression",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "xeat"
-                                                }
-                                              ]
+                                              "text": "Exeat"
                                             }
                                           ]
                                         }
@@ -1166,15 +1238,6 @@
                                               "text": "Certificats de vaccinations obligatoires"
                                             }
                                           ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienInterne",
-                                          "attributes": {
-                                            "LienPublication": "F197",
-                                            "type": "Fiche d'information conditionnée",
-                                            "audience": "Particuliers"
-                                          }
                                         }
                                       ]
                                     }
@@ -1252,275 +1315,54 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Inscription en établissement privé"
+                                  "text": "Établissement en dehors de votre secteur"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Vous devez tout d'abord obtenir un certificat de radiation (appelé "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "Expression",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Exeat"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": "). Ce certificat est délivré par l'ancien établissement scolaire de votre enfant."
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T14732"
+                                  }
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Introduction",
                               "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devez ensuite accomplir les démarches d'inscription directement auprès de l'établissement privé."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Pour inscrire votre enfant dans son nouvel établissement scolaire, vous devrez notamment fournir les documents suivants :"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Liste",
-                              "attributes": {
-                                "type": "puce"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Expression",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "E"
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Expression",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "xeat"
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Décision d'orientation"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Bulletins trimestriels de l'année écoulée"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "LienInterne",
-                                          "attributes": {
-                                            "LienPublication": "F197",
-                                            "type": "Fiche d'information conditionnée",
-                                            "audience": "Particuliers"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Certificats de vaccinations obligatoires"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienInterne",
-                                          "attributes": {
-                                            "LienPublication": "F197",
-                                            "type": "Fiche d'information conditionnée",
-                                            "audience": "Particuliers"
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Fiche de renseignements (concernant les parents)"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Justificatif de domicile"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "ANoter",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "À noter"
-                                    }
-                                  ]
-                                },
                                 {
                                   "type": "element",
                                   "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "l'établissement peut vous demander des documents complémentaires."
+                                      "text": "Vous devez obtenir l'accord du "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "R31460",
+                                        "type": "Acronyme"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Dasen"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ". Vous devez ensuite faire les démarches d'inscription auprès de l'établissement scolaire."
                                     }
                                   ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Situation",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Établissement hors de votre secteur"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Texte",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "La démarche sera différente selon que vous souhaitez inscrire votre enfant dans un établissement privé ou public."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "BlocCas",
-                      "attributes": {
-                        "affichage": "radio"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Cas",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Inscription dans un établissement public"
                                 }
                               ]
                             },
@@ -1530,7 +1372,45 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Vous devez obtenir l'accord de la Direction des services départementaux de l'Éducation nationale :"
+                                  "text": "1-Obtention de l'accord du Dasen"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez obtenir l'accord du "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "R31460",
+                                    "type": "Acronyme"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Dasen"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Pour en savoir plus sur la demande à présenter, contactez la Direction des services départementaux de l'Éducation nationale :"
                                 }
                               ]
                             },
@@ -1617,7 +1497,27 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Après avoir obtenu l'accord, vous devrez notamment fournir les documents suivants au nouvel établissement scolaire :"
+                                  "text": "2-Inscription auprès de l'établissement scolaire"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez ensuite accomplir les démarches d'inscription directement auprès du collège ou du lycée."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devrez notamment fournir les documents suivants au nouvel établissement scolaire :"
                                 }
                               ]
                             },
@@ -1778,10 +1678,277 @@
                               ]
                             }
                           ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Situation",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Inscription dans un établissement privé"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T14735"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Introduction",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Texte",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si vous voulez inscrire votre enfant dans un établissement privé sous contrat ou hors contrat, les règles suivantes s'appliquent :"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Chapitre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Obtenir un certificat de radiation"
+                                }
+                              ]
+                            }
+                          ]
                         },
                         {
                           "type": "element",
-                          "name": "Cas",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous devez tout d'abord obtenir un certificat de radiation (appelé "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Expression",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Exeat"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "). Ce certificat est délivré par l'ancien établissement scolaire de votre enfant."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Chapitre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Faire les démarches d'inscription auprès de l'établissement scolaire"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous devez ensuite accomplir les démarches d'inscription directement auprès de l'établissement privé."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Pour inscrire votre enfant dans son nouvel établissement scolaire, vous devrez notamment fournir les documents suivants :"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Exeat"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Décision d'orientation"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Bulletins trimestriels de l'année écoulée"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F197",
+                                        "type": "Fiche d'information conditionnée",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Certificats de vaccinations obligatoires"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Fiche de renseignements (concernant les parents)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Justificatif de domicile"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ANoter",
                           "children": [
                             {
                               "type": "element",
@@ -1789,7 +1956,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Inscription en établissement privé"
+                                  "text": "À noter"
                                 }
                               ]
                             },
@@ -1799,208 +1966,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Vous devez tout d'abord obtenir un certificat de radiation (appelé "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Expression",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Exeat"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": "). Ce certificat est délivré par l'ancien établissement scolaire de votre enfant."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devez ensuite accomplir les démarches d'inscription directement auprès de l'établissement privé."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Pour inscrire votre enfant dans son nouvel établissement scolaire, vous devrez notamment fournir les documents suivants :"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Liste",
-                              "attributes": {
-                                "type": "puce"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Expression",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "E"
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Expression",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "xeat"
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Décision d'orientation"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Bulletins trimestriels de l'année écoulée"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "LienInterne",
-                                          "attributes": {
-                                            "LienPublication": "F197",
-                                            "type": "Fiche d'information conditionnée",
-                                            "audience": "Particuliers"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Certificats de vaccinations obligatoires"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienInterne",
-                                          "attributes": {
-                                            "LienPublication": "F197",
-                                            "type": "Fiche d'information conditionnée",
-                                            "audience": "Particuliers"
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Fiche de renseignements (concernant les parents)"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Justificatif de domicile"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "ANoter",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "À noter"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "cette liste n'est pas exhaustive et l'établissement peut vous demander des documents complémentaires."
-                                    }
-                                  ]
+                                  "text": "l'établissement peut vous demander des documents complémentaires."
                                 }
                               ]
                             }
@@ -2009,6 +1975,57 @@
                       ]
                     }
                   ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "OuSAdresser",
+          "attributes": {
+            "ID": "R24",
+            "sve": "non",
+            "type": "Local personnalisé sur SP"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Direction des services départementaux de l'Éducation nationale"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "PivotLocal",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "inspection_academique"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "RessourceWeb",
+              "attributes": {
+                "URL": "http://www.education.gouv.fr/cid3/les-regions-academiques-academies-et-services-departementaux-de-l-education-nationale.html#La_carte_des_regions_academiques_et_les_coordonnees_des_rectorats_vice-rectorats_et_services_departementaux_de_l_Education_nationale"
+              }
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R30638"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Ministère chargé de l'éducation"
                 }
               ]
             }
@@ -2047,6 +2064,77 @@
         },
         {
           "type": "element",
+          "name": "PourEnSavoirPlus",
+          "attributes": {
+            "type": "Information pratique",
+            "ID": "R51206",
+            "URL": "http://www.education.gouv.fr/cid5509/le-fonctionnement-de-la-carte-scolaire.html",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Le fonctionnement de la carte scolaire dans le 2nd degré"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R30638"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Ministère chargé de l'éducation"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Abreviation",
+          "attributes": {
+            "ID": "R31460",
+            "type": "Acronyme"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Dasen"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Directeur académique des services de l'éducation nationale"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "QuestionReponse",
           "attributes": {
             "ID": "F1410",
@@ -2070,6 +2158,34 @@
             {
               "type": "text",
               "text": "Comment bénéficier des transports en commun scolaires ?"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "QuestionReponse",
+          "attributes": {
+            "ID": "F32844",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "Un élève qui déménage doit-il changer de collège ou de lycée ?"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "QuestionReponse",
+          "attributes": {
+            "ID": "F32778",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "Peut-on changer de voie ou de spécialité au lycée ?"
             }
           ]
         }
