@@ -50,7 +50,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Cela dépend de l’État qui vous a délivré le permis de conduire."
+              "text": "Cela dépend si vous avez obtenu le permis de conduire dans un pays européen ou un autre pays."
             }
           ]
         },
@@ -395,7 +395,25 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Cela dépend de l’État qui vous a délivré le permis de conduire."
+                      "text": "Cela dépend si vous avez obtenu le permis de conduire dans un pays "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienIntra",
+                      "attributes": {
+                        "LienID": "R55492",
+                        "type": "Définition de glossaire"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "européen"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " ou un autre pays."
                     }
                   ]
                 }
@@ -405,73 +423,39 @@
         },
         {
           "type": "element",
-          "name": "ListeSituations",
-          "attributes": {
-            "affichage": "onglet"
-          },
+          "name": "Texte",
           "children": [
             {
               "type": "element",
-              "name": "Situation",
+              "name": "BlocCas",
+              "attributes": {
+                "affichage": "radio"
+              },
               "children": [
                 {
                   "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Permis délivré en Europe (EEE)"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Condition",
+                  "name": "Cas",
                   "children": [
                     {
                       "type": "element",
-                      "name": "estVrai",
-                      "attributes": {
-                        "var": "T11204"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Texte",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Titre",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vous êtes concerné si vous avez obtenu le permis de conduire dans un État "
-                        },
+                          "text": "Pays européen"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
                         {
                           "type": "element",
-                          "name": "MiseEnEvidence",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "LienIntra",
-                              "attributes": {
-                                "LienID": "R55492",
-                                "type": "Définition de glossaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "européen"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": "."
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T11204"
+                          }
                         }
                       ]
                     },
@@ -594,40 +578,34 @@
                       ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Situation",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Permis délivré dans un autre État"
-                    }
-                  ]
                 },
                 {
                   "type": "element",
-                  "name": "Condition",
+                  "name": "Cas",
                   "children": [
                     {
                       "type": "element",
-                      "name": "estVrai",
-                      "attributes": {
-                        "var": "T11209"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Texte",
-                  "children": [
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Autre pays"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T11209"
+                          }
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "Paragraphe",
