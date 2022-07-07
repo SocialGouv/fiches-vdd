@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Vous pouvez demander à augmenter ou baisser votre taux de prélèvement à la source de l'impôt sur le revenu. Vous pouvez aussi choisir un taux moins élevé que celui de votre époux ou partenaire de Pacs, ou refuser de transmettre votre taux personnalisé à votre employeur."
+              "text": "Votre taux de prélèvement à la source ne correspond plus à votre situation ? Vous pouvez demander à le baisser ou à l'augmenter. Vous pouvez aussi choisir un taux moins élevé que celui de votre époux ou partenaire de Pacs, ou refuser de transmettre votre taux personnalisé à votre employeur."
             }
           ]
         },
@@ -343,7 +343,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Vous pouvez demander à augmenter ou baisser votre taux de prélèvement à la source de l'impôt sur le revenu. Vous pouvez aussi choisir un taux moins élevé que celui de votre époux ou partenaire de Pacs, ou refuser de transmettre votre taux personnalisé à votre employeur."
+                      "text": "Votre taux de prélèvement à la source ne correspond plus à votre situation ? Vous pouvez demander à le baisser ou à l'augmenter. Vous pouvez aussi choisir un taux moins élevé que celui de votre époux ou partenaire de Pacs, ou refuser de transmettre votre taux personnalisé à votre employeur."
                     }
                   ]
                 }
@@ -364,41 +364,49 @@
                   "text": "Vous avez la possibilité d'utiliser un autre taux selon votre situation."
                 }
               ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "ListeSituations",
-          "attributes": {
-            "affichage": "sequentiel"
-          },
-          "children": [
+            },
             {
               "type": "element",
-              "name": "Situation",
+              "name": "BlocCas",
+              "attributes": {
+                "affichage": "radio"
+              },
               "children": [
                 {
                   "type": "element",
-                  "name": "Titre",
+                  "name": "Cas",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Vous voulez augmenter votre taux"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Texte",
-                  "children": [
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous voulez baisser votre taux"
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Si vos revenus ont augmenté, vous pouvez demander aux services fiscaux d'augmenter votre taux de prélèvement à la source pour éviter d'avoir à payer un complément d'impôt trop élevé en fin d'année."
+                          "text": "Si "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "vos revenus ont baissé"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ", vous pouvez demander aux services fiscaux de réduire votre taux de prélèvement à la source pour éviter de payer trop d'impôt sur le revenu."
                         }
                       ]
                     },
@@ -520,7 +528,21 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "le taux plus élevé sera appliqué jusqu'au 31 décembre. Vous devrez effectuer une nouvelle demande de changement en fin d'année si vos revenus restent plus élevés après le 1"
+                              "text": "le taux réduit sera "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "appliqué jusqu'au 31 décembre"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ". Vous devrez effectuer une nouvelle demande de changement en fin d'année si vos revenus restent réduits après le 1"
                             },
                             {
                               "type": "element",
@@ -637,34 +659,42 @@
                       ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Situation",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Vous voulez baisser votre taux"
-                    }
-                  ]
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Cas",
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous voulez augmenter votre taux"
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Si vos revenus ont baissé, vous pouvez demander aux services fiscaux de réduire votre taux de prélèvement à la source pour éviter de payer trop d'impôt sur le revenu."
+                          "text": "Si "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "vos revenus ont augmenté"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ", vous pouvez demander aux services fiscaux d'augmenter votre taux de prélèvement à la source pour éviter d'avoir à payer un complément d'impôt trop élevé en fin d'année."
                         }
                       ]
                     },
@@ -786,7 +816,21 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "le taux réduit sera appliqué jusqu'au 31 décembre. Vous devrez effectuer une nouvelle demande de changement en fin d'année si vos revenus restent réduits après le 1"
+                              "text": "le taux plus élevé sera "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "appliqué jusqu'au 31 décembre"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ". Vous devrez effectuer une nouvelle demande de changement en fin d'année si vos revenus restent plus élevés après le 1"
                             },
                             {
                               "type": "element",
@@ -903,27 +947,21 @@
                       ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Situation",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Vous voulez un taux moins élevé que celui de votre époux ou partenaire de Pacs"
-                    }
-                  ]
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Cas",
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous voulez un taux moins élevé que celui de votre époux ou partenaire de Pacs"
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "Paragraphe",
@@ -940,7 +978,21 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vous pouvez cependant opter pour un taux de prélèvement individualisé. Chaque membre du couple obtient ainsi un taux en fonction de ses propres revenus."
+                          "text": "Vous pouvez cependant opter pour un taux de prélèvement individualisé. Chaque membre du couple obtient ainsi un "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "taux en fonction de ses propres revenus"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
                         }
                       ]
                     },
@@ -1085,27 +1137,21 @@
                       ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Situation",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Vous ne voulez pas que votre employeur connaisse votre taux personnalisé"
-                    }
-                  ]
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Cas",
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous ne voulez pas que votre employeur connaisse votre taux personnalisé"
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "Paragraphe",
@@ -1136,7 +1182,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Dans la plupart des cas, le taux neutre sera supérieur à votre taux personnalisé."
+                          "text": "Attention, dans la plupart des cas, le taux neutre sera supérieur à votre taux personnalisé."
                         }
                       ]
                     },
