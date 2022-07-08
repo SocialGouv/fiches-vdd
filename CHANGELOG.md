@@ -1,3 +1,10 @@
+# [2.454.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.453.0...v2.454.0) (2022-07-08)
+
+
+### Features
+
+* **data:** 20220708_0437 update ([30db196](https://github.com/SocialGouv/fiches-vdd/commit/30db196f0e6b0188e27380925805addfeded1444))
+
 # [2.453.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.452.0...v2.453.0) (2022-07-07)
 
 
