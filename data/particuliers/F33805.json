@@ -437,50 +437,56 @@
         },
         {
           "type": "element",
-          "name": "ListeSituations",
-          "attributes": {
-            "affichage": "onglet"
-          },
+          "name": "Texte",
           "children": [
             {
               "type": "element",
-              "name": "Situation",
+              "name": "BlocCas",
+              "attributes": {
+                "affichage": "radio"
+              },
               "children": [
                 {
                   "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "En France (cas général)"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Texte",
+                  "name": "Cas",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Titre",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Votre carte d'identité a été perdue ou volée ? Dans ce cas, son renouvellement sera payant. Le prix est de "
-                        },
+                          "text": "En France"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Introduction",
+                      "children": [
                         {
                           "type": "element",
-                          "name": "Valeur",
+                          "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "25 €"
+                              "text": "Votre carte d'identité a été perdue ou volée ? Dans ce cas, son renouvellement sera payant. Le prix est de "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "25 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ". Vous pouvez acheter le timbre fiscal sur internet ou dans un bureau de tabac."
                             }
                           ]
-                        },
-                        {
-                          "type": "text",
-                          "text": ". Vous pouvez acheter le timbre fiscal sur internet ou dans un bureau de tabac."
                         }
                       ]
                     },
@@ -488,7 +494,373 @@
                       "type": "element",
                       "name": "BlocCas",
                       "attributes": {
-                        "affichage": "onglet"
+                        "affichage": "radio"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "En ligne"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "FragmentConditionne",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11071"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous faites une pré-demande sur le site de l'ANTS ?"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " Vous pouvez acheter le timbre fiscal à la fin de la procédure."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ServiceEnLigne",
+                                  "attributes": {
+                                    "ID": "R45668",
+                                    "URL": "https://passeport.ants.gouv.fr/demarches-en-ligne/faire-une-premiere-demande-de-carte-nationale-d-identite",
+                                    "type": "Téléservice"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Pré-demande pour une 1ère demande de carte d'identité"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30628"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Agence nationale des titres sécurisés (ANTS)"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Introduction",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Texte",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Accessible avec un compte ANTS ou via "
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "LienIntra",
+                                                  "attributes": {
+                                                    "LienID": "R48788",
+                                                    "type": "Définition de glossaire"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "FranceConnect"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "text": "."
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "FragmentConditionne",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11293"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous utilisez le formulaire cartonné disponible au guichet ?"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " Vous pouvez acheter le timbre fiscal sur le site timbres.impots.gouv.fr."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ServiceEnLigne",
+                                  "attributes": {
+                                    "ID": "R47754",
+                                    "URL": "https://timbres.impots.gouv.fr/pages/achat/choixTimbres.jsp",
+                                    "type": "Téléservice"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Achat en ligne du timbre fiscal - Carte d'identité"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30612"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ministère chargé des finances"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Introduction",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Texte",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Se munir d'une carte bancaire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le timbre électronique peut être délivré sur 2 supports :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Un document PDF avec un code 2D qui peut également être scanné directement depuis un téléphone ou une tablette par le service chargé de recevoir votre demande"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Un SMS contenant l'identifiant à 16 chiffres du timbre qui sera accepté par l'agent chargé de traiter votre dossier"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Dans un bureau de tabac"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous pouvez acheter un timbre fiscal dans un bureau de tabac s'il est équipé de l'application "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Point de vente agréé."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Cas",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "En Guyane"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Introduction",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Votre carte d'identité a été perdue ou volée ? Dans ce cas, son renouvellement sera payant. Le prix est de "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "12,50 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ". Vous pouvez acheter le timbre fiscal sur internet ou dans un bureau de tabac."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "radio"
                       },
                       "children": [
                         {
@@ -805,393 +1177,21 @@
                       ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Situation",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "En Guyane"
-                    }
-                  ]
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Cas",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Titre",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Votre carte d'identité a été perdue ou volée ? Dans ce cas, son renouvellement sera payant. Le prix est de "
-                        },
-                        {
-                          "type": "element",
-                          "name": "Valeur",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "12,50 €"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": ". Vous pouvez acheter le timbre fiscal sur internet ou dans un bureau de tabac."
+                          "text": "À l'étranger"
                         }
                       ]
                     },
-                    {
-                      "type": "element",
-                      "name": "BlocCas",
-                      "attributes": {
-                        "affichage": "onglet"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Cas",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "En ligne"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "FragmentConditionne",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Condition",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "estVrai",
-                                      "attributes": {
-                                        "var": "T11071"
-                                      }
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous faites une pré-demande sur le site de l'ANTS ?"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " Vous pouvez acheter le timbre fiscal à la fin de la procédure."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ServiceEnLigne",
-                                  "attributes": {
-                                    "ID": "R45668",
-                                    "URL": "https://passeport.ants.gouv.fr/demarches-en-ligne/faire-une-premiere-demande-de-carte-nationale-d-identite",
-                                    "type": "Téléservice"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Pré-demande pour une 1ère demande de carte d'identité"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30628"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Agence nationale des titres sécurisés (ANTS)"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Introduction",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Texte",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Accessible avec un compte ANTS ou via "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "LienIntra",
-                                                  "attributes": {
-                                                    "LienID": "R48788",
-                                                    "type": "Définition de glossaire"
-                                                  },
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "FranceConnect"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": "."
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "FragmentConditionne",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Condition",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "estVrai",
-                                      "attributes": {
-                                        "var": "T11293"
-                                      }
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous utilisez le formulaire cartonné disponible au guichet ?"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " Vous pouvez acheter le timbre fiscal sur le site timbres.impots.gouv.fr."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ServiceEnLigne",
-                                  "attributes": {
-                                    "ID": "R47754",
-                                    "URL": "https://timbres.impots.gouv.fr/pages/achat/choixTimbres.jsp",
-                                    "type": "Téléservice"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Achat en ligne du timbre fiscal - Carte d'identité"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30612"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Ministère chargé des finances"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Introduction",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Texte",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Se munir d'une carte bancaire"
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Le timbre électronique peut être délivré sur 2 supports :"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Liste",
-                              "attributes": {
-                                "type": "puce"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Un document PDF avec un code 2D qui peut également être scanné directement depuis un téléphone ou une tablette par le service chargé de recevoir votre demande"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Un SMS contenant l'identifiant à 16 chiffres du timbre qui sera accepté par l'agent chargé de traiter votre dossier"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Cas",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Dans un bureau de tabac"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous pouvez acheter un timbre fiscal dans un bureau de tabac s'il est équipé de l'application "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Expression",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Point de vente agréé"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Situation",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "À l'étranger"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Texte",
-                  "children": [
                     {
                       "type": "element",
                       "name": "Paragraphe",
