@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Un propriétaire est obligé d'entretenir son terrain. Si le terrain voisin du vôtre n'est pas entretenu, des recours existent. Les démarches à entreprendre diffèrent selon que le propriétaire de ce terrain est connu ou non."
+              "text": "Un propriétaire est obligé d'entretenir son terrain. Si le terrain voisin du vôtre n'est pas entretenu, des recours existent. Les démarches à entreprendre diffèrent si vous connaissez le propriétaire de ce terrain ou non."
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2021-01-27"
+              "text": "modified 2021-09-22"
             }
           ]
         },
@@ -356,7 +356,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Un propriétaire est obligé d'entretenir son terrain. Si le terrain voisin du vôtre n'est pas entretenu, des recours existent. Les démarches à entreprendre diffèrent selon que le propriétaire de ce terrain est connu ou non."
+                      "text": "Un propriétaire est obligé d'entretenir son terrain. Si le terrain voisin du vôtre n'est pas entretenu, des recours existent. Les démarches à entreprendre diffèrent si vous connaissez le propriétaire de ce terrain ou non."
                     }
                   ]
                 }
@@ -366,50 +366,26 @@
         },
         {
           "type": "element",
-          "name": "ListeSituations",
-          "attributes": {
-            "affichage": "onglet"
-          },
+          "name": "Texte",
           "children": [
             {
               "type": "element",
-              "name": "Situation",
+              "name": "BlocCas",
+              "attributes": {
+                "affichage": "radio"
+              },
               "children": [
                 {
                   "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Propriétaire connu"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Texte",
+                  "name": "Cas",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Titre",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Si votre terrain est voisin d'un terrain non entretenu par son propriétaire (en friche, encombré de détritus, gravats, déchets de chantiers), vous pouvez subir un préjudice. Par exemple, présence de mauvaises herbes ou d'animaux dits "
-                        },
-                        {
-                          "type": "element",
-                          "name": "Expression",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "nuisibles"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " (rats, notamment)."
+                          "text": "Vous connaissez le propriétaire"
                         }
                       ]
                     },
@@ -419,7 +395,104 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Pour y mettre fin, il faut adresser un courrier au propriétaire du terrain en lui demandant d'entretenir son terrain."
+                          "text": "Si votre terrain est voisin d'un terrain non entretenu par son propriétaire (en "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R60193",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "friche"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ", encombré de détritus, gravats, déchets de chantiers), vous pouvez subir un préjudice."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ANoter",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Exemple"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Présence de mauvaises herbes ou d'animaux dits "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Expression",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "nuisibles"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " (rats, notamment)."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Si le propriétaire n'agit pas et qu'un préjudice est causé à votre terrain, vous pouvez "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F20851",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "faire un recours auprès du tribunal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Pour y mettre fin, adressez un courrier au propriétaire du terrain en lui demandant d'entretenir son terrain."
                         }
                       ]
                     },
@@ -443,35 +516,6 @@
                             {
                               "type": "text",
                               "text": "conciliateur de justice"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": "."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Si le propriétaire n'agit pas et qu'un préjudice est causé à votre terrain, vous pouvez "
-                        },
-                        {
-                          "type": "element",
-                          "name": "LienInterne",
-                          "attributes": {
-                            "LienPublication": "F20851",
-                            "type": "Fiche d'information conditionnée",
-                            "audience": "Particuliers"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "saisir le tribunal"
                             }
                           ]
                         },
@@ -535,7 +579,25 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Le maire peut notifier au propriétaire du terrain par un arrêté l'obligation d'exécuter, à ses frais, les travaux de remise en état de ce terrain après "
+                          "text": "Le maire peut "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R14732",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "notifier"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " au propriétaire du terrain par un arrêté l'obligation d'exécuter, à ses frais, les travaux de remise en état de ce terrain après "
                         },
                         {
                           "type": "element",
@@ -563,7 +625,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Si, au jour indiqué par l'arrêté de mise en demeure, les travaux de remise en état du terrain n'ont pas été effectués, le maire peut faire procéder d'office à leur exécution aux frais du propriétaire ou de ses "
+                          "text": "Si, au jour indiqué par l'arrêté de mise en demeure, les travaux de remise en état du terrain n'ont pas été réalisés, le maire peut faire procéder d'office à leur exécution aux frais du propriétaire ou de ses "
                         },
                         {
                           "type": "element",
@@ -586,27 +648,21 @@
                       ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Situation",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Propriétaire inconnu"
-                    }
-                  ]
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Cas",
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Le propriétaire est inconnu"
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "Paragraphe",
@@ -889,6 +945,97 @@
                 {
                   "type": "text",
                   "text": "Propriétaire inconnu"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Definition",
+          "attributes": {
+            "ID": "R60193"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Friche"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Tout bien ou droit immobilier, bâti ou non, inutilisé et dont l'état, la configuration ou l'occupation totale ou partielle ne permet pas un réemploi sans une intervention préalable"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Reference",
+              "attributes": {
+                "type": "Texte de référence",
+                "URL": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043965974",
+                "ID": "R60194"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Code de l'urbanisme : article L111-26"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Definition",
+          "attributes": {
+            "ID": "R14732"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Notification"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Formalité par laquelle un acte de procédure ou une décision est porté à la connaissance d’une personne"
+                    }
+                  ]
                 }
               ]
             }
