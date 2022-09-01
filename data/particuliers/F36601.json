@@ -552,6 +552,32 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F36615",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Bonus vélo : règles du 15 août au 31 décembre 2022"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "Texte",
           "children": [
             {
@@ -1093,6 +1119,58 @@
                                 {
                                   "type": "text",
                                   "text": "Quel est le montant du bonus vélo ?"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Condition",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "ou",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "ou",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12852"
+                                      }
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "estIndefini",
+                                      "attributes": {
+                                        "var": "T12852"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ou",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T11252"
+                                      }
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "estIndefini",
+                                      "attributes": {
+                                        "var": "T11252"
+                                      }
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -1988,131 +2066,34 @@
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "et",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "ou",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "estVrai",
-                                              "attributes": {
-                                                "var": "T14355"
-                                              }
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "estIndefini",
-                                              "attributes": {
-                                                "var": "T14355"
-                                              }
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "ou",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "estVrai",
-                                              "attributes": {
-                                                "var": "T12852"
-                                              }
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "estIndefini",
-                                              "attributes": {
-                                                "var": "T12852"
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12852"
+                                      }
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "FragmentConditionne",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Le montant de l'aide de l'État est fixé à 40 % du coût d'acquisition dans la limite de "
+                                    },
+                                    {
                                       "type": "element",
-                                      "name": "Condition",
+                                      "name": "Valeur",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "et",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "ou",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "estVrai",
-                                                  "attributes": {
-                                                    "var": "T14355"
-                                                  }
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "estIndefini",
-                                                  "attributes": {
-                                                    "var": "T14355"
-                                                  }
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "ou",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "estVrai",
-                                                  "attributes": {
-                                                    "var": "T12852"
-                                                  }
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "estIndefini",
-                                                  "attributes": {
-                                                    "var": "T12852"
-                                                  }
-                                                }
-                                              ]
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "400 €"
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Le montant de l'aide de l'État est fixé à 40 % du coût d'acquisition dans la limite de "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Valeur",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "400 €"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "."
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "."
                                     }
                                   ]
                                 }
@@ -2138,131 +2119,34 @@
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "et",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "ou",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "estVrai",
-                                              "attributes": {
-                                                "var": "T14355"
-                                              }
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "estIndefini",
-                                              "attributes": {
-                                                "var": "T14355"
-                                              }
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "ou",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "estVrai",
-                                              "attributes": {
-                                                "var": "T12853"
-                                              }
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "estIndefini",
-                                              "attributes": {
-                                                "var": "T12853"
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12853"
+                                      }
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "FragmentConditionne",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Le montant de l'aide de l'État est fixé à 40 % du coût d'acquisition dans la limite de "
+                                    },
+                                    {
                                       "type": "element",
-                                      "name": "Condition",
+                                      "name": "Valeur",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "et",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "ou",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "estVrai",
-                                                  "attributes": {
-                                                    "var": "T14355"
-                                                  }
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "estIndefini",
-                                                  "attributes": {
-                                                    "var": "T14355"
-                                                  }
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "ou",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "estVrai",
-                                                  "attributes": {
-                                                    "var": "T12853"
-                                                  }
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "estIndefini",
-                                                  "attributes": {
-                                                    "var": "T12853"
-                                                  }
-                                                }
-                                              ]
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "300 €"
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Le montant de l'aide de l'État est fixé à 40 % du coût d'acquisition dans la limite de "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Valeur",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "300 €"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "."
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "."
                                     }
                                   ]
                                 }
@@ -3167,92 +3051,34 @@
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "et",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "ou",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "estVrai",
-                                              "attributes": {
-                                                "var": "T14355"
-                                              }
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "estIndefini",
-                                              "attributes": {
-                                                "var": "T14355"
-                                              }
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "ou",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "estVrai",
-                                              "attributes": {
-                                                "var": "T12852"
-                                              }
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "estIndefini",
-                                              "attributes": {
-                                                "var": "T12852"
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12852"
+                                      }
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "FragmentConditionne",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Le montant de l'aide de l'État est fixé à 40 % du coût d'acquisition dans la limite de "
+                                    },
+                                    {
                                       "type": "element",
-                                      "name": "Condition",
+                                      "name": "Valeur",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "estVrai",
-                                          "attributes": {
-                                            "var": "T12852"
-                                          }
+                                          "type": "text",
+                                          "text": "2000 €"
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Le montant de l'aide de l'État est fixé à 40 % du coût d'acquisition dans la limite de "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Valeur",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2000 €"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "."
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "."
                                     }
                                   ]
                                 }
@@ -3278,92 +3104,34 @@
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "et",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "ou",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "estVrai",
-                                              "attributes": {
-                                                "var": "T14355"
-                                              }
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "estIndefini",
-                                              "attributes": {
-                                                "var": "T14355"
-                                              }
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "ou",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "estVrai",
-                                              "attributes": {
-                                                "var": "T12853"
-                                              }
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "estIndefini",
-                                              "attributes": {
-                                                "var": "T12853"
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      ]
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12853"
+                                      }
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "FragmentConditionne",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
+                                      "type": "text",
+                                      "text": "Le montant de l'aide de l'État est fixé à 40 % du coût d'acquisition dans la limite de "
+                                    },
+                                    {
                                       "type": "element",
-                                      "name": "Condition",
+                                      "name": "Valeur",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "estVrai",
-                                          "attributes": {
-                                            "var": "T12853"
-                                          }
+                                          "type": "text",
+                                          "text": "1000 €"
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Le montant de l'aide de l'État est fixé à 40 % du coût d'acquisition dans la limite de "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Valeur",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1000 €"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "."
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "."
                                     }
                                   ]
                                 }
