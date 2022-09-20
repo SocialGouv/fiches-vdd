@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Vous devez payer des droits de donation sur les biens immobiliers que vous recevez par donation. Des exonérations existent dans certains cas."
+              "text": "Vous recevez un bien immobilier par donation ? La situation dépend du domicile du donateur. Vous devez payer des droits de donation. Des exonérations existent dans certains cas."
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2021-03-17"
+              "text": "modified 2022-08-11"
             }
           ]
         },
@@ -119,7 +119,7 @@
           "children": [
             {
               "type": "text",
-              "text": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006197407/, https://bofip.impots.gouv.fr/bofip/2691-PGP.html/identifiant=BOI-ENR-DMTG-20-20120912, http://bofip.impots.gouv.fr/bofip/3362-PGP"
+              "text": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006197407/, https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042654712, https://bofip.impots.gouv.fr/bofip/2691-PGP.html/identifiant=BOI-ENR-DMTG-20-20120912, http://bofip.impots.gouv.fr/bofip/3362-PGP, https://bofip.impots.gouv.fr/bofip/2314-PGP.html/identifiant=BOI-ENR-DMTG-10-20-30"
             }
           ]
         },
@@ -433,7 +433,25 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Vous devez payer des "
+                      "text": "Vous recevez un bien immobilier par donation ? La situation dépend du domicile du "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienIntra",
+                      "attributes": {
+                        "LienID": "R46107",
+                        "type": "Définition de glossaire"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "donateur"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": ". Vous devez payer des "
                     },
                     {
                       "type": "element",
@@ -451,7 +469,7 @@
                     },
                     {
                       "type": "text",
-                      "text": " sur les biens immobiliers que vous recevez par donation. Des exonérations existent dans certains cas."
+                      "text": ". Des exonérations existent dans certains cas."
                     }
                   ]
                 }
@@ -461,56 +479,41 @@
         },
         {
           "type": "element",
-          "name": "Texte",
+          "name": "ListeSituations",
+          "attributes": {
+            "affichage": "onglet"
+          },
           "children": [
             {
               "type": "element",
-              "name": "Paragraphe",
+              "name": "Situation",
               "children": [
                 {
-                  "type": "text",
-                  "text": "Les donations de biens immobiliers nécessitent l'intervention d'un notaire et un "
-                },
-                {
                   "type": "element",
-                  "name": "LienIntra",
-                  "attributes": {
-                    "LienID": "R17851",
-                    "type": "Définition de glossaire"
-                  },
+                  "name": "Titre",
                   "children": [
                     {
                       "type": "text",
-                      "text": "acte authentique"
+                      "text": "Le donateur est domicilié en France"
                     }
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "."
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "C'est le notaire qui se charge des démarches fiscales, en particulier :"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Liste",
-              "attributes": {
-                "type": "puce"
-              },
-              "children": [
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10576"
+                      }
+                    }
+                  ]
+                },
                 {
                   "type": "element",
-                  "name": "Item",
+                  "name": "Texte",
                   "children": [
                     {
                       "type": "element",
@@ -518,118 +521,165 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Déclaration de la donation"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Item",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Droits de donation"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Item",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Publicité foncière"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "BlocCas",
-              "attributes": {
-                "affichage": "radio"
-              },
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Cas",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Le donateur est domicilié en France"
+                          "text": "Si vous bénéficiez de la donation d'un bien immobilier, vous devez payer des droits fiscaux."
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Introduction",
+                      "name": "Paragraphe",
                       "children": [
                         {
+                          "type": "text",
+                          "text": "Les donations de biens immobiliers nécessitent l'intervention d'un notaire et un "
+                        },
+                        {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R17851",
+                            "type": "Définition de glossaire"
+                          },
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si le donateur est "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F62",
-                                "type": "Fiche Question-réponse conditionnée",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "domicilié en France"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": ", vous devez "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F14205",
-                                "type": "Fiche d'information conditionnée",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "payer des droits de donation"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " sur les biens reçus situés en France ou à l'étranger. Toutefois des règles particulières s'appliquent pour certains biens."
+                              "text": "acte authentique"
                             }
                           ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "C'est le notaire qui se charge des démarches fiscales, en particulier :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Déclaration de la donation"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Droits de donation"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R54770",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Publicité foncière"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Si le donateur est domicilié en France, vous devez "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F14205",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "payer des droits de donation"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " sur les "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "biens reçus situés en France ou à l'étranger"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Toutefois, des règles particulières s'appliquent pour certains biens, notamment dans les cas suivants :"
                         }
                       ]
                     },
@@ -660,7 +710,67 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si l'immeuble est classé ou inscrit à l'inventaire supplémentaire des monuments historiques, la donation est exonérée sous certaines conditions."
+                                  "text": "Si l'immeuble est classé ou inscrit à l'inventaire supplémentaire des monuments historiques, la donation est exonérée "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienExterne",
+                                  "attributes": {
+                                    "URL": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042654712"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "sous certaines conditions"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "\n\n."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Bien forestier ou agricole"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La donation bénéficie d'une exonération partielle "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienExterne",
+                                  "attributes": {
+                                    "URL": "https://bofip.impots.gouv.fr/bofip/2314-PGP.html/identifiant=BOI-ENR-DMTG-10-20-30-50-20140318"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "sous certaines conditions"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "\n\n."
                                 }
                               ]
                             }
@@ -700,7 +810,24 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": " transmission du bien, la donation bénéficie d'une exonération partielle sous certaines conditions."
+                                  "text": " transmission du bien, la donation bénéficie d'une exonération partielle "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienExterne",
+                                  "attributes": {
+                                    "URL": "https://bofip.impots.gouv.fr/bofip/3391-PGP.html/identifiant=BOI-ENR-DMTG-10-20-30-90-20190502"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "sous certaines conditions"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "\n\n."
                                 }
                               ]
                             }
@@ -740,33 +867,24 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": " transmission du bien, la donation bénéficie d'une exonération partielle sous certaines conditions."
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Cas",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
+                                  "text": " transmission du bien, la donation bénéficie d'une exonération partielle "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienExterne",
+                                  "attributes": {
+                                    "URL": "https://bofip.impots.gouv.fr/bofip/3336-PGP.html/identifiant=BOI-ENR-DMTG-10-20-30-110-20190502"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "sous certaines conditions"
+                                    }
+                                  ]
+                                },
                                 {
                                   "type": "text",
-                                  "text": "Bien forestier ou agricole"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "La donation bénéficie d'une exonération partielle sous certaines conditions."
+                                  "text": "\n\n."
                                 }
                               ]
                             }
@@ -775,18 +893,181 @@
                       ]
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Situation",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Le donateur est domicilié à l'étranger"
+                    }
+                  ]
                 },
                 {
                   "type": "element",
-                  "name": "Cas",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Titre",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10580"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Le donateur est domicilié à l'étranger"
+                          "text": "Si vous bénéficiez de la donation d'un bien immobilier, vous devez payer des droits fiscaux."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Les donations de biens immobiliers nécessitent l'intervention d'un notaire et un "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R17851",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "acte authentique"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "C'est le notaire qui se charge des démarches fiscales, en particulier :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Déclaration de la donation"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Droits de donation"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R54770",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Publicité foncière"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "L'imposition dépend de votre "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F62",
+                            "type": "Fiche Question-réponse conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "domicile fiscal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ", en tant que bénéficiaire de la donation :"
                         }
                       ]
                     },
@@ -807,36 +1088,147 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Le bénéficiaire a résidé en France au moins 6 ans pendant les 10 années avant la donation"
+                                  "text": "Vous résidez en France au jour de la donation"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Condition",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Les biens situés en France et à l'étranger sont soumis au "
-                                },
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11902"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "BlocCas",
+                              "attributes": {
+                                "affichage": "radio"
+                              },
+                              "children": [
                                 {
                                   "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F14205",
-                                    "type": "Fiche d'information conditionnée",
-                                    "audience": "Particuliers"
-                                  },
+                                  "name": "Cas",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "paiement des droits de donation"
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous avez résidé en France au moins 6 ans pendant les 10 années avant la donation"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Les"
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": " biens situés en France et à l'étranger"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " sont soumis au "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F14205",
+                                            "type": "Fiche d'information conditionnée",
+                                            "audience": "Particuliers"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "paiement des droits de donation"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": "."
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": "."
+                                  "type": "element",
+                                  "name": "Cas",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous n'avez pas résidé en France au moins 6 ans pendant les 10 années avant la donation"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Les "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "biens situés en France"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " sont soumis au "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F14205",
+                                            "type": "Fiche d'information conditionnée",
+                                            "audience": "Particuliers"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "paiement des droits de donation"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": "."
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -852,7 +1244,20 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Le bénéficiaire n'a pas résidé en France au moins 6 ans pendant les 10 années avant la donation"
+                                  "text": "Vous ne résidez pas en France au jour de la donation"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T11903"
+                                  }
                                 }
                               ]
                             },
@@ -862,7 +1267,21 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Les biens situés en France sont soumis au "
+                                  "text": "Les "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "biens situés en France"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " sont soumis au "
                                 },
                                 {
                                   "type": "element",
@@ -886,51 +1305,93 @@
                               ]
                             }
                           ]
-                        },
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "VoirAussi",
+          "attributes": {
+            "important": "non"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Fiche",
+              "attributes": {
+                "ID": "F14205",
+                "audience": "Particuliers"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Droits de donation : calcul et paiement"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Theme",
+                  "attributes": {
+                    "ID": "N19803"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
                         {
-                          "type": "element",
-                          "name": "Cas",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Le bénéficiaire ne réside pas en France au jour de la donation"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Les biens situés en France sont soumis au "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F14205",
-                                    "type": "Fiche d'information conditionnée",
-                                    "audience": "Particuliers"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "paiement des droits de donation"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": "."
-                                }
-                              ]
-                            }
-                          ]
+                          "type": "text",
+                          "text": "Argent - Impôts - Consommation"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Fiche",
+              "attributes": {
+                "ID": "F1404",
+                "audience": "Particuliers"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Faire une donation "
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Theme",
+                  "attributes": {
+                    "ID": "N19805"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Famille - Scolarité"
                         }
                       ]
                     }
@@ -1033,6 +1494,54 @@
                   ]
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "OuSAdresser",
+          "attributes": {
+            "ID": "R18478",
+            "sve": "non",
+            "type": "Local personnalisable"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Notaire"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Complement",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Pour obtenir des informations sur votre situation"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "PivotLocal",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "notaire"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "RessourceWeb",
+              "attributes": {
+                "URL": "https://www.notaires.fr/fr/annuaires-notaire"
+              }
             }
           ]
         },
@@ -1168,6 +1677,37 @@
           "name": "Reference",
           "attributes": {
             "type": "Texte de référence",
+            "URL": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042654712",
+            "ID": "R63312"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Code général des impôts : article 795 A"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Complement",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Monument historique"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Reference",
+          "attributes": {
+            "type": "Texte de référence",
             "URL": "https://bofip.impots.gouv.fr/bofip/2691-PGP.html/identifiant=BOI-ENR-DMTG-20-20120912",
             "ID": "R24551"
           },
@@ -1207,6 +1747,37 @@
         },
         {
           "type": "element",
+          "name": "Reference",
+          "attributes": {
+            "type": "Texte de référence",
+            "URL": "https://bofip.impots.gouv.fr/bofip/2314-PGP.html/identifiant=BOI-ENR-DMTG-10-20-30",
+            "ID": "R63313"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Bofip-Impôts n° BOI-ENR-DMTG-10-20-30-50 sur les exonérations en raison de la nature des biens transmis"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Complement",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Exonérations liées aux biens transmis (bois et forêts, logements acquis à certaines dates)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "PourEnSavoirPlus",
           "attributes": {
             "type": "Information pratique",
@@ -1235,6 +1806,181 @@
                 {
                   "type": "text",
                   "text": "Ministère chargé des finances"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "PourEnSavoirPlus",
+          "attributes": {
+            "type": "Information pratique",
+            "ID": "R63351",
+            "URL": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042654712",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Monument historique"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R38880"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Legifrance"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "PourEnSavoirPlus",
+          "attributes": {
+            "type": "Information pratique",
+            "ID": "R63352",
+            "URL": "https://bofip.impots.gouv.fr/bofip/2314-PGP.html/identifiant=BOI-ENR-DMTG-10-20-30-50-20140318",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Bois et forêts"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R38880"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Legifrance"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "PourEnSavoirPlus",
+          "attributes": {
+            "type": "Information pratique",
+            "ID": "R63353",
+            "URL": "https://bofip.impots.gouv.fr/bofip/3391-PGP.html/identifiant=BOI-ENR-DMTG-10-20-30-90-20190502",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Logement acquis neuf entre juin 1993 et décembre 1994"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R38880"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Legifrance"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "PourEnSavoirPlus",
+          "attributes": {
+            "type": "Information pratique",
+            "ID": "R63354",
+            "URL": "https://bofip.impots.gouv.fr/bofip/3336-PGP.html/identifiant=BOI-ENR-DMTG-10-20-30-110-20190502",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Logement locatif acquis entre août 1995 et décembre 1996"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R38880"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Legifrance"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Definition",
+          "attributes": {
+            "ID": "R46107"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Donateur"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Personne qui fait une donation, c'est-à-dire qui transmet gratuitement de son vivant la propriété d'un bien à une autre personne"
+                    }
+                  ]
                 }
               ]
             }
@@ -1312,15 +2058,36 @@
         },
         {
           "type": "element",
-          "name": "QuestionReponse",
+          "name": "Definition",
           "attributes": {
-            "ID": "F1265",
-            "audience": "Particuliers"
+            "ID": "R54770"
           },
           "children": [
             {
-              "type": "text",
-              "text": "Quelles sont les démarches fiscales à faire pour un don manuel ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Publicité foncière"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Formalités d'information du public des changements de propriété des biens immobiliers"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -1335,6 +2102,20 @@
             {
               "type": "text",
               "text": "Quels abattements et tarifs s'appliquent aux bénéficiaires d'une donation ?"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "QuestionReponse",
+          "attributes": {
+            "ID": "F1265",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": "Quelles sont les démarches fiscales à faire pour un don manuel ?"
             }
           ]
         }
