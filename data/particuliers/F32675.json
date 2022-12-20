@@ -50,7 +50,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Pour demander la carte d'identité ou le passeport d'un enfant mineur, il faut fournir un justificatif de domicile récent (datant de moins d'un an). Le document à produire dépend du domicile de l'enfant."
+              "text": "Pour demander la carte d'identité ou le passeport d'un mineur, il faut fournir un justificatif de domicile datant de moins d'un an. Le document à présenter varie selon que les parents vivent ensemble ou sont séparés."
             }
           ]
         },
@@ -80,7 +80,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2021-03-22"
+              "text": "modified 2022-12-19"
             }
           ]
         },
@@ -460,7 +460,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Pour demander la carte d'identité ou le passeport d'un enfant mineur, il faut fournir un justificatif de domicile récent (datant de moins d'un an). Le document à produire dépend du domicile de l'enfant."
+                      "text": "Pour demander la carte d'identité ou le passeport d'un mineur, il faut fournir un justificatif de domicile datant de moins d'un an. Le document à présenter varie selon que les parents vivent ensemble ou sont séparés."
                     }
                   ]
                 }
@@ -470,89 +470,69 @@
         },
         {
           "type": "element",
-          "name": "RechercheGuidee",
-          "attributes": {
-            "ID": "F35383",
-            "audience": "Particuliers"
-          },
+          "name": "Texte",
           "children": [
             {
               "type": "element",
-              "name": "Titre",
+              "name": "BlocCas",
+              "attributes": {
+                "affichage": "radio"
+              },
               "children": [
                 {
                   "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Justif domicile mineur"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "ListeSituations",
-          "attributes": {
-            "affichage": "onglet"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Situation",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Si les parents vivent ensemble"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Condition",
+                  "name": "Cas",
                   "children": [
                     {
                       "type": "element",
-                      "name": "estVrai",
-                      "attributes": {
-                        "var": "T12375"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Texte",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Titre",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Si votre enfant habite avec ses deux parents, il convient de fournir le justificatif de domicile de "
-                        },
+                          "text": "Les parents vivent ensemble"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
                         {
                           "type": "element",
-                          "name": "MiseEnEvidence",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12375"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Introduction",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "l'un de ses parents"
+                              "text": "Si l'enfant habite avec ses 2 parents, il faut fournir le justificatif de domicile de "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "l'un de ses parents"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
                             }
                           ]
-                        },
-                        {
-                          "type": "text",
-                          "text": "."
                         }
                       ]
                     },
@@ -1476,43 +1456,24 @@
                       ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Situation",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Si les parents sont séparés"
-                    }
-                  ]
                 },
                 {
                   "type": "element",
-                  "name": "Condition",
+                  "name": "Cas",
                   "children": [
                     {
                       "type": "element",
-                      "name": "estVrai",
-                      "attributes": {
-                        "var": "T10950"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Introduction",
-                  "children": [
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Ils sont séparés"
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
-                      "name": "Texte",
+                      "name": "Introduction",
                       "children": [
                         {
                           "type": "element",
@@ -1525,13 +1486,7 @@
                           ]
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Texte",
-                  "children": [
+                    },
                     {
                       "type": "element",
                       "name": "BlocCas",
@@ -1615,7 +1570,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "chaque parent titulaire de l'autorité parentale peut demander le titre d'identité de l'enfant, mais celui chez qui l'enfant n'habite pas doit fournir le justificatif de domicile de l'autre parent."
+                                      "text": "chaque parent ayant l'autorité parentale peut demander le titre d'identité de l'enfant, mais celui chez qui l'enfant n'habite pas doit fournir le justificatif de domicile de l'autre parent."
                                     }
                                   ]
                                 }
@@ -1656,7 +1611,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Vous devez produire :"
+                                  "text": "Vous devez présenter :"
                                 }
                               ]
                             },
@@ -1741,6 +1696,44 @@
                   ]
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "OuSAdresser",
+          "attributes": {
+            "ID": "R55753",
+            "sve": "non",
+            "type": "Local personnalisé sur SP"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "France Services / Maison de services au public"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "PivotLocal",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "msap"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "RessourceWeb",
+              "attributes": {
+                "URL": "https://lannuaire.service-public.fr/navigation/msap"
+              }
             }
           ]
         },
