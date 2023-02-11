@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "En cas de séparation, si vous étiez mariés, pacsés ou concubins et que vous ne détenez pas le livret de famille remis lors du mariage ou de la naissance du premier enfant, vous pouvez demander un second livret."
+              "text": "Pour obtenir un 2nd livret de famille en cas de séparation, vous devez vous adresser à votre mairie, ou auprès du consulat si vous vivez à l'étranger."
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2021-07-16"
+              "text": "modified 2023-01-16"
             }
           ]
         },
@@ -382,7 +382,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "En cas de séparation, si vous étiez mariés, pacsés ou concubins et que vous ne détenez pas le livret de famille remis lors du mariage ou de la naissance du premier enfant, vous pouvez demander un second livret."
+                      "text": "Vous voulez savoir comment obtenir un second livret de famille en cas de séparation (si vous étiez mariés, pacsés ou concubins et que vous ne détenez pas le livret de famille remis lors du mariage ou de la naissance du premier enfant) ? Nous vous donnons les informations utiles."
                     }
                   ]
                 }
@@ -428,7 +428,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Qui peut faire la demande ?"
+                          "text": "Qui peut faire la demande d'un second livret de famille ?"
                         }
                       ]
                     }
@@ -464,7 +464,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "l'accord de l'autre parent ou de l'ex-époux si vous n'avez pas d'enfant n'est pas obligatoire."
+                          "text": "l'accord de l'autre parent ou de l'ex-époux(se)n'est pas obligatoire si vous n'avez pas d'enfant."
                         }
                       ]
                     }
@@ -486,7 +486,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Comment faire la demande pour obtenir un second livret de famille ?"
+                          "text": "Quand faire la demande de second livret de famille ?"
                         }
                       ]
                     }
@@ -494,41 +494,41 @@
                 },
                 {
                   "type": "element",
-                  "name": "SousChapitre",
+                  "name": "Paragraphe",
                   "children": [
                     {
+                      "type": "text",
+                      "text": "Une fois séparé, la demande peut se faire à "
+                    },
+                    {
                       "type": "element",
-                      "name": "Titre",
+                      "name": "MiseEnEvidence",
                       "children": [
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Quand faire la demande ?"
-                            }
-                          ]
+                          "type": "text",
+                          "text": "tout moment."
                         }
                       ]
-                    },
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Chapitre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
                     {
                       "type": "element",
                       "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "La demande peut être faite à "
-                        },
-                        {
-                          "type": "element",
-                          "name": "MiseEnEvidence",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "tout moment."
-                            }
-                          ]
+                          "text": "Comment faire la demande de second livret de famille ?"
                         }
                       ]
                     }
@@ -536,19 +536,70 @@
                 },
                 {
                   "type": "element",
-                  "name": "SousChapitre",
+                  "name": "BlocCas",
+                  "attributes": {
+                    "affichage": "radio"
+                  },
                   "children": [
                     {
                       "type": "element",
-                      "name": "Titre",
+                      "name": "Cas",
                       "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Cas général"
+                            }
+                          ]
+                        },
                         {
                           "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "Où faire la demande ?"
+                              "text": "Vous devez vous adresser à la mairie où vous résidez."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "OuSAdresser",
+                          "attributes": {
+                            "ID": "R1",
+                            "sve": "non",
+                            "type": "Local personnalisé sur SP"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Mairie"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "PivotLocal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "mairie"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "RessourceWeb",
+                              "attributes": {
+                                "URL": "https://lannuaire.service-public.fr/navigation/mairie"
+                              }
                             }
                           ]
                         }
@@ -556,14 +607,38 @@
                     },
                     {
                       "type": "element",
-                      "name": "BlocCas",
-                      "attributes": {
-                        "affichage": "onglet"
-                      },
+                      "name": "Cas",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Cas",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "À Paris"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous devez remplir le formulaire suivant et l'adresser à votre mairie :"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ServiceEnLigne",
+                          "attributes": {
+                            "ID": "R59993",
+                            "URL": "https://cdn.paris.fr/paris/2020/02/12/a486ec71ab0c563e711d5baeeff8be27.pdf",
+                            "format": "application/pdf",
+                            "poids": "106.3 KB",
+                            "type": "Formulaire"
+                          },
                           "children": [
                             {
                               "type": "element",
@@ -571,91 +646,20 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Cas général"
+                                  "text": "Demande d'un second livret de famille (Paris uniquement)"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Source",
+                              "attributes": {
+                                "ID": "R30894"
+                              },
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Vous devez remplir le formulaire suivant et l'adresser à votre mairie :"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "ServiceEnLigne",
-                              "attributes": {
-                                "ID": "R59993",
-                                "URL": "https://cdn.paris.fr/paris/2020/02/12/a486ec71ab0c563e711d5baeeff8be27.pdf",
-                                "format": "application/pdf",
-                                "poids": "106.3 KB",
-                                "type": "Formulaire"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Demande d'un second livret de famille (Paris uniquement)"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Source",
-                                  "attributes": {
-                                    "ID": "R30894"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Ville de Paris"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "OuSAdresser",
-                              "attributes": {
-                                "ID": "R1",
-                                "sve": "non",
-                                "type": "Local personnalisé sur SP"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Mairie"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "PivotLocal",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "mairie"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "RessourceWeb",
-                                  "attributes": {
-                                    "URL": "https://lannuaire.service-public.fr/navigation/mairie"
-                                  }
+                                  "text": "Ville de Paris"
                                 }
                               ]
                             }
@@ -663,7 +667,12 @@
                         },
                         {
                           "type": "element",
-                          "name": "Cas",
+                          "name": "OuSAdresser",
+                          "attributes": {
+                            "ID": "R1",
+                            "sve": "non",
+                            "type": "Local personnalisé sur SP"
+                          },
                           "children": [
                             {
                               "type": "element",
@@ -671,73 +680,128 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "À l'étranger"
+                                  "text": "Mairie"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "PivotLocal",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Vous devez vous adresser aux "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "autorités consulaires françaises"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " de votre pays de résidence."
+                                  "text": "mairie"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "OuSAdresser",
+                              "name": "RessourceWeb",
                               "attributes": {
-                                "ID": "R2750",
-                                "sve": "non",
-                                "type": "Local personnalisable"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Ambassade ou consulat français à l'étranger"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "PivotLocal",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "ambassade_france_etranger"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "RessourceWeb",
-                                  "attributes": {
-                                    "URL": "https://www.diplomatie.gouv.fr/fr/le-ministere-et-son-reseau/annuaires-et-adresses-du-ministere-de-l-europe-et-des-affaires-etrangeres-meae/ambassades-et-consulats-francais-a-l-etranger/"
-                                  }
-                                }
-                              ]
+                                "URL": "https://lannuaire.service-public.fr/navigation/mairie"
+                              }
                             }
                           ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Cas",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "À l'étranger"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous devez vous adresser aux "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "autorités consulaires françaises"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " de votre pays de résidence."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "OuSAdresser",
+                          "attributes": {
+                            "ID": "R2750",
+                            "sve": "non",
+                            "type": "Local personnalisable"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Ambassade ou consulat français à l'étranger"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "PivotLocal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "ambassade_france_etranger"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "RessourceWeb",
+                              "attributes": {
+                                "URL": "https://www.diplomatie.gouv.fr/fr/le-ministere-et-son-reseau/annuaires-et-adresses-du-ministere-de-l-europe-et-des-affaires-etrangeres-meae/ambassades-et-consulats-francais-a-l-etranger/"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Chapitre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Quels documents devez-vous joindre à la demande de second livret de famille ?"
                         }
                       ]
                     }
@@ -745,19 +809,90 @@
                 },
                 {
                   "type": "element",
-                  "name": "SousChapitre",
+                  "name": "BlocCas",
+                  "attributes": {
+                    "affichage": "radio"
+                  },
                   "children": [
                     {
                       "type": "element",
-                      "name": "Titre",
+                      "name": "Cas",
                       "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous étiez mariés"
+                            }
+                          ]
+                        },
                         {
                           "type": "element",
                           "name": "Paragraphe",
                           "children": [
                             {
                               "type": "text",
-                              "text": "Quels documents fournir ?"
+                              "text": "Vous devez présenter votre pièce d'identité."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous devez fournir un justificatif du divorce ou de la séparation (jugement, convention de rupture homologuée, acte de divorce par consentement mutuel,...)."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si vous pouvez présenter le 1"
+                            },
+                            {
+                              "type": "element",
+                              "name": "Exposant",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "er"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " livret de famille, le 2"
+                            },
+                            {
+                              "type": "element",
+                              "name": "Exposant",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "nd"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " livret est établi par reproduction du précédent."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Sinon, l'officier d'état civil fournit un nouveau livret et y inscrit les extraits des actes dont il est en possession. Il adresse ensuite le nouveau livret aux mairies éventuellement détentrices d'actes devant figurer dans le livret."
                             }
                           ]
                         }
@@ -765,186 +900,93 @@
                     },
                     {
                       "type": "element",
-                      "name": "BlocCas",
-                      "attributes": {
-                        "affichage": "radio"
-                      },
+                      "name": "Cas",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Cas",
+                          "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous étiez mariés"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devez présenter votre pièce d'identité."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devez fournir un justificatif du divorce ou de la séparation (jugement, convention de rupture homologuée, acte de divorce par consentement mutuel,...)."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Si vous pouvez présenter le 1"
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Exposant",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "er"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " livret de famille, le 2"
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Exposant",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "nd"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " livret est établi par reproduction du précédent."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Sinon, l'officier d'état civil fournit un nouveau livret et y inscrit les extraits des actes dont il est en possession. Il adresse ensuite le nouveau livret aux mairies éventuellement détentrices d'actes devant figurer dans le livret."
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Vous étiez pacsés ou concubins"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Cas",
+                          "name": "Paragraphe",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Vous devez présenter votre pièce d'identité."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous devez expliquer votre intérêt à posséder votre propre livret pour justifier votre demande (séparation de fait, mésentente,...)."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous devez présenter un justificatif (domiciles séparés, attestations de témoins, attestation de l'autre parent,...)."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si vous pouvez présenter le 1"
+                            },
+                            {
                               "type": "element",
-                              "name": "Titre",
+                              "name": "Exposant",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Vous étiez pacsés ou concubins"
+                                  "text": "er"
                                 }
                               ]
                             },
                             {
+                              "type": "text",
+                              "text": " livret de famille, le 2"
+                            },
+                            {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Exposant",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Vous devez présenter votre pièce d'identité."
+                                  "text": "nd"
                                 }
                               ]
                             },
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devez expliquer votre intérêt à posséder votre propre livret pour justifier votre demande (séparation de fait, mésentente,...)."
-                                }
-                              ]
-                            },
+                              "type": "text",
+                              "text": " livret est établi par reproduction du précédent."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devez présenter un justificatif (domiciles séparés, attestations de témoins, attestation de l'autre parent,...)."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Si vous pouvez présenter le 1"
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Exposant",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "er"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " livret de famille, le 2"
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Exposant",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "nd"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " livret est établi par reproduction du précédent."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Sinon, l'officier d'état civil fournit un nouveau livret et y inscrit les extraits des actes dont il est en possession. Il adresse ensuite le nouveau livret aux mairies éventuellement détentrices d'actes devant figurer dans le livret."
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Sinon, l'officier d'état civil fournit un nouveau livret et y inscrit les extraits des actes dont il est en possession. Il adresse ensuite le nouveau livret aux mairies éventuellement détentrices d'actes devant figurer dans le livret."
                             }
                           ]
                         }
@@ -1028,7 +1070,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Quel est le délai pour obtenir un second livret ?"
+                          "text": "Quel est le délai pour obtenir un second livret de famille ?"
                         }
                       ]
                     }
@@ -1070,21 +1112,174 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Vous devrez présenter votre "
-                    },
+                      "text": "Vous devrez présenter votre pièce d'identité."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "VoirAussi",
+          "attributes": {
+            "important": "non"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Fiche",
+              "attributes": {
+                "ID": "F11994",
+                "audience": "Particuliers"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Comment obtenir un second livret de famille en cas de perte, vol ou détérioration ?"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Theme",
+                  "attributes": {
+                    "ID": "N19810"
+                  },
+                  "children": [
                     {
                       "type": "element",
-                      "name": "MiseEnEvidence",
+                      "name": "Titre",
                       "children": [
                         {
                           "type": "text",
-                          "text": "pièce d'identité."
+                          "text": "Papiers - Citoyenneté - Élections"
                         }
                       ]
                     }
                   ]
                 }
               ]
+            },
+            {
+              "type": "element",
+              "name": "Fiche",
+              "attributes": {
+                "ID": "F11991",
+                "audience": "Particuliers"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Livret de famille : délivrance à la naissance de votre premier enfant"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Theme",
+                  "attributes": {
+                    "ID": "N19810"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Papiers - Citoyenneté - Élections"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "OuSAdresser",
+          "attributes": {
+            "ID": "R1",
+            "sve": "non",
+            "type": "Local personnalisé sur SP"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Mairie"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "PivotLocal",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "mairie"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "RessourceWeb",
+              "attributes": {
+                "URL": "https://lannuaire.service-public.fr/navigation/mairie"
+              }
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "OuSAdresser",
+          "attributes": {
+            "ID": "R2750",
+            "sve": "non",
+            "type": "Local personnalisable"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Ambassade ou consulat français à l'étranger"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "PivotLocal",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "ambassade_france_etranger"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "RessourceWeb",
+              "attributes": {
+                "URL": "https://www.diplomatie.gouv.fr/fr/le-ministere-et-son-reseau/annuaires-et-adresses-du-ministere-de-l-europe-et-des-affaires-etrangeres-meae/ambassades-et-consulats-francais-a-l-etranger/"
+              }
             }
           ]
         },
