@@ -10,7 +10,7 @@
         "ID": "F34421",
         "type": "Fiche d'information conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
-        "dateDerniereModificationImportante": "2023-01-01T00:00:00",
+        "dateDerniereModificationImportante": "2023-03-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F34421"
       },
       "children": [
@@ -80,7 +80,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2023-01-01"
+              "text": "modified 2023-03-01"
             }
           ]
         },
@@ -620,7 +620,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Chaudière biomasse performante"
+                              "text": "Chaudière biomasse performante (chaudière qui utilise un combustible organique comme le bois et ses dérivés)"
                             }
                           ]
                         }
@@ -636,7 +636,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Pompe à chaleur air/eau ou eau/eau ou hybride"
+                              "text": "Pompe à chaleur air/eau ou eau/eau ou hybride (système combinant la technologie d'une pompe à chaleur air/eau et d'une chaudière à condensation)"
                             }
                           ]
                         }
@@ -652,7 +652,11 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Système solaire combiné"
+                              "text": "Système solaire combiné (système combinant un panneau solaire et un ballon de stockage)"
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence"
                             }
                           ]
                         }
@@ -712,7 +716,7 @@
                     },
                     {
                       "type": "text",
-                      "text": " c'est-à-dire principalement les fournisseurs d'énergie (ou leur partenaire)."
+                      "text": " c'est-à-dire principalement les fournisseurs d'énergie (ou leurs partenaires)."
                     }
                   ]
                 },
@@ -1520,7 +1524,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Si vos ressources dépassent ces plafonds, vous n'êtes pas considéré comme étant un ménage aux revenus modestes, mais vous pouvez quand même toucher la prime."
+                      "text": "Si vos ressources dépassent ces plafonds, vous n'êtes pas considéré comme étant un ménage aux revenus modestes. Vous pouvez quand même toucher la prime même si vos ressources dépassent ces plafonds."
                     }
                   ]
                 }
@@ -4155,7 +4159,23 @@
                               "type": "element",
                               "name": "Colonne",
                               "attributes": {
+                                "largeur": "10",
+                                "type": "normal"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "Colonne",
+                              "attributes": {
                                 "largeur": "25",
+                                "type": "normal"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "Colonne",
+                              "attributes": {
+                                "largeur": "10",
                                 "type": "normal"
                               }
                             },
@@ -4176,7 +4196,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Nature de l'installation"
+                                          "text": "Équipement à remplacer"
                                         }
                                       ]
                                     }
@@ -4192,7 +4212,39 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Montant accordé"
+                                          "text": "Équipement à installer"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Montant de la prime"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Condition"
                                         }
                                       ]
                                     }
@@ -4210,6 +4262,9 @@
                                 {
                                   "type": "element",
                                   "name": "Cellule",
+                                  "attributes": {
+                                    "fusionVerticale": "6"
+                                  },
                                   "children": [
                                     {
                                       "type": "element",
@@ -4217,17 +4272,21 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Remplacement d'une chaudière au charbon ou au gaz par une "
+                                          "text": "Chaudière au charbon ou au gaz"
                                         },
                                         {
                                           "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "chaudière biomasse performante"
-                                            }
-                                          ]
+                                          "name": "MiseEnEvidence"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence"
                                         }
                                       ]
                                     }
@@ -4242,106 +4301,8 @@
                                       "name": "Paragraphe",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Valeur",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "4 000 €"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Rangée",
-                              "attributes": {
-                                "type": "normal"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Cellule",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
                                           "type": "text",
-                                          "text": "Remplacement d'une chaudière au fioul par une "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "chaudière biomasse performante"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Cellule",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Valeur",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "5 000 €"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Rangée",
-                              "attributes": {
-                                "type": "normal"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Cellule",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Remplacement d'une chaudière au charbon ou au gaz par une "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "pompe à chaleur air/eau ou eau/eau ou hybride"
-                                            }
-                                          ]
+                                          "text": "Chaudière biomasse performante"
                                         }
                                       ]
                                     }
@@ -4364,6 +4325,26 @@
                                               "text": "4 000 €"
                                             }
                                           ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 31 décembre 2025 et achevées au plus tard le 31 décembre 2026"
                                         }
                                       ]
                                     }
@@ -4388,17 +4369,74 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Remplacement d'une chaudière au fioul par une "
-                                        },
+                                          "text": "Pompe à chaleur air/eau"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
                                         {
                                           "type": "element",
-                                          "name": "MiseEnEvidence",
+                                          "name": "Valeur",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "pompe à chaleur air/eau ou eau/eau ou hybride"
+                                              "text": "4 000 €"
                                             }
                                           ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 31 décembre 2025 et achevées au plus tard le 31 décembre 2026"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Pompe à chaleur eau/eau"
                                         }
                                       ]
                                     }
@@ -4421,6 +4459,40 @@
                                               "text": "5 000 €"
                                             }
                                           ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées depuis le 1"
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Exposant",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "er"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " mars 2023 jusqu'au 31 décembre 2025 et achevées au plus tard le 31 décembre 2026"
                                         }
                                       ]
                                     }
@@ -4445,17 +4517,74 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Remplacement d'une chaudière au charbon ou au gaz par un "
-                                        },
+                                          "text": "Pompe à chaleur hybride"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
                                         {
                                           "type": "element",
-                                          "name": "MiseEnEvidence",
+                                          "name": "Valeur",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "système solaire combiné"
+                                              "text": "4 000 €"
                                             }
                                           ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 31 décembre 2025 et achevées au plus tard le 31 décembre 2026"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Système solaire combiné"
                                         }
                                       ]
                                     }
@@ -4478,41 +4607,10 @@
                                               "text": "5 000 €"
                                             }
                                           ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Rangée",
-                              "attributes": {
-                                "type": "normal"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Cellule",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Remplacement d'une chaudière au fioul par un "
                                         },
                                         {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "système solaire combiné"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": " minimum"
                                         }
                                       ]
                                     }
@@ -4527,14 +4625,22 @@
                                       "name": "Paragraphe",
                                       "children": [
                                         {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées depuis le 1"
+                                        },
+                                        {
                                           "type": "element",
-                                          "name": "Valeur",
+                                          "name": "Exposant",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "5 000 €"
+                                              "text": "er"
                                             }
                                           ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " mars 2023 jusqu'au 31 décembre 2025 et achevées au plus tard le 31 décembre 2026"
                                         }
                                       ]
                                     }
@@ -4559,17 +4665,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Remplacement d'une chaudière au charbon ou au gaz par le "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "raccordement à un réseau de chaleur alimenté majoritairement par des énergies renouvelables ou de récupération (ENR&R)"
-                                            }
-                                          ]
+                                          "text": "Raccordement à un réseau de chaleur alimenté majoritairement par des énergies renouvelables ou de récupération (ENR&R)"
                                         }
                                       ]
                                     }
@@ -4592,41 +4688,10 @@
                                               "text": "700 €"
                                             }
                                           ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Rangée",
-                              "attributes": {
-                                "type": "normal"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Cellule",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Remplacement d'une chaudière au fiou par le "
                                         },
                                         {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "raccordement à un réseau de chaleur alimenté majoritairement par des énergies renouvelables ou de récupération (ENR&R)"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": " minimum"
                                         }
                                       ]
                                     }
@@ -4641,14 +4706,8 @@
                                       "name": "Paragraphe",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Valeur",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1 000 €"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 31 décembre 2025 et achevées au plus tard le 31 décembre 2026"
                                         }
                                       ]
                                     }
@@ -4673,17 +4732,27 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Remplacement d'un équipement indépendant de chauffage au charbon par un "
+                                          "text": "Équipement indépendant de chauffage au charbon"
                                         },
                                         {
                                           "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "appareil de chauffage au bois très performant"
-                                            }
-                                          ]
+                                          "name": "MiseEnEvidence"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Appareil de chauffage au bois très performant"
                                         }
                                       ]
                                     }
@@ -4706,50 +4775,451 @@
                                               "text": "800 €"
                                             }
                                           ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 31 décembre 2025 et achevées au plus tard le 31 décembre 2026"
                                         }
                                       ]
                                     }
                                   ]
                                 }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Attention",
-                          "children": [
+                            },
                             {
                               "type": "element",
-                              "name": "Titre",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Attention"
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "attributes": {
+                                    "fusionVerticale": "6"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Chaudière au fioul"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Chaudière biomasse performante"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "5 000 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 30 juin 2023 et achevées au plus tard le 31 décembre 2023"
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "les montants pour le remplacement d'une chaudière au fioul concernent les "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Cellule",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "opérations engagées jusqu'au 30 juin 2023 et achevées au plus tard le 31 décembre 2023"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Pompe à chaleur air/eau"
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": "."
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "5 000 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 30 juin 2023 et achevées au plus tard le 31 décembre 2023"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Pompe à chaleur eau/eau"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "5 000 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 30 juin 2023 et achevées au plus tard le 31 décembre 2023"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Pompe à chaleur hybride"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "5 000 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 30 juin 2023 et achevées au plus tard le 31 décembre 2023"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Système solaire combiné"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "5 000 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 30 juin 2023 et achevées au plus tard le 31 décembre 2023"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Raccordement à un réseau de chaleur alimenté majoritairement par des énergies renouvelables ou de récupération (ENR&R)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 000 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 30 juin 2023 et achevées au plus tard le 31 décembre 2023"
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -4797,7 +5267,23 @@
                               "type": "element",
                               "name": "Colonne",
                               "attributes": {
+                                "largeur": "10",
+                                "type": "normal"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "Colonne",
+                              "attributes": {
                                 "largeur": "25",
+                                "type": "normal"
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "Colonne",
+                              "attributes": {
+                                "largeur": "10",
                                 "type": "normal"
                               }
                             },
@@ -4818,7 +5304,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Nature de l'installation"
+                                          "text": "Équipement à remplacer"
                                         }
                                       ]
                                     }
@@ -4834,7 +5320,39 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Montant accordé"
+                                          "text": "Équipement à installer"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Montant de la prime"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Condition"
                                         }
                                       ]
                                     }
@@ -4852,6 +5370,9 @@
                                 {
                                   "type": "element",
                                   "name": "Cellule",
+                                  "attributes": {
+                                    "fusionVerticale": "6"
+                                  },
                                   "children": [
                                     {
                                       "type": "element",
@@ -4859,17 +5380,11 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Remplacement d'une chaudière au charbon ou au gaz par une "
+                                          "text": "Chaudière au charbon ou au gaz"
                                         },
                                         {
                                           "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "chaudière biomasse performante"
-                                            }
-                                          ]
+                                          "name": "MiseEnEvidence"
                                         }
                                       ]
                                     }
@@ -4884,106 +5399,8 @@
                                       "name": "Paragraphe",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Valeur",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2 500 €"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Rangée",
-                              "attributes": {
-                                "type": "normal"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Cellule",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
                                           "type": "text",
-                                          "text": "Remplacement d'une chaudière au fioul par une "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "chaudière biomasse performante"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Cellule",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Valeur",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "4 000 €"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Rangée",
-                              "attributes": {
-                                "type": "normal"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Cellule",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Remplacement d'une chaudière au charbon ou au gaz par une "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "pompe à chaleur air/eau ou eau/eau ou hybride"
-                                            }
-                                          ]
+                                          "text": "Chaudière biomasse performante"
                                         }
                                       ]
                                     }
@@ -5006,41 +5423,10 @@
                                               "text": "2 500 €"
                                             }
                                           ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Rangée",
-                              "attributes": {
-                                "type": "normal"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Cellule",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Remplacement d'une chaudière au fioul par une "
                                         },
                                         {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "pompe à chaleur air/eau ou eau/eau ou hybride"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": " minimum"
                                         }
                                       ]
                                     }
@@ -5055,14 +5441,8 @@
                                       "name": "Paragraphe",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Valeur",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "4 000 €"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 31 décembre 2025 et achevées au plus tard le 31 décembre 2026"
                                         }
                                       ]
                                     }
@@ -5087,17 +5467,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Remplacement d'une chaudière au charbon ou au gaz par un "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "système solaire combiné"
-                                            }
-                                          ]
+                                          "text": "Pompe à chaleur air/eau"
                                         }
                                       ]
                                     }
@@ -5120,6 +5490,26 @@
                                               "text": "2 500 €"
                                             }
                                           ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 31 décembre 2025 et achevées au plus tard le 31 décembre 2026"
                                         }
                                       ]
                                     }
@@ -5144,17 +5534,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Remplacement d'une chaudière au fioul par un "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "système solaire combiné"
-                                            }
-                                          ]
+                                          "text": "Pompe à chaleur eau/eau"
                                         }
                                       ]
                                     }
@@ -5174,9 +5554,43 @@
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "4 000 €"
+                                              "text": "2 500 €"
                                             }
                                           ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées depuis le 1"
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Exposant",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "er"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " mars 2023 jusqu'au 31 décembre 2025 et achevées au plus tard le 31 décembre 2026"
                                         }
                                       ]
                                     }
@@ -5201,17 +5615,155 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Remplacement d'une chaudière au charbon ou au gaz par le "
-                                        },
+                                          "text": "Pompe à chaleur hybride"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
                                         {
                                           "type": "element",
-                                          "name": "MiseEnEvidence",
+                                          "name": "Valeur",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "raccordement à un réseau de chaleur alimenté majoritairement par des énergies renouvelables ou de récupération (ENR&R)"
+                                              "text": "2 500 €"
                                             }
                                           ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 31 décembre 2025 et achevées au plus tard le 31 décembre 2026"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Système solaire combiné"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "2 500 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées depuis le 1"
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Exposant",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "er"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " mars 2023 jusqu'au 31 décembre 2025 et achevées au plus tard le 31 décembre 2026"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Raccordement à un réseau de chaleur alimenté majoritairement par des énergies renouvelables ou de récupération (ENR&R)"
                                         }
                                       ]
                                     }
@@ -5234,41 +5786,10 @@
                                               "text": "450 €"
                                             }
                                           ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Rangée",
-                              "attributes": {
-                                "type": "normal"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Cellule",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Remplacement d'une chaudière au fioul par le "
                                         },
                                         {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "raccordement à un réseau de chaleur alimenté majoritairement par des énergies renouvelables ou de récupération (ENR&R)"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": " minimum"
                                         }
                                       ]
                                     }
@@ -5283,14 +5804,8 @@
                                       "name": "Paragraphe",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Valeur",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "900 €"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 31 décembre 2025 et achevées au plus tard le 31 décembre 2026"
                                         }
                                       ]
                                     }
@@ -5315,17 +5830,27 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Remplacement d'un équipement indépendant de chauffage au charbon par un "
+                                          "text": "Équipement indépendant de chauffage au charbon"
                                         },
                                         {
                                           "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "appareil de chauffage au bois très performant"
-                                            }
-                                          ]
+                                          "name": "MiseEnEvidence"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Appareil de chauffage au bois très performant"
                                         }
                                       ]
                                     }
@@ -5348,50 +5873,455 @@
                                               "text": "500 €"
                                             }
                                           ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 31 décembre 2025 et achevées au plus tard le 31 décembre 2026"
                                         }
                                       ]
                                     }
                                   ]
                                 }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Attention",
-                          "children": [
+                            },
                             {
                               "type": "element",
-                              "name": "Titre",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Attention"
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "attributes": {
+                                    "fusionVerticale": "6"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Chaudière au fioul"
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Chaudière biomasse performante"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "4 000 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 30 juin 2023 et achevées au plus tard le 31 décembre 2023"
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "les montants pour le remplacement d'une chaudière au fioul concernent les "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Cellule",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "opérations engagées jusqu'au 30 juin 2023 et achevées au plus tard le 31 décembre 2023"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Pompe à chaleur air/eau"
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": "."
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "4 000 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 30 juin 2023 et achevées au plus tard le 31 décembre 2023"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Pompe à chaleur eau/eau"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "4 000 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 30 juin 2023 et achevées au plus tard le 31 décembre 2023"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Pompe à chaleur hybride"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "4 000 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 30 juin 2023 et achevées au plus tard le 31 décembre 2023"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Système solaire combiné"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "4 000 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 30 juin 2023 et achevées au plus tard le 31 décembre 2023"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Rangée",
+                              "attributes": {
+                                "type": "normal"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Raccordement à un réseau de chaleur alimenté majoritairement par des énergies renouvelables ou de récupération (ENR&R)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "900 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " minimum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cellule",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ce montant concerne les opérations engagées jusqu'au 30 juin 2023 et achevées au plus tard le 31 décembre 2023"
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             }
