@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Si vous êtes originaire d'un État non européen, vous pouvez bénéficier de la Sécurité sociale si vous êtes en situation régulière."
+              "text": "Si vous êtes originaire d'un pays non européen, vous pouvez bénéficier de la Sécurité sociale si vous êtes en situation régulière."
             }
           ]
         },
@@ -387,86 +387,22 @@
           "children": [
             {
               "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Vous devez démontrer que vous respectez la condition de régularité du séjour si vous"
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": " n'êtes pas européen."
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "C'est le cas si vous n'êtes pas ressortissant d'un pays de l'"
-                },
-                {
-                  "type": "element",
-                  "name": "LienIntra",
-                  "attributes": {
-                    "LienID": "R55492",
-                    "type": "Définition de glossaire"
-                  },
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Espace économique européen"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " ou de la Suisse."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "ListeSituations",
-          "attributes": {
-            "affichage": "onglet"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Situation",
+              "name": "BlocCas",
+              "attributes": {
+                "affichage": "radio"
+              },
               "children": [
                 {
                   "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Non européen"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Texte",
+                  "name": "Cas",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Titre",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vous pouvez bénéficier de la Sécurité sociale. Vous serez remboursé d'une partie des frais médicaux : consultations, médicaments, frais d'hôpitaux..."
+                          "text": "Vous êtes européen"
                         }
                       ]
                     },
@@ -476,7 +412,23 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Pour cela, vous devez remplir la condition de régularité du séjour. Elle est appréciée le jour de votre demande."
+                          "text": "Vous n'avez pas besoin de justifier de votre situation en France."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Cas",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous n'êtes pas européen"
                         }
                       ]
                     },
@@ -486,7 +438,45 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Pour attester de la régularité de votre situation, vous pouvez fournir, selon les cas, l'un des documents suivants en cours de validité :"
+                          "text": "Si vous n'êtes pas ressortissant d'un pays de l'"
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R55492",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Espace économique européen"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " ou de la Suisse, vous devez démontrer que vous respectez la condition de régularité du séjour."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Cette condition est examinée le jour de votre demande."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Pour attester de la régularité de votre situation, vous pouvez fournir, selon les cas, l'un des documents suivants (il doit être en cours de validité) :"
                         }
                       ]
                     },
@@ -903,7 +893,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "À défaut"
+                                      "text": "Sinon"
                                     }
                                   ]
                                 },
@@ -916,36 +906,14 @@
                           ]
                         }
                       ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Situation",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Européen"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Texte",
-                  "children": [
+                    },
                     {
                       "type": "element",
                       "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vous n'avez pas besoin de justifier de votre situation en France."
+                          "text": "Si vous remplissez la condition de régularité du séjour, vous pouvez bénéficier de la Sécurité sociale. Vous serez remboursé d'une partie des frais médicaux : consultations, médicaments, frais d'hôpitaux..."
                         }
                       ]
                     }
