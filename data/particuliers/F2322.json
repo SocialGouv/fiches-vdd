@@ -50,7 +50,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Votre enfant est affecté dans le collège public de votre secteur, généralement le plus proche de votre domicile. Cependant, vous pouvez demander son admission dans un autre collège public. Pour cela, vous devez obtenir une dérogation du Dasen. Vous devez ensuite inscrire votre enfant dans le collège où il a été admis."
+              "text": "Votre enfant va entrer au collège et vous vous demandez comment l'inscrire dans son futur établissement ? Votre enfant est affecté dans le collège public de votre secteur, généralement le plus proche de votre domicile. Vous pouvez aussi demander son admission dans un autre collège public. Pour cela, vous devez obtenir une dérogation du Dasen avant d'inscrire votre enfant dans le collège souhaité. Si vous voulez l'inscrire dans le privé, vous devez prendre contact avec le collège choisi."
             }
           ]
         },
@@ -80,7 +80,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2021-06-15"
+              "text": "modified 2023-04-26"
             }
           ]
         },
@@ -857,7 +857,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Votre enfant est affecté dans le collège public de votre secteur, généralement le plus proche de votre domicile. Cependant, vous pouvez demander son admission dans un autre collège public. Pour cela, vous devez obtenir une dérogation du "
+                      "text": "Votre enfant va entrer au collège et vous vous demandez comment l'inscrire dans son futur établissement ? Votre enfant est affecté dans le collège public de votre secteur, généralement le plus proche de votre domicile. Vous pouvez aussi demander son admission dans un autre collège public. Pour cela, vous devez obtenir une dérogation du "
                     },
                     {
                       "type": "element",
@@ -875,7 +875,7 @@
                     },
                     {
                       "type": "text",
-                      "text": ". Vous devez ensuite inscrire votre enfant dans le collège où il a été admis."
+                      "text": " avant d'inscrire votre enfant dans le collège souhaité. Si vous voulez l'inscrire dans le privé, vous devez prendre contact avec le collège choisi."
                     }
                   ]
                 }
@@ -1082,45 +1082,51 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "ListeSituations",
+          "attributes": {
+            "affichage": "onglet"
+          },
+          "children": [
             {
               "type": "element",
-              "name": "Chapitre",
+              "name": "Situation",
               "children": [
                 {
                   "type": "element",
                   "name": "Titre",
                   "children": [
                     {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Affectation"
-                        }
-                      ]
+                      "type": "text",
+                      "text": "Public"
                     }
                   ]
                 },
                 {
                   "type": "element",
-                  "name": "BlocCas",
-                  "attributes": {
-                    "affichage": "radio"
-                  },
+                  "name": "Texte",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Cas",
+                      "name": "Chapitre",
                       "children": [
                         {
                           "type": "element",
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Cas général"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Dans quel collège public votre enfant est-il affecté ?"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -1130,24 +1136,436 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Votre enfant qui entre au collège est affecté dans l'établissement de votre secteur, d'après la "
-                            },
+                              "text": "La procédure d'affectation dépend de votre situation."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "BlocCas",
+                          "attributes": {
+                            "affichage": "radio"
+                          },
+                          "children": [
                             {
                               "type": "element",
-                              "name": "LienExterne",
-                              "attributes": {
-                                "URL": "http://www.education.gouv.fr/cid5509/le-fonctionnement-de-la-carte-scolaire.html"
-                              },
+                              "name": "Cas",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "carte scolaire"
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Cas général"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Votre enfant entre au collège. Il est affecté dans l'établissement de votre secteur, d'après la "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienExterne",
+                                      "attributes": {
+                                        "URL": "http://www.education.gouv.fr/cid5509/le-fonctionnement-de-la-carte-scolaire.html"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "carte scolaire"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " de votre département de résidence. Il s'agit généralement du collège le plus proche de votre domicile."
+                                    }
+                                  ]
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": " de votre département de résidence. Il s'agit généralement du collège le plus proche de votre domicile."
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Passage du privé au public"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Introduction",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "La procédure d'affectation de votre enfant dans un collège public dépend du type d'établissement privé dans lequel il est inscrit."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "BlocCas",
+                                  "attributes": {
+                                    "affichage": "radio"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cas",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Titre",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "École privée sous contrat"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous devez contacter le "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienInterne",
+                                              "attributes": {
+                                                "LienPublication": "R31460",
+                                                "type": "Acronyme"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Dasen"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " pour connaître le collège d'affectation :"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "OuSAdresser",
+                                          "attributes": {
+                                            "ID": "R24",
+                                            "sve": "non",
+                                            "type": "Local personnalisé sur SP"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Titre",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Direction des services départementaux de l'Éducation nationale"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "PivotLocal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "inspection_academique"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "RessourceWeb",
+                                              "attributes": {
+                                                "URL": "http://www.education.gouv.fr/cid3/les-regions-academiques-academies-et-services-departementaux-de-l-education-nationale.html#La_carte_des_regions_academiques_et_les_coordonnees_des_rectorats_vice-rectorats_et_services_departementaux_de_l_Education_nationale"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Source",
+                                              "attributes": {
+                                                "ID": "R30638"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Ministère chargé de l'éducation"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cas",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Titre",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "École privée hors contrat"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Votre enfant devra passer un examen d'admission pour pourvoir s'inscrire dans un collège public."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Contactez la direction des services départementaux de l'éducation nationale de votre lieu de résidence pour connaître les procédures et la date de passage de l'examen."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "OuSAdresser",
+                                          "attributes": {
+                                            "ID": "R24",
+                                            "sve": "non",
+                                            "type": "Local personnalisé sur SP"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Titre",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Direction des services départementaux de l'Éducation nationale"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "PivotLocal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "inspection_academique"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "RessourceWeb",
+                                              "attributes": {
+                                                "URL": "http://www.education.gouv.fr/cid3/les-regions-academiques-academies-et-services-departementaux-de-l-education-nationale.html#La_carte_des_regions_academiques_et_les_coordonnees_des_rectorats_vice-rectorats_et_services_departementaux_de_l_Education_nationale"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Source",
+                                              "attributes": {
+                                                "ID": "R30638"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Ministère chargé de l'éducation"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Parents domiciliés à l'étranger"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "La domiciliation des parents à l'étranger ne peut pas être une cause de refus d'inscription d'un enfant soumis à obligation scolaire."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Si vous êtes domiciliés à l'étranger, votre enfant doit être inscrit dans l'une des communes suivantes :"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Liste",
+                                  "attributes": {
+                                    "type": "puce"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Commune où vous avez une résidence"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Commune du domicile de la personne qui garde l'enfant"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Commune où existe un établissement destiné aux enfants de Français établis à l'étranger"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Contactez la direction des services départementaux de l'éducation nationale du lieu de résidence de l'enfant pour connaître son collège d'affectation."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "OuSAdresser",
+                                  "attributes": {
+                                    "ID": "R24",
+                                    "sve": "non",
+                                    "type": "Local personnalisé sur SP"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Direction des services départementaux de l'Éducation nationale"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "PivotLocal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "inspection_academique"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "RessourceWeb",
+                                      "attributes": {
+                                        "URL": "http://www.education.gouv.fr/cid3/les-regions-academiques-academies-et-services-departementaux-de-l-education-nationale.html#La_carte_des_regions_academiques_et_les_coordonnees_des_rectorats_vice-rectorats_et_services_departementaux_de_l_Education_nationale"
+                                      }
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30638"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ministère chargé de l'éducation"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -1171,7 +1589,24 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "si vous prévoyez de déménager pour la rentrée scolaire, vous pouvez demander à inscrire votre enfant dans le collège de secteur du futur domicile."
+                                  "text": "si vous changez de domicile avant la rentrée scolaire (par exemple si vous déménagez pendant les vacances d'été), vous devez demander à inscrire votre enfant dans le "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienExterne",
+                                  "attributes": {
+                                    "URL": "http://www.education.gouv.fr/cid5509/le-fonctionnement-de-la-carte-scolaire.html"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "collège de secteur"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " du futur domicile."
                                 }
                               ]
                             }
@@ -1181,21 +1616,11 @@
                     },
                     {
                       "type": "element",
-                      "name": "Cas",
+                      "name": "Chapitre",
                       "children": [
                         {
                           "type": "element",
                           "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Passage du privé au public"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Introduction",
                           "children": [
                             {
                               "type": "element",
@@ -1203,7 +1628,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "La procédure d'affectation de votre enfant dans un collège public dépend du type d'établissement privé dans lequel il est inscrit."
+                                  "text": "Comment demander son admission dans un autre collège public ?"
                                 }
                               ]
                             }
@@ -1211,14 +1636,124 @@
                         },
                         {
                           "type": "element",
-                          "name": "BlocCas",
-                          "attributes": {
-                            "affichage": "radio"
-                          },
+                          "name": "SousChapitre",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Demande de dérogation"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si vous voulez que votre enfant soit admis dans un collège public différent de celui de votre secteur, vous devez faire une demande de dérogation au "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "R31460",
+                                    "type": "Acronyme"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Dasen"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez faire la demande de dérogation "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "avant d'inscrire votre enfant"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " dans l'établissement souhaité."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez faire la demande à l'aide d'un formulaire. Vous pouvez retirer le document auprès de la direction des services départementaux de l'éducation nationale de votre lieu de résidence."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Les justificatifs à fournir sont indiqués dans le formulaire d'assouplissement à la carte scolaire. Ils varient selon l'académie et le motif de la demande de dérogation."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La demande devra être remise, selon, les cas auprès l'établissement scolaire de votre enfant ou de la direction des services départementaux de l'éducation nationale de votre lieu de résidence."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Dans certains départements, la demande se fait en ligne sur le site de la direction des services départementaux de l'éducation nationale."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "OuSAdresser",
+                              "attributes": {
+                                "ID": "R24",
+                                "sve": "non",
+                                "type": "Local personnalisé sur SP"
+                              },
                               "children": [
                                 {
                                   "type": "element",
@@ -1226,7 +1761,210 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "École privée sous contrat"
+                                      "text": "Direction des services départementaux de l'Éducation nationale"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "PivotLocal",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "inspection_academique"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "RessourceWeb",
+                                  "attributes": {
+                                    "URL": "http://www.education.gouv.fr/cid3/les-regions-academiques-academies-et-services-departementaux-de-l-education-nationale.html#La_carte_des_regions_academiques_et_les_coordonnees_des_rectorats_vice-rectorats_et_services_departementaux_de_l_Education_nationale"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30638"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Ministère chargé de l'éducation"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "SousChapitre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Traitement de la demande de dérogation"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Votre demande sera acceptée si l'établissement souhaité dispose de la capacité d'accueil suffisante."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si le nombre de demandes dépasse les capacités d'accueil d'un établissement, les dérogations sont accordées selon l'ordre de priorité suivant :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "numero"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Élève handicapé, qui bénéficie d'une priorité absolue"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Élève nécessitant une prise en charge médicale importante près du collège demandé"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Élève boursier au mérite"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Élève boursier sur critères sociaux"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Élève dont un frère ou une sœur est déjà scolarisé dans le collège souhaité"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Élève qui doit suivre un parcours scolaire particulier (intégration d'une section sportive ou d'une classe internationale notamment)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous pouvez indiquer plusieurs motifs simultanément dans la demande de dérogation."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Attention",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Attention"
                                     }
                                   ]
                                 },
@@ -1236,7 +1974,43 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Vous devez contacter le "
+                                      "text": "vous devez faire votre demande de dérogation "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence"
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence"
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "avant l'inscription de votre enfant "
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "dans l'établissement souhaité. "
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "Une fois l'affectation décidée par le "
                                     },
                                     {
                                       "type": "element",
@@ -1254,145 +2028,7 @@
                                     },
                                     {
                                       "type": "text",
-                                      "text": " pour connaître le collège d'affectation :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "OuSAdresser",
-                                  "attributes": {
-                                    "ID": "R24",
-                                    "sve": "non",
-                                    "type": "Local personnalisé sur SP"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Direction des services départementaux de l'Éducation nationale"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "PivotLocal",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "inspection_academique"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "RessourceWeb",
-                                      "attributes": {
-                                        "URL": "http://www.education.gouv.fr/cid3/les-regions-academiques-academies-et-services-departementaux-de-l-education-nationale.html#La_carte_des_regions_academiques_et_les_coordonnees_des_rectorats_vice-rectorats_et_services_departementaux_de_l_Education_nationale"
-                                      }
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30638"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Ministère chargé de l'éducation"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cas",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "École privée hors contrat"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Votre enfant devra passer un examen d'admission pour pourvoir s'inscrire dans un collège public."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Contactez la direction des services départementaux de l'éducation nationale de votre lieu de résidence pour connaître les procédures et la date de passage de l'examen."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "OuSAdresser",
-                                  "attributes": {
-                                    "ID": "R24",
-                                    "sve": "non",
-                                    "type": "Local personnalisé sur SP"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Direction des services départementaux de l'Éducation nationale"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "PivotLocal",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "inspection_academique"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "RessourceWeb",
-                                      "attributes": {
-                                        "URL": "http://www.education.gouv.fr/cid3/les-regions-academiques-academies-et-services-departementaux-de-l-education-nationale.html#La_carte_des_regions_academiques_et_les_coordonnees_des_rectorats_vice-rectorats_et_services_departementaux_de_l_Education_nationale"
-                                      }
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30638"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Ministère chargé de l'éducation"
-                                        }
-                                      ]
+                                      "text": " (collège de secteur ou autre collège), vous devez procédez à son inscription dans l'établissement."
                                     }
                                   ]
                                 }
@@ -1404,287 +2040,9 @@
                     },
                     {
                       "type": "element",
-                      "name": "Cas",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Parents domiciliés à l'étranger"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "La domiciliation des parents à l'étranger ne peut pas être une cause de refus d'inscription d'un enfant soumis à obligation scolaire."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Chaque enfant doit être inscrit dans l'une des communes suivantes :"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Liste",
-                          "attributes": {
-                            "type": "puce"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Commune où ses parents ont une résidence"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Commune du domicile de la personne qui garde l'enfant"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Commune où existe un établissement destiné aux enfants de Français établis à l'étranger"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Contactez la direction des services départementaux de l'éducation nationale du lieu de résidence de l'enfant pour connaître son collège d'affectation."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "OuSAdresser",
-                          "attributes": {
-                            "ID": "R24",
-                            "sve": "non",
-                            "type": "Local personnalisé sur SP"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Direction des services départementaux de l'Éducation nationale"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "PivotLocal",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "inspection_academique"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "RessourceWeb",
-                              "attributes": {
-                                "URL": "http://www.education.gouv.fr/cid3/les-regions-academiques-academies-et-services-departementaux-de-l-education-nationale.html#La_carte_des_regions_academiques_et_les_coordonnees_des_rectorats_vice-rectorats_et_services_departementaux_de_l_Education_nationale"
-                              }
-                            },
-                            {
-                              "type": "element",
-                              "name": "Source",
-                              "attributes": {
-                                "ID": "R30638"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Ministère chargé de l'éducation"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Chapitre",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Dérogation"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "SousChapitre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Demande"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Si vous souhaitez que votre enfant soit admis dans un collège public différent de celui de votre secteur, vous devez faire une demande de dérogation au "
-                        },
-                        {
-                          "type": "element",
-                          "name": "LienInterne",
-                          "attributes": {
-                            "LienPublication": "R31460",
-                            "type": "Acronyme"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Dasen"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": "."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Vous devez faire la demande à l'aide d'un formulaire."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Vous pouvez retirer le document auprès de la direction des services départementaux de l'éducation nationale de votre lieu de résidence."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Les justificatifs à fournir sont indiqués dans le formulaire d'assouplissement à la carte scolaire. Ils varient selon l'académie et le motif de la demande de dérogation."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "La demande devra être remise selon les cas auprès l'établissement scolaire de votre enfant ou de la direction des services départementaux de l'éducation nationale de votre lieu de résidence."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Dans certains départements, la demande se fait en ligne sur le site de la direction des services départementaux de l'éducation nationale."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "OuSAdresser",
+                      "name": "Chapitre",
                       "attributes": {
-                        "ID": "R24",
-                        "sve": "non",
-                        "type": "Local personnalisé sur SP"
+                        "type": "important"
                       },
                       "children": [
                         {
@@ -1692,211 +2050,14 @@
                           "name": "Titre",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Direction des services départementaux de l'Éducation nationale"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "PivotLocal",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "inspection_academique"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "RessourceWeb",
-                          "attributes": {
-                            "URL": "http://www.education.gouv.fr/cid3/les-regions-academiques-academies-et-services-departementaux-de-l-education-nationale.html#La_carte_des_regions_academiques_et_les_coordonnees_des_rectorats_vice-rectorats_et_services_departementaux_de_l_Education_nationale"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Source",
-                          "attributes": {
-                            "ID": "R30638"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Ministère chargé de l'éducation"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "SousChapitre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Titre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Traitement"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Votre demande sera acceptée si l'établissement souhaité dispose de la capacité d'accueil suffisante."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Si le nombre de demandes dépasse les capacités d'accueil d'un établissement, les dérogations sont accordées selon l'ordre de priorité suivant :"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Liste",
-                      "attributes": {
-                        "type": "numero"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
                               "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Élève handicapé, qui bénéficie d'une priorité absolue"
+                                  "text": "Quelles sont les démarches d'inscription à faire ?"
                                 }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Élève nécessitant une prise en charge médicale importante près du collège demandé"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Élève boursier au mérite"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Élève boursier sur critères sociaux"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Élève dont un frère ou une sœur est déjà scolarisé dans le collège souhaité"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Élève qui doit suivre un parcours scolaire particulier (intégration d'une section sportive ou d'une classe internationale notamment)"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Vous pouvez indiquer plusieurs motifs simultanément dans la demande de dérogation."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Attention",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Attention"
                             }
                           ]
                         },
@@ -1906,91 +2067,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "vous devez faire votre demande de dérogation avant l'inscription de votre enfant. Une fois l'affectation décidée par le "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "R31460",
-                                "type": "Acronyme"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Dasen"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " (collège de secteur ou autre collège), vous devez procédez à son inscription dans l'établissement."
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Chapitre",
-              "attributes": {
-                "type": "important"
-              },
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Démarches d'inscription"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "BlocCas",
-                  "attributes": {
-                    "affichage": "radio"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Cas",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Inscription à l'entrée en 6e"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Introduction",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous pouvez inscrire votre enfant au secrétariat du collège. Certains établissements proposent aussi de s'inscrire en ligne. Renseignez-vous auprès du collège pour savoir si cette possibilité vous est offerte."
-                                }
-                              ]
+                              "text": "Les démarches diffèrent selon le type d'inscription."
                             }
                           ]
                         },
@@ -2011,7 +2088,586 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Au secrétariat du collège"
+                                      "text": "Inscription à l'entrée en 6e"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Introduction",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous pouvez inscrire votre enfant au secrétariat du collège. Certains établissements proposent aussi de s'inscrire en ligne. Renseignez-vous auprès du collège pour savoir si cette possibilité vous est offerte."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "BlocCas",
+                                  "attributes": {
+                                    "affichage": "radio"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cas",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Titre",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Au secrétariat du collège"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous devez retirer un dossier d'inscription au secrétariat du collège."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "La composition du dossier d'inscription varie d'un établissement à l'autre."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous devez le compléter et le remettre au secrétariat du collège."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Ce dossier peut être constitué des documents suivants :"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Liste",
+                                          "attributes": {
+                                            "type": "puce"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Item",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Formulaire de demande d'inscription"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Item",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Pièce d'identité des parents et de l'enfant"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Item",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Photocopie du livret de famille"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Item",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Justificatif de domicile"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Item",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Photos d'identité de l'enfant"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cas",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Titre",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "En ligne"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Certains collèges proposent une inscription en ligne."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous devez vous connecter au portail EduConnect. Préparez vos "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R48788",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "identifiants FranceConnect"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " ou "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Expression",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "EduConnect"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": "."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "ServiceEnLigne",
+                                          "attributes": {
+                                            "ID": "R59554",
+                                            "URL": "https://educonnect.education.gouv.fr",
+                                            "type": "Formulaire"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Titre",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Inscription en classe de 6ème"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Source",
+                                              "attributes": {
+                                                "ID": "R30638"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Ministère chargé de l'éducation"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Introduction",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Texte",
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "Paragraphe",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "Vous devez utiliser vos identifiants EduConnect ou "
+                                                        },
+                                                        {
+                                                          "type": "element",
+                                                          "name": "LienIntra",
+                                                          "attributes": {
+                                                            "LienID": "R48788",
+                                                            "type": "Définition de glossaire"
+                                                          },
+                                                          "children": [
+                                                            {
+                                                              "type": "text",
+                                                              "text": "France Connect"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "text",
+                                                          "text": "."
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "L'inscription en ligne vous permet d'effectuer les démarches suivantes :"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Liste",
+                                          "attributes": {
+                                            "type": "puce"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Item",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Inscrire administrativement votre enfant dans son collège d'affectation"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Liste",
+                                          "attributes": {
+                                            "type": "puce"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Item",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Exprimer votre souhait pour l'enseignement optionnel et l'hébergement (externat, demi-pension, internat)"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Liste",
+                                          "attributes": {
+                                            "type": "puce"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Item",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Vérifier et compléter vos informations administratives et celles de votre enfant"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Liste",
+                                          "attributes": {
+                                            "type": "puce"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Item",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Prendre connaissance de documents complémentaires dont certains sont à rendre au collège."
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Si vous avez besoin d'aide pour effectuer votre inscription en ligne, vous pouvez contacter la plateforme dédiée :"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "OuSAdresser",
+                                          "attributes": {
+                                            "ID": "R59556",
+                                            "sve": "non",
+                                            "type": "National"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Titre",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Assistance à l'inscription en 6ème en ligne"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Source",
+                                              "attributes": {
+                                                "ID": "R30638"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Ministère chargé de l'éducation"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Texte",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Chapitre",
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "Titre",
+                                                      "children": [
+                                                        {
+                                                          "type": "element",
+                                                          "name": "Paragraphe",
+                                                          "children": [
+                                                            {
+                                                              "type": "text",
+                                                              "text": "Par téléphone"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "Paragraphe",
+                                                      "children": [
+                                                        {
+                                                          "type": "element",
+                                                          "name": "MiseEnEvidence",
+                                                          "children": [
+                                                            {
+                                                              "type": "text",
+                                                              "text": "0 809 54 06 06"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "text",
+                                                          "text": " (prix d'un appel local). Service disponible du lundi au vendredi de 8h à 20h et le samedi de 8h à 12h."
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "Chapitre",
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "Titre",
+                                                      "children": [
+                                                        {
+                                                          "type": "element",
+                                                          "name": "Paragraphe",
+                                                          "children": [
+                                                            {
+                                                              "type": "text",
+                                                              "text": "En ligne"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "Paragraphe",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "Connectez-vous sur le "
+                                                        },
+                                                        {
+                                                          "type": "element",
+                                                          "name": "LienExterne",
+                                                          "attributes": {
+                                                            "URL": "https://assistanceteleservices.education.gouv.fr/"
+                                                          },
+                                                          "children": [
+                                                            {
+                                                              "type": "text",
+                                                              "text": "lien dédié du ministère de l'éducation"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "text",
+                                                          "text": "."
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Réinscription dans le même collège"
                                     }
                                   ]
                                 },
@@ -2021,7 +2677,199 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Vous devez retirer un dossier d'inscription au secrétariat du collège."
+                                      "text": "Quand votre enfant ne change pas d'établissement, la réinscription pour l'année suivante est automatique."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Toutefois, vous devez actualiser certaines informations sur votre situation personnelle. Vous pouvez aussi choisir des enseignements facultatifs, si l'établissement en propose."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Ces informations peuvent être transmises "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "sous format papier"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ". Vous recevez un dossier, appelé "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "fiche navette"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ", vous indiquant les informations à fournir."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous pouvez aussi le faire "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "en ligne"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " en vous connectant sur le portail EduConnect. Préparez vos "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R48788",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "identifiants FranceConnect"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " ou "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "EduConnect"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ServiceEnLigne",
+                                  "attributes": {
+                                    "ID": "R62741",
+                                    "URL": "https://educonnect.education.gouv.fr",
+                                    "type": "Téléservice"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Actualiser votre situation personnelle"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30638"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ministère chargé de l'éducation"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Changement de collège"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "À la fin de l'année scolaire, si vous souhaitez inscrire votre enfant dans un autre collège que celui de votre secteur, vous devez d'abord obtenir une dérogation du "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "R31460",
+                                        "type": "Acronyme"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Dasen"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Une fois la dérogation obtenue, vous devez ensuite inscrire votre enfant en retirant un dossier d'inscription auprès du secrétariat du collège."
                                     }
                                   ]
                                 },
@@ -2143,83 +2991,10 @@
                                       ]
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cas",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "En ligne"
-                                    }
-                                  ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Certains collèges proposent une inscription en ligne."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous devez vous connecter au portail EduConnect. Préparez vos "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R48788",
-                                        "type": "Définition de glossaire"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "identifiants FranceConnect"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " ou "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Expression",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "EduConnect"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ServiceEnLigne",
-                                  "attributes": {
-                                    "ID": "R59554",
-                                    "URL": "https://educonnect.education.gouv.fr",
-                                    "type": "Formulaire"
-                                  },
+                                  "name": "ANoter",
                                   "children": [
                                     {
                                       "type": "element",
@@ -2227,311 +3002,36 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Inscription en classe de 6ème"
+                                          "text": "À noter"
                                         }
                                       ]
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30638"
-                                      },
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Ministère chargé de l'éducation"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Introduction",
-                                      "children": [
+                                          "text": "la procédure est différente si votre enfant doit "
+                                        },
                                         {
                                           "type": "element",
-                                          "name": "Texte",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Vous devez utiliser vos identifiants EduConnect ou "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "LienIntra",
-                                                  "attributes": {
-                                                    "LienID": "R48788",
-                                                    "type": "Définition de glossaire"
-                                                  },
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "France Connect"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": "."
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "L'inscription en ligne vous permet d'effectuer les démarches suivantes :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F20393",
+                                            "type": "Fiche d'information conditionnée",
+                                            "audience": "Particuliers"
+                                          },
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Inscrire administrativement votre enfant dans son collège d'affectation"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Exprimer votre souhait pour l'enseignement optionnel et l'hébergement (externat, demi-pension, internat)"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Vérifier et compléter vos informations administratives et celles de votre enfant"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Liste",
-                                  "attributes": {
-                                    "type": "puce"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Item",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Prendre connaissance de documents complémentaires dont certains sont à rendre au collège."
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Si vous avez besoin d'aide pour effectuer votre inscription en ligne, vous pouvez contacter la plateforme dédiée :"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "OuSAdresser",
-                                  "attributes": {
-                                    "ID": "R59556",
-                                    "sve": "non",
-                                    "type": "National"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Assistance à l'inscription en 6ème en ligne"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R30638"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Ministère chargé de l'éducation"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Texte",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Chapitre",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Titre",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Par téléphone"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "MiseEnEvidence",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "0 809 54 06 06"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": " (prix d'un appel local). Service disponible du lundi au vendredi de 8h à 20h et le samedi de 8h à 12h."
-                                                }
-                                              ]
+                                              "text": "changer d'établissement en cours d'année"
                                             }
                                           ]
                                         },
                                         {
-                                          "type": "element",
-                                          "name": "Chapitre",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Titre",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "En ligne"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Connectez-vous sur le "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "LienExterne",
-                                                  "attributes": {
-                                                    "URL": "https://assistanceteleservices.education.gouv.fr/"
-                                                  },
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "lien dédié du ministère de l'éducation"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": "."
-                                                }
-                                              ]
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "."
                                         }
                                       ]
                                     }
@@ -2542,352 +3042,199 @@
                           ]
                         }
                       ]
-                    },
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Situation",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Privé"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
                     {
                       "type": "element",
-                      "name": "Cas",
+                      "name": "Paragraphe",
                       "children": [
                         {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Réinscription dans le même collège"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Quand votre enfant ne change pas d'établissement, la réinscription pour l'année suivante est automatique."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Toutefois, vous devez actualiser certaines informations sur votre situation personnelle. Vous pouvez aussi choisir des enseignements facultatifs, si l'établissement en propose."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Ces informations peuvent être transmises "
-                            },
-                            {
-                              "type": "element",
-                              "name": "MiseEnEvidence",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "sous format papier"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": ". Vous recevez un dossier, appelé "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Expression",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "fiche navette"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": ", vous indiquant les informations à fournir."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Vous pouvez aussi le faire "
-                            },
-                            {
-                              "type": "element",
-                              "name": "MiseEnEvidence",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "en ligne"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " en vous connectant sur le portail EduConnect."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "ServiceEnLigne",
-                          "attributes": {
-                            "ID": "R62741",
-                            "URL": "https://educonnect.education.gouv.fr",
-                            "type": "Téléservice"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Actualiser votre situation personnelle"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Source",
-                              "attributes": {
-                                "ID": "R30638"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Ministère chargé de l'éducation"
-                                }
-                              ]
-                            }
-                          ]
+                          "type": "text",
+                          "text": "Pour inscrire votre enfant dans l'enseignement privé, vous devez directement prendre contact avec le collège que vous avez choisi."
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Cas",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Le collège vous indiquera la procédure d'inscription à suivre."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous devrez notamment fournir les documents suivants :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "Titre",
+                          "name": "Item",
                           "children": [
-                            {
-                              "type": "text",
-                              "text": "Changement de collège"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "À la fin de l'année scolaire, si vous souhaitez inscrire votre enfant dans un autre collège que celui de votre secteur, vous devez d'abord obtenir une dérogation du "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "R31460",
-                                "type": "Acronyme"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Dasen"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Une fois la dérogation obtenue, vous devez ensuite inscrire votre enfant en retirant un dossier d'inscription auprès du secrétariat du collège."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "La composition du dossier d'inscription varie d'un établissement à l'autre."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Vous devez le compléter et le remettre au secrétariat du collège."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Ce dossier peut être constitué des documents suivants :"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Liste",
-                          "attributes": {
-                            "type": "puce"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Formulaire de demande d'inscription"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Pièce d'identité des parents et de l'enfant"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Photocopie du livret de famille"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Justificatif de domicile"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Photos d'identité de l'enfant"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "ANoter",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "À noter"
-                                }
-                              ]
-                            },
                             {
                               "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "la procédure est différente si l'élève doit "
-                                },
+                                  "text": "Décision d'orientation"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Bulletins trimestriels de l'année écoulée"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
                                 {
                                   "type": "element",
                                   "name": "LienInterne",
                                   "attributes": {
-                                    "LienPublication": "F20393",
+                                    "LienPublication": "F197",
                                     "type": "Fiche d'information conditionnée",
                                     "audience": "Particuliers"
                                   },
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "changer d'établissement en cours d'année"
+                                      "text": "Certificats de vaccinations obligatoires"
                                     }
                                   ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": "."
                                 }
                               ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Fiche de renseignements (concernant les parents)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Justificatif de domicile"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "ANoter",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "À noter"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "la procédure est différente si votre enfant doit "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "F20393",
+                                "type": "Fiche d'information conditionnée",
+                                "audience": "Particuliers"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "changer d'établissement en cours d'année"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
                             }
                           ]
                         }
@@ -2942,6 +3289,57 @@
                       ]
                     }
                   ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "OuSAdresser",
+          "attributes": {
+            "ID": "R24",
+            "sve": "non",
+            "type": "Local personnalisé sur SP"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Direction des services départementaux de l'Éducation nationale"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "PivotLocal",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "inspection_academique"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "RessourceWeb",
+              "attributes": {
+                "URL": "http://www.education.gouv.fr/cid3/les-regions-academiques-academies-et-services-departementaux-de-l-education-nationale.html#La_carte_des_regions_academiques_et_les_coordonnees_des_rectorats_vice-rectorats_et_services_departementaux_de_l_Education_nationale"
+              }
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R30638"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Ministère chargé de l'éducation"
                 }
               ]
             }
@@ -3095,6 +3493,41 @@
                 {
                   "type": "text",
                   "text": "Le fonctionnement de la carte scolaire dans le 2nd degré"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R30638"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Ministère chargé de l'éducation"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "PourEnSavoirPlus",
+          "attributes": {
+            "type": "Information pratique",
+            "ID": "R65000",
+            "URL": "https://www.education.gouv.fr/l-inscription-au-college-11987",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "L'inscription au collège"
                 }
               ]
             },
