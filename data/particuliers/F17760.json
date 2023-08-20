@@ -322,6 +322,48 @@
         },
         {
           "type": "element",
+          "name": "Introduction",
+          "children": [
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Vous êtes étranger et vous venez en vacances en France (ou pour un court séjour) et vous souhaitez savoir si vous pouvez bénéficier de soins médicaux imprévus et nécessaires ?"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Vous souhaitez savoir si vous pouvez être remboursé de vos dépenses de santé en France ?"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Nous vous présentons les informations à connaître."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "ListeSituations",
           "attributes": {
             "affichage": "onglet"
@@ -337,7 +379,20 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Ressortissant de l'Union européenne, Islande, Liechtenstein, Norvège ou Suisse"
+                      "text": "Ressortissant de l'UE, Islande, Liechtenstein, Norvège ou Suisse"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10266"
+                      }
                     }
                   ]
                 },
@@ -427,7 +482,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Comment obtenir la CEAM?"
+                                  "text": "Comment obtenir la CEAM ?"
                                 }
                               ]
                             }
@@ -1041,7 +1096,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Que faire en cas d'oubli de la CEAM ?"
+                                  "text": "Que faire en cas d'oubli de la CEAM ?"
                                 }
                               ]
                             }
@@ -1084,6 +1139,19 @@
                     {
                       "type": "text",
                       "text": "Ressortissant du Royaume-Uni"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T12799"
+                      }
                     }
                   ]
                 },
@@ -1155,7 +1223,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Comment obtenir votre carte globale d'assurance maladie (GHIC en anglais)?"
+                                  "text": "Comment obtenir votre carte globale d'assurance maladie (GHIC en anglais) ?"
                                 }
                               ]
                             }
@@ -1251,7 +1319,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "À quoi sert la carte globale d'assurance maladie (GHIC en anglais)?"
+                                  "text": "À quoi sert la carte globale d'assurance maladie (GHIC en anglais) ?"
                                 }
                               ]
                             }
@@ -1388,7 +1456,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Que faire en cas de perte, vol ou oubli de votre carte ?"
+                                  "text": "Que faire en cas de perte, vol ou oubli de votre carte ?"
                                 }
                               ]
                             }
@@ -1623,23 +1691,14 @@
                 },
                 {
                   "type": "element",
-                  "name": "Introduction",
+                  "name": "Condition",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Texte",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Vous êtes ressortissant d'un autre pays et désirez faire un séjour en France ? Les règles ne sont pas les mêmes selon votre pays d'origine."
-                            }
-                          ]
-                        }
-                      ]
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11723"
+                      }
                     }
                   ]
                 },
@@ -1671,7 +1730,7 @@
                         },
                         {
                           "type": "text",
-                          "text": " et si vous n 'êtes pas ressortissant du Royaume-Uni, vous devez vous mettre en relation avec votre assurance santé de votre pays "
+                          "text": " et si vous n'êtes pas ressortissant du Royaume-Uni, vous devez vous mettre en relation avec votre assurance santé de votre pays "
                         },
                         {
                           "type": "element",
@@ -1919,57 +1978,6 @@
                       ]
                     }
                   ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "OuSAdresser",
-          "attributes": {
-            "ID": "R40",
-            "sve": "non",
-            "type": "Local personnalisé sur SP"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Caisse primaire d'assurance maladie (CPAM)"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "PivotLocal",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "cpam"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "RessourceWeb",
-              "attributes": {
-                "URL": "https://www.ameli.fr/assure/adresses-et-contacts"
-              }
-            },
-            {
-              "type": "element",
-              "name": "Source",
-              "attributes": {
-                "ID": "R30675"
-              },
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Caisse nationale d'assurance maladie (Cnam)"
                 }
               ]
             }
