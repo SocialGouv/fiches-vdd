@@ -1,3 +1,17 @@
+# [2.790.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.789.0...v2.790.0) (2023-09-06)
+
+
+### Bug Fixes
+
+* **alert:** enable lfs on the repository ([dc01028](https://github.com/SocialGouv/fiches-vdd/commit/dc01028df3a5a83ea34d702d30db9df731ca7f64))
+* **data:** don't save file over 100MB due to git limitation ([64a3e43](https://github.com/SocialGouv/fiches-vdd/commit/64a3e439724fb7c6f4b7aa3bc51cc9a22e964740))
+* **data:** don't save file over 100MB due to git limitation ([c01d034](https://github.com/SocialGouv/fiches-vdd/commit/c01d0340d069a2e91def0419832bc190d34b711e))
+
+
+### Features
+
+* **data:** 20230906_1249 update ([2824ecd](https://github.com/SocialGouv/fiches-vdd/commit/2824ecd783a9660732952a3cb3f1227fcc0e7dfa))
+
 # [2.789.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.788.0...v2.789.0) (2023-08-31)
 
 
