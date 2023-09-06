@@ -42,10 +42,19 @@ const fetchAll = async () => {
     const writeSpinner = ora(`Writing "${type}" fiches`).start();
     fiches.forEach((fiche) => {
       const fileName = `./data/${type}/${fiche.id}.json`;
-      try {
-        fs.writeFileSync(fileName, JSON.stringify(fiche, null, 2));
-      } catch (err) {
-        writeSpinner.warn(`Error saving "${fileName}": ${err.message}`);
+      const fileContent = JSON.stringify(fiche, null, 2);
+      if (fileContent.length > 100000000) {
+        writeSpinner.warn(
+          `Error saving "${fileName}": Size is too big ${
+            fileContent.length / 1000000
+          }MB (git limitation is 100MB). If you need this file, please consider using git-lfs or compression.`
+        );
+      } else {
+        try {
+          fs.writeFileSync(fileName, fileContent);
+        } catch (err) {
+          writeSpinner.warn(`Error saving "${fileName}": ${err.message}`);
+        }
       }
     });
     const indexName = `./data/${type}/index.json`;
