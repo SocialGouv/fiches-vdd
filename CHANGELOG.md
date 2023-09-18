@@ -1,3 +1,10 @@
+# [2.802.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.801.0...v2.802.0) (2023-09-18)
+
+
+### Features
+
+* update schedule to run at midnight ([7b13c88](https://github.com/SocialGouv/fiches-vdd/commit/7b13c88ff3714e3546ba5161126090aed5ab499d))
+
 # [2.801.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.800.0...v2.801.0) (2023-09-18)
 
 
