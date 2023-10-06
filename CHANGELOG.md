@@ -1,3 +1,10 @@
+# [2.819.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.818.0...v2.819.0) (2023-10-06)
+
+
+### Features
+
+* **data:** 20231006_2215 update ([830e5f3](https://github.com/SocialGouv/fiches-vdd/commit/830e5f3ce16ade7aaea0545dcdec84354a97618d))
+
 # [2.818.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.817.0...v2.818.0) (2023-10-05)
 
 
