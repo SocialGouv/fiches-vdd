@@ -50,7 +50,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Les démarches diffèrent selon que l'animal errant (chat, chien, furet) se laisse approcher et identifié."
+              "text": "Les démarches diffèrent selon que l'animal errant (chat, chien, furet) se laisse approcher et est identifié ou non."
             }
           ]
         },
@@ -80,7 +80,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2021-11-26"
+              "text": "modified 2023-10-23"
             }
           ]
         },
@@ -412,20 +412,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Si l'animal se laisse approcher"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Condition",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "estVrai",
-                      "attributes": {
-                        "var": "T12853"
-                      }
+                      "text": "L'animal se laisse approcher"
                     }
                   ]
                 },
@@ -469,7 +456,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Mise en fourrière"
+                                  "text": "Faire placer l'animal en fourrière"
                                 }
                               ]
                             }
@@ -481,7 +468,21 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Vous pouvez amener l'animal à la mairie, à la gendarmerie ou au commissariat pour qu'il soit transféré en fourrière."
+                              "text": "Vous pouvez contacter "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "la mairie."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " En dehors des horaires d’ouverture, contactez le numéro d’urgence de la mairie."
                             }
                           ]
                         },
@@ -491,7 +492,37 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Vous pouvez aussi conduire vous-même l’animal en fourrière. L'adresse de la fourrière compétente pour la commune où vous avez trouvé l'animal est disponible en mairie."
+                              "text": "La municipalité est responsable des animaux errants sur sa commune et doit organiser leur prise en charge et leurs soins."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "La mairie vous communiquera les coordonnées de la fourrière ou d’un service de ramassage qui pourra venir chercher l’animal ou d'un vétérinaire avec lequel elle a une convention."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si vous n'arrivez pas à joindre la mairie, contactez le commissariat ou la gendarmerie."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous pouvez aussi conduire vous-même l’animal en fourrière."
                             }
                           ]
                         },
@@ -669,7 +700,17 @@
                             },
                             {
                               "type": "text",
-                              "text": ", si l'animal n'a pas été réclamé par son propriétaire, il est considéré comme abandonné et devient la propriété du gestionnaire de la fourrière. Le délai franc de 8 jours ouvrés commence le lendemain du jour où l'animal arrive en fourrière et comprend la journée qui suit le jour où le délai de 8 jours ouvrés prend fin."
+                              "text": ", si l'animal n'a pas été réclamé par son propriétaire, il est considéré comme abandonné et devient la propriété du gestionnaire de la fourrière."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Le délai franc de 8  jours ouvrés commence le lendemain du jour où l'animal arrive en fourrière et comprend la journée qui suit le jour où le délai de 8 jours ouvrés prend fin."
                             }
                           ]
                         },
@@ -721,7 +762,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si vous obtenez le numéro d'identification de l'animal, vous pouvez le déclarer trouvé à la société I-Cad qui gère le fichier national d'identification des carnivores domestiques en France."
+                              "text": "Si vous obtenez le numéro d'identification de l'animal, vous pouvez faire une déclaration, pour indiquer que vous avez trouvé l'animal, auprès de la société I-Cad qui gère le fichier national d'identification des carnivores domestiques en France."
                             }
                           ]
                         },
@@ -731,262 +772,39 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "La déclaration peut s'effectuer en ligne ou au moyen de l'application Filalapat que vous pouvez télécharger sur votre téléphone mobile ou en adressant un courriel à l'I-Cad."
+                              "text": "La déclaration peut s'effectuer en ligne ou au moyen de l'application Filalapat que vous pouvez télécharger sur votre téléphone mobile."
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "BlocCas",
+                          "name": "ServiceEnLigne",
                           "attributes": {
-                            "affichage": "onglet"
+                            "ID": "R31829",
+                            "URL": "https://www.i-cad.fr/articles/animal_trouve",
+                            "type": "Téléservice"
                           },
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "En ligne"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "ServiceEnLigne",
-                                  "attributes": {
-                                    "ID": "R31829",
-                                    "URL": "https://www.i-cad.fr/articles/animal_trouve",
-                                    "type": "Téléservice"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Déclarer à l'I-cad un animal domestique trouvé (chat, chien, furet)"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Source",
-                                      "attributes": {
-                                        "ID": "R31830"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Société d'identification des carnivores domestiques (I-CAD)"
-                                        }
-                                      ]
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Déclarer à l'I-cad un animal domestique trouvé (chat, chien, furet)"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cas",
+                              "name": "Source",
+                              "attributes": {
+                                "ID": "R31830"
+                              },
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Par courriel"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "OuSAdresser",
-                                  "attributes": {
-                                    "ID": "R31835",
-                                    "sve": "non",
-                                    "type": "Centre de contact"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "I-CAD, identification des carnivores domestiques"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Texte",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Organisme agréé pour gérer le fichier national d'identification des carnivores domestiques (chiens, chats et furets)"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Chapitre",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Titre",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Par téléphone"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "MiseEnEvidence",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "09 77 40 30 77"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Ouvert du lundi ou vendredi de 8h30 à 17h30"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Appel non surtaxé"
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Chapitre",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Titre",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Par messagerie"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Accès au "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "LienExterne",
-                                                  "attributes": {
-                                                    "URL": "https://www.i-cad.fr/contact"
-                                                  },
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "formulaire de contact"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Chapitre",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Titre",
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Paragraphe",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Par courrier"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "112-114 avenue Gabriel Péri"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "94246 L'Haÿ-les-Roses Cedex"
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Société d'identification des carnivores domestiques (I-CAD)"
                                 }
                               ]
                             }
@@ -1132,8 +950,18 @@
                           "name": "Paragraphe",
                           "children": [
                             {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "S'il n'est pas identifié "
+                                }
+                              ]
+                            },
+                            {
                               "type": "text",
-                              "text": "S'il n'est pas identifié ou si son propriétaire ne souhaite pas le récupérer, faites identifier l'animal à votre nom pour qu'il devienne le vôtre."
+                              "text": "ou si son propriétaire ne souhaite pas le récupérer, faites identifier l'animal à votre nom pour qu'il devienne le vôtre."
                             }
                           ]
                         },
@@ -1153,7 +981,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Le vétérinaire informe l'I-Cad de cette identification dans les 8 jours. L'I-Cad vous transmet ensuite la carte d'identification définitive."
+                              "text": "Le vétérinaire informe l'I-Cad de cette identification dans les 8 jours. L'I-Cad vous transmetpar la suite la carte d'identification définitive."
                             }
                           ]
                         },
@@ -1162,8 +990,18 @@
                           "name": "Paragraphe",
                           "children": [
                             {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si l'animal est identifié"
+                                }
+                              ]
+                            },
+                            {
                               "type": "text",
-                              "text": "Si l'animal est identifié et si son propriétaire ne le réclame pas, vous devez faire établir, par un vétérinaire, une demande de duplicata de la carte d'identification."
+                              "text": " et si son propriétaire ne le réclame pas, vous devez faire établir, par un vétérinaire, une demande de duplicata de la carte d'identification."
                             }
                           ]
                         },
@@ -1181,7 +1019,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "4,92 €"
+                                  "text": "12 €"
                                 }
                               ]
                             },
@@ -1409,20 +1247,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Si l'animal ne se laisse pas approcher"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Condition",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "estVrai",
-                      "attributes": {
-                        "var": "T12852"
-                      }
+                      "text": "L'animal est fuyant"
                     }
                   ]
                 },
@@ -1436,7 +1261,51 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Contactez la mairie, la gendarmerie ou le commissariat de la commune où vous l'avez vu pour que ces services contactent la fourrière."
+                          "text": "Vous pouvez contacter "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "la mairie."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " En dehors des horaires d’ouverture, contactez le numéro d’urgence de la mairie."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "La municipalité est responsable des animaux errants sur sa commune et doit organiser leur prise en charge et leurs soins."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "La mairie vous communiquera les coordonnées de la fourrière ou d’un service de ramassage qui pourra venir chercher l’animal ou d'un vétérinaire avec lequel elle a une convention."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Si vous n'arrivez pas à joindre la mairie, contactez le commissariat ou la gendarmerie."
                         }
                       ]
                     },
