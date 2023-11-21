@@ -10,6 +10,7 @@
         "ID": "F34789",
         "type": "Fiche Question-réponse conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "dateDerniereModificationImportante": "2023-11-21T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F34789"
       },
       "children": [
@@ -49,7 +50,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Vous pouvez consulter le relevé d'information restreint (RIR) en ligne (Télépoints). Le RIR indique la validité et l'étendue de votre droit à conduire."
+              "text": "Vous pouvez consulter le relevé d'information restreint (RIR) en ligne (Mes points permis). Le RIR indique la validité et l'étendue de votre droit à conduire."
             }
           ]
         },
@@ -79,7 +80,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2023-05-09"
+              "text": "modified 2023-11-21"
             }
           ]
         },
@@ -845,8 +846,14 @@
                                   "name": "MiseEnEvidence",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Télépoints"
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Mes points permis"
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
@@ -889,7 +896,7 @@
                               "name": "ServiceEnLigne",
                               "attributes": {
                                 "ID": "R17121",
-                                "URL": "https://tele7.interieur.gouv.fr/tlp/",
+                                "URL": "https://mespoints.permisdeconduire.gouv.fr",
                                 "type": "Téléservice"
                               },
                               "children": [
@@ -899,7 +906,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Permis de conduire : consulter ses points et ses relevés (Télépoints)"
+                                      "text": "Permis de conduire : consulter ses points et ses relevés"
                                     }
                                   ]
                                 },
@@ -924,120 +931,98 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Le "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "numéro de dossier NEPH"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " est indiqué "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "sur le permis de conduire"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " et sur votre "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F34791",
-                                    "type": "Fiche Question-réponse conditionnée",
-                                    "audience": "Particuliers"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "relevé d'information intégral"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": "."
+                                  "text": "Le numéro de dossier du permis de conduire (ou NEPH) se compose de 5 à 19 caractères et se trouve sur les documents suivants :"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Le "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "code confidentiel Télépoints"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Votre permis de conduire"
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": " est indiqué sur le "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "courrier accompagnant le permis de conduire"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Votre attestation de droits à conduire fournie par l’"
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "R50821",
+                                            "type": "Sigle"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "ANTS"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " à la suite d'une déclaration de perte. Le numéro NEPH est indiqué dans la zone “Caractéristiques du permis de conduire” (N°)."
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": " au format sécurisé \""
-                                },
-                                {
                                   "type": "element",
-                                  "name": "Expression",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "carte de crédit"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Les lettres que vous avez reçues pour vous informer de la perte ou de la récupération de points sur votre permis. Le numéro NEPH est indiqué en haut à gauche (“Votre n° de dossier”) ou tout en haut."
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": "\" ou sur un "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "courrier vous informant d'un retrait de points"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Votre relevé d’information restreint (RIR) ou intégral (RII) si vous en avez déjà fait la demande, par internet ou en préfecture. Le numéro NEPH est indiqué dans la zone “Numéro du permis de conduire”."
+                                        }
+                                      ]
                                     }
                                   ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " (48N, 48M, 48SI). Le code confidentiel Télépoints est aussi indiqué sur votre relevé d'information intégral."
                                 }
                               ]
                             }
@@ -1325,8 +1310,14 @@
                                   "name": "MiseEnEvidence",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Télépoints"
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Mes points permis"
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
@@ -1369,7 +1360,7 @@
                               "name": "ServiceEnLigne",
                               "attributes": {
                                 "ID": "R17121",
-                                "URL": "https://tele7.interieur.gouv.fr/tlp/",
+                                "URL": "https://mespoints.permisdeconduire.gouv.fr",
                                 "type": "Téléservice"
                               },
                               "children": [
@@ -1379,7 +1370,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Permis de conduire : consulter ses points et ses relevés (Télépoints)"
+                                      "text": "Permis de conduire : consulter ses points et ses relevés"
                                     }
                                   ]
                                 },
@@ -1404,120 +1395,98 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Le "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "numéro de dossier NEPH"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " est indiqué "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "sur le permis de conduire"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " et sur votre "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F34791",
-                                    "type": "Fiche Question-réponse conditionnée",
-                                    "audience": "Particuliers"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "relevé d'information intégral"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": "."
+                                  "text": "Le numéro de dossier du permis de conduire (ou NEPH) se compose de 5 à 19 caractères et se trouve sur les documents suivants :"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Le "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "code confidentiel Télépoints"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Votre permis de conduire"
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": " est indiqué sur le "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "courrier accompagnant le permis de conduire"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Votre attestation de droits à conduire fournie par l’"
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "R50821",
+                                            "type": "Sigle"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "ANTS"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " à la suite d'une déclaration de perte. Le numéro NEPH est indiqué dans la zone “Caractéristiques du permis de conduire” (N°)."
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": " au format sécurisé \""
-                                },
-                                {
                                   "type": "element",
-                                  "name": "Expression",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "carte de crédit"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Les lettres que vous avez reçues pour vous informer de la perte ou de la récupération de points sur votre permis. Le numéro NEPH est indiqué en haut à gauche (“Votre n° de dossier”) ou tout en haut."
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": "\" ou sur un "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "courrier vous informant d'un retrait de points"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Votre relevé d’information restreint (RIR) ou intégral (RII) si vous en avez déjà fait la demande, par internet ou en préfecture. Le numéro NEPH est indiqué dans la zone “Numéro du permis de conduire”."
+                                        }
+                                      ]
                                     }
                                   ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " (48N, 48M, 48SI). Le code confidentiel Télépoints est aussi indiqué sur votre relevé d'information intégral."
                                 }
                               ]
                             }
@@ -2129,7 +2098,7 @@
           "name": "ServiceEnLigne",
           "attributes": {
             "ID": "R17121",
-            "URL": "https://tele7.interieur.gouv.fr/tlp/",
+            "URL": "https://mespoints.permisdeconduire.gouv.fr",
             "type": "Téléservice"
           },
           "children": [
@@ -2139,7 +2108,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Permis de conduire : consulter ses points et ses relevés (Télépoints)"
+                  "text": "Permis de conduire : consulter ses points et ses relevés"
                 }
               ]
             },
@@ -2254,6 +2223,42 @@
                     {
                       "type": "text",
                       "text": "Obligation de réparer le préjudice résultant soit de l'inexécution d'un contrat, soit de la violation du devoir général de ne causer aucun dommage à autrui"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Abreviation",
+          "attributes": {
+            "ID": "R50821",
+            "type": "Sigle"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "ANTS"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Agence nationale des titres sécurisés"
                     }
                   ]
                 }
