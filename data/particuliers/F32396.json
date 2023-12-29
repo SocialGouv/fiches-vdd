@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2022-06-21"
+              "text": "modified 2023-12-29"
             }
           ]
         },
@@ -364,8 +364,18 @@
               "name": "Paragraphe",
               "children": [
                 {
+                  "type": "element",
+                  "name": "MiseEnEvidence",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Vous ne pouvez pas être remboursé de votre billet"
+                    }
+                  ]
+                },
+                {
                   "type": "text",
-                  "text": "Vous ne pouvez pas être remboursé de votre billet si vous avez raté votre vol."
+                  "text": " si vous avez raté votre vol."
                 }
               ]
             },
@@ -386,22 +396,6 @@
                 "type": "puce"
               },
               "children": [
-                {
-                  "type": "element",
-                  "name": "Item",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Vous avez été obligé d'annuler votre voyage en avion (raisons médicales, professionnelles...)"
-                        }
-                      ]
-                    }
-                  ]
-                },
                 {
                   "type": "element",
                   "name": "Item",
@@ -447,7 +441,7 @@
                         },
                         {
                           "type": "text",
-                          "text": " (passeport...) et vous n'avez pas pu embarquer"
+                          "text": " (passeport, etc.) et vous n'avez pas pu embarquer"
                         }
                       ]
                     }
@@ -484,6 +478,22 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "element",
+                  "name": "Item",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous avez été obligé d'annuler votre voyage en avion (raisons médicales, professionnelles, etc.)"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -507,7 +517,21 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "relisez les conditions générales de vente du billet, elles peuvent prévoir un remboursement si vous annulez votre voyage. Vérifiez aussi si vous avez souscrit une assurance qui vous couvre pour ce risque."
+                      "text": "Relisez les conditions générales de vente du billet, elles peuvent prévoir un remboursement si vous annulez votre voyage. Vérifiez aussi si vous avez souscrit "
+                    },
+                    {
+                      "type": "element",
+                      "name": "MiseEnEvidence",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "une assurance qui vous couvre"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " pour ce risque."
                     }
                   ]
                 }
@@ -519,7 +543,21 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Vous pouvez obtenir le remboursement des taxes suivantes incluses dans le prix du billet :"
+                  "text": "Vous pouvez obtenir le "
+                },
+                {
+                  "type": "element",
+                  "name": "MiseEnEvidence",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "remboursement des taxes"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " suivantes incluses dans le prix du billet :"
                 }
               ]
             },
@@ -639,7 +677,41 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vérifiez sur le site internet du vendeur du billet si vous pouvez demander le remboursement en ligne."
+                          "text": "Vérifiez sur le "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "site internet du vendeur du billet"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " si vous pouvez demander le remboursement en ligne."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Aucun frais"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " n'est dû si vous déposez votre demande en ligne."
                         }
                       ]
                     },
@@ -649,27 +721,82 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Aucun frais n'est dû si vous déposez votre demande en ligne."
+                          "text": "Le remboursement peut se faire par l'un des moyens suivants :"
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Le remboursement peut se faire par virement. Prévoyez un relevé d'identité bancaire."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Virement (prévoyez un "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "R46945",
+                                    "type": "Acronyme"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "RIB"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ")"
+                                }
+                              ]
+                            }
+                          ]
+                        },
                         {
-                          "type": "text",
-                          "text": "Le remboursement peut aussi se faire par chèque ou en créditant votre carte bancaire."
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Chèque"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Crédit sur votre carte bancaire"
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     },
@@ -706,8 +833,28 @@
                       "name": "Paragraphe",
                       "children": [
                         {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Gratuité et délai de 30 jours"
+                            }
+                          ]
+                        },
+                        {
                           "type": "text",
-                          "text": "Gratuité et délai de 30 jours s'appliquent si vous avez réservé votre billet dans l'une des conditions suivantes :"
+                          "text": " s'appliquent si vous avez réservé votre billet dans l'"
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "une des conditions suivantes :"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -802,7 +949,21 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Dans ce cas, le vendeur peut vous facturer des frais de remboursement allant jusqu'à "
+                          "text": "Dans ce cas, le vendeur peut vous facturer des "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "frais de remboursement"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " allant jusqu'à "
                         },
                         {
                           "type": "element",
@@ -870,17 +1031,82 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Le remboursement peut se faire par virement. Prévoyez un relevé d'identité bancaire."
+                          "text": "Le remboursement peut se faire par l'un des moyens suivants :"
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Le remboursement peut aussi se faire par chèque ou en créditant votre carte bancaire."
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Virement (prévoyez un "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "R46945",
+                                    "type": "Acronyme"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "RIB"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ")"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Chèque"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Crédit sur votre carte bancaire"
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1421,43 +1647,8 @@
           "name": "PourEnSavoirPlus",
           "attributes": {
             "type": "Information pratique",
-            "ID": "R56041",
-            "URL": "https://www.inc-conso.fr/content/coronavirus-covid-19-quels-sont-vos-droits-en-cas-dannulation-dun-voyage",
-            "audience": "Particuliers"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Coronavirus (Covid-19) : quels sont vos droits en cas d'annulation d'un voyage ?"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Source",
-              "attributes": {
-                "ID": "R30643"
-              },
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Institut national de la consommation (INC)"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "PourEnSavoirPlus",
-          "attributes": {
-            "type": "Information pratique",
             "ID": "R38921",
-            "URL": "http://www.europe-consommateurs.eu/fr/quels-sont-vos-droits/tourisme-et-transport/reserver-son-voyage/reservation-dun-vol-sec/le-detail-des-taxes/",
+            "URL": "https://www.europe-consommateurs.eu/tourisme-transports/voyage-en-avion/conseils-pour-reserver-un-vol.html",
             "audience": "Particuliers"
           },
           "children": [
@@ -1514,6 +1705,42 @@
                     {
                       "type": "text",
                       "text": "Jour qui dure de 0h à 24h. Un délai ainsi calculé ne tient pas compte du jour de la décision à l'origine du délai, ni du jour de l'échéance. Si le délai s'achève un samedi ou un dimanche, il est reporté au lundi. Si le délai s'achève un jour férié, il est reporté d'un jour. Ainsi, par exemple, si un délai s'achève un samedi et le lundi suivant est un jour férié, il est reporté au mardi."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Abreviation",
+          "attributes": {
+            "ID": "R46945",
+            "type": "Acronyme"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "RIB"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Relevé d'identité bancaire"
                     }
                   ]
                 }
