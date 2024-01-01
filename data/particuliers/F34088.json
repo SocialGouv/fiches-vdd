@@ -10,7 +10,7 @@
         "ID": "F34088",
         "type": "Fiche d'information conditionnée",
         "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
-        "dateDerniereModificationImportante": "2023-06-08T00:00:00",
+        "dateDerniereModificationImportante": "2024-01-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F34088"
       },
       "children": [
@@ -80,7 +80,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2023-06-08"
+              "text": "modified 2024-01-01"
             }
           ]
         },
@@ -794,6 +794,52 @@
         },
         {
           "type": "element",
+          "name": "Avertissement",
+          "attributes": {
+            "ID": "R35411",
+            "date": "2024-01-01"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Impôt sur le revenu : déclaration 2024 des revenus de 2023"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Cette page est à jour pour la déclaration des revenus de 2023."
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Cependant, les formulaires, services en ligne et documents d'information ne sont pas encore disponibles pour la campagne 2024. Ils seront mis en ligne dès qu'ils seront disponibles."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "Introduction",
           "children": [
             {
@@ -836,7 +882,7 @@
           "type": "element",
           "name": "ListeSituations",
           "attributes": {
-            "affichage": "onglet"
+            "affichage": "sequentiel"
           },
           "children": [
             {
@@ -849,7 +895,20 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Général"
+                      "text": "Sans personne à charge"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11156"
+                      }
                     }
                   ]
                 },
@@ -863,7 +922,132 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vous faites chacun votre déclaration de revenus personnelle."
+                          "text": "Vous faites votre "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F358",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "déclaration de revenus personnelle"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous avez droit à "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "1 part"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " de "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R1124",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "quotient familial"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Situation",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Avec des enfants à charge"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11199"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous faites votre "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F358",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "déclaration de revenus personnelle"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
                         }
                       ]
                     },
@@ -943,480 +1127,1987 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "L'avantage maximal accordé pour chaque demi-part supplémentaire est limité. C'est le plafonnement du quotient familial."
+                          "text": "En cas d'union libre, l'enfant peut être fiscalement "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "compté à charge par l'un de ses 2 parents"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Tableau",
+                      "name": "Paragraphe",
                       "children": [
                         {
+                          "type": "text",
+                          "text": "Toutefois, si "
+                        },
+                        {
                           "type": "element",
-                          "name": "Titre",
+                          "name": "MiseEnEvidence",
                           "children": [
                             {
                               "type": "text",
-                              "text": "Nombre de parts de quotient familial selon la situation familiale"
+                              "text": "vous partagez la charge d'un enfant"
                             }
                           ]
                         },
                         {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "33",
-                            "type": "header"
-                          }
+                          "type": "text",
+                          "text": " de façon équivalente avec l'autre parent, chacun peut bénéficier de la moitié de la "
                         },
                         {
                           "type": "element",
-                          "name": "Colonne",
+                          "name": "LienIntra",
                           "attributes": {
-                            "largeur": "33",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "33",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "header"
+                            "LienID": "R58943",
+                            "type": "Définition de glossaire"
                           },
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Enfant(s)"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Nombre de parts"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Plafonnement"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "text",
+                              "text": "majoration de parts"
                             }
                           ]
                         },
                         {
+                          "type": "text",
+                          "text": " (comme pour un "
+                        },
+                        {
                           "type": "element",
-                          "name": "Rangée",
+                          "name": "LienInterne",
                           "attributes": {
-                            "type": "normal"
+                            "LienPublication": "F35120",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
                           },
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "0"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "1"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "-"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "text",
+                              "text": "enfant en garde alternée"
                             }
                           ]
                         },
                         {
+                          "type": "text",
+                          "text": ")."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "BlocCas",
+                      "attributes": {
+                        "affichage": "radio"
+                      },
+                      "children": [
+                        {
                           "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Titre",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "1"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Enfant à charge principale"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Condition",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "1,5"
-                                    }
-                                  ]
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T12614"
+                                  }
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Cellule",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Chaque enfant à charge donne droit à une augmentation du nombre de parts de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R1124",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "quotient familial"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Le parent qui prend"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " l'enfant fiscalement à sa charge a droit au nombre de parts suivants :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Tableau",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Nombre de parts de quotient familial par enfant à charge principale"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Colonne",
+                                  "attributes": {
+                                    "largeur": "25",
+                                    "type": "normal"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Colonne",
+                                  "attributes": {
+                                    "largeur": "50",
+                                    "type": "normal"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "header"
+                                  },
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Valeur",
+                                      "name": "Cellule",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "1 678 €"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Enfant"
+                                            }
+                                          ]
                                         }
                                       ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "2"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "2"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Valeur",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "3 356 €"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "3"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "3"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Valeur",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "6 712 €"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "4"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "4"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Valeur",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "13 424 €"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Par enfant supplémentaire"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "1"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "+ "
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Valeur",
+                                      "name": "Cellule",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "3 356 €"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Nombre de parts supplémentaires"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1"
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Exposant",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "er"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " enfant"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Exposant",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "1"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": "/"
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Indice",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "2"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " part"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "2"
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Exposant",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "e"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " enfant"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Exposant",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "1"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": "/"
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Indice",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "2"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " part supplémentaire"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "À partir du 3"
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Exposant",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "e"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " enfant"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 part supplémentaire par enfant"
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
                                   ]
                                 }
                               ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Tableau",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Nombre de parts de quotient familial selon la situation familiale"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Colonne",
+                                  "attributes": {
+                                    "largeur": "33",
+                                    "type": "header"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Colonne",
+                                  "attributes": {
+                                    "largeur": "33",
+                                    "type": "normal"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "header"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Enfant(s)"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Nombre de parts"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1,5"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "2"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "2"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "3"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "3"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "4"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "4"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Par enfant supplémentaire"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ASavoir",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "À savoir"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Si votre enfant fiscalement à charge a une "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F34049",
+                                        "type": "Fiche d'information conditionnée",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "carte mobilité inclusion portant la mention \"invalidité\""
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ", vous avez droit à "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "une demi-part supplémentaire"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " de "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R1124",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "quotient familial"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L'avantage maximal accordé pour chaque demi-part supplémentaire est limité à "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "1 759 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ". C'est le plafonnement du quotient familial."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Pour savoir si vous êtes concerné par le plafonnement, l'administration fiscale compare les 2 résultats suivants :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Impôt calculé en fonction de votre "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienIntra",
+                                          "attributes": {
+                                            "LienID": "R1124",
+                                            "type": "Définition de glossaire"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "quotient familial"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " réel, en retenant le nombre de parts correspondant à votre situation (célibataire, veuf, etc.) et à vos charges de famille"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Impôt calculé sur 1 part. La somme ainsi obtenue est par la suite diminuée du montant du plafond correspondant à l'ensemble des majorations de quotient familial."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si le 1"
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Exposant",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "er"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " résultat est inférieur au 2"
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Exposant",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "nd"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ", le plafonnement est applicable et le montant de l'impôt correspond au 2"
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Exposant",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "nd"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " résultat."
+                                }
+                              ]
                             }
                           ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Enfant à charge partagée"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Condition",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "estVrai",
+                                  "attributes": {
+                                    "var": "T10646"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Chaque enfant à charge partagée donne droit à une augmentation du nombre de parts de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R1124",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "quotient familial"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Chaque parent"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " a droit au nombre de parts suivants :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Tableau",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Nombre de parts de quotient familial par enfant à charge partagée"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Colonne",
+                                  "attributes": {
+                                    "largeur": "25",
+                                    "type": "normal"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Colonne",
+                                  "attributes": {
+                                    "largeur": "50",
+                                    "type": "normal"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "header"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Enfant à charge partagée"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Nombre de parts supplémentaires"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1"
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Exposant",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "er"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " enfant"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Exposant"
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": "¼ part"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "2"
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Exposant",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "e"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " enfant"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Exposant"
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": "¼ part supplémentaire"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "À partir du 3"
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Exposant",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "e"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " enfant"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "½ part supplémentaire par enfant"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Tableau",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Nombre de parts de quotient familial selon la situation familiale"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Colonne",
+                                  "attributes": {
+                                    "largeur": "33",
+                                    "type": "header"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Colonne",
+                                  "attributes": {
+                                    "largeur": "33",
+                                    "type": "normal"
+                                  }
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "header"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Enfant(s)"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Nombre de parts"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1,25"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "2"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1,5"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "3"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "2"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "4"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "2,5"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Rangée",
+                                  "attributes": {
+                                    "type": "normal"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Par enfant supplémentaire"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cellule",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "0,5"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si votre enfant fiscalement à charge a une "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F34049",
+                                    "type": "Fiche d'information conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "carte mobilité inclusion portant la mention \"invalidité\""
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ", vous avez droit à "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "un quart de part supplémentaire"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R1124",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "quotient familial"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L'avantage maximal accordé pour chaque quart de part ou demi-part supplémentaire est limité aux montants suivants :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "880 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " par quart de part supplémentaire"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "1 759 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " par demi-part supplémentaire"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "C'est le plafonnement du quotient familial."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Pour savoir si vous êtes concerné par le plafonnement, l'administration fiscale compare les 2 résultats suivants :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Impôt calculé en fonction de votre "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienIntra",
+                                          "attributes": {
+                                            "LienID": "R1124",
+                                            "type": "Définition de glossaire"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "quotient familial"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " réel, en retenant le nombre de parts correspondant à votre situation (célibataire, veuf, etc.) et à vos charges de famille"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Impôt calculé sur 1 part. La somme ainsi obtenue est par la suite diminuée du montant du plafond correspondant à l'ensemble des majorations de quotient familial."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si le 1"
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Exposant",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "er"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " résultat est inférieur au 2"
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Exposant",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "nd"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ", le plafonnement est applicable et le montant de l'impôt correspond au 2"
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Exposant",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "nd"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " résultat."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Situation",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Avec une personne invalide à charge"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T16282"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous faites votre "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F358",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "déclaration de revenus personnelle"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous avez droit à "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "1 part"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " de "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R1124",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "quotient familial"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous avez droit à une "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "majoration d'une part"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " pour chaque personne invalide à charge."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "La personne concernée doit vivre sous votre toit."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Elle doit avoir la "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F34049",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "carte mobilité inclusion"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " portant la mention \"invalidité\"."
                         }
                       ]
                     },
@@ -1440,77 +3131,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "si l'enfant est en garde alternée, le plafonnement sera réduit de moitié pour chaque parent, donc de "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "839 €"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " pour le 1"
-                            },
-                            {
-                              "type": "element",
-                              "name": "Exposant",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "er"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " et le 2"
-                            },
-                            {
-                              "type": "element",
-                              "name": "Exposant",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "e"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " enfant, et de "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "1 678 €"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " à partir du 3"
-                            },
-                            {
-                              "type": "element",
-                              "name": "Exposant",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "e"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " enfant."
+                              "text": "Aucune condition de parenté, d'âge ou de revenu n'est exigée."
                             }
                           ]
                         }
@@ -1522,45 +3143,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vous avez aussi droit à une majoration d'une demi-part pour chaque personne à charge qui a la carte mobilité inclusion portant la mention \"invalidité\". Ceci qu'il s'agisse "
-                        },
-                        {
-                          "type": "element",
-                          "name": "LienInterne",
-                          "attributes": {
-                            "LienPublication": "F2661",
-                            "type": "Fiche d'information conditionnée",
-                            "audience": "Particuliers"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "de votre enfant"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " ou de "
-                        },
-                        {
-                          "type": "element",
-                          "name": "LienInterne",
-                          "attributes": {
-                            "LienPublication": "F387",
-                            "type": "Fiche d'information conditionnée",
-                            "audience": "Particuliers"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "toute autre personne"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": ", dans certaines conditions."
+                          "text": "L'avantage maximal accordé pour chaque demi-part supplémentaire est limité. C'est le plafonnement du quotient familial."
                         }
                       ]
                     },
@@ -1625,7 +3208,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Impôt calculé sur 1 part. La somme ainsi obtenue est ensuite diminuée du montant du plafond correspondant à l'ensemble des majorations de quotient familial."
+                                  "text": "Impôt calculé sur 1 part. La somme ainsi obtenue est par la suite diminuée du montant du plafond correspondant à l'ensemble des majorations de quotient familial."
                                 }
                               ]
                             }
@@ -1684,472 +3267,6 @@
                           "text": " résultat."
                         }
                       ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Situation",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Invalide / ancien combattant"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Texte",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Vous avez droit à 1,5 part de "
-                        },
-                        {
-                          "type": "element",
-                          "name": "LienIntra",
-                          "attributes": {
-                            "LienID": "R1124",
-                            "type": "Définition de glossaire"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "quotient familial"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " si vous êtes dans l'une des 3 situations suivantes :"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Liste",
-                      "attributes": {
-                        "type": "puce"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous avez une carte mobilité inclusion portant la mention "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Expression",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "invalidité"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous touchez une pension (militaire ou pour accident de travail) pour une invalidité d'au moins "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Valeur",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "40 %"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous êtes âgé de plus de 74 ans au 31 décembre 2022 et avez la carte du combattant ou touchez une pension militaire d'invalidité ou de victime de guerre"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Vous avez droit à une majoration de parts si vous avez des enfants à charge (mineur ou majeur célibataire)."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "L'avantage maximal accordé pour chaque demi-part supplémentaire est limité. C'est le plafonnement du quotient familial."
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Tableau",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Nombre de parts de quotient familial selon la situation familiale"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "33",
-                            "type": "header"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Colonne",
-                          "attributes": {
-                            "largeur": "33",
-                            "type": "normal"
-                          }
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "header"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Nombre d'enfant(s)"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Nombre de parts"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "0"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "1,5"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "1"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "2"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "2"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "2,5"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "3"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "3,5"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "4"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "4,5"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Rangée",
-                          "attributes": {
-                            "type": "normal"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Par enfant supplémentaire"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Cellule",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "1"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
                     },
                     {
                       "type": "element",
@@ -2171,7 +3288,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "ces parts de quotient familial s'appliquent si vous avez la charge "
+                              "text": "L'augmentation du nombre de parts n’est "
                             },
                             {
                               "type": "element",
@@ -2179,13 +3296,297 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "exclusive ou principale"
+                                  "text": "pas cumulable"
                                 }
                               ]
                             },
                             {
                               "type": "text",
-                              "text": " des personnes à charge."
+                              "text": " avec la "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "F5",
+                                "type": "Fiche d'information conditionnée",
+                                "audience": "Particuliers"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "déduction des frais d'accueil"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " des personnes de plus de 75 ans."
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Situation",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Invalide"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T11797"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous faites votre "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F358",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "déclaration de revenus personnelle"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous avez droit à "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "1 part"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " de "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R1124",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "quotient familial"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous avez droit à "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "une demi-part supplémentaire"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " de "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R1124",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "quotient familial"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " si vous êtes dans "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "l'une des 2 situations"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " suivantes :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous avez une "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "carte mobilité inclusion"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " portant la mention "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "invalidité."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous touchez une "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "pension"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " (militaire ou pour accident de travail) "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "pour une invalidité"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " d'au moins "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "40 %"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         }
@@ -2197,45 +3598,21 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vous avez aussi droit à une majoration d'une demi-part pour chaque personne à charge qui a la carte mobilité inclusion portant la mention \"invalidité\". Ceci qu'il s'agisse "
+                          "text": "L'avantage maximal accordé pour la demi-part supplémentaire est limité à "
                         },
                         {
                           "type": "element",
-                          "name": "LienInterne",
-                          "attributes": {
-                            "LienPublication": "F2661",
-                            "type": "Fiche d'information conditionnée",
-                            "audience": "Particuliers"
-                          },
+                          "name": "Valeur",
                           "children": [
                             {
                               "type": "text",
-                              "text": "de votre enfant"
+                              "text": "3 512 €"
                             }
                           ]
                         },
                         {
                           "type": "text",
-                          "text": " ou de "
-                        },
-                        {
-                          "type": "element",
-                          "name": "LienInterne",
-                          "attributes": {
-                            "LienPublication": "F387",
-                            "type": "Fiche d'information conditionnée",
-                            "audience": "Particuliers"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "toute autre personne"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": ", dans certaines conditions."
+                          "text": ". C'est le plafonnement du quotient familial."
                         }
                       ]
                     },
@@ -2253,7 +3630,397 @@
                       "type": "element",
                       "name": "Liste",
                       "attributes": {
-                        "type": "numero"
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Impôt calculé sur 1 part, diminué du montant du plafond correspondant aux majorations de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienIntra",
+                                  "attributes": {
+                                    "LienID": "R1124",
+                                    "type": "Définition de glossaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "quotient familial"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Impôt calculé sur votre nombre de parts réel (en fonction de votre situation et de vos charges de famille)"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Si le 2"
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exposant",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "nd"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exposant"
+                        },
+                        {
+                          "type": "text",
+                          "text": " résultat est inférieur au 1"
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exposant",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "er"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ", le plafonnement est applicable. Le montant de l'impôt dû correspond au 1"
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exposant",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "er"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " résultat."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Situation",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Ancien combattant"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T13796"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Texte",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous faites votre "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F358",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "déclaration de revenus personnelle"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous avez droit à "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "1 part"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " de "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R1124",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "quotient familial"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous avez droit à "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "une demi-part supplémentaire"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " de "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R1124",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "quotient familial"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " si vous remplissez "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "les 2 conditions"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " suivantes :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous êtes âgé de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "plus de 74 ans"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " au 31 décembre 2023"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous avez la "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "carte du combattant"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " ou vous touchez une "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "pension militaire"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " d'invalidité ou de victime de guerre"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "L'avantage maximal accordé pour la demi-part supplémentaire est limité à "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Valeur",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "3 512 €"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ". C'est le plafonnement du quotient familial."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Pour savoir si vous êtes concerné par le plafonnement, le service des impôts compare les résultats des 2 calculs suivants :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
                       },
                       "children": [
                         {
@@ -2621,7 +4388,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Impôt sur le revenu - Enfant majeur à charge"
+                      "text": "Impôt sur le revenu - Enfant majeur"
                     }
                   ]
                 },
@@ -2721,163 +4488,6 @@
                       ]
                     }
                   ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "OuSAdresser",
-          "attributes": {
-            "ID": "R20684",
-            "sve": "non",
-            "type": "Centre de contact"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Service d'information des impôts"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Complement",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Pour des informations générales"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Source",
-              "attributes": {
-                "ID": "R30612"
-              },
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Ministère chargé des finances"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Texte",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Par téléphone :"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "MiseEnEvidence",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "0809 401 401"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Du lundi au vendredi de 8h30 à 19h, hors jours fériés."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Service gratuit + prix appel"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "OuSAdresser",
-          "attributes": {
-            "ID": "R15019",
-            "sve": "non",
-            "type": "Local personnalisable"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Service en charge des impôts (trésorerie, service des impôts...)"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Complement",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Pour joindre le service local gestionnaire de votre dossier"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "PivotLocal",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "centre_impots"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "RessourceWeb",
-              "attributes": {
-                "URL": "https://www.impots.gouv.fr/portail/contacts"
-              }
-            },
-            {
-              "type": "element",
-              "name": "Source",
-              "attributes": {
-                "ID": "R30612"
-              },
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Ministère chargé des finances"
                 }
               ]
             }
