@@ -19,7 +19,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Une facture est-elle obligatoire lors d'une vente entre particuliers ? "
+              "text": "Une facture est-elle obligatoire lors d'une vente entre particuliers ?"
             }
           ]
         },
@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Non. Seule une preuve écrite est nécessaire si la vente dépasse un certain montant."
+              "text": "Un particulier ne peut pas émettre de facture lors d'une vente avec un autre particulier. Seule une preuve écrite est nécessaire si la vente dépasse 1 500 €."
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2020-03-23"
+              "text": "modified 2024-02-06"
             }
           ]
         },
@@ -246,7 +246,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Une facture est-elle obligatoire lors d'une vente entre particuliers ? "
+                  "text": "Une facture est-elle obligatoire lors d'une vente entre particuliers ?"
                 }
               ]
             }
@@ -409,115 +409,127 @@
         },
         {
           "type": "element",
-          "name": "Introduction",
-          "children": [
-            {
-              "type": "element",
-              "name": "Texte",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Non. Seule une preuve écrite est nécessaire si la vente dépasse un certain montant."
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
           "name": "Texte",
           "children": [
             {
               "type": "element",
-              "name": "Attention",
+              "name": "Paragraphe",
               "children": [
                 {
+                  "type": "text",
+                  "text": "Un particulier "
+                },
+                {
                   "type": "element",
-                  "name": "Titre",
+                  "name": "MiseEnEvidence",
                   "children": [
                     {
                       "type": "text",
-                      "text": "Attention"
+                      "text": "ne peut pas"
                     }
                   ]
                 },
                 {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "un particulier ne peut établir de facture. La facture est un document détaillé des prestations ou des marchandises vendues, de nature commerciale et comptable établi par une structure juridique (par exemple, société, association)."
-                    }
-                  ]
+                  "type": "text",
+                  "text": " établir de facture. Une facture ne peut être établie que par une structure juridique (par exemple, société, association)."
                 }
               ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "ListeSituations",
-          "attributes": {
-            "affichage": "onglet"
-          },
-          "children": [
+            },
             {
               "type": "element",
-              "name": "Situation",
+              "name": "Paragraphe",
               "children": [
                 {
+                  "type": "text",
+                  "text": "Le particulier peut néanmoins produire un document pour justifier la vente."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Seule une preuve écrite (attestation, contrat de vente "
+                },
+                {
                   "type": "element",
-                  "name": "Titre",
+                  "name": "LienIntra",
+                  "attributes": {
+                    "LienID": "R17852",
+                    "type": "Définition de glossaire"
+                  },
                   "children": [
                     {
                       "type": "text",
-                      "text": "Vente inférieure à 1500 euros"
+                      "text": "sous signature privée)"
                     }
                   ]
                 },
                 {
+                  "type": "text",
+                  "text": " est nécessaire si la vente dépasse 1 500 €."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "BlocCas",
+              "attributes": {
+                "affichage": "radio"
+              },
+              "children": [
+                {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Cas",
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vente inférieure à 1 500 €"
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Une preuve écrite de la vente n'est pas nécessaire. En cas de litige, la vente peut être prouvée par tous moyens (par exemple : témoignage)."
+                          "text": "Une preuve écrite de la vente n'est pas nécessaire."
                         }
                       ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Situation",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
+                    },
                     {
-                      "type": "text",
-                      "text": "Vente supérieure ou égale à 1500 euros"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "En cas de litige, la vente peut être prouvée par tous moyens (par exemple : témoignage, échange de mail)."
+                        }
+                      ]
                     }
                   ]
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Cas",
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vente supérieure ou égale à 1 500 €"
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "Paragraphe",
@@ -593,21 +605,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "L'"
-                        },
-                        {
-                          "type": "element",
-                          "name": "MiseEnEvidence",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "attestation de vente"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "text": " doit comporter les informations suivantes :"
+                          "text": "Il est recommandé de faire figurer les informations suivantes dans l'attestation de vente :"
                         }
                       ]
                     },
@@ -761,6 +759,45 @@
                         {
                           "type": "text",
                           "text": "Argent - Impôts - Consommation"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Fiche",
+              "attributes": {
+                "ID": "F23208",
+                "audience": "Professionnels"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Tout savoir sur la facturation"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Theme",
+                  "attributes": {
+                    "ID": "N24266"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Comptabilité - Facturation"
                         }
                       ]
                     }
