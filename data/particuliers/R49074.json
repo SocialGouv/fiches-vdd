@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Formulaire disponible uniquement en français. La déclaration conjointe de dissolution d'un Pacs permet de mettre fin à votre Pacs en cas de demande par les 2 partenaires. Envoyez votre déclaration conjointe par lettre recommandée avec avis de réception. La démarche est gratuite. Vous devez adresser votre demande à l'autorité qui a enregistré le Pacs : - Mairie (officier de l'état civil) - Notaire - Ambassade (ou consulat de France)"
+              "text": "Formulaire disponible uniquement en français. La déclaration conjointe de dissolution d'un Pacs permet de mettre fin à votre Pacs en cas de demande par les 2 partenaires. Envoyez votre déclaration conjointe par courrier RAR. La démarche est gratuite. Vous devez adresser votre demande à l'autorité qui a enregistré le Pacs : - Mairie (officier de l'état civil) - Notaire - Ambassade (ou consulat) de France L'autorité à laquelle vous devez envoyer votre déclaration de dissolution dépend du lieu où a été enregistré votre Pacs."
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2023-10-04"
+              "text": "modified 2024-03-19"
             }
           ]
         },
@@ -311,7 +311,21 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "par lettre recommandée avec avis de réception"
+                      "text": "par courrier "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienInterne",
+                      "attributes": {
+                        "LienPublication": "R46090",
+                        "type": "Acronyme"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "RAR"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -372,7 +386,25 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Mairie (officier de l'état civil)"
+                          "text": "Mairie ("
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R31350",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "officier de l'état civil"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ")"
                         }
                       ]
                     }
@@ -404,7 +436,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Ambassade (ou consulat de France)"
+                          "text": "Ambassade (ou consulat) de France"
                         }
                       ]
                     }
@@ -414,9 +446,19 @@
             },
             {
               "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "L'autorité à laquelle vous devez envoyer votre déclaration de dissolution dépend du lieu où a été enregistré votre Pacs."
+                }
+              ]
+            },
+            {
+              "type": "element",
               "name": "BlocCas",
               "attributes": {
-                "affichage": "onglet"
+                "affichage": "radio"
               },
               "children": [
                 {
@@ -430,6 +472,16 @@
                         {
                           "type": "text",
                           "text": "Pacs enregistré en mairie ou au tribunal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous devez envoyer votre déclaration de dissolution à la mairie qui a enregistré votre Pacs."
                         }
                       ]
                     },
@@ -473,55 +525,39 @@
                     },
                     {
                       "type": "element",
-                      "name": "ANoter",
+                      "name": "Paragraphe",
                       "children": [
                         {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "À noter"
-                            }
-                          ]
+                          "type": "text",
+                          "text": "Si votre Pacs a été enregistré par un tribunal d'instance (actuellement tribunal judiciaire) "
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "MiseEnEvidence",
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si votre Pacs a été enregistré par un tribunal d'instance "
+                              "text": "avant le 1"
                             },
                             {
                               "type": "element",
-                              "name": "MiseEnEvidence",
+                              "name": "Exposant",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "avant le 1"
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Exposant",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "er"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " novembre 2017"
+                                  "text": "er"
                                 }
                               ]
                             },
                             {
                               "type": "text",
-                              "text": ", la déclaration est à envoyer à la mairie sur le territoire de laquelle est implanté le tribunal d'instance ayant enregistré votre Pacs."
+                              "text": " novembre 2017"
                             }
                           ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ", la déclaration est à envoyer à la mairie sur le territoire de laquelle est implanté le tribunal ayant enregistré votre Pacs."
                         }
                       ]
                     }
@@ -538,6 +574,16 @@
                         {
                           "type": "text",
                           "text": "Pacs enregistré à l'étranger"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous devez envoyer votre déclaration de dissolution à l'ambassade ou au consulat qui a enregistré votre Pacs."
                         }
                       ]
                     },
@@ -592,6 +638,16 @@
                         {
                           "type": "text",
                           "text": "Pacs enregistré par un notaire"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous devez envoyer votre déclaration de dissolution au notaire qui a enregistré votre Pacs."
                         }
                       ]
                     },
@@ -720,6 +776,98 @@
                 {
                   "type": "text",
                   "text": "Pacte civil de solidarité (Pacs)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Definition",
+          "attributes": {
+            "ID": "R31350"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Officier de l'état civil"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Personne (en France, en mairie ou consulat) qui établit les actes d'état civil (naissance, mariage, décès...), les conserve et en délivre copies ou extraits"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Reference",
+              "attributes": {
+                "type": "Texte de référence",
+                "URL": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006136100",
+                "ID": "R16226"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Code civil : articles 34 à 54"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Abreviation",
+          "attributes": {
+            "ID": "R46090",
+            "type": "Acronyme"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "RAR"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Recommandé avec avis de réception"
+                    }
+                  ]
                 }
               ]
             }
