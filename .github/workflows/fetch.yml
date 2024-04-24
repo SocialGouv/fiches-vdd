@@ -75,3 +75,12 @@ jobs:
           GIT_COMMITTER_NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.SOCIALGROOVYBOT_NPM_TOKEN }}
+
+      - name: Create the Mattermost Message
+        if: failure()
+        run: |
+          echo "{\"text\":\"Le fetch des fiches-vdd a échoué, veuillez relancer le job : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}" > mattermost.json
+      - uses: mattermost/action-mattermost-notify@master
+        if: failure()
+        with:
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
