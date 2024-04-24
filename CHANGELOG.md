@@ -1,3 +1,11 @@
+# [2.1019.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1018.0...v2.1019.0) (2024-04-24)
+
+
+### Features
+
+* **action:** ajout d'un envoi de message à mattermost en cas d'erreur ([fe60aa4](https://github.com/SocialGouv/fiches-vdd/commit/fe60aa4e099746f35b7067d701f67f4cd2bb8cdc))
+* **data:** 20240424_2219 update ([ce07650](https://github.com/SocialGouv/fiches-vdd/commit/ce07650b25628d0eaf8fb6b48fbd51cba4492d31))
+
 # [2.1018.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1017.0...v2.1018.0) (2024-04-23)
 
 
