@@ -1,3 +1,15 @@
+# [2.1042.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1041.0...v2.1042.0) (2024-05-17)
+
+
+### Bug Fixes
+
+* action pour notifier sur mattermost ([#223](https://github.com/SocialGouv/fiches-vdd/issues/223)) ([966db03](https://github.com/SocialGouv/fiches-vdd/commit/966db034f659b9c29450d1bb813b025a4f45d7cc))
+
+
+### Features
+
+* **data:** 20240517_2217 update ([4d87284](https://github.com/SocialGouv/fiches-vdd/commit/4d872849b73f80578c336ed349b8a76877395a1c))
+
 # [2.1041.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1040.0...v2.1041.0) (2024-05-16)
 
 
