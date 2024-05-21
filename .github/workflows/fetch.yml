@@ -80,7 +80,6 @@ jobs:
         if: failure()
         with:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
-          PAYLOAD: |-
-            {
-              "text": "Le fetch des fiches-vdd a échoué, veuillez relancer le job : ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}",
-            }
+          TEXT: |
+            La mise à jour du dépôt fiches-vdd a échoué.
+            [Les logs sont disponibles ici](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
