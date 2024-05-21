@@ -1,3 +1,15 @@
+# [2.1046.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1045.0...v2.1046.0) (2024-05-21)
+
+
+### Bug Fixes
+
+* **actions:** display mattermost message ([afab24a](https://github.com/SocialGouv/fiches-vdd/commit/afab24a15188114cafea517854f534ff5491ac60))
+
+
+### Features
+
+* **data:** 20240521_2217 update ([0d0a43c](https://github.com/SocialGouv/fiches-vdd/commit/0d0a43cc64c18e1d3c3be3e45ab0e791a2a76b9f))
+
 # [2.1045.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1044.0...v2.1045.0) (2024-05-20)
 
 
