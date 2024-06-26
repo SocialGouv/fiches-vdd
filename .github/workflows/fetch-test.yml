@@ -39,7 +39,7 @@ jobs:
 
       - name: Check JSON
         run: |
-          for filename in ./data/**/*..json; do
+          for filename in ./data/**/*.json; do
             jq empty "$filename" > /dev/null || {
               echo "Invalid JSON in $filename"
               exit 1
