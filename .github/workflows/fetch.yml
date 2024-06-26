@@ -35,10 +35,13 @@ jobs:
           echo "Data status ${{ steps.metadata.outputs.now }}"
           echo "${{ steps.metadata.outputs.data_status }}"
 
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
       - name: Check JSON
         run: |
-          for filename in ./data/*\.json; do
-            node "$filename" > /dev/null || {
+          for filename in ./data/*.json; do
+            jq empty "$filename" > /dev/null || {
               echo "Invalid JSON in $filename"
               exit 1
             }
