@@ -1,3 +1,15 @@
+# [2.1086.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1085.0...v2.1086.0) (2024-07-02)
+
+
+### Bug Fixes
+
+* change hour ([988bcdc](https://github.com/SocialGouv/fiches-vdd/commit/988bcdc98d815e9ac8ae6efbc90e32ae180ee28c))
+
+
+### Features
+
+* **data:** 20240702_2019 update ([cd6fb38](https://github.com/SocialGouv/fiches-vdd/commit/cd6fb3875a4c5f104a009a638d3af1b0c1eabeb4))
+
 # [2.1085.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1084.0...v2.1085.0) (2024-07-01)
 
 
