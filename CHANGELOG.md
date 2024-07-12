@@ -1,3 +1,15 @@
+# [2.1096.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1095.0...v2.1096.0) (2024-07-12)
+
+
+### Bug Fixes
+
+* **hour:** try to fix github limit for publication ([a70e02c](https://github.com/SocialGouv/fiches-vdd/commit/a70e02cbea74ce77f5a09cd16b6a73992087c27c))
+
+
+### Features
+
+* **data:** 20240712_1824 update ([3f629c2](https://github.com/SocialGouv/fiches-vdd/commit/3f629c2a9fcda2a1fdc67b897e758ff797765098))
+
 # [2.1095.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1094.0...v2.1095.0) (2024-07-11)
 
 
