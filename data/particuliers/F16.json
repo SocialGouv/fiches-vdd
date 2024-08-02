@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F16",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F16"
       },
       "children": [
@@ -696,6 +696,7 @@
                   "attributes": {
                     "ID": "R1492",
                     "URL": "https://www.formulaires.service-public.fr/gf/cerfa_10072.do",
+                    "audience": "Particuliers",
                     "format": "application/pdf",
                     "poids": "535.4 KB",
                     "numerocerfa": "10072*03",
@@ -752,7 +753,8 @@
                       "name": "ServiceEnLigneAnnexe",
                       "attributes": {
                         "type": "Formulaire",
-                        "numerocerfa": "10072*03"
+                        "numerocerfa": "10072*03",
+                        "groupe": "facultatif"
                       },
                       "children": [
                         {
@@ -1477,7 +1479,9 @@
           "name": "ServiceEnLigne",
           "attributes": {
             "ID": "R1492",
+            "selfPrincipal": "true",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_10072.do",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "535.4 KB",
             "numerocerfa": "10072*03",
@@ -1512,7 +1516,8 @@
               "name": "ServiceEnLigneAnnexe",
               "attributes": {
                 "type": "Formulaire",
-                "numerocerfa": "10072*03"
+                "numerocerfa": "10072*03",
+                "groupe": "facultatif"
               },
               "children": [
                 {
@@ -1650,8 +1655,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Peut-on faire annuler une décision de préemption d'une mairie ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Peut-on faire annuler une décision de préemption d'une mairie ?"
+                }
+              ]
             }
           ]
         },
@@ -1664,8 +1675,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Que devient le bail d'un locataire dont le logement est préempté ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Que devient le bail d'un locataire dont le logement est préempté ?"
+                }
+              ]
             }
           ]
         }

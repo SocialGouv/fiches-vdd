@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1658",
         "type": "Fiche Question-réponse conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2023-05-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1658"
       },
@@ -905,6 +905,7 @@
                   "attributes": {
                     "ID": "R52441",
                     "URL": "https://services.agefiph.fr/",
+                    "audience": "Particuliers",
                     "type": "Téléservice"
                   },
                   "children": [
@@ -1512,7 +1513,9 @@
           "name": "ServiceEnLigne",
           "attributes": {
             "ID": "R52441",
+            "selfPrincipal": "true",
             "URL": "https://services.agefiph.fr/",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -1760,8 +1763,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Secteur privé : qu'est-ce que l'obligation d'emploi des travailleurs handicapés (OETH)?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Secteur privé : qu'est-ce que l'obligation d'emploi des travailleurs handicapés (OETH)?"
+                }
+              ]
             }
           ]
         },
@@ -1770,12 +1779,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F31029",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-situation-handicap"
           },
           "children": [
             {
-              "type": "text",
-              "text": "Je suis en situation de handicap"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Je suis en situation de handicap"
+                }
+              ]
             }
           ]
         }

@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F104",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2022-01-15T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F104"
       },
@@ -432,6 +432,150 @@
         },
         {
           "type": "element",
+          "name": "Questionnaire",
+          "children": [
+            {
+              "type": "element",
+              "name": "Question",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Le salarié"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Choix",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Est baby sitter, garde d'enfant(s), assistant de vie"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "IntituleSiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Le salarié est baby sitter ou garde d'enfant(s) ou assistant de vie"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "SiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "affecteVrai",
+                          "attributes": {
+                            "var": "T12283"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "affecteFaux",
+                          "attributes": {
+                            "var": "T12284"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Choix",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "A une autre activité"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "IntituleSiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Le salarié n'est ni baby sitter, ni garde d'enfant(s), ni assistant de vie"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "SiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "affecteVrai",
+                          "attributes": {
+                            "var": "T12284"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "affecteFaux",
+                          "attributes": {
+                            "var": "T12283"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "Texte",
           "children": [
             {
@@ -613,11 +757,17 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "TitreFlottant",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Durée maximale du travail"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Durée maximale du travail"
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
@@ -1582,7 +1732,7 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "ANoter",
+                                  "name": "Exemple",
                                   "children": [
                                     {
                                       "type": "element",
@@ -2555,11 +2705,17 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "TitreFlottant",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Durée maximale du travail"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Durée maximale du travail"
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
@@ -4310,8 +4466,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Quelles sont les activités de services à la personne et comment y recourir ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Quelles sont les activités de services à la personne et comment y recourir ?"
+                }
+              ]
             }
           ]
         },
@@ -4324,8 +4486,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "L'absence du particulier employeur met-elle fin au contrat de son salarié ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "L'absence du particulier employeur met-elle fin au contrat de son salarié ?"
+                }
+              ]
             }
           ]
         },
@@ -4338,8 +4506,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "À quelles conditions un salarié peut-il cumuler plusieurs emplois ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "À quelles conditions un salarié peut-il cumuler plusieurs emplois ?"
+                }
+              ]
             }
           ]
         },
@@ -4352,8 +4526,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Le particulier employeur doit-il s'occuper du suivi médical de son salarié ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Le particulier employeur doit-il s'occuper du suivi médical de son salarié ?"
+                }
+              ]
             }
           ]
         },
@@ -4362,12 +4542,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F601",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-garde-enfants"
           },
           "children": [
             {
-              "type": "text",
-              "text": "J'ai besoin de faire garder mes enfants"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "J'ai besoin de faire garder mes enfants"
+                }
+              ]
             }
           ]
         }

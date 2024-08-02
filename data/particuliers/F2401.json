@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F2401",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2019-11-07T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F2401",
         "statut": "enCoursDeMiseAJour"
@@ -993,6 +993,7 @@
                   "attributes": {
                     "ID": "R53502",
                     "URL": "https://avril.pole-emploi.fr",
+                    "audience": "Particuliers",
                     "type": "Téléservice"
                   },
                   "children": [
@@ -1391,6 +1392,7 @@
                   "attributes": {
                     "ID": "R10282",
                     "URL": "https://www.formulaires.service-public.fr/gf/cerfa_12818.do",
+                    "audience": "Particuliers",
                     "format": "application/pdf",
                     "poids": "2.4 MB",
                     "numerocerfa": "12818*02",
@@ -1464,7 +1466,8 @@
                       "type": "element",
                       "name": "ServiceEnLigneAnnexe",
                       "attributes": {
-                        "type": "Formulaire"
+                        "type": "Formulaire",
+                        "groupe": "facultatif"
                       },
                       "children": [
                         {
@@ -1479,15 +1482,21 @@
                         },
                         {
                           "type": "element",
-                          "name": "Texte",
+                          "name": "Introduction",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Texte",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "À imprimer et remplir manuellement en cas de problème d'utilisation de la version dynamique proposée ci-dessus."
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "À imprimer et remplir manuellement en cas de problème d'utilisation de la version dynamique proposée ci-dessus."
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -1540,6 +1549,7 @@
                   "attributes": {
                     "ID": "R53502",
                     "URL": "https://avril.pole-emploi.fr",
+                    "audience": "Particuliers",
                     "type": "Téléservice"
                   },
                   "children": [
@@ -1777,6 +1787,7 @@
                       "attributes": {
                         "ID": "R53502",
                         "URL": "https://avril.pole-emploi.fr",
+                        "audience": "Particuliers",
                         "type": "Téléservice"
                       },
                       "children": [
@@ -2468,7 +2479,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R37113",
             "sve": "non",
@@ -3069,6 +3080,7 @@
           "attributes": {
             "ID": "R40438",
             "URL": "https://www.francecompetences.fr/recherche-resultats/",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -3103,6 +3115,7 @@
           "attributes": {
             "ID": "R10282",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_12818.do",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "2.4 MB",
             "numerocerfa": "12818*02",
@@ -3154,7 +3167,8 @@
               "type": "element",
               "name": "ServiceEnLigneAnnexe",
               "attributes": {
-                "type": "Formulaire"
+                "type": "Formulaire",
+                "groupe": "facultatif"
               },
               "children": [
                 {
@@ -3169,15 +3183,21 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Introduction",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "À imprimer et remplir manuellement en cas de problème d'utilisation de la version dynamique proposée ci-dessus."
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "À imprimer et remplir manuellement en cas de problème d'utilisation de la version dynamique proposée ci-dessus."
+                            }
+                          ]
                         }
                       ]
                     }
@@ -3220,6 +3240,7 @@
           "attributes": {
             "ID": "R53502",
             "URL": "https://avril.pole-emploi.fr",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -3362,8 +3383,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Quelle est la nomenclature des diplômes par niveau ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Quelle est la nomenclature des diplômes par niveau ?"
+                }
+              ]
             }
           ]
         }

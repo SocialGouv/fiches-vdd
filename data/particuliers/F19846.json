@@ -9,9 +9,10 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F19846",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2022-08-18T00:00:00",
-        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F19846"
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F19846",
+        "profilsPro": "tout"
       },
       "children": [
         {
@@ -416,6 +417,150 @@
         },
         {
           "type": "element",
+          "name": "Questionnaire",
+          "children": [
+            {
+              "type": "element",
+              "name": "Question",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Le salarié"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Choix",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Utilise les transports publics pour se rendre sur son lieu de travail"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "IntituleSiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Le salarié utilise les transports publics"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "SiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "affecteVrai",
+                          "attributes": {
+                            "var": "T12852"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "affecteFaux",
+                          "attributes": {
+                            "var": "T12853"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Choix",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Utilise un mode de transport personnel ou alternatif (covoiturage, véhicule électrique ou hybride, trottinette, vélo, ...)"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "IntituleSiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Le salarié utilise un mode de transport personnel ou alternatif"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "SiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "affecteVrai",
+                          "attributes": {
+                            "var": "T12853"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "affecteFaux",
+                          "attributes": {
+                            "var": "T12852"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "ListeSituations",
           "attributes": {
             "affichage": "onglet"
@@ -776,7 +921,7 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "ANoter",
+                                  "name": "Exemple",
                                   "children": [
                                     {
                                       "type": "element",
@@ -1195,7 +1340,7 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "ANoter",
+                                  "name": "Exemple",
                                   "children": [
                                     {
                                       "type": "element",
@@ -1960,6 +2105,7 @@
           "attributes": {
             "ID": "R1273",
             "URL": "https://attestation.covoiturage.beta.gouv.fr/salarie-secteur-public",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -1997,8 +2143,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Un ressortissant européen salarié en France a-t-il les mêmes droits qu'un salarié français ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Un ressortissant européen salarié en France a-t-il les mêmes droits qu'un salarié français ?"
+                }
+              ]
             }
           ]
         }

@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F2280",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2023-03-21T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F2280"
       },
@@ -723,6 +723,150 @@
                     {
                       "type": "text",
                       "text": "À l'occasion de la naissance ou de l'arrivée au foyer d'un enfant, le salarié peut arrêter de travailler pour s'occuper de l'enfant. Dans ce cas, il bénéficie d'un congé parental d'éducation, sous conditions d'ancienneté. La durée du congé varie en fonction du nombre d’enfants nés ou adoptés simultanément. Les règles sont différentes pour le salarié d'un particulier employeur. Nous vous présentons les informations à connaître."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Questionnaire",
+          "children": [
+            {
+              "type": "element",
+              "name": "Question",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Êtes-vous salarié d'un particulier employeur ?"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Choix",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Oui"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "IntituleSiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous êtes salarié d'un particulier employeur"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "SiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "affecteVrai",
+                          "attributes": {
+                            "var": "T12229"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "affecteFaux",
+                          "attributes": {
+                            "var": "T13347"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Choix",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Salarié dans une entreprise"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "IntituleSiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous n'êtes pas salarié d'un particulier employeur"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "SiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "affecteVrai",
+                          "attributes": {
+                            "var": "T13347"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "affecteFaux",
+                          "attributes": {
+                            "var": "T12229"
+                          }
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2215,6 +2359,7 @@
                               "attributes": {
                                 "ID": "R32169",
                                 "URL": "https://www.service-public.fr/simulateur/calcul/CongeParentalSecteurPrive",
+                                "audience": "Particuliers",
                                 "type": "Modèle de document"
                               },
                               "children": [
@@ -4399,6 +4544,7 @@
                               "attributes": {
                                 "ID": "R32169",
                                 "URL": "https://www.service-public.fr/simulateur/calcul/CongeParentalSecteurPrive",
+                                "audience": "Particuliers",
                                 "type": "Modèle de document"
                               },
                               "children": [
@@ -5283,6 +5429,7 @@
           "attributes": {
             "ID": "R32169",
             "URL": "https://www.service-public.fr/simulateur/calcul/CongeParentalSecteurPrive",
+            "audience": "Particuliers",
             "type": "Modèle de document"
           },
           "children": [
@@ -5503,8 +5650,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "L'absence du salarié est-elle prise en compte pour le calcul de ses congés ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "L'absence du salarié est-elle prise en compte pour le calcul de ses congés ?"
+                }
+              ]
             }
           ]
         },
@@ -5517,8 +5670,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Un salarié du secteur privé peut-il démissionner pendant son congé parental ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Un salarié du secteur privé peut-il démissionner pendant son congé parental ?"
+                }
+              ]
             }
           ]
         },
@@ -5531,8 +5690,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Peut-on encore profiter du CSE si on ne travaille plus dans l'entreprise ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Peut-on encore profiter du CSE si on ne travaille plus dans l'entreprise ?"
+                }
+              ]
             }
           ]
         },
@@ -5545,8 +5710,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Salarié en arrêt maladie à la fin du congé parental d'éducation : quelles sont les règles ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Salarié en arrêt maladie à la fin du congé parental d'éducation : quelles sont les règles ?"
+                }
+              ]
             }
           ]
         },
@@ -5559,8 +5730,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Un salarié peut-il être licencié pendant son congé parental ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Un salarié peut-il être licencié pendant son congé parental ?"
+                }
+              ]
             }
           ]
         },
@@ -5573,8 +5750,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Le salarié a-t-il droit à la participation et à l'intéressement pendant un congé parental ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Le salarié a-t-il droit à la participation et à l'intéressement pendant un congé parental ?"
+                }
+              ]
             }
           ]
         },
@@ -5587,8 +5770,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Une salariée peut-elle interrompre son congé parental pour prendre un congé de maternité ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Une salariée peut-elle interrompre son congé parental pour prendre un congé de maternité ?"
+                }
+              ]
             }
           ]
         },
@@ -5601,8 +5790,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Le salarié en congé parental garde-t-il les avantages de la mutuelle ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Le salarié en congé parental garde-t-il les avantages de la mutuelle ?"
+                }
+              ]
             }
           ]
         },
@@ -5615,8 +5810,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Peut-on bénéficier de plusieurs congés parentaux successifs ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Peut-on bénéficier de plusieurs congés parentaux successifs ?"
+                }
+              ]
             }
           ]
         },
@@ -5629,8 +5830,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Un ressortissant européen salarié en France a-t-il les mêmes droits qu'un salarié français ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Un ressortissant européen salarié en France a-t-il les mêmes droits qu'un salarié français ?"
+                }
+              ]
             }
           ]
         }

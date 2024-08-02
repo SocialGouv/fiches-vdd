@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "N12230",
         "type": "Dossier",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/N12230"
       },
       "children": [
@@ -325,7 +325,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R14",
             "sve": "non",
@@ -367,6 +367,7 @@
           "attributes": {
             "ID": "R63415",
             "URL": "https://ffaccessibilite.fr/services/",
+            "audience": "Particuliers",
             "type": "Outil de recherche"
           },
           "children": [
@@ -401,6 +402,7 @@
           "attributes": {
             "ID": "R19993",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_15692.do",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "888.7 KB",
             "numerocerfa": "15692*01",
@@ -434,8 +436,11 @@
               "type": "element",
               "name": "ServiceEnLigneAnnexe",
               "attributes": {
+                "audience": "Particuliers",
+                "ID": "R19996",
                 "type": "Formulaire",
-                "numerocerfa": "15695*01"
+                "numerocerfa": "15695*01",
+                "groupe": "obligatoire"
               },
               "children": [
                 {
@@ -450,15 +455,21 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Introduction",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "À joindre à toute demande. Il doit dater d'au maximum 1 an."
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "À joindre à toute demande. Il doit dater d'au maximum 1 an."
+                            }
+                          ]
                         }
                       ]
                     }
@@ -497,7 +508,8 @@
               "name": "ServiceEnLigneAnnexe",
               "attributes": {
                 "type": "Formulaire",
-                "numerocerfa": "15695*01"
+                "numerocerfa": "15695*01",
+                "groupe": "facultatif"
               },
               "children": [
                 {
@@ -526,7 +538,8 @@
               "name": "ServiceEnLigneAnnexe",
               "attributes": {
                 "type": "Formulaire",
-                "numerocerfa": "15695*01"
+                "numerocerfa": "15695*01",
+                "groupe": "facultatif"
               },
               "children": [
                 {
@@ -558,6 +571,7 @@
           "attributes": {
             "ID": "R48844",
             "URL": "https://mdphenligne.cnsa.fr/",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -592,6 +606,7 @@
           "attributes": {
             "ID": "R19996",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_15695.do",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "446.2 KB",
             "numerocerfa": "15695*01",
@@ -642,8 +657,11 @@
               "type": "element",
               "name": "ServiceEnLigneAnnexe",
               "attributes": {
+                "audience": "Particuliers",
+                "ID": "R47850",
                 "type": "Formulaire",
-                "numerocerfa": "15695*01"
+                "numerocerfa": "15695*01",
+                "groupe": "facultatif"
               },
               "children": [
                 {
@@ -672,7 +690,8 @@
               "name": "ServiceEnLigneAnnexe",
               "attributes": {
                 "type": "Formulaire",
-                "numerocerfa": "15695*01"
+                "numerocerfa": "15695*01",
+                "groupe": "facultatif"
               },
               "children": [
                 {
@@ -704,6 +723,7 @@
           "attributes": {
             "ID": "R47851",
             "URL": "https://www.formulaires.service-public.fr/gf/getAnnexe.do?cerfaAnnexe=15695-2&cerfaFormulaire=15695",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "1016.4 KB",
             "numerocerfa": "15695*01",
@@ -741,6 +761,7 @@
           "attributes": {
             "ID": "R47850",
             "URL": "https://www.formulaires.service-public.fr/gf/getAnnexe.do?cerfaAnnexe=15695-1&cerfaFormulaire=15695",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "374.8 KB",
             "numerocerfa": "15695*01",
@@ -778,6 +799,7 @@
           "attributes": {
             "ID": "R1165",
             "URL": "https://wwwd.caf.fr",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -815,8 +837,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "PCH : qu'est-ce que l'aide à la parentalité ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "PCH : qu'est-ce que l'aide à la parentalité ?"
+                }
+              ]
             }
           ]
         },
@@ -829,8 +857,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Le complément de ressources existe-t-il toujours ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Le complément de ressources existe-t-il toujours ?"
+                }
+              ]
             }
           ]
         },
@@ -843,8 +877,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment assurer la protection d'un enfant handicapé en cas d'incapacité ou de décès des parents ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment assurer la protection d'un enfant handicapé en cas d'incapacité ou de décès des parents ?"
+                }
+              ]
             }
           ]
         },
@@ -857,8 +897,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Peut-on encore percevoir l'allocation compensatrice pour tierce personne (ACTP) ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Peut-on encore percevoir l'allocation compensatrice pour tierce personne (ACTP) ?"
+                }
+              ]
             }
           ]
         },
@@ -871,8 +917,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Peut-on encore percevoir l'allocation compensatrice frais professionnels (ACFP) ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Peut-on encore percevoir l'allocation compensatrice frais professionnels (ACFP) ?"
+                }
+              ]
             }
           ]
         },
@@ -885,8 +937,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Peut-on cumuler la PCH avec d'autres allocations ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Peut-on cumuler la PCH avec d'autres allocations ?"
+                }
+              ]
             }
           ]
         },
@@ -899,8 +957,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Peut-on utiliser l'Apa ou la PCH pour payer un salarié ou un aidant familial ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Peut-on utiliser l'Apa ou la PCH pour payer un salarié ou un aidant familial ?"
+                }
+              ]
             }
           ]
         },
@@ -909,12 +973,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F31029",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-situation-handicap"
           },
           "children": [
             {
-              "type": "text",
-              "text": "Je suis en situation de handicap"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Je suis en situation de handicap"
+                }
+              ]
             }
           ]
         },
@@ -923,12 +994,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F24610",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-enfant-handicap"
           },
           "children": [
             {
-              "type": "text",
-              "text": "Mon enfant est en situation de handicap"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Mon enfant est en situation de handicap"
+                }
+              ]
             }
           ]
         }

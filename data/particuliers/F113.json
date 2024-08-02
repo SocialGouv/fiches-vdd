@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F113",
         "type": "Fiche Question-réponse conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F113"
       },
       "children": [
@@ -387,6 +387,19 @@
           "children": [
             {
               "type": "element",
+              "name": "Condition",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "estVrai",
+                  "attributes": {
+                    "var": "T10010"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "element",
               "name": "Texte",
               "children": [
                 {
@@ -614,6 +627,7 @@
                       "attributes": {
                         "ID": "R2974",
                         "URL": "https://www.anil.org/outils/outils-de-calcul/votre-pret-a-taux-zero/",
+                        "audience": "Particuliers",
                         "type": "Simulateur"
                       },
                       "children": [
@@ -976,6 +990,7 @@
                       "attributes": {
                         "ID": "R2974",
                         "URL": "https://www.anil.org/outils/outils-de-calcul/votre-pret-a-taux-zero/",
+                        "audience": "Particuliers",
                         "type": "Simulateur"
                       },
                       "children": [
@@ -1197,6 +1212,7 @@
                       "attributes": {
                         "ID": "R2974",
                         "URL": "https://www.anil.org/outils/outils-de-calcul/votre-pret-a-taux-zero/",
+                        "audience": "Particuliers",
                         "type": "Simulateur"
                       },
                       "children": [
@@ -1383,6 +1399,7 @@
                       "attributes": {
                         "ID": "R2974",
                         "URL": "https://www.anil.org/outils/outils-de-calcul/votre-pret-a-taux-zero/",
+                        "audience": "Particuliers",
                         "type": "Simulateur"
                       },
                       "children": [
@@ -1545,7 +1562,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R5",
             "sve": "non",
@@ -1724,6 +1741,7 @@
           "attributes": {
             "ID": "R2974",
             "URL": "https://www.anil.org/outils/outils-de-calcul/votre-pret-a-taux-zero/",
+            "audience": "Particuliers",
             "type": "Simulateur"
           },
           "children": [
@@ -1995,8 +2013,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Que devient le PTZ en cas de revente du logement ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Que devient le PTZ en cas de revente du logement ?"
+                }
+              ]
             }
           ]
         },
@@ -2009,8 +2033,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Garantie co-emprunteur : que faire en cas de divorce ou de séparation du couple ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Garantie co-emprunteur : que faire en cas de divorce ou de séparation du couple ?"
+                }
+              ]
             }
           ]
         },
@@ -2019,12 +2049,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F16123",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-credit-immobilier"
           },
           "children": [
             {
-              "type": "text",
-              "text": "Je veux obtenir un crédit immobilier"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Je veux obtenir un crédit immobilier"
+                }
+              ]
             }
           ]
         }

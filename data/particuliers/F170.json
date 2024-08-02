@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F170",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2018-01-17T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F170"
       },
@@ -836,11 +836,17 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "TitreFlottant",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Examens et actions de dépistage"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Examens et actions de dépistage"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -969,11 +975,17 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "TitreFlottant",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Information sur la santé"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Information sur la santé"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -1232,6 +1244,7 @@
                           "attributes": {
                             "ID": "R60154",
                             "URL": "https://www.ameli.fr/assure/sante/assurance-maladie/prevention-depistages/examen-prevention-sante",
+                            "audience": "Particuliers",
                             "type": "Téléservice"
                           },
                           "children": [
@@ -1523,6 +1536,7 @@
           "attributes": {
             "ID": "R60154",
             "URL": "https://www.ameli.fr/assure/sante/assurance-maladie/prevention-depistages/examen-prevention-sante",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -1630,8 +1644,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "À quel organisme de sécurité sociale est-on rattaché pour l'assurance maladie ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "À quel organisme de sécurité sociale est-on rattaché pour l'assurance maladie ?"
+                }
+              ]
             }
           ]
         }

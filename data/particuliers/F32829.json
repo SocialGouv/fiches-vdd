@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F32829",
         "type": "Fiche Question-réponse conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2024-06-06T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F32829"
       },
@@ -784,6 +784,150 @@
         },
         {
           "type": "element",
+          "name": "Questionnaire",
+          "children": [
+            {
+              "type": "element",
+              "name": "Question",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Êtes-vous un aidant familial salarié ou dédommagé ?"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Choix",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Aidant familial salarié"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "IntituleSiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous êtes aidant familial salarié"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "SiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "affecteVrai",
+                          "attributes": {
+                            "var": "T10778"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "affecteFaux",
+                          "attributes": {
+                            "var": "T12360"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Choix",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Aidant familial dédommagé"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "IntituleSiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous êtes aidant familial dédommagé"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "SiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "affecteVrai",
+                          "attributes": {
+                            "var": "T12360"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "affecteFaux",
+                          "attributes": {
+                            "var": "T10778"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "Texte",
           "children": [
             {
@@ -1153,51 +1297,51 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Complement",
                           "children": [
                             {
                               "type": "element",
-                              "name": "MiseEnEvidence",
+                              "name": "Titre",
                               "children": [
                                 {
                                   "type": "text",
                                   "text": "Si vous devez faire une déclaration papier"
                                 }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "La déclaration 2024 des revenus de 2023 est terminée."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "La déclaration 2025 des revenus de 2024 débutera en "
                             },
                             {
                               "type": "element",
-                              "name": "MiseEnEvidence",
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "avril 2025"
+                                  "text": "La déclaration 2024 des revenus de 2023 est terminée."
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": "."
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La déclaration 2025 des revenus de 2024 débutera en "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "avril 2025"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
                             }
                           ]
                         },
@@ -1831,7 +1975,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R20684",
             "sve": "non",
@@ -1927,7 +2071,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R15019",
             "sve": "non",
@@ -2044,6 +2188,7 @@
           "attributes": {
             "ID": "R3120",
             "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -2078,6 +2223,7 @@
           "attributes": {
             "ID": "R1280",
             "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -2112,6 +2258,7 @@
           "attributes": {
             "ID": "R1281",
             "URL": "https://www.impots.gouv.fr/portail/formulaire/2042/declaration-des-revenus",
+            "audience": "Particuliers",
             "numerocerfa": "10330",
             "autrenumero": "2042",
             "type": "Formulaire"
@@ -2148,6 +2295,7 @@
           "attributes": {
             "ID": "R1282",
             "URL": "https://www.impots.gouv.fr/portail/formulaire/2042/declaration-des-revenus",
+            "audience": "Particuliers",
             "numerocerfa": "11222",
             "autrenumero": "2042-C",
             "type": "Formulaire"
@@ -2184,6 +2332,7 @@
           "attributes": {
             "ID": "R36751",
             "URL": "https://www.impots.gouv.fr/portail/formulaire/2042/declaration-des-revenus",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "149.5 KB",
             "numerocerfa": "11222",
@@ -2222,6 +2371,7 @@
           "attributes": {
             "ID": "R2740",
             "URL": "https://simulateur-ir-ifi.impots.gouv.fr/calcul_impot/2024/",
+            "audience": "Particuliers",
             "type": "Simulateur"
           },
           "children": [
@@ -2490,8 +2640,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Peut-on utiliser l'Apa ou la PCH pour payer un salarié ou un aidant familial ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Peut-on utiliser l'Apa ou la PCH pour payer un salarié ou un aidant familial ?"
+                }
+              ]
             }
           ]
         },
@@ -2504,8 +2660,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Quelle est la date limite pour faire sa déclaration de revenus ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Quelle est la date limite pour faire sa déclaration de revenus ?"
+                }
+              ]
             }
           ]
         }

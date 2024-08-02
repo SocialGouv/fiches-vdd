@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F20992",
         "type": "Fiche Question-réponse conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F20992"
       },
       "children": [
@@ -648,11 +648,17 @@
           "children": [
             {
               "type": "element",
-              "name": "Paragraphe",
+              "name": "TitreFlottant",
               "children": [
                 {
-                  "type": "text",
-                  "text": "Préalable"
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Préalable"
+                    }
+                  ]
                 }
               ]
             },
@@ -750,11 +756,17 @@
             },
             {
               "type": "element",
-              "name": "Paragraphe",
+              "name": "TitreFlottant",
               "children": [
                 {
-                  "type": "text",
-                  "text": "Plaques d'immatriculation"
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Plaques d'immatriculation"
+                    }
+                  ]
                 }
               ]
             },
@@ -888,11 +900,17 @@
             },
             {
               "type": "element",
-              "name": "Paragraphe",
+              "name": "TitreFlottant",
               "children": [
                 {
-                  "type": "text",
-                  "text": "Formalités auprès de la douane"
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Formalités auprès de la douane"
+                    }
+                  ]
                 }
               ]
             },
@@ -982,30 +1000,30 @@
             },
             {
               "type": "element",
-              "name": "Paragraphe",
+              "name": "PourEnSavoirPlus",
+              "attributes": {
+                "type": "Information pratique",
+                "ID": "R65985",
+                "URL": "https://www.douane.gouv.fr/fiche/achat-dun-vehicule-letranger-ou-dans-un-dom-com",
+                "audience": "Particuliers"
+              },
               "children": [
                 {
                   "type": "element",
-                  "name": "LienExterne",
-                  "attributes": {
-                    "URL": "https://www.douane.gouv.fr/fiche/achat-dun-vehicule-letranger-ou-dans-un-dom-com"
-                  },
+                  "name": "Titre",
                   "children": [
                     {
                       "type": "text",
                       "text": "Achat d'un véhicule à l'étranger ou dans un Dom ou Com"
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
+                },
                 {
                   "type": "element",
-                  "name": "Citation",
+                  "name": "Source",
+                  "attributes": {
+                    "ID": "R58557"
+                  },
                   "children": [
                     {
                       "type": "text",
@@ -1017,11 +1035,17 @@
             },
             {
               "type": "element",
-              "name": "Paragraphe",
+              "name": "TitreFlottant",
               "children": [
                 {
-                  "type": "text",
-                  "text": "Formalités auprès des impôts"
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Formalités auprès des impôts"
+                    }
+                  ]
                 }
               ]
             },
@@ -1074,29 +1098,35 @@
             },
             {
               "type": "element",
-              "name": "Paragraphe",
+              "name": "TitreFlottant",
               "children": [
                 {
-                  "type": "text",
-                  "text": "Dans certains cas, formalités auprès de la "
-                },
-                {
                   "type": "element",
-                  "name": "LienInterne",
-                  "attributes": {
-                    "LienPublication": "R12143",
-                    "type": "Acronyme"
-                  },
+                  "name": "Paragraphe",
                   "children": [
                     {
                       "type": "text",
-                      "text": "Dreal"
+                      "text": "Dans certains cas, formalités auprès de la "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienInterne",
+                      "attributes": {
+                        "LienPublication": "R12143",
+                        "type": "Acronyme"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Dreal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " concernant la conformité technique de votre véhicule"
                     }
                   ]
-                },
-                {
-                  "type": "text",
-                  "text": " concernant la conformité technique de votre véhicule"
                 }
               ]
             },
@@ -1749,7 +1779,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R49205",
             "sve": "non",
@@ -1910,7 +1940,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R15019",
             "sve": "non",
@@ -1961,7 +1991,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R65986",
             "sve": "non",
@@ -2462,8 +2492,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment un expatrié peut-il revenir en France avec son véhicule ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment un expatrié peut-il revenir en France avec son véhicule ?"
+                }
+              ]
             }
           ]
         },
@@ -2476,8 +2512,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment obtenir un quitus fiscal ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment obtenir un quitus fiscal ?"
+                }
+              ]
             }
           ]
         }

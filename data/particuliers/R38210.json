@@ -9,8 +9,9 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "R38210",
         "type": "Téléservice",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/ServiceComplementaire.xsd",
-        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/R38210"
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/ServiceComplementaire.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/R38210",
+        "profilsPro": "tout"
       },
       "children": [
         {
@@ -996,7 +997,10 @@
           "type": "element",
           "name": "ServiceEnLigneAnnexe",
           "attributes": {
-            "type": "Téléservice"
+            "audience": "Particuliers",
+            "ID": "R68214",
+            "type": "Téléservice",
+            "groupe": "obligatoire"
           },
           "children": [
             {
@@ -1011,15 +1015,21 @@
             },
             {
               "type": "element",
-              "name": "Texte",
+              "name": "Introduction",
               "children": [
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "Texte",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "La connexion à l'espace privé MSA se fait via le lien suivant :"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "La connexion à l'espace privé MSA se fait via le lien suivant :"
+                        }
+                      ]
                     }
                   ]
                 }

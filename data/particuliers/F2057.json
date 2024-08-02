@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F2057",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F2057"
       },
       "children": [
@@ -1092,11 +1092,17 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "TitreFlottant",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Documents annexés à la promesse de vente"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Documents annexés à la promesse de vente"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -2513,11 +2519,17 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "TitreFlottant",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Documents annexés au compromis"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Documents annexés au compromis"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -3287,7 +3299,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R5",
             "sve": "non",
@@ -3694,6 +3706,7 @@
           "attributes": {
             "ID": "R56743",
             "URL": "https://www.ecologique-solidaire.gouv.fr/sites/default/files/Modele_etat_nuisances_sonores_aeriennes.pdf",
+            "audience": "Particuliers",
             "type": "Formulaire"
           },
           "children": [
@@ -3743,6 +3756,7 @@
           "attributes": {
             "ID": "R56989",
             "URL": "https://www.georisques.gouv.fr/",
+            "audience": "Particuliers",
             "type": "Outil de recherche"
           },
           "children": [
@@ -4172,8 +4186,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Quelles précautions prendre avant l'achat d'un terrain à bâtir isolé?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Quelles précautions prendre avant l'achat d'un terrain à bâtir isolé?"
+                }
+              ]
             }
           ]
         }

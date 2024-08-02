@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F388",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2023-01-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F388"
       },
@@ -816,6 +816,152 @@
         },
         {
           "type": "element",
+          "name": "Questionnaire",
+          "children": [
+            {
+              "type": "element",
+              "name": "Branche",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous vous êtes marié ou pacsé"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "SiSelectionne",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "affecteVrai",
+                      "attributes": {
+                        "var": "T10282"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Branche",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous vous êtes séparé"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "SiSelectionne",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "affecteVrai",
+                      "attributes": {
+                        "var": "T10950"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Branche",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Votre conjoint marié ou pacsé est décédé"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "SiSelectionne",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "affecteVrai",
+                      "attributes": {
+                        "var": "T10951"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Branche",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous venez d'avoir un enfant"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "SiSelectionne",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "affecteVrai",
+                      "attributes": {
+                        "var": "T11250"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "Texte",
           "children": [
             {
@@ -929,6 +1075,7 @@
                   "attributes": {
                     "ID": "R3120",
                     "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+                    "audience": "Particuliers",
                     "type": "Téléservice"
                   },
                   "children": [
@@ -1092,66 +1239,7 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "MiseEnEvidence",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Si vous n'avez pas d'espace personnel sur internet"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Vous devez adresser un "
-                    },
-                    {
-                      "type": "element",
-                      "name": "MiseEnEvidence",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "courrier à votre service des impôts"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": ", dans les "
-                    },
-                    {
-                      "type": "element",
-                      "name": "MiseEnEvidence",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "60 jours"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": " qui suivent votre mariage ou votre Pacs."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "OuSAdresser",
-                  "attributes": {
-                    "ID": "R15019",
-                    "sve": "non",
-                    "type": "Local"
-                  },
+                  "name": "Complement",
                   "children": [
                     {
                       "type": "element",
@@ -1159,60 +1247,84 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Service en charge des impôts (trésorerie, service des impôts...)"
+                          "text": "Si vous n'avez pas d'espace personnel sur internet"
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "RessourceWeb",
-                      "attributes": {
-                        "URL": "https://www.impots.gouv.fr/portail/contacts"
-                      }
-                    },
-                    {
-                      "type": "element",
-                      "name": "Source",
-                      "attributes": {
-                        "ID": "R30612"
-                      },
+                      "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Ministère chargé des finances"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Indiquez les informations suivantes :"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Liste",
-                  "attributes": {
-                    "type": "puce"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
+                          "text": "Vous devez adresser un "
+                        },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "MiseEnEvidence",
                           "children": [
                             {
                               "type": "text",
-                              "text": "Date du mariage ou du Pacs"
+                              "text": "courrier à votre service des impôts"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ", dans les "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "60 jours"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " qui suivent votre mariage ou votre Pacs."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "OuSAdresser",
+                      "attributes": {
+                        "ID": "R15019",
+                        "sve": "non",
+                        "type": "Local"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Service en charge des impôts (trésorerie, service des impôts...)"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "RessourceWeb",
+                          "attributes": {
+                            "URL": "https://www.impots.gouv.fr/portail/contacts"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "Source",
+                          "attributes": {
+                            "ID": "R30612"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Ministère chargé des finances"
                             }
                           ]
                         }
@@ -1220,15 +1332,82 @@
                     },
                     {
                       "type": "element",
-                      "name": "Item",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Indiquez les informations suivantes :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Item",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Coordonnées de votre époux ou partenaire (nom, prénom, date de naissance et numéro fiscal)"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Date du mariage ou du Pacs"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Coordonnées de votre époux ou partenaire (nom, prénom, date de naissance et numéro fiscal)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Coordonnées bancaires de votre nouveau foyer fiscal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Revenus du nouveau foyer."
+                                }
+                              ]
                             }
                           ]
                         }
@@ -1236,65 +1415,33 @@
                     },
                     {
                       "type": "element",
-                      "name": "Item",
+                      "name": "Paragraphe",
                       "children": [
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Coordonnées bancaires de votre nouveau foyer fiscal"
-                            }
-                          ]
+                          "type": "text",
+                          "text": "Ces informations permettent de déterminer votre nouveau taux de prélèvement."
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Item",
+                      "name": "Paragraphe",
                       "children": [
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Revenus du nouveau foyer."
-                            }
-                          ]
+                          "type": "text",
+                          "text": "Le nouveau taux sera adressé à votre employeur ou à l'organisme qui vous verse des revenus."
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
+                    },
                     {
-                      "type": "text",
-                      "text": "Ces informations permettent de déterminer votre nouveau taux de prélèvement."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Le nouveau taux sera adressé à votre employeur ou à l'organisme qui vous verse des revenus."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Il s'appliquera au plus tard 2 mois après la date de la transmission."
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Il s'appliquera au plus tard 2 mois après la date de la transmission."
+                        }
+                      ]
                     }
                   ]
                 }
@@ -1411,6 +1558,7 @@
                   "attributes": {
                     "ID": "R3120",
                     "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+                    "audience": "Particuliers",
                     "type": "Téléservice"
                   },
                   "children": [
@@ -1570,66 +1718,7 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "MiseEnEvidence",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Si vous n'avez pas d'espace personnel en ligne"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Vous devez adresser un "
-                    },
-                    {
-                      "type": "element",
-                      "name": "MiseEnEvidence",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "courrier à votre service des impôts"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": ", dans les "
-                    },
-                    {
-                      "type": "element",
-                      "name": "MiseEnEvidence",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "60 jours"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": " qui suivent votre divorce ou la rupture de votre Pacs."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "OuSAdresser",
-                  "attributes": {
-                    "ID": "R15019",
-                    "sve": "non",
-                    "type": "Local"
-                  },
+                  "name": "Complement",
                   "children": [
                     {
                       "type": "element",
@@ -1637,60 +1726,84 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Service en charge des impôts (trésorerie, service des impôts...)"
+                          "text": "Si vous n'avez pas d'espace personnel en ligne"
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "RessourceWeb",
-                      "attributes": {
-                        "URL": "https://www.impots.gouv.fr/portail/contacts"
-                      }
-                    },
-                    {
-                      "type": "element",
-                      "name": "Source",
-                      "attributes": {
-                        "ID": "R30612"
-                      },
+                      "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Ministère chargé des finances"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Indiquez les informations suivantes :"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Liste",
-                  "attributes": {
-                    "type": "puce"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
+                          "text": "Vous devez adresser un "
+                        },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "MiseEnEvidence",
                           "children": [
                             {
                               "type": "text",
-                              "text": "Nombre de personnes à charge"
+                              "text": "courrier à votre service des impôts"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ", dans les "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "60 jours"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " qui suivent votre divorce ou la rupture de votre Pacs."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "OuSAdresser",
+                      "attributes": {
+                        "ID": "R15019",
+                        "sve": "non",
+                        "type": "Local"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Service en charge des impôts (trésorerie, service des impôts...)"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "RessourceWeb",
+                          "attributes": {
+                            "URL": "https://www.impots.gouv.fr/portail/contacts"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "Source",
+                          "attributes": {
+                            "ID": "R30612"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Ministère chargé des finances"
                             }
                           ]
                         }
@@ -1698,15 +1811,82 @@
                     },
                     {
                       "type": "element",
-                      "name": "Item",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Indiquez les informations suivantes :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Item",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Personnes rattachées"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Nombre de personnes à charge"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Personnes rattachées"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Coordonnées bancaires de votre nouveau foyer fiscal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Revenus personnels, ou une estimation de ceux-ci."
+                                }
+                              ]
                             }
                           ]
                         }
@@ -1714,65 +1894,33 @@
                     },
                     {
                       "type": "element",
-                      "name": "Item",
+                      "name": "Paragraphe",
                       "children": [
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Coordonnées bancaires de votre nouveau foyer fiscal"
-                            }
-                          ]
+                          "type": "text",
+                          "text": "Ces informations permettent de déterminer votre nouveau taux de prélèvement."
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Item",
+                      "name": "Paragraphe",
                       "children": [
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Revenus personnels, ou une estimation de ceux-ci."
-                            }
-                          ]
+                          "type": "text",
+                          "text": "Le nouveau taux sera adressé à votre employeur ou à l'organisme qui vous verse des revenus."
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
+                    },
                     {
-                      "type": "text",
-                      "text": "Ces informations permettent de déterminer votre nouveau taux de prélèvement."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Le nouveau taux sera adressé à votre employeur ou à l'organisme qui vous verse des revenus."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Il s'appliquera au plus tard 2 mois après la date de la transmission."
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Il s'appliquera au plus tard 2 mois après la date de la transmission."
+                        }
+                      ]
                     }
                   ]
                 },
@@ -1931,6 +2079,7 @@
                   "attributes": {
                     "ID": "R3120",
                     "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+                    "audience": "Particuliers",
                     "type": "Téléservice"
                   },
                   "children": [
@@ -2090,66 +2239,7 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "MiseEnEvidence",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Si vous n'avez pas d'espace personnel en ligne"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Vous devez adresser un "
-                    },
-                    {
-                      "type": "element",
-                      "name": "MiseEnEvidence",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "courrier à votre service des impôts"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": ", dans les "
-                    },
-                    {
-                      "type": "element",
-                      "name": "MiseEnEvidence",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "60 jours"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": " qui suivent le décès de conjoint marié ou pacsé."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "OuSAdresser",
-                  "attributes": {
-                    "ID": "R15019",
-                    "sve": "non",
-                    "type": "Local"
-                  },
+                  "name": "Complement",
                   "children": [
                     {
                       "type": "element",
@@ -2157,60 +2247,84 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Service en charge des impôts (trésorerie, service des impôts...)"
+                          "text": "Si vous n'avez pas d'espace personnel en ligne"
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "RessourceWeb",
-                      "attributes": {
-                        "URL": "https://www.impots.gouv.fr/portail/contacts"
-                      }
-                    },
-                    {
-                      "type": "element",
-                      "name": "Source",
-                      "attributes": {
-                        "ID": "R30612"
-                      },
+                      "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Ministère chargé des finances"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Indiquez les informations suivantes :"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Liste",
-                  "attributes": {
-                    "type": "puce"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "Item",
-                      "children": [
+                          "text": "Vous devez adresser un "
+                        },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "MiseEnEvidence",
                           "children": [
                             {
                               "type": "text",
-                              "text": "Date du décès"
+                              "text": "courrier à votre service des impôts"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ", dans les "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "60 jours"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " qui suivent le décès de conjoint marié ou pacsé."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "OuSAdresser",
+                      "attributes": {
+                        "ID": "R15019",
+                        "sve": "non",
+                        "type": "Local"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Service en charge des impôts (trésorerie, service des impôts...)"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "RessourceWeb",
+                          "attributes": {
+                            "URL": "https://www.impots.gouv.fr/portail/contacts"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "Source",
+                          "attributes": {
+                            "ID": "R30612"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Ministère chargé des finances"
                             }
                           ]
                         }
@@ -2218,15 +2332,82 @@
                     },
                     {
                       "type": "element",
-                      "name": "Item",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Indiquez les informations suivantes :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Item",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Composition du foyer (nombre de personnes à charge, personnes rattachées...)"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Date du décès"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Composition du foyer (nombre de personnes à charge, personnes rattachées...)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Coordonnées bancaires de votre nouveau foyer fiscal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Revenus personnels (ou une estimation de ceux-ci)."
+                                }
+                              ]
                             }
                           ]
                         }
@@ -2234,65 +2415,33 @@
                     },
                     {
                       "type": "element",
-                      "name": "Item",
+                      "name": "Paragraphe",
                       "children": [
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Coordonnées bancaires de votre nouveau foyer fiscal"
-                            }
-                          ]
+                          "type": "text",
+                          "text": "Ces informations permettent de déterminer votre nouveau taux de prélèvement."
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Item",
+                      "name": "Paragraphe",
                       "children": [
                         {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Revenus personnels (ou une estimation de ceux-ci)."
-                            }
-                          ]
+                          "type": "text",
+                          "text": "Le nouveau taux sera adressé à votre employeur ou à l'organisme qui vous verse des revenus."
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
+                    },
                     {
-                      "type": "text",
-                      "text": "Ces informations permettent de déterminer votre nouveau taux de prélèvement."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Le nouveau taux sera adressé à votre employeur ou à l'organisme qui vous verse des revenus."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Il s'appliquera au plus tard 2 mois après la date de la transmission."
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Il s'appliquera au plus tard 2 mois après la date de la transmission."
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2429,6 +2578,7 @@
                   "attributes": {
                     "ID": "R3120",
                     "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+                    "audience": "Particuliers",
                     "type": "Téléservice"
                   },
                   "children": [
@@ -2513,66 +2663,7 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "MiseEnEvidence",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Si vous n'avez pas d'espace personnel en ligne"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Vous devez adresser un "
-                    },
-                    {
-                      "type": "element",
-                      "name": "MiseEnEvidence",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "courrier à votre service des impôts"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": ", dans les "
-                    },
-                    {
-                      "type": "element",
-                      "name": "MiseEnEvidence",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "60 jours"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": " qui suivent la naissance ou l'adoption de votre enfant."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "OuSAdresser",
-                  "attributes": {
-                    "ID": "R15019",
-                    "sve": "non",
-                    "type": "Local"
-                  },
+                  "name": "Complement",
                   "children": [
                     {
                       "type": "element",
@@ -2580,83 +2671,142 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Service en charge des impôts (trésorerie, service des impôts...)"
+                          "text": "Si vous n'avez pas d'espace personnel en ligne"
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "RessourceWeb",
-                      "attributes": {
-                        "URL": "https://www.impots.gouv.fr/portail/contacts"
-                      }
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous devez adresser un "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "courrier à votre service des impôts"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ", dans les "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "60 jours"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " qui suivent la naissance ou l'adoption de votre enfant."
+                        }
+                      ]
                     },
                     {
                       "type": "element",
-                      "name": "Source",
+                      "name": "OuSAdresser",
                       "attributes": {
-                        "ID": "R30612"
+                        "ID": "R15019",
+                        "sve": "non",
+                        "type": "Local"
                       },
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Ministère chargé des finances"
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Service en charge des impôts (trésorerie, service des impôts...)"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "RessourceWeb",
+                          "attributes": {
+                            "URL": "https://www.impots.gouv.fr/portail/contacts"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "Source",
+                          "attributes": {
+                            "ID": "R30612"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Ministère chargé des finances"
+                            }
+                          ]
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Vous devez indiquer la modification du "
                     },
                     {
                       "type": "element",
-                      "name": "MiseEnEvidence",
+                      "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "nombre de personnes à charge"
+                          "text": "Vous devez indiquer la modification du "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "nombre de personnes à charge"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
                         }
                       ]
                     },
                     {
-                      "type": "text",
-                      "text": "."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Cette information permet de déterminer votre nouveau taux de prélèvement."
+                        }
+                      ]
+                    },
                     {
-                      "type": "text",
-                      "text": "Cette information permet de déterminer votre nouveau taux de prélèvement."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Le nouveau taux sera adressé à votre employeur ou à l'organisme qui vous verse des revenus."
+                        }
+                      ]
+                    },
                     {
-                      "type": "text",
-                      "text": "Le nouveau taux sera adressé à votre employeur ou à l'organisme qui vous verse des revenus."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Il s'appliquera au plus tard 2 mois après la date de la transmission."
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Il s'appliquera au plus tard 2 mois après la date de la transmission."
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2948,7 +3098,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R20684",
             "sve": "non",
@@ -3044,7 +3194,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R15019",
             "sve": "non",
@@ -3095,7 +3245,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R55753",
             "sve": "non",
@@ -3143,7 +3293,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R20656",
             "sve": "non",
@@ -3484,6 +3634,7 @@
           "attributes": {
             "ID": "R3120",
             "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -3518,6 +3669,7 @@
           "attributes": {
             "ID": "R2740",
             "URL": "https://simulateur-ir-ifi.impots.gouv.fr/calcul_impot/2024/",
+            "audience": "Particuliers",
             "type": "Simulateur"
           },
           "children": [
@@ -3552,6 +3704,7 @@
           "attributes": {
             "ID": "R1280",
             "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -3586,6 +3739,7 @@
           "attributes": {
             "ID": "R1281",
             "URL": "https://www.impots.gouv.fr/portail/formulaire/2042/declaration-des-revenus",
+            "audience": "Particuliers",
             "numerocerfa": "10330",
             "autrenumero": "2042",
             "type": "Formulaire"
@@ -3622,6 +3776,7 @@
           "attributes": {
             "ID": "R62211",
             "URL": "https://www.service-public.fr/simulateur/calcul/DeclarationImpots",
+            "audience": "Particuliers",
             "type": "Simulateur"
           },
           "children": [
@@ -3939,8 +4094,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Quelle est la date limite pour faire sa déclaration de revenus ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Quelle est la date limite pour faire sa déclaration de revenus ?"
+                }
+              ]
             }
           ]
         },
@@ -3953,8 +4114,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Impôt sur le revenu - Qui est imposable ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Impôt sur le revenu - Qui est imposable ?"
+                }
+              ]
             }
           ]
         },
@@ -3967,8 +4134,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Impôt sur le revenu - Quelle déclaration pour un couple en concubinage ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Impôt sur le revenu - Quelle déclaration pour un couple en concubinage ?"
+                }
+              ]
             }
           ]
         },
@@ -3981,8 +4154,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Impôt sur le revenu - Quel quotient familial en cas de divorce ou séparation ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Impôt sur le revenu - Quel quotient familial en cas de divorce ou séparation ?"
+                }
+              ]
             }
           ]
         },
@@ -3995,8 +4174,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Impôt sur le revenu - Comment indiquer son changement d'adresse ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Impôt sur le revenu - Comment indiquer son changement d'adresse ?"
+                }
+              ]
             }
           ]
         },
@@ -4005,12 +4190,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F16225",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-attente-enfant"
           },
           "children": [
             {
-              "type": "text",
-              "text": "J'attends un enfant"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "J'attends un enfant"
+                }
+              ]
             }
           ]
         },
@@ -4019,12 +4211,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F33362",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-separation"
           },
           "children": [
             {
-              "type": "text",
-              "text": "Je me sépare"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Je me sépare"
+                }
+              ]
             }
           ]
         },
@@ -4033,12 +4232,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F16507",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-deces-proche"
           },
           "children": [
             {
-              "type": "text",
-              "text": "Un proche est décédé"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Un proche est décédé"
+                }
+              ]
             }
           ]
         }

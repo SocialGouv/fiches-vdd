@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F10",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F10"
       },
       "children": [
@@ -1171,6 +1171,7 @@
                           "attributes": {
                             "ID": "R57479",
                             "URL": "https://www.demarches-simplifiees.fr/commencer/mhtravail",
+                            "audience": "Particuliers",
                             "type": "Téléservice"
                           },
                           "children": [
@@ -2095,11 +2096,17 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "TitreFlottant",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Date limite d'envoi du dossier"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Date limite d'envoi du dossier"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -2248,11 +2255,17 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "TitreFlottant",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Délai"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Délai"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -2467,6 +2480,7 @@
                   "attributes": {
                     "ID": "R2970",
                     "URL": "https://www.legifrance.gouv.fr/liste/idcc?init=true",
+                    "audience": "Particuliers",
                     "type": "Outil de recherche"
                   },
                   "children": [
@@ -2578,7 +2592,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R47661",
             "sve": "non",
@@ -2673,7 +2687,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R1248",
             "sve": "non",
@@ -2714,7 +2728,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R2",
             "sve": "non",
@@ -2765,7 +2779,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R14145",
             "sve": "non",
@@ -2913,7 +2927,9 @@
           "name": "ServiceEnLigne",
           "attributes": {
             "ID": "R57479",
+            "selfPrincipal": "true",
             "URL": "https://www.demarches-simplifiees.fr/commencer/mhtravail",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -2948,6 +2964,7 @@
           "attributes": {
             "ID": "R1494",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_11796.do",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "73.9 KB",
             "numerocerfa": "11796*01",
@@ -3000,6 +3017,7 @@
           "attributes": {
             "ID": "R1495",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_11797.do",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "57.4 KB",
             "numerocerfa": "11797*01",
@@ -3110,8 +3128,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Quelles médailles récompensent le mérite professionnel des agents publics ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Quelles médailles récompensent le mérite professionnel des agents publics ?"
+                }
+              ]
             }
           ]
         }
