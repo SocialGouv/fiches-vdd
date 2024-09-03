@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Le numéro de sécurité sociale est formé du numéro d'inscription (NIR) à 13 chiffres et d'une clé de contrôle à 2 chiffres."
+              "text": "Le numéro de sécurité sociale (NIR) est composé de 13 chiffres (sexe, année, mois et lieu de naissance...) et d'une clé de contrôle à 2 chiffres."
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2023-09-27"
+              "text": "modified 2024-09-02"
             }
           ]
         },
@@ -439,49 +439,92 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Il est composé de "
-                },
+                  "text": "Ce numéro est composé :"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Liste",
+              "attributes": {
+                "type": "puce"
+              },
+              "children": [
                 {
                   "type": "element",
-                  "name": "MiseEnEvidence",
+                  "name": "Item",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "13 chiffres"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "De "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "13 chiffres"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": ". Il est complété par une "
-                },
-                {
                   "type": "element",
-                  "name": "MiseEnEvidence",
+                  "name": "Item",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "clé de contrôle"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Et d'une "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "clé de contrôle"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": " de"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "2 chiffres"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
                     }
                   ]
-                },
-                {
-                  "type": "text",
-                  "text": " composée de "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "2 chiffres"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": "."
                 }
               ]
             },
@@ -674,6 +717,32 @@
             },
             {
               "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Il peut vous être utile de connaître votre numéro de Sécurité sociale par cœur."
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Paragraphe",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "MiseEnEvidence",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Voici un moyen pour le retenir."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
               "name": "Tableau",
               "children": [
                 {
@@ -682,7 +751,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Composition du numéro de Sécurité sociale"
+                      "text": "Composition du numéro de sécurité sociale"
                     }
                   ]
                 },
@@ -1012,6 +1081,54 @@
                               ]
                             }
                           ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si vous êtes "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "né à l'étranger"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " : les 2 chiffres du code du département sont remplacés par 99 et le code commune par un code Insee du pays de naissance"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous êtes "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "né en Algérie, au Maroc ou en Tunisie avant l'indépendance"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " de ces pays : un code spécifique peut figurer à la place du code 99 et du code INSEE du pays concerné (exemples : 91, 92, 93 ou 94 pour l'Algérie, 95 pour le Maroc et 96 pour la Tunisie)"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -1055,80 +1172,6 @@
                           ]
                         }
                       ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Si vous êtes"
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": " né à l'étranger"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": ", les 2 chiffres du code du département sont remplacés par 99 et le code commune par un code Insee du pays de naissance."
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Si vous êtes nés en Algérie, au Maroc ou en Tunisie "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "avant l'indépendance de ces pays"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": ", un code spécifique peut figurer à la place du code 99 et du code INSEE du pays concerné. Par exemple : 91, 92, 93 ou 94 pour l'Algérie, 95 pour le Maroc et 96 pour la Tunisie."
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "ANoter",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "À noter"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Il peut vous être utile de connaître votre numéro de sécurité sociale par cœur."
                     }
                   ]
                 }
