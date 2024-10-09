@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "L'un de vos proches vient de décéder et vous voulez savoir si vous héritez et calculer votre part d'héritage ? Vous devez distinguer 2 situations. Si le défunt n'a pas fait de testament, c'est l'ordre de priorité des héritiers qui détermine les parts d'héritage. Si le défunt a fait un testament, il doit réserver une partie de son patrimoine à certains héritiers et peut attribuer la part restante aux personnes de son choix. Nous vous présentons les informations à connaître."
+              "text": "Les règles pour hériter différent selon que le défunt a fait un testament ou non."
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2023-01-11"
+              "text": "modified 2024-10-08"
             }
           ]
         },
@@ -841,7 +841,7 @@
                                         },
                                         {
                                           "type": "text",
-                                          "text": ")"
+                                          "text": ")."
                                         }
                                       ]
                                     }
@@ -904,7 +904,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Personne avec qui vivait le défunt : droit à la succession"
+                                      "text": "Époux ou ex-époux : droit à la succession"
                                     }
                                   ]
                                 },
@@ -941,7 +941,7 @@
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Situation de la personne qui vivait avec le défunt"
+                                              "text": "Situation maritale par rapport au défunt"
                                             }
                                           ]
                                         }
@@ -1138,7 +1138,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Les parts d'héritage sont attribuées différemment selon que le défunt au eu des enfants ou non."
+                              "text": "Les parts d'héritage sont attribuées différemment selon que le défunt a eu des enfants ou non."
                             }
                           ]
                         },
@@ -1199,80 +1199,48 @@
                                         },
                                         {
                                           "type": "element",
-                                          "name": "Condition",
+                                          "name": "Introduction",
                                           "children": [
                                             {
                                               "type": "element",
-                                              "name": "estVrai",
-                                              "attributes": {
-                                                "var": "T11902"
-                                              }
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Les parts d'héritage sont attribuées différemment selon que le défunt laisse uniquement des enfants issus du couple ou non."
+                                                }
+                                              ]
                                             }
                                           ]
                                         },
                                         {
                                           "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Les parts d'héritage sont attribuées différemment selon que le défunt laisse uniquement des enfants issus du couple ou non."
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "1er cas : le défunt ne laisse que des enfants issus du couple"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Si le défunt ne laisse que des enfants issus du couple, l'époux survivant a le choix entre les 2 options suivantes :"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Liste",
+                                          "name": "BlocCas",
                                           "attributes": {
-                                            "type": "puce"
+                                            "affichage": "radio"
                                           },
                                           "children": [
                                             {
                                               "type": "element",
-                                              "name": "Item",
+                                              "name": "Cas",
                                               "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Titre",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Le défunt ne laisse que des enfants issus du couple"
+                                                    }
+                                                  ]
+                                                },
                                                 {
                                                   "type": "element",
                                                   "name": "Paragraphe",
                                                   "children": [
                                                     {
-                                                      "type": "element",
-                                                      "name": "LienInterne",
-                                                      "attributes": {
-                                                        "LienPublication": "F934",
-                                                        "type": "Fiche Question-réponse conditionnée",
-                                                        "audience": "Particuliers"
-                                                      },
-                                                      "children": [
-                                                        {
-                                                          "type": "text",
-                                                          "text": "Usufruit"
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
                                                       "type": "text",
-                                                      "text": " de la "
+                                                      "text": "Si le défunt ne laisse que des enfants issus du couple, l'époux survivant a le choix entre les "
                                                     },
                                                     {
                                                       "type": "element",
@@ -1280,43 +1248,149 @@
                                                       "children": [
                                                         {
                                                           "type": "text",
-                                                          "text": "totalité"
+                                                          "text": "2 options"
                                                         }
                                                       ]
                                                     },
                                                     {
                                                       "type": "text",
-                                                      "text": " de la succession"
+                                                      "text": " suivantes :"
                                                     }
                                                   ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Item",
-                                              "children": [
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "Liste",
+                                                  "attributes": {
+                                                    "type": "puce"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "Item",
+                                                      "children": [
+                                                        {
+                                                          "type": "element",
+                                                          "name": "Paragraphe",
+                                                          "children": [
+                                                            {
+                                                              "type": "element",
+                                                              "name": "LienInterne",
+                                                              "attributes": {
+                                                                "LienPublication": "F934",
+                                                                "type": "Fiche Question-réponse conditionnée",
+                                                                "audience": "Particuliers"
+                                                              },
+                                                              "children": [
+                                                                {
+                                                                  "type": "text",
+                                                                  "text": "Usufruit"
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "text",
+                                                              "text": " de la "
+                                                            },
+                                                            {
+                                                              "type": "element",
+                                                              "name": "MiseEnEvidence",
+                                                              "children": [
+                                                                {
+                                                                  "type": "text",
+                                                                  "text": "totalité"
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "text",
+                                                              "text": " de la succession"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "Item",
+                                                      "children": [
+                                                        {
+                                                          "type": "element",
+                                                          "name": "Paragraphe",
+                                                          "children": [
+                                                            {
+                                                              "type": "element",
+                                                              "name": "LienIntra",
+                                                              "attributes": {
+                                                                "LienID": "R56655",
+                                                                "type": "Définition de glossaire"
+                                                              },
+                                                              "children": [
+                                                                {
+                                                                  "type": "text",
+                                                                  "text": "Pleine propriété"
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "text",
+                                                              "text": " du "
+                                                            },
+                                                            {
+                                                              "type": "element",
+                                                              "name": "MiseEnEvidence",
+                                                              "children": [
+                                                                {
+                                                                  "type": "text",
+                                                                  "text": "1/4"
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "text",
+                                                              "text": " de la succession."
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
                                                 {
                                                   "type": "element",
                                                   "name": "Paragraphe",
                                                   "children": [
                                                     {
+                                                      "type": "text",
+                                                      "text": "Si l'époux choisit l'usufruit de la totalité de la succession, les enfants héritent de la "
+                                                    },
+                                                    {
                                                       "type": "element",
                                                       "name": "LienIntra",
                                                       "attributes": {
-                                                        "LienID": "R56655",
+                                                        "LienID": "R59216",
                                                         "type": "Définition de glossaire"
                                                       },
                                                       "children": [
                                                         {
                                                           "type": "text",
-                                                          "text": "Pleine propriété"
+                                                          "text": "nue-propriété"
                                                         }
                                                       ]
                                                     },
                                                     {
                                                       "type": "text",
-                                                      "text": " du "
+                                                      "text": " de toute la succession."
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Si l'époux choisit la pleine propriété du "
                                                     },
                                                     {
                                                       "type": "element",
@@ -1330,187 +1404,231 @@
                                                     },
                                                     {
                                                       "type": "text",
-                                                      "text": " de la succession"
+                                                      "text": " de la succession, les enfants héritent de la pleine propriété des "
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "MiseEnEvidence",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "3/4"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "text",
+                                                      "text": " de la succession."
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "Attention",
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "Titre",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "Attention"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "Paragraphe",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "La part d'héritage de l'époux peut être différente si le défunt lui a fait une "
+                                                        },
+                                                        {
+                                                          "type": "element",
+                                                          "name": "LienInterne",
+                                                          "attributes": {
+                                                            "LienPublication": "F2767",
+                                                            "type": "Fiche Question-réponse conditionnée",
+                                                            "audience": "Particuliers"
+                                                          },
+                                                          "children": [
+                                                            {
+                                                              "type": "text",
+                                                              "text": "donation au dernier vivant"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "text",
+                                                          "text": "."
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Tout héritier peut demander, par écrit, à l'époux survivant de choisir une des 2 options. Si l'époux survivant ne fait pas connaître son choix par écrit dans les "
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "MiseEnEvidence",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "3 mois"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "text",
+                                                      "text": ", l'usufruit de la totalité de la succession lui est attribué."
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Si l'époux survivant décède sans avoir fait son choix, il est réputé avoir opté pour l'usufruit de la totalité de la succession."
                                                     }
                                                   ]
                                                 }
                                               ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Si l'époux choisit l'usufruit de la totalité de la succession, les enfants héritent de la "
                                             },
                                             {
                                               "type": "element",
-                                              "name": "LienIntra",
-                                              "attributes": {
-                                                "LienID": "R59216",
-                                                "type": "Définition de glossaire"
-                                              },
+                                              "name": "Cas",
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "text": "nue-propriété"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": " de toute la succession."
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Si l'époux choisit la pleine propriété du "
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "MiseEnEvidence",
-                                              "children": [
+                                                  "type": "element",
+                                                  "name": "Titre",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Le défunt laisse des enfants non communs au couple"
+                                                    }
+                                                  ]
+                                                },
                                                 {
-                                                  "type": "text",
-                                                  "text": "1/4"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": " de la succession, les enfants héritent de la pleine propriété des "
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "MiseEnEvidence",
-                                              "children": [
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Si le défunt laisse des enfants qui ne sont pas communs au couple, l'époux survivant hérite du "
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "MiseEnEvidence",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "1/4"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "text",
+                                                      "text": " de la succession en "
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "LienIntra",
+                                                      "attributes": {
+                                                        "LienID": "R56655",
+                                                        "type": "Définition de glossaire"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "pleine propriété"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "text",
+                                                      "text": "."
+                                                    }
+                                                  ]
+                                                },
                                                 {
-                                                  "type": "text",
-                                                  "text": "3/4"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": " de la succession."
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Tout héritier peut demander, par écrit, à l'époux survivant de choisir une des 2 options. Si l'époux survivant ne fait pas connaître son choix par écrit dans les "
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "MiseEnEvidence",
-                                              "children": [
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Dans ce cas, les enfants héritent des "
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "MiseEnEvidence",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "3/4"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "text",
+                                                      "text": " de la succession en pleine propriété."
+                                                    }
+                                                  ]
+                                                },
                                                 {
-                                                  "type": "text",
-                                                  "text": "3 mois"
+                                                  "type": "element",
+                                                  "name": "Attention",
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "Titre",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "Attention"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "Paragraphe",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "La part d'héritage de l'époux peut être différente si le défunt lui a fait une "
+                                                        },
+                                                        {
+                                                          "type": "element",
+                                                          "name": "LienInterne",
+                                                          "attributes": {
+                                                            "LienPublication": "F2767",
+                                                            "type": "Fiche Question-réponse conditionnée",
+                                                            "audience": "Particuliers"
+                                                          },
+                                                          "children": [
+                                                            {
+                                                              "type": "text",
+                                                              "text": "donation au dernier vivant"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "text",
+                                                          "text": "."
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
                                                 }
                                               ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": ", l'usufruit de la totalité de la succession lui est attribué."
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Si l'époux survivant décède sans avoir fait son choix, il est réputé avoir opté pour l'usufruit de la totalité de la succession."
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "2e cas : le défunt laisse des enfants non communs au couple"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Si le défunt laisse des enfants qui ne sont pas communs au couple, l'époux survivant hérite du "
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "MiseEnEvidence",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "1/4"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": " de la succession en "
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "LienIntra",
-                                              "attributes": {
-                                                "LienID": "R56655",
-                                                "type": "Définition de glossaire"
-                                              },
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "pleine propriété"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": "."
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Dans ce cas, les enfants héritent des "
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "MiseEnEvidence",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "3/4"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": " de la succession en pleine propriété."
                                             }
                                           ]
                                         }
@@ -1526,7 +1644,7 @@
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Défunt non marié"
+                                              "text": "Le défunt n'était pas marié"
                                             }
                                           ]
                                         },
@@ -1804,7 +1922,7 @@
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Défunt marié"
+                                              "text": "Le défunt était marié"
                                             }
                                           ]
                                         },
@@ -1959,7 +2077,7 @@
                                                       "children": [
                                                         {
                                                           "type": "text",
-                                                          "text": "La moitié de la succession soit 1/4 chacun"
+                                                          "text": "La moitié de la succession en pleine propriété soit 1/4 chacun en pleine propriété"
                                                         }
                                                       ]
                                                     }
@@ -1975,7 +2093,7 @@
                                                       "children": [
                                                         {
                                                           "type": "text",
-                                                          "text": "La moitié de la succession"
+                                                          "text": "La moitié de la succession en pleine propriété"
                                                         }
                                                       ]
                                                     }
@@ -2016,7 +2134,7 @@
                                                       "children": [
                                                         {
                                                           "type": "text",
-                                                          "text": "1/4 de la succession"
+                                                          "text": "1/4 de la succession en pleine propriété"
                                                         }
                                                       ]
                                                     }
@@ -2032,7 +2150,7 @@
                                                       "children": [
                                                         {
                                                           "type": "text",
-                                                          "text": "3/4 de la succession"
+                                                          "text": "3/4 de la succession en pleine propriété"
                                                         }
                                                       ]
                                                     }
@@ -2101,6 +2219,80 @@
                                         },
                                         {
                                           "type": "element",
+                                          "name": "Attention",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Titre",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Attention"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "La part d'héritage de l'époux peut être différente si le défunt lui a fait une "
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "LienInterne",
+                                                  "attributes": {
+                                                    "LienPublication": "F2767",
+                                                    "type": "Fiche Question-réponse conditionnée",
+                                                    "audience": "Particuliers"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "donation au dernier vivant"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "text": "."
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Les parents ont un "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienInterne",
+                                              "attributes": {
+                                                "LienPublication": "F16276",
+                                                "type": "Fiche Question-réponse conditionnée",
+                                                "audience": "Particuliers"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "droit de retour"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": ", c'est-à-dire le droit de reprendre les biens qu'ils avaient donnés à leurs enfants avant leur décès. La valeur de ces biens vient s'imputer sur les droits successoraux des père et mère."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
                                           "name": "ASavoir",
                                           "children": [
                                             {
@@ -2119,26 +2311,7 @@
                                               "children": [
                                                 {
                                                   "type": "text",
-                                                  "text": "Les parents ont un "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "LienInterne",
-                                                  "attributes": {
-                                                    "LienPublication": "F16276",
-                                                    "type": "Fiche Question-réponse conditionnée",
-                                                    "audience": "Particuliers"
-                                                  },
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "droit de retour"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": ", c'est-à-dire le droit de reprendre les biens qu'ils avaient donnés à leurs enfants avant leur décès. La valeur de ces biens vient s'imputer sur les droits successoraux des père et mère."
+                                                  "text": "Si les parents son décédés, l'époux survivant n'hérite pas des biens que le défunt avait reçus de ses ascendants par succession ou donation. Ce sont les frères et soeurs du défunt qui en héritent."
                                                 }
                                               ]
                                             }
@@ -2156,7 +2329,7 @@
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Défunt non marié"
+                                              "text": "Le défunt n'était pas marié"
                                             }
                                           ]
                                         },
@@ -2348,7 +2521,7 @@
                                                               "children": [
                                                                 {
                                                                   "type": "text",
-                                                                  "text": "La moitié de la succession soit 1/4 chacun"
+                                                                  "text": "La moitié de la succession en pleine propriété soit 1/4 chacun en pleine propriété"
                                                                 }
                                                               ]
                                                             }
@@ -2364,7 +2537,7 @@
                                                               "children": [
                                                                 {
                                                                   "type": "text",
-                                                                  "text": "La moitié de la succession"
+                                                                  "text": "La moitié de la succession en pleine propriété"
                                                                 }
                                                               ]
                                                             }
@@ -2405,7 +2578,7 @@
                                                               "children": [
                                                                 {
                                                                   "type": "text",
-                                                                  "text": "1/4 de la succession"
+                                                                  "text": "1/4 de la succession en pleine propriété"
                                                                 }
                                                               ]
                                                             }
@@ -2421,7 +2594,7 @@
                                                               "children": [
                                                                 {
                                                                   "type": "text",
-                                                                  "text": "Les 3/4 de la succession"
+                                                                  "text": "Les 3/4 de la succession en pleine propriété"
                                                                 }
                                                               ]
                                                             }
@@ -2693,13 +2866,13 @@
                                                       "children": [
                                                         {
                                                           "type": "text",
-                                                          "text": "Si aucun héritier n'est vivan"
+                                                          "text": "Si aucun héritier n'est vivant"
                                                         }
                                                       ]
                                                     },
                                                     {
                                                       "type": "text",
-                                                      "text": "t, l'État reçoit la succession."
+                                                      "text": ", l'État reçoit la succession."
                                                     }
                                                   ]
                                                 }
@@ -2853,8 +3026,28 @@
                               "name": "Paragraphe",
                               "children": [
                                 {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Si le défunt n'a pas eu d'enfant,"
+                                    }
+                                  ]
+                                },
+                                {
                                   "type": "text",
-                                  "text": "Si le défunt n'a pas eu d'enfant, l'héritier réservataire est l'époux survivant."
+                                  "text": " l'héritier réservataire est l'"
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "époux survivant."
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -3207,7 +3400,7 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "ASavoir",
+                                  "name": "Attention",
                                   "children": [
                                     {
                                       "type": "element",
@@ -3215,7 +3408,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "À savoir"
+                                          "text": "Attention"
                                         }
                                       ]
                                     },
@@ -3225,28 +3418,57 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Les parents ont un "
+                                          "text": "La quotité disponible peut-être différente si le défunt a fait une "
                                         },
                                         {
                                           "type": "element",
                                           "name": "LienInterne",
                                           "attributes": {
-                                            "LienPublication": "F16276",
+                                            "LienPublication": "F2767",
                                             "type": "Fiche Question-réponse conditionnée",
                                             "audience": "Particuliers"
                                           },
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "droit de retour"
+                                              "text": "donation au dernier vivant"
                                             }
                                           ]
                                         },
                                         {
                                           "type": "text",
-                                          "text": ", c'est-à-dire le droit de reprendre les biens qu'ils avaient donnés à leurs enfants avant leur décès. La valeur de ces biens vient s'imputer sur les droits successoraux des père et mère."
+                                          "text": "."
                                         }
                                       ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Les parents ont un "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F16276",
+                                        "type": "Fiche Question-réponse conditionnée",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "droit de retour"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ", c'est-à-dire le droit de reprendre les biens qu'ils avaient donnés à leurs enfants avant leur décès. La valeur de ces biens vient s'imputer sur les droits successoraux des père et mère."
                                     }
                                   ]
                                 }
@@ -3397,7 +3619,7 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "ASavoir",
+                                  "name": "Attention",
                                   "children": [
                                     {
                                       "type": "element",
@@ -3405,7 +3627,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "À savoir"
+                                          "text": "Attention"
                                         }
                                       ]
                                     },
@@ -3415,28 +3637,57 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Les parents ont un "
+                                          "text": "La quotité disponible peut-être différente si le défunt a fait une "
                                         },
                                         {
                                           "type": "element",
                                           "name": "LienInterne",
                                           "attributes": {
-                                            "LienPublication": "F16276",
+                                            "LienPublication": "F2767",
                                             "type": "Fiche Question-réponse conditionnée",
                                             "audience": "Particuliers"
                                           },
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "droit de retour"
+                                              "text": "donation au dernier vivant"
                                             }
                                           ]
                                         },
                                         {
                                           "type": "text",
-                                          "text": ", c'est-à-dire le droit de reprendre les biens qu'ils avaient donnés à leurs enfants avant leur décès. La valeur de ces biens vient s'imputer sur les droits successoraux des père et mère."
+                                          "text": "."
                                         }
                                       ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Les parents ont un "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "F16276",
+                                        "type": "Fiche Question-réponse conditionnée",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "droit de retour"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ", c'est-à-dire le droit de reprendre les biens qu'ils avaient donnés à leurs enfants avant leur décès. La valeur de ces biens vient s'imputer sur les droits successoraux des père et mère."
                                     }
                                   ]
                                 }
