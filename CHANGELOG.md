@@ -1,3 +1,15 @@
+# [2.1203.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1202.0...v2.1203.0) (2024-10-31)
+
+
+### Bug Fixes
+
+* use SocialGouv PAT in place of Github Token ([#226](https://github.com/SocialGouv/fiches-vdd/issues/226)) ([069c94c](https://github.com/SocialGouv/fiches-vdd/commit/069c94c6cbd2408344570b7c1d04f8e974437e6b))
+
+
+### Features
+
+* **data:** 20241031_1825 update ([d53d92e](https://github.com/SocialGouv/fiches-vdd/commit/d53d92ea34dc85d23f0af26597505c8b1e6c7ff8))
+
 # [2.1202.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1201.0...v2.1202.0) (2024-10-30)
 
 
