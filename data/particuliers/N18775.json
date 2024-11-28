@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "N18775",
         "type": "Dossier",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/N18775"
       },
       "children": [
@@ -437,6 +437,7 @@
           "attributes": {
             "ID": "R45945",
             "URL": "https://www.service-public.fr/simulateur/calcul/pension-alimentaire",
+            "audience": "Particuliers",
             "type": "Simulateur"
           },
           "children": [
@@ -471,6 +472,7 @@
           "attributes": {
             "ID": "R15764",
             "URL": "https://www.service-public.fr/simulateur/calcul/11530",
+            "audience": "Particuliers",
             "numerocerfa": "11530*11",
             "type": "Formulaire"
           },
@@ -524,6 +526,7 @@
           "attributes": {
             "ID": "R58775",
             "URL": "https://www.formulaires.service-public.fr/gf/getAnnexe.do?cerfaAnnexe=2&cerfaFormulaire=16139*01",
+            "audience": "Particuliers",
             "type": "Formulaire"
           },
           "children": [
@@ -558,6 +561,7 @@
           "attributes": {
             "ID": "R58774",
             "URL": "https://www.formulaires.service-public.fr/gf/getAnnexe.do?cerfaAnnexe=1&cerfaFormulaire=16139*01",
+            "audience": "Particuliers",
             "type": "Formulaire"
           },
           "children": [
@@ -592,6 +596,7 @@
           "attributes": {
             "ID": "R58771",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_16139.do",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "216.4 KB",
             "numerocerfa": "16139*01",
@@ -643,7 +648,10 @@
               "type": "element",
               "name": "ServiceEnLigneAnnexe",
               "attributes": {
-                "type": "Formulaire"
+                "audience": "Particuliers",
+                "ID": "R58774",
+                "type": "Formulaire",
+                "groupe": "obligatoire"
               },
               "children": [
                 {
@@ -658,15 +666,21 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Introduction",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Modèle de convention parentale pour que l'enfant réside chez l'un des parents et que l'autre dispose d'un droit de visite et d'hébergement."
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Modèle de convention parentale pour que l'enfant réside chez l'un des parents et que l'autre dispose d'un droit de visite et d'hébergement."
+                            }
+                          ]
                         }
                       ]
                     }
@@ -685,7 +699,10 @@
               "type": "element",
               "name": "ServiceEnLigneAnnexe",
               "attributes": {
-                "type": "Formulaire"
+                "audience": "Particuliers",
+                "ID": "R58775",
+                "type": "Formulaire",
+                "groupe": "facultatif"
               },
               "children": [
                 {
@@ -700,15 +717,21 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Introduction",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Modèle de convention parentale pour que l'enfant soit en résidence alternée chez ses 2 parents."
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Modèle de convention parentale pour que l'enfant soit en résidence alternée chez ses 2 parents."
+                            }
+                          ]
                         }
                       ]
                     }
@@ -731,6 +754,7 @@
           "attributes": {
             "ID": "R2000",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_12785.do",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "1.0 MB",
             "numerocerfa": "12785*05",
@@ -786,6 +810,7 @@
           "attributes": {
             "ID": "R37013",
             "URL": "http://www.interieur.gouv.fr/content/download/37141/280708/version/5/file/2012-formulaire-demande-mesure-ost-mineur.xls",
+            "audience": "Particuliers",
             "format": "application/vnd.ms-excel",
             "poids": "30.5 KB",
             "type": "Formulaire"
@@ -822,6 +847,7 @@
           "attributes": {
             "ID": "R42402",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_15454.do",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "98.2 KB",
             "numerocerfa": "15454*03",
@@ -877,6 +903,7 @@
           "attributes": {
             "ID": "R19762",
             "URL": "https://www.service-public.fr/simulateur/calcul/12820",
+            "audience": "Particuliers",
             "numerocerfa": "12820*02",
             "type": "Formulaire"
           },
@@ -915,8 +942,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment s'organise le droit de visite et d'hébergement de l'enfant en pratique ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment s'organise le droit de visite et d'hébergement de l'enfant en pratique ?"
+                }
+              ]
             }
           ]
         },
@@ -929,8 +962,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Autorité parentale : un parent séparé peut-il déménager librement ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Autorité parentale : un parent séparé peut-il déménager librement ?"
+                }
+              ]
             }
           ]
         },
@@ -943,8 +982,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment bénéficier de la résidence alternée ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment bénéficier de la résidence alternée ?"
+                }
+              ]
             }
           ]
         },
@@ -957,8 +1002,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Un parent peut-il avoir un droit de visite sans exercer l'autorité parentale ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Un parent peut-il avoir un droit de visite sans exercer l'autorité parentale ?"
+                }
+              ]
             }
           ]
         },
@@ -971,8 +1022,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Peut-on demander la modification de la pension alimentaire si le salaire de l'autre parent augmente ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Peut-on demander la modification de la pension alimentaire si le salaire de l'autre parent augmente ?"
+                }
+              ]
             }
           ]
         },
@@ -985,8 +1042,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Peut-on verser directement une pension alimentaire à son enfant devenu majeur ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Peut-on verser directement une pension alimentaire à son enfant devenu majeur ?"
+                }
+              ]
             }
           ]
         },
@@ -999,8 +1062,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Pension alimentaire, prestation compensatoire : quelles différences ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Pension alimentaire, prestation compensatoire : quelles différences ?"
+                }
+              ]
             }
           ]
         },
@@ -1013,8 +1082,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Séparation des parents : qui peut percevoir une pension alimentaire ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Séparation des parents : qui peut percevoir une pension alimentaire ?"
+                }
+              ]
             }
           ]
         },
@@ -1027,8 +1102,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Doit-on encore verser une pension alimentaire à un enfant devenu majeur ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Doit-on encore verser une pension alimentaire à un enfant devenu majeur ?"
+                }
+              ]
             }
           ]
         },
@@ -1041,8 +1122,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Une pension alimentaire peut-elle être demandée quand l'enfant est majeur ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Une pension alimentaire peut-elle être demandée quand l'enfant est majeur ?"
+                }
+              ]
             }
           ]
         },
@@ -1055,8 +1142,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Que faire si la pension alimentaire n'est pas payée ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Que faire si la pension alimentaire n'est pas payée ?"
+                }
+              ]
             }
           ]
         },
@@ -1069,8 +1162,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Que faire en cas de pension alimentaire impayée lorsque le débiteur est à l'étranger ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Que faire en cas de pension alimentaire impayée lorsque le débiteur est à l'étranger ?"
+                }
+              ]
             }
           ]
         },
@@ -1083,8 +1182,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment obtenir l'intermédiation financière ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment obtenir l'intermédiation financière ?"
+                }
+              ]
             }
           ]
         },
@@ -1097,8 +1202,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment fixer à l'amiable la garde et la pension alimentaire des enfants ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment fixer à l'amiable la garde et la pension alimentaire des enfants ?"
+                }
+              ]
             }
           ]
         },
@@ -1111,8 +1222,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Quels documents et affaires de l'enfant faut-il échanger entre parents ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Quels documents et affaires de l'enfant faut-il échanger entre parents ?"
+                }
+              ]
             }
           ]
         },
@@ -1125,8 +1242,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Un parent peut-il partir à l'étranger avec l'enfant pendant les vacances ou un week-end ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Un parent peut-il partir à l'étranger avec l'enfant pendant les vacances ou un week-end ?"
+                }
+              ]
             }
           ]
         },
@@ -1135,12 +1258,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F14128",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-demenagement"
           },
           "children": [
             {
-              "type": "text",
-              "text": "Je déménage en France"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Je déménage en France"
+                }
+              ]
             }
           ]
         },
@@ -1149,12 +1279,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F33362",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-separation"
           },
           "children": [
             {
-              "type": "text",
-              "text": "Je me sépare"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Je me sépare"
+                }
+              ]
             }
           ]
         }

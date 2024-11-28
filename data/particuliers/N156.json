@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "N156",
         "type": "Dossier",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/N156"
       },
       "children": [
@@ -774,6 +774,7 @@
           "attributes": {
             "ID": "R1165",
             "URL": "https://wwwd.caf.fr",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -808,6 +809,7 @@
           "attributes": {
             "ID": "R1361",
             "URL": "https://connect.caf.fr/connexionappli/dist/?forceReload=20211220&contexteAppel=caffr&urlredirect=%2Fwps%2Fmyportal%2Fcaffr%2Fmoncompte%2Fmonprofil#/login",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -842,6 +844,7 @@
           "attributes": {
             "ID": "R38210",
             "URL": "https://monespaceprive.msa.fr/lfp/web/msa/services-en-ligne/particuliers",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -872,7 +875,10 @@
               "type": "element",
               "name": "ServiceEnLigneAnnexe",
               "attributes": {
-                "type": "Téléservice"
+                "audience": "Particuliers",
+                "ID": "R68214",
+                "type": "Téléservice",
+                "groupe": "obligatoire"
               },
               "children": [
                 {
@@ -887,15 +893,21 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Introduction",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "La connexion à l'espace privé MSA se fait via le lien suivant :"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "La connexion à l'espace privé MSA se fait via le lien suivant :"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -918,6 +930,7 @@
           "attributes": {
             "ID": "R1490",
             "URL": "https://wwwd.caf.fr/wps/portal/caffr/aidesetservices/lesservicesenligne/faireunedemandedeprestation#/enfants/dacpaj",
+            "audience": "Particuliers",
             "numerocerfa": "12324*06",
             "type": "Formulaire"
           },
@@ -953,6 +966,7 @@
           "attributes": {
             "ID": "R10289",
             "URL": "https://wwwd.caf.fr/wps/myportal/caffr/moncompte/faireunedemandedeprestation/enfants/cmgpaje#/enfants/cmgpaje",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -987,6 +1001,7 @@
           "attributes": {
             "ID": "R1448",
             "URL": "https://wwwd.caf.fr/wps/portal/caffr/aidesetservices/lesservicesenligne/faireunedemandedeprestation#/enfants/dasf",
+            "audience": "Particuliers",
             "numerocerfa": "16112*01",
             "type": "Formulaire"
           },
@@ -1022,6 +1037,7 @@
           "attributes": {
             "ID": "R1305",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_10112.do",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "390.6 KB",
             "numerocerfa": "10112*06",
@@ -1060,6 +1076,7 @@
           "attributes": {
             "ID": "R19993",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_15692.do",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "888.7 KB",
             "numerocerfa": "15692*01",
@@ -1093,8 +1110,11 @@
               "type": "element",
               "name": "ServiceEnLigneAnnexe",
               "attributes": {
+                "audience": "Particuliers",
+                "ID": "R19996",
                 "type": "Formulaire",
-                "numerocerfa": "15695*01"
+                "numerocerfa": "15695*01",
+                "groupe": "obligatoire"
               },
               "children": [
                 {
@@ -1109,15 +1129,21 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Introduction",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "À joindre à toute demande. Il doit dater d'au maximum 1 an."
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "À joindre à toute demande. Il doit dater d'au maximum 1 an."
+                            }
+                          ]
                         }
                       ]
                     }
@@ -1156,7 +1182,8 @@
               "name": "ServiceEnLigneAnnexe",
               "attributes": {
                 "type": "Formulaire",
-                "numerocerfa": "15695*01"
+                "numerocerfa": "15695*01",
+                "groupe": "facultatif"
               },
               "children": [
                 {
@@ -1185,7 +1212,8 @@
               "name": "ServiceEnLigneAnnexe",
               "attributes": {
                 "type": "Formulaire",
-                "numerocerfa": "15695*01"
+                "numerocerfa": "15695*01",
+                "groupe": "facultatif"
               },
               "children": [
                 {
@@ -1217,6 +1245,7 @@
           "attributes": {
             "ID": "R48844",
             "URL": "https://mdphenligne.cnsa.fr/",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -1251,6 +1280,7 @@
           "attributes": {
             "ID": "R54933",
             "URL": "https://www.mesdroitssociaux.gouv.fr",
+            "audience": "Particuliers",
             "type": "Simulateur"
           },
           "children": [
@@ -1288,8 +1318,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Faut-il vivre en France pour percevoir des prestations familiales ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Faut-il vivre en France pour percevoir des prestations familiales ?"
+                }
+              ]
             }
           ]
         },
@@ -1302,8 +1338,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Enfant décédé à la naissance : peut-on percevoir des prestations familiales ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Enfant décédé à la naissance : peut-on percevoir des prestations familiales ?"
+                }
+              ]
             }
           ]
         },
@@ -1316,8 +1358,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Dans quels cas doit-on déclarer ses ressources à la Caf ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Dans quels cas doit-on déclarer ses ressources à la Caf ?"
+                }
+              ]
             }
           ]
         },
@@ -1330,8 +1378,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Qu'est-ce qu'un enfant à charge pour les prestations familiales ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Qu'est-ce qu'un enfant à charge pour les prestations familiales ?"
+                }
+              ]
             }
           ]
         },
@@ -1344,8 +1398,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Qui perçoit les allocations familiales pour un enfant en garde alternée ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Qui perçoit les allocations familiales pour un enfant en garde alternée ?"
+                }
+              ]
             }
           ]
         },
@@ -1358,8 +1418,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Que comprend la prestation d'accueil du jeune enfant (Paje) ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Que comprend la prestation d'accueil du jeune enfant (Paje) ?"
+                }
+              ]
             }
           ]
         },
@@ -1372,8 +1438,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Peut-on percevoir rétroactivement les prestations familiales non demandées ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Peut-on percevoir rétroactivement les prestations familiales non demandées ?"
+                }
+              ]
             }
           ]
         },
@@ -1386,8 +1458,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Doit-on rembourser des prestations familiales versées à tort ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Doit-on rembourser des prestations familiales versées à tort ?"
+                }
+              ]
             }
           ]
         },
@@ -1400,8 +1478,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment recourir au médiateur de la Caf ou de la MSA ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment recourir au médiateur de la Caf ou de la MSA ?"
+                }
+              ]
             }
           ]
         },
@@ -1414,8 +1498,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "À partir de combien d'enfants a-t-on droit aux prestations familiales ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "À partir de combien d'enfants a-t-on droit aux prestations familiales ?"
+                }
+              ]
             }
           ]
         },
@@ -1428,8 +1518,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Qui perçoit les prestations et allocations familiales dans un couple ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Qui perçoit les prestations et allocations familiales dans un couple ?"
+                }
+              ]
             }
           ]
         },
@@ -1442,8 +1538,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "En quoi consiste la mesure judiciaire d'aide à la gestion du budget familial ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "En quoi consiste la mesure judiciaire d'aide à la gestion du budget familial ?"
+                }
+              ]
             }
           ]
         },
@@ -1456,8 +1558,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Un étranger peut-il percevoir des prestations familiales en France ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Un étranger peut-il percevoir des prestations familiales en France ?"
+                }
+              ]
             }
           ]
         },
@@ -1470,8 +1578,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Que faire en cas de changement de situation familiale ou professionnelle ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Que faire en cas de changement de situation familiale ou professionnelle ?"
+                }
+              ]
             }
           ]
         },
@@ -1484,8 +1598,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Les prestations familiales sont-elles versées sous conditions de ressources ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Les prestations familiales sont-elles versées sous conditions de ressources ?"
+                }
+              ]
             }
           ]
         }

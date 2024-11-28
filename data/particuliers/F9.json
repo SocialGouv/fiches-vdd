@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F9",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2024-01-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F9"
       },
@@ -626,6 +626,150 @@
         },
         {
           "type": "element",
+          "name": "Questionnaire",
+          "children": [
+            {
+              "type": "element",
+              "name": "Question",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Situation familiale"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Choix",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Votre enfant est rattaché à une seule déclaration"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "IntituleSiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "L'enfant n'est pas en garde alternée"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "SiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "affecteVrai",
+                          "attributes": {
+                            "var": "T12375"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "affecteFaux",
+                          "attributes": {
+                            "var": "T10646"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Choix",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Votre enfant est rattaché à 2 déclarations (garde alternée)"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "IntituleSiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "L'enfant est en garde alternée"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "SiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "affecteVrai",
+                          "attributes": {
+                            "var": "T10646"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "affecteFaux",
+                          "attributes": {
+                            "var": "T12375"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "Texte",
           "children": [
             {
@@ -640,6 +784,16 @@
                 "redimensionnable": "oui"
               },
               "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Quelle réduction d'impôt pour un enfant scolarisé ?"
+                    }
+                  ]
+                },
                 {
                   "type": "element",
                   "name": "Credits",
@@ -1450,7 +1604,7 @@
                             },
                             {
                               "type": "element",
-                              "name": "ANoter",
+                              "name": "Exemple",
                               "children": [
                                 {
                                   "type": "element",
@@ -1959,6 +2113,7 @@
                               "attributes": {
                                 "ID": "R1280",
                                 "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+                                "audience": "Particuliers",
                                 "type": "Téléservice"
                               },
                               "children": [
@@ -2008,68 +2163,7 @@
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Si vous devez faire une déclaration papier"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devrez ajouter à votre déclaration le formulaire "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Expression",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Réductions d'impôt - Crédits d'impôt"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " et remplir la rubrique "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Expression",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Nombre d'enfants à charge poursuivant leurs études"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " :"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "ServiceEnLigne",
-                              "attributes": {
-                                "ID": "R32008",
-                                "URL": "https://www.impots.gouv.fr/portail/formulaire/2042/declaration-des-revenus",
-                                "numerocerfa": "15637",
-                                "autrenumero": "2042-RICI",
-                                "type": "Formulaire"
-                              },
+                              "name": "Complement",
                               "children": [
                                 {
                                   "type": "element",
@@ -2077,20 +2171,82 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Déclaration 2024 des revenus 2023 - Réductions d'impôt et crédits d'impôt"
+                                      "text": "Si vous devez faire une déclaration papier"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Source",
-                                  "attributes": {
-                                    "ID": "R30612"
-                                  },
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Ministère chargé des finances"
+                                      "text": "Vous devrez ajouter à votre déclaration le formulaire "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Réductions d'impôt - Crédits d'impôt"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " et remplir la rubrique "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Nombre d'enfants à charge poursuivant leurs études"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " :"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ServiceEnLigne",
+                                  "attributes": {
+                                    "ID": "R32008",
+                                    "URL": "https://www.impots.gouv.fr/portail/formulaire/2042/declaration-des-revenus",
+                                    "audience": "Particuliers",
+                                    "numerocerfa": "15637",
+                                    "autrenumero": "2042-RICI",
+                                    "type": "Formulaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Déclaration 2024 des revenus 2023 - Réductions d'impôt et crédits d'impôt"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30612"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ministère chargé des finances"
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -2653,7 +2809,7 @@
                             },
                             {
                               "type": "element",
-                              "name": "ANoter",
+                              "name": "Exemple",
                               "children": [
                                 {
                                   "type": "element",
@@ -3162,6 +3318,7 @@
                               "attributes": {
                                 "ID": "R1280",
                                 "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+                                "audience": "Particuliers",
                                 "type": "Téléservice"
                               },
                               "children": [
@@ -3211,68 +3368,7 @@
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Si vous devez faire une déclaration papier"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devrez ajouter à votre déclaration le formulaire "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Expression",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Réductions d'impôt - Crédits d'impôt"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " et remplir la rubrique "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Expression",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Nombre d'enfants à charge poursuivant leurs études"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " :"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "ServiceEnLigne",
-                              "attributes": {
-                                "ID": "R32008",
-                                "URL": "https://www.impots.gouv.fr/portail/formulaire/2042/declaration-des-revenus",
-                                "numerocerfa": "15637",
-                                "autrenumero": "2042-RICI",
-                                "type": "Formulaire"
-                              },
+                              "name": "Complement",
                               "children": [
                                 {
                                   "type": "element",
@@ -3280,20 +3376,82 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Déclaration 2024 des revenus 2023 - Réductions d'impôt et crédits d'impôt"
+                                      "text": "Si vous devez faire une déclaration papier"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Source",
-                                  "attributes": {
-                                    "ID": "R30612"
-                                  },
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Ministère chargé des finances"
+                                      "text": "Vous devrez ajouter à votre déclaration le formulaire "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Réductions d'impôt - Crédits d'impôt"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " et remplir la rubrique "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Expression",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Nombre d'enfants à charge poursuivant leurs études"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " :"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ServiceEnLigne",
+                                  "attributes": {
+                                    "ID": "R32008",
+                                    "URL": "https://www.impots.gouv.fr/portail/formulaire/2042/declaration-des-revenus",
+                                    "audience": "Particuliers",
+                                    "numerocerfa": "15637",
+                                    "autrenumero": "2042-RICI",
+                                    "type": "Formulaire"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Déclaration 2024 des revenus 2023 - Réductions d'impôt et crédits d'impôt"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30612"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ministère chargé des finances"
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -3354,7 +3512,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R20684",
             "sve": "non",
@@ -3450,7 +3608,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R15019",
             "sve": "non",
@@ -3591,6 +3749,7 @@
           "attributes": {
             "ID": "R3120",
             "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -3625,6 +3784,7 @@
           "attributes": {
             "ID": "R1280",
             "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -3659,6 +3819,7 @@
           "attributes": {
             "ID": "R1281",
             "URL": "https://www.impots.gouv.fr/portail/formulaire/2042/declaration-des-revenus",
+            "audience": "Particuliers",
             "numerocerfa": "10330",
             "autrenumero": "2042",
             "type": "Formulaire"
@@ -3695,6 +3856,7 @@
           "attributes": {
             "ID": "R32008",
             "URL": "https://www.impots.gouv.fr/portail/formulaire/2042/declaration-des-revenus",
+            "audience": "Particuliers",
             "numerocerfa": "15637",
             "autrenumero": "2042-RICI",
             "type": "Formulaire"
@@ -3731,6 +3893,7 @@
           "attributes": {
             "ID": "R2740",
             "URL": "https://simulateur-ir-ifi.impots.gouv.fr/calcul_impot/2024/",
+            "audience": "Particuliers",
             "type": "Simulateur"
           },
           "children": [
@@ -3894,8 +4057,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Impôt sur le revenu - Qu'est-ce qu'un enfant à charge ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Impôt sur le revenu - Qu'est-ce qu'un enfant à charge ?"
+                }
+              ]
             }
           ]
         },
@@ -3908,8 +4077,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Quelle est la date limite pour faire sa déclaration de revenus ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Quelle est la date limite pour faire sa déclaration de revenus ?"
+                }
+              ]
             }
           ]
         },
@@ -3922,8 +4097,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment déterminer son domicile fiscal ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment déterminer son domicile fiscal ?"
+                }
+              ]
             }
           ]
         }

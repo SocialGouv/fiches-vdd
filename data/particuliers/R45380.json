@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "R45380",
         "type": "Téléservice",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/ServiceComplementaire.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/ServiceComplementaire.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/R45380"
       },
       "children": [
@@ -298,7 +298,8 @@
           "type": "element",
           "name": "ServiceEnLigneAnnexe",
           "attributes": {
-            "type": "Formulaire"
+            "type": "Formulaire",
+            "groupe": "facultatif"
           },
           "children": [
             {
@@ -313,15 +314,21 @@
             },
             {
               "type": "element",
-              "name": "Texte",
+              "name": "Introduction",
               "children": [
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "Texte",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Permet de saisir le médiateur de l'eau par courrier."
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Permet de saisir le médiateur de l'eau par courrier."
+                        }
+                      ]
                     }
                   ]
                 }

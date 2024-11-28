@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F32512",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2024-05-24T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F32512"
       },
@@ -447,6 +447,9 @@
             {
               "type": "element",
               "name": "Chapitre",
+              "attributes": {
+                "numerote": "true"
+              },
               "children": [
                 {
                   "type": "element",
@@ -772,6 +775,9 @@
             {
               "type": "element",
               "name": "Chapitre",
+              "attributes": {
+                "numerote": "true"
+              },
               "children": [
                 {
                   "type": "element",
@@ -951,6 +957,7 @@
                       "attributes": {
                         "ID": "R17674",
                         "URL": "https://www.internet-signalement.gouv.fr",
+                        "audience": "Particuliers",
                         "type": "Téléservice"
                       },
                       "children": [
@@ -1353,6 +1360,9 @@
             {
               "type": "element",
               "name": "Chapitre",
+              "attributes": {
+                "numerote": "true"
+              },
               "children": [
                 {
                   "type": "element",
@@ -1789,6 +1799,9 @@
             {
               "type": "element",
               "name": "Chapitre",
+              "attributes": {
+                "numerote": "true"
+              },
               "children": [
                 {
                   "type": "element",
@@ -1919,11 +1932,17 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "TitreFlottant",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Qui peut déposer plainte ?"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Qui peut déposer plainte ?"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -2019,11 +2038,17 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "TitreFlottant",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Comment déposer plainte ?"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Comment déposer plainte ?"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -2770,7 +2795,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R14218",
             "sve": "non",
@@ -2980,6 +3005,7 @@
           "attributes": {
             "ID": "R17674",
             "URL": "https://www.internet-signalement.gouv.fr",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -3579,8 +3605,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment signaler un contenu illégal publié sur internet ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment signaler un contenu illégal publié sur internet ?"
+                }
+              ]
             }
           ]
         },
@@ -3593,8 +3625,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Responsabilité des contenus publiés sur internet : quelles sont les règles ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Responsabilité des contenus publiés sur internet : quelles sont les règles ?"
+                }
+              ]
             }
           ]
         }

@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F32795",
         "type": "Fiche Question-réponse conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2024-11-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F32795"
       },
@@ -2228,7 +2228,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R3",
             "sve": "non",
@@ -2276,7 +2276,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R14",
             "sve": "non",
@@ -2324,7 +2324,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R40963",
             "sve": "non",
@@ -2544,6 +2544,7 @@
           "attributes": {
             "ID": "R70267",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_17564_01.do",
+            "audience": "Particuliers",
             "numerocerfa": "17564*01",
             "type": "Formulaire"
           },
@@ -2575,8 +2576,11 @@
               "type": "element",
               "name": "ServiceEnLigneAnnexe",
               "attributes": {
+                "audience": "Particuliers",
+                "ID": "R70268",
                 "type": "Formulaire",
-                "numerocerfa": "17564*01"
+                "numerocerfa": "17564*01",
+                "groupe": "obligatoire"
               },
               "children": [
                 {
@@ -2591,15 +2595,21 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Introduction",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Annexe « Personne remplaçante » au formulaire de demande d’agrément d’accueillant familial"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Annexe « Personne remplaçante » au formulaire de demande d’agrément d’accueillant familial"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -2622,6 +2632,7 @@
           "attributes": {
             "ID": "R70268",
             "URL": "https://www.formulaires.service-public.fr/gf/getAnnexe.do?cerfaAnnexe=1&cerfaFormulaire=17564*01",
+            "audience": "Particuliers",
             "numerocerfa": "17564*01",
             "type": "Formulaire"
           },
@@ -2800,8 +2811,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Accueillant familial et assistant familial : quelles différences ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Accueillant familial et assistant familial : quelles différences ?"
+                }
+              ]
             }
           ]
         }

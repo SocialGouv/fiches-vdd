@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F16832",
         "type": "Fiche Question-réponse conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2019-05-07T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F16832"
       },
@@ -492,11 +492,17 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "TitreFlottant",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Demande de valeurs foncières"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Demande de valeurs foncières"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -536,6 +542,7 @@
                       "attributes": {
                         "ID": "R53491",
                         "URL": "https://explore.data.gouv.fr/fr/immobilier?onglet=carte&filtre=tous",
+                        "audience": "Particuliers",
                         "type": "Simulateur"
                       },
                       "children": [
@@ -592,11 +599,17 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "TitreFlottant",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Patrim"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Patrim"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -646,6 +659,7 @@
                       "attributes": {
                         "ID": "R34630",
                         "URL": "https://cfspart.impots.gouv.fr/LoginAccess",
+                        "audience": "Particuliers",
                         "type": "Simulateur"
                       },
                       "children": [
@@ -842,7 +856,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R20684",
             "sve": "non",
@@ -928,7 +942,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R10918",
             "sve": "non",
@@ -1001,6 +1015,7 @@
           "attributes": {
             "ID": "R34630",
             "URL": "https://cfspart.impots.gouv.fr/LoginAccess",
+            "audience": "Particuliers",
             "type": "Simulateur"
           },
           "children": [
@@ -1035,6 +1050,7 @@
           "attributes": {
             "ID": "R53491",
             "URL": "https://explore.data.gouv.fr/fr/immobilier?onglet=carte&filtre=tous",
+            "audience": "Particuliers",
             "type": "Simulateur"
           },
           "children": [
@@ -1212,8 +1228,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment obtenir des renseignements immobiliers ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment obtenir des renseignements immobiliers ?"
+                }
+              ]
             }
           ]
         }

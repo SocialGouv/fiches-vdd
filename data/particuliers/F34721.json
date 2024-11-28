@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F34721",
         "type": "Fiche Question-réponse conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2022-11-21T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F34721"
       },
@@ -795,7 +795,9 @@
           "name": "ServiceEnLigne",
           "attributes": {
             "ID": "R1757",
+            "selfPrincipal": "true",
             "URL": "https://demarches.service-public.fr/asso_mademarche/CR/demarche",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -830,6 +832,7 @@
           "attributes": {
             "ID": "R19467",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_13973.do",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "513.9 KB",
             "numerocerfa": "13973*04",
@@ -864,7 +867,8 @@
               "name": "ServiceEnLigneAnnexe",
               "attributes": {
                 "type": "Formulaire",
-                "numerocerfa": "13971*03"
+                "numerocerfa": "13971*03",
+                "groupe": "facultatif"
               },
               "children": [
                 {
@@ -879,15 +883,21 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Introduction",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Formulaire à joindre à la déclaration de l'association"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Formulaire à joindre à la déclaration de l'association"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -909,7 +919,8 @@
               "name": "ServiceEnLigneAnnexe",
               "attributes": {
                 "type": "Formulaire",
-                "numerocerfa": "13969*01"
+                "numerocerfa": "13969*01",
+                "groupe": "facultatif"
               },
               "children": [
                 {
@@ -924,15 +935,21 @@
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Introduction",
                   "children": [
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Texte",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Formulaire à joindre à la déclaration de l'association s'il s'agit d'une union ou d'une fédération d'associations"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Formulaire à joindre à la déclaration de l'association s'il s'agit d'une union ou d'une fédération d'associations"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -1087,8 +1104,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Combien coûte la publication au Journal Officiel (JO) pour une association ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Combien coûte la publication au Journal Officiel (JO) pour une association ?"
+                }
+              ]
             }
           ]
         }

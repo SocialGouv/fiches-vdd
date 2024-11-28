@@ -8,8 +8,9 @@
         "xmlns:dc": "http://purl.org/dc/elements/1.1/",
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F33959",
-        "type": "Fiche Comment faire si - simulateur",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "type": "Fiche Comment faire si conditionné",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
+        "pictogramme": "icone-victime-terrorisme",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F33959"
       },
       "children": [
@@ -199,7 +200,7 @@
               "name": "Niveau",
               "attributes": {
                 "ID": "F33959",
-                "type": "Fiche Comment faire si - simulateur"
+                "type": "Fiche Comment faire si conditionné"
               },
               "children": [
                 {
@@ -1121,6 +1122,7 @@
                           "attributes": {
                             "ID": "R53250",
                             "URL": "https://dossier.guide-victimes.gouv.fr/public/indexv2/index/city/204",
+                            "audience": "Particuliers",
                             "type": "Téléservice"
                           },
                           "children": [
@@ -1407,6 +1409,7 @@
                                       "attributes": {
                                         "ID": "R45565",
                                         "URL": "https://dossier.guide-victimes.gouv.fr/public/requestv2/accountless/teleprocedure_id/7735",
+                                        "audience": "Particuliers",
                                         "type": "Téléservice"
                                       },
                                       "children": [
@@ -1544,6 +1547,7 @@
                                       "attributes": {
                                         "ID": "R20108",
                                         "URL": "https://www.fondsdegarantie.fr/wp-content/uploads/2018/08/Formulaire_indemnisation_terrorisme_Victime.pdf",
+                                        "audience": "Particuliers",
                                         "format": "application/pdf",
                                         "poids": "236.7 KB",
                                         "type": "Formulaire"
@@ -1891,6 +1895,7 @@
                               "attributes": {
                                 "ID": "R60895",
                                 "URL": "https://www.gouvernement.fr/guide-victimes/demander-une-pension-militaire-d-invalidite",
+                                "audience": "Particuliers",
                                 "type": "Téléservice"
                               },
                               "children": [
@@ -2028,6 +2033,7 @@
                               "attributes": {
                                 "ID": "R67285",
                                 "URL": "https://mdphenligne.cnsa.fr/",
+                                "audience": "Particuliers",
                                 "type": "Téléservice"
                               },
                               "children": [
@@ -2126,6 +2132,7 @@
                               "attributes": {
                                 "ID": "R19993",
                                 "URL": "https://www.formulaires.service-public.fr/gf/cerfa_15692.do",
+                                "audience": "Particuliers",
                                 "format": "application/pdf",
                                 "poids": "888.7 KB",
                                 "numerocerfa": "15692*01",
@@ -2159,8 +2166,11 @@
                                   "type": "element",
                                   "name": "ServiceEnLigneAnnexe",
                                   "attributes": {
+                                    "audience": "Particuliers",
+                                    "ID": "R19996",
                                     "type": "Formulaire",
-                                    "numerocerfa": "15695*01"
+                                    "numerocerfa": "15695*01",
+                                    "groupe": "obligatoire"
                                   },
                                   "children": [
                                     {
@@ -2175,15 +2185,21 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Texte",
+                                      "name": "Introduction",
                                       "children": [
                                         {
                                           "type": "element",
-                                          "name": "Paragraphe",
+                                          "name": "Texte",
                                           "children": [
                                             {
-                                              "type": "text",
-                                              "text": "À joindre à toute demande. Il doit dater d'au maximum 1 an."
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "À joindre à toute demande. Il doit dater d'au maximum 1 an."
+                                                }
+                                              ]
                                             }
                                           ]
                                         }
@@ -2222,7 +2238,8 @@
                                   "name": "ServiceEnLigneAnnexe",
                                   "attributes": {
                                     "type": "Formulaire",
-                                    "numerocerfa": "15695*01"
+                                    "numerocerfa": "15695*01",
+                                    "groupe": "facultatif"
                                   },
                                   "children": [
                                     {
@@ -2251,7 +2268,8 @@
                                   "name": "ServiceEnLigneAnnexe",
                                   "attributes": {
                                     "type": "Formulaire",
-                                    "numerocerfa": "15695*01"
+                                    "numerocerfa": "15695*01",
+                                    "groupe": "facultatif"
                                   },
                                   "children": [
                                     {
@@ -2997,6 +3015,7 @@
                           "attributes": {
                             "ID": "R53127",
                             "URL": "https://www.legiondhonneur.fr/sites/default/files/fr_formulaire_demande_v2.pdf",
+                            "audience": "Particuliers",
                             "format": "application/pdf",
                             "poids": "617.2 KB",
                             "type": "Formulaire"
@@ -3605,11 +3624,17 @@
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "TitreFlottant",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Indemnisation par le Fonds de garantie des victimes d'actes de terrorisme et d'autres infractions (FGTI)"
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Indemnisation par le Fonds de garantie des victimes d'actes de terrorisme et d'autres infractions (FGTI)"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -3713,6 +3738,7 @@
                               "attributes": {
                                 "ID": "R53250",
                                 "URL": "https://dossier.guide-victimes.gouv.fr/public/indexv2/index/city/204",
+                                "audience": "Particuliers",
                                 "type": "Téléservice"
                               },
                               "children": [
@@ -3769,11 +3795,17 @@
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "TitreFlottant",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Indemnisation de l'enfant handicapé"
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Indemnisation de l'enfant handicapé"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -3790,7 +3822,7 @@
                                   "name": "LienInterne",
                                   "attributes": {
                                     "LienPublication": "F24610",
-                                    "type": "Fiche Comment faire si - simulateur",
+                                    "type": "Fiche Comment faire si conditionné",
                                     "audience": "Particuliers"
                                   },
                                   "children": [
@@ -3808,11 +3840,17 @@
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "TitreFlottant",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Octroi du statut de pupille de la nation"
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Octroi du statut de pupille de la nation"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -3869,6 +3907,7 @@
                               "attributes": {
                                 "ID": "R60908",
                                 "URL": "https://www.onac-vg.fr/demarches/devenir-pupille-de-la-nation",
+                                "audience": "Particuliers",
                                 "type": "Téléservice"
                               },
                               "children": [
@@ -4072,7 +4111,7 @@
                                   "name": "LienInterne",
                                   "attributes": {
                                     "LienPublication": "F16507",
-                                    "type": "Fiche Comment faire si - simulateur",
+                                    "type": "Fiche Comment faire si conditionné",
                                     "audience": "Particuliers"
                                   },
                                   "children": [
@@ -4445,11 +4484,17 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "TitreFlottant",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Fonds de garantie des victimes d'actes de terrorisme et d'autres infractions (FGTI)"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Fonds de garantie des victimes d'actes de terrorisme et d'autres infractions (FGTI)"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
@@ -4566,6 +4611,7 @@
                                               "attributes": {
                                                 "ID": "R45566",
                                                 "URL": "https://dossier.guide-victimes.gouv.fr/public/requestv2/accountless/teleprocedure_id/7735",
+                                                "audience": "Particuliers",
                                                 "type": "Téléservice"
                                               },
                                               "children": [
@@ -4703,6 +4749,7 @@
                                               "attributes": {
                                                 "ID": "R2412",
                                                 "URL": "https://www.fondsdegarantie.fr/wp-content/uploads/2018/08/Formulaire-indemnisation-terrorisme_ayant-droit.pdf",
+                                                "audience": "Particuliers",
                                                 "format": "application/pdf",
                                                 "poids": "301.2 KB",
                                                 "type": "Formulaire"
@@ -5030,11 +5077,17 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "TitreFlottant",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Pension d'ascendants"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Pension d'ascendants"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
@@ -5054,6 +5107,7 @@
                                       "attributes": {
                                         "ID": "R17200",
                                         "URL": "https://www.formulaires.service-public.fr/gf/cerfa_15872.do",
+                                        "audience": "Particuliers",
                                         "format": "application/pdf",
                                         "poids": "249.8 KB",
                                         "numerocerfa": "15872*02",
@@ -5218,11 +5272,17 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "TitreFlottant",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Contrat d'assurance"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Contrat d'assurance"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
@@ -5254,11 +5314,17 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "TitreFlottant",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Fonds de garantie des victimes d'actes de terrorisme et d'autres infractions (FGTI)"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Fonds de garantie des victimes d'actes de terrorisme et d'autres infractions (FGTI)"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
@@ -5375,6 +5441,7 @@
                                               "attributes": {
                                                 "ID": "R45566",
                                                 "URL": "https://dossier.guide-victimes.gouv.fr/public/requestv2/accountless/teleprocedure_id/7735",
+                                                "audience": "Particuliers",
                                                 "type": "Téléservice"
                                               },
                                               "children": [
@@ -5512,6 +5579,7 @@
                                               "attributes": {
                                                 "ID": "R2412",
                                                 "URL": "https://www.fondsdegarantie.fr/wp-content/uploads/2018/08/Formulaire-indemnisation-terrorisme_ayant-droit.pdf",
+                                                "audience": "Particuliers",
                                                 "format": "application/pdf",
                                                 "poids": "301.2 KB",
                                                 "type": "Formulaire"
@@ -5839,11 +5907,17 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "TitreFlottant",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Contrat d'assurance"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Contrat d'assurance"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
@@ -5875,11 +5949,17 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "TitreFlottant",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Fonds de garantie des victimes d'actes de terrorisme et d'autres infractions (FGTI)"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Fonds de garantie des victimes d'actes de terrorisme et d'autres infractions (FGTI)"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
@@ -5996,6 +6076,7 @@
                                               "attributes": {
                                                 "ID": "R45566",
                                                 "URL": "https://dossier.guide-victimes.gouv.fr/public/requestv2/accountless/teleprocedure_id/7735",
+                                                "audience": "Particuliers",
                                                 "type": "Téléservice"
                                               },
                                               "children": [
@@ -6133,6 +6214,7 @@
                                               "attributes": {
                                                 "ID": "R2412",
                                                 "URL": "https://www.fondsdegarantie.fr/wp-content/uploads/2018/08/Formulaire-indemnisation-terrorisme_ayant-droit.pdf",
+                                                "audience": "Particuliers",
                                                 "format": "application/pdf",
                                                 "poids": "301.2 KB",
                                                 "type": "Formulaire"
@@ -6460,11 +6542,17 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "TitreFlottant",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Statut de pupille de la Nation"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Statut de pupille de la Nation"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
@@ -6521,6 +6609,7 @@
                                       "attributes": {
                                         "ID": "R60908",
                                         "URL": "https://www.onac-vg.fr/demarches/devenir-pupille-de-la-nation",
+                                        "audience": "Particuliers",
                                         "type": "Téléservice"
                                       },
                                       "children": [
@@ -6551,11 +6640,17 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "TitreFlottant",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Contrat d'assurance"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Contrat d'assurance"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
@@ -6587,11 +6682,17 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "TitreFlottant",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Fonds de garantie des victimes d'actes de terrorisme et d'autres infractions (FGTI)"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Fonds de garantie des victimes d'actes de terrorisme et d'autres infractions (FGTI)"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
@@ -6708,6 +6809,7 @@
                                               "attributes": {
                                                 "ID": "R45566",
                                                 "URL": "https://dossier.guide-victimes.gouv.fr/public/requestv2/accountless/teleprocedure_id/7735",
+                                                "audience": "Particuliers",
                                                 "type": "Téléservice"
                                               },
                                               "children": [
@@ -6845,6 +6947,7 @@
                                               "attributes": {
                                                 "ID": "R2412",
                                                 "URL": "https://www.fondsdegarantie.fr/wp-content/uploads/2018/08/Formulaire-indemnisation-terrorisme_ayant-droit.pdf",
+                                                "audience": "Particuliers",
                                                 "format": "application/pdf",
                                                 "poids": "301.2 KB",
                                                 "type": "Formulaire"
@@ -7172,11 +7275,17 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "TitreFlottant",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Contrat d'assurance"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Contrat d'assurance"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
@@ -7269,6 +7378,7 @@
                               "attributes": {
                                 "ID": "R60908",
                                 "URL": "https://www.onac-vg.fr/demarches/devenir-pupille-de-la-nation",
+                                "audience": "Particuliers",
                                 "type": "Téléservice"
                               },
                               "children": [
@@ -7440,7 +7550,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R167",
             "sve": "non",
@@ -7604,7 +7714,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R50579",
             "sve": "non",
@@ -7708,7 +7818,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R1883",
             "sve": "non",
@@ -7746,7 +7856,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R45829",
             "sve": "non",
@@ -7774,7 +7884,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R45828",
             "sve": "non",
@@ -7806,6 +7916,7 @@
           "attributes": {
             "ID": "R53250",
             "URL": "https://dossier.guide-victimes.gouv.fr/public/indexv2/index/city/204",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -7840,6 +7951,7 @@
           "attributes": {
             "ID": "R48714",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_15869.do",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "133.3 KB",
             "numerocerfa": "15869*02",
@@ -7894,6 +8006,7 @@
           "attributes": {
             "ID": "R50551",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_15870.do",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "135.6 KB",
             "langue": "en",
@@ -7932,6 +8045,7 @@
           "attributes": {
             "ID": "R17200",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_15872.do",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "249.8 KB",
             "numerocerfa": "15872*02",
@@ -7969,6 +8083,7 @@
           "attributes": {
             "ID": "R50560",
             "URL": "https://www.formulaires.service-public.fr/gf/cerfa_15871.do",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "302.3 KB",
             "numerocerfa": "15871*03",
@@ -8006,6 +8121,7 @@
           "attributes": {
             "ID": "R53127",
             "URL": "https://www.legiondhonneur.fr/sites/default/files/fr_formulaire_demande_v2.pdf",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "617.2 KB",
             "type": "Formulaire"
@@ -8781,8 +8897,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Que faire en cas de décès d'un proche à l'étranger ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Que faire en cas de décès d'un proche à l'étranger ?"
+                }
+              ]
             }
           ]
         },
@@ -8791,12 +8913,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F31029",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-situation-handicap"
           },
           "children": [
             {
-              "type": "text",
-              "text": "Je suis en situation de handicap"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Je suis en situation de handicap"
+                }
+              ]
             }
           ]
         },
@@ -8805,12 +8934,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F16507",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-deces-proche"
           },
           "children": [
             {
-              "type": "text",
-              "text": "Un proche est décédé"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Un proche est décédé"
+                }
+              ]
             }
           ]
         },
@@ -8819,12 +8955,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F24610",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-enfant-handicap"
           },
           "children": [
             {
-              "type": "text",
-              "text": "Mon enfant est en situation de handicap"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Mon enfant est en situation de handicap"
+                }
+              ]
             }
           ]
         }

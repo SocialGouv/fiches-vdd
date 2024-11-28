@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F10528",
         "type": "Fiche Question-réponse conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2023-02-24T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F10528"
       },
@@ -431,6 +431,150 @@
         },
         {
           "type": "element",
+          "name": "Questionnaire",
+          "children": [
+            {
+              "type": "element",
+              "name": "Question",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Choix",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous voulez devenir Français"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "IntituleSiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous voulez devenir Français"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "SiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "affecteVrai",
+                          "attributes": {
+                            "var": "T12853"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "affecteFaux",
+                          "attributes": {
+                            "var": "T12852"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Choix",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous venez d'obtenir la nationalité française"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "IntituleSiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous venez d'obtenir la nationalité française"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "SiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "affecteVrai",
+                          "attributes": {
+                            "var": "T12852"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "affecteFaux",
+                          "attributes": {
+                            "var": "T12853"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "ListeSituations",
           "attributes": {
             "affichage": "onglet"
@@ -499,6 +643,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -1027,6 +1174,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -1110,6 +1260,7 @@
                                   "attributes": {
                                     "ID": "R60835",
                                     "URL": "https://administration-etrangers-en-france.interieur.gouv.fr/particuliers/#/espace-personnel/connexion-inscription",
+                                    "audience": "Particuliers",
                                     "type": "Téléservice"
                                   },
                                   "children": [
@@ -1140,8 +1291,11 @@
                                       "type": "element",
                                       "name": "ServiceEnLigneAnnexe",
                                       "attributes": {
+                                        "audience": "Particuliers",
+                                        "ID": "R16995",
                                         "type": "Formulaire",
-                                        "numerocerfa": "12753*03"
+                                        "numerocerfa": "12753*03",
+                                        "groupe": "facultatif"
                                       },
                                       "children": [
                                         {
@@ -1156,15 +1310,21 @@
                                         },
                                         {
                                           "type": "element",
-                                          "name": "Texte",
+                                          "name": "Introduction",
                                           "children": [
                                             {
                                               "type": "element",
-                                              "name": "Paragraphe",
+                                              "name": "Texte",
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "text": "À la place, vous pouvez utiliser un formulaire papier pour faire votre demande"
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "À la place, vous pouvez utiliser un formulaire papier pour faire votre demande"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -1243,6 +1403,7 @@
                                   "attributes": {
                                     "ID": "R43055",
                                     "URL": "http://www.immigration.interieur.gouv.fr/content/download/80980/595232/file/demande_francisation-2.pdf",
+                                    "audience": "Particuliers",
                                     "format": "application/pdf",
                                     "poids": "1.1 MB",
                                     "numerocerfa": "65-0054",
@@ -1352,6 +1513,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -1477,6 +1641,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -1719,7 +1886,7 @@
                         },
                         {
                           "type": "element",
-                          "name": "ANoter",
+                          "name": "Exemple",
                           "children": [
                             {
                               "type": "element",
@@ -2107,6 +2274,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -2635,6 +2805,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -2689,6 +2862,7 @@
                                   "attributes": {
                                     "ID": "R60835",
                                     "URL": "https://administration-etrangers-en-france.interieur.gouv.fr/particuliers/#/espace-personnel/connexion-inscription",
+                                    "audience": "Particuliers",
                                     "type": "Téléservice"
                                   },
                                   "children": [
@@ -2719,8 +2893,11 @@
                                       "type": "element",
                                       "name": "ServiceEnLigneAnnexe",
                                       "attributes": {
+                                        "audience": "Particuliers",
+                                        "ID": "R16995",
                                         "type": "Formulaire",
-                                        "numerocerfa": "12753*03"
+                                        "numerocerfa": "12753*03",
+                                        "groupe": "facultatif"
                                       },
                                       "children": [
                                         {
@@ -2735,15 +2912,21 @@
                                         },
                                         {
                                           "type": "element",
-                                          "name": "Texte",
+                                          "name": "Introduction",
                                           "children": [
                                             {
                                               "type": "element",
-                                              "name": "Paragraphe",
+                                              "name": "Texte",
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "text": "À la place, vous pouvez utiliser un formulaire papier pour faire votre demande"
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "À la place, vous pouvez utiliser un formulaire papier pour faire votre demande"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -2822,6 +3005,7 @@
                                   "attributes": {
                                     "ID": "R43055",
                                     "URL": "http://www.immigration.interieur.gouv.fr/content/download/80980/595232/file/demande_francisation-2.pdf",
+                                    "audience": "Particuliers",
                                     "format": "application/pdf",
                                     "poids": "1.1 MB",
                                     "numerocerfa": "65-0054",
@@ -2931,6 +3115,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -3042,6 +3229,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -3284,7 +3474,7 @@
                         },
                         {
                           "type": "element",
-                          "name": "ANoter",
+                          "name": "Exemple",
                           "children": [
                             {
                               "type": "element",
@@ -3774,7 +3964,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R11621",
             "sve": "non",
@@ -4010,6 +4200,7 @@
           "attributes": {
             "ID": "R43055",
             "URL": "http://www.immigration.interieur.gouv.fr/content/download/80980/595232/file/demande_francisation-2.pdf",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "1.1 MB",
             "numerocerfa": "65-0054",
@@ -4207,8 +4398,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment obtenir la nationalité française ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment obtenir la nationalité française ?"
+                }
+              ]
             }
           ]
         },
@@ -4221,8 +4418,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment trouver son décret de naturalisation publié au Journal officiel ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment trouver son décret de naturalisation publié au Journal officiel ?"
+                }
+              ]
             }
           ]
         },
@@ -4235,8 +4438,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Dans quels cas un enfant est-il Français ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Dans quels cas un enfant est-il Français ?"
+                }
+              ]
             }
           ]
         },
@@ -4249,8 +4458,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Qu'est-que la cérémonie de naturalisation (accueil dans la citoyenneté française) ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Qu'est-que la cérémonie de naturalisation (accueil dans la citoyenneté française) ?"
+                }
+              ]
             }
           ]
         },
@@ -4263,8 +4478,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Nationalité française : comment justifier de son niveau en français ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Nationalité française : comment justifier de son niveau en français ?"
+                }
+              ]
             }
           ]
         },
@@ -4277,8 +4498,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Peut-on avoir plusieurs nationalités en France ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Peut-on avoir plusieurs nationalités en France ?"
+                }
+              ]
             }
           ]
         }

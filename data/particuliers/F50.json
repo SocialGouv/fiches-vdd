@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F50",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F50"
       },
       "children": [
@@ -972,11 +972,17 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "TitreFlottant",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Restrictions propres à certaines marchandises"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Restrictions propres à certaines marchandises"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1187,11 +1193,17 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "TitreFlottant",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Interdictions"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Interdictions"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1514,17 +1526,23 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "TitreFlottant",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Résumé en image sur les franchises : comment passer la douane en toute sérénité ?"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Résumé en image sur les franchises : comment passer la douane en toute sérénité ?"
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "ANoter",
+                          "name": "Exemple",
                           "children": [
                             {
                               "type": "element",
@@ -1913,7 +1931,7 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "ANoter",
+                                  "name": "Exemple",
                                   "children": [
                                     {
                                       "type": "element",
@@ -2023,6 +2041,7 @@
                                   "attributes": {
                                     "ID": "R66393",
                                     "URL": "https://declare-douane.beta.gouv.fr/simulateur/configuration/etape1/",
+                                    "audience": "Particuliers",
                                     "type": "Simulateur"
                                   },
                                   "children": [
@@ -2266,86 +2285,134 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Complement",
                           "children": [
                             {
                               "type": "element",
-                              "name": "MiseEnEvidence",
+                              "name": "Titre",
                               "children": [
                                 {
                                   "type": "text",
                                   "text": "Résidents et travailleurs frontaliers à l'UE (dont la Suisse)"
                                 }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "La franchise s'applique aux biens dont la valeur totale n'excède pas "
                             },
                             {
                               "type": "element",
-                              "name": "Valeur",
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "75 €"
+                                  "text": "La franchise s'applique aux biens dont la valeur totale n'excède pas "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "75 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " par personne âgée de 15 ans ou plus, et "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "40 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " par personne âgée de moins de 15 ans."
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": " par personne âgée de 15 ans ou plus, et "
-                            },
-                            {
                               "type": "element",
-                              "name": "Valeur",
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "40 €"
+                                  "text": "Pour les produits du tabac, les limites quantitatives sont les suivantes :"
                                 }
                               ]
                             },
                             {
-                              "type": "text",
-                              "text": " par personne âgée de moins de 15 ans."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Pour les produits du tabac, les limites quantitatives sont les suivantes :"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Liste",
-                          "attributes": {
-                            "type": "puce"
-                          },
-                          "children": [
-                            {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "40 cigarettes"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "40 cigarettes"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "20 cigarillos"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "10 cigares"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "50 grammes de tabac à fumer"
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -2353,130 +2420,82 @@
                             },
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Paragraphe",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "20 cigarillos"
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Pour l'alcool, si la personne est âgée de plus de 17 ans, les limites quantitatives sont les suivantes :"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "10 cigares"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "0, 25 litre d'alcool supérieur à 22 degré"
+                                        }
+                                      ]
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
+                                },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "50 grammes de tabac à fumer"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "0, 5 litre d'alcool inférieur ou égal à 22 degré"
+                                        }
+                                      ]
                                     }
                                   ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Pour l'alcool, si la personne est âgée de plus de 17 ans, les limites quantitatives sont les suivantes :"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Liste",
-                          "attributes": {
-                            "type": "puce"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
+                                },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "0, 25 litre d'alcool supérieur à 22 degré"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "0, 5 litre de vin tranquille"
+                                        }
+                                      ]
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
+                                },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "0, 5 litre d'alcool inférieur ou égal à 22 degré"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "0, 5 litre de vin tranquille"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "4 litres de bière"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "4 litres de bière"
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -2764,6 +2783,7 @@
                               "attributes": {
                                 "ID": "R66394",
                                 "URL": "https://declare-douane.beta.gouv.fr/",
+                                "audience": "Particuliers",
                                 "type": "Téléservice"
                               },
                               "children": [
@@ -3465,7 +3485,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R16283",
             "sve": "non",
@@ -3625,7 +3645,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R49112",
             "sve": "non",
@@ -3936,6 +3956,7 @@
           "attributes": {
             "ID": "R66393",
             "URL": "https://declare-douane.beta.gouv.fr/simulateur/configuration/etape1/",
+            "audience": "Particuliers",
             "type": "Simulateur"
           },
           "children": [
@@ -3970,6 +3991,7 @@
           "attributes": {
             "ID": "R66394",
             "URL": "https://declare-douane.beta.gouv.fr/",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -4004,6 +4026,7 @@
           "attributes": {
             "ID": "R59476",
             "URL": "https://www.google.com/maps/d/viewer?mid=15NzqQ3i4s8r4CPiMMT8ZPLD4iMA&ll=18.040252408823157%2C-69.13444849999999&z=2",
+            "audience": "Particuliers",
             "type": "Outil de recherche"
           },
           "children": [

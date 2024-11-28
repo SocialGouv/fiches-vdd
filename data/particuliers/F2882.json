@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F2882",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2024-11-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F2882"
       },
@@ -568,6 +568,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -1185,6 +1188,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -1218,6 +1224,7 @@
                           "attributes": {
                             "ID": "R42725",
                             "URL": "https://wwwd.caf.fr/wps/portal/caffr/simulateurpa/",
+                            "audience": "Particuliers",
                             "type": "Simulateur"
                           },
                           "children": [
@@ -1248,11 +1255,17 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "TitreFlottant",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "En savoir plus sur le mode de calcul de la prime d'activité"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "En savoir plus sur le mode de calcul de la prime d'activité"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -1834,11 +1847,17 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "TitreFlottant",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Le montant de la prime d'activité peut-il être majoré ?"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le montant de la prime d'activité peut-il être majoré ?"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -2609,11 +2628,17 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "TitreFlottant",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Qu'est-ce que la bonification individuelle ?"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Qu'est-ce que la bonification individuelle ?"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -2742,6 +2767,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -2775,6 +2803,7 @@
                           "attributes": {
                             "ID": "R42724",
                             "URL": "https://wwwd.caf.fr/wps/portal/caffr/simulateurpa/",
+                            "audience": "Particuliers",
                             "type": "Téléservice"
                           },
                           "children": [
@@ -2808,6 +2837,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -2892,6 +2924,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -2977,6 +3012,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -3085,6 +3123,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -3194,6 +3235,7 @@
                                           "attributes": {
                                             "ID": "R1165",
                                             "URL": "https://wwwd.caf.fr",
+                                            "audience": "Particuliers",
                                             "type": "Téléservice"
                                           },
                                           "children": [
@@ -3350,6 +3392,7 @@
                                           "attributes": {
                                             "ID": "R38210",
                                             "URL": "https://monespaceprive.msa.fr/lfp/web/msa/services-en-ligne/particuliers",
+                                            "audience": "Particuliers",
                                             "type": "Téléservice"
                                           },
                                           "children": [
@@ -3380,7 +3423,10 @@
                                               "type": "element",
                                               "name": "ServiceEnLigneAnnexe",
                                               "attributes": {
-                                                "type": "Téléservice"
+                                                "audience": "Particuliers",
+                                                "ID": "R68214",
+                                                "type": "Téléservice",
+                                                "groupe": "obligatoire"
                                               },
                                               "children": [
                                                 {
@@ -3395,15 +3441,21 @@
                                                 },
                                                 {
                                                   "type": "element",
-                                                  "name": "Texte",
+                                                  "name": "Introduction",
                                                   "children": [
                                                     {
                                                       "type": "element",
-                                                      "name": "Paragraphe",
+                                                      "name": "Texte",
                                                       "children": [
                                                         {
-                                                          "type": "text",
-                                                          "text": "La connexion à l'espace privé MSA se fait via le lien suivant :"
+                                                          "type": "element",
+                                                          "name": "Paragraphe",
+                                                          "children": [
+                                                            {
+                                                              "type": "text",
+                                                              "text": "La connexion à l'espace privé MSA se fait via le lien suivant :"
+                                                            }
+                                                          ]
                                                         }
                                                       ]
                                                     }
@@ -3607,6 +3659,7 @@
                                           "attributes": {
                                             "ID": "R1165",
                                             "URL": "https://wwwd.caf.fr",
+                                            "audience": "Particuliers",
                                             "type": "Téléservice"
                                           },
                                           "children": [
@@ -3657,6 +3710,7 @@
                                           "attributes": {
                                             "ID": "R38210",
                                             "URL": "https://monespaceprive.msa.fr/lfp/web/msa/services-en-ligne/particuliers",
+                                            "audience": "Particuliers",
                                             "type": "Téléservice"
                                           },
                                           "children": [
@@ -3687,7 +3741,10 @@
                                               "type": "element",
                                               "name": "ServiceEnLigneAnnexe",
                                               "attributes": {
-                                                "type": "Téléservice"
+                                                "audience": "Particuliers",
+                                                "ID": "R68214",
+                                                "type": "Téléservice",
+                                                "groupe": "obligatoire"
                                               },
                                               "children": [
                                                 {
@@ -3702,15 +3759,21 @@
                                                 },
                                                 {
                                                   "type": "element",
-                                                  "name": "Texte",
+                                                  "name": "Introduction",
                                                   "children": [
                                                     {
                                                       "type": "element",
-                                                      "name": "Paragraphe",
+                                                      "name": "Texte",
                                                       "children": [
                                                         {
-                                                          "type": "text",
-                                                          "text": "La connexion à l'espace privé MSA se fait via le lien suivant :"
+                                                          "type": "element",
+                                                          "name": "Paragraphe",
+                                                          "children": [
+                                                            {
+                                                              "type": "text",
+                                                              "text": "La connexion à l'espace privé MSA se fait via le lien suivant :"
+                                                            }
+                                                          ]
                                                         }
                                                       ]
                                                     }
@@ -3740,6 +3803,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -3917,6 +3983,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -4072,6 +4141,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -4227,6 +4299,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -4844,6 +4919,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -4877,6 +4955,7 @@
                           "attributes": {
                             "ID": "R42726",
                             "URL": "https://www.msa.fr/lfp/prime-d-activite",
+                            "audience": "Particuliers",
                             "type": "Téléservice"
                           },
                           "children": [
@@ -4907,11 +4986,17 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "TitreFlottant",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "En savoir plus sur le mode de calcul de la prime d'activité :"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "En savoir plus sur le mode de calcul de la prime d'activité :"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -5493,11 +5578,17 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "TitreFlottant",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Le montant de la prime d'activité peut-il être majoré ?"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Le montant de la prime d'activité peut-il être majoré ?"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -6268,11 +6359,17 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "TitreFlottant",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Qu'est-ce que la bonification individuelle ?"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Qu'est-ce que la bonification individuelle ?"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -6401,6 +6498,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -6434,6 +6534,7 @@
                           "attributes": {
                             "ID": "R38210",
                             "URL": "https://monespaceprive.msa.fr/lfp/web/msa/services-en-ligne/particuliers",
+                            "audience": "Particuliers",
                             "type": "Téléservice"
                           },
                           "children": [
@@ -6464,7 +6565,10 @@
                               "type": "element",
                               "name": "ServiceEnLigneAnnexe",
                               "attributes": {
-                                "type": "Téléservice"
+                                "audience": "Particuliers",
+                                "ID": "R68214",
+                                "type": "Téléservice",
+                                "groupe": "obligatoire"
                               },
                               "children": [
                                 {
@@ -6479,15 +6583,21 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Texte",
+                                  "name": "Introduction",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Texte",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "La connexion à l'espace privé MSA se fait via le lien suivant :"
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "La connexion à l'espace privé MSA se fait via le lien suivant :"
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -6509,6 +6619,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -6593,6 +6706,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -6678,6 +6794,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -6786,6 +6905,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -6895,6 +7017,7 @@
                                           "attributes": {
                                             "ID": "R1165",
                                             "URL": "https://wwwd.caf.fr",
+                                            "audience": "Particuliers",
                                             "type": "Téléservice"
                                           },
                                           "children": [
@@ -7051,6 +7174,7 @@
                                           "attributes": {
                                             "ID": "R38210",
                                             "URL": "https://monespaceprive.msa.fr/lfp/web/msa/services-en-ligne/particuliers",
+                                            "audience": "Particuliers",
                                             "type": "Téléservice"
                                           },
                                           "children": [
@@ -7081,7 +7205,10 @@
                                               "type": "element",
                                               "name": "ServiceEnLigneAnnexe",
                                               "attributes": {
-                                                "type": "Téléservice"
+                                                "audience": "Particuliers",
+                                                "ID": "R68214",
+                                                "type": "Téléservice",
+                                                "groupe": "obligatoire"
                                               },
                                               "children": [
                                                 {
@@ -7096,15 +7223,21 @@
                                                 },
                                                 {
                                                   "type": "element",
-                                                  "name": "Texte",
+                                                  "name": "Introduction",
                                                   "children": [
                                                     {
                                                       "type": "element",
-                                                      "name": "Paragraphe",
+                                                      "name": "Texte",
                                                       "children": [
                                                         {
-                                                          "type": "text",
-                                                          "text": "La connexion à l'espace privé MSA se fait via le lien suivant :"
+                                                          "type": "element",
+                                                          "name": "Paragraphe",
+                                                          "children": [
+                                                            {
+                                                              "type": "text",
+                                                              "text": "La connexion à l'espace privé MSA se fait via le lien suivant :"
+                                                            }
+                                                          ]
                                                         }
                                                       ]
                                                     }
@@ -7308,6 +7441,7 @@
                                           "attributes": {
                                             "ID": "R1165",
                                             "URL": "https://wwwd.caf.fr",
+                                            "audience": "Particuliers",
                                             "type": "Téléservice"
                                           },
                                           "children": [
@@ -7358,6 +7492,7 @@
                                           "attributes": {
                                             "ID": "R38210",
                                             "URL": "https://monespaceprive.msa.fr/lfp/web/msa/services-en-ligne/particuliers",
+                                            "audience": "Particuliers",
                                             "type": "Téléservice"
                                           },
                                           "children": [
@@ -7388,7 +7523,10 @@
                                               "type": "element",
                                               "name": "ServiceEnLigneAnnexe",
                                               "attributes": {
-                                                "type": "Téléservice"
+                                                "audience": "Particuliers",
+                                                "ID": "R68214",
+                                                "type": "Téléservice",
+                                                "groupe": "obligatoire"
                                               },
                                               "children": [
                                                 {
@@ -7403,15 +7541,21 @@
                                                 },
                                                 {
                                                   "type": "element",
-                                                  "name": "Texte",
+                                                  "name": "Introduction",
                                                   "children": [
                                                     {
                                                       "type": "element",
-                                                      "name": "Paragraphe",
+                                                      "name": "Texte",
                                                       "children": [
                                                         {
-                                                          "type": "text",
-                                                          "text": "La connexion à l'espace privé MSA se fait via le lien suivant :"
+                                                          "type": "element",
+                                                          "name": "Paragraphe",
+                                                          "children": [
+                                                            {
+                                                              "type": "text",
+                                                              "text": "La connexion à l'espace privé MSA se fait via le lien suivant :"
+                                                            }
+                                                          ]
                                                         }
                                                       ]
                                                     }
@@ -7441,6 +7585,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -7618,6 +7765,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -7773,6 +7923,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -7911,7 +8064,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R38",
             "sve": "non",
@@ -7972,7 +8125,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R39",
             "sve": "non",
@@ -8347,6 +8500,7 @@
           "attributes": {
             "ID": "R42724",
             "URL": "https://wwwd.caf.fr/wps/portal/caffr/simulateurpa/",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -8381,6 +8535,7 @@
           "attributes": {
             "ID": "R42726",
             "URL": "https://www.msa.fr/lfp/prime-d-activite",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -8415,6 +8570,7 @@
           "attributes": {
             "ID": "R54933",
             "URL": "https://www.mesdroitssociaux.gouv.fr",
+            "audience": "Particuliers",
             "type": "Simulateur"
           },
           "children": [

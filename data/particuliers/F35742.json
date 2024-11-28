@@ -9,8 +9,9 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F35742",
         "type": "Fiche Question-réponse conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
-        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F35742"
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
+        "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F35742",
+        "profilsPro": "tout"
       },
       "children": [
         {
@@ -1384,11 +1385,17 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "TitreFlottant",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Taxe d'aménagement"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Taxe d'aménagement"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -2059,6 +2066,7 @@
                               "attributes": {
                                 "ID": "R1252",
                                 "URL": "https://www.impots.gouv.fr/portail/node/9109",
+                                "audience": "Particuliers",
                                 "numerocerfa": "10867",
                                 "autrenumero": "6650",
                                 "type": "Formulaire"
@@ -2121,6 +2129,7 @@
                               "attributes": {
                                 "ID": "R1253",
                                 "URL": "https://www.impots.gouv.fr/portail/node/9110",
+                                "audience": "Particuliers",
                                 "numerocerfa": "10869",
                                 "autrenumero": "6652",
                                 "type": "Formulaire"
@@ -2183,6 +2192,7 @@
                               "attributes": {
                                 "ID": "R1254",
                                 "URL": "https://www.impots.gouv.fr/portail/node/9118",
+                                "audience": "Particuliers",
                                 "numerocerfa": "10517",
                                 "autrenumero": "6704",
                                 "type": "Formulaire"
@@ -2245,6 +2255,7 @@
                               "attributes": {
                                 "ID": "R36862",
                                 "URL": "https://www.impots.gouv.fr/portail/formulaire/6660-rev/declaration-dun-local-usage-professionnel",
+                                "audience": "Particuliers",
                                 "format": "application/pdf",
                                 "poids": "90.3 KB",
                                 "numerocerfa": "14248*05",
@@ -2368,6 +2379,7 @@
                               "attributes": {
                                 "ID": "R3120",
                                 "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+                                "audience": "Particuliers",
                                 "type": "Téléservice"
                               },
                               "children": [
@@ -2418,6 +2430,7 @@
                               "attributes": {
                                 "ID": "R68811",
                                 "URL": "https://www.impots.gouv.fr/formulaire/6830-tam-hab-sd/declaration-des-locaux-dhabitation",
+                                "audience": "Particuliers",
                                 "numerocerfa": "6830",
                                 "type": "Formulaire"
                               },
@@ -2874,7 +2887,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R20684",
             "sve": "non",
@@ -2960,7 +2973,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R16801",
             "sve": "non",
@@ -3263,6 +3276,7 @@
           "attributes": {
             "ID": "R3120",
             "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -3297,6 +3311,7 @@
           "attributes": {
             "ID": "R1252",
             "URL": "https://www.impots.gouv.fr/portail/node/9109",
+            "audience": "Particuliers",
             "numerocerfa": "10867",
             "autrenumero": "6650",
             "type": "Formulaire"
@@ -3333,6 +3348,7 @@
           "attributes": {
             "ID": "R1253",
             "URL": "https://www.impots.gouv.fr/portail/node/9110",
+            "audience": "Particuliers",
             "numerocerfa": "10869",
             "autrenumero": "6652",
             "type": "Formulaire"
@@ -3369,6 +3385,7 @@
           "attributes": {
             "ID": "R1254",
             "URL": "https://www.impots.gouv.fr/portail/node/9118",
+            "audience": "Particuliers",
             "numerocerfa": "10517",
             "autrenumero": "6704",
             "type": "Formulaire"
@@ -3405,6 +3422,7 @@
           "attributes": {
             "ID": "R36862",
             "URL": "https://www.impots.gouv.fr/portail/formulaire/6660-rev/declaration-dun-local-usage-professionnel",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "90.3 KB",
             "numerocerfa": "14248*05",
@@ -4012,8 +4030,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment payer ses impôts locaux ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment payer ses impôts locaux ?"
+                }
+              ]
             }
           ]
         },
@@ -4026,8 +4050,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Qu'est-ce que la résidence principale pour les impôts ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Qu'est-ce que la résidence principale pour les impôts ?"
+                }
+              ]
             }
           ]
         },
@@ -4040,8 +4070,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Impôts locaux : qui doit payer la taxe foncière en cas d'indivision ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Impôts locaux : qui doit payer la taxe foncière en cas d'indivision ?"
+                }
+              ]
             }
           ]
         },
@@ -4054,8 +4090,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Nouvelle construction, garage, piscine... : quel effet sur les impôts locaux ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Nouvelle construction, garage, piscine... : quel effet sur les impôts locaux ?"
+                }
+              ]
             }
           ]
         }

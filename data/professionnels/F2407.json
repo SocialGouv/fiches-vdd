@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F2407",
         "type": "Fiche Question-réponse conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "spUrl": "https://entreprendre.service-public.fr/vosdroits/F2407"
       },
       "children": [
@@ -882,11 +882,17 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "TitreFlottant",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Vente d' un logement neuf"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vente d' un logement neuf"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -1013,11 +1019,17 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "TitreFlottant",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Vente d'un terrain à bâtir"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vente d'un terrain à bâtir"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -1332,6 +1344,7 @@
                   "attributes": {
                     "ID": "R14660",
                     "URL": "https://www.impots.gouv.fr/portail/formulaire/3310-ca3-sd/tva-et-taxes-assimilees-regime-du-reel-normal-mini-reel",
+                    "audience": "Professionnels",
                     "numerocerfa": "10963",
                     "autrenumero": "3310-CA3-SD",
                     "type": "Formulaire"
@@ -2399,7 +2412,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R2488",
             "sve": "non",
@@ -2437,7 +2450,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R18478",
             "sve": "non",
@@ -2681,6 +2694,7 @@
           "attributes": {
             "ID": "R16181",
             "URL": "https://www.immobilier.notaires.fr/fr/frais-de-notaire",
+            "audience": "Professionnels",
             "type": "Simulateur"
           },
           "children": [
@@ -2715,6 +2729,7 @@
           "attributes": {
             "ID": "R14660",
             "URL": "https://www.impots.gouv.fr/portail/formulaire/3310-ca3-sd/tva-et-taxes-assimilees-regime-du-reel-normal-mini-reel",
+            "audience": "Professionnels",
             "numerocerfa": "10963",
             "autrenumero": "3310-CA3-SD",
             "type": "Formulaire"
@@ -2860,8 +2875,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment connaître le prix d'un logement ou d'un terrain ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment connaître le prix d'un logement ou d'un terrain ?"
+                }
+              ]
             }
           ]
         },
@@ -2870,12 +2891,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F15913",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-achat-logement"
           },
           "children": [
             {
-              "type": "text",
-              "text": "J'achète un logement"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "J'achète un logement"
+                }
+              ]
             }
           ]
         }

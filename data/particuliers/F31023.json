@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F31023",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2024-01-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F31023"
       },
@@ -1240,11 +1240,17 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "TitreFlottant",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Biens ou droits"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Biens ou droits"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1334,11 +1340,17 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "TitreFlottant",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Fonds ou versements"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Fonds ou versements"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1785,6 +1797,7 @@
                   "attributes": {
                     "ID": "R823",
                     "URL": "https://www.journal-officiel.gouv.fr/pages/associations-comptes/",
+                    "audience": "Particuliers",
                     "type": "Téléservice"
                   },
                   "children": [
@@ -2100,7 +2113,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R59025",
             "sve": "non",
@@ -2294,6 +2307,7 @@
           "attributes": {
             "ID": "R31090",
             "URL": "https://www.interieur.gouv.fr/content/download/123353/988837/file/2020-statuts-type-frup-fondations-reconnues-d-utilite-publique.pdf",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "249.5 KB",
             "type": "Formulaire"
@@ -2330,6 +2344,7 @@
           "attributes": {
             "ID": "R823",
             "URL": "https://www.journal-officiel.gouv.fr/pages/associations-comptes/",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -2866,8 +2881,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment se renseigner sur une fondation ou un fonds de dotation ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment se renseigner sur une fondation ou un fonds de dotation ?"
+                }
+              ]
             }
           ]
         },
@@ -2880,8 +2901,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Dans quels cas une association doit recourir à un commissaire aux comptes ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Dans quels cas une association doit recourir à un commissaire aux comptes ?"
+                }
+              ]
             }
           ]
         }

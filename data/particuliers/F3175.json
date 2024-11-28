@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F3175",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2024-01-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F3175"
       },
@@ -863,11 +863,17 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "TitreFlottant",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Conditions"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Conditions"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -998,11 +1004,17 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "TitreFlottant",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Montant"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Montant"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -1279,7 +1291,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R17216",
             "sve": "non",
@@ -1571,6 +1583,7 @@
           "attributes": {
             "ID": "R17454",
             "URL": "https://www.impots.gouv.fr/formulaire/2041-rd/recu-des-dons-et-versements-effectues-par-les-particuliers-au-titre-des-articles",
+            "audience": "Particuliers",
             "format": "application/pdf",
             "poids": "167.6 KB",
             "numerocerfa": "11580",
@@ -1647,8 +1660,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Comment doit se dérouler l'exclusion d'un membre dans une association ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment doit se dérouler l'exclusion d'un membre dans une association ?"
+                }
+              ]
             }
           ]
         }

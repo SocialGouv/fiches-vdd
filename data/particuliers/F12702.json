@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F12702",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2020-08-07T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F12702"
       },
@@ -1186,11 +1186,17 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "TitreFlottant",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Documents remis par le lotisseur à l'acquéreur"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Documents remis par le lotisseur à l'acquéreur"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -2679,6 +2685,7 @@
                   "attributes": {
                     "ID": "R16181",
                     "URL": "https://www.immobilier.notaires.fr/fr/frais-de-notaire",
+                    "audience": "Particuliers",
                     "type": "Simulateur"
                   },
                   "children": [
@@ -3211,7 +3218,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R10918",
             "sve": "non",
@@ -3532,6 +3539,7 @@
           "attributes": {
             "ID": "R56743",
             "URL": "https://www.ecologique-solidaire.gouv.fr/sites/default/files/Modele_etat_nuisances_sonores_aeriennes.pdf",
+            "audience": "Particuliers",
             "type": "Formulaire"
           },
           "children": [
@@ -3581,6 +3589,7 @@
           "attributes": {
             "ID": "R56989",
             "URL": "https://www.georisques.gouv.fr/",
+            "audience": "Particuliers",
             "type": "Outil de recherche"
           },
           "children": [
@@ -3615,6 +3624,7 @@
           "attributes": {
             "ID": "R16181",
             "URL": "https://www.immobilier.notaires.fr/fr/frais-de-notaire",
+            "audience": "Particuliers",
             "type": "Simulateur"
           },
           "children": [
@@ -4227,8 +4237,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Quelles précautions prendre avant l'achat d'un terrain situé dans un lotissement ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Quelles précautions prendre avant l'achat d'un terrain situé dans un lotissement ?"
+                }
+              ]
             }
           ]
         },
@@ -4241,8 +4257,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Quelles règles doit respecter le vendeur d'un terrain situé en lotissement ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Quelles règles doit respecter le vendeur d'un terrain situé en lotissement ?"
+                }
+              ]
             }
           ]
         },
@@ -4255,8 +4277,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Quelles différences entre un terrain isolé et un terrain en lotissement ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Quelles différences entre un terrain isolé et un terrain en lotissement ?"
+                }
+              ]
             }
           ]
         },
@@ -4265,12 +4293,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F15913",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-achat-logement"
           },
           "children": [
             {
-              "type": "text",
-              "text": "J'achète un logement"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "J'achète un logement"
+                }
+              ]
             }
           ]
         }

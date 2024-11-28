@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F14984",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2019-10-15T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F14984"
       },
@@ -345,8 +345,41 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuideePere",
+          "attributes": {
+            "ID": "F35025",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "École handicap"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "Introduction",
           "children": [
+            {
+              "type": "element",
+              "name": "Condition",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "estVrai",
+                  "attributes": {
+                    "var": "T10010"
+                  }
+                }
+              ]
+            },
             {
               "type": "element",
               "name": "Texte",
@@ -2176,7 +2209,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R14610",
             "sve": "non",
@@ -2575,8 +2608,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Enfant handicapé : qu'est-ce que le projet personnalisé de scolarisation (PPS) ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Enfant handicapé : qu'est-ce que le projet personnalisé de scolarisation (PPS) ?"
+                }
+              ]
             }
           ]
         },
@@ -2589,8 +2628,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Qu'est-ce que l'enseignement à distance de niveau collège ou lycée ou post-bac ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Qu'est-ce que l'enseignement à distance de niveau collège ou lycée ou post-bac ?"
+                }
+              ]
             }
           ]
         },
@@ -2599,12 +2644,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F24610",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-enfant-handicap"
           },
           "children": [
             {
-              "type": "text",
-              "text": "Mon enfant est en situation de handicap"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Mon enfant est en situation de handicap"
+                }
+              ]
             }
           ]
         }

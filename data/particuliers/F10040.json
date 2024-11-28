@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F10040",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2024-01-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F10040"
       },
@@ -1001,11 +1001,17 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "TitreFlottant",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Avant de vous inscrire"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Avant de vous inscrire"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1134,11 +1140,17 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "TitreFlottant",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Au moment de l'inscription"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Au moment de l'inscription"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1168,6 +1180,7 @@
                       "attributes": {
                         "ID": "R1250",
                         "URL": "https://mon-vie-via.businessfrance.fr/",
+                        "audience": "Particuliers",
                         "type": "Téléservice"
                       },
                       "children": [
@@ -1268,6 +1281,7 @@
                       "attributes": {
                         "ID": "R58263",
                         "URL": "https://mon-vie-via.businessfrance.fr/",
+                        "audience": "Particuliers",
                         "type": "Outil de recherche"
                       },
                       "children": [
@@ -1965,7 +1979,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R63938",
             "sve": "non",
@@ -2184,6 +2198,7 @@
           "attributes": {
             "ID": "R1250",
             "URL": "https://mon-vie-via.businessfrance.fr/",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -2218,6 +2233,7 @@
           "attributes": {
             "ID": "R16438",
             "URL": "https://e-vie.businessfrance.fr/0/Devis/DevisPublic",
+            "audience": "Particuliers",
             "type": "Simulateur"
           },
           "children": [
@@ -2537,8 +2553,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Une personne en volontariat a-t-elle droit au RSA et à la prime d'activité ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Une personne en volontariat a-t-elle droit au RSA et à la prime d'activité ?"
+                }
+              ]
             }
           ]
         }

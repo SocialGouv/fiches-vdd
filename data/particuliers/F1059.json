@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1059",
         "type": "Fiche Question-réponse conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2021-04-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1059"
       },
@@ -784,6 +784,26 @@
         },
         {
           "type": "element",
+          "name": "RechercheGuideePere",
+          "attributes": {
+            "ID": "F35751",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "IR - Prêt d'argent"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
           "name": "RechercheGuidee",
           "attributes": {
             "ID": "F35751",
@@ -1129,7 +1149,7 @@
                             },
                             {
                               "type": "element",
-                              "name": "ANoter",
+                              "name": "Exemple",
                               "children": [
                                 {
                                   "type": "element",
@@ -1212,6 +1232,7 @@
                               "attributes": {
                                 "ID": "R3120",
                                 "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+                                "audience": "Particuliers",
                                 "type": "Téléservice"
                               },
                               "children": [
@@ -1325,108 +1346,60 @@
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Complement",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Titre",
                                   "children": [
                                     {
                                       "type": "text",
                                       "text": "Si vous faites une déclaration de revenus sur formulaire papier"
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devez remplir le formulaire n°2062."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "ServiceEnLigne",
-                              "attributes": {
-                                "ID": "R1087",
-                                "URL": "https://www.impots.gouv.fr/portail/node/8907",
-                                "numerocerfa": "10142",
-                                "autrenumero": "2062",
-                                "type": "Formulaire"
-                              },
-                              "children": [
+                                },
                                 {
                                   "type": "element",
-                                  "name": "Titre",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Déclaration de contrat de prêt"
+                                      "text": "Vous devez remplir le formulaire n°2062."
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Source",
+                                  "name": "ServiceEnLigne",
                                   "attributes": {
-                                    "ID": "R30612"
+                                    "ID": "R1087",
+                                    "URL": "https://www.impots.gouv.fr/portail/node/8907",
+                                    "audience": "Particuliers",
+                                    "numerocerfa": "10142",
+                                    "autrenumero": "2062",
+                                    "type": "Formulaire"
                                   },
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Ministère chargé des finances"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devez utiliser "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "un formulaire pour chaque prêt"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " en indiquant les informations suivantes :"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Liste",
-                              "attributes": {
-                                "type": "puce"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Titre",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Date et montant du prêt"
+                                          "text": "Déclaration de contrat de prêt"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30612"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ministère chargé des finances"
                                         }
                                       ]
                                     }
@@ -1434,148 +1407,197 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Conditions du prêt (durée, taux d'intérêt, etc.)"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Nom et adresse du prêteur et de l'emprunteur"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Nom et adresse de l'emprunteur."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Si vous avez effectué plusieurs emprunts d'un montant inférieur à "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Valeur",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "5 000 €"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", vous devez les déclarer en utilisant le "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
+                                      "text": "Vous devez utiliser "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "un formulaire pour chaque prêt"
+                                        }
+                                      ]
+                                    },
                                     {
                                       "type": "text",
-                                      "text": "formulaire annexe 2062 A"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": "."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devez aussi utiliser le formulaire annexe en présence de plusieurs prêteurs ou de plusieurs emprunteurs, en indiquant le montant qui concerne chacun d'eux."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Adressez le ou les formulaires à votre service des impôts avec votre déclaration de revenus."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "OuSAdresser",
-                              "attributes": {
-                                "ID": "R15019",
-                                "sve": "non",
-                                "type": "Local"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Titre",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Service en charge des impôts (trésorerie, service des impôts...)"
+                                      "text": " en indiquant les informations suivantes :"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "RessourceWeb",
+                                  "name": "Liste",
                                   "attributes": {
-                                    "URL": "https://www.impots.gouv.fr/portail/contacts"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Source",
-                                  "attributes": {
-                                    "ID": "R30612"
+                                    "type": "puce"
                                   },
                                   "children": [
                                     {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Date et montant du prêt"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Conditions du prêt (durée, taux d'intérêt, etc.)"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Nom et adresse du prêteur et de l'emprunteur"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Nom et adresse de l'emprunteur."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
                                       "type": "text",
-                                      "text": "Ministère chargé des finances"
+                                      "text": "Si vous avez effectué plusieurs emprunts d'un montant inférieur à "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "5 000 €"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ", vous devez les déclarer en utilisant le "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "formulaire annexe 2062 A"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous devez aussi utiliser le formulaire annexe en présence de plusieurs prêteurs ou de plusieurs emprunteurs, en indiquant le montant qui concerne chacun d'eux."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Adressez le ou les formulaires à votre service des impôts avec votre déclaration de revenus."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "OuSAdresser",
+                                  "attributes": {
+                                    "ID": "R15019",
+                                    "sve": "non",
+                                    "type": "Local"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Service en charge des impôts (trésorerie, service des impôts...)"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "RessourceWeb",
+                                      "attributes": {
+                                        "URL": "https://www.impots.gouv.fr/portail/contacts"
+                                      }
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30612"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ministère chargé des finances"
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -1946,7 +1968,7 @@
                             },
                             {
                               "type": "element",
-                              "name": "ANoter",
+                              "name": "Exemple",
                               "children": [
                                 {
                                   "type": "element",
@@ -2029,6 +2051,7 @@
                               "attributes": {
                                 "ID": "R3120",
                                 "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+                                "audience": "Particuliers",
                                 "type": "Téléservice"
                               },
                               "children": [
@@ -2059,184 +2082,185 @@
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Complement",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Titre",
                                   "children": [
                                     {
                                       "type": "text",
                                       "text": "Si vous faites une déclaration de revenus sur formulaire papier"
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devez remplir le formulaire n°2062."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "ServiceEnLigne",
-                              "attributes": {
-                                "ID": "R1087",
-                                "URL": "https://www.impots.gouv.fr/portail/node/8907",
-                                "numerocerfa": "10142",
-                                "autrenumero": "2062",
-                                "type": "Formulaire"
-                              },
-                              "children": [
+                                },
                                 {
                                   "type": "element",
-                                  "name": "Titre",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Déclaration de contrat de prêt"
+                                      "text": "Vous devez remplir le formulaire n°2062."
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Source",
+                                  "name": "ServiceEnLigne",
                                   "attributes": {
-                                    "ID": "R30612"
+                                    "ID": "R1087",
+                                    "URL": "https://www.impots.gouv.fr/portail/node/8907",
+                                    "audience": "Particuliers",
+                                    "numerocerfa": "10142",
+                                    "autrenumero": "2062",
+                                    "type": "Formulaire"
                                   },
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Ministère chargé des finances"
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Déclaration de contrat de prêt"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30612"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ministère chargé des finances"
+                                        }
+                                      ]
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devez utiliser "
                                 },
                                 {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "un formulaire pour chaque prêt"
+                                      "text": "Vous devez utiliser "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "un formulaire pour chaque prêt"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": "."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Si vous avez accordé plusieurs prêts d'un montant inférieur à "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "Valeur",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "5 000 €"
+                                      "text": "Si vous avez accordé plusieurs prêts d'un montant inférieur à "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Valeur",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "5 000 €"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ", vous devez les déclarer en utilisant le "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "formulaire annexe 2062 A"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": ", vous devez les déclarer en utilisant le "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "formulaire annexe 2062 A"
+                                      "text": "Vous devez aussi utiliser le formulaire annexe en présence de plusieurs emprunteurs (ou de plusieurs prêteurs), en indiquant le montant qui concerne chacun d'eux."
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": "."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devez aussi utiliser le formulaire annexe en présence de plusieurs emprunteurs (ou de plusieurs prêteurs), en indiquant le montant qui concerne chacun d'eux."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Adressez le ou les formulaires à votre service des impôts avec votre déclaration de revenus."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "OuSAdresser",
-                              "attributes": {
-                                "ID": "R15019",
-                                "sve": "non",
-                                "type": "Local"
-                              },
-                              "children": [
-                                {
                                   "type": "element",
-                                  "name": "Titre",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Service en charge des impôts (trésorerie, service des impôts...)"
+                                      "text": "Adressez le ou les formulaires à votre service des impôts avec votre déclaration de revenus."
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "RessourceWeb",
+                                  "name": "OuSAdresser",
                                   "attributes": {
-                                    "URL": "https://www.impots.gouv.fr/portail/contacts"
-                                  }
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Source",
-                                  "attributes": {
-                                    "ID": "R30612"
+                                    "ID": "R15019",
+                                    "sve": "non",
+                                    "type": "Local"
                                   },
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Ministère chargé des finances"
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Service en charge des impôts (trésorerie, service des impôts...)"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "RessourceWeb",
+                                      "attributes": {
+                                        "URL": "https://www.impots.gouv.fr/portail/contacts"
+                                      }
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R30612"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ministère chargé des finances"
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -2533,7 +2557,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R20684",
             "sve": "non",
@@ -2619,7 +2643,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R15019",
             "sve": "non",
@@ -2660,7 +2684,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R44924",
             "sve": "non",
@@ -2788,6 +2812,7 @@
           "attributes": {
             "ID": "R3120",
             "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -2822,6 +2847,7 @@
           "attributes": {
             "ID": "R1087",
             "URL": "https://www.impots.gouv.fr/portail/node/8907",
+            "audience": "Particuliers",
             "numerocerfa": "10142",
             "autrenumero": "2062",
             "type": "Formulaire"

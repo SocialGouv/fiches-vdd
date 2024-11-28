@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F33322",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2024-07-29T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F33322"
       },
@@ -1534,11 +1534,17 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "TitreFlottant",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Signalement sur PHAROS"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Signalement sur PHAROS"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -1605,6 +1611,7 @@
                           "attributes": {
                             "ID": "R17674",
                             "URL": "https://www.internet-signalement.gouv.fr",
+                            "audience": "Particuliers",
                             "type": "Téléservice"
                           },
                           "children": [
@@ -1847,11 +1854,17 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "TitreFlottant",
                           "children": [
                             {
-                              "type": "text",
-                              "text": "Signalement à l'hébergeur"
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Signalement à l'hébergeur"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -3043,6 +3056,7 @@
                           "attributes": {
                             "ID": "R11469",
                             "URL": "https://www.service-public.fr/simulateur/calcul/Porter_plainte",
+                            "audience": "Particuliers",
                             "type": "Modèle de document"
                           },
                           "children": [
@@ -4234,7 +4248,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R11621",
             "sve": "non",
@@ -4982,8 +4996,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "À quelle protection a droit un agent public agressé à son travail ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "À quelle protection a droit un agent public agressé à son travail ?"
+                }
+              ]
             }
           ]
         }

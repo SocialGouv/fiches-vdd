@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F12812",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2024-11-01T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F12812"
       },
@@ -430,11 +430,17 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "TitreFlottant",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Taux horaire applicable"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Taux horaire applicable"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -690,11 +696,17 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "TitreFlottant",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Mode de calcul du salaire mensualisé de base"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Mode de calcul du salaire mensualisé de base"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -1930,7 +1942,7 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "ANoter",
+                                  "name": "Exemple",
                                   "children": [
                                     {
                                       "type": "element",
@@ -2687,6 +2699,7 @@
                       "attributes": {
                         "ID": "R54184",
                         "URL": "https://www.service-public.fr/simulateur/calcul/IndemniteEntretienAssistanteMaternelle",
+                        "audience": "Particuliers",
                         "type": "Simulateur"
                       },
                       "children": [
@@ -2949,11 +2962,17 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "TitreFlottant",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Limite basse fixée par le barême de l'administration"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Limite basse fixée par le barême de l'administration"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3353,11 +3372,17 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "TitreFlottant",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Limite haute fixée par le barème fiscal"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Limite haute fixée par le barème fiscal"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3377,6 +3402,7 @@
                       "attributes": {
                         "ID": "R3080",
                         "URL": "https://www.impots.gouv.fr/portail/simulateur-bareme-kilometrique",
+                        "audience": "Particuliers",
                         "type": "Simulateur"
                       },
                       "children": [
@@ -3647,6 +3673,7 @@
                   "attributes": {
                     "ID": "R18165",
                     "URL": "http://www.pajemploi.urssaf.fr/pajewebinfo/cms/sites/pajewebinfo/accueil.html",
+                    "audience": "Particuliers",
                     "type": "Téléservice"
                   },
                   "children": [
@@ -4319,6 +4346,7 @@
           "attributes": {
             "ID": "R18165",
             "URL": "http://www.pajemploi.urssaf.fr/pajewebinfo/cms/sites/pajewebinfo/accueil.html",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -4353,6 +4381,7 @@
           "attributes": {
             "ID": "R54184",
             "URL": "https://www.service-public.fr/simulateur/calcul/IndemniteEntretienAssistanteMaternelle",
+            "audience": "Particuliers",
             "type": "Simulateur"
           },
           "children": [
@@ -4733,8 +4762,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Impôt sur le revenu - Comment une assistante maternelle doit-elle déclarer ses revenus ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Impôt sur le revenu - Comment une assistante maternelle doit-elle déclarer ses revenus ?"
+                }
+              ]
             }
           ]
         },
@@ -4747,8 +4782,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Un particulier employeur peut-il payer un salarié avec un Cesu préfinancé ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Un particulier employeur peut-il payer un salarié avec un Cesu préfinancé ?"
+                }
+              ]
             }
           ]
         },
@@ -4757,12 +4798,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F601",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-garde-enfants"
           },
           "children": [
             {
-              "type": "text",
-              "text": "J'ai besoin de faire garder mes enfants"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "J'ai besoin de faire garder mes enfants"
+                }
+              ]
             }
           ]
         }

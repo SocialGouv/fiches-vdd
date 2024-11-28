@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1455",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1455"
       },
       "children": [
@@ -938,6 +938,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -1235,7 +1238,8 @@
                       "type": "element",
                       "name": "Chapitre",
                       "attributes": {
-                        "type": "important"
+                        "type": "important",
+                        "numerote": "true"
                       },
                       "children": [
                         {
@@ -1305,78 +1309,56 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Complement",
                           "children": [
                             {
                               "type": "element",
-                              "name": "MiseEnEvidence",
+                              "name": "Titre",
                               "children": [
                                 {
                                   "type": "text",
                                   "text": "Quels sont les informations que doit comporter votre demande de citation ?"
                                 }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Votre demande de citation doit comporter les informations suivantes :"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Liste",
-                          "attributes": {
-                            "type": "puce"
-                          },
-                          "children": [
+                            },
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Paragraphe",
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Identité et adresse du commissaire de justice "
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "à qui vous allez demander de délivrer la citation."
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "Votre demande de citation doit comporter les informations suivantes :"
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "MiseEnEvidence",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Identité et adresse du commissaire de justice "
+                                            }
+                                          ]
+                                        },
+                                        {
                                           "type": "text",
-                                          "text": "Votre identité"
+                                          "text": "à qui vous allez demander de délivrer la citation."
                                         }
                                       ]
                                     }
@@ -1384,165 +1366,95 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Si vous êtes une "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R62708",
-                                        "type": "Définition de glossaire"
-                                      },
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "personne physique"
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Votre identité"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "text",
-                                      "text": ", la citation doit préciser vos noms, prénoms, profession et domicile. Votre domicile doit se situer dans le ressort, c'est-à-dire la compétence géographique du tribunal saisi. Si ce n’est pas le cas, vous devez élire domicile dans le ressort du tribunal saisi. Pour ce faire, vous devez vous domicilier chez un tiers ou chez votre avocat avec leur accord écrit."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Si vous êtes une "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R60351",
-                                        "type": "Définition de glossaire"
-                                      },
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "personne morale"
+                                          "text": "Si vous êtes une "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienIntra",
+                                          "attributes": {
+                                            "LienID": "R62708",
+                                            "type": "Définition de glossaire"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "personne physique"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": ", la citation doit préciser vos noms, prénoms, profession et domicile. Votre domicile doit se situer dans le ressort, c'est-à-dire la compétence géographique du tribunal saisi. Si ce n’est pas le cas, vous devez élire domicile dans le ressort du tribunal saisi. Pour ce faire, vous devez vous domicilier chez un tiers ou chez votre avocat avec leur accord écrit."
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "text",
-                                      "text": ", la citation doit préciser votre forme (SA, SARL, …), votre dénomination (votre nom), votre siège social (votre adresse) et l’organe qui vous "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R10398",
-                                        "type": "Définition de glossaire"
-                                      },
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "représente légalement"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": "."
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
+                                          "text": "Si vous êtes une "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienIntra",
+                                          "attributes": {
+                                            "LienID": "R60351",
+                                            "type": "Définition de glossaire"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "personne morale"
+                                            }
+                                          ]
+                                        },
                                         {
                                           "type": "text",
-                                          "text": "Identité de la personne citée"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "La citation doit préciser son état civil et le fait qu'il est « "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R52097",
-                                        "type": "Définition de glossaire"
-                                      },
-                                      "children": [
+                                          "text": ", la citation doit préciser votre forme (SA, SARL, …), votre dénomination (votre nom), votre siège social (votre adresse) et l’organe qui vous "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienIntra",
+                                          "attributes": {
+                                            "LienID": "R10398",
+                                            "type": "Définition de glossaire"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "représente légalement"
+                                            }
+                                          ]
+                                        },
                                         {
                                           "type": "text",
-                                          "text": "prévenu"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " »."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Si le prévenu est une personne physique, vous devez préciser ses nom, prénoms et adresse."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Si le prévenu est une personne morale, vous devez indiquer sa dénomination (son nom) et son siège (son adresse). Vous pouvez également indiquer que la personne morale est poursuivie en la personne de son représentant légal à l'époque des poursuites."
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Identification du civilement responsable ou du témoin"
+                                          "text": "."
                                         }
                                       ]
                                     }
@@ -1550,91 +1462,69 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Si vous décidez de citer un "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R53958",
-                                        "type": "Définition de glossaire"
-                                      },
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "civilement responsable "
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Identité de la personne citée"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "text",
-                                      "text": "ou un témoin, vous devez également préciser qu'ils sont « civilement responsable » ou « témoin », ainsi que leurs nom, prénoms et adresse."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Lorsque vous citez un témoin, vous devez rajouter l’avertissement selon lequel la non-comparution, le refus de témoigner et le faux témoignage sont punis par la loi."
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
                                       "type": "element",
-                                      "name": "MiseEnEvidence",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Identification de l’audience"
+                                          "text": "La citation doit préciser son état civil et le fait qu'il est « "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienIntra",
+                                          "attributes": {
+                                            "LienID": "R52097",
+                                            "type": "Définition de glossaire"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "prévenu"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " »."
                                         }
                                       ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "L’acte de citation doit indiquer le tribunal saisi, le lieu de la juridiction (son adresse et éventuellement la salle), l’heure et la date de l’audience (dans un premier temps, laissez cette partie sans indication et attendez d’avoir eu la date d’audience par le greffe de l’audiencement pénal en produisant votre projet de demande de citation)."
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
+                                    },
                                     {
                                       "type": "element",
-                                      "name": "MiseEnEvidence",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Enoncé de l’infraction"
+                                          "text": "Si le prévenu est une personne physique, vous devez préciser ses nom, prénoms et adresse."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Si le prévenu est une personne morale, vous devez indiquer sa dénomination (son nom) et son siège (son adresse). Vous pouvez également indiquer que la personne morale est poursuivie en la personne de son représentant légal à l'époque des poursuites."
                                         }
                                       ]
                                     }
@@ -1642,51 +1532,59 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "La personne poursuivie a le droit d’être informée des charges retenues contre elle afin d'assurer sa défense."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "La citation doit énoncer le fait poursuivi et viser le texte de loi applicable."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "L'énoncé de l'infraction doit être aussi clair et précis que possible et indiquer le lieu et la date de l’infraction."
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "MiseEnEvidence",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Identification du civilement responsable ou du témoin"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Droit à l’assistance d’un avocat"
+                                          "text": "Si vous décidez de citer un "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienIntra",
+                                          "attributes": {
+                                            "LienID": "R53958",
+                                            "type": "Définition de glossaire"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "civilement responsable "
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": "ou un témoin, vous devez également préciser qu'ils sont « civilement responsable » ou « témoin », ainsi que leurs nom, prénoms et adresse."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Lorsque vous citez un témoin, vous devez rajouter l’avertissement selon lequel la non-comparution, le refus de témoigner et le faux témoignage sont punis par la loi."
                                         }
                                       ]
                                     }
@@ -1694,59 +1592,31 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "La citation doit indiquer que le prévenu peut se faire assister d’un avocat de son choix ou, s’il en fait la demande, d’un avocat commis d’office. La citation doit préciser que les frais d'avocat seront à sa charge sauf s’il remplit les conditions d’accès à"
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R1032",
-                                        "type": "Définition de glossaire"
-                                      },
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": " l’aide juridictionnelle"
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Identification de l’audience"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "text",
-                                      "text": "."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "La citation doit également indiquer que le prévenu a la possibilité de bénéficier de conseils juridiques dans une structure d’accès au droit."
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
                                       "type": "element",
-                                      "name": "MiseEnEvidence",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Avertissement concernant les justificatifs de revenus du prévenu"
+                                          "text": "L’acte de citation doit indiquer le tribunal saisi, le lieu de la juridiction (son adresse et éventuellement la salle), l’heure et la date de l’audience (dans un premier temps, laissez cette partie sans indication et attendez d’avoir eu la date d’audience par le greffe de l’audiencement pénal en produisant votre projet de demande de citation)."
                                         }
                                       ]
                                     }
@@ -1754,31 +1624,51 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "La citation doit informer le prévenu qu’il doit comparaître en possession des justificatifs de ses revenus, et de ses avis d’imposition ou de non-imposition. La citation doit l'informer qu'il peut aussi les communiquer à l'avocat qui le représente."
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "MiseEnEvidence",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Enoncé de l’infraction"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Incidence financière de l'absence de comparution du prévenu"
+                                          "text": "La personne poursuivie a le droit d’être informée des charges retenues contre elle afin d'assurer sa défense."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "La citation doit énoncer le fait poursuivi et viser le texte de loi applicable."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "L'énoncé de l'infraction doit être aussi clair et précis que possible et indiquer le lieu et la date de l’infraction."
                                         }
                                       ]
                                     }
@@ -1786,78 +1676,59 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "La citation doit informer le prévenu que le "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F1816",
-                                        "type": "Fiche d'information conditionnée",
-                                        "audience": "Particuliers"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "droit fixe de procédure"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " dû en cas de condamnation devant le tribunal correctionnel est majoré. En effet, s’il ne comparaît pas personnellement ou s’il n’est pas représenté par son avocat, la majoration s'applique ("
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Valeur",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "254 €"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " au lieu de "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Valeur",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "127 €"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": ")."
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "MiseEnEvidence",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Droit à l’assistance d’un avocat"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Eléments prouvant la culpabilité de l'auteur des faits"
+                                          "text": "La citation doit indiquer que le prévenu peut se faire assister d’un avocat de son choix ou, s’il en fait la demande, d’un avocat commis d’office. La citation doit préciser que les frais d'avocat seront à sa charge sauf s’il remplit les conditions d’accès à"
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienIntra",
+                                          "attributes": {
+                                            "LienID": "R1032",
+                                            "type": "Définition de glossaire"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": " l’aide juridictionnelle"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": "."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "La citation doit également indiquer que le prévenu a la possibilité de bénéficier de conseils juridiques dans une structure d’accès au droit."
                                         }
                                       ]
                                     }
@@ -1865,78 +1736,31 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "C’est à vous de prouver la culpabilité du prévenu en indiquant les éléments de "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R65628",
-                                        "type": "Définition de glossaire"
-                                      },
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "preuves"
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Avertissement concernant les justificatifs de revenus du prévenu"
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "text",
-                                      "text": " que vous souhaitez évoquer devant le tribunal."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Ces preuves peuvent revêtir différentes formes et être notamment des photos, vidéos, "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F34165",
-                                        "type": "Fiche d'information conditionnée",
-                                        "audience": "Particuliers"
-                                      },
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "témoignages"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": ", captures d'écran, constats d’huissier, mains courantes et tous documents utiles prouvant vos dires."
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Descriptif du préjudice subi et élément le prouvant"
+                                          "text": "La citation doit informer le prévenu qu’il doit comparaître en possession des justificatifs de ses revenus, et de ses avis d’imposition ou de non-imposition. La citation doit l'informer qu'il peut aussi les communiquer à l'avocat qui le représente."
                                         }
                                       ]
                                     }
@@ -1944,41 +1768,78 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous devez indiquer le type de préjudice subi (moral et/ou matériel et/ou corporel) et chiffrer le montant de ce préjudice. L’évaluation finale de ce préjudice peut être indiquée à l’audience."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Vous devez également indiquer tous les documents prouvant ou attestant le préjudice que vous avez subi ou que vous subissez encore : certificats médicaux, factures, témoignages …"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Item",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "MiseEnEvidence",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Incidence financière de l'absence de comparution du prévenu"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Date et signature de la personne qui cite"
+                                          "text": "La citation doit informer le prévenu que le "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F1816",
+                                            "type": "Fiche d'information conditionnée",
+                                            "audience": "Particuliers"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "droit fixe de procédure"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " dû en cas de condamnation devant le tribunal correctionnel est majoré. En effet, s’il ne comparaît pas personnellement ou s’il n’est pas représenté par son avocat, la majoration s'applique ("
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "254 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " au lieu de "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Valeur",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "127 €"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": ")."
                                         }
                                       ]
                                     }
@@ -1986,11 +1847,154 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Vous devez dater et signer la demande de citation qui va être remise au commissaire de justice. Si vous êtes assisté d’un avocat et qu’il rédige la citation, c‘est lui qui la signera."
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Eléments prouvant la culpabilité de l'auteur des faits"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "C’est à vous de prouver la culpabilité du prévenu en indiquant les éléments de "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienIntra",
+                                          "attributes": {
+                                            "LienID": "R65628",
+                                            "type": "Définition de glossaire"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "preuves"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " que vous souhaitez évoquer devant le tribunal."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Ces preuves peuvent revêtir différentes formes et être notamment des photos, vidéos, "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F34165",
+                                            "type": "Fiche d'information conditionnée",
+                                            "audience": "Particuliers"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "témoignages"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": ", captures d'écran, constats d’huissier, mains courantes et tous documents utiles prouvant vos dires."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Descriptif du préjudice subi et élément le prouvant"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous devez indiquer le type de préjudice subi (moral et/ou matériel et/ou corporel) et chiffrer le montant de ce préjudice. L’évaluation finale de ce préjudice peut être indiquée à l’audience."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous devez également indiquer tous les documents prouvant ou attestant le préjudice que vous avez subi ou que vous subissez encore : certificats médicaux, factures, témoignages …"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Date et signature de la personne qui cite"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous devez dater et signer la demande de citation qui va être remise au commissaire de justice. Si vous êtes assisté d’un avocat et qu’il rédige la citation, c‘est lui qui la signera."
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -2064,6 +2068,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -2270,6 +2277,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -2503,348 +2513,348 @@
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Complement",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Titre",
                                   "children": [
                                     {
                                       "type": "text",
                                       "text": "Comment est délivrée la citation en l'absence du destinataire à son domicile ou si le domicile est inconnu ?"
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
+                                },
                                 {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "En cas d'absence de la personne poursuivie à son domicile"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ", le commissaire de justice doit effectuer différentes diligences pour que l'acte soit considéré comme valablement remis. Il en est de même si le domicile ou la résidence du destinataire de la citation sont inconnus."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "En cas d'absence de la personne poursuivie à son domicile"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", le commissaire de justice doit effectuer différentes diligences pour que l'acte soit considéré comme valablement remis. Il en est de même si le domicile ou la résidence du destinataire de la citation sont inconnus."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Le commissaire de justice doit alors indiquer, dans son acte, la qualité déclarée par la personne à laquelle il remet la citation."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "BlocCas",
-                              "attributes": {
-                                "affichage": "radio"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Cas",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Remise à un proche"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si le destinataire est absent de son domicile, une copie de la citation peut être remise à un de ses parent, "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R12901",
-                                            "type": "Définition de glossaire"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "allié"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": ", employé ou à une personne résidant à son domicile."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Le commissaire de justice doit indiquer, dans son procès-verbal de remise, le lien qui existe entre la personne à laquelle il a remis la citation et le destinataire."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Il doit informer immédiatement le destinataire de cette remise par lettre recommandée avec avis de réception. Il peut aussi lui envoyer une copie de la citation par lettre simple en lui demandant d'en accuser réception par récépissé. Ce récépissé est à renvoyer par courrier ou à déposer à l'étude du commissaire de justice."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "La signature de l'avis de réception ou du récépissé a la même valeur juridique qu'une remise en mains propres par le commissaire de justice."
-                                        }
-                                      ]
+                                      "text": "Le commissaire de justice doit alors indiquer, dans son acte, la qualité déclarée par la personne à laquelle il remet la citation."
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Cas",
+                                  "name": "BlocCas",
+                                  "attributes": {
+                                    "affichage": "radio"
+                                  },
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Titre",
+                                      "name": "Cas",
                                       "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Impossibilité de remise à un proche"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si le commissaire de justice ne trouve personne au domicile du destinataire, il vérifie immédiatement l'exactitude de son domicile."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Lorsque le domicile indiqué est bien celui du destinataire, il l'informe par lettre recommandée avec accusé de réception qu'une citation est à retirer à son étude."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si le destinataire retire la citation à l'étude, la remise de la citation est considérée comme avoir été effectuée le jour du retrait."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si le destinataire ne retire pas la citation à l'étude du commissaire de justice, la signature de l'avis de réception a la même valeur juridique qu'une remise en mains propres."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Le commissaire de justice peut aussi envoyer au destinataire une copie de la citation par lettre simple."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Il peut enfin laisser au destinataire un avis de passage l'invitant à se présenter à son étude afin de retirer une copie de la citation. Lorsque le commissaire de justice lui laisse un avis de passage, il lui envoie une lettre simple pour le prévenir."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "La copie et l'avis de passage sont accompagnés d'un récépissé que le destinataire doit signer et renvoyer ou déposer à l'étude."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Dans ce cas, la date de la remise est la date à laquelle le destinataire a signé le récépissé. Si le destinataire n'a pas renvoyé le récépissé, le commissaire de justice devra faire un 2ème envoi en recommandé avec accusé de réception."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Cas",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Domicile non connu"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si malgré les recherches du commissaire de justice, le destinataire est sans "
-                                        },
                                         {
                                           "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R14609",
-                                            "type": "Définition de glossaire"
-                                          },
+                                          "name": "Titre",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "domicile"
+                                              "text": "Remise à un proche"
                                             }
                                           ]
                                         },
                                         {
-                                          "type": "text",
-                                          "text": " ou "
-                                        },
-                                        {
                                           "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R18579",
-                                            "type": "Définition de glossaire"
-                                          },
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "résidence"
+                                              "text": "Si le destinataire est absent de son domicile, une copie de la citation peut être remise à un de ses parent, "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R12901",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "allié"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": ", employé ou à une personne résidant à son domicile."
                                             }
                                           ]
                                         },
                                         {
-                                          "type": "text",
-                                          "text": " connus, il doit remettre une copie de la citation au "
-                                        },
-                                        {
                                           "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R1127",
-                                            "type": "Définition de glossaire"
-                                          },
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "parquet"
+                                              "text": "Le commissaire de justice doit indiquer, dans son procès-verbal de remise, le lien qui existe entre la personne à laquelle il a remis la citation et le destinataire."
                                             }
                                           ]
                                         },
                                         {
-                                          "type": "text",
-                                          "text": " du tribunal saisi."
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Il doit informer immédiatement le destinataire de cette remise par lettre recommandée avec avis de réception. Il peut aussi lui envoyer une copie de la citation par lettre simple en lui demandant d'en accuser réception par récépissé. Ce récépissé est à renvoyer par courrier ou à déposer à l'étude du commissaire de justice."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "La signature de l'avis de réception ou du récépissé a la même valeur juridique qu'une remise en mains propres par le commissaire de justice."
+                                            }
+                                          ]
                                         }
                                       ]
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Cas",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Cela permet au destinataire d'être jugé par défaut, c'est-à-dire d'être jugé en son absence puisqu'il n'a pas eu connaissance de la convocation et qu'il est absent à l'audience. Le fait d'être jugé par défaut lui ouvre une "
-                                        },
-                                        {
                                           "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R65631",
-                                            "type": "Définition de glossaire"
-                                          },
+                                          "name": "Titre",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "voie de recours"
+                                              "text": "Impossibilité de remise à un proche"
                                             }
                                           ]
                                         },
                                         {
-                                          "type": "text",
-                                          "text": " supplémentaire qui est "
-                                        },
-                                        {
                                           "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R10914",
-                                            "type": "Définition de glossaire"
-                                          },
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "l'opposition"
+                                              "text": "Si le commissaire de justice ne trouve personne au domicile du destinataire, il vérifie immédiatement l'exactitude de son domicile."
                                             }
                                           ]
                                         },
                                         {
-                                          "type": "text",
-                                          "text": "."
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Lorsque le domicile indiqué est bien celui du destinataire, il l'informe par lettre recommandée avec accusé de réception qu'une citation est à retirer à son étude."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Si le destinataire retire la citation à l'étude, la remise de la citation est considérée comme avoir été effectuée le jour du retrait."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Si le destinataire ne retire pas la citation à l'étude du commissaire de justice, la signature de l'avis de réception a la même valeur juridique qu'une remise en mains propres."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Le commissaire de justice peut aussi envoyer au destinataire une copie de la citation par lettre simple."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Il peut enfin laisser au destinataire un avis de passage l'invitant à se présenter à son étude afin de retirer une copie de la citation. Lorsque le commissaire de justice lui laisse un avis de passage, il lui envoie une lettre simple pour le prévenir."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "La copie et l'avis de passage sont accompagnés d'un récépissé que le destinataire doit signer et renvoyer ou déposer à l'étude."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Dans ce cas, la date de la remise est la date à laquelle le destinataire a signé le récépissé. Si le destinataire n'a pas renvoyé le récépissé, le commissaire de justice devra faire un 2ème envoi en recommandé avec accusé de réception."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cas",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Titre",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Domicile non connu"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Si malgré les recherches du commissaire de justice, le destinataire est sans "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R14609",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "domicile"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " ou "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R18579",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "résidence"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " connus, il doit remettre une copie de la citation au "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R1127",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "parquet"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " du tribunal saisi."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Cela permet au destinataire d'être jugé par défaut, c'est-à-dire d'être jugé en son absence puisqu'il n'a pas eu connaissance de la convocation et qu'il est absent à l'audience. Le fait d'être jugé par défaut lui ouvre une "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R65631",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "voie de recours"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " supplémentaire qui est "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R10914",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "l'opposition"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": "."
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -3279,6 +3289,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -3369,6 +3382,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -3741,6 +3757,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -3895,6 +3914,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -4388,6 +4410,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -4814,6 +4839,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -5257,6 +5285,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -5368,192 +5399,56 @@
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Complement",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Titre",
                                   "children": [
                                     {
                                       "type": "text",
                                       "text": "Quelles sont les mentions que doit comporter votre citation ?"
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Votre citation doit comporter les mentions suivantes :"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Liste",
-                              "attributes": {
-                                "type": "puce"
-                              },
-                              "children": [
+                                },
                                 {
                                   "type": "element",
-                                  "name": "Item",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Identité et adresse du commissaire de justice"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " qui vous a délivré la citation"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Votre citation doit comporter les mentions suivantes :"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Item",
+                                  "name": "Liste",
+                                  "attributes": {
+                                    "type": "puce"
+                                  },
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Item",
                                       "children": [
                                         {
                                           "type": "element",
-                                          "name": "MiseEnEvidence",
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
-                                              "type": "text",
-                                              "text": "Identification de la partie qui vous cite :"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R53960",
-                                            "type": "Définition de glossaire"
-                                          },
-                                          "children": [
+                                              "type": "element",
+                                              "name": "MiseEnEvidence",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Identité et adresse du commissaire de justice"
+                                                }
+                                              ]
+                                            },
                                             {
                                               "type": "text",
-                                              "text": "partie civile"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": ", procureur de la République, administration habilitée par la loi"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si c'est une personne physique, la citation doit préciser ses noms, prénoms, profession et "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R14609",
-                                            "type": "Définition de glossaire"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "domicile réel"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " ou "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R65192",
-                                            "type": "Définition de glossaire"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "domicile élu"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si c'est une "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R40703",
-                                            "type": "Définition de glossaire"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "personne morale"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": ", la citation doit préciser sa forme (SA, SARL, …), sa dénomination (son nom), son siège social (son adresse) et l’organe qui la représente légalement (son représentant)."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Votre identification en tant que prévenu"
+                                              "text": " qui vous a délivré la citation"
                                             }
                                           ]
                                         }
@@ -5561,129 +5456,113 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Item",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "La citation doit préciser votre état civil et le fait que vous êtes « "
-                                        },
-                                        {
                                           "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R52097",
-                                            "type": "Définition de glossaire"
-                                          },
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
+                                              "type": "element",
+                                              "name": "MiseEnEvidence",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Identification de la partie qui vous cite :"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R53960",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "partie civile"
+                                                }
+                                              ]
+                                            },
+                                            {
                                               "type": "text",
-                                              "text": "prévenu"
+                                              "text": ", procureur de la République, administration habilitée par la loi"
                                             }
                                           ]
                                         },
                                         {
-                                          "type": "text",
-                                          "text": " »."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si vous êtes une personne physique, vos nom, prénoms et adresse doivent être précisés."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si vous êtes une personne morale, votre dénomination (votre nom) et votre siège (votre adresse) doivent être indiqués."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
                                           "type": "element",
-                                          "name": "MiseEnEvidence",
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Identification du civilement responsable ou du témoin"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Si vous êtes cité en tant que "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R53958",
-                                            "type": "Définition de glossaire"
-                                          },
-                                          "children": [
+                                              "text": "Si c'est une personne physique, la citation doit préciser ses noms, prénoms, profession et "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R14609",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "domicile réel"
+                                                }
+                                              ]
+                                            },
                                             {
                                               "type": "text",
-                                              "text": "civilement responsable"
+                                              "text": " ou "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R65192",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "domicile élu"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": "."
                                             }
                                           ]
                                         },
                                         {
-                                          "type": "text",
-                                          "text": " ou témoin, votre état civil (nom, prénoms, adresse) doit apparaître sur la citation. Le fait que vous êtes « civilement responsable » ou d« témoin » doit également être indiquée."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "La citation délivrée à un témoin doit comporter l’avertissement selon lequel la non-comparution, le refus de témoigner et le faux témoignage sont punis par la loi."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
                                           "type": "element",
-                                          "name": "MiseEnEvidence",
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Identification de l’audience"
+                                              "text": "Si c'est une "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R40703",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "personne morale"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": ", la citation doit préciser sa forme (SA, SARL, …), sa dénomination (son nom), son siège social (son adresse) et l’organe qui la représente légalement (son représentant)."
                                             }
                                           ]
                                         }
@@ -5691,31 +5570,69 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "L’acte de citation doit indiquer le tribunal saisi, le lieu de la juridiction (son adresse et éventuellement la salle), l’heure et la date de l’audience."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Item",
                                       "children": [
                                         {
                                           "type": "element",
-                                          "name": "MiseEnEvidence",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "MiseEnEvidence",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Votre identification en tant que prévenu"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Enoncé de l’infraction"
+                                              "text": "La citation doit préciser votre état civil et le fait que vous êtes « "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R52097",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "prévenu"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " »."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Si vous êtes une personne physique, vos nom, prénoms et adresse doivent être précisés."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Si vous êtes une personne morale, votre dénomination (votre nom) et votre siège (votre adresse) doivent être indiqués."
                                             }
                                           ]
                                         }
@@ -5723,31 +5640,59 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous avez le droit, en tant que personne poursuivie, d’être informée des charges retenues contre vous. La citation doit énoncer le fait poursuivi et viser le texte de loi réprimant ces faits."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Item",
                                       "children": [
                                         {
                                           "type": "element",
-                                          "name": "MiseEnEvidence",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "MiseEnEvidence",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Identification du civilement responsable ou du témoin"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Droit à l’assistance d’un avocat"
+                                              "text": "Si vous êtes cité en tant que "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R53958",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "civilement responsable"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " ou témoin, votre état civil (nom, prénoms, adresse) doit apparaître sur la citation. Le fait que vous êtes « civilement responsable » ou d« témoin » doit également être indiquée."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "La citation délivrée à un témoin doit comporter l’avertissement selon lequel la non-comparution, le refus de témoigner et le faux témoignage sont punis par la loi."
                                             }
                                           ]
                                         }
@@ -5755,79 +5700,31 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Item",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "La citation doit indiquer que vous pouvez vous faire assister d’un avocat de votre choix ou, si vous en faite la demande, "
-                                        },
-                                        {
                                           "type": "element",
-                                          "name": "LienInterne",
-                                          "attributes": {
-                                            "LienPublication": "F36104",
-                                            "type": "Fiche Question-réponse conditionnée",
-                                            "audience": "Particuliers"
-                                          },
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
-                                              "type": "text",
-                                              "text": "d’un avocat commis d’office"
+                                              "type": "element",
+                                              "name": "MiseEnEvidence",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Identification de l’audience"
+                                                }
+                                              ]
                                             }
                                           ]
                                         },
                                         {
-                                          "type": "text",
-                                          "text": ". Les frais de l'avocat commis d'office seront à votre charge sauf si vous remplissez les conditions d’accès à "
-                                        },
-                                        {
                                           "type": "element",
-                                          "name": "LienInterne",
-                                          "attributes": {
-                                            "LienPublication": "F18074",
-                                            "type": "Fiche d'information conditionnée",
-                                            "audience": "Particuliers"
-                                          },
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "l'aide juridictionnelle"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "La citation doit également indiquer que vous avez la possibilité de bénéficier, le cas échéant gratuitement, de conseils juridiques dans une structure d’accès au droit."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Avertissement concernant vos justificatifs de revenus"
+                                              "text": "L’acte de citation doit indiquer le tribunal saisi, le lieu de la juridiction (son adresse et éventuellement la salle), l’heure et la date de l’audience."
                                             }
                                           ]
                                         }
@@ -5835,31 +5732,31 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "La citation doit vous informer que vous devez comparaître à l'audience avec des justificatifs de vos revenus, de vos avis d’imposition ou de non-imposition. Vous pouvez communiquer tous ces documents à l'avocat qui vous représente pour qu'il les transmette au tribunal."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Item",
                                       "children": [
                                         {
                                           "type": "element",
-                                          "name": "MiseEnEvidence",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "MiseEnEvidence",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Enoncé de l’infraction"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Incidence financière de votre absence de comparution"
+                                              "text": "Vous avez le droit, en tant que personne poursuivie, d’être informée des charges retenues contre vous. La citation doit énoncer le fait poursuivi et viser le texte de loi réprimant ces faits."
                                             }
                                           ]
                                         }
@@ -5867,78 +5764,79 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "La citation doit vous informer que le "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienInterne",
-                                          "attributes": {
-                                            "LienPublication": "F1816",
-                                            "type": "Fiche d'information conditionnée",
-                                            "audience": "Particuliers"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "droit fixe de procédure"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " dû en cas de condamnation devant le tribunal correctionnel peut-être majoré. En effet, si vous ne comparaissez pas personnellement ou si vous n’êtes pas représenté par un avocat muni d'un mandat de représentation, la majoration s'applique ("
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Valeur",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "254 €"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " au lieu de "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Valeur",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "127 €"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "). Ce mandat prend la forme d'un courrier que vous adressez à la juridiction. Dans ce courrier, vous demandez à être jugé en votre absence, en étant représenté par l'avocat que vous avez choisi ou par un avocat commis d'office."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Item",
                                       "children": [
                                         {
                                           "type": "element",
-                                          "name": "MiseEnEvidence",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "MiseEnEvidence",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Droit à l’assistance d’un avocat"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Date et signature de la personne qui vous cite"
+                                              "text": "La citation doit indiquer que vous pouvez vous faire assister d’un avocat de votre choix ou, si vous en faite la demande, "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienInterne",
+                                              "attributes": {
+                                                "LienPublication": "F36104",
+                                                "type": "Fiche Question-réponse conditionnée",
+                                                "audience": "Particuliers"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "d’un avocat commis d’office"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": ". Les frais de l'avocat commis d'office seront à votre charge sauf si vous remplissez les conditions d’accès à "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienInterne",
+                                              "attributes": {
+                                                "LienPublication": "F18074",
+                                                "type": "Fiche d'information conditionnée",
+                                                "audience": "Particuliers"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "l'aide juridictionnelle"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": "."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "La citation doit également indiquer que vous avez la possibilité de bénéficier, le cas échéant gratuitement, de conseils juridiques dans une structure d’accès au droit."
                                             }
                                           ]
                                         }
@@ -5946,11 +5844,144 @@
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Paragraphe",
+                                      "name": "Item",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "La demande de citation doit être datée et signée par la personne qui a demandé au commissaire de justice de vous citer. Cette personne peut être la victime, le procureur de la République, une administration. Si l'avocat de la victime a rédigé la demande de citation, c‘est lui qui la signe."
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "MiseEnEvidence",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Avertissement concernant vos justificatifs de revenus"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "La citation doit vous informer que vous devez comparaître à l'audience avec des justificatifs de vos revenus, de vos avis d’imposition ou de non-imposition. Vous pouvez communiquer tous ces documents à l'avocat qui vous représente pour qu'il les transmette au tribunal."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "MiseEnEvidence",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Incidence financière de votre absence de comparution"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "La citation doit vous informer que le "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienInterne",
+                                              "attributes": {
+                                                "LienPublication": "F1816",
+                                                "type": "Fiche d'information conditionnée",
+                                                "audience": "Particuliers"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "droit fixe de procédure"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " dû en cas de condamnation devant le tribunal correctionnel peut-être majoré. En effet, si vous ne comparaissez pas personnellement ou si vous n’êtes pas représenté par un avocat muni d'un mandat de représentation, la majoration s'applique ("
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "254 €"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " au lieu de "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Valeur",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "127 €"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": "). Ce mandat prend la forme d'un courrier que vous adressez à la juridiction. Dans ce courrier, vous demandez à être jugé en votre absence, en étant représenté par l'avocat que vous avez choisi ou par un avocat commis d'office."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Item",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "MiseEnEvidence",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Date et signature de la personne qui vous cite"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "La demande de citation doit être datée et signée par la personne qui a demandé au commissaire de justice de vous citer. Cette personne peut être la victime, le procureur de la République, une administration. Si l'avocat de la victime a rédigé la demande de citation, c‘est lui qui la signe."
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -6421,6 +6452,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -6712,6 +6746,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -6822,6 +6859,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -7400,7 +7440,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R11621",
             "sve": "non",
@@ -7461,7 +7501,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R14218",
             "sve": "non",
@@ -9205,8 +9245,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "L'avocat est-il obligatoire dans un procès pénal ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "L'avocat est-il obligatoire dans un procès pénal ?"
+                }
+              ]
             }
           ]
         },
@@ -9219,8 +9265,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Quelles sont les différences entre une contravention, un délit et un crime ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Quelles sont les différences entre une contravention, un délit et un crime ?"
+                }
+              ]
             }
           ]
         },
@@ -9233,8 +9285,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Qu'est-ce qu'une question prioritaire de constitutionnalité (QPC) ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Qu'est-ce qu'une question prioritaire de constitutionnalité (QPC) ?"
+                }
+              ]
             }
           ]
         }

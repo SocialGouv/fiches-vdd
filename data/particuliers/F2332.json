@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F2332",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2023-03-21T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F2332"
       },
@@ -606,6 +606,150 @@
                     {
                       "type": "text",
                       "text": "À l'occasion de la naissance ou de l'arrivée au foyer d'un enfant, le salarié peut demander à bénéficier d'un congé parental d'éducation partiel. Le salarié en bénéficie sous conditions d'ancienneté. La durée du congé varie en fonction du nombre d'enfants nés ou adoptés simultanément."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Questionnaire",
+          "children": [
+            {
+              "type": "element",
+              "name": "Question",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Êtes-vous salarié d'un particulier employeur ?"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Choix",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Oui"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "IntituleSiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous êtes salarié d'un particulier employeur"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "SiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "affecteVrai",
+                          "attributes": {
+                            "var": "T12229"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "affecteFaux",
+                          "attributes": {
+                            "var": "T13347"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Choix",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Salarié dans une entreprise"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "IntituleSiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Vous n'êtes pas salarié d'un particulier employeur"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "SiSelectionne",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "affecteVrai",
+                          "attributes": {
+                            "var": "T13347"
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "affecteFaux",
+                          "attributes": {
+                            "var": "T12229"
+                          }
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2124,6 +2268,7 @@
                               "attributes": {
                                 "ID": "R32169",
                                 "URL": "https://www.service-public.fr/simulateur/calcul/CongeParentalSecteurPrive",
+                                "audience": "Particuliers",
                                 "type": "Modèle de document"
                               },
                               "children": [
@@ -4273,6 +4418,7 @@
                               "attributes": {
                                 "ID": "R32169",
                                 "URL": "https://www.service-public.fr/simulateur/calcul/CongeParentalSecteurPrive",
+                                "audience": "Particuliers",
                                 "type": "Modèle de document"
                               },
                               "children": [
@@ -5118,6 +5264,7 @@
           "attributes": {
             "ID": "R32169",
             "URL": "https://www.service-public.fr/simulateur/calcul/CongeParentalSecteurPrive",
+            "audience": "Particuliers",
             "type": "Modèle de document"
           },
           "children": [
@@ -5373,8 +5520,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Un ressortissant européen salarié en France a-t-il les mêmes droits qu'un salarié français ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Un ressortissant européen salarié en France a-t-il les mêmes droits qu'un salarié français ?"
+                }
+              ]
             }
           ]
         }

@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F1328",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2024-02-13T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F1328"
       },
@@ -839,6 +839,7 @@
                   "attributes": {
                     "ID": "R55207",
                     "URL": "https://france-renov.gouv.fr/aides/simulation",
+                    "audience": "Particuliers",
                     "type": "Simulateur"
                   },
                   "children": [
@@ -1026,6 +1027,7 @@
                       "attributes": {
                         "ID": "R39412",
                         "URL": "https://france-renov.gouv.fr/fr/trouvez-un-professionnel",
+                        "audience": "Particuliers",
                         "type": "Outil de recherche"
                       },
                       "children": [
@@ -1224,11 +1226,17 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "TitreFlottant",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Revenus très modestes"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Revenus très modestes"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1753,11 +1761,17 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "TitreFlottant",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Revenus modestes"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Revenus modestes"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -2282,11 +2296,17 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "TitreFlottant",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Revenus intermédiaires"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Revenus intermédiaires"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -2981,6 +3001,7 @@
                   "attributes": {
                     "ID": "R51461",
                     "URL": "https://monprojet.anah.gouv.fr/",
+                    "audience": "Particuliers",
                     "type": "Téléservice"
                   },
                   "children": [
@@ -3147,6 +3168,7 @@
                   "attributes": {
                     "ID": "R51461",
                     "URL": "https://monprojet.anah.gouv.fr/",
+                    "audience": "Particuliers",
                     "type": "Téléservice"
                   },
                   "children": [
@@ -3279,6 +3301,7 @@
                   "attributes": {
                     "ID": "R51461",
                     "URL": "https://monprojet.anah.gouv.fr/",
+                    "audience": "Particuliers",
                     "type": "Téléservice"
                   },
                   "children": [
@@ -3546,7 +3569,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R55315",
             "sve": "non",
@@ -3654,7 +3677,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R3025",
             "sve": "non",
@@ -3781,7 +3804,9 @@
           "name": "ServiceEnLigne",
           "attributes": {
             "ID": "R51461",
+            "selfPrincipal": "true",
             "URL": "https://monprojet.anah.gouv.fr/",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -4085,12 +4110,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F15913",
-            "audience": "Particuliers"
+            "audience": "Particuliers",
+            "pictogramme": "icone-achat-logement"
           },
           "children": [
             {
-              "type": "text",
-              "text": "J'achète un logement"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "J'achète un logement"
+                }
+              ]
             }
           ]
         }

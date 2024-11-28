@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F31444",
         "type": "Fiche d'information conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2024-06-06T00:00:00",
         "spUrl": "https://www.service-public.fr/particuliers/vosdroits/F31444"
       },
@@ -744,51 +744,51 @@
                 },
                 {
                   "type": "element",
-                  "name": "Paragraphe",
+                  "name": "Complement",
                   "children": [
                     {
                       "type": "element",
-                      "name": "MiseEnEvidence",
+                      "name": "Titre",
                       "children": [
                         {
                           "type": "text",
                           "text": "Si vous devez faire une déclaration papier"
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "La déclaration 2024 des revenus de 2023 est terminée."
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "La déclaration 2025 des revenus de 2024 débutera en "
                     },
                     {
                       "type": "element",
-                      "name": "MiseEnEvidence",
+                      "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "avril 2025"
+                          "text": "La déclaration 2024 des revenus de 2023 est terminée."
                         }
                       ]
                     },
                     {
-                      "type": "text",
-                      "text": "."
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "La déclaration 2025 des revenus de 2024 débutera en "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "avril 2025"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
                     }
                   ]
                 }
@@ -880,6 +880,7 @@
                           "attributes": {
                             "ID": "R1280",
                             "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+                            "audience": "Particuliers",
                             "type": "Téléservice"
                           },
                           "children": [
@@ -910,67 +911,83 @@
                         },
                         {
                           "type": "element",
-                          "name": "Paragraphe",
+                          "name": "Complement",
                           "children": [
                             {
                               "type": "element",
-                              "name": "MiseEnEvidence",
+                              "name": "Titre",
                               "children": [
                                 {
                                   "type": "text",
                                   "text": "Si vous devez utiliser une déclaration papier"
                                 }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Vous pouvez déclarer vos revenus sur formulaire papier si vous remplissez l'une des conditions suivantes :"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Liste",
-                          "attributes": {
-                            "type": "puce"
-                          },
-                          "children": [
+                            },
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous pouvez déclarer vos revenus sur formulaire papier si vous remplissez l'une des conditions suivantes :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "Votre "
-                                    },
-                                    {
                                       "type": "element",
-                                      "name": "LienInterne",
-                                      "attributes": {
-                                        "LienPublication": "F752",
-                                        "type": "Fiche Question-réponse conditionnée",
-                                        "audience": "Particuliers"
-                                      },
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "résidence principale"
+                                          "text": "Votre "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F752",
+                                            "type": "Fiche Question-réponse conditionnée",
+                                            "audience": "Particuliers"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "résidence principale"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " n'est pas équipée d'un accès à internet"
                                         }
                                       ]
-                                    },
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
                                     {
-                                      "type": "text",
-                                      "text": " n'est pas équipée d'un accès à internet"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Elle est équipée d'un accès à internet, mais vous n'êtes pas en mesure de faire votre déclaration en ligne."
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -978,133 +995,118 @@
                             },
                             {
                               "type": "element",
-                              "name": "Item",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez utiliser le formulaire n°2042-IFI."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ServiceEnLigne",
+                              "attributes": {
+                                "ID": "R50668",
+                                "URL": "https://www.impots.gouv.fr/portail/formulaire/2042-ifi/declaration-dimpot-sur-la-fortune-immobiliere",
+                                "audience": "Particuliers",
+                                "numerocerfa": "15798",
+                                "autrenumero": "2042-IFI",
+                                "type": "Formulaire"
+                              },
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "Titre",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Elle est équipée d'un accès à internet, mais vous n'êtes pas en mesure de faire votre déclaration en ligne."
+                                      "text": "Déclaration d'impôt sur la fortune immobilière (Ifi)"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30612"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Ministère chargé des finances"
                                     }
                                   ]
                                 }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Vous devez utiliser le formulaire n°2042-IFI."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "ServiceEnLigne",
-                          "attributes": {
-                            "ID": "R50668",
-                            "URL": "https://www.impots.gouv.fr/portail/formulaire/2042-ifi/declaration-dimpot-sur-la-fortune-immobiliere",
-                            "numerocerfa": "15798",
-                            "autrenumero": "2042-IFI",
-                            "type": "Formulaire"
-                          },
-                          "children": [
+                            },
                             {
                               "type": "element",
-                              "name": "Titre",
+                              "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Déclaration d'impôt sur la fortune immobilière (Ifi)"
+                                  "text": "Adressez votre déclaration d'IFI et ses annexes à votre centre des impôts des particuliers, en la joignant à votre "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F358",
+                                    "type": "Fiche d'information conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "déclaration de revenus"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Source",
+                              "name": "OuSAdresser",
                               "attributes": {
-                                "ID": "R30612"
+                                "ID": "R15019",
+                                "sve": "non",
+                                "type": "Local"
                               },
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Ministère chargé des finances"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Adressez votre déclaration d'IFI et ses annexes à votre centre des impôts des particuliers, en la joignant à votre "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F358",
-                                "type": "Fiche d'information conditionnée",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Service en charge des impôts (trésorerie, service des impôts...)"
+                                    }
+                                  ]
+                                },
                                 {
-                                  "type": "text",
-                                  "text": "déclaration de revenus"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "OuSAdresser",
-                          "attributes": {
-                            "ID": "R15019",
-                            "sve": "non",
-                            "type": "Local"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
+                                  "type": "element",
+                                  "name": "RessourceWeb",
+                                  "attributes": {
+                                    "URL": "https://www.impots.gouv.fr/portail/contacts"
+                                  }
+                                },
                                 {
-                                  "type": "text",
-                                  "text": "Service en charge des impôts (trésorerie, service des impôts...)"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "RessourceWeb",
-                              "attributes": {
-                                "URL": "https://www.impots.gouv.fr/portail/contacts"
-                              }
-                            },
-                            {
-                              "type": "element",
-                              "name": "Source",
-                              "attributes": {
-                                "ID": "R30612"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Ministère chargé des finances"
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30612"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Ministère chargé des finances"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -1281,6 +1283,7 @@
                           "attributes": {
                             "ID": "R50668",
                             "URL": "https://www.impots.gouv.fr/portail/formulaire/2042-ifi/declaration-dimpot-sur-la-fortune-immobiliere",
+                            "audience": "Particuliers",
                             "numerocerfa": "15798",
                             "autrenumero": "2042-IFI",
                             "type": "Formulaire"
@@ -2042,6 +2045,7 @@
                           "attributes": {
                             "ID": "R2771",
                             "URL": "https://www.telepaiement.dgfip.finances.gouv.fr/stl/satelit.web?templatename=accueilcharpente&contexteinitial=2",
+                            "audience": "Particuliers",
                             "type": "Téléservice"
                           },
                           "children": [
@@ -2188,6 +2192,7 @@
                           "attributes": {
                             "ID": "R2771",
                             "URL": "https://www.telepaiement.dgfip.finances.gouv.fr/stl/satelit.web?templatename=accueilcharpente&contexteinitial=2",
+                            "audience": "Particuliers",
                             "type": "Téléservice"
                           },
                           "children": [
@@ -2529,7 +2534,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R20684",
             "sve": "non",
@@ -2625,7 +2630,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R15019",
             "sve": "non",
@@ -2887,6 +2892,7 @@
           "attributes": {
             "ID": "R3120",
             "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -2921,6 +2927,7 @@
           "attributes": {
             "ID": "R1181",
             "URL": "https://www3.impots.gouv.fr/simulateur/ifi/2024/calcul_ifi/index.htm",
+            "audience": "Particuliers",
             "type": "Simulateur"
           },
           "children": [
@@ -2955,6 +2962,7 @@
           "attributes": {
             "ID": "R1280",
             "URL": "https://cfspart.impots.gouv.fr/LoginMDP",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -2989,6 +2997,7 @@
           "attributes": {
             "ID": "R1281",
             "URL": "https://www.impots.gouv.fr/portail/formulaire/2042/declaration-des-revenus",
+            "audience": "Particuliers",
             "numerocerfa": "10330",
             "autrenumero": "2042",
             "type": "Formulaire"
@@ -3025,6 +3034,7 @@
           "attributes": {
             "ID": "R50668",
             "URL": "https://www.impots.gouv.fr/portail/formulaire/2042-ifi/declaration-dimpot-sur-la-fortune-immobiliere",
+            "audience": "Particuliers",
             "numerocerfa": "15798",
             "autrenumero": "2042-IFI",
             "type": "Formulaire"
@@ -3061,6 +3071,7 @@
           "attributes": {
             "ID": "R2771",
             "URL": "https://www.telepaiement.dgfip.finances.gouv.fr/stl/satelit.web?templatename=accueilcharpente&contexteinitial=2",
+            "audience": "Particuliers",
             "type": "Téléservice"
           },
           "children": [
@@ -3365,8 +3376,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Quand doit-on payer ses impôts ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Quand doit-on payer ses impôts ?"
+                }
+              ]
             }
           ]
         },
@@ -3379,8 +3396,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Quelle est la date limite pour faire sa déclaration de revenus ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Quelle est la date limite pour faire sa déclaration de revenus ?"
+                }
+              ]
             }
           ]
         },
@@ -3393,8 +3416,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Quelles sanctions en cas de fraude fiscale ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Quelles sanctions en cas de fraude fiscale ?"
+                }
+              ]
             }
           ]
         }

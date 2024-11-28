@@ -9,7 +9,7 @@
         "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
         "ID": "F34101",
         "type": "Fiche Question-réponse conditionnée",
-        "xsi:noNamespaceSchemaLocation": "../Schemas/3.3/Publication.xsd",
+        "xsi:noNamespaceSchemaLocation": "../Schemas/3.4/Publication.xsd",
         "dateDerniereModificationImportante": "2018-01-04T00:00:00",
         "spUrl": "https://www.service-public.fr/associations/vosdroits/F34101"
       },
@@ -1041,6 +1041,7 @@
                                   "attributes": {
                                     "ID": "R50847",
                                     "URL": "https://www.associations.gouv.fr/IMG/doc/courrier_type_info_parents.doc",
+                                    "audience": "Associations",
                                     "format": "application/msword",
                                     "poids": "32.0 KB",
                                     "type": "Modèle de document"
@@ -1303,6 +1304,7 @@
                                   "attributes": {
                                     "ID": "R50847",
                                     "URL": "https://www.associations.gouv.fr/IMG/doc/courrier_type_info_parents.doc",
+                                    "audience": "Associations",
                                     "format": "application/msword",
                                     "poids": "32.0 KB",
                                     "type": "Modèle de document"
@@ -1700,7 +1702,7 @@
         },
         {
           "type": "element",
-          "name": "OuSAdresser",
+          "name": "QuiPeutMAider",
           "attributes": {
             "ID": "R17216",
             "sve": "non",
@@ -1807,6 +1809,7 @@
           "attributes": {
             "ID": "R50847",
             "URL": "https://www.associations.gouv.fr/IMG/doc/courrier_type_info_parents.doc",
+            "audience": "Associations",
             "format": "application/msword",
             "poids": "32.0 KB",
             "type": "Modèle de document"
@@ -2093,8 +2096,14 @@
           },
           "children": [
             {
-              "type": "text",
-              "text": "Qui peut être trésorier d'une association ?"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Qui peut être trésorier d'une association ?"
+                }
+              ]
             }
           ]
         },
@@ -2103,12 +2112,19 @@
           "name": "CommentFaireSi",
           "attributes": {
             "ID": "F3109",
-            "audience": "Associations"
+            "audience": "Associations",
+            "pictogramme": "icone-creation-association"
           },
           "children": [
             {
-              "type": "text",
-              "text": "Je crée une association"
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Je crée une association"
+                }
+              ]
             }
           ]
         }
