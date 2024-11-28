@@ -1,3 +1,11 @@
+# [2.1231.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1230.0...v2.1231.0) (2024-11-28)
+
+
+### Features
+
+* **data:** 20241128_1359 update ([1acae2d](https://github.com/SocialGouv/fiches-vdd/commit/1acae2d862ec8017ea4288dc083b5b9b024e13d1))
+* migration en version 3.4 ([#227](https://github.com/SocialGouv/fiches-vdd/issues/227)) ([7adc405](https://github.com/SocialGouv/fiches-vdd/commit/7adc4059e06b814da597f1e373fd73aee6c95228))
+
 # [2.1230.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1229.0...v2.1230.0) (2024-11-27)
 
 
