@@ -1,3 +1,16 @@
+# [2.1270.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1269.0...v2.1270.0) (2025-01-08)
+
+
+### Bug Fixes
+
+* **ci:** permissions ([c83cd55](https://github.com/SocialGouv/fiches-vdd/commit/c83cd553c7645e9adee3718ec97ab1802bab6363))
+* **ci-cd:** use token-bureau ([#228](https://github.com/SocialGouv/fiches-vdd/issues/228)) ([54891a7](https://github.com/SocialGouv/fiches-vdd/commit/54891a75408655546d810cdb2a2e4bd59aa5e9d4))
+
+
+### Features
+
+* **data:** 20250108_0912 update ([bd367a0](https://github.com/SocialGouv/fiches-vdd/commit/bd367a0130e1a533221abb5cdd07596f79fcbd75))
+
 # [2.1269.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1268.0...v2.1269.0) (2025-01-06)
 
 
