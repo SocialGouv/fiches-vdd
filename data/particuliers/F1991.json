@@ -851,6 +851,70 @@
                   "text": "L'imposition dépend du montant de vos revenus."
                 }
               ]
+            },
+            {
+              "type": "element",
+              "name": "ANoter",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "À noter"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Pour vos revenus fonciers, l’impôt est prélevé à la source, par un "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienInterne",
+                      "attributes": {
+                        "LienPublication": "F3120",
+                        "type": "Fiche Question-réponse conditionnée",
+                        "audience": "Particuliers"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "acompte (mensuel ou trimestriel)"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " prélevé sur votre compte bancaire. C'est aussi le cas pour les "
+                    },
+                    {
+                      "type": "element",
+                      "name": "LienInterne",
+                      "attributes": {
+                        "LienPublication": "F2329",
+                        "type": "Fiche d'information conditionnée",
+                        "audience": "Particuliers"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "prélèvements sociaux"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": "."
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -919,13 +983,13 @@
                           "type": "element",
                           "name": "LienIntra",
                           "attributes": {
-                            "LienID": "R47251",
+                            "LienID": "R3018",
                             "type": "Définition de glossaire"
                           },
                           "children": [
                             {
                               "type": "text",
-                              "text": "abattement forfaitaire"
+                              "text": "abattement"
                             }
                           ]
                         },
@@ -1000,7 +1064,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Vous devez déclarer le montant brut de vos revenus fonciers."
+                                  "text": "Vous devez déclarer le montant brut de vos revenus fonciers (charges non comprises)."
                                 }
                               ]
                             },
@@ -1087,25 +1151,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Vous avez droit à un "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienIntra",
-                                  "attributes": {
-                                    "LienID": "R3018",
-                                    "type": "Définition de glossaire"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "abattement"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " de "
+                                  "text": "Vous avez droit à un abattement forfaitaire de "
                                 },
                                 {
                                   "type": "element",
@@ -1119,7 +1165,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": " sur vos revenus fonciers."
+                                  "text": ", représentatif de frais, sur vos revenus fonciers."
                                 }
                               ]
                             },
@@ -1129,7 +1175,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Vous"
+                                  "text": "Vous ne pouvez "
                                 },
                                 {
                                   "type": "element",
@@ -1137,9 +1183,13 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": " ne pouvez pas déduire vos travaux et charges."
+                                      "text": "pas déduire vos travaux et charges"
                                     }
                                   ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
                                 }
                               ]
                             },
@@ -1261,7 +1311,7 @@
                                     },
                                     {
                                       "type": "text",
-                                      "text": ", en indiquant le montant brut sans abattement de vos revenus fonciers."
+                                      "text": ", en indiquant le montant brut sans abattement de vos revenus fonciers (charges non comprises)."
                                     }
                                   ]
                                 }
@@ -1409,7 +1459,98 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Pour cela, vous devez soustraire de votre revenu foncier brut (les loyers que vous avez encaissés pendant l'année) toutes vos charges déductibles."
+                                  "text": "Pour cela, vous devez soustraire de votre revenu foncier brut toutes vos charges déductibles."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Votre "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "revenu foncier brut"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " est constitué des loyers que vous avez encaissés pendant l'année."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez aussi déclarer les sommes reçus comme dépôt de garantie si vous utilisez dans les situations suivantes :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Compenser des loyers impayés"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Remettre en état des locaux après le départ des locataires"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Financer des charges locatives."
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -1485,8 +1626,17 @@
                                       "name": "Paragraphe",
                                       "children": [
                                         {
-                                          "type": "text",
-                                          "text": "Provisions pour charges de copropriété"
+                                          "type": "element",
+                                          "name": "LienExterne",
+                                          "attributes": {
+                                            "URL": "https://www.impots.gouv.fr/particulier/questions/comment-puis-je-deduire-les-provisions-pour-charges-de-mes-revenus-fonciers"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Provisions pour charges de copropriété"
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -1560,6 +1710,45 @@
                             },
                             {
                               "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si le bien immobilier est loué partiellement, les charges sont déductibles uniquement pour la partie que vous louez."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Pour faire le calcul du montant correspondant à la partie louée par rapport à l’ensemble de l’immeuble, utilisez les pourcentages qui servent à la "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F2590",
+                                    "type": "Fiche d'information conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "répartition des charges"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " entre les occupants."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
                               "name": "ASavoir",
                               "children": [
                                 {
@@ -1614,7 +1803,21 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "La part du déficit qui résulte des dépenses autres que les intérêts d'emprunt est déductible de votre revenu global dans la limite de "
+                                  "text": "La part du déficit qui résulte des dépenses autres que les intérêts d'emprunt est "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "déductible de votre revenu global"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " dans la limite de "
                                 },
                                 {
                                   "type": "element",
@@ -1628,7 +1831,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": "."
+                                  "text": ". Cette déduction s'applique automatiquement."
                                 }
                               ]
                             },
@@ -1662,7 +1865,138 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": " et celle liée aux intérêts d'emprunt sont déductibles de vos revenus fonciers des 10 années suivantes."
+                                  "text": " et celle liée aux intérêts d'emprunt sont "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "déductibles de vos revenus fonciers"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " des 10 années suivantes."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La déduction du revenu global est remise en cause si l’immeuble "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "cesse d’être loué dans les 3 ans"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " qui suivent l'année pour laquelle la déduction a été"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "effectuée."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Toutefois, la déduction est maintenue si l’abandon de la location est justifié par l'une des situations suivantes :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Licenciement"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Invalidité"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Décès"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Expropriation de l’immeuble."
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -2287,7 +2621,98 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Pour cela, vous devez soustraire de votre revenu foncier brut (les loyers que vous avez encaissés pendant l'année) toutes vos charges déductibles."
+                          "text": "Pour cela, vous devez soustraire de votre revenu foncier brut toutes vos charges déductibles."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Votre "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "revenu foncier brut"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " est constitué des loyers que vous avez encaissés pendant l'année."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous devez aussi déclarer les sommes reçus comme dépôt de garantie si vous utilisez dans les situations suivantes :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Compenser des loyers impayés"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Remettre en état des locaux après le départ des locataires"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Financer des charges locatives."
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     },
@@ -2363,8 +2788,17 @@
                               "name": "Paragraphe",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Provisions pour charges de copropriété"
+                                  "type": "element",
+                                  "name": "LienExterne",
+                                  "attributes": {
+                                    "URL": "https://www.impots.gouv.fr/particulier/questions/comment-puis-je-deduire-les-provisions-pour-charges-de-mes-revenus-fonciers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Provisions pour charges de copropriété"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -2438,6 +2872,45 @@
                     },
                     {
                       "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Si le bien immobilier est loué partiellement, les charges sont déductibles uniquement pour la partie que vous louez."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Pour faire le calcul du montant correspondant à la partie louée par rapport à l’ensemble de l’immeuble, utilisez les pourcentages qui servent à la "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienInterne",
+                          "attributes": {
+                            "LienPublication": "F2590",
+                            "type": "Fiche d'information conditionnée",
+                            "audience": "Particuliers"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "répartition des charges"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " entre les occupants."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "ASavoir",
                       "children": [
                         {
@@ -2492,7 +2965,21 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "La part du déficit qui résulte des dépenses autres que les intérêts d'emprunt est déductible de votre revenu global dans la limite de "
+                          "text": "La part du déficit qui résulte des dépenses autres que les intérêts d'emprunt est "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "déductible de votre revenu global"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " dans la limite de "
                         },
                         {
                           "type": "element",
@@ -2506,7 +2993,7 @@
                         },
                         {
                           "type": "text",
-                          "text": "."
+                          "text": ". Cette déduction s'applique automatiquement."
                         }
                       ]
                     },
@@ -2540,7 +3027,138 @@
                         },
                         {
                           "type": "text",
-                          "text": " et celle liée aux intérêts d'emprunt sont déductibles de vos revenus fonciers des 10 années suivantes."
+                          "text": " et celle liée aux intérêts d'emprunt sont "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "déductibles de vos revenus fonciers"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " des 10 années suivantes."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "La déduction du revenu global est remise en cause si l’immeuble "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "cesse d’être loué dans les 3 ans"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " qui suivent l'année pour laquelle la déduction a été"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "effectuée."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Toutefois, la déduction est maintenue si l’abandon de la location est justifié par l'une des situations suivantes :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Licenciement"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Invalidité"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Décès"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Expropriation de l’immeuble."
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     },
@@ -3953,6 +4571,146 @@
           "name": "PourEnSavoirPlus",
           "attributes": {
             "type": "Information pratique",
+            "ID": "R17502",
+            "URL": "https://www.impots.gouv.fr/www2/fichiers/documentation/brochure/ir_2025/accueil.htm",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Brochure pratique 2025 - Déclaration des revenus de 2024"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R30612"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Ministère chargé des finances"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "PourEnSavoirPlus",
+          "attributes": {
+            "type": "Information pratique",
+            "ID": "R41461",
+            "URL": "https://www.impots.gouv.fr/portail/",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Site des impôts"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R30612"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Ministère chargé des finances"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "PourEnSavoirPlus",
+          "attributes": {
+            "type": "Information pratique",
+            "ID": "R72262",
+            "URL": "https://www.impots.gouv.fr/particulier/questions/comment-puis-je-deduire-les-provisions-pour-charges-de-mes-revenus-fonciers",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Comment puis-je déduire les provisions pour charges de mes revenus fonciers ?"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R32241"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Direction générale des finances publiques"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "PourEnSavoirPlus",
+          "attributes": {
+            "type": "Information pratique",
+            "ID": "R32028",
+            "URL": "https://www.impots.gouv.fr/portail/node/11603",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Impôt sur le revenu : dépliants d'information"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R30612"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Ministère chargé des finances"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "PourEnSavoirPlus",
+          "attributes": {
+            "type": "Information pratique",
             "ID": "R63893",
             "URL": "https://bofip.impots.gouv.fr/bofip/4951-PGP",
             "audience": "Particuliers"
@@ -4048,146 +4806,6 @@
                 {
                   "type": "text",
                   "text": "Ministère chargé des finances"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "PourEnSavoirPlus",
-          "attributes": {
-            "type": "Information pratique",
-            "ID": "R41461",
-            "URL": "https://www.impots.gouv.fr/portail/",
-            "audience": "Particuliers"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Site des impôts"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Source",
-              "attributes": {
-                "ID": "R30612"
-              },
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Ministère chargé des finances"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "PourEnSavoirPlus",
-          "attributes": {
-            "type": "Information pratique",
-            "ID": "R17502",
-            "URL": "https://www.impots.gouv.fr/www2/fichiers/documentation/brochure/ir_2025/accueil.htm",
-            "audience": "Particuliers"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Brochure pratique 2025 - Déclaration des revenus de 2024"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Source",
-              "attributes": {
-                "ID": "R30612"
-              },
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Ministère chargé des finances"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "PourEnSavoirPlus",
-          "attributes": {
-            "type": "Information pratique",
-            "ID": "R32028",
-            "URL": "https://www.impots.gouv.fr/portail/node/11603",
-            "audience": "Particuliers"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Impôt sur le revenu : dépliants d'information"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Source",
-              "attributes": {
-                "ID": "R30612"
-              },
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Ministère chargé des finances"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Definition",
-          "attributes": {
-            "ID": "R47251"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Abattement forfaitaire"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Texte",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Déduction appliquée sur un montant donné et qui permet au contribuable de ne pas être imposable sur une partie des revenus déclarés au cours d'une année fiscale. Cet abattement intègre les charges de l'entreprise : charges sociales, salaires, loyers de location notamment. Les taux de cet abattement diffèrent en fonction de l'activité exercée par l'entreprise."
-                    }
-                  ]
                 }
               ]
             }
@@ -4403,6 +5021,26 @@
                 {
                   "type": "text",
                   "text": "Quelle est la date limite pour faire sa déclaration de revenus pour les impôts ?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "QuestionReponse",
+          "attributes": {
+            "ID": "F3120",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Impôt sur le revenu - Peut-on payer par acomptes ?"
                 }
               ]
             }

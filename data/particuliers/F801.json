@@ -20,7 +20,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Douane : argent ou valeur transféré en France depuis l'étranger"
+              "text": "Douane : transfert d'argent ou de fonds en France depuis l'étranger"
             }
           ]
         },
@@ -50,7 +50,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Savez-vous que vous devez effectuer une déclaration auprès des douanes si vous entrez en France avec une somme égale ou supérieure à 10 000 € ? Cette obligation concerne un transport physique d'argent liquide. On vous explique la démarche."
+              "text": "Toute personne qui transfère de l'argent vers la France pour un montant supérieur ou égal à 10 000 € doit effectuer une déclaration douanière."
             }
           ]
         },
@@ -80,7 +80,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2023-10-26"
+              "text": "modified 2024-12-11"
             }
           ]
         },
@@ -120,7 +120,7 @@
           "children": [
             {
               "type": "text",
-              "text": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=celex%3A32018R1672, https://eur-lex.europa.eu/legal-content/fr/LSU/?uri=CELEX%3A32018R1672#keyterm_E0001, https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072026/LEGISCTA000006153987/#LEGIARTI000042623754, https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006170956/, https://www.legifrance.gouv.fr/loda/id/JORFTEXT000026872265/, https://bofip.impots.gouv.fr/bofip/4342-PGP.html/identifiant=BOI-CF-INF-20-10-10-20170308, https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006439420/"
+              "text": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=celex%3A32018R1672, https://eur-lex.europa.eu/legal-content/fr/LSU/?uri=CELEX%3A32018R1672#keyterm_E0001, https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006071570/LEGISCTA000006099281/#LEGISCTA000043616405, https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072026/LEGISCTA000006153987/#LEGIARTI000042623754, https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006170956/, https://www.legifrance.gouv.fr/loda/id/JORFTEXT000026872265/, https://bofip.impots.gouv.fr/bofip/4342-PGP.html/identifiant=BOI-CF-INF-20-10-10-20170308, https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006439420/"
             }
           ]
         },
@@ -247,7 +247,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Douane : argent ou valeur transféré en France depuis l'étranger"
+                  "text": "Douane : transfert d'argent ou de fonds en France depuis l'étranger"
                 }
               ]
             }
@@ -515,7 +515,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Savez-vous que vous devez effectuer une "
+                      "text": "Vous devez effectuer une "
                     },
                     {
                       "type": "element",
@@ -529,7 +529,21 @@
                     },
                     {
                       "type": "text",
-                      "text": " auprès des douanes si vous entrez en France avec une somme égale ou supérieure à "
+                      "text": " auprès des douanes si vous voyagez "
+                    },
+                    {
+                      "type": "element",
+                      "name": "MiseEnEvidence",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "vers la France"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " avec une somme égale ou supérieure à "
                     },
                     {
                       "type": "element",
@@ -543,35 +557,29 @@
                     },
                     {
                       "type": "text",
-                      "text": " ? Cette obligation concerne un "
+                      "text": " (ou l'équivalent en devise). Cette obligation concerne un transport physique d'argent liquide"
                     },
                     {
                       "type": "element",
-                      "name": "MiseEnEvidence",
+                      "name": "MiseEnEvidence"
+                    },
+                    {
+                      "type": "text",
+                      "text": ", chèques, titres et autres valeurs. Si vous transférez "
+                    },
+                    {
+                      "type": "element",
+                      "name": "Valeur",
                       "children": [
                         {
                           "type": "text",
-                          "text": "transport physique"
+                          "text": "50 000 €"
                         }
                       ]
                     },
                     {
                       "type": "text",
-                      "text": " d'"
-                    },
-                    {
-                      "type": "element",
-                      "name": "MiseEnEvidence",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "argent liquide"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "text": ". On vous explique la démarche."
+                      "text": " ou plus, vous devez fournir un justificatif de la provenance des fonds. Comment faire ? Nous vous expliquons la démarche."
                     }
                   ]
                 }
@@ -615,103 +623,144 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Les règles diffèrent selon votre "
-                },
+                  "text": "Les règles diffèrent selon les éléments suivants :"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Liste",
+              "attributes": {
+                "type": "puce"
+              },
+              "children": [
                 {
                   "type": "element",
-                  "name": "MiseEnEvidence",
+                  "name": "Item",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "zone de provenance"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Votre "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "zone de provenance"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " : un "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R41270",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "pays membre de l'Union européenne (UE)"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " ou un pays "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "étranger"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " (c'est-à-dire hors UE)"
+                        }
+                      ]
                     }
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": " : un "
-                },
-                {
                   "type": "element",
-                  "name": "LienIntra",
-                  "attributes": {
-                    "LienID": "R41270",
-                    "type": "Définition de glossaire"
-                  },
+                  "name": "Item",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "pays membre de l'Union européenne"
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Votre "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "destination"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " : en "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R64724",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "France"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " ou dans une "
+                        },
+                        {
+                          "type": "element",
+                          "name": "LienIntra",
+                          "attributes": {
+                            "LienID": "R49970",
+                            "type": "Définition de glossaire"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "collectivité d'outre-mer"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "."
+                        }
+                      ]
                     }
                   ]
-                },
-                {
-                  "type": "text",
-                  "text": " (UE) ou un pays "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "étranger"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " (c'est-à-dire hors UE). Elles diffèrent aussi selon votre "
-                },
-                {
-                  "type": "element",
-                  "name": "MiseEnEvidence",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "destination"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " : en "
-                },
-                {
-                  "type": "element",
-                  "name": "LienIntra",
-                  "attributes": {
-                    "LienID": "R64724",
-                    "type": "Définition de glossaire"
-                  },
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "France"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": " ou dans une "
-                },
-                {
-                  "type": "element",
-                  "name": "LienIntra",
-                  "attributes": {
-                    "LienID": "R49970",
-                    "type": "Définition de glossaire"
-                  },
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "collectivité d'Outre-mer"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "text": "."
                 }
               ]
             }
@@ -769,238 +818,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Qui doit faire la déclaration ?"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Toute personne transportant des fonds ou de l'argent liquide d'un montant égal ou supérieur à "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "10 000 €"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " de la France vers l'étranger (ou inversement) doit faire une déclaration douanière, quelle que soit sa nationalité, son lieu de résidence ou le motif du transport de l'argent (personnel ou professionnel)."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Si vous transportez l'argent pour une autre personne, vous devez également le déclarer."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Cette obligation concerne aussi les couples et les familles qui partagent une "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F835",
-                                "type": "Fiche d'information conditionnée",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "communauté de leurs biens"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " (mariage, pacs), quand la somme globale d'argent atteint "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "10 000 €"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Exemple",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Exemple"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Si chaque membre d'un couple transporte "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Valeur",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "5 000 €"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", une déclaration est nécessaire, sauf si l'un peut prouver que la somme lui appartient personnellement (par exemple via un "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F948",
-                                    "type": "Fiche d'information conditionnée",
-                                    "audience": "Particuliers"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "contrat de mariage"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " ou de "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F14485",
-                                    "type": "Fiche Question-réponse conditionnée",
-                                    "audience": "Particuliers"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Pacs"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " mentionnant une séparation des biens)."
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "ANoter",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "À noter"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "La douane peut exiger un contrôle pour une somme "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "inférieure"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " à "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Valeur",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "10 000 €"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " si elle soupçonne après enquête que la provenance de l'argent est d'origine criminelle."
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Chapitre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Quels moyens de paiement sont concernés ?"
+                                  "text": "Quels sont les sommes en liquide (ou équivalent en devise) concernés par la déclaration douanière lors d'un transfert d'argent ou de fonds de l'UE vers la France ?"
                                 }
                               ]
                             }
@@ -1363,7 +1181,238 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Quand faire la déclaration ?"
+                                  "text": "Qui doit faire la déclaration douanière lors de transfert d'argent ou de fonds de l'UE vers la France ?"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Toute personne transportant des fonds ou de l'argent liquide d'un montant égal ou supérieur à "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "10 000 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " de la France vers l'étranger (ou inversement) doit faire une déclaration douanière, quelle que soit sa nationalité, son lieu de résidence ou le motif du transport de l'argent (personnel ou professionnel)."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si vous transportez l'argent pour une autre personne, vous devez également le déclarer."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Cette obligation concerne aussi les couples et les familles qui partagent une "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "F835",
+                                "type": "Fiche d'information conditionnée",
+                                "audience": "Particuliers"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "communauté de leurs biens"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " (mariage, pacs), quand la somme globale d'argent atteint "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "10 000 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exemple",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Exemple"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si chaque membre d'un couple transporte "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "5 000 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ", une déclaration est nécessaire, sauf si l'un peut prouver que la somme lui appartient personnellement (par exemple via un "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F948",
+                                    "type": "Fiche d'information conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "contrat de mariage"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " ou de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F14485",
+                                    "type": "Fiche Question-réponse conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Pacs"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " mentionnant une séparation des biens)."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ANoter",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "À noter"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La douane peut exiger un contrôle pour une somme "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "inférieure"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " à "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "10 000 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " si elle soupçonne après enquête que la provenance de l'argent est d'origine criminelle."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Chapitre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Quand faire la déclaration douanière lors d'un transfert d'argent ou de fonds de l'UE vers la France ?"
                                 }
                               ]
                             }
@@ -1410,7 +1459,43 @@
                                     },
                                     {
                                       "type": "text",
-                                      "text": " la date de franchissement de la frontière (en ligne ou par courrier)"
+                                      "text": " la date de franchissement de la frontière (en ligne) ou au "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "moins 5 "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienIntra",
+                                          "attributes": {
+                                            "LienID": "R17508",
+                                            "type": "Définition de glossaire"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "jours ouvrables"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R17508",
+                                        "type": "Définition de glossaire"
+                                      }
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " à l'avance (par courrier)"
                                     }
                                   ]
                                 }
@@ -1447,80 +1532,6 @@
                               ]
                             }
                           ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Attention",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Attention"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Le délai dépend du moyen par lequel vous faites la déclaration. Par courrier, vous devez la faire au "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "minimum"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "5 "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R17508",
-                                        "type": "Définition de glossaire"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "jours ouvrables"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "avant"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " le franchissement de la frontière ; en ligne sur internet, la déclaration est possible au plus tôt 30 jours avant et juste avant le franchissement."
-                                }
-                              ]
-                            }
-                          ]
                         }
                       ]
                     },
@@ -1538,7 +1549,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Comment faire la déclaration ?"
+                                  "text": "Comment faire la déclaration douanière lors d'un transfert d'argent ou de fons de l'UE vers la France ?"
                                 }
                               ]
                             }
@@ -1631,110 +1642,7 @@
                             },
                             {
                               "type": "text",
-                              "text": " vous devez fournir des documents spécifiques."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "ANoter",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "À noter"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Pour le transfert d'argent liquide "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "non accompagné"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", par "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienIntra",
-                                  "attributes": {
-                                    "LienID": "R62110",
-                                    "type": "Définition de glossaire"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "fret"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", courrier et colis postal ou par une société de courrier, de plus de "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Valeur",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "10 000 €"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", la douane peut vous demander de remplir une "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "déclaration de divulgation"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ". Vous pouvez consulter le "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienExterne",
-                                  "attributes": {
-                                    "URL": "https://www.douane.gouv.fr/fiche/lobligation-de-divulgation-pour-les-envois-dargent-liquide"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "site des douanes pour plus d'informations sur la déclaration de divulgation"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": "."
-                                }
-                              ]
+                              "text": ", vous devez fournir des documents spécifiques."
                             }
                           ]
                         },
@@ -1752,7 +1660,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Entre 10 000 et 49 000 euros"
+                                      "text": "Entre 10 000 et 49 000 €"
                                     }
                                   ]
                                 }
@@ -1799,7 +1707,7 @@
                                         },
                                         {
                                           "type": "text",
-                                          "text": "."
+                                          "text": " :"
                                         }
                                       ]
                                     },
@@ -1916,7 +1824,7 @@
                                         },
                                         {
                                           "type": "text",
-                                          "text": " le franchissement de la frontière."
+                                          "text": " le franchissement de la frontière :"
                                         }
                                       ]
                                     },
@@ -2153,7 +2061,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "À partir de 50 000 euros"
+                                      "text": "À partir de 50 000 €"
                                     }
                                   ]
                                 }
@@ -2576,7 +2484,7 @@
                                         },
                                         {
                                           "type": "text",
-                                          "text": "."
+                                          "text": " :"
                                         }
                                       ]
                                     },
@@ -2637,35 +2545,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Vous devez envoyer le formulaire suivant aux services des douanes au "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "minimum 5 "
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "LienIntra",
-                                              "attributes": {
-                                                "LienID": "R17508",
-                                                "type": "Définition de glossaire"
-                                              },
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "jours ouvrables"
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " avant le franchissement de la frontière."
+                                          "text": "Vous devez remplir un formulaire :"
                                         }
                                       ]
                                     },
@@ -2734,6 +2614,44 @@
                                               }
                                             }
                                           ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous devez le transmettre aux services des douanes au "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "minimum 5 "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R17508",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "jours ouvrables"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " avant le franchissement de la frontière :"
                                         }
                                       ]
                                     },
@@ -2904,7 +2822,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "La déclaration est-elle payante ?"
+                                  "text": "La déclaration douanière lors d'un transfert d'argent ou de fonds de l'UE vers l'étranger est-elle payante ?"
                                 }
                               ]
                             }
@@ -2950,7 +2868,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Que risquez-vous en cas d'oubli ou de fausse déclaration ?"
+                                  "text": "Quels sont les risques en cas d'oubli ou de fausse déclaration lors d'un transfert d'argent ou de fonds entre l'UE et la France ?"
                                 }
                               ]
                             }
@@ -3108,6 +3026,134 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Chapitre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L'argent ou les fonds transférés entre l'UE et la France sont-ils imposables ?"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Les fonds transférés en France peuvent être soumis à l'impôt selon leur nature et l'origine des fonds (par exemple, argent provenant d'une succession, revenus)."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Il est vivement conseillé de se rapprocher des impôts en France pour vérifier s'il existe une convention fiscale entre la France et le pays d'origine des fonds."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "OuSAdresser",
+                          "attributes": {
+                            "ID": "R20684",
+                            "sve": "non",
+                            "type": "Centre de contact"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Service d'information des impôts"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Source",
+                              "attributes": {
+                                "ID": "R30612"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Ministère chargé des finances"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Texte",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Par téléphone :"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "0809 401 401"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Du lundi au vendredi de 8h30 à 19h, hors jours fériés."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Service gratuit + prix appel"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -3158,238 +3204,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Qui doit faire la déclaration ?"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Toute personne transportant des fonds ou de l'argent liquide d'un montant égal ou supérieur à "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "10 000 €"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " de la France vers l'étranger (ou inversement) doit faire une déclaration douanière, quelle que soit sa nationalité, son lieu de résidence ou le motif du transport de l'argent (personnel ou professionnel)."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Si vous transportez l'argent pour une autre personne, vous devez également le déclarer."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Cette obligation concerne aussi les couples et les familles qui partagent une "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F835",
-                                "type": "Fiche d'information conditionnée",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "communauté de leurs biens"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " (mariage, pacs), quand la somme globale d'argent atteint "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "10 000 €"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Exemple",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Exemple"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Si chaque membre d'un couple transporte "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Valeur",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "5 000 €"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", une déclaration est nécessaire, sauf si l'un peut prouver que la somme lui appartient personnellement (par exemple via un "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F948",
-                                    "type": "Fiche d'information conditionnée",
-                                    "audience": "Particuliers"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "contrat de mariage"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " ou de "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F14485",
-                                    "type": "Fiche Question-réponse conditionnée",
-                                    "audience": "Particuliers"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Pacs"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " mentionnant une séparation des biens)."
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "ANoter",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "À noter"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "La douane peut exiger un contrôle pour une somme "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "inférieure"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " à "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Valeur",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "10 000 €"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " si elle soupçonne après enquête que la provenance de l'argent est d'origine criminelle."
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Chapitre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Quels moyens de paiement sont concernés ?"
+                                  "text": "Quels sont les sommes en liquide (ou équivalent en devise) concernés par la déclaration douanière lors d'un transfert d'argent ou de fonds de l'étranger vers la France ?"
                                 }
                               ]
                             }
@@ -3599,6 +3414,10 @@
                                           "text": "titres de créances"
                                         }
                                       ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
                                     }
                                   ]
                                 }
@@ -3626,7 +3445,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "pour le transfert d'argent liquide par fret ou courrier postal de plus de "
+                                  "text": "Pour le transfert d'argent liquide par fret ou courrier postal de plus de "
                                 },
                                 {
                                   "type": "element",
@@ -3654,18 +3473,32 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": ". La douane vous la fournit. Vous devez la renvoyer dans un délai maximum de 30 jours."
+                                  "text": "."
                                 }
                               ]
-                            },
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "3 hypothèses sont possibles : soit la douane vous fournit la déclaration, soit vous faites la démarche en ligne, soit vous remplissez un formulaire."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "BlocCas",
+                          "attributes": {
+                            "affichage": "radio"
+                          },
+                          "children": [
                             {
                               "type": "element",
-                              "name": "OuSAdresser",
-                              "attributes": {
-                                "ID": "R57867",
-                                "sve": "non",
-                                "type": "Centre de contact"
-                              },
+                              "name": "Cas",
                               "children": [
                                 {
                                   "type": "element",
@@ -3673,91 +3506,100 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Direction générale des douanes et des droits indirects (DGDDI) - Lutte contre la fraude"
+                                      "text": "La douane vous fournit la déclaration"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Texte",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous devez renvoyer la déclaration dans un délai maximum de 30 jours."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "OuSAdresser",
+                                  "attributes": {
+                                    "ID": "R57867",
+                                    "sve": "non",
+                                    "type": "Centre de contact"
+                                  },
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Chapitre",
+                                      "name": "Titre",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Titre",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Par courrier"
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Direction générale des douanes et droits indirects"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Bureau JCF3 - Lutte contre la fraude"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "11 rue des deux communes"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Paragraphe",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "93558 Montreuil cedex"
-                                            }
-                                          ]
+                                          "type": "text",
+                                          "text": "Direction générale des douanes et des droits indirects (DGDDI) - Lutte contre la fraude"
                                         }
                                       ]
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Chapitre",
+                                      "name": "Texte",
                                       "children": [
                                         {
                                           "type": "element",
-                                          "name": "Titre",
+                                          "name": "Chapitre",
                                           "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Titre",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Par courrier"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
                                             {
                                               "type": "element",
                                               "name": "Paragraphe",
                                               "children": [
                                                 {
                                                   "type": "text",
-                                                  "text": "Par mail"
+                                                  "text": "Direction générale des douanes et droits indirects"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Bureau JCF3 - Lutte contre la fraude"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "11 rue des deux communes"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "93558 Montreuil cedex"
                                                 }
                                               ]
                                             }
@@ -3765,15 +3607,131 @@
                                         },
                                         {
                                           "type": "element",
-                                          "name": "Paragraphe",
+                                          "name": "Chapitre",
                                           "children": [
                                             {
-                                              "type": "text",
-                                              "text": "dg-jcf3@douane.finances.gouv.fr"
+                                              "type": "element",
+                                              "name": "Titre",
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Paragraphe",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "Par mail"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "dg-jcf3@douane.finances.gouv.fr"
+                                                }
+                                              ]
                                             }
                                           ]
                                         }
                                       ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous faites la démarche en ligne"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "ServiceEnLigne",
+                                  "attributes": {
+                                    "ID": "R54704",
+                                    "URL": "https://www.douane.gouv.fr/service-en-ligne/declaration-de-capitaux-dalia",
+                                    "audience": "Particuliers",
+                                    "type": "Téléservice"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Déclaration d'argent liquide (de capitaux) à la douane (Dalia)"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Source",
+                                      "attributes": {
+                                        "ID": "R54675"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Direction générale des douanes et droits indirects"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous remplissez un formulaire"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Les "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienExterne",
+                                      "attributes": {
+                                        "URL": "https://www.douane.gouv.fr/fiche/obligation-declarative-dargent-liquide"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "formulaires"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " sont disponibles sur le site douane.gouv.fr."
                                     }
                                   ]
                                 }
@@ -3797,7 +3755,238 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Quand faire la déclaration ?"
+                                  "text": "Qui doit faire la déclaration douanière lors d'un transfert d'argent ou de fonds de l'étranger vers la France ?"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Toute personne transportant des fonds ou de l'argent liquide d'un montant égal ou supérieur à "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "10 000 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " de la France vers l'étranger (ou inversement) doit faire une déclaration douanière, quelle que soit sa nationalité, son lieu de résidence ou le motif du transport de l'argent (personnel ou professionnel)."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si vous transportez l'argent pour une autre personne, vous devez également le déclarer."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Cette obligation concerne aussi les couples et les familles qui partagent une "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "F835",
+                                "type": "Fiche d'information conditionnée",
+                                "audience": "Particuliers"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "communauté de leurs biens"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " (mariage, pacs), quand la somme globale d'argent atteint "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "10 000 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exemple",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Exemple"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si chaque membre d'un couple transporte "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "5 000 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ", une déclaration est nécessaire, sauf si l'un peut prouver que la somme lui appartient personnellement (par exemple via un "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F948",
+                                    "type": "Fiche d'information conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "contrat de mariage"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " ou de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F14485",
+                                    "type": "Fiche Question-réponse conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Pacs"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " mentionnant une séparation des biens)."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ANoter",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "À noter"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La douane peut exiger un contrôle pour une somme "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "inférieure"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " à "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "10 000 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " si elle soupçonne après enquête que la provenance de l'argent est d'origine criminelle."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Chapitre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Quand faire la déclaration douanière lors de transfert d'argent ou de fonds de l'étranger vers la France ?"
                                 }
                               ]
                             }
@@ -3844,7 +4033,43 @@
                                     },
                                     {
                                       "type": "text",
-                                      "text": " la date de franchissement de la frontière (en ligne ou par courrier)"
+                                      "text": " la date de franchissement de la frontière (en ligne) ou au "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "moins 5 "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienIntra",
+                                          "attributes": {
+                                            "LienID": "R17508",
+                                            "type": "Définition de glossaire"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "jours ouvrables"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R17508",
+                                        "type": "Définition de glossaire"
+                                      }
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " à l'avance (par courrier)"
                                     }
                                   ]
                                 }
@@ -3881,80 +4106,6 @@
                               ]
                             }
                           ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Attention",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Attention"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Le délai dépend du moyen par lequel vous faites la déclaration. Par courrier, vous devez la faire "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "au minimum"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "5 "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R17508",
-                                        "type": "Définition de glossaire"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "jours ouvrables"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "avant"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " le franchissement de la frontière ; en ligne sur internet, la déclaration est possible au plus tôt 30 jours avant et juste avant le franchissement."
-                                }
-                              ]
-                            }
-                          ]
                         }
                       ]
                     },
@@ -3972,7 +4123,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Comment faire la déclaration ?"
+                                  "text": "Comment faire la déclaration douanière lors de transfert d'argent ou de fonds de l'étranger vers la France ?"
                                 }
                               ]
                             }
@@ -4013,109 +4164,6 @@
                             {
                               "type": "text",
                               "text": " émanant des douanes, la démarche s'effectue de la même façon."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "ANoter",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "À noter"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Pour le transfert d'argent liquide "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "non accompagné"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", par "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienIntra",
-                                  "attributes": {
-                                    "LienID": "R62110",
-                                    "type": "Définition de glossaire"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "fret"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", courrier et colis postal ou par une société de courrier, de plus de "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Valeur",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "10 000 €"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", la douane peut vous demander de remplir une "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "déclaration de divulgation"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ". Vous pouvez consulter le "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienExterne",
-                                  "attributes": {
-                                    "URL": "https://www.douane.gouv.fr/fiche/lobligation-de-divulgation-pour-les-envois-dargent-liquide"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "site des douanes pour plus d'informations sur la déclaration de divulgation"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": "."
-                                }
-                              ]
                             }
                           ]
                         },
@@ -4178,7 +4226,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Au bureau des douanes au moment du franchissement de la frontière"
+                                      "text": "Au bureau des douanes au moment du franchissement de la frontière."
                                     }
                                   ]
                                 }
@@ -4206,7 +4254,7 @@
                             },
                             {
                               "type": "text",
-                              "text": " vous devez fournir des documents spécifiques."
+                              "text": ", vous devez fournir des documents spécifiques."
                             }
                           ]
                         },
@@ -4224,7 +4272,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Entre 10 000 et 49 000 euros"
+                                      "text": "Entre 10 000 et 49 000 €"
                                     }
                                   ]
                                 }
@@ -4605,7 +4653,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "À partir de 50 000 euros"
+                                      "text": "À partir de 50 000 €"
                                     }
                                   ]
                                 }
@@ -5028,7 +5076,7 @@
                                         },
                                         {
                                           "type": "text",
-                                          "text": "."
+                                          "text": " :"
                                         }
                                       ]
                                     },
@@ -5127,7 +5175,7 @@
                                         },
                                         {
                                           "type": "text",
-                                          "text": " le franchissement de la frontière."
+                                          "text": " le franchissement de la frontière :"
                                         }
                                       ]
                                     },
@@ -5366,7 +5414,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "La déclaration est-elle payante ?"
+                                  "text": "La déclaration douanière lors d'un transfert d'argent ou de fonds de l'étranger vers la France est-elle payante ?"
                                 }
                               ]
                             }
@@ -5412,7 +5460,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Que risquez-vous en cas d'oubli ou de fausse déclaration ?"
+                                  "text": "Quels sont les risques en cas d'oubli ou de fausse déclaration lors d'un transfert d'argent ou de fonds de l'étranger vers la France ?"
                                 }
                               ]
                             }
@@ -5570,6 +5618,134 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Chapitre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L'argent ou les fonds transférés entre l'étranger et la France sont-ils imposables ?"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Les fonds transférés en France peuvent être soumis à l'impôt selon leur nature et l'origine des fonds (par exemple, argent provenant d'une succession, revenus)."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Il est vivement conseillé de se rapprocher des impôts en France pour vérifier s'il existe une convention fiscale entre la France et le pays d'origine des fonds."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "OuSAdresser",
+                          "attributes": {
+                            "ID": "R20684",
+                            "sve": "non",
+                            "type": "Centre de contact"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Service d'information des impôts"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Source",
+                              "attributes": {
+                                "ID": "R30612"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Ministère chargé des finances"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Texte",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Par téléphone :"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "0809 401 401"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Du lundi au vendredi de 8h30 à 19h, hors jours fériés."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Service gratuit + prix appel"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -5585,7 +5761,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Étranger vers Outre mer"
+                      "text": "Étranger vers Outre-mer"
                     }
                   ]
                 },
@@ -5620,238 +5796,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Qui doit faire la déclaration ?"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Toute personne transportant des fonds ou de l'argent liquide d'un montant égal ou supérieur à "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "10 000 €"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " de la France vers l'étranger (ou inversement) doit faire une déclaration douanière, quelle que soit sa nationalité, son lieu de résidence ou le motif du transport de l'argent (personnel ou professionnel)."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Si vous transportez l'argent pour une autre personne, vous devez également le déclarer."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "Cette obligation concerne aussi les couples et les familles qui partagent une "
-                            },
-                            {
-                              "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F835",
-                                "type": "Fiche d'information conditionnée",
-                                "audience": "Particuliers"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "communauté de leurs biens"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " (mariage, pacs), quand la somme globale d'argent atteint "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "10 000 €"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": "."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Exemple",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Exemple"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Si chaque membre d'un couple transporte "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Valeur",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "5 000 €"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", une déclaration est nécessaire, sauf si l'un peut prouver que la somme lui appartient personnellement (par exemple via un "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F948",
-                                    "type": "Fiche d'information conditionnée",
-                                    "audience": "Particuliers"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "contrat de mariage"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " ou de "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F14485",
-                                    "type": "Fiche Question-réponse conditionnée",
-                                    "audience": "Particuliers"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Pacs"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " mentionnant une séparation des biens)."
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "ANoter",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "À noter"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "La douane peut exiger un contrôle pour une somme "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "inférieure"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " à "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Valeur",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "10 000 €"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " si elle soupçonne après enquête que la provenance de l'argent est d'origine criminelle."
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Chapitre",
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "Titre",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Quels moyens de paiement sont concernés ?"
+                                  "text": "Quelles sont les sommes en liquide (ou équivalent en devise) concernés par la déclaration douanière lors d'un transfert de fonds de l'étranger vers l'outre-mer ?"
                                 }
                               ]
                             }
@@ -6214,7 +6159,238 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Quand faire la déclaration ?"
+                                  "text": "Qui doit faire la déclaration douanière lors d'un transfert d'argent ou de fonds de l'étranger vers l'outre-mer ?"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Toute personne transportant des fonds ou de l'argent liquide d'un montant égal ou supérieur à "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "10 000 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " de la France vers l'étranger (ou inversement) doit faire une déclaration douanière, quelle que soit sa nationalité, son lieu de résidence ou le motif du transport de l'argent (personnel ou professionnel)."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Si vous transportez l'argent pour une autre personne, vous devez également le déclarer."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Cette obligation concerne aussi les couples et les familles qui partagent une "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienInterne",
+                              "attributes": {
+                                "LienPublication": "F835",
+                                "type": "Fiche d'information conditionnée",
+                                "audience": "Particuliers"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "communauté de leurs biens"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " (mariage, pacs), quand la somme globale d'argent atteint "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Valeur",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "10 000 €"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": "."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Exemple",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Exemple"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Si chaque membre d'un couple transporte "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "5 000 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ", une déclaration est nécessaire, sauf si l'un peut prouver que la somme lui appartient personnellement (par exemple via un "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F948",
+                                    "type": "Fiche d'information conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "contrat de mariage"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " ou de "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F14485",
+                                    "type": "Fiche Question-réponse conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Pacs"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " mentionnant une séparation des biens)."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "ANoter",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "À noter"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "La douane peut exiger un contrôle pour une somme "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "inférieure"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " à "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Valeur",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "10 000 €"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " si elle soupçonne après enquête que la provenance de l'argent est d'origine criminelle."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Chapitre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Quand faire la déclaration douanière lors d'un transfert d'argent ou de fonds de l'étranger vers l'outre-mer ?"
                                 }
                               ]
                             }
@@ -6261,7 +6437,43 @@
                                     },
                                     {
                                       "type": "text",
-                                      "text": " la date de franchissement de la frontière (en ligne ou par courrier)"
+                                      "text": " la date de franchissement de la frontière (en ligne) ou au "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "moins 5 "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienIntra",
+                                          "attributes": {
+                                            "LienID": "R17508",
+                                            "type": "Définition de glossaire"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "jours ouvrables"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R17508",
+                                        "type": "Définition de glossaire"
+                                      }
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " à l'avance (par courrier)"
                                     }
                                   ]
                                 }
@@ -6298,60 +6510,6 @@
                               ]
                             }
                           ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Attention",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Attention"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Le délai dépend du moyen par lequel vous faites la déclaration. Par courrier, vous devez la faire au minimum "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "5 "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "LienIntra",
-                                      "attributes": {
-                                        "LienID": "R17508",
-                                        "type": "Définition de glossaire"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "jours ouvrables"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " avant le franchissement de la frontière ; en ligne sur internet, la déclaration est possible au plus tôt 30 jours avant et juste avant le franchissement."
-                                }
-                              ]
-                            }
-                          ]
                         }
                       ]
                     },
@@ -6369,7 +6527,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Comment faire la déclaration ?"
+                                  "text": "Comment faire la déclaration douanière lors d'un transfert d'argent ou de fonds de l'étranger vers l'outre-mer ?"
                                 }
                               ]
                             }
@@ -6410,109 +6568,6 @@
                             {
                               "type": "text",
                               "text": " émanant des douanes, la démarche s'effectue de la même façon."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "ANoter",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "À noter"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Pour le transfert d'argent liquide "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "non accompagné"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", par "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienIntra",
-                                  "attributes": {
-                                    "LienID": "R62110",
-                                    "type": "Définition de glossaire"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "fret"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", courrier et colis postal ou par une société de courrier, de plus de "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Valeur",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "10 000 €"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", la douane peut vous demander de remplir une "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "déclaration de divulgation"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ". Vous pouvez consulter le "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "LienExterne",
-                                  "attributes": {
-                                    "URL": "https://www.douane.gouv.fr/fiche/lobligation-de-divulgation-pour-les-envois-dargent-liquide"
-                                  },
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "site des douanes pour plus d'informations sur la déclaration de divulgation"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": "."
-                                }
-                              ]
                             }
                           ]
                         },
@@ -6575,7 +6630,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Au bureau des douanes au moment du franchissement de la frontière"
+                                      "text": "Au bureau des douanes au moment du franchissement de la frontière."
                                     }
                                   ]
                                 }
@@ -6603,7 +6658,7 @@
                             },
                             {
                               "type": "text",
-                              "text": " vous devez fournir des documents spécifiques."
+                              "text": ", vous devez fournir des documents spécifiques."
                             }
                           ]
                         },
@@ -6621,7 +6676,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Entre 10 000 et 49 000 euros"
+                                      "text": "Entre 10 000 et 49 000 €"
                                     }
                                   ]
                                 }
@@ -6668,7 +6723,7 @@
                                         },
                                         {
                                           "type": "text",
-                                          "text": "."
+                                          "text": " :"
                                         }
                                       ]
                                     },
@@ -6756,16 +6811,8 @@
                                           ]
                                         },
                                         {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R17508",
-                                            "type": "Définition de glossaire"
-                                          }
-                                        },
-                                        {
                                           "type": "text",
-                                          "text": " avant le franchissement de la frontière."
+                                          "text": " avant le franchissement de la frontière :"
                                         }
                                       ]
                                     },
@@ -6787,7 +6834,7 @@
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Déclaration de transport d'argent liquide entre les collectivités d'outre mer et l'étranger"
+                                              "text": "Déclaration de transport d'argent liquide entre les collectivités d'outre-mer et l'étranger"
                                             }
                                           ]
                                         },
@@ -6936,7 +6983,7 @@
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Déclaration de transport d'argent liquide entre les collectivités d'outre mer et l'étranger"
+                                              "text": "Déclaration de transport d'argent liquide entre les collectivités d'outre-mer et l'étranger"
                                             }
                                           ]
                                         },
@@ -7006,7 +7053,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "À partir de 50 000 euros"
+                                      "text": "À partir de 50 000 €"
                                     }
                                   ]
                                 }
@@ -7429,7 +7476,7 @@
                                         },
                                         {
                                           "type": "text",
-                                          "text": "."
+                                          "text": " :"
                                         }
                                       ]
                                     },
@@ -7518,7 +7565,7 @@
                                         },
                                         {
                                           "type": "text",
-                                          "text": " avant le franchissement de la frontière."
+                                          "text": " avant le franchissement de la frontière :"
                                         }
                                       ]
                                     },
@@ -7757,7 +7804,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "La déclaration est-elle payante ?"
+                                  "text": "La déclaration douanière lors d'un transfert d'argent ou de fonds de l'étranger vers l'outre-mer est-elle payante ?"
                                 }
                               ]
                             }
@@ -7803,7 +7850,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Que risquez-vous en cas d'oubli ou de fausse déclaration ?"
+                                  "text": "Quels sont les risques en cas d'oubli ou de fausse déclaration lors d'un transfert d'argent ou de fonds de l'étranger vers l'outre-mer ?"
                                 }
                               ]
                             }
@@ -7957,6 +8004,134 @@
                             {
                               "type": "text",
                               "text": " de la somme d'argent dissimulée, la majoration n'est pas appliquée."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Chapitre",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "L'argent ou les fonds transférés entre l'étranger et l'outre-mer sont-ils imposables ?"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Les fonds transférés en Outre-mer peuvent être soumis à l'impôt selon leur nature et l'origine des fonds (par exemple, argent provenant d'une succession, revenus)."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Il est vivement conseillé de se rapprocher des impôts en France pour vérifier s'il existe une convention fiscale entre la France et le pays d'origine des fonds."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "OuSAdresser",
+                          "attributes": {
+                            "ID": "R20684",
+                            "sve": "non",
+                            "type": "Centre de contact"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Service d'information des impôts"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Source",
+                              "attributes": {
+                                "ID": "R30612"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Ministère chargé des finances"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Texte",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Par téléphone :"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "0809 401 401"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Du lundi au vendredi de 8h30 à 19h, hors jours fériés."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Service gratuit + prix appel"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         }
@@ -8302,6 +8477,37 @@
                 {
                   "type": "text",
                   "text": "Synthèse du Règlement (UE) 2018/1672 relatif aux contrôles de l'argent liquide entrant dans l'Union ou sortant de l'Union"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Reference",
+          "attributes": {
+            "type": "Texte de référence",
+            "URL": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006071570/LEGISCTA000006099281/#LEGISCTA000043616405",
+            "ID": "R70216"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Code des douanes : articles 464 à 465"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Complement",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Contrôles de l'argent liquide transporté par porteur ou faisant partie d'un envoi sans l'intervention d'un porteur à destination ou en provenance de l'étranger."
                 }
               ]
             }
@@ -8715,7 +8921,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Déclaration de transport d'argent liquide entre les collectivités d'outre mer et l'étranger"
+                  "text": "Déclaration de transport d'argent liquide entre les collectivités d'outre-mer et l'étranger"
                 }
               ]
             },
@@ -8807,7 +9013,7 @@
           "name": "ServiceEnLigne",
           "attributes": {
             "ID": "R59476",
-            "URL": "https://www.google.com/maps/d/viewer?mid=15NzqQ3i4s8r4CPiMMT8ZPLD4iMA&ll=18.040252408823157%2C-69.13444849999999&z=2",
+            "URL": "https://www.douane.gouv.fr/carte-interactive-des-services-douaniers-ouverts-au-public",
             "audience": "Particuliers",
             "type": "Outil de recherche"
           },
@@ -8818,7 +9024,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Carte géolocalisée des services de la douane française ouverts au public"
+                  "text": "Carte géolocalisée interactive des services douaniers français ouverts au public"
                 }
               ]
             },
@@ -8937,6 +9143,41 @@
                 {
                   "type": "text",
                   "text": "Direction générale des douanes et droits indirects"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "PourEnSavoirPlus",
+          "attributes": {
+            "type": "Information pratique",
+            "ID": "R72255",
+            "URL": "https://www.douane.gouv.fr/fiche/obligation-declarative-dargent-liquide",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Obligation déclarative d'argent liquide"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Source",
+              "attributes": {
+                "ID": "R58557"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Direction générale des douanes et des droits indirects"
                 }
               ]
             }
@@ -9250,41 +9491,6 @@
                     {
                       "type": "text",
                       "text": "Correspond à tous les jours de la semaine, à l'exception du jour de repos hebdomadaire (généralement le dimanche) et des jours fériés habituellement non travaillés dans l'entreprise"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Definition",
-          "attributes": {
-            "ID": "R62110"
-          },
-          "children": [
-            {
-              "type": "element",
-              "name": "Titre",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Fret"
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Texte",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Ensemble des marchandises qui peuvent être transportées au sein d'un territoire."
                     }
                   ]
                 }
