@@ -50,7 +50,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Vous pouvez demander la rectification d'un acte de l'état civil si vous constatez une erreur ou un oubli. Par exemple, une erreur sur votre acte de naissance."
+              "text": "La procédure de rectification d'un acte de l'état civil varie si c'est une simple erreur de forme ou une erreur qui modifie une information essentielle."
             }
           ]
         },
@@ -80,7 +80,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2023-10-20"
+              "text": "modified 2025-08-22"
             }
           ]
         },
@@ -475,51 +475,25 @@
         },
         {
           "type": "element",
-          "name": "RechercheGuidee",
-          "attributes": {
-            "ID": "F37422",
-            "audience": "Particuliers"
-          },
+          "name": "Introduction",
           "children": [
             {
               "type": "element",
-              "name": "Titre",
+              "name": "Condition",
               "children": [
                 {
                   "type": "element",
-                  "name": "Paragraphe",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Rectifier un acte d'état civil"
-                    }
-                  ]
+                  "name": "estVrai",
+                  "attributes": {
+                    "var": "T10010"
+                  }
                 }
               ]
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "Texte",
-          "children": [
+            },
             {
               "type": "element",
-              "name": "FragmentConditionne",
+              "name": "Texte",
               "children": [
-                {
-                  "type": "element",
-                  "name": "Condition",
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "estVrai",
-                      "attributes": {
-                        "var": "T10010"
-                      }
-                    }
-                  ]
-                },
                 {
                   "type": "element",
                   "name": "Paragraphe",
@@ -544,7 +518,7 @@
                     },
                     {
                       "type": "text",
-                      "text": " varie si c'est "
+                      "text": " varie si l’erreur à corriger est une "
                     },
                     {
                       "type": "element",
@@ -552,7 +526,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "une simple erreur de forme"
+                          "text": "simple erreur de forme"
                         }
                       ]
                     },
@@ -569,6 +543,32 @@
                           "text": "erreur qui modifie une information essentielle."
                         }
                       ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "RechercheGuidee",
+          "attributes": {
+            "ID": "F37422",
+            "audience": "Particuliers"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Rectifier un acte d'état civil"
                     }
                   ]
                 }
@@ -617,6 +617,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -628,7 +631,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Qu'est-ce qu'une erreur matérielle dans un acte de l'état civil ?"
+                                  "text": "Vérifier si l’erreur à rectifier dans l’acte de l'état civil est une erreur matérielle"
                                 }
                               ]
                             }
@@ -640,7 +643,25 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Il s'agit d'une "
+                              "text": "L’erreur matérielle dans un "
+                            },
+                            {
+                              "type": "element",
+                              "name": "LienIntra",
+                              "attributes": {
+                                "LienID": "R1828",
+                                "type": "Définition de glossaire"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "acte de l’état civil"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " est une "
                             },
                             {
                               "type": "element",
@@ -654,7 +675,7 @@
                             },
                             {
                               "type": "text",
-                              "text": " ou d'un "
+                              "text": " ou un "
                             },
                             {
                               "type": "element",
@@ -674,27 +695,11 @@
                         },
                         {
                           "type": "element",
-                          "name": "Exemple",
+                          "name": "Paragraphe",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Exemple"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Erreur sur un nom mal orthographié, erreur dans la date de naissance, erreur sur le domicile, erreur sur la profession"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Exemples : erreur sur un nom mal orthographié, erreur dans la date de naissance, erreur sur le domicile, erreur sur la profession."
                             }
                           ]
                         },
@@ -708,7 +713,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Connaître la règle pour un acte de naissance qui comporte un double tiret entre les 2 noms de famille d'un enfant"
+                                  "text": "Connaître la procédure de rectification pour un acte de naissance comportant un double tiret entre les 2 noms de famille d'un enfant"
                                 }
                               ]
                             },
@@ -766,55 +771,39 @@
                             },
                             {
                               "type": "element",
-                              "name": "Exemple",
+                              "name": "Paragraphe",
                               "children": [
                                 {
+                                  "type": "text",
+                                  "text": "Exemple : le double nom Jérémy "
+                                },
+                                {
                                   "type": "element",
-                                  "name": "Titre",
+                                  "name": "MiseEnEvidence",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Exemple"
+                                      "text": "DUBOIS -- DURAND"
                                     }
                                   ]
                                 },
                                 {
+                                  "type": "text",
+                                  "text": " devient, après correction : "
+                                },
+                                {
                                   "type": "element",
-                                  "name": "Paragraphe",
+                                  "name": "MiseEnEvidence",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Le double nom Jérémy "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "DUBOIS -- DURAND"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": " devient, après correction : "
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "MiseEnEvidence",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "DUBOIS DURAND (1ère partie : DUBOIS 2nde partie : DURAND"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "text",
-                                      "text": ")."
+                                      "text": "DUBOIS DURAND (1ère partie : DUBOIS 2nde partie : DURAND"
                                     }
                                   ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ")."
                                 }
                               ]
                             }
@@ -825,6 +814,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -836,7 +828,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Comment faire rectifier une erreur matérielle sur un acte de l'état civil ?"
+                                  "text": "Faire une demande de rectification d’un acte de l’état civil comportant une erreur matérielle"
                                 }
                               ]
                             }
@@ -848,61 +840,119 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "La demande se fait sur papier libre ou sur un formulaire cerfa :"
+                              "text": "Préparez les documents suivants :"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "ServiceEnLigne",
+                          "name": "Liste",
                           "attributes": {
-                            "ID": "R18387",
-                            "URL": "https://www.service-public.fr/simulateur/calcul/11531",
-                            "audience": "Particuliers",
-                            "numerocerfa": "11531*03",
-                            "type": "Formulaire"
+                            "type": "puce"
                           },
                           "children": [
                             {
                               "type": "element",
-                              "name": "Titre",
+                              "name": "Item",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Demande de rectification d'une erreur ou d'une omission matérielle contenue dans un acte de l'état civil"
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Demande sur papier libre ou sur le "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienInterne",
+                                      "attributes": {
+                                        "LienPublication": "R18387",
+                                        "type": "Formulaire",
+                                        "audience": "Particuliers"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "formulaire cerfa n°11531"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": ". Une notice, jointe au formulaire, est à lire avant de le remplir."
+                                    }
+                                  ]
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "Source",
-                              "attributes": {
-                                "ID": "R30663"
-                              },
+                              "name": "Item",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Ministère chargé de la justice"
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Copie(s) intégrale(s) des actes de l'état civil à rectifier "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "datant de moins de 3 mois"
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "NoticeLiee",
-                              "attributes": {
-                                "ID": "R19193",
-                                "URL": "https://www.formulaires.service-public.fr/gf/getNotice.do?cerfaNotice=51206&cerfaFormulaire=11531",
-                                "type": "Notice",
-                                "numerocerfa": "51206#03",
-                                "format": "application/pdf",
-                                "poids": "71.0 KB"
-                              },
+                              "name": "Item",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Notice - Demande de rectification d'une erreur ou d'une omission matérielle contenue dans un acte de l'état civil"
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Copie intégrale d'un acte sans erreur ou copie de tout document justifiant la rectification. Par exemple, l'acte de naissance d'une personne mariée dont le nom est mal orthographié sur l'acte de mariage."
+                                    }
+                                  ]
                                 }
                               ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Copie d’un document d'identité. Par exemple, carte nationale d'identité, passeport."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "En fonction de votre situation, des documents complémentaires pourront vous être demandés."
                             }
                           ]
                         },
@@ -1005,231 +1055,27 @@
                               ]
                             }
                           ]
-                        },
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
+                      "children": [
                         {
                           "type": "element",
-                          "name": "SousChapitre",
+                          "name": "Titre",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Titre",
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Paragraphe",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "Quels sont les justificatifs à joindre à votre demande ?"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Vous devez joindre les "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "documents"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " suivants :"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Liste",
-                              "attributes": {
-                                "type": "puce"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Copie(s) intégrale(s)"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " des "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "actes de l'état civil à rectifier"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " datant de "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "moins de 3 mois"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Copie intégrale"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " d'un "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "acte sans erreur"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " ou "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "copie de tout document justifiant la rectification"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Par exemple, l'acte de naissance d'une personne mariée dont le nom est mal orthographié sur l'acte de mariage."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Copie"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " de votre "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "pièce d'identité"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": ". Par exemple, carte nationale d'identité, passeport."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "En fonction de votre situation, des "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "documents complémentaires"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " vous seront demandés."
+                                  "text": "Envoyer ou déposer la demande de rectification d’un acte de l’état civil comportant une erreur matérielle"
                                 }
                               ]
                             }
@@ -1237,19 +1083,103 @@
                         },
                         {
                           "type": "element",
-                          "name": "SousChapitre",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "La démarche varie notamment selon que l’acte de l'état civil a été établi en France ou à l’étranger ."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "BlocCas",
+                          "attributes": {
+                            "affichage": "radio"
+                          },
                           "children": [
                             {
                               "type": "element",
-                              "name": "Titre",
+                              "name": "Cas",
                               "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Acte de l'état civil établi en France"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10576"
+                                      }
+                                    }
+                                  ]
+                                },
                                 {
                                   "type": "element",
                                   "name": "Paragraphe",
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Où déposer votre demande ?"
+                                      "text": "Vous devez vous adresser à la mairie où l’acte a été établi."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Votre demande peut être déposée ou envoyée par courrier."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "OuSAdresser",
+                                  "attributes": {
+                                    "ID": "R1",
+                                    "sve": "non",
+                                    "type": "Local personnalisé sur SP"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Mairie"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "PivotLocal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "mairie"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "RessourceWeb",
+                                      "attributes": {
+                                        "URL": "https://lannuaire.service-public.fr/navigation/mairie"
+                                      }
                                     }
                                   ]
                                 }
@@ -1257,14 +1187,91 @@
                             },
                             {
                               "type": "element",
-                              "name": "BlocCas",
-                              "attributes": {
-                                "affichage": "radio"
-                              },
+                              "name": "Cas",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Cas",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Acte de l'état civil établi à l'étranger"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10580"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous devez vous adresser au "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R1123",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "procureur de la République"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " près le "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "tribunal judiciaire de Nantes"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " (Service du parquet civil)."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Votre demande peut être déposée ou envoyée par courrier."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "OuSAdresser",
+                                  "attributes": {
+                                    "ID": "R20130",
+                                    "sve": "non",
+                                    "type": "National"
+                                  },
                                   "children": [
                                     {
                                       "type": "element",
@@ -1272,92 +1279,59 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Pour un acte de l'état civil établi en France"
+                                          "text": "Tribunal de Nantes"
                                         }
                                       ]
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Condition",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "estVrai",
-                                          "attributes": {
-                                            "var": "T10576"
-                                          }
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous devez vous adresser à la "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "mairie où l'acte a été fait"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Votre demande peut être déposée ou envoyée par courrier."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "OuSAdresser",
+                                      "name": "RessourceWeb",
                                       "attributes": {
-                                        "ID": "R1",
-                                        "sve": "non",
-                                        "type": "Local personnalisé sur SP"
-                                      },
+                                        "URL": "https://lannuaire.service-public.fr/pays-de-la-loire/loire-atlantique/59edbec7-feb1-49aa-bb94-5f6c316b9093"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Document tenant lieu d'acte de l'état civil à un réfugié, un apatride, ou un bénéficiaire de la protection subsidiaire"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12260"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Aide",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Titre",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Mairie"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "PivotLocal",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "mairie"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "RessourceWeb",
-                                          "attributes": {
-                                            "URL": "https://lannuaire.service-public.fr/navigation/mairie"
-                                          }
+                                          "type": "text",
+                                          "text": "La protection subsidiaire est accordée à l'étranger exposé dans son pays d'origine à un risque d'atteintes graves (peine de mort, torture, etc.), mais qui ne remplit pas les conditions pour bénéficier du statut de réfugié."
                                         }
                                       ]
                                     }
@@ -1365,108 +1339,37 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Cas",
+                                  "name": "Paragraphe",
                                   "children": [
                                     {
-                                      "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Pour un acte de l'état civil établi à l'étranger"
-                                        }
-                                      ]
+                                      "type": "text",
+                                      "text": "Vous devez vous adresser au "
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Condition",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "estVrai",
-                                          "attributes": {
-                                            "var": "T10580"
-                                          }
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous devez vous adresser au "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R1123",
-                                            "type": "Définition de glossaire"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "procureur de la République"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " près le "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "tribunal judiciaire de Nantes"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": ", (Service du parquet civil)."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Votre demande peut être déposée ou envoyée par courrier."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "OuSAdresser",
+                                      "name": "LienIntra",
                                       "attributes": {
-                                        "ID": "R20130",
-                                        "sve": "non",
-                                        "type": "National"
+                                        "LienID": "R1123",
+                                        "type": "Définition de glossaire"
                                       },
                                       "children": [
                                         {
-                                          "type": "element",
-                                          "name": "Titre",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Tribunal de Nantes"
-                                            }
-                                          ]
-                                        },
+                                          "type": "text",
+                                          "text": "procureur de la République"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " près le "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
                                         {
-                                          "type": "element",
-                                          "name": "RessourceWeb",
-                                          "attributes": {
-                                            "URL": "https://lannuaire.service-public.fr/pays-de-la-loire/loire-atlantique/59edbec7-feb1-49aa-bb94-5f6c316b9093"
-                                          }
+                                          "type": "text",
+                                          "text": "tribunal judiciaire de Paris."
                                         }
                                       ]
                                     }
@@ -1474,7 +1377,22 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Cas",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Votre demande peut être déposée ou envoyée par courrier."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "OuSAdresser",
+                                  "attributes": {
+                                    "ID": "R43337",
+                                    "sve": "non",
+                                    "type": "Local"
+                                  },
                                   "children": [
                                     {
                                       "type": "element",
@@ -1482,98 +1400,16 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Pour une pièce tenant lieu d'acte de l'état civil à un réfugié ou un apatride"
+                                          "text": "Tribunal judiciaire de Paris"
                                         }
                                       ]
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Condition",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "estVrai",
-                                          "attributes": {
-                                            "var": "T12260"
-                                          }
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous devez vous adresser au "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R1123",
-                                            "type": "Définition de glossaire"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "procureur de la République"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " près le "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "tribunal judiciaire de Paris."
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Votre demande peut être déposée ou envoyée par courrier."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "OuSAdresser",
+                                      "name": "RessourceWeb",
                                       "attributes": {
-                                        "ID": "R43337",
-                                        "sve": "non",
-                                        "type": "Local"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Titre",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Tribunal judiciaire de Paris"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "RessourceWeb",
-                                          "attributes": {
-                                            "URL": "https://lannuaire.service-public.fr/ile-de-france/paris/df25f052-8dbf-492f-90b8-f32ff6a925de"
-                                          }
-                                        }
-                                      ]
+                                        "URL": "https://lannuaire.service-public.fr/ile-de-france/paris/df25f052-8dbf-492f-90b8-f32ff6a925de"
+                                      }
                                     }
                                   ]
                                 }
@@ -1586,6 +1422,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -1597,7 +1436,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Comment est-on informé de la rectification de l'acte de l'état civil ?"
+                                  "text": "Suivre la demande de rectification d’un acte de l’état civil comportant une erreur matérielle"
                                 }
                               ]
                             }
@@ -1609,7 +1448,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Suivant les cas, votre demande est traitée par "
+                              "text": "Votre demande est traitée par "
                             },
                             {
                               "type": "element",
@@ -1713,6 +1552,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -1724,7 +1566,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Qu'est-ce qu'une erreur substantielle dans un acte de l'état civil ?"
+                                  "text": "Vérifier si l’erreur à rectifier dans l’acte de l'état civil est une erreur substantielle"
                                 }
                               ]
                             }
@@ -1736,7 +1578,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Il s'agit "
+                              "text": "L’erreur substantielle est une erreur ou un oubli qui "
                             },
                             {
                               "type": "element",
@@ -1744,21 +1586,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "d'une erreur ou d'un oubli"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " qui concerne une "
-                            },
-                            {
-                              "type": "element",
-                              "name": "MiseEnEvidence",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "information essentielle"
+                                  "text": "concerne une information essentielle"
                                 }
                               ]
                             },
@@ -1784,91 +1612,48 @@
                         },
                         {
                           "type": "element",
-                          "name": "Exemple",
+                          "name": "Paragraphe",
                           "children": [
                             {
+                              "type": "text",
+                              "text": "Exemples : erreur de "
+                            },
+                            {
                               "type": "element",
-                              "name": "Titre",
+                              "name": "LienIntra",
+                              "attributes": {
+                                "LienID": "R38490",
+                                "type": "Définition de glossaire"
+                              },
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Exemple"
+                                  "text": "filiation"
                                 }
                               ]
                             },
                             {
+                              "type": "text",
+                              "text": ", erreur sur l'indication du sexe et des prénoms d'une personne présentant une variation du développement génital (un médecin doit avoir constaté que son sexe ne correspond pas à celui figurant sur son "
+                            },
+                            {
                               "type": "element",
-                              "name": "Liste",
+                              "name": "LienInterne",
                               "attributes": {
-                                "type": "puce"
+                                "LienPublication": "F1427",
+                                "type": "Fiche d'information conditionnée",
+                                "audience": "Particuliers"
                               },
                               "children": [
                                 {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Erreur de "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R38490",
-                                            "type": "Définition de glossaire"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "filiation"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Erreur sur l'indication du sexe et des prénoms d'une personne présentant une variation du développement génital. Un médecin doit avoir constaté que son sexe ne correspond pas à celui figurant sur son "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienInterne",
-                                          "attributes": {
-                                            "LienPublication": "F1427",
-                                            "type": "Fiche d'information conditionnée",
-                                            "audience": "Particuliers"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "acte de naissance"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "."
-                                        }
-                                      ]
-                                    }
-                                  ]
+                                  "type": "text",
+                                  "text": "acte de naissance"
                                 }
                               ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ")."
                             }
                           ]
                         }
@@ -1877,6 +1662,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -1888,7 +1676,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Comment faire rectifier une erreur substantielle sur un acte de l'état civil ?"
+                                  "text": "Faire une demande de rectification d’un acte de l’état civil comportant une erreur substantielle"
                                 }
                               ]
                             }
@@ -1900,17 +1688,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "La demande se fait sur papier libre."
+                              "text": "Préparez les documents suivants :"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "SousChapitre",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
                           "children": [
                             {
                               "type": "element",
-                              "name": "Titre",
+                              "name": "Item",
                               "children": [
                                 {
                                   "type": "element",
@@ -1918,7 +1709,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Quels sont les justificatifs à joindre à votre demande ?"
+                                      "text": "Demande sur papier libre"
                                     }
                                   ]
                                 }
@@ -1926,248 +1717,7 @@
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Vous devez joindre les "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "documents"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " suivants :"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Liste",
-                              "attributes": {
-                                "type": "puce"
-                              },
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Copie(s) intégrale(s"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": ") des "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "actes de l'état civil à rectifier"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " datant de "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "moins de 3 mois"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Copie intégrale "
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "de "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "tout acte de l’état civil "
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "ou "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "copie"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " de "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "tout document justifiant l’existence d’une erreur "
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "et "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "permettant sa rectification."
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Par exemple, lorsque l’acte de naissance est incomplet parce qu’il manque un des prénoms choisis par les parents."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "Item",
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Copie"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " de votre "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "pièce d'identité"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": ". Par exemple, carte nationale d'identité, passeport."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "En fonction de votre situation, "
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "MiseEnEvidence",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "text": "des documents complémentaires"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": " pourront vous être demandés."
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "SousChapitre",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Titre",
+                              "name": "Item",
                               "children": [
                                 {
                                   "type": "element",
@@ -2175,7 +1725,17 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Où adresser votre demande ?"
+                                      "text": "Copie(s) intégrale(s) des actes de l'état civil à rectifier "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "datant de moins de 3 mois"
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -2183,277 +1743,142 @@
                             },
                             {
                               "type": "element",
-                              "name": "BlocCas",
-                              "attributes": {
-                                "affichage": "radio"
-                              },
+                              "name": "Item",
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "Cas",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Copie intégrale de tout acte de l’état civil ou copie de tout document justifiant l’existence d’une erreur et permettant sa rectification. Par exemple, lorsque l’acte de naissance est incomplet parce qu’il manque un des prénoms choisis par les parents."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Copie d’un document d'identité. Par exemple, carte nationale d'identité, passeport."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "En fonction de votre situation, "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "des documents complémentaires"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " pourront vous être demandés."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Envoyer ou déposer la demande de rectification d’un acte de l’état civil comportant une erreur substantielle"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "La démarche varie notamment selon que l’acte de l'état civil a été établi en France ou à l’étranger."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "BlocCas",
+                          "attributes": {
+                            "affichage": "radio"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Acte de l'état civil établi en France"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Titre",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10576"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Introduction",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Pour un acte de l'état civil établi en France"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Condition",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "estVrai",
-                                          "attributes": {
-                                            "var": "T10576"
-                                          }
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "BlocCas",
-                                      "attributes": {
-                                        "affichage": "radio"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Cas",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Titre",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Vous vivez en France"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Vous devez vous adresser au "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "MiseEnEvidence",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "tribunal judiciaire"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": " de votre "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "MiseEnEvidence",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "domicile"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": " ou du "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "MiseEnEvidence",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "lieu où l'acte a été fait"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": "."
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Votre "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "LienIntra",
-                                                  "attributes": {
-                                                    "LienID": "R12542",
-                                                    "type": "Définition de glossaire"
-                                                  },
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "requête"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": " peut être déposée ou envoyée par courrier."
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "OuSAdresser",
-                                              "attributes": {
-                                                "ID": "R30",
-                                                "sve": "non",
-                                                "type": "Local"
-                                              },
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Titre",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Tribunal judiciaire"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "RessourceWeb",
-                                                  "attributes": {
-                                                    "URL": "http://www.annuaires.justice.gouv.fr/"
-                                                  }
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "Source",
-                                                  "attributes": {
-                                                    "ID": "R30663"
-                                                  },
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Ministère chargé de la justice"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "Cas",
-                                          "children": [
-                                            {
-                                              "type": "element",
-                                              "name": "Titre",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Vous vivez à l'étranger"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Vous devez devez vous adresser au "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "MiseEnEvidence",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "tribunal judiciaire de Paris"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": "."
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "Paragraphe",
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "Votre "
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "LienIntra",
-                                                  "attributes": {
-                                                    "LienID": "R12542",
-                                                    "type": "Définition de glossaire"
-                                                  },
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "requête"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": " peut être déposée ou envoyée par courrier."
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "OuSAdresser",
-                                              "attributes": {
-                                                "ID": "R43337",
-                                                "sve": "non",
-                                                "type": "Local"
-                                              },
-                                              "children": [
-                                                {
-                                                  "type": "element",
-                                                  "name": "Titre",
-                                                  "children": [
-                                                    {
-                                                      "type": "text",
-                                                      "text": "Tribunal judiciaire de Paris"
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "RessourceWeb",
-                                                  "attributes": {
-                                                    "URL": "https://lannuaire.service-public.fr/ile-de-france/paris/df25f052-8dbf-492f-90b8-f32ff6a925de"
-                                                  }
-                                                }
-                                              ]
-                                            }
-                                          ]
+                                          "text": "La démarche varie selon que vous vivez en France ou à l’étranger."
                                         }
                                       ]
                                     }
@@ -2461,91 +1886,14 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Cas",
+                                  "name": "BlocCas",
+                                  "attributes": {
+                                    "affichage": "radio"
+                                  },
                                   "children": [
                                     {
                                       "type": "element",
-                                      "name": "Titre",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Pour un acte de l'état civil établi à l'étranger"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Condition",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "estVrai",
-                                          "attributes": {
-                                            "var": "T10580"
-                                          }
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous devez vous adresser au "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "tribunal judiciaire de Nantes"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": "."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Votre "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R12542",
-                                            "type": "Définition de glossaire"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "requête"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " peut être déposée ou envoyée par courrier."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "OuSAdresser",
-                                      "attributes": {
-                                        "ID": "R20130",
-                                        "sve": "non",
-                                        "type": "National"
-                                      },
+                                      "name": "Cas",
                                       "children": [
                                         {
                                           "type": "element",
@@ -2553,16 +1901,366 @@
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Tribunal de Nantes"
+                                              "text": "Vous vivez en France"
                                             }
                                           ]
                                         },
                                         {
                                           "type": "element",
-                                          "name": "RessourceWeb",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous devez vous adresser au tribunal judiciaire de votre "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "MiseEnEvidence",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "domicile"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " ou au tribunal judiciaire du "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "MiseEnEvidence",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "lieu où l'acte a été établi"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": "."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Votre "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R12542",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "requête"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " peut être déposée ou envoyée par courrier."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "OuSAdresser",
                                           "attributes": {
-                                            "URL": "https://lannuaire.service-public.fr/pays-de-la-loire/loire-atlantique/59edbec7-feb1-49aa-bb94-5f6c316b9093"
-                                          }
+                                            "ID": "R30",
+                                            "sve": "non",
+                                            "type": "Local"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Titre",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Tribunal judiciaire"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "RessourceWeb",
+                                              "attributes": {
+                                                "URL": "http://www.annuaires.justice.gouv.fr/"
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Source",
+                                              "attributes": {
+                                                "ID": "R30663"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Ministère chargé de la justice"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Cas",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Titre",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous vivez à l'étranger"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Vous devez devez vous adresser au "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "MiseEnEvidence",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "tribunal judiciaire de Paris"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": "."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Votre "
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "LienIntra",
+                                              "attributes": {
+                                                "LienID": "R12542",
+                                                "type": "Définition de glossaire"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "requête"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "text",
+                                              "text": " peut être déposée ou envoyée par courrier."
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "OuSAdresser",
+                                          "attributes": {
+                                            "ID": "R43337",
+                                            "sve": "non",
+                                            "type": "Local"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Titre",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Tribunal judiciaire de Paris"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "RessourceWeb",
+                                              "attributes": {
+                                                "URL": "https://lannuaire.service-public.fr/ile-de-france/paris/df25f052-8dbf-492f-90b8-f32ff6a925de"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Acte de l'état civil établi à l'étranger"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T10580"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous devez vous adresser au "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "tribunal judiciaire de Nantes"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Votre "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R12542",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "requête"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " peut être déposée ou envoyée par courrier."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "OuSAdresser",
+                                  "attributes": {
+                                    "ID": "R20130",
+                                    "sve": "non",
+                                    "type": "National"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Tribunal de Nantes"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "RessourceWeb",
+                                      "attributes": {
+                                        "URL": "https://lannuaire.service-public.fr/pays-de-la-loire/loire-atlantique/59edbec7-feb1-49aa-bb94-5f6c316b9093"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Cas",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Document tenant lieu d'acte de l'état civil à un réfugié, un apatride ou un bénéficiaire de la protection subsidiaire"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Condition",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "estVrai",
+                                      "attributes": {
+                                        "var": "T12260"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Aide",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "La protection subsidiaire est accordée à l'étranger exposé dans son pays d'origine à un risque d'atteintes graves (peine de mort, torture, etc.), mais qui ne remplit pas les conditions pour bénéficier du statut de réfugié."
                                         }
                                       ]
                                     }
@@ -2570,7 +2268,60 @@
                                 },
                                 {
                                   "type": "element",
-                                  "name": "Cas",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Vous devez vous adresser au "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "tribunal judiciaire de Paris."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Votre "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "LienIntra",
+                                      "attributes": {
+                                        "LienID": "R12542",
+                                        "type": "Définition de glossaire"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "requête"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " peut être déposée ou envoyée par courrier."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "OuSAdresser",
+                                  "attributes": {
+                                    "ID": "R43337",
+                                    "sve": "non",
+                                    "type": "Local"
+                                  },
                                   "children": [
                                     {
                                       "type": "element",
@@ -2578,98 +2329,16 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Pour une pièce tenant lieu d'acte de l'état civil à un réfugié ou un apatride"
+                                          "text": "Tribunal judiciaire de Paris"
                                         }
                                       ]
                                     },
                                     {
                                       "type": "element",
-                                      "name": "Condition",
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "estVrai",
-                                          "attributes": {
-                                            "var": "T12260"
-                                          }
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Vous devez vous adresser au "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "MiseEnEvidence",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "tribunal judiciaire de Paris."
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "Paragraphe",
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "text": "Votre "
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "LienIntra",
-                                          "attributes": {
-                                            "LienID": "R12542",
-                                            "type": "Définition de glossaire"
-                                          },
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "requête"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "text",
-                                          "text": " peut être déposée ou envoyée par courrier."
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "element",
-                                      "name": "OuSAdresser",
+                                      "name": "RessourceWeb",
                                       "attributes": {
-                                        "ID": "R43337",
-                                        "sve": "non",
-                                        "type": "Local"
-                                      },
-                                      "children": [
-                                        {
-                                          "type": "element",
-                                          "name": "Titre",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "text": "Tribunal judiciaire de Paris"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "RessourceWeb",
-                                          "attributes": {
-                                            "URL": "https://lannuaire.service-public.fr/ile-de-france/paris/df25f052-8dbf-492f-90b8-f32ff6a925de"
-                                          }
-                                        }
-                                      ]
+                                        "URL": "https://lannuaire.service-public.fr/ile-de-france/paris/df25f052-8dbf-492f-90b8-f32ff6a925de"
+                                      }
                                     }
                                   ]
                                 }
@@ -2682,6 +2351,9 @@
                     {
                       "type": "element",
                       "name": "Chapitre",
+                      "attributes": {
+                        "numerote": "true"
+                      },
                       "children": [
                         {
                           "type": "element",
@@ -2693,7 +2365,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Comment est-on informé de la rectification d'un acte de l'état civil ?"
+                                  "text": "Suivre la demande de rectification d’un acte de l’état civil comportant une erreur substantielle"
                                 }
                               ]
                             }
@@ -2742,7 +2414,7 @@
               "type": "element",
               "name": "Dossier",
               "attributes": {
-                "ID": "N359",
+                "ID": "N31778",
                 "audience": "Particuliers"
               },
               "children": [
@@ -2752,7 +2424,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Actes d'état civil"
+                      "text": "Changement d'état civil"
                     }
                   ]
                 },
@@ -2781,7 +2453,7 @@
               "type": "element",
               "name": "Dossier",
               "attributes": {
-                "ID": "N31778",
+                "ID": "N151",
                 "audience": "Particuliers"
               },
               "children": [
@@ -2791,7 +2463,133 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Changement d'état civil"
+                      "text": "Nom et prénom"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Theme",
+                  "attributes": {
+                    "ID": "N19810"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Papiers - Citoyenneté - Élections"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "VoirAussi",
+          "attributes": {
+            "important": "non"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Fiche",
+              "attributes": {
+                "ID": "F1427",
+                "audience": "Particuliers"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Acte de naissance"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Theme",
+                  "attributes": {
+                    "ID": "N19810"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Papiers - Citoyenneté - Élections"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Fiche",
+              "attributes": {
+                "ID": "F1432",
+                "audience": "Particuliers"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Acte de mariage"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Theme",
+                  "attributes": {
+                    "ID": "N19810"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Papiers - Citoyenneté - Élections"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Fiche",
+              "attributes": {
+                "ID": "F1444",
+                "audience": "Particuliers"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Titre",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Acte de décès"
                     }
                   ]
                 },
