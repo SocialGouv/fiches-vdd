@@ -49,7 +49,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Lorsque l'acheteur n'obtient pas de prêt immobilier, la vente n'a pas lieu. Mais les conséquences financières sont différentes selon que le contrat de réservation ou le compromis de vente (promesse de vente) indiquait que l'achat était à financer ou non par un ou plusieurs prêts immobiliers. Nous vous expliquons."
+              "text": "Si le prêt est refusé, la vente n'a pas lieu. Mais les conséquences financières varient selon qu’il était ou non prévu que l’achat se fasse avec ou non un prêt."
             }
           ]
         },
@@ -79,7 +79,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2023-07-07"
+              "text": "modified 2025-08-27"
             }
           ]
         },
@@ -395,7 +395,35 @@
                   "children": [
                     {
                       "type": "text",
-                      "text": "Lorsque l'acheteur n'obtient pas de prêt immobilier, la vente n'a pas lieu. Mais les conséquences financières sont différentes selon que le contrat de réservation ou le compromis de vente ("
+                      "text": "Lorsque l'acheteur n'obtient pas de prêt immobilier, la vente n'a pas lieu. Mais les conséquences financières sont différentes, selon que le "
+                    },
+                    {
+                      "type": "element",
+                      "name": "Expression",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "contrat de réservation"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " ou par le "
+                    },
+                    {
+                      "type": "element",
+                      "name": "Expression",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "compromis de vente"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " (ou "
                     },
                     {
                       "type": "element",
@@ -409,7 +437,7 @@
                     },
                     {
                       "type": "text",
-                      "text": ") indiquait que l'achat était à financer ou non par un ou plusieurs prêts immobiliers. Nous vous expliquons."
+                      "text": ") prévoyait ou non que l'achat est financé par un ou plusieurs prêts :"
                     }
                   ]
                 }
@@ -419,36 +447,64 @@
         },
         {
           "type": "element",
-          "name": "ListeSituations",
-          "attributes": {
-            "affichage": "onglet"
-          },
+          "name": "Texte",
           "children": [
             {
               "type": "element",
-              "name": "Situation",
+              "name": "BlocCas",
+              "attributes": {
+                "affichage": "radio"
+              },
               "children": [
                 {
                   "type": "element",
-                  "name": "Titre",
+                  "name": "Cas",
                   "children": [
                     {
-                      "type": "text",
-                      "text": "Pour acheter avec un prêt"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "Texte",
-                  "children": [
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Le contrat de réservation ou le compromis de vente prévoit que l'achat est financé par un ou plusieurs prêts"
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Le compromis de vente ou le contrat de réservation indique que l'achat sera "
+                          "text": "Le "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Expression",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "contrat de réservation"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " ou le "
+                        },
+                        {
+                          "type": "element",
+                          "name": "Expression",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "compromis de vente"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " indique que l'achat sera "
                         },
                         {
                           "type": "element",
@@ -456,13 +512,13 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "financé par un prêt "
+                              "text": "financé par un prêt"
                             }
                           ]
                         },
                         {
                           "type": "text",
-                          "text": "et quel est le délai accordé à l'acheteur pour l'obtenir. Cette indication constitue une "
+                          "text": " et quel est le délai accordé à l'acheteur pour l'obtenir. Cette indication constitue une "
                         },
                         {
                           "type": "element",
@@ -532,27 +588,79 @@
                       ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Situation",
-              "children": [
-                {
-                  "type": "element",
-                  "name": "Titre",
-                  "children": [
-                    {
-                      "type": "text",
-                      "text": "Pour acheter sans prêt"
-                    }
-                  ]
                 },
                 {
                   "type": "element",
-                  "name": "Texte",
+                  "name": "Cas",
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "Titre",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Le contrat de réservation ou le compromis de vente ne prévoit pas que l'achat est financé par un prêt"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Introduction",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Les conséquences varient selon que le "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Expression",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "contrat de réservation"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " ou le "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Expression",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "compromis de vente"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " contient ou non une "
+                            },
+                            {
+                              "type": "element",
+                              "name": "Expression",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "mention manuscrite"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " indiquant que « si l’acheteur demande un prêt puis renonce à l’achat, il aura des frais à payer » :"
+                            }
+                          ]
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "BlocCas",
@@ -580,7 +688,35 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Le compromis de vente ou le contrat de réservation indique que l'achat sera financé"
+                                  "text": "Le "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "contrat de réservation"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " ou le "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "compromis de vente"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " indique que l'achat sera financé "
                                 },
                                 {
                                   "type": "element",
@@ -588,9 +724,13 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": " sans l'aide d'un prêt."
+                                      "text": "sans l'aide d'un prêt"
                                     }
                                   ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
                                 }
                               ]
                             },
@@ -624,7 +764,35 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Le montant de ces frais est indiqué dans le compromis de vente ou le contrat de réservation."
+                                  "text": "Le montant de ces frais est indiqué dans le "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "contrat de réservation"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " ou le "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "compromis de vente"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
                                 }
                               ]
                             },
@@ -670,7 +838,35 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Le compromis de vente ou le contrat de réservation indique que l'achat du bien sera financé "
+                                  "text": "Le "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "contrat de réservation"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " ou le "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "compromis de vente"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " indique que l'achat sera financé "
                                 },
                                 {
                                   "type": "element",
@@ -744,7 +940,35 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Le compromis de vente ou le contrat de réservation indique que l'achat du bien sera financé "
+                                  "text": "Le "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "contrat de réservation"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " ou le "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "compromis de vente"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " indique que l'achat sera financé "
                                 },
                                 {
                                   "type": "element",
@@ -766,13 +990,13 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "pas de passage écrit "
+                                      "text": "pas de passage écrit"
                                     }
                                   ]
                                 },
                                 {
                                   "type": "text",
-                                  "text": "de la main de l'acheteur ("
+                                  "text": " de la main de l'acheteur ("
                                 },
                                 {
                                   "type": "element",
