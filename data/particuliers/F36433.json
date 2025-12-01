@@ -80,7 +80,7 @@
           "children": [
             {
               "type": "text",
-              "text": "modified 2024-02-19"
+              "text": "modified 2025-11-28"
             }
           ]
         },
@@ -620,7 +620,64 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Pour cela, vous devez demander à être inscrit."
+                  "text": "Pour demander à être inscrit sur la liste électorale d'une commune, vous devez :"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Liste",
+              "attributes": {
+                "type": "puce"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Item",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "soit y habiter ou y résider,"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Item",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "soit être un de ses contribuables,"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Item",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "soit être le gérant ou l'associé d'une entreprise située dans cette commune."
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -630,17 +687,35 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Lors de votre demande d'inscription, vous devez notamment fournir un justificatif de domicile."
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "Paragraphe",
-              "children": [
+                  "text": "Selon votre "
+                },
+                {
+                  "type": "element",
+                  "name": "MiseEnEvidence",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "situation"
+                    }
+                  ]
+                },
                 {
                   "type": "text",
-                  "text": "Le justificatif à fournir dépend de votre situation dans la commune où vous voulez vous inscrire :"
+                  "text": ", il faut fournir "
+                },
+                {
+                  "type": "element",
+                  "name": "MiseEnEvidence",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "un ou plusieurs justificatifs"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " :"
                 }
               ]
             },
@@ -661,48 +736,206 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Habitant (ou résident depuis au moins 6 mois)"
+                          "text": "Habitant ou résident"
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Condition",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Vous devez fournir un document à votre nom et mentionnant votre adresse sur la commune."
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T11422"
+                          }
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
+                      "name": "Introduction",
                       "children": [
                         {
-                          "type": "text",
-                          "text": "Les documents suivants sont acceptés :"
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Les documents à fournir varient selon votre situation :"
+                            }
+                          ]
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "Liste",
+                      "name": "BlocCas",
                       "attributes": {
-                        "type": "puce"
+                        "affichage": "radio"
                       },
                       "children": [
                         {
                           "type": "element",
-                          "name": "Item",
+                          "name": "Cas",
                           "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Domicile dans la commune"
+                                }
+                              ]
+                            },
                             {
                               "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Facture d'eau, de gaz, d'électricité ou de téléphone fixe de moins de 3 mois"
+                                  "text": "Vous devez fournir "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "un justificatif de moins de 3 mois"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": ", à votre nom et mentionnant l'adresse de votre domicile sur la commune."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Les justificatifs généralement acceptés sont les suivants :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Attestation ou la facture (de moins de 3 mois) d'eau, d'électricité, de gaz, de téléphone fixe établie à votre nom par l’entreprise"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Attestation d'assurance habitation (de moins de 3 mois)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Quittance de loyer non manuscrite (de moins de 3 mois)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Bulletin de salaire ou titre de pension (de moins de 3 mois)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Redevance d'enlèvement des ordures ménagères (la plus récente)."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ASavoir",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "À savoir"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Si vous êtes en maison de retraite, vous pouvez fournir une attestation du directeur (de moins de 3 mois) certifiant la réalité de votre hébergement et indiquant l'adresse de l'établissement."
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -710,15 +943,184 @@
                         },
                         {
                           "type": "element",
-                          "name": "Item",
+                          "name": "Cas",
                           "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Résidence dans la commune"
+                                }
+                              ]
+                            },
                             {
                               "type": "element",
                               "name": "Paragraphe",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Attestation d'assurance habitation de moins de 3 mois"
+                                  "text": "La "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Expression",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "résidence"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " est l’endroit où vous habitez "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "au moment de la demande"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " de façon effective et continue, "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "depuis au moins 6 mois"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "En conséquence, il ne suffit pas de travailler dans la commune ou d'occuper une résidence secondaire durant les vacances ou le week-end."
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Pour vous inscrire, vous pouvez fournir, par exemple, "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "l’un des documents suivants"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Facture (de moins de 3 mois) d'eau, d'électricité, de gaz ou de téléphone fixe établie à votre nom par l’entreprise"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Attestation d'assurance (de moins de 3 mois)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Quittance de loyer (de moins de 3 mois)."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ASavoir",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "À savoir"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Si vous êtes un fonctionnaire soumis à une résidence obligatoire dans la commune, vous pouvez vous inscrire avant la fin du délai de 6 mois. Pour cela, vous devez prouver que vous êtes fonctionnaire (par une carte professionnelle ou une attestation de l'administration) et que vous résidez dans la commune."
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -726,31 +1128,374 @@
                         },
                         {
                           "type": "element",
-                          "name": "Item",
+                          "name": "Cas",
                           "children": [
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Titre",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Fiche de paie ou titre de pension de moins de 3 mois"
+                                  "text": "Logé chez un proche (parent, ami...)"
                                 }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
+                            },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Introduction",
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Quittance de loyer de moins de 3 mois"
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Les justificatifs à fournir varient selon que vous êtes logé chez vos parents ou chez une autre personne :"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "BlocCas",
+                              "attributes": {
+                                "affichage": "radio"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Cas",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Chez votre père et/ou votre mère"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Introduction",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Paragraphe",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Les justificatifs à fournir varient selon que vous avez moins de 26 ans ou plus :"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "BlocCas",
+                                      "attributes": {
+                                        "affichage": "radio"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Cas",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Titre",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Vous avez moins de 26 ans"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Vous devez fournir "
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "MiseEnEvidence",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "les 2 documents suivants"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "text": " :"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Liste",
+                                              "attributes": {
+                                                "type": "puce"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Item",
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "Paragraphe",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "Document de moins de 3 mois prouvant le domicile de votre parent dans la commune"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "Item",
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "Paragraphe",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "Document prouvant votre lien de "
+                                                        },
+                                                        {
+                                                          "type": "element",
+                                                          "name": "LienIntra",
+                                                          "attributes": {
+                                                            "LienID": "R38490",
+                                                            "type": "Définition de glossaire"
+                                                          },
+                                                          "children": [
+                                                            {
+                                                              "type": "text",
+                                                              "text": "filiation"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "text",
+                                                          "text": ". Par exemple, copie du livret de famille, acte de naissance avec indication de la filiation."
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Cas",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Titre",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Vous avez 26 ans ou plus"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Vous devez fournir "
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "MiseEnEvidence",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "text": "les 3 documents suivants"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "text": " :"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "Liste",
+                                              "attributes": {
+                                                "type": "puce"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "Item",
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "Paragraphe",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "Lettre signée par votre parent, certifiant que vous habitez chez lui et datant de moins de 3 mois"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "Item",
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "Paragraphe",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "Document prouvant votre lien avec la commune (bulletin de salaire récent ou tout document indiquant votre nom et l'adresse du parent vous hébergeant)"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "Item",
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "Paragraphe",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "text": "Copie de la carte d'identité du parent chez qui vous habitez."
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Cas",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Titre",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Chez une autre personne"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Vous devez présenter "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "les 3 documents suivants"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " :"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "Liste",
+                                      "attributes": {
+                                        "type": "puce"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "Item",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Lettre signée par la personne chez qui vous habitez, certifiant que vous habitez chez elle et datant de moins de 3 mois"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Item",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Document prouvant votre lien avec la commune (bulletin de salaire récent ou tout document indiquant votre nom et l'adresse de la personne vous hébergeant)"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "Item",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "Paragraphe",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "Copie de la carte d'identité de la personne chez qui vous habitez."
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -776,11 +1521,189 @@
                     },
                     {
                       "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12557"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "Paragraphe",
                       "children": [
                         {
                           "type": "text",
-                          "text": "Vous devez prouver que vous êtes soumis, depuis au moins 2 années consécutives, à certains impôts locaux de la commune où vous voulez vous inscrire. Il peut s'agir des impôts suivants :"
+                          "text": "Vous devez prouver que vous êtes soumis aux impôts locaux de la commune, depuis "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "au moins 2 ans"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": ". Il peut s'agir du même impôt ou de différents impôts dus successivement durant cette période."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Les impôts locaux concernés sont les suivants :"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Liste",
+                      "attributes": {
+                        "type": "puce"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F42",
+                                    "type": "Fiche d'information conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Taxe d'habitation sur résidence secondaire"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Taxe foncière, sur "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F59",
+                                    "type": "Fiche d'information conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "propriété bâtie"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " ou "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F31638",
+                                    "type": "Fiche d'information conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "non bâtie"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Item",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F23547",
+                                    "type": "Fiche d'information conditionnée",
+                                    "audience": "Professionnels"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Cotisation foncière des entreprises"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " (ex-taxe professionnelle)."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Paragraphe",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Vous devez fournir "
+                        },
+                        {
+                          "type": "element",
+                          "name": "MiseEnEvidence",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "l’un des documents suivants"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": " :"
                         }
                       ]
                     },
@@ -801,7 +1724,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Taxe d'habitation sur résidence secondaire"
+                                  "text": "Les 2 derniers avis d'imposition où votre nom apparaît"
                                 }
                               ]
                             }
@@ -817,23 +1740,25 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Taxe foncière, sur propriété bâtie ou non bâtie"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Item",
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
+                                  "text": "Un certificat de la "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "R59706",
+                                    "type": "Sigle"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "DDFP"
+                                    }
+                                  ]
+                                },
                                 {
                                   "type": "text",
-                                  "text": "Cotisation foncière des entreprises (ex-taxe professionnelle)"
+                                  "text": " où votre nom apparaît."
                                 }
                               ]
                             }
@@ -843,50 +1768,25 @@
                     },
                     {
                       "type": "element",
-                      "name": "Paragraphe",
-                      "children": [
-                        {
-                          "type": "text",
-                          "text": "Vous devez fournir :"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "Liste",
-                      "attributes": {
-                        "type": "puce"
-                      },
+                      "name": "ASavoir",
                       "children": [
                         {
                           "type": "element",
-                          "name": "Item",
+                          "name": "Titre",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Soit les 2 derniers avis d'imposition sur lesquels votre nom apparaît,"
-                                }
-                              ]
+                              "type": "text",
+                              "text": "À savoir"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "Item",
+                          "name": "Paragraphe",
                           "children": [
                             {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Soit un certificat de la direction départementale des finances publiques où votre nom apparaît."
-                                }
-                              ]
+                              "type": "text",
+                              "text": "Lorsque vous serez inscrit sur la liste de la commune, votre époux ou votre épouse pourra demander à être inscrit sur la même liste électorale que la vôtre."
                             }
                           ]
                         }
@@ -904,7 +1804,36 @@
                       "children": [
                         {
                           "type": "text",
-                          "text": "Chef d'entreprise"
+                          "text": "Gérant ou associé d'une société"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Condition",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "estVrai",
+                          "attributes": {
+                            "var": "T12012"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "Introduction",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Les documents à fournir varient selon votre situation :"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -925,7 +1854,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Gérant (ou dirigeant)"
+                                  "text": "Gérant d'une société"
                                 }
                               ]
                             },
@@ -935,7 +1864,21 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Vous devez prouver que vous êtes le gérant (dirigeant) depuis au moins 2 ans d'une entreprise inscrite depuis au moins 2 ans au rôle des contributions de la commune."
+                                  "text": "Vous devez prouver que vous êtes le gérant (dirigeant) depuis "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "au moins 2 ans d'une société inscrite depuis au moins 2 ans"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " au rôle des contributions directes de la commune."
                                 }
                               ]
                             },
@@ -945,7 +1888,31 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Pour cela, vous devez fournir les 3 documents suivants :"
+                                  "text": "Vous devez fournir les"
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": " 3 documents"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "suivants"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " :"
                                 }
                               ]
                             },
@@ -966,7 +1933,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Décision de nomination (ou extrait) ou copie de la décision de nomination retranscrite sur le registre des décisions d'assemblée générale de la société ou même les statuts de l'entreprise"
+                                          "text": "Décision de nomination (ou extrait) ou copie de la décision de nomination retranscrite sur le registre des décisions d'assemblée générale de la société ou même les statuts de la société"
                                         }
                                       ]
                                     }
@@ -998,7 +1965,7 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Attestation sur l'honneur de la continuité de votre situation de gérant (dirigeant) de la société depuis au moins 2 ans"
+                                          "text": "Attestation sur l'honneur de la continuité de votre situation de gérant (dirigeant) de la société depuis au moins 2 ans."
                                         }
                                       ]
                                     }
@@ -1063,7 +2030,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Associé unique ou majoritaire"
+                                  "text": "Associé d'une SARL, SNC, société en commandite simple, société civile"
                                 }
                               ]
                             },
@@ -1073,7 +2040,137 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Vous devez prouver que vous êtes depuis au moins 2 ans l'associé majoritaire ou unique d'une entreprise inscrite depuis au moins 2 ans au rôle des contributions de la commune."
+                                  "text": "Vous devez prouver que vous êtes depuis "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "au moins 2 ans"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "l'associé majoritaire ou unique"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " d'une société inscrite depuis au moins 2 ans au rôle des contributions directes de la commune. Il peut s'agir d'une des sociétés suivantes :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F37411",
+                                            "type": "Fiche d'information conditionnée",
+                                            "audience": "Professionnels"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Société à responsabilité limitée (SARL)"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F37397",
+                                            "type": "Fiche d'information conditionnée",
+                                            "audience": "Professionnels"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Société en nom collectif (SNC)"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F37390",
+                                            "type": "Fiche d'information conditionnée",
+                                            "audience": "Professionnels"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Société en commandite simple"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Société civile."
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -1083,7 +2180,31 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Vous devez fournir les 3 documents suivants :"
+                                  "text": "Vous devez fournir les "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "3 documents"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "suivants"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " :"
                                 }
                               ]
                             },
@@ -1104,7 +2225,35 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Copie des statuts constitutifs de la société (ou copie des statuts mis à jour ou encore copie de l'acte de cession de parts)"
+                                          "text": "Copie des statuts constitutifs de la société "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "ou"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " copie des statuts mis à jour "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "ou"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " copie de l'acte de cession de parts"
                                         }
                                       ]
                                     }
@@ -1136,7 +2285,313 @@
                                       "children": [
                                         {
                                           "type": "text",
-                                          "text": "Attestation sur l'honneur de la continuité de votre situation d'associé majoritaire ou unique de la société depuis au moins 2 ans"
+                                          "text": "Attestation sur l'honneur de la continuité de votre situation d'associé majoritaire ou unique de la société depuis au moins 2 ans."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous pouvez utiliser ce modèle d'attestation sur l'honneur :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "ServiceEnLigne",
+                              "attributes": {
+                                "ID": "R31806",
+                                "URL": "https://www.service-public.gouv.fr/simulateur/calcul/AttestationHonneur",
+                                "audience": "Particuliers",
+                                "type": "Modèle de document"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Titre",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Attestation sur l'honneur"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Source",
+                                  "attributes": {
+                                    "ID": "R30608"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Direction de l'information légale et administrative (Dila) - Premier ministre"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Cas",
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Titre",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Associé d'une SA, SCA, ou SAS"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez prouver que vous êtes depuis au moins 2 ans "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "l'associé majoritaire ou unique"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " d'une société inscrite depuis au moins 2 ans au rôle des contributions de la commune. Il peut s'agir d'une des sociétés suivantes :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F37402",
+                                            "type": "Fiche d'information conditionnée",
+                                            "audience": "Professionnels"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Société anonyme"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " (SA)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F37386",
+                                            "type": "Fiche d'information conditionnée",
+                                            "audience": "Professionnels"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Société en commandite par action"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " (SCA)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F37366",
+                                            "type": "Fiche d'information conditionnée",
+                                            "audience": "Professionnels"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "Société par actions simplifiée"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " (SAS)."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Paragraphe",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Vous devez fournir les "
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "3 documents "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "MiseEnEvidence",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "suivants"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "text": " :"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Attestation délivrée par la société dont vous détenez des parts "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "ou"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " des actions "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "ou"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " que vous dirigez"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Document prouvant l'inscription de la société au rôle de la commune depuis au moins 2 ans"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "Item",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Attestation sur l'honneur de la continuité de votre situation d'associé majoritaire unique de la société depuis au moins 2 ans."
                                         }
                                       ]
                                     }
@@ -1441,6 +2896,77 @@
                 {
                   "type": "text",
                   "text": "Gouvernement de Nouvelle Calédonie"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Definition",
+          "attributes": {
+            "ID": "R38490"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Filiation"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Lien juridique entre un enfant et son père et/ou sa mère"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Abreviation",
+          "attributes": {
+            "ID": "R59706",
+            "type": "Sigle"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "DDFP"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Direction départementale des finances publiques"
+                    }
+                  ]
                 }
               ]
             }
