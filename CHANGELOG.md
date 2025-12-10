@@ -1,3 +1,15 @@
+# [2.1586.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1585.0...v2.1586.0) (2025-12-10)
+
+
+### Bug Fixes
+
+* use OIDC NPM publish ([4ba8ad0](https://github.com/SocialGouv/fiches-vdd/commit/4ba8ad06e200ea1a1478959617018c13ef4c5286))
+
+
+### Features
+
+* **data:** 20251210_1716 update ([1e1114f](https://github.com/SocialGouv/fiches-vdd/commit/1e1114f6ad28d5ae8bce73c905da01d5518ac59d))
+
 # [2.1585.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1584.0...v2.1585.0) (2025-12-09)
 
 
