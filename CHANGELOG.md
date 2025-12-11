@@ -1,3 +1,15 @@
+# [2.1587.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1586.0...v2.1587.0) (2025-12-11)
+
+
+### Bug Fixes
+
+* release workflow ([9a8833c](https://github.com/SocialGouv/fiches-vdd/commit/9a8833c24131198940cfcd64b9e42b5593eb32af))
+
+
+### Features
+
+* **data:** 20251211_1324 update ([47d289f](https://github.com/SocialGouv/fiches-vdd/commit/47d289f44b16bebee266b7eae522a2f8d918227c))
+
 # [2.1586.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1585.0...v2.1586.0) (2025-12-10)
 
 
