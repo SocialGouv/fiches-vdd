@@ -2,6 +2,8 @@ plugins:
   - "@semantic-release/commit-analyzer"
   - "@semantic-release/release-notes-generator"
   - "@semantic-release/changelog"
+  - - "@semantic-release/npm"
+    - npmPublish: false
   - - "@semantic-release/git"
     - assets:
         - CHANGELOG.md
@@ -9,7 +11,6 @@ plugins:
       message: "chore(release): version ${nextRelease.version}\n\n${nextRelease.notes}"
   - - "@semantic-release/exec"
     - publishCmd: |
-        npm publish
         rm -rf data
         sed -i "s/@socialgouv\/fiches-vdd/@socialgouv\/fiches-vdd-types/g" package.json
         { rm package.json; jq 'del(.dependencies)' > package.json; } < package.json

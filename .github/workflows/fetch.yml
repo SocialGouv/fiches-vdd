@@ -85,6 +85,9 @@ jobs:
           GIT_COMMITTER_NAME: ${{ secrets.SOCIALGROOVYBOT_NAME }}
           GITHUB_TOKEN: ${{ steps.token.outputs.token }}
 
+      - name: Publish to NPM
+        run: npm publish
+
       - uses: mattermost/action-mattermost-notify@master
         if: failure()
         with:
