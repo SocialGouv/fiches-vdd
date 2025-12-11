@@ -9,10 +9,4 @@ plugins:
         - CHANGELOG.md
         - package.json
       message: "chore(release): version ${nextRelease.version}\n\n${nextRelease.notes}"
-  - - "@semantic-release/exec"
-    - publishCmd: |
-        rm -rf data
-        sed -i "s/@socialgouv\/fiches-vdd/@socialgouv\/fiches-vdd-types/g" package.json
-        { rm package.json; jq 'del(.dependencies)' > package.json; } < package.json
-        npm publish
   - "@semantic-release/github"

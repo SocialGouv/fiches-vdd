@@ -88,6 +88,13 @@ jobs:
       - name: Publish to NPM
         run: npm publish
 
+      - name: Publish types to NPM
+        run: |
+          rm -rf data
+          sed -i "s/@socialgouv\/fiches-vdd/@socialgouv\/fiches-vdd-types/g" package.json
+          { rm package.json; jq 'del(.dependencies)' > package.json; } < package.json
+          npm publish
+
       - uses: mattermost/action-mattermost-notify@master
         if: failure()
         with:
