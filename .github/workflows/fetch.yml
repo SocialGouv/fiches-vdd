@@ -71,6 +71,7 @@ jobs:
           message: "feat(data): ${{ steps.metadata.outputs.now }} update"
 
       - name: Semantic Release
+        id: semantic
         uses: cycjimmy/semantic-release-action@ba330626c4750c19d8299de843f05c7aa5574f62
         with:
           semantic_version: 25.0.1
@@ -85,9 +86,11 @@ jobs:
           GITHUB_TOKEN: ${{ steps.token.outputs.token }}
 
       - name: Publish to NPM
+        if: ${{ steps.semantic.outputs.new_release_published == 'true' }}
         run: npm publish
 
       - name: Publish types to NPM
+        if: ${{ steps.semantic.outputs.new_release_published == 'true' }}
         run: |
           rm -rf data
           sed -i "s/@socialgouv\/fiches-vdd/@socialgouv\/fiches-vdd-types/g" package.json
