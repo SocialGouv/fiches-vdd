@@ -1,3 +1,16 @@
+# [2.1595.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1594.0...v2.1595.0) (2025-12-18)
+
+
+### Bug Fixes
+
+* ne pas publier sur npm si pas de nouvelle version ([4ffa552](https://github.com/SocialGouv/fiches-vdd/commit/4ffa5524a5a5452c3b58a89e4e8593d4e05be628))
+* remove useless semantic version extra plugin ([8da0899](https://github.com/SocialGouv/fiches-vdd/commit/8da089964bdc5a7227af84121ecd9098aead6c07))
+
+
+### Features
+
+* **data:** 20251218_1835 update ([3dcb417](https://github.com/SocialGouv/fiches-vdd/commit/3dcb4174db1afb03c70bb419170b460869b92c94))
+
 # [2.1594.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1593.0...v2.1594.0) (2025-12-17)
 
 
