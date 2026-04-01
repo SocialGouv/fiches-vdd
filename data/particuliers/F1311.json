@@ -726,11 +726,30 @@
           "children": [
             {
               "type": "element",
-              "name": "Paragraphe",
+              "name": "FragmentConditionne",
               "children": [
                 {
-                  "type": "text",
-                  "text": "Les règles sont différentes selon le type de bail d’habitation signé :"
+                  "type": "element",
+                  "name": "Condition",
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "estVrai",
+                      "attributes": {
+                        "var": "T10010"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Les règles sont différentes selon le type de bail d’habitation signé :"
+                    }
+                  ]
                 }
               ]
             }
@@ -7395,6 +7414,46 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "Attention",
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "Titre",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Attention"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Lorsque le logement est loué avec un "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "bail mobilité"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ", le loyer ne doit pas être révisé en cours de bail."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "Chapitre",
                       "children": [
                         {
@@ -7434,30 +7493,6 @@
                             {
                               "type": "text",
                               "text": ". Sans cette clause, le loyer ne peut pas être révisé."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "Paragraphe",
-                          "children": [
-                            {
-                              "type": "text",
-                              "text": "En revanche, lorsque le logement est loué avec un "
-                            },
-                            {
-                              "type": "element",
-                              "name": "MiseEnEvidence",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "bail mobilité"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": ", il est interdit de réviser le loyer en cours de bail."
                             }
                           ]
                         },
@@ -8249,54 +8284,75 @@
                             },
                             {
                               "type": "element",
-                              "name": "Paragraphe",
+                              "name": "Liste",
+                              "attributes": {
+                                "type": "puce"
+                              },
                               "children": [
                                 {
-                                  "type": "text",
-                                  "text": "Si les "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "LienInterne",
-                                  "attributes": {
-                                    "LienPublication": "F947",
-                                    "type": "Fiche d'information conditionnée",
-                                    "audience": "Particuliers"
-                                  },
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "charges"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Si les "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "LienInterne",
+                                          "attributes": {
+                                            "LienPublication": "F947",
+                                            "type": "Fiche d'information conditionnée",
+                                            "audience": "Particuliers"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "charges"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": " sont à payer au forfait, ce montant peut être révisé chaque année selon les mêmes règles que celles de la révision du loyer."
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "text": " sont à payer au forfait, ce montant peut être révisé chaque année selon les mêmes règles que celles de la révision du loyer."
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "Paragraphe",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "Mais lorsque le logement est loué avec un "
-                                },
-                                {
                                   "type": "element",
-                                  "name": "MiseEnEvidence",
+                                  "name": "Item",
                                   "children": [
                                     {
-                                      "type": "text",
-                                      "text": "bail mobilité"
+                                      "type": "element",
+                                      "name": "Paragraphe",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Lorsque le logement est loué avec un "
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "MiseEnEvidence",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "bail mobilité"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "text": ", il est interdit de réviser le loyer en cours de bail."
+                                        }
+                                      ]
                                     }
                                   ]
-                                },
-                                {
-                                  "type": "text",
-                                  "text": ", il est interdit de réviser le loyer en cours de bail."
                                 }
                               ]
                             }
