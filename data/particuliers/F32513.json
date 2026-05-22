@@ -606,7 +606,43 @@
                 },
                 {
                   "type": "text",
-                  "text": " (fonctionnaire ou contractuel) qui a "
+                  "text": " (fonctionnaire ou contractuel en "
+                },
+                {
+                  "type": "element",
+                  "name": "LienInterne",
+                  "attributes": {
+                    "LienPublication": "R2454",
+                    "type": "Sigle"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "CDD"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ou en "
+                },
+                {
+                  "type": "element",
+                  "name": "LienInterne",
+                  "attributes": {
+                    "LienPublication": "R24389",
+                    "type": "Sigle"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "CDI"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ") qui a "
                 },
                 {
                   "type": "element",
@@ -649,7 +685,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Les conditions d'attribution du SFT varient selon que vous et l'autre parent êtes tous 2 agents publics ou qu'un seul d'entre vous est agent public."
+                  "text": "Les conditions d'attribution du SFT varient selon que les 2 parents sont agents publics ou qu'un seul d'entre eux est agent public."
                 }
               ]
             }
@@ -831,7 +867,17 @@
                             },
                             {
                               "type": "text",
-                              "text": ", à partir du 1"
+                              "text": "."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Le SFT est dû à partir du 1"
                             },
                             {
                               "type": "element",
@@ -863,7 +909,7 @@
                             },
                             {
                               "type": "text",
-                              "text": " suivant celui au cours duquel les conditions pour en bénéficier sont remplies."
+                              "text": " suivant celui au cours duquel le parent assume la charge de l’enfant."
                             }
                           ]
                         },
@@ -913,7 +959,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Le versement cesse à partir du 1"
+                              "text": "Le SFT cesse d’être dû à partir du 1"
                             },
                             {
                               "type": "element",
@@ -927,7 +973,7 @@
                             },
                             {
                               "type": "text",
-                              "text": " jour du mois au cours duquel les conditions ne sont plus remplies."
+                              "text": " jour du mois au cours duquel l’enfant cesse d’être à la charge du parent."
                             }
                           ]
                         },
@@ -1002,26 +1048,46 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Le montant du SFT dépend du nombre d'enfants à votre charge et de votre "
+                              "text": "Le montant du SFT dépend du "
                             },
                             {
                               "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F461",
-                                "type": "Fiche d'information conditionnée",
-                                "audience": "Particuliers"
-                              },
+                              "name": "MiseEnEvidence",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "traitement indiciaire brut"
+                                  "text": "nombre d'enfants à charge"
                                 }
                               ]
                             },
                             {
                               "type": "text",
-                              "text": "."
+                              "text": " et du "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F461",
+                                    "type": "Fiche d'information conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "traitement indiciaire brut"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " du parent."
                             }
                           ]
                         },
@@ -1031,7 +1097,76 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Le montant du SFT comprend un élément fixe qui dépend du nombre d'enfants à votre charge et un élément proportionnel à votre traitement indiciaire brut."
+                              "text": "Le montant du SFT comprend :"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Un "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "élément fixe"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " qui dépend du nombre d'enfants à charge"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Et un "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "élément proportionnel au traitement"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " indiciaire brut."
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -1041,7 +1176,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si vous percevez une "
+                              "text": "Si le parent perçoit une "
                             },
                             {
                               "type": "element",
@@ -1060,7 +1195,7 @@
                             },
                             {
                               "type": "text",
-                              "text": ", elle s'ajoute à votre traitement indiciaire pour le calcul du SFT."
+                              "text": ", elle s'ajoute au traitement indiciaire pour le calcul du SFT."
                             }
                           ]
                         },
@@ -1084,7 +1219,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si vous êtes rémunéré sur la base de l'indice majoré 485 et que vous percevrez une NBI de 10 points, votre SFT est calculé sur la base de l'indice majoré 495."
+                                  "text": "Si vous êtes rémunéré sur la base de l'indice majoré 585 et que vous percevrez une NBI de 10 points, votre SFT est calculé sur la base de l'indice majoré 595."
                                 }
                               ]
                             }
@@ -1106,7 +1241,35 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Le montant minimum du SFT est le SFT correspondant à l'indice majoré 454 et le montant maximum est le SFT correspondant à l'indice majoré 722."
+                              "text": "Le "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "montant minimum du SFT"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " est le SFT correspondant à l'indice majoré 454 et le "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "montant maximum"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " est le SFT correspondant à l'indice majoré 722."
                             }
                           ]
                         },
@@ -1116,7 +1279,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Ainsi, si votre indice majoré est inférieur à 454, vous percevez le SFT au taux minimum correspondant à l'indice majoré 454."
+                              "text": "Ainsi, si l’indice majoré du parent bénéficiaire du SFT est inférieur à 454, il perçoit le SFT au taux minimum correspondant à l'indice majoré 454."
                             }
                           ]
                         },
@@ -1126,7 +1289,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Et si votre indice majoré est supérieur à 722, vous percevez le SFT au taux maximum correspondant à l'indice majoré 722."
+                              "text": "Et si l’indice majoré du parent est supérieur à 722, il perçoit le SFT au taux maximum correspondant à l'indice majoré 722."
                             }
                           ]
                         },
@@ -1136,7 +1299,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si votre indice majoré est compris entre 454 et 722, vous bénéficiez d'un SFT en partie proportionnel à votre traitement brut."
+                              "text": "Si l’indice majoré du parent est compris entre 454 et 722, il bénéficie d'un SFT en partie proportionnel à son traitement indiciaire brut."
                             }
                           ]
                         },
@@ -1751,7 +1914,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Le calcul de l'élément proportionnel à votre traitement indiciaire brut est effectué en ignorant les millièmes d'euro."
+                                  "text": "Le calcul de l'élément proportionnel au traitement indiciaire brut est effectué en ignorant les millièmes d'euro."
                                 }
                               ]
                             }
@@ -1777,7 +1940,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si vous êtes rémunéré sur la base de l'indice majoré 461 et avez 4 enfants à charge, vous percevez un SFT égal au montant suivant :"
+                                  "text": "Si vous êtes rémunéré sur la base de l'indice majoré 585 et avez 4 enfants à charge, vous percevez un SFT égal au montant suivant :"
                                 }
                               ]
                             },
@@ -1811,7 +1974,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": " + [(461 x "
+                                  "text": " + [(585 x "
                                 },
                                 {
                                   "type": "element",
@@ -1839,7 +2002,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": "] + [(461 x "
+                                  "text": "] + [(585 x "
                                 },
                                 {
                                   "type": "element",
@@ -1895,7 +2058,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": " + 181,55 + 136,16 = "
+                                  "text": " + 230,38 + 172,78 = "
                                 },
                                 {
                                   "type": "element",
@@ -1903,7 +2066,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "337,53 €"
+                                      "text": "422,97 €"
                                     }
                                   ]
                                 }
@@ -1921,13 +2084,13 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si vous travaillez à temps partiel"
+                                  "text": "Si le parent qui perçoit le SFT travaille à temps partiel"
                                 }
                               ]
                             },
                             {
                               "type": "text",
-                              "text": ", votre SFT est réduit dans les mêmes conditions que votre traitement indiciaire sauf si vous n'avez qu'un seul enfant."
+                              "text": ", le SFT est réduit dans les mêmes conditions que le traitement indiciaire sauf s’il n’a qu'un seul enfant."
                             }
                           ]
                         },
@@ -1937,21 +2100,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si vous n'avez qu'un seul enfant, l'élément fixe de "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "2,29 €"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " n'est pas réduit."
+                              "text": "Si le parent n'a qu'un seul enfant, l'élément fixe n'est pas réduit."
                             }
                           ]
                         },
@@ -1961,7 +2110,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Toutefois, votre SFT ne peut pas être inférieur au montant minimum versé à un agent travaillant à temps plein et ayant le même nombre d'enfants à charge."
+                              "text": "Toutefois, le SFT ne peut pas être inférieur au montant minimum versé à un agent travaillant à temps plein et ayant le même nombre d'enfants à charge."
                             }
                           ]
                         },
@@ -1985,7 +2134,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si vous êtes rémunéré sur la base de l'indice majoré 461, avez 4 enfants à charge et travaillez à "
+                                  "text": "Si vous êtes rémunéré sur la base de l'indice majoré 585, avez 4 enfants à charge et travaillez à "
                                 },
                                 {
                                   "type": "element",
@@ -2037,7 +2186,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": " / 2 + [(461 x "
+                                  "text": " / 2 + [(585 x "
                                 },
                                 {
                                   "type": "element",
@@ -2065,7 +2214,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": "] + [(461 x "
+                                  "text": "] + [(585 x "
                                 },
                                 {
                                   "type": "element",
@@ -2093,7 +2242,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": "] = 7,62 + 2,29 + 90,78 + 68,08 = "
+                                  "text": "] = 7,62 + 2,28 + 115,19 + 86,39 = "
                                 },
                                 {
                                   "type": "element",
@@ -2101,7 +2250,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "168,76 €"
+                                      "text": "211,48 €"
                                     }
                                   ]
                                 }
@@ -2181,7 +2330,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si vous travaillez à"
+                                  "text": "Si le parent qui perçoit le SFT travaille à"
                                 }
                               ]
                             },
@@ -2202,7 +2351,7 @@
                             },
                             {
                               "type": "text",
-                              "text": ", le SFT est versé en fonction du nombre d'heures de service rapportées à la durée légale et hebdomadaire du travail sauf si vous n'avez qu'un seul enfant."
+                              "text": ", le SFT est versé en fonction du nombre d'heures de service rapporté à la durée légale et hebdomadaire du travail sauf s’il n’a qu'un seul enfant."
                             }
                           ]
                         },
@@ -2250,7 +2399,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si vous êtes rémunéré sur la base de l'indice majoré 461, avez 4 enfants à charge et travaillez 25 heures par semaine, vous percevez un SFT égal au montant suivant :"
+                                  "text": "Si vous êtes rémunéré sur la base de l'indice majoré 585, avez 4 enfants à charge et travaillez 25 heures par semaine, vous percevez un SFT égal au montant suivant :"
                                 }
                               ]
                             },
@@ -2288,7 +2437,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": " x 25 / 35) + [(461 x "
+                                  "text": " x 25 / 35) + [(585 x "
                                 },
                                 {
                                   "type": "element",
@@ -2316,7 +2465,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": "] + [(461 x "
+                                  "text": "] + [(585 x "
                                 },
                                 {
                                   "type": "element",
@@ -2344,7 +2493,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": "] = 10,89 +3,26 +129,68 + 97,26 = "
+                                  "text": "] = 10,88 +3,26 +164,56 + 123,42 = "
                                 },
                                 {
                                   "type": "element",
@@ -2352,7 +2501,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "241,09 €"
+                                      "text": "302,12 €"
                                     }
                                   ]
                                 }
@@ -2380,7 +2529,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si vous cumulez plusieurs emplois à temps non complet ou un emploi à temps complet et un emploi à temps non complet à hauteur de "
+                                  "text": "Si le parent cumule plusieurs emplois à temps non complet ou un emploi à temps complet et un emploi à temps non complet à hauteur de "
                                 },
                                 {
                                   "type": "element",
@@ -2394,7 +2543,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": " de la dure légale de travail, le montant de votre SFT ne peut pas dépasser le montant du SFT accordé à un agent à temps complet ayant le même nombre d’enfants."
+                                  "text": " de la durée légale de travail, le montant du SFT ne peut pas dépasser le montant du SFT accordé à un agent à temps complet ayant le même nombre d’enfants."
                                 }
                               ]
                             }
@@ -2425,7 +2574,7 @@
                             },
                             {
                               "type": "text",
-                              "text": " auxquelles vous avez droit."
+                              "text": " auxquelles le parent a droit."
                             }
                           ]
                         },
@@ -2435,7 +2584,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "En cas de recrutement ou départ en cours de mois, le montant du SFT est proratisé en fonction du nombre de jours de présence, comme tout autre élément de rémunération, y compris lorsqu’il est fixé à "
+                              "text": "En cas de recrutement ou de départ de la fonction publique en cours de mois, le montant du SFT est proratisé en fonction du nombre de jours de présence, comme tout autre élément de rémunération, y compris lorsqu’il est fixé à "
                             },
                             {
                               "type": "element",
@@ -2743,7 +2892,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Si vous faites une demande conjointe de partage, vous ne pouvez demander la modification de ces conditions de versement qu'au bout d'un an, sauf changement des conditions de résidence de l'enfant."
+                                      "text": "Si les parents font une demande conjointe de partage, ils peuvent demander la modification de ces conditions de versement au bout d'un an, sauf modification des conditions de résidence de l'enfant."
                                     }
                                   ]
                                 },
@@ -2824,7 +2973,7 @@
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Si l'enfant vit en permanence au domicile du parent, son coefficient est de 1"
+                                              "text": "Si l'enfant vit en permanence au domicile du parent, son coefficient est de 1."
                                             }
                                           ]
                                         }
@@ -4662,7 +4811,17 @@
                             },
                             {
                               "type": "text",
-                              "text": ", à partir du 1"
+                              "text": "."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Paragraphe",
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Le SFT est dû à partir du 1"
                             },
                             {
                               "type": "element",
@@ -4694,7 +4853,7 @@
                             },
                             {
                               "type": "text",
-                              "text": " suivant celui au cours duquel les conditions pour en bénéficier sont remplies."
+                              "text": " suivant celui au cours duquel le parent assume la charge de l’enfant."
                             }
                           ]
                         },
@@ -4744,7 +4903,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Le versement cesse à partir du 1"
+                              "text": "Le SFT cesse d’être dû à partir du 1"
                             },
                             {
                               "type": "element",
@@ -4758,7 +4917,7 @@
                             },
                             {
                               "type": "text",
-                              "text": " jour du mois au cours duquel les conditions ne sont plus remplies."
+                              "text": " jour du mois au cours duquel l’enfant cesse d’être à la charge du parent."
                             }
                           ]
                         },
@@ -4833,26 +4992,46 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Le montant du SFT dépend du nombre d'enfants à votre charge et de votre "
+                              "text": "Le montant du SFT dépend du "
                             },
                             {
                               "type": "element",
-                              "name": "LienInterne",
-                              "attributes": {
-                                "LienPublication": "F461",
-                                "type": "Fiche d'information conditionnée",
-                                "audience": "Particuliers"
-                              },
+                              "name": "MiseEnEvidence",
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "traitement indiciaire brut"
+                                  "text": "nombre d'enfants à charge"
                                 }
                               ]
                             },
                             {
                               "type": "text",
-                              "text": "."
+                              "text": " et du "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "LienInterne",
+                                  "attributes": {
+                                    "LienPublication": "F461",
+                                    "type": "Fiche d'information conditionnée",
+                                    "audience": "Particuliers"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "traitement indiciaire brut"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " du parent."
                             }
                           ]
                         },
@@ -4862,7 +5041,76 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Le montant du SFT comprend un élément fixe qui dépend du nombre d'enfants à votre charge et un élément proportionnel à votre traitement indiciaire brut."
+                              "text": "Le montant du SFT comprend :"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "Liste",
+                          "attributes": {
+                            "type": "puce"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Un "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "élément fixe"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " qui dépend du nombre d'enfants à charge"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "Item",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "Paragraphe",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "Et un "
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "MiseEnEvidence",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "élément proportionnel au traitement"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": " indiciaire brut."
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -4872,7 +5120,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si vous percevez une "
+                              "text": "Si le parent perçoit une "
                             },
                             {
                               "type": "element",
@@ -4891,7 +5139,7 @@
                             },
                             {
                               "type": "text",
-                              "text": ", elle s'ajoute à votre traitement indiciaire pour le calcul du SFT."
+                              "text": ", elle s'ajoute au traitement indiciaire pour le calcul du SFT."
                             }
                           ]
                         },
@@ -4915,7 +5163,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si vous êtes rémunéré sur la base de l'indice majoré 485 et que vous percevrez une NBI de 10 points, votre SFT est calculé sur la base de l'indice majoré 495."
+                                  "text": "Si vous êtes rémunéré sur la base de l'indice majoré 585 et que vous percevrez une NBI de 10 points, votre SFT est calculé sur la base de l'indice majoré 595."
                                 }
                               ]
                             }
@@ -4937,7 +5185,35 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Le montant minimum du SFT est le SFT correspondant à l'indice majoré 454 et le montant maximum est le SFT correspondant à l'indice majoré 722."
+                              "text": "Le "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "montant minimum du SFT"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " est le SFT correspondant à l'indice majoré 454 et le "
+                            },
+                            {
+                              "type": "element",
+                              "name": "MiseEnEvidence",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "montant maximum"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": " est le SFT correspondant à l'indice majoré 722."
                             }
                           ]
                         },
@@ -4947,7 +5223,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Ainsi, si votre indice majoré est inférieur à 454, vous percevez le SFT au taux minimum correspondant à l'indice majoré 454."
+                              "text": "Ainsi, si l’indice majoré du parent bénéficiaire du SFT est inférieur à 454, il perçoit le SFT au taux minimum correspondant à l'indice majoré 454."
                             }
                           ]
                         },
@@ -4957,7 +5233,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Et si votre indice majoré est supérieur à 722, vous percevez le SFT au taux maximum correspondant à l'indice majoré 722."
+                              "text": "Et si l’indice majoré du parent est supérieur à 722, il perçoit le SFT au taux maximum correspondant à l'indice majoré 722."
                             }
                           ]
                         },
@@ -4967,7 +5243,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si votre indice majoré est compris entre 454 et 722, vous bénéficiez d'un SFT en partie proportionnel à votre traitement brut."
+                              "text": "Si l’indice majoré du parent est compris entre 454 et 722, il bénéficie d'un SFT en partie proportionnel à son traitement indiciaire brut."
                             }
                           ]
                         },
@@ -5582,7 +5858,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Le calcul de l'élément proportionnel à votre traitement indiciaire brut est effectué en ignorant les millièmes d'euro."
+                                  "text": "Le calcul de l'élément proportionnel au traitement indiciaire brut est effectué en ignorant les millièmes d'euro."
                                 }
                               ]
                             }
@@ -5608,7 +5884,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si vous êtes rémunéré sur la base de l'indice majoré 461 et avez 4 enfants à charge, vous percevez un SFT égal au montant suivant :"
+                                  "text": "Si vous êtes rémunéré sur la base de l'indice majoré 585 et avez 4 enfants à charge, vous percevez un SFT égal au montant suivant :"
                                 }
                               ]
                             },
@@ -5642,7 +5918,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": " + [(461 x "
+                                  "text": " + [(585 x "
                                 },
                                 {
                                   "type": "element",
@@ -5670,7 +5946,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": "] + [(461 x "
+                                  "text": "] + [(585 x "
                                 },
                                 {
                                   "type": "element",
@@ -5726,7 +6002,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": " + 181,55 + 136,16 = "
+                                  "text": " + 230,38 + 172,78 = "
                                 },
                                 {
                                   "type": "element",
@@ -5734,7 +6010,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "337,53 €"
+                                      "text": "422,97 €"
                                     }
                                   ]
                                 }
@@ -5752,13 +6028,13 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si vous travaillez à temps partiel"
+                                  "text": "Si le parent qui perçoit le SFT travaille à temps partiel"
                                 }
                               ]
                             },
                             {
                               "type": "text",
-                              "text": ", votre SFT est réduit dans les mêmes conditions que votre traitement indiciaire sauf si vous n'avez qu'un seul enfant."
+                              "text": ", le SFT est réduit dans les mêmes conditions que le traitement indiciaire sauf s’il n’a qu'un seul enfant."
                             }
                           ]
                         },
@@ -5768,21 +6044,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Si vous n'avez qu'un seul enfant, l'élément fixe de "
-                            },
-                            {
-                              "type": "element",
-                              "name": "Valeur",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "text": "2,29 €"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "text": " n'est pas réduit."
+                              "text": "Si le parent n'a qu'un seul enfant, l'élément fixe n'est pas réduit."
                             }
                           ]
                         },
@@ -5792,7 +6054,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "Toutefois, votre SFT ne peut pas être inférieur au montant minimum versé à un agent travaillant à temps plein et ayant le même nombre d'enfants à charge."
+                              "text": "Toutefois, le SFT ne peut pas être inférieur au montant minimum versé à un agent travaillant à temps plein et ayant le même nombre d'enfants à charge."
                             }
                           ]
                         },
@@ -5816,7 +6078,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si vous êtes rémunéré sur la base de l'indice majoré 461, avez 4 enfants à charge et travaillez à "
+                                  "text": "Si vous êtes rémunéré sur la base de l'indice majoré 585, avez 4 enfants à charge et travaillez à "
                                 },
                                 {
                                   "type": "element",
@@ -5868,7 +6130,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": " / 2 + [(461 x "
+                                  "text": " / 2 + [(585 x "
                                 },
                                 {
                                   "type": "element",
@@ -5896,7 +6158,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": "] + [(461 x "
+                                  "text": "] + [(585 x "
                                 },
                                 {
                                   "type": "element",
@@ -5924,7 +6186,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": "] = 7,62 + 2,29 + 90,78 + 68,08 = "
+                                  "text": "] = 7,62 + 2,28 + 115,19 + 86,39 = "
                                 },
                                 {
                                   "type": "element",
@@ -5932,7 +6194,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "168,76 €"
+                                      "text": "211,48 €"
                                     }
                                   ]
                                 }
@@ -6012,7 +6274,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si vous travaillez à"
+                                  "text": "Si le parent qui perçoit le SFT travaille à"
                                 }
                               ]
                             },
@@ -6033,7 +6295,7 @@
                             },
                             {
                               "type": "text",
-                              "text": ", le SFT est versé en fonction du nombre d'heures de service rapportées à la durée légale et hebdomadaire du travail sauf si vous n'avez qu'un seul enfant."
+                              "text": ", le SFT est versé en fonction du nombre d'heures de service rapporté à la durée légale et hebdomadaire du travail sauf s’il n’a qu'un seul enfant."
                             }
                           ]
                         },
@@ -6081,7 +6343,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si vous êtes rémunéré sur la base de l'indice majoré 461, avez 4 enfants à charge et travaillez 25 heures par semaine, vous percevez un SFT égal au montant suivant :"
+                                  "text": "Si vous êtes rémunéré sur la base de l'indice majoré 585, avez 4 enfants à charge et travaillez 25 heures par semaine, vous percevez un SFT égal au montant suivant :"
                                 }
                               ]
                             },
@@ -6119,7 +6381,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": " x 25 / 35) + [(461 x "
+                                  "text": " x 25 / 35) + [(585 x "
                                 },
                                 {
                                   "type": "element",
@@ -6147,7 +6409,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": "] + [(461 x "
+                                  "text": "] + [(585 x "
                                 },
                                 {
                                   "type": "element",
@@ -6175,7 +6437,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": "] = 10,89 +3,26 +129,68 + 97,26 = "
+                                  "text": "] = 10,88 +3,26 +164,56 + 123,42 = "
                                 },
                                 {
                                   "type": "element",
@@ -6183,7 +6445,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "241,09 €"
+                                      "text": "302,12 €"
                                     }
                                   ]
                                 }
@@ -6211,7 +6473,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "text": "Si vous cumulez plusieurs emplois à temps non complet ou un emploi à temps complet et un emploi à temps non complet à hauteur de "
+                                  "text": "Si le parent cumule plusieurs emplois à temps non complet ou un emploi à temps complet et un emploi à temps non complet à hauteur de "
                                 },
                                 {
                                   "type": "element",
@@ -6225,7 +6487,7 @@
                                 },
                                 {
                                   "type": "text",
-                                  "text": " de la dure légale de travail, le montant de votre SFT ne peut pas dépasser le montant du SFT accordé à un agent à temps complet ayant le même nombre d’enfants."
+                                  "text": " de la durée légale de travail, le montant du SFT ne peut pas dépasser le montant du SFT accordé à un agent à temps complet ayant le même nombre d’enfants."
                                 }
                               ]
                             }
@@ -6256,7 +6518,7 @@
                             },
                             {
                               "type": "text",
-                              "text": " auxquelles vous avez droit."
+                              "text": " auxquelles le parent a droit."
                             }
                           ]
                         },
@@ -6266,7 +6528,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "text": "En cas de recrutement ou départ en cours de mois, le montant du SFT est proratisé en fonction du nombre de jours de présence, comme tout autre élément de rémunération, y compris lorsqu’il est fixé à "
+                              "text": "En cas de recrutement ou de départ de la fonction publique en cours de mois, le montant du SFT est proratisé en fonction du nombre de jours de présence, comme tout autre élément de rémunération, y compris lorsqu’il est fixé à "
                             },
                             {
                               "type": "element",
@@ -6593,7 +6855,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "text": "Si vous faites une demande conjointe de partage, vous ne pouvez demander la modification de ces conditions de versement qu'au bout d'un an, sauf changement des conditions de résidence de l'enfant."
+                                      "text": "Si les parents font une demande conjointe de partage, ils peuvent demander la modification de ces conditions de versement au bout d'un an, sauf modification des conditions de résidence de l'enfant."
                                     }
                                   ]
                                 },
@@ -6674,7 +6936,7 @@
                                           "children": [
                                             {
                                               "type": "text",
-                                              "text": "Si l'enfant vit en permanence au domicile du parent, son coefficient est de 1"
+                                              "text": "Si l'enfant vit en permanence au domicile du parent, son coefficient est de 1."
                                             }
                                           ]
                                         }
@@ -8361,6 +8623,78 @@
                     {
                       "type": "text",
                       "text": "Mariage, Pacs ou concubinage (union libre)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Abreviation",
+          "attributes": {
+            "ID": "R2454",
+            "type": "Sigle"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "CDD"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Contrat à durée déterminée"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "Abreviation",
+          "attributes": {
+            "ID": "R24389",
+            "type": "Sigle"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "Titre",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "CDI"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "Texte",
+              "children": [
+                {
+                  "type": "element",
+                  "name": "Paragraphe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "Contrat de travail à durée indéterminée"
                     }
                   ]
                 }
