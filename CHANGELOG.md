@@ -1,3 +1,15 @@
+# [2.1790.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1789.0...v2.1790.0) (2026-07-10)
+
+
+### Bug Fixes
+
+* bloquer la version de npm en v11 ([#233](https://github.com/SocialGouv/fiches-vdd/issues/233)) ([afbc2e8](https://github.com/SocialGouv/fiches-vdd/commit/afbc2e80374fc8724338039891394ccf086e3712))
+
+
+### Features
+
+* **data:** 20260710_1930 update ([8bb0f18](https://github.com/SocialGouv/fiches-vdd/commit/8bb0f18133a460647e91d2791e573554b2349912))
+
 # [2.1789.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1788.0...v2.1789.0) (2026-07-08)
 
 
