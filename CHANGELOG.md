@@ -1,3 +1,10 @@
+# [2.1818.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1817.0...v2.1818.0) (2026-08-08)
+
+
+### Features
+
+* **data:** 20260808_1839 update ([cebec07](https://github.com/SocialGouv/fiches-vdd/commit/cebec07ce0eadb4d58f2a734fb23bc029f0de9b6))
+
 # [2.1817.0](https://github.com/SocialGouv/fiches-vdd/compare/v2.1816.0...v2.1817.0) (2026-08-07)
 
 
